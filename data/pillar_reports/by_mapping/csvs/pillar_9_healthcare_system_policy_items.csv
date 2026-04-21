@@ -1,0 +1,57 @@
+210,"Mental healthcare must be included in universal healthcare coverage (psychiatric, psychological, therapy)",MISSING,pillar_9_healthcare_system.md,"Explicit requirement",2,2
+211,"Covered treatments must be protected from partisan political interference",MISSING,pillar_9_healthcare_system.md,"Governance rule",2,2
+212,"Coverage decisions must be grounded in evidence-based scientific research",MISSING,pillar_9_healthcare_system.md,"Needs definition of governing body",2,2
+213,"Funding for clinical trials and approvals of new treatments",MISSING,pillar_9_healthcare_system.md,"Public investment",2,2
+214,"Streamline approval processes for new treatments while maintaining safety",MISSING,pillar_9_healthcare_system.md,"FDA reform overlap",2,2
+215,"Establish stricter quality standards for ingredients in generic medications",MISSING,pillar_9_healthcare_system.md,"Manufacturing regulation",2,2
+216,"Ban non-essential common allergens in medications where not medically necessary",MISSING,pillar_9_healthcare_system.md,"Needs allergen definition",2,2
+217,"Fund research on safety and efficacy of common nutritional supplements",MISSING,pillar_9_healthcare_system.md,"Regulatory expansion",2,2
+218,"Create standardized labeling for supplements including full ingredient disclosure",MISSING,pillar_9_healthcare_system.md,"Transparency requirement",2,2
+219,"Require lab testing transparency and quality certification for supplements",MISSING,pillar_9_healthcare_system.md,"Third-party verification",2,2
+220,"Establish minimum quality and testing standards for supplements",MISSING,pillar_9_healthcare_system.md,"Regulatory baseline",2,2
+221,"Require full traceability of drugs and supplements across supply chain (batch, manufacturing, shipping, handling)",MISSING,pillar_9_healthcare_system.md,"Term: “supply chain traceability”",2,2
+222,"Emergency medical services must be free for all individuals, regardless of citizenship status",MISSING,pillar_9_healthcare_system.md,"Includes public safety framing",2,2
+223,"Free emergency care includes ambulances, first responders, hospital care, medical supplies, and follow-up care",MISSING,pillar_9_healthcare_system.md,"Scope clarification",2,2
+224,"Full healthcare coverage applies to citizens and long-term/permanent residents",MISSING,pillar_9_healthcare_system.md,"Eligibility definition",2,2
+225,"Residency requirement: minimum 2 years for elective or non-life-threatening procedures",MISSING,pillar_9_healthcare_system.md,"Needs edge-case rules",2,2
+226,"Exceptions to residency requirement for life-threatening or disability-causing conditions",MISSING,pillar_9_healthcare_system.md,"Safety carveout",2,2
+227,"Establish an independent scientific governance body for determining covered treatments and standards of care",MISSING,"pillar_9_healthcare_system.md + pillar_14_administrative_state.md","Core structural idea",2,2
+228,"Body must be insulated from partisan political control",MISSING,same,"Core requirement",2,2
+229,"Appointments must be staggered to prevent single administration capture",MISSING,same,"Term staggering",2,2
+230,"Appointment structure should include both federal and state-level participation",MISSING,same,"Mixed governance model",2,2
+231,"Multi-layer guardrails required to prevent political and industry capture",MISSING,same,"Needs detailed mechanisms",2,2
+232,"Decision-making must be based on transparent, evidence-based scientific standards",MISSING,same,"Already implied, now structural",2,2
+233,"Public transparency required for methodologies, decisions, and conflicts of interest",MISSING,same,"Anti-corruption tie-in",2,2
+234,"Strict conflict-of-interest rules for members (financial, industry ties, advisory roles)",MISSING,same,"Cross with anti-corruption pillar",2,2
+235,"Independent audit mechanisms required for oversight of decisions and processes",MISSING,same,"Oversight layer",2,2
+236,"Separate scientific evaluation from political funding decisions wherever possible",MISSING,same,"Decoupling mechanism",2,2
+237,"Healthcare standards should be determined by an independent, multi-layered system separating research, approval, and coverage decisions",MISSING,"Healthcare + Admin","",2,2
+238,"Governance should include both federal and state-appointed members with staggered terms",MISSING,"Healthcare + Admin","",2,2
+239,"Decisions must be transparent, evidence-based, and include published reasoning and dissenting views",MISSING,Healthcare,"",2,2
+240,"Strong conflict-of-interest restrictions required for all decision-makers",MISSING,Anti-corruption,"",2,2
+241,"Healthcare policy and coverage decisions must not selectively omit or exclude relevant scientific data",MISSING,pillar_9_healthcare_system.md,"Anti-data suppression rule",2,2
+242,"Conclusions used to justify healthcare policy must be directly supported by the full body of available evidence",MISSING,pillar_9_healthcare_system.md,"Anti-misinterpretation rule",2,2
+243,"Require full transparency of all data sources, methodologies, and exclusions used in healthcare decision-making",MISSING,pillar_9_healthcare_system.md,"Transparency requirement",2,2
+244,"Require publication of dissenting analyses or minority scientific opinions when significant disagreement exists",MISSING,pillar_9_healthcare_system.md,"Prevent forced consensus",2,2
+245,"Establish independent review mechanisms to audit scientific integrity of major healthcare decisions",MISSING,"pillar_9_healthcare_system.md + pillar_14","Oversight layer",2,2
+246,"Explicit safeguards against ideological or political distortion of scientific findings",MISSING,cross-pillar,"Needs structural definition later",2,2
+252,"Telemedicine services must not be restricted by state or regional licensing boundaries when providing covered care",MISSING,pillar_9_healthcare_system.md,"Cross-state care",2,2
+253,"Telemedicine must be fully integrated into coverage and treated as equivalent to in-person care where medically appropriate",MISSING,pillar_9_healthcare_system.md,"Access expansion",2,2
+267,"Establish explicit legal protections for journalists engaged in lawful newsgathering and reporting",MISSING,"pillar_11_information_and_media.md + pillar_5_rights...md","Constitutional-level protection",2,2
+268,"Protect the confidentiality of journalistic sources (shield law protections) at the federal level",MISSING,pillar_11,"Includes anonymous sources",2,2
+269,"Government may not compel disclosure of sources except under narrowly defined, high-threshold conditions",MISSING,"pillar_11 + pillar_6","Requires strict judicial standard",2,2
+270,"Prohibit retaliation, surveillance, or prosecution of journalists for publishing information of public interest, except in clearly defined and limited cases",MISSING,pillar_11,"Anti-abuse safeguard",2,2
+272,"Prohibit use of national security or classification systems to conceal wrongdoing, corruption, or illegal activity",MISSING,"pillar_3 + pillar_11","Needs careful drafting later",2,2
+273,"Require independent judicial review before any action to compel disclosure of journalistic materials or communications",MISSING,pillar_6_courts...md,"Procedural safeguard",2,2
+274,"Limit use of subpoenas, warrants, or surveillance tools targeting journalists or their communications",MISSING,"pillar_11 + pillar_6","Anti-backdoor access",2,2
+275,"Extend protections to modern forms of journalism, including independent journalists and digital media creators",MISSING,pillar_11,"Avoid legacy-media loophole",2,2
+277,"Require transparency and reporting when government actions target journalists or news organizations",MISSING,pillar_11,"Oversight mechanism",2,2
+280,"Treat substance use disorder as a medical condition rather than a criminal issue",MISSING,"pillar_4 + pillar_9","Healthcare integration",2,2
+283,"Implement harm reduction strategies (e.g., safe-use education, overdose prevention, access to treatment resources)",MISSING,pillar_9,"Public health focus",2,2
+285,"Establish national standards and regulations for rehabilitation and treatment facilities",MISSING,pillar_9_healthcare_system.md,"Prevent abuse/fraud",2,2
+286,"Require evidence-based treatment practices in all licensed rehabilitation facilities",MISSING,pillar_9,"Align with scientific governance",2,2
+287,"Prohibit abusive, coercive, or non-evidence-based practices in rehabilitation programs",MISSING,pillar_9,"Includes “troubled teen”–type systems",2,2
+288,"Require transparency in outcomes, success rates, and treatment methodologies for rehab facilities",MISSING,pillar_9,"Public reporting",2,2
+289,"Ensure accessibility and affordability of treatment services under universal healthcare coverage",MISSING,pillar_9,"Integration with healthcare system",2,2
+290,"Provide oversight, auditing, and enforcement mechanisms for rehab facilities",MISSING,"pillar_9 + pillar_14","Prevent exploitation",2,2
+291,"Expand availability of voluntary treatment programs and reduce reliance on court-mandated programs",MISSING,"pillar_4 + pillar_9","Autonomy + effectiveness",2,2

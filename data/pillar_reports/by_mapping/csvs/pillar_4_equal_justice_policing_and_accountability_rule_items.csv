@@ -1,0 +1,144 @@
+JUD-ETH-001,JUD,ETH,"Supreme Court term limits",MISSING,2,2
+JUD-ETH-002,JUD,ETH,"Judicial ethics code",MISSING,2,2
+JUD-INT-001,JUD,INT,"Require intent-based interpretation",MISSING,2,2
+JUD-INT-002,JUD,INT,"Limit strict textualism",MISSING,2,2
+JUD-INT-003,JUD,INT,"Require plain-language intent in laws",MISSING,2,2
+JUD-OVR-001,JUD,OVR,"Judicial oversight mechanisms",MISSING,2,2
+JUD-REC-001,JUD,REC,"Strong recusal standards",MISSING,2,2
+JUD-VEN-001,JUD,VEN,"Prevent judge and venue shopping",MISSING,2,2
+JUS-AI-001,JUS,AI,"AI systems may not be used to determine or recommend criminal sentencing outcomes including incarceration length or punitive measures",MISSING,2,2
+JUS-AI-002,JUS,AI,"AI risk assessment tools predicting recidivism dangerousness or likelihood of reoffense may not be used in sentencing decisions",MISSING,2,2
+JUS-AI-003,JUS,AI,"AI may be used to assist in identifying wrongful convictions procedural errors and case review opportunities to accelerate appeals and justice processes",MISSING,2,2
+JUS-AI-004,JUS,AI,"AI systems should be used to identify and mitigate bias in charging sentencing and judicial processes under strict oversight and transparency",MISSING,2,2
+JUS-AI-005,JUS,AI,"AI-generated evidence or analysis may not be used in court unless it is transparent auditable and subject to challenge by all parties",MISSING,2,2
+JUS-AI-006,JUS,AI,"Defendants must have the right to examine challenge and cross-examine any AI system or output used in legal proceedings",MISSING,2,2
+JUS-AI-007,JUS,AI,"AI systems may not be used to profile rank or exclude jurors based on inferred characteristics behavioral patterns or demographic proxies",MISSING,2,2
+JUS-AI-008,JUS,AI,"AI systems may not be used to recommend or automate prosecutorial decisions such as charging strategies plea deals or case prioritization without human accountability and oversight",MISSING,2,2
+JUS-AI-009,JUS,AI,"All use of AI in legal proceedings must be disclosed to all parties including purpose limitations and methodology",MISSING,2,2
+JUS-AI-010,JUS,AI,"AI evidence must meet strict reliability and scientific validity standards equivalent to or exceeding existing evidentiary standards",MISSING,2,2
+JUS-BAL-001,JUS,BAL,"End or sharply limit cash bail systems that criminalize poverty",MISSING,2,2
+JUS-BAL-002,JUS,BAL,"Pretrial detention must be limited to cases with clear individualized and reviewable necessity",MISSING,2,2
+JUS-BAL-003,JUS,BAL,"AI systems may not be used to assign bail or pretrial release risk scores",MISSING,2,2
+JUS-BAL-004,JUS,BAL,"Pretrial release decisions must favor the least restrictive conditions consistent with safety and court appearance",MISSING,2,2
+JUS-CIV-001,JUS,CIV,"People must have meaningful access to civil courts for harms involving housing employment discrimination injury and consumer abuse",MISSING,2,2
+JUS-CIV-002,JUS,CIV,"Forced arbitration clauses that strip people of meaningful legal recourse should be banned or strictly limited",MISSING,2,2
+JUS-CIV-003,JUS,CIV,"Class actions and collective remedies must remain available where systemic harms affect large groups of people",MISSING,2,2
+JUS-CIV-004,JUS,CIV,"Court fees filing costs and procedural burdens must not block access to justice for low-income people",MISSING,2,2
+JUS-CON-001,JUS,CON,"People in custody retain human rights including access to adequate healthcare sanitation nutrition and safety",MISSING,2,2
+JUS-CON-002,JUS,CON,"Solitary confinement must be banned or strictly limited with strong safeguards and independent review",MISSING,2,2
+JUS-CON-003,JUS,CON,"Mental health needs in custody must be treated medically and may not be punished as disciplinary problems",MISSING,2,2
+JUS-CON-004,JUS,CON,"Disability access and accommodation must be guaranteed in all detention and correctional settings",MISSING,2,2
+JUS-CON-005,JUS,CON,"Independent inspections and public reporting are required for all detention and correctional facilities",MISSING,2,2
+JUS-CRT-001,JUS,CRT,"Justice systems must be designed for intelligibility and access so people can understand proceedings obligations rights and deadlines without needing insider knowledge",MISSING,2,2
+JUS-CRT-002,JUS,CRT,"Courts must provide accessible notice scheduling and participation systems that do not punish people for disability poverty language barriers caregiving or lack of transportation",MISSING,2,2
+JUS-CRT-003,JUS,CRT,"Remote participation tools may improve access but may not be used to reduce due process hearing quality or human access to justice",MISSING,2,2
+JUS-CRT-004,JUS,CRT,"Justice institutions must identify and reduce procedural traps that cause default judgments missed hearings or loss of rights for administrative rather than substantive reasons",MISSING,2,2
+JUS-DEF-001,JUS,DEF,"Every person facing serious criminal charges must have access to competent adequately funded legal counsel",MISSING,2,2
+JUS-DEF-002,JUS,DEF,"Public defense systems must be funded at levels sufficient to ensure parity of process with prosecution",MISSING,2,2
+JUS-DEF-003,JUS,DEF,"Defendants must have timely access to discovery evidence and expert resources needed for an effective defense",MISSING,2,2
+JUS-DEF-004,JUS,DEF,"Courts must not permit procedural delay or administrative burden to undermine the right to a fair defense",MISSING,2,2
+JUS-DEF-005,JUS,DEF,"Defendants must have the right to challenge the scientific validity and technical reliability of evidence used against them",MISSING,2,2
+JUS-DEF-006,JUS,DEF,"Disclosure obligations must be broad continuing and timely and may not be narrowed through technicality delay or strategic withholding",MISSING,2,2
+JUS-DEF-007,JUS,DEF,"Prosecutors and law enforcement must preserve potentially exculpatory evidence and may not avoid disclosure through negligence indifference or informal destruction practices",MISSING,2,2
+JUS-DEF-008,JUS,DEF,"Failure to disclose material evidence should carry enforceable consequences including sanctions case review and relief where fairness was compromised",MISSING,2,2
+JUS-DEF-009,JUS,DEF,"Defendants must have meaningful access to expert assistance forensic review and investigative support where required for a fair defense",MISSING,2,2
+JUS-DEF-010,JUS,DEF,"Procedural rules must not be structured in ways that reward surprise overwhelm defense capacity or convert resource imbalance into unfair advantage",MISSING,2,2
+JUS-DRG-001,JUS,DRG,"End war on drugs",MISSING,2,2
+JUS-DRG-002,JUS,DRG,"Decriminalize possession",MISSING,2,2
+JUS-DRG-003,JUS,DRG,"Redirect funding to treatment",MISSING,2,2
+JUS-DRG-004,JUS,DRG,"Regulated substance frameworks",MISSING,2,2
+JUS-DRG-005,JUS,DRG,"No penalty for overdose assistance",MISSING,2,2
+JUS-EVD-001,JUS,EVD,"Forensic methods used in court must meet strict scientific validity and reliability standards",MISSING,2,2
+JUS-EVD-002,JUS,EVD,"Junk science and unsupported forensic techniques must be excluded from court proceedings",MISSING,2,2
+JUS-EVD-003,JUS,EVD,"Digital and physical evidence must maintain transparent documented chain-of-custody standards",MISSING,2,2
+JUS-EVD-004,JUS,EVD,"Synthetic or AI-generated evidence must be clearly identified and independently verifiable before admissibility",MISSING,2,2
+JUS-EVD-005,JUS,EVD,"When foundational science behind a conviction is later discredited affected cases must be eligible for review and reopening",MISSING,2,2
+JUS-FFF-001,JUS,FFF,"Justice systems must not use fines fees and monetary penalties in ways that criminalize poverty or create coercive revenue extraction",MISSING,2,2
+JUS-FFF-002,JUS,FFF,"Ability to pay must be assessed before imposing or enforcing fines fees restitution schedules or other monetary penalties",MISSING,2,2
+JUS-FFF-003,JUS,FFF,"People may not be incarcerated detained or otherwise deprived of liberty solely because of inability to pay fines or fees",MISSING,2,2
+JUS-FFF-004,JUS,FFF,"Late fees interest penalties and compounding charges in justice-related debts must be strictly limited or prohibited",MISSING,2,2
+JUS-FFF-005,JUS,FFF,"Courts and agencies must provide accessible alternatives including waiver reduction community-based alternatives or income-based payment structures",MISSING,2,2
+JUS-FFF-006,JUS,FFF,"Justice institutions may not depend on fines fees or civil forfeiture as core operating revenue sources",MISSING,2,2
+JUS-IMM-001,JUS,IMM,"Immigration detention must be subject to strict due process limits and may not become indefinite by default",MISSING,2,2
+JUS-IMM-002,JUS,IMM,"People in immigration proceedings must have meaningful access to counsel interpretation and judicial review",MISSING,2,2
+JUS-IMM-003,JUS,IMM,"Family separation and coercive detention practices must be prohibited except under narrowly defined and reviewable conditions",MISSING,2,2
+JUS-JUV-001,JUS,JUV,"Juvenile justice systems must prioritize rehabilitation education and support over punishment",MISSING,2,2
+JUS-JUV-002,JUS,JUV,"Children may not be subjected to adult sentencing standards except under extremely narrow conditions",MISSING,2,2
+JUS-JUV-003,JUS,JUV,"Juvenile records should be sealed or expunged automatically in most cases to prevent lifelong harm",MISSING,2,2
+JUS-JUV-004,JUS,JUV,"Youth in custody must retain access to education mental healthcare and developmentally appropriate services",MISSING,2,2
+JUS-LAW-001,JUS,LAW,"Qualified immunity is abolished and may not be used to shield government officials including law enforcement from civil liability for violations of constitutional or legal rights",MISSING,2,2
+JUS-LAW-002,JUS,LAW,"Government officials including law enforcement must be held personally and institutionally accountable for violations of clearly established or reasonably knowable rights",MISSING,2,2
+JUS-LAW-003,JUS,LAW,"Legal standards for accountability must not require victims to identify nearly identical prior case law in order to seek relief for rights violations",MISSING,2,2
+JUS-LAW-004,JUS,LAW,"Governments may provide indemnification for officials acting in good faith but may not use indemnification to prevent accountability or conceal misconduct",MISSING,2,2
+JUS-LNG-001,JUS,LNG,"People involved in justice proceedings must have meaningful access to qualified interpretation and translation services at every critical stage",MISSING,2,2
+JUS-LNG-002,JUS,LNG,"Interpreter and translation access must be provided without cost barriers to defendants witnesses victims and other necessary participants",MISSING,2,2
+JUS-LNG-003,JUS,LNG,"Language access failures may not be treated as harmless error where they impair understanding participation defense or rights assertion",MISSING,2,2
+JUS-LNG-004,JUS,LNG,"Critical justice proceedings may not rely solely on automated translation systems where accuracy or rights could be materially affected",MISSING,2,2
+JUS-LNG-005,JUS,LNG,"Justice institutions must proactively identify language-access needs and may not place the burden entirely on affected individuals to navigate the system alone",MISSING,2,2
+JUS-OVR-001,JUS,OVR,"Justice institutions must publish standardized data on charging sentencing detention plea bargaining and appeals outcomes",MISSING,2,2
+JUS-OVR-002,JUS,OVR,"Justice data must be disaggregated to identify racial gender disability geographic and class disparities",MISSING,2,2
+JUS-OVR-003,JUS,OVR,"Independent oversight bodies must have access to justice-system data records and facilities necessary to investigate abuse or bias",MISSING,2,2
+JUS-OVR-004,JUS,OVR,"Justice agencies must be required to act on audit findings regarding bias rights violations or unlawful practices",MISSING,2,2
+JUS-POL-001,JUS,POL,"Demilitarize police",MISSING,2,2
+JUS-POL-002,JUS,POL,"Community policing",MISSING,2,2
+JUS-POL-003,JUS,POL,"Mental health support for police",MISSING,2,2
+JUS-POL-004,JUS,POL,"Separate crisis responders",MISSING,2,2
+JUS-POL-005,JUS,POL,"Ban racial profiling",MISSING,2,2
+JUS-POL-006,JUS,POL,"Ban police automatic weapons",MISSING,2,2
+JUS-POL-007,JUS,POL,"Ban police weapons of war",MISSING,2,2
+JUS-POL-008,JUS,POL,"National Guard fallback for extreme cases",MISSING,2,2
+JUS-POL-009,JUS,POL,"Mandatory community service",MISSING,2,2
+JUS-POL-013,JUS,POL,"Law enforcement misconduct records relevant to credibility honesty bias excessive force or constitutional violations must be preserved disclosed and made available where legally relevant",MISSING,2,2
+JUS-POL-014,JUS,POL,"Prosecutors must disclose credibility-related misconduct records of law enforcement witnesses and may not suppress Brady or Giglio material",MISSING,2,2
+JUS-POL-015,JUS,POL,"Police officers with substantiated records of dishonesty evidence tampering bias or repeated rights violations must face enforceable consequences including limits on testimony and decertification where appropriate",MISSING,2,2
+JUS-POL-016,JUS,POL,"Law enforcement agencies may not use internal secrecy confidentiality agreements or record-destruction practices to conceal misconduct relevant to justice proceedings",MISSING,2,2
+JUS-POL-017,JUS,POL,"Independent systems should track officer misconduct patterns decertification and credibility issues across jurisdictions to prevent silent rehiring and forum shopping",MISSING,2,2
+JUS-PRO-001,JUS,PRO,"Prosecutors may not use charging decisions to coerce plea deals through disproportionate threat of punishment",MISSING,2,2
+JUS-PRO-002,JUS,PRO,"Prosecutors must disclose exculpatory evidence fully promptly and automatically",MISSING,2,2
+JUS-PRO-003,JUS,PRO,"Retaliatory or politically motivated prosecution is prohibited and subject to independent review",MISSING,2,2
+JUS-PRO-004,JUS,PRO,"Prosecutorial offices must be subject to transparency and audit standards for charging plea and dismissal patterns",MISSING,2,2
+JUS-PRO-005,JUS,PRO,"AI systems may not independently recommend charges plea terms or prosecutorial escalation without accountable human review",MISSING,2,2
+JUS-PRP-001,JUS,PRP,"Civil forfeiture should be banned or strictly limited and may not be used to deprive people of property without strong due process protections",MISSING,2,2
+JUS-PRP-002,JUS,PRP,"Property deprivation connected to justice systems must require clear evidentiary standards timely review and meaningful opportunity to contest",MISSING,2,2
+JUS-PRP-003,JUS,PRP,"Justice agencies may not rely on forfeiture or seized assets as operating revenue or direct financial incentive",MISSING,2,2
+JUS-PRP-004,JUS,PRP,"Civil asset forfeiture is prohibited and property may not be permanently seized without a criminal conviction and full due process",MISSING,2,2
+JUS-PRP-005,JUS,PRP,"Temporary seizure of property prior to conviction must require strong evidentiary standards prompt judicial review and strict time limits",MISSING,2,2
+JUS-PRP-006,JUS,PRP,"Property owners must have meaningful accessible and timely processes to challenge any seizure without prohibitive cost or procedural barriers",MISSING,2,2
+JUS-REC-001,JUS,REC,"People should have broad access to sealing expungement and record-clearing processes so past contact with the justice system does not create lifelong exclusion",MISSING,2,2
+JUS-REC-002,JUS,REC,"Expungement and sealing should be automatic in many categories rather than dependent on expensive complex petition processes",MISSING,2,2
+JUS-REC-003,JUS,REC,"Juvenile records should be sealed or expunged automatically in most cases absent extraordinary circumstances",MISSING,2,2
+JUS-REC-004,JUS,REC,"Dismissed charges acquittals and invalidated convictions should be removed or sealed promptly and without procedural barriers",MISSING,2,2
+JUS-REC-005,JUS,REC,"Background-check systems and public records systems must honor sealing and expungement and may not recreate protected records through aggregation or inference",MISSING,2,2
+JUS-REC-006,JUS,REC,"People must have accessible processes to correct errors in criminal-history records background reports and public databases",MISSING,2,2
+JUS-REI-001,JUS,REI,"People completing sentences should not face unnecessary lifelong collateral consequences that block housing employment education or civic participation",MISSING,2,2
+JUS-REI-002,JUS,REI,"Collateral consequences must be reviewed limited and tied only to clearly justified safety needs rather than broad exclusion",MISSING,2,2
+JUS-REI-003,JUS,REI,"Reentry support should include access to identification housing healthcare mental healthcare education and employment assistance",MISSING,2,2
+JUS-REI-004,JUS,REI,"Justice policy should prioritize reintegration and stability as public-safety goals rather than treating post-release hardship as acceptable collateral damage",MISSING,2,2
+JUS-REV-001,JUS,REV,"Post-conviction review processes must be expanded and accessible in cases involving new evidence procedural error or unreliable science",MISSING,2,2
+JUS-REV-002,JUS,REV,"Independent innocence review mechanisms should exist in every jurisdiction",MISSING,2,2
+JUS-REV-003,JUS,REV,"Wrongful-conviction indicators must trigger mandatory review rather than discretionary review alone",MISSING,2,2
+JUS-REV-004,JUS,REV,"AI may be used to identify patterns of wrongful conviction bias or procedural inconsistency under transparent oversight",MISSING,2,2
+JUS-REV-005,JUS,REV,"Post-conviction review should not be restricted by artificial deadlines where credible evidence of innocence legal error or scientific unreliability emerges later",MISSING,2,2
+JUS-REV-006,JUS,REV,"People seeking post-conviction relief must have meaningful access to counsel records forensic review and procedural guidance",MISSING,2,2
+JUS-REV-007,JUS,REV,"Justice systems should create presumptive review pathways when systemic misconduct or discredited methods affect classes of convictions",MISSING,2,2
+JUS-RST-001,JUS,RST,"Justice systems should include restorative justice pathways that center repair accountability and healing where appropriate and voluntary",MISSING,2,2
+JUS-RST-002,JUS,RST,"Diversion programs should be expanded to reduce unnecessary criminalization especially for low-level offenses youth and nonviolent conduct",MISSING,2,2
+JUS-RST-003,JUS,RST,"Restorative and diversion programs must not be coercive and must preserve due process rights and access to counsel",MISSING,2,2
+JUS-RST-004,JUS,RST,"Access to restorative justice and diversion should not depend on wealth race geography or prosecutorial favoritism",MISSING,2,2
+JUS-RST-005,JUS,RST,"Successful completion of diversion or restorative processes should support dismissal sealing or reduced collateral consequences where appropriate",MISSING,2,2
+JUS-SUP-001,JUS,SUP,"Probation and parole systems must be designed to support reintegration and public safety rather than act as pipelines back into incarceration",MISSING,2,2
+JUS-SUP-002,JUS,SUP,"Conditions of probation and parole must be narrowly tailored proportionate and limited to what is necessary for safety or lawful supervision",MISSING,2,2
+JUS-SUP-003,JUS,SUP,"Technical violations that do not involve new serious criminal conduct should not by default trigger incarceration",MISSING,2,2
+JUS-SUP-004,JUS,SUP,"Revocation of probation or parole must require meaningful due process individualized review and proportionality",MISSING,2,2
+JUS-SUP-005,JUS,SUP,"Probation and parole systems must not impose impossible financial travel employment or reporting conditions that function as traps for failure",MISSING,2,2
+JUS-SUP-006,JUS,SUP,"Supervision terms should be periodically reviewed and shortened where continued supervision is not justified by clear evidence",MISSING,2,2
+JUS-VIC-001,JUS,VIC,"Victims of crime must have access to protection information support services and meaningful participation without undermining due process or fair trial rights",MISSING,2,2
+JUS-VIC-002,JUS,VIC,"Victim-support systems should include trauma-informed services healthcare counseling housing support and legal navigation where appropriate",MISSING,2,2
+JUS-VIC-003,JUS,VIC,"Victims’ rights frameworks may not be used to erode evidentiary standards confrontation rights or the presumption of innocence",MISSING,2,2
+JUS-VIC-004,JUS,VIC,"Victim participation must be structured to support justice and healing without converting prosecutors or courts into instruments of retribution alone",MISSING,2,2
+JUS-VIC-005,JUS,VIC,"Access to victim-support services must be equitable and not depend on wealth geography race citizenship or media attention",MISSING,2,2
+JUS-WIT-001,JUS,WIT,"Witnesses must be protected from intimidation retaliation coercion and violence through fair and accountable legal protections",MISSING,2,2
+JUS-WIT-002,JUS,WIT,"Witness-protection measures must be proportionate reviewable and structured to avoid becoming tools for coercion or secrecy abuse",MISSING,2,2
+JUS-WIT-003,JUS,WIT,"Courts and prosecutors must disclose material inducements benefits or pressures applied to witnesses so credibility can be fairly assessed",MISSING,2,2
+JUS-WIT-004,JUS,WIT,"Witness intimidation by officials law enforcement litigants or private actors must be subject to strong penalties and independent review",MISSING,2,2
+JUS-WIT-005,JUS,WIT,"Trauma-informed witness support should be available without compromising accuracy due process or adversarial fairness",MISSING,2,2
