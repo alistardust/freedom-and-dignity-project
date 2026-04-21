@@ -86,3 +86,12 @@ These themes were central to messaging and should not be lost even though they a
 - A smaller number of actors control more of daily life.
 - This is not just left vs right; it is about whether the system still works for people at all.
 - “A life worth fighting for” became a major narrative frame.
+
+## Associated rules (CSV)
+Rules CSV: csvs/additional_unfinished_discussed_domains_rule_items.csv
+
+## Associated policy items (CSV)
+Policies CSV: csvs/additional_unfinished_discussed_domains_policy_items.csv
+
+## Associated links (CSV)
+Links CSV: csvs/additional_unfinished_discussed_domains_record_links.csv

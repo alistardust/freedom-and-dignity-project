@@ -340,3 +340,12 @@ This pillar exists to make rights explicit, modern, durable, and harder to roll 
 - Positive rights like healthcare and housing require implementation obligations, not just declarations.
 - Federal floor plus state expansion is the correct anti-patchwork model.
 - Corporate power and outsourced public functions must not become an end run around constitutional rights.
+
+## Associated rules (CSV)
+Rules CSV: csvs/pillar_5_rights_civil_liberties_and_economic_security_rule_items.csv
+
+## Associated policy items (CSV)
+Policies CSV: csvs/pillar_5_rights_civil_liberties_and_economic_security_policy_items.csv
+
+## Associated links (CSV)
+Links CSV: csvs/pillar_5_rights_civil_liberties_and_economic_security_record_links.csv

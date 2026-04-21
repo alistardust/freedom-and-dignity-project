@@ -131,3 +131,12 @@ This pillar was eventually understood as five internal modules:
 - Anti-corruption rules must address “legal but corrupt” systems built around access and agenda control, not only explicit bribery.
 - Disclosure that arrives too late does not protect democracy.
 - AI and platform-based manipulation are future-proofing necessities, not optional extras.
+
+## Associated rules (CSV)
+Rules CSV: csvs/pillar_3_anti_corruption_and_concentrated_power_rule_items.csv
+
+## Associated policy items (CSV)
+Policies CSV: csvs/pillar_3_anti_corruption_and_concentrated_power_policy_items.csv
+
+## Associated links (CSV)
+Links CSV: csvs/pillar_3_anti_corruption_and_concentrated_power_record_links.csv

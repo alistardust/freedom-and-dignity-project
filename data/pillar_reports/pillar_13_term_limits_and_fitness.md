@@ -23,3 +23,12 @@ Ensure leadership remains effective, accountable, and reflective of current soci
 
 ## Status
 Discussed but not structured.
+
+## Associated rules (CSV)
+Rules CSV: csvs/pillar_13_term_limits_and_fitness_rule_items.csv
+
+## Associated policy items (CSV)
+Policies CSV: csvs/pillar_13_term_limits_and_fitness_policy_items.csv
+
+## Associated links (CSV)
+Links CSV: csvs/pillar_13_term_limits_and_fitness_record_links.csv

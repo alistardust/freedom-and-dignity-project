@@ -25,3 +25,12 @@ Define how healthcare is delivered, funded, and protected from political interfe
 
 ## Status
 Integrated into rights, needs standalone expansion.
+
+## Associated rules (CSV)
+Rules CSV: csvs/pillar_9_healthcare_system_rule_items.csv
+
+## Associated policy items (CSV)
+Policies CSV: csvs/pillar_9_healthcare_system_policy_items.csv
+
+## Associated links (CSV)
+Links CSV: csvs/pillar_9_healthcare_system_record_links.csv

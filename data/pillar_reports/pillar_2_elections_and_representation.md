@@ -136,3 +136,12 @@ This pillar is the architecture of democratic legitimacy. It must ensure that pe
 - “Independent” commissions can still be captured unless process safeguards are robust.
 - Ballot initiatives can be captured by money unless anti-corruption rules apply.
 - Election rules must prevent administrative failure from becoming disenfranchisement.
+
+## Associated rules (CSV)
+Rules CSV: csvs/pillar_2_elections_and_representation_rule_items.csv
+
+## Associated policy items (CSV)
+Policies CSV: csvs/pillar_2_elections_and_representation_policy_items.csv
+
+## Associated links (CSV)
+Links CSV: csvs/pillar_2_elections_and_representation_record_links.csv

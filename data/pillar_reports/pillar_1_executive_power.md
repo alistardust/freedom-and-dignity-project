@@ -167,3 +167,12 @@ This pillar is designed to prevent the presidency from becoming a quasi-monarchi
 - Preserve emergency flexibility without creating loopholes for authoritarian accumulation.
 - Include safeguards against weaponized prosecutions while still ending immunity.
 - Prevent bypass through informal influence, shadow chains of command, or administrative technicalities.
+
+## Associated rules (CSV)
+Rules CSV: csvs/pillar_1_executive_power_rule_items.csv
+
+## Associated policy items (CSV)
+Policies CSV: csvs/pillar_1_executive_power_policy_items.csv
+
+## Associated links (CSV)
+Links CSV: csvs/pillar_1_executive_power_record_links.csv

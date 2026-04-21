@@ -1,0 +1,8 @@
+TRM-LIM-001,TRM,LIM,"House max 6 terms",MISSING,2,2
+TRM-LIM-002,TRM,LIM,"Senate max 3 terms",MISSING,2,2
+TRM-LIM-003,TRM,LIM,"Combined max 8 terms or 20 years",MISSING,2,2
+TRM-RUN-001,TRM,RUN,"No running while in office",MISSING,2,2
+TRM-RUN-002,TRM,RUN,"Two-year wait before next office",MISSING,2,2
+TRM-VAC-001,TRM,VAC,"Vacancy rules respect wait periods",MISSING,2,2
+TRM-VAC-002,TRM,VAC,"Special election exception",MISSING,2,2
+TRM-VAC-003,TRM,VAC,"Senate appointment exception",MISSING,2,2

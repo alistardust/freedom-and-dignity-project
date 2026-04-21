@@ -1,0 +1,193 @@
+HLT-ACC-001,HLT,ACC,"Coverage for citizens and long-term residents",MISSING,2,2
+HLT-ACC-002,HLT,ACC,"Residency requirement for elective care",MISSING,2,2
+HLT-ACC-003,HLT,ACC,"Exception for severe conditions",MISSING,2,2
+HLT-AI-001,HLT,AI,"AI systems in healthcare must be treated as high-risk systems requiring strict standards for safety efficacy accountability and patient protection",MISSING,2,2
+HLT-AI-002,HLT,AI,"AI systems may support but not replace licensed medical professionals in diagnosis treatment decisions or patient care where such care is medically required",MISSING,2,2
+HLT-AI-003,HLT,AI,"AI systems may be used for clinical decision support only where they assist rather than substitute for physician judgment",MISSING,2,2
+HLT-AI-004,HLT,AI,"AI systems must meet strong evidence standards for safety efficacy and bias before being used in clinical settings",MISSING,2,2
+HLT-AI-005,HLT,AI,"Deployed healthcare AI systems must be continuously monitored for errors bias and adverse outcomes",MISSING,2,2
+HLT-AI-006,HLT,AI,"AI systems may not independently diagnose or prescribe treatment without qualified human oversight and accountability",MISSING,2,2
+HLT-AI-007,HLT,AI,"AI systems may not be used to deny restrict or limit medically necessary care; any decision that would result in denial must be made directly and independently by a qualified human reviewer",UPDATED,4,2
+HLT-AI-007A,HLT,AI,"Human reviewers must exercise independent clinical judgment and may not rely solely on AI-generated recommendations when making decisions that affect access to care",MISSING,2,2
+HLT-AI-007B,HLT,AI,"AI systems may be used to assist or expedite approval of care but may not be used as the primary basis for denial restriction or reduction of care",MISSING,2,2
+HLT-AI-007C,HLT,AI,"Human review must occur prior to any denial decision and may not be deferred to post-decision appeal processes",MISSING,2,2
+HLT-AI-007D,HLT,AI,"Absence of AI approval or recommendation may not be used as evidence justification or implicit basis for denial restriction or limitation of care",MISSING,2,2
+HLT-AI-007E,HLT,AI,"All denial decisions must be based on independent clinical evaluation and evidence and may not rely on absence of AI support or AI-generated prioritization",MISSING,2,2
+HLT-AI-007F,HLT,AI,"AI systems used to assist approvals must not create systemic bias in review processes that increases likelihood of denial for cases not flagged or prioritized by AI",MISSING,2,2
+HLT-AI-007G,HLT,AI,"Case review systems must ensure that requests not prioritized or flagged by AI receive equal and timely human consideration",MISSING,2,2
+HLT-AI-008,HLT,AI,"AI systems may not make opaque triage or prioritization decisions that materially affect access to care without explainability and oversight",MISSING,2,2
+HLT-AI-009,HLT,AI,"Coverage decision-making entities must not use AI systems to prioritize cost reduction over patient health outcomes or to override licensed clinical judgment",UPDATED,4,2
+HLT-AI-010,HLT,AI,"Patients and providers must have access to explanations and appeal processes for AI-influenced coverage decisions",MISSING,2,2
+HLT-AI-011,HLT,AI,"Patients have the right to receive care from qualified human providers and may not be forced into AI-only care pathways",MISSING,2,2
+HLT-AI-012,HLT,AI,"Patients must be informed when AI systems are used in their care and must be able to opt out where feasible",MISSING,2,2
+HLT-AI-013,HLT,AI,"Healthcare data used by AI systems must be treated as highly sensitive with strict protections against misuse or unauthorized access",MISSING,2,2
+HLT-AI-014,HLT,AI,"Healthcare data may not be used for advertising profiling or unrelated commercial purposes",MISSING,2,2
+HLT-AI-015,HLT,AI,"Training data for healthcare AI must meet strict ethical legal and consent standards including safeguards against re-identification",MISSING,2,2
+HLT-AI-016,HLT,AI,"Healthcare AI systems must fail safely and defer to human providers when uncertain or operating outside validated scope",MISSING,2,2
+HLT-AI-017,HLT,AI,"AI systems may not present outputs with unwarranted certainty in clinical contexts where uncertainty materially affects outcomes",MISSING,2,2
+HLT-AI-018,HLT,AI,"Healthcare AI systems must be evaluated and mitigated for bias across race gender socioeconomic status and other protected characteristics",MISSING,2,2
+HLT-AI-019,HLT,AI,"AI deployment must not worsen disparities in healthcare access or outcomes",MISSING,2,2
+HLT-AI-020,HLT,AI,"AI may be used to accelerate medical research and drug development provided it meets safety transparency and ethical standards",MISSING,2,2
+HLT-AI-021,HLT,AI,"Increase funding for research into under-studied conditions treatments and medications including diseases that are historically neglected or lack commercial incentives",MISSING,2,2
+HLT-AI-022,HLT,AI,"Public funding priorities must include diseases and conditions that are prevalent but underfunded including sexually transmitted infections chronic conditions and non-commercial research areas",MISSING,2,2
+HLT-AI-023,HLT,AI,"Healthcare AI policy and approvals must be grounded in transparent evidence-based science and protected from political ideological or commercial distortion",MISSING,2,2
+HLT-AI-024,HLT,AI,"AI systems must be integrated into healthcare systems in ways that preserve safety accountability and continuity of care",MISSING,2,2
+HLT-AI-025,HLT,AI,"Healthcare AI systems should support interoperability and data portability without compromising privacy or security",MISSING,2,2
+HLT-APL-001,HLT,APL,"Patients and providers must have access to fast meaningful and independent appeal processes for adverse coverage or service decisions",MISSING,2,2
+HLT-APL-002,HLT,APL,"Appeals involving urgent medically necessary treatment must be resolved on timelines that prevent avoidable deterioration injury or death",MISSING,2,2
+HLT-APL-003,HLT,APL,"Independent external review must be available for contested denials and may not be controlled by the same entity that issued the denial",MISSING,2,2
+HLT-APL-004,HLT,APL,"Successful appeals should trigger review of the underlying denial patterns and potential penalties for repeated wrongful denials",MISSING,2,2
+HLT-COV-001,HLT,COV,"Ban tiered healthcare coverage",MISSING,2,2
+HLT-COV-002,HLT,COV,"Single plan for all",MISSING,2,2
+HLT-COV-003,HLT,COV,"Single payer healthcare",MISSING,2,2
+HLT-COV-005,HLT,COV,"Establish tighter overall rules limiting denial of healthcare coverage or service",MISSING,2,2
+HLT-COV-006,HLT,COV,"Until universal healthcare is implemented overhaul health insurance to reduce denials delays and gaps in coverage",MISSING,2,2
+HLT-COV-007,HLT,COV,"Require faster timelines for healthcare coverage decisions and prior authorization determinations",MISSING,2,2
+HLT-COV-008,HLT,COV,"Require expedited appeal processes for denials of healthcare coverage or service",MISSING,2,2
+HLT-COV-009,HLT,COV,"Increase required coverage of medicines procedures and medically necessary treatments",MISSING,2,2
+HLT-COV-010,HLT,COV,"Protect and strengthen bans on denial of coverage based on pre-existing conditions",MISSING,2,2
+HLT-COV-011,HLT,COV,"Expand required coverage for conditions that are often under-covered including obesity",MISSING,2,2
+HLT-COV-012,HLT,COV,"Require coverage of mental healthcare including talk therapy",MISSING,2,2
+HLT-COV-013,HLT,COV,"Require coverage of psychedelic therapy where medically appropriate and supported by evidence and law",MISSING,2,2
+HLT-COV-014,HLT,COV,"Require health plans to provide nationwide in-network care rather than only regional networks",MISSING,2,2
+HLT-COV-015,HLT,COV,"Expand HSA-style health spending cards or equivalent healthcare spending access tools to everyone rather than limiting them to high-deductible plans",MISSING,2,2
+HLT-COV-016,HLT,COV,"Ban employers from offering only high-deductible health insurance plans",MISSING,2,2
+HLT-COV-017,HLT,COV,"Require employers to pay all health insurance premiums subject to defined exceptions carveouts and subsidies for small businesses",MISSING,2,2
+HLT-COV-018,HLT,COV,"Healthcare coverage or service may not be denied restricted or delayed except through fair transparent timely and medically grounded review processes",MISSING,2,2
+HLT-COV-019,HLT,COV,"Any adverse coverage decision must be based on clear medical standards and individualized review rather than blanket exclusions automated inference or procedural traps",MISSING,2,2
+HLT-COV-020,HLT,COV,"Denial rates delay patterns and reversal rates must be publicly reported and subject to oversight and enforcement",MISSING,2,2
+HLT-COV-021,HLT,COV,"Repeated unjustified denial or delay of medically necessary care must trigger penalties corrective action and possible loss of plan participation authority",MISSING,2,2
+HLT-COV-022,HLT,COV,"Coverage systems must include a broad mandatory floor of medically necessary care including preventive acute chronic reproductive mental and disability-related care",MISSING,2,2
+HLT-COV-023,HLT,COV,"Coverage exclusions may not be written so broadly or vaguely that they undermine the practical availability of necessary care",MISSING,2,2
+HLT-COV-024,HLT,COV,"Coverage rules must be written in clear language and interpreted in favor of access where ambiguity exists in medically necessary care",MISSING,2,2
+HLT-COV-025,HLT,COV,"Coverage systems must include medicines procedures therapies and diagnostics that are supported by evidence and medically appropriate for the individual patient",MISSING,2,2
+HLT-COV-026,HLT,COV,"Protections against denial or exclusion based on pre-existing conditions must be permanent explicit and difficult to weaken or roll back",MISSING,2,2
+HLT-COV-027,HLT,COV,"Coverage systems must not use pre-existing-condition logic indirectly through pricing network design utilization controls or exclusionary administration",MISSING,2,2
+HLT-COV-028,HLT,COV,"Coverage requirements must be expanded for conditions that have historically been under-covered or stigmatized including obesity chronic pain sexually transmitted infections and other neglected areas",MISSING,2,2
+HLT-COV-029,HLT,COV,"Coverage systems must include mental healthcare on parity with physical healthcare including talk therapy psychiatric care crisis services and medically appropriate longer-term treatment",MISSING,2,2
+HLT-COV-030,HLT,COV,"Coverage systems may not impose narrower networks harsher utilization controls or lower practical access for mental healthcare than for physical healthcare",MISSING,2,2
+HLT-COV-031,HLT,COV,"Where evidence and law support it coverage systems should include therapies such as psychedelic-assisted treatment under appropriate medical supervision",MISSING,2,2
+HLT-CST-001,HLT,CST,"Deductibles copays and out-of-pocket cost structures must not make covered care practically inaccessible",MISSING,2,2
+HLT-CST-002,HLT,CST,"Healthcare cost-sharing rules must be regulated to protect patients from financial shock delay of care and medically harmful underuse",MISSING,2,2
+HLT-CST-003,HLT,CST,"Health spending cards or equivalent patient-directed tools should be available broadly rather than limited to high-deductible-plan structures",MISSING,2,2
+HLT-CST-004,HLT,CST,"Cost-sharing design may not be used to discourage care for chronic conditions disability-related needs or preventive treatment",MISSING,2,2
+HLT-EMP-001,HLT,EMP,"Employers may not satisfy healthcare obligations by offering only high-deductible plans that shift unreasonable cost burden onto workers",MISSING,2,2
+HLT-EMP-002,HLT,EMP,"Employers should be required to pay the full premium cost of employee health coverage subject to clearly defined exceptions carveouts and small-business supports",MISSING,2,2
+HLT-EMP-003,HLT,EMP,"Small businesses should receive subsidies public supports or transition assistance to comply with healthcare coverage obligations without destabilization",MISSING,2,2
+HLT-EMP-004,HLT,EMP,"Employer-based health coverage rules during the transition period must be structured to prevent underinsurance disguised as nominal coverage",MISSING,2,2
+HLT-EMS-001,HLT,EMS,"Emergency care free for all",MISSING,2,2
+HLT-EMS-002,HLT,EMS,"Emergency includes ambulance and follow-up",MISSING,2,2
+HLT-MHC-001,HLT,MHC,"Mental healthcare must be included",MISSING,2,2
+HLT-MHC-002,HLT,MHC,"AI systems in mental health must be regulated as high-risk because they can affect safety autonomy privacy dignity and access to care",MISSING,2,2
+HLT-MHC-003,HLT,MHC,"AI systems may not replace licensed clinicians in diagnosis crisis assessment involuntary treatment decisions or other high-risk mental health determinations",MISSING,2,2
+HLT-MHC-004,HLT,MHC,"AI systems may not serve as the sole decision-maker in suicide risk assessment crisis intervention or emergency mental health response",MISSING,2,2
+HLT-MHC-005,HLT,MHC,"A clearly identifiable licensed human professional must remain accountable for all high-risk mental health decisions involving AI systems",MISSING,2,2
+HLT-MHC-006,HLT,MHC,"AI may be used as an assistive tool in mental healthcare only where it supports rather than substitutes for qualified clinical judgment",MISSING,2,2
+HLT-MHC-007,HLT,MHC,"AI systems used in mental health care must meet strong evidence standards for safety efficacy and bias before deployment",MISSING,2,2
+HLT-MHC-008,HLT,MHC,"Mental health AI systems must be continuously monitored for harmful outcomes bias failure modes and adverse effects after deployment",MISSING,2,2
+HLT-MHC-009,HLT,MHC,"AI systems marketed for mental health support may not deceptively present themselves as human therapists clinicians or trusted personal relationships",MISSING,2,2
+HLT-MHC-010,HLT,MHC,"AI systems may not be designed to cultivate emotional dependency attachment or compulsive engagement in users seeking mental health support",MISSING,2,2
+HLT-MHC-011,HLT,MHC,"Any AI system offering mental health support must clearly disclose that it is not a human and must state its limits in plain language",MISSING,2,2
+HLT-MHC-012,HLT,MHC,"Special protections are required for minors using AI systems offering emotional support companionship or mental health-related interaction",MISSING,2,2
+HLT-MHC-013,HLT,MHC,"Mental health AI systems must include clear escalation pathways to human crisis resources emergency services or licensed care when high-risk indicators are detected",MISSING,2,2
+HLT-MHC-014,HLT,MHC,"Mental health AI systems may not provide false reassurance or simulate certainty in crisis situations beyond validated capability",MISSING,2,2
+HLT-MHC-015,HLT,MHC,"Where mental health AI systems are uncertain or out of scope they must fail safely and direct users to human care rather than improvising unsupported guidance",MISSING,2,2
+HLT-MHC-016,HLT,MHC,"Data generated through AI mental health interactions must be treated as highly sensitive health data with enhanced privacy protections",MISSING,2,2
+HLT-MHC-017,HLT,MHC,"Mental health AI data may not be sold shared for advertising or used for unrelated profiling or commercial targeting",MISSING,2,2
+HLT-MHC-018,HLT,MHC,"Mental health data inferred or collected by AI systems may not be used by employers insurers schools or landlords to deny opportunity coverage or access",MISSING,2,2
+HLT-MHC-019,HLT,MHC,"Consent for use of mental health AI systems and their data practices must be explicit informed revocable and presented without dark patterns",MISSING,2,2
+HLT-MHC-020,HLT,MHC,"AI systems may not claim mental health efficacy diagnostic power or therapeutic value without scientifically supported evidence appropriate to those claims",MISSING,2,2
+HLT-MHC-021,HLT,MHC,"Mental health AI systems must be subject to independent evaluation rather than relying solely on vendor claims or internal testing",MISSING,2,2
+HLT-MHC-022,HLT,MHC,"Material risks limitations and known failure modes of mental health AI systems must be publicly disclosed",MISSING,2,2
+HLT-MHC-023,HLT,MHC,"People must retain a right to access human mental healthcare and may not be forced into AI-only mental health services because of cost convenience or availability policies",MISSING,2,2
+HLT-MHC-024,HLT,MHC,"AI mental health tools may not be imposed coercively in schools workplaces prisons detention settings or public benefits systems without strict legal safeguards",MISSING,2,2
+HLT-MHC-025,HLT,MHC,"AI systems may not be used to enforce behavioral conformity or ideological compliance under the guise of mental health support",MISSING,2,2
+HLT-MHC-026,HLT,MHC,"Schools may not rely on opaque AI mental health or risk-scoring tools to label discipline or surveil students without strict legal and scientific safeguards",MISSING,2,2
+HLT-MHC-027,HLT,MHC,"Jails prisons detention facilities and similar institutions may not use AI mental health tools to justify isolation restraint forced treatment or punishment without rigorous human review and legal safeguards",MISSING,2,2
+HLT-MHC-028,HLT,MHC,"Public benefits or disability systems may not use opaque AI mental health assessments to deny support or override licensed clinical evaluations",MISSING,2,2
+HLT-MHC-029,HLT,MHC,"AI systems may not be used by insurers or payers to deny delay or limit mental health care in ways that override licensed clinical judgment without transparent review and appeal",MISSING,2,2
+HLT-MHC-030,HLT,MHC,"AI systems may not be used as a substitute for access to licensed mental health care where such care is medically appropriate",MISSING,2,2
+HLT-MHC-031,HLT,MHC,"Mental health AI systems must implement strict limits on data retention including user control over deletion and limits on persistent memory of sensitive interactions",MISSING,2,2
+HLT-MHC-032,HLT,MHC,"Training data for mental health AI systems must not include improperly obtained sensitive personal disclosures or confidential therapeutic data",MISSING,2,2
+HLT-MHC-033,HLT,MHC,"Mental health AI systems must clearly define their role capabilities and limitations and may not imply comprehensive understanding or human-like judgment",MISSING,2,2
+HLT-MHC-034,HLT,MHC,"AI systems may not use mental health interactions to manipulate behavior for productivity commercial or institutional objectives without explicit informed consent and safeguards",MISSING,2,2
+HLT-MHC-035,HLT,MHC,"Mental health AI systems may not be integrated with surveillance law enforcement or intelligence systems to monitor or profile individuals",MISSING,2,2
+HLT-MHC-036,HLT,MHC,"Use of AI mental health systems in experimental or research contexts requires informed consent and appropriate ethical review equivalent to human subjects research standards",MISSING,2,2
+HLT-MHC-037,HLT,MHC,"Fund independent research into the short-term and long-term effects of AI systems on mental health including impacts on children adolescents and vulnerable populations",MISSING,2,2
+HLT-MHC-038,HLT,MHC,"Ban use of AI systems designed for conversational emotional or behavioral interaction for children under a minimum age threshold such as 8 years old",MISSING,2,2
+HLT-MHC-039,HLT,MHC,"Establish graduated age-based restrictions for AI systems that simulate social emotional or advisory interaction with increasing safeguards for minors",MISSING,2,2
+HLT-MHC-040,HLT,MHC,"AI systems accessible to minors must include strict limitations on data collection interaction patterns and behavioral influence mechanisms",MISSING,2,2
+HLT-MHC-041,HLT,MHC,"AI systems may not be marketed or deployed as standalone mental health treatment tools directly to consumers outside of clinically supervised contexts",MISSING,2,2
+HLT-MHC-042,HLT,MHC,"Limited use of AI systems for crisis support may be permitted where they are designed solely to provide immediate assistance and escalation to human services such as suicide prevention resources",MISSING,2,2
+HLT-MHC-043,HLT,MHC,"Mental health data from licensed providers therapy sessions or clinical records may not be used for AI training without explicit informed consent from all parties involved",MISSING,2,2
+HLT-MHC-044,HLT,MHC,"Use of identifiable clinical mental health data for AI training is prohibited unless strict ethical legal and consent standards are met",MISSING,2,2
+HLT-MHC-045,HLT,MHC,"Mental health data generated through AI interactions may not be stored beyond what is strictly necessary without explicit informed consent and user control",MISSING,2,2
+HLT-MHC-046,HLT,MHC,"All training data used in mental health AI systems must be de-identified using robust techniques with safeguards against re-identification and ongoing evaluation of anonymization effectiveness",MISSING,2,2
+HLT-MHC-047,HLT,MHC,"AI systems must not be designed or used to re-identify individuals from anonymized mental health data",MISSING,2,2
+HLT-NET-001,HLT,NET,"Health plans must maintain adequate networks for all covered services including specialty care mental healthcare emergency care and chronic-condition management",MISSING,2,2
+HLT-NET-002,HLT,NET,"Health plan networks must function nationally rather than trapping people in narrow regional structures that block continuity or mobility",MISSING,2,2
+HLT-NET-003,HLT,NET,"If adequate in-network care is not available within reasonable time and distance standards out-of-network care must be covered at in-network cost to the patient",MISSING,2,2
+HLT-NET-004,HLT,NET,"Patients may not be penalized for obtaining necessary care outside narrow networks when the plan fails to provide meaningful access",MISSING,2,2
+HLT-OVR-001,HLT,OVR,"Coverage entities must publicly report denial rates appeal outcomes prior authorization burden network adequacy failures and major access complaints in standardized formats",MISSING,2,2
+HLT-OVR-002,HLT,OVR,"Healthcare oversight bodies must have authority to investigate systemic denial delay undercoverage or misleading plan design and impose meaningful penalties",MISSING,2,2
+HLT-OVR-003,HLT,OVR,"Coverage entities may not hide harmful practices behind proprietary standards trade secrecy or intentionally complex plan language",MISSING,2,2
+HLT-OVR-004,HLT,OVR,"Regulators must be empowered to require corrective action restitution or suspension of plan participation where repeated patient harm occurs",MISSING,2,2
+HLT-PAU-001,HLT,PAU,"Prior authorization requirements must be strictly limited to categories with clear evidence of necessity and may not be used indiscriminately across routine care",MISSING,2,2
+HLT-PAU-002,HLT,PAU,"Prior authorization systems must be transparent clinically justified and easy for providers and patients to navigate",MISSING,2,2
+HLT-PAU-003,HLT,PAU,"Repeated approval of the same type of medically necessary treatment should reduce or eliminate future prior authorization burdens for similar care",MISSING,2,2
+HLT-PAU-004,HLT,PAU,"Prior authorization may not be used to disrupt continuity of care for chronic or ongoing conditions without clear medical justification",MISSING,2,2
+HLT-PHR-001,HLT,PHR,"Generic drug quality standards",MISSING,2,2
+HLT-PHR-002,HLT,PHR,"Ban unnecessary allergens",MISSING,2,2
+HLT-PHR-003,HLT,PHR,"Supply chain traceability",MISSING,2,2
+HLT-REB-001,HLT,REB,"National rehab standards",MISSING,2,2
+HLT-REB-002,HLT,REB,"Evidence-based rehab required",MISSING,2,2
+HLT-REB-003,HLT,REB,"Ban abusive rehab practices",MISSING,2,2
+HLT-REB-004,HLT,REB,"Rehab transparency",MISSING,2,2
+HLT-REB-005,HLT,REB,"Accessible rehab treatment",MISSING,2,2
+HLT-REB-006,HLT,REB,"Rehab oversight and audits",MISSING,2,2
+HLT-REB-007,HLT,REB,"Expand voluntary treatment",MISSING,2,2
+HLT-RSR-001,HLT,RSR,"Public healthcare and research policy must increase funding for neglected conditions medications and treatment gaps that lack commercial incentives but have significant public-health impact",MISSING,2,2
+HLT-RSR-002,HLT,RSR,"Research priorities should include stigmatized or less commercially attractive conditions including sexually transmitted infections chronic conditions and under-studied medication needs",MISSING,2,2
+HLT-RSR-003,HLT,RSR,"Healthcare governance should not allow commercial buzz or market hype to determine research priority at the expense of real public-health need",MISSING,2,2
+HLT-RX-001,HLT,RX,"Drug coverage systems must include broad access to medically necessary prescriptions and may not use formularies as hidden denial systems",MISSING,2,2
+HLT-RX-002,HLT,RX,"Patients must have fast and meaningful exception pathways when formulary restrictions conflict with individualized medical need",MISSING,2,2
+HLT-RX-003,HLT,RX,"Coverage systems may not force repeated medication failure or step-therapy loops where doing so is medically harmful or unreasonable",MISSING,2,2
+HLT-RX-004,HLT,RX,"Coverage for medications should include neglected or underfunded conditions where evidence supports medical necessity and public health importance",MISSING,2,2
+HLT-RX-005,HLT,RX,"Production quotas and regulatory limits on controlled medications must be set at levels that ensure reliable patient access to medically necessary treatment and may not create artificial shortages",MISSING,2,2
+HLT-RX-006,HLT,RX,"Regulatory systems may not restrict supply of approved medications in ways that prevent patients with valid prescriptions from obtaining treatment in a timely manner",MISSING,2,2
+HLT-RX-007,HLT,RX,"Controlled substance quotas must be based on real-world medical demand prescribing data and public health needs rather than static limits or overly conservative projections",MISSING,2,2
+HLT-RX-008,HLT,RX,"When shortages of controlled medications occur regulators must act rapidly to adjust quotas supply chains and distribution to restore access",MISSING,2,2
+HLT-RX-009,HLT,RX,"Patients must be able to access prescribed controlled medications without unreasonable geographic pharmacy or supply restrictions that vary by region",MISSING,2,2
+HLT-RX-010,HLT,RX,"Expansion of access to controlled medications must be paired with evidence-based prescribing guidelines monitoring for misuse and safeguards against diversion without restricting legitimate care",MISSING,2,2
+HLT-RX-011,HLT,RX,"Patients receiving ongoing treatment with controlled medications may not have care disrupted due to supply shortages quota limits or administrative barriers beyond their control",MISSING,2,2
+HLT-STD-001,HLT,STD,"Coverage must be evidence-based",MISSING,2,2
+HLT-STD-002,HLT,STD,"Protect from partisan interference",MISSING,2,2
+HLT-STD-003,HLT,STD,"Minimum service levels",MISSING,2,2
+HLT-STD-004,HLT,STD,"Maximum wait times",MISSING,2,2
+HLT-STD-005,HLT,STD,"Healthcare coverage decisions and prior authorization determinations must meet strict maximum response timelines",MISSING,4,2
+HLT-STD-006,HLT,STD,"Urgent and emergency-related coverage determinations must be made on accelerated timelines sufficient to prevent medical harm",MISSING,4,2
+HLT-STD-007,HLT,STD,"If a coverage decision is not made within required timelines the requested care should be presumptively approved unless narrowly defined exceptions apply",MISSING,4,2
+HLT-STD-008,HLT,STD,"Administrative delay may not be used as a strategy to avoid payment or discourage medically necessary care",MISSING,4,2
+HLT-STD-009,HLT,STD,"Full transparency of evidence",MISSING,2,2
+HLT-STD-010,HLT,STD,"Publish dissenting opinions",MISSING,2,2
+HLT-STD-011,HLT,STD,"Independent audit systems",MISSING,2,2
+HLT-STD-012,HLT,STD,"Treat addiction as medical condition",MISSING,2,2
+HLT-STD-013,HLT,STD,"Harm reduction strategies",MISSING,2,2
+HLT-SUP-001,HLT,SUP,"Supplement research funding",MISSING,2,2
+HLT-SUP-002,HLT,SUP,"Supplement labeling standards",MISSING,2,2
+HLT-SUP-003,HLT,SUP,"Supplement lab transparency",MISSING,2,2
+HLT-SUP-004,HLT,SUP,"Minimum supplement quality standards",MISSING,2,2
+HLT-TEL-001,HLT,TEL,"Telemedicine without regional restriction",MISSING,2,2
+HLT-TEL-002,HLT,TEL,"Telemedicine as access equalizer",MISSING,2,2
+HLT-TRL-001,HLT,TRL,"Approvals and trials for new treatments funded and streamlined",MISSING,1,1
+HLT-TRN-001,HLT,TRN,"Until universal single-payer healthcare is implemented all healthcare coverage systems must be regulated to protect patients from denial delay fragmentation and extractive practices",MISSING,2,2
+HLT-TRN-002,HLT,TRN,"Transition-state healthcare reform must be designed to improve care immediately without weakening or delaying the long-term goal of universal single-payer healthcare",MISSING,2,2
+MED-PRS-001,MED,PRS,"Protect journalists",MISSING,2,2
+MED-PRS-002,MED,PRS,"Protect sources",MISSING,2,2
+MED-PRS-003,MED,PRS,"Limit compelled disclosure",MISSING,2,2
+MED-PRS-004,MED,PRS,"Ban retaliation against journalists",MISSING,2,2
+MED-PRS-005,MED,PRS,"Prevent misuse of secrecy laws",MISSING,2,2
+MED-PRS-006,MED,PRS,"Judicial review before disclosure",MISSING,2,2
+MED-PRS-007,MED,PRS,"Limit surveillance of journalists",MISSING,2,2
+MED-PRS-008,MED,PRS,"Include independent journalists",MISSING,2,2
+MED-PRS-009,MED,PRS,"Transparency on targeting journalists",MISSING,2,2

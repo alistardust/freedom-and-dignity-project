@@ -26,3 +26,12 @@ Define how wealth is taxed, distributed, and prevented from accumulating into po
 
 ## Status
 Partially discussed, not structured.
+
+## Associated rules (CSV)
+Rules CSV: csvs/pillar_8_taxation_and_wealth_rule_items.csv
+
+## Associated policy items (CSV)
+Policies CSV: csvs/pillar_8_taxation_and_wealth_policy_items.csv
+
+## Associated links (CSV)
+Links CSV: csvs/pillar_8_taxation_and_wealth_record_links.csv

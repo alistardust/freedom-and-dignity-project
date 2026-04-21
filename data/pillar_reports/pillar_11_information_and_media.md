@@ -24,3 +24,12 @@ Balance free speech with protections against coordinated deception, foreign infl
 
 ## Status
 High-risk, high-importance. Needs careful design.
+
+## Associated rules (CSV)
+Rules CSV: csvs/pillar_11_information_and_media_rule_items.csv
+
+## Associated policy items (CSV)
+Policies CSV: csvs/pillar_11_information_and_media_policy_items.csv
+
+## Associated links (CSV)
+Links CSV: csvs/pillar_11_information_and_media_record_links.csv

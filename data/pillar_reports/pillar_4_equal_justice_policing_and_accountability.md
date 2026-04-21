@@ -129,3 +129,12 @@ This pillar governs how state force, punishment, detention, policing, and legal 
 - Internment bans must be tightly defined to prevent rebranding under other labels.
 - Publishing disparity data must be standardized and solution-oriented.
 - Private prison bans must include shadow contractor systems.
+
+## Associated rules (CSV)
+Rules CSV: csvs/pillar_4_equal_justice_policing_and_accountability_rule_items.csv
+
+## Associated policy items (CSV)
+Policies CSV: csvs/pillar_4_equal_justice_policing_and_accountability_policy_items.csv
+
+## Associated links (CSV)
+Links CSV: csvs/pillar_4_equal_justice_policing_and_accountability_record_links.csv

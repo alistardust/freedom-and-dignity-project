@@ -25,3 +25,12 @@ Clarify firearm rights, regulate weapon ownership, and prevent private militariz
 
 ## Status
 Partially integrated into rights pillar.
+
+## Associated rules (CSV)
+Rules CSV: csvs/pillar_12_gun_policy_and_armed_power_rule_items.csv
+
+## Associated policy items (CSV)
+Policies CSV: csvs/pillar_12_gun_policy_and_armed_power_policy_items.csv
+
+## Associated links (CSV)
+Links CSV: csvs/pillar_12_gun_policy_and_armed_power_record_links.csv

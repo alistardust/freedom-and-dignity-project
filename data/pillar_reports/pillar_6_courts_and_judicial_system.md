@@ -31,3 +31,12 @@ Define how courts operate, how judges are selected and constrained, and how inte
 
 ## Status
 Not yet fully developed. Critical pillar.
+
+## Associated rules (CSV)
+Rules CSV: csvs/pillar_6_courts_and_judicial_system_rule_items.csv
+
+## Associated policy items (CSV)
+Policies CSV: csvs/pillar_6_courts_and_judicial_system_policy_items.csv
+
+## Associated links (CSV)
+Links CSV: csvs/pillar_6_courts_and_judicial_system_record_links.csv

@@ -25,3 +25,12 @@ Prevent monopolies, restore competition, and limit corporate domination of socie
 
 ## Status
 Partially embedded in anti-corruption pillar.
+
+## Associated rules (CSV)
+Rules CSV: csvs/pillar_10_antitrust_and_corporate_power_rule_items.csv
+
+## Associated policy items (CSV)
+Policies CSV: csvs/pillar_10_antitrust_and_corporate_power_policy_items.csv
+
+## Associated links (CSV)
+Links CSV: csvs/pillar_10_antitrust_and_corporate_power_record_links.csv

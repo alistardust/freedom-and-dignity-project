@@ -24,3 +24,12 @@ Define the power, limits, and oversight of regulatory agencies and the civil ser
 
 ## Status
 Implied but not yet developed.
+
+## Associated rules (CSV)
+Rules CSV: csvs/pillar_14_administrative_state_rule_items.csv
+
+## Associated policy items (CSV)
+Policies CSV: csvs/pillar_14_administrative_state_policy_items.csv
+
+## Associated links (CSV)
+Links CSV: csvs/pillar_14_administrative_state_record_links.csv
