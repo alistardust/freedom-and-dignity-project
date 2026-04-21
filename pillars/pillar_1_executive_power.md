@@ -167,3 +167,21 @@ This pillar is designed to prevent the presidency from becoming a quasi-monarchi
 - Preserve emergency flexibility without creating loopholes for authoritarian accumulation.
 - Include safeguards against weaponized prosecutions while still ending immunity.
 - Prevent bypass through informal influence, shadow chains of command, or administrative technicalities.
+
+
+## Canonical rules (generated)
+
+| Rule ID | Scope | Summary |
+|---|---|---|
+| GOV-ACC-002 | GOV | "Ban political firings" |
+| GOV-ACC-003 | GOV | "Ban executive kill lists" |
+| GOV-DIV-001 | GOV | "Mandatory divestment enforcement" |
+| GOV-EMR-001 | GOV | "Time limits on executive actions" |
+| GOV-EXO-001 | GOV | "Limit executive orders to emergencies" |
+| GOV-PDN-001 | GOV | "Restrict pardon power" |
+| GOV-REC-001 | GOV | "Constitutionalize presidential records" |
+| GOV-SHD-001 | GOV | "No pay during government shutdown" |
+| GOV-SHD-002 | GOV | "Permanent pay loss after 30 days shutdown" |
+| GOV-WAR-001 | GOV | "Ban open-ended AUMFs" |
+| GOV-WAR-002 | GOV | "Require declared wars" |
+| GOV-WAR-003 | GOV | "Limit military authority" |

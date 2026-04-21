@@ -86,3 +86,45 @@ These themes were central to messaging and should not be lost even though they a
 - A smaller number of actors control more of daily life.
 - This is not just left vs right; it is about whether the system still works for people at all.
 - “A life worth fighting for” became a major narrative frame.
+
+
+## Canonical rules (generated)
+
+| Rule ID | Scope | Summary |
+|---|---|---|
+| SYS-AI-001 | SYS | "AI-assisted decision systems must not create asymmetrical processes that accelerate approvals while increasing delay scrutiny or denial likelihood for unapproved cases" |
+| SYS-AI-002 | SYS | "Any decision that materially harms restricts or denies rights opportunities or access must be made through independent human judgment and may not rely on absence of AI support" |
+| SYS-AI-003 | SYS | "Absence of AI recommendation or prioritization may not be used as evidence or implicit justification for denial restriction or adverse outcomes" |
+| SYS-AI-004 | SYS | "All individuals must receive equal and timely consideration in decision-making systems regardless of AI prioritization or scoring" |
+| SYS-AI-005 | SYS | "AI systems used in decision-making processes must include mechanisms to detect measure and mitigate bias and must be explicitly used to improve fairness where possible" |
+| SYS-AI-006 | SYS | "Decision-making systems using AI must be continuously audited for bias disparate impact and unfair outcomes with corrective action required" |
+| SYS-AI-007 | SYS | "Each policy domain or pillar must define its own AI system rules consistent with these overarching principles and adapted to domain-specific risks" |
+| SYS-FED-001 | SYS | "High-risk systems must not be fully centralized" |
+| SYS-FED-002 | SYS | "Elections remain state/local administered" |
+| SYS-FED-003 | SYS | "Federal sets standards but not direct control of elections" |
+| SYS-FED-004 | SYS | "Multiple independent oversight layers required" |
+| SYS-FED-005 | SYS | "Safeguards against both state and federal abuse" |
+| SYS-FND-001 | SYS | "Platform is both a policy framework and long-term strategy" |
+| SYS-FND-002 | SYS | "Restore checks and balances" |
+| SYS-FND-003 | SYS | "Modernize the Constitution" |
+| SYS-FND-004 | SYS | "Guarantee universal equal rights" |
+| SYS-FND-005 | SYS | "Address economic inequality structurally" |
+| SYS-FND-006 | SYS | "Address modern systemic issues not covered by current law" |
+| SYS-FND-007 | SYS | "Make technology work for people" |
+| SYS-FND-008 | SYS | "Movement is not left vs right" |
+| SYS-FND-009 | SYS | "Movement accessible to everyone" |
+| SYS-FND-010 | SYS | "Includes communication and coalition strategy" |
+| SYS-FND-011 | SYS | "Not a political party" |
+| SYS-FND-012 | SYS | "Origin tied to post-Trump instability concerns" |
+| SYS-FND-013 | SYS | "Address ignored working-class issues" |
+| SYS-FND-014 | SYS | "Address rising costs and declining quality of life" |
+| SYS-FND-015 | SYS | "Address elite detachment" |
+| SYS-FND-016 | SYS | "Address wealth concentration" |
+| SYS-FND-017 | SYS | "Address declining institutional trust" |
+| SYS-FND-018 | SYS | "Core values include truth equality freedom dignity" |
+| SYS-GEO-001 | SYS | "Geography must not determine access to rights or care" |
+| SYS-GEO-002 | SYS | "National baseline must be uniform" |
+| SYS-GEO-003 | SYS | "States may not degrade federally guaranteed rights" |
+| SYS-GEO-004 | SYS | "Cross-state access must be guaranteed" |
+| SYS-GEO-005 | SYS | "Travel support required when local care unavailable" |
+| SYS-RUL-001 | SYS | "System rules ensure completeness and alignment" |

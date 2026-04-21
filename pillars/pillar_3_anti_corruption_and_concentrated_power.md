@@ -131,3 +131,23 @@ This pillar was eventually understood as five internal modules:
 - Anti-corruption rules must address “legal but corrupt” systems built around access and agenda control, not only explicit bribery.
 - Disclosure that arrives too late does not protect democracy.
 - AI and platform-based manipulation are future-proofing necessities, not optional extras.
+
+
+## Canonical rules (generated)
+
+| Rule ID | Scope | Summary |
+|---|---|---|
+| COR-ETH-002 | COR | "Ban stock trading by officials" |
+| COR-ETH-003 | COR | "Applies to Congress" |
+| COR-ETH-004 | COR | "Applies to judges" |
+| COR-ETH-005 | COR | "Applies to executive branch" |
+| COR-ETH-006 | COR | "Applies to president and VP" |
+| COR-ETH-007 | COR | "Applies to immediate family" |
+| COR-ETH-008 | COR | "Applies to spouses and partners" |
+| COR-ETH-009 | COR | "Applies to extended relationships" |
+| COR-ETH-010 | COR | "Allow only blind collective investment" |
+| COR-FIN-001 | COR | "Ban corporate political donations" |
+| COR-FIN-002 | COR | "Ban Super PACs" |
+| COR-FIN-003 | COR | "Limit individual donations" |
+| COR-FIN-004 | COR | "Limit political ad spending" |
+| COR-WHB-001 | COR | "Whistleblower protections" |

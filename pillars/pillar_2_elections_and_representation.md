@@ -136,3 +136,30 @@ This pillar is the architecture of democratic legitimacy. It must ensure that pe
 - “Independent” commissions can still be captured unless process safeguards are robust.
 - Ballot initiatives can be captured by money unless anti-corruption rules apply.
 - Election rules must prevent administrative failure from becoming disenfranchisement.
+
+
+## Canonical rules (generated)
+
+| Rule ID | Scope | Summary |
+|---|---|---|
+| ELE-FIN-002 | ELE | "Eliminate donation imbalance" |
+| ELE-IDA-001 | ELE | "Free voter ID assistance" |
+| ELE-IDA-002 | ELE | "Legal and case support for ID access" |
+| ELE-MAP-001 | ELE | "Ban gerrymandering" |
+| ELE-MAP-002 | ELE | "Independent redistricting boards" |
+| ELE-OVR-001 | ELE | "Insurrection enforcement mechanism" |
+| ELE-OVR-002 | ELE | "National elections oversight board" |
+| ELE-PAR-001 | ELE | "Remove two-party structural protections" |
+| ELE-REP-001 | ELE | "Abolish Electoral College" |
+| ELE-REP-002 | ELE | "National ballot initiatives" |
+| ELE-REP-003 | ELE | "Territories get House representation" |
+| ELE-ROL-001 | ELE | "National voter database" |
+| ELE-ROL-002 | ELE | "Automatic removal of deceased voters" |
+| ELE-SEC-001 | ELE | "Paper ballots and auditability" |
+| ELE-SEC-002 | ELE | "Ban federal armed presence at polls" |
+| ELE-SEC-003 | ELE | "Ban weapons at polling sites" |
+| ELE-VOT-001 | ELE | "Constitutional right to vote" |
+| ELE-VOT-002 | ELE | "Polling capacity limits" |
+| ELE-VOT-003 | ELE | "Flexible voting locations" |
+| ELE-VOT-004 | ELE | "Election Day holiday" |
+| ELE-VOT-005 | ELE | "Paid time off for voting" |

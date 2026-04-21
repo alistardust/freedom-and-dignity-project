@@ -28,3 +28,24 @@ Reinforce separation of powers and create enforceable mechanisms when one branch
 
 ## Status
 Fragmented across pillars. Needs consolidation.
+
+
+## Canonical rules (generated)
+
+| Rule ID | Scope | Summary |
+|---|---|---|
+| OVR-BRN-002 | OVR | "Oversight boards must be independent from the bodies they oversee" |
+| OVR-FED-001 | OVR | "Establish a federal independent oversight and investigations body" |
+| OVR-FED-002 | OVR | "Federal oversight body has authority to investigate any federally elected official" |
+| OVR-FED-003 | OVR | "Federal oversight body includes one elected member and members appointed by each branch of government" |
+| OVR-FED-004 | OVR | "Federal oversight body has subpoena and deposition powers" |
+| OVR-FND-001 | OVR | "Funding for oversight and investigation bodies must be guaranteed and adequate" |
+| OVR-FND-002 | OVR | "If funding is not passed oversight bodies automatically receive a 6-month extension" |
+| OVR-FND-003 | OVR | "Automatic funding extension includes a 10 percent increase" |
+| OVR-FND-004 | OVR | "Oversight funding must be separate from the departments they oversee" |
+| OVR-FND-005 | OVR | "Oversight funding must be protected from political and external influence" |
+| OVR-JUR-001 | OVR | "Federal oversight body may investigate governors and high-level state officials" |
+| OVR-JUR-002 | OVR | "Federal oversight body may investigate state oversight boards if they fail to perform duties" |
+| OVR-STA-001 | OVR | "Each state must establish its own independent oversight board" |
+| OVR-STA-002 | OVR | "State oversight boards include directly elected members" |
+| OVR-STA-003 | OVR | "State oversight boards include members appointed by legislatures and governors" |

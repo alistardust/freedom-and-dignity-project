@@ -24,3 +24,11 @@ Define the power, limits, and oversight of regulatory agencies and the civil ser
 
 ## Status
 Implied but not yet developed.
+
+
+## Canonical rules (generated)
+
+| Rule ID | Scope | Summary |
+|---|---|---|
+| ADM-CHV-001 | ADM | "Restore Chevron deference" |
+| ADM-CON-001 | ADM | "Enshrine core federal departments (Labor Education Justice Defense) in the Constitution" |

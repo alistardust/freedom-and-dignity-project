@@ -26,3 +26,18 @@ Define how wealth is taxed, distributed, and prevented from accumulating into po
 
 ## Status
 Partially discussed, not structured.
+
+
+## Canonical rules (generated)
+
+| Rule ID | Scope | Summary |
+|---|---|---|
+| ECO-AUT-002 | ECO | "Revenue from AI or automated-labor taxation should be used to support workers, public goods, and broad-based social benefit rather than private concentration alone" |
+| ECO-AUT-003 | ECO | "AI or automated-labor taxation should be structured to discourage labor displacement without social responsibility and to share productivity gains broadly" |
+| ECO-EQT-001 | ECO | "Guarantee equal pay and equal economic opportunity regardless of protected class" |
+| ECO-IND-001 | ECO | "Establish national manufacturing and industrial policy to strengthen domestic production and supply chains" |
+| ECO-INS-001 | ECO | "AI systems may not be used to deny restrict or reduce insurance coverage or claims without direct independent human review and accountability" |
+| ECO-INS-002 | ECO | "Human reviewers in insurance decisions must exercise independent judgment and may not rely solely on AI-generated recommendations" |
+| ECO-LAB-004 | ECO | "Government must subsidize or support paid parental leave for small businesses" |
+| ECO-SMB-001 | ECO | "Provide subsidies carveouts or public support to help small businesses comply with healthcare coverage requirements" |
+| ECO-TAX-001 | ECO | "Anti-wealth hoarding" |
