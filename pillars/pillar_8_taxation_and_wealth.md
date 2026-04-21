@@ -1,16273 +1,2795 @@
 # pillar 8 taxation and wealth
 
-> Compiled canonical and source material for this pillar. Review and edit for tone and finalization.
+> Comprehensive compilation for pillar_8_taxation_and_wealth. Includes ALL canonical rules, linked policy_items, record_links, prose mentions, and research excerpts from logs.
 
 ## Intent and scope
 
-This pillar aggregates rules with scope codes: ECO. Content below includes canonical rules, linked policy items, explicit record links, and all matching source excerpts from the main and brainstorm logs.
+This pillar aggregates scope codes: ECO.
 
 ## System rules compliance
 
-All entries must be validated against system_rules.md: human oversight for high-risk decisions, non-fragmentation of rights, provenance, and layered oversight for centralized risks.
+All entries must be validated against system_rules.md.
 
-## Canonical rules (full)
+## Canonical rules (complete)
 
-### ECO-AUT-002 — ECO
+### ECO-AUT-001 — (ECO / AUT)
 
-Status:  public goods | Occurrences:  and broad-based social benefit rather than private concentration alone",MISSING,2 | Linked policy_items: 0
+Status: MISSING | Occurrences: 2
 
-Statement: "Revenue from AI or automated-labor taxation should be used to support workers
+Statement:
 
-Record links (from legacy items):
-
----
-
-### ECO-AUT-003 — ECO
-
-Status: MISSING | Occurrences: 2 | Linked policy_items: 0
-
-Statement: "AI or automated-labor taxation should be structured to discourage labor displacement without social responsibility and to share productivity gains broadly"
-
-Record links (from legacy items):
+Companies that replace or materially displace human labor with AI or automation should pay an AI worker tax or automated-labor tax
 
 ---
 
-### ECO-EQT-001 — ECO
+### ECO-AUT-002 — (ECO / AUT)
 
-Status: MISSING | Occurrences: 2 | Linked policy_items: 0
+Status: MISSING | Occurrences: 2
 
-Statement: "Guarantee equal pay and equal economic opportunity regardless of protected class"
+Statement:
 
-Record links (from legacy items):
-
----
-
-### ECO-IND-001 — ECO
-
-Status: MISSING | Occurrences: 2 | Linked policy_items: 0
-
-Statement: "Establish national manufacturing and industrial policy to strengthen domestic production and supply chains"
-
-Record links (from legacy items):
+Revenue from AI or automated-labor taxation should be used to support workers, public goods, and broad-based social benefit rather than private concentration alone
 
 ---
 
-### ECO-INS-001 — ECO
+### ECO-AUT-003 — (ECO / AUT)
 
-Status: MISSING | Occurrences: 2 | Linked policy_items: 0
+Status: MISSING | Occurrences: 2
 
-Statement: "AI systems may not be used to deny restrict or reduce insurance coverage or claims without direct independent human review and accountability"
+Statement:
 
-Record links (from legacy items):
-
----
-
-### ECO-INS-002 — ECO
-
-Status: MISSING | Occurrences: 2 | Linked policy_items: 0
-
-Statement: "Human reviewers in insurance decisions must exercise independent judgment and may not rely solely on AI-generated recommendations"
-
-Record links (from legacy items):
+AI or automated-labor taxation should be structured to discourage labor displacement without social responsibility and to share productivity gains broadly
 
 ---
 
-### ECO-LAB-004 — ECO
+### ECO-EQT-001 — (ECO / EQT)
 
-Status: MISSING | Occurrences: 2 | Linked policy_items: 0
+Status: MISSING | Occurrences: 2
 
-Statement: "Government must subsidize or support paid parental leave for small businesses"
+Statement:
 
-Record links (from legacy items):
-
----
-
-### ECO-SMB-001 — ECO
-
-Status: MISSING | Occurrences: 2 | Linked policy_items: 0
-
-Statement: "Provide subsidies carveouts or public support to help small businesses comply with healthcare coverage requirements"
-
-Record links (from legacy items):
+Guarantee equal pay and equal economic opportunity regardless of protected class
 
 ---
 
-### ECO-TAX-001 — ECO
+### ECO-IND-001 — (ECO / IND)
 
-Status: PARTIAL | Occurrences: 1 | Linked policy_items: 1
+Status: MISSING | Occurrences: 2
 
-Statement: "Anti-wealth hoarding"
+Statement:
 
-Linked policy_items:
-
-
-Record links (from legacy items):
+Establish national manufacturing and industrial policy to strengthen domestic production and supply chains
 
 ---
 
-## Prose mentions referencing these rules
+### ECO-INS-001 — (ECO / INS)
 
-## Source excerpts (main + brainstorm logs)
+Status: MISSING | Occurrences: 2
 
-From: main-branch.txt
+Statement:
 
-> 47:Recommended placement
-> 211:Rights / economic structure
-> 316:236	Separate scientific evaluation from political funding decisions wherever possible	MISSING	same	Decoupling mechanism
-> 327:risk of becoming another captured agency
-> 361:public record of disagreement
-> 412:Can become:
-> 451:National body providing recommendations
-> 593:That’s how this becomes durable.
-> 885:Identity / legal recognition
-> 1303:Yes—do this now. You’re at the exact point where IDs start becoming technical debt if you don’t fix them.
-> 1307:🧠 Recommended ID System (refined)
-> 1350:ECO	Economy / Tax / Welfare
-> 1356:CIV	Civic Systems (ID, records, etc.)
-> 1417:becomes messy at scale
-> 1478:✅ Recommendation
-> 1498:Recommended ID schema
-> 1523:ECO	Economy / Tax / Welfare
-> 1529:CIV	Civic systems / records / identity access
-> 1541:REC = records / transparency
-> 1583:ECO
-> 1621:VIT = vital records
-> 1723:Recommended next step
-> 1756:Secondary: pillar_7_checks_and_balances.md
-> 1761:but my recommendation is to add a judiciary domain code:
-> 1835:| ECO | Economy / Tax / Welfare |
-> 1841:| CIV | Civic systems / records / identity access |
-> 1856:- REC = records / transparency
-> 1905:### ECO
-> 1949:- VIT = vital records
-> 2019:| 28 | GOV-REC-001 | Constitutionalize presidential records | pillar_1_executive_power.md | PARTIAL | |
-> 2040:| 94 | RGT-PRV-001 | Explicit right to privacy | pillar_5_rights_civil_liberties_and_economic_security.md | INCLUDED | |
-> 2041:| 100 | RGT-BOD-001 | Protect gender-affirming care | pillar_5_rights_civil_liberties_and_economic_security.md | INCLUDED | |
-> 2043:| 128 | ECO-TAX-001 | Anti-wealth hoarding | pillar_8_taxation_and_wealth.md | PARTIAL | |
-> 2177:Current recommendation
-> 2204:Final count (reconfirmed)
-> 2229:SYS-FND-005  Address economic inequality structurally
-> 2267:GOV-REC-001  Constitutionalize presidential records
-> 2431:I’d strongly recommend one of these:
-> 2456:SYS-FND-005|SYS|FND|Address economic inequality structurally|INCLUDED
-> 2494:GOV-REC-001|GOV|REC|Constitutionalize presidential records|PARTIAL
-> 2653:If you want next (highly recommended)
-> 2678:Next step (recommended)
-> 2694:Option A (recommended)
-> 2832:* Equal pay and economic opportunities for everyone 
-> 2880:4. Equal pay and economic opportunity
-> 2885:ECO-WRK-001 (livable wage)
-> 2892:ECO-EQT-001|ECO|EQT|Guarantee equal pay and equal economic opportunity regardless of protected class|MISSING
-> 2907:ECO-LAB-004|ECO|LAB|Government must subsidize or support paid parental leave for small businesses|MISSING
-> 2916:ECO-IND-001|ECO|IND|Establish national manufacturing and industrial policy to strengthen domestic production and supply chains|MISSING
-> 2933:ECO-EQT-001
-> 2934:ECO-LAB-004
-> 2935:ECO-IND-001
-> 2944:📚 Education + Workforce + Economic Mobility
-> 2949:ECO (economics)
-> 3080:Recommendation later:
-> 3159:ECO-IND-001
-> 3197:gig economy rules
-> 3223:⚖️ ECONOMIC SYSTEM DESIGN — PARTIAL
-> 3263:Option A — Deep dive one gap (recommended)
-> 3295:the core subdomains (these become your future IDs)
-> 3313:Climate, ecosystems, pollution, resource use, sustainability
-> 3332:LAB-GIG  Gig economy & classification
-> 3339:How the economy actually produces things
-> 3378:⚙️ DOMAIN: ECONOMIC SYSTEM MECHANICS (ECO-ADV)
-> 3382:ECO-INF  Inflation controls
-> 3383:ECO-MKT  Market structure rules
-> 3384:ECO-CMP  Competition policy (beyond antitrust)
-> 3385:ECO-PRC  Price transparency & control mechanisms
-> 3386:ECO-EXT  Externalities (ties to ENV)
-> 3435:TEC-SUR-003  Restrict facial recognition use in public spaces
-> 3493:My recommendation:
-> 3512:On military AI, the strongest outside signal is that fully or highly autonomous force decisions are widely treated as a special category. The ICRC argues autonomous weapons raise immediate humanitarian concerns and calls for prohibitions and tight regulation, especially where systems cannot be predictably constrained under international humanitarian law. Even some industry-facing safety frameworks now talk in terms of capability thresholds, staged deployment, and restricted release when risk becomes too high.
-> 3514:On surveillance, the pattern is also pretty consistent: civil-liberties groups are warning that AI makes older surveillance powers more scalable, cheaper, and harder to contest, especially when paired with police databases, pattern analysis, and facial recognition. ACLU materials stress that surveillance programs need strict use policies, transparency, auditing, and real consequences for misuse. That lines up with your instinct that AI surveillance is not just a privacy problem; it is also a democracy and power-concentration problem.
-> 3671:My recommendation:
-> 3723:This is broader than just facial recognition and catches future variants.
-> 3730:3. Facial Recognition and Biometric Tracking
-> 3734:A. Ban facial recognition in public-space dragnet surveillance
-> 3735:TEC-BIO-001|TEC|BIO|Ban use of facial recognition for dragnet surveillance in public spaces|MISSING
-> 3738:C. Ban emotion recognition and pseudoscientific behavioral inference
-> 3892:My recommendation:
-> 3999:TEC-MIL-023|TEC|MIL|Establish controls on export of high-risk military AI systems to prevent misuse by hostile actors or regimes with poor human-rights records|UNDEVELOPED
-> 4085:TEC-MIL-005|TEC|MIL|Ban AI systems from generating, recommending, or prioritizing targets for lethal action involving real persons; all such decisions must originate from human judgment and independently verifiable evidence|UPDATED
-> 4101:“it’s just recommendations”
-> 4116:TEC-MIL-026|TEC|MIL|AI may be used for analysis classification and situational awareness provided it does not generate or recommend specific human targets for lethal action|MISSING
-> 4182:👉 Mental Health AI next (recommended)
-> 4228:This prevents loopholes like “guidance” quietly becoming targeting.
-> 4254:👉 Without constraints, guidance systems can effectively become:
-> 4261:last-second retargeting
-> 4464:Thought for a few seconds
-> 4515:not so broad it becomes unenforceable
-> 4520:potentially defensive actions that become counter-offensive
-> 4534:TEC-MIL-046|TEC|MIL|Deployment of AI systems that generate or recommend human targets for lethal action or that substitute for human judgment in use-of-force decisions should be prohibited under international law and treated as unlawful conduct|MISSING
-> 4838:B. Ban secondary monetization
-> 4942:My recommendation is employment / worker monitoring next, because it connects tech to everyday life in a very direct way.
-> 4973:Systems quietly become:
-> 5032:People become test subjects without knowing it
-> 5057:🧠 What you’ve built (important to recognize)
-> 5193:HLT-MHC-043|HLT|MHC|Mental health data from licensed providers therapy sessions or clinical records may not be used for AI training without explicit informed consent from all parties involved|MISSING
-> 5341:B. Ban secondary use
-> 5352:HLT-AI-018|HLT|AI|Healthcare AI systems must be evaluated and mitigated for bias across race gender socioeconomic status and other protected characteristics|MISSING
-> 5451:My recommendation:
-> 5481:HLT-AI-007A|HLT|AI|Human reviewers must exercise independent clinical judgment and may not rely solely on AI-generated recommendations when making decisions that affect access to care|MISSING
-> 5508:ECO-INS-001|ECO|INS|AI systems may not be used to deny restrict or reduce insurance coverage or claims without direct independent human review and accountability|MISSING
-> 5510:ECO-INS-002|ECO|INS|Human reviewers in insurance decisions must exercise independent judgment and may not rely solely on AI-generated recommendations|MISSING
-> 5559:Introduces new insurance domain (ECO-INS)
-> 5571:ECO-INS-001
-> 5572:ECO-INS-002
-> 5615:Yes—this belongs in the record now, and you’re right that it should be revisited after we finish AI.
-> 5649:ECO-SMB-001|ECO|SMB|Provide subsidies carveouts or public support to help small businesses comply with healthcare coverage requirements|MISSING
-> 5709:So the goal here is to prevent invisible coercion + economic harm while still allowing legitimate operational use.
-> 5716:TEC-LAB-001|TEC|LAB|AI systems in employment must not undermine worker rights dignity privacy or fair access to economic opportunity|MISSING
-> 5751:B. Ban secondary use
-> 5836:My recommendation:
-> 5864:This is a critical area because here AI can quietly become:
-> 5887:TEC-GOV-004|TEC|GOV|Human reviewers may not rely solely on AI-generated recommendations when making public-service or benefits decisions and must exercise independent judgment|MISSING
-> 5964:welfare and rights items already in your healthcare/economic pillars
-> 6025:My recommendation:
-> 6048:👉 AI becomes the de facto gatekeeper
-> 6049:👉 Humans become “denial validators”
-> 6062:HLT-AI-007D|HLT|AI|Absence of AI approval or recommendation may not be used as evidence justification or implicit basis for denial restriction or limitation of care|MISSING
-> 6163:water usage becomes significant
-> 6186:TEC-ENV-001|TEC|ENV|AI systems and infrastructure must not externalize environmental costs and must operate within sustainable limits for energy water materials and ecological impact|MISSING
-> 6221:TEC-ENV-011|TEC|ENV|Companies developing or deploying AI systems must internalize environmental costs rather than shifting them to the public or ecosystems|MISSING
-> 6335:My recommendation:
-> 6377:Your new point should become a general environmental / corporate rule, not a replacement.
-> 6410:Recommended schema addition
-> 6415:ENV = Environment / Climate / Ecology / Space environment
-> 6486:TEC-EDU-002|TEC|EDU|AI systems may not replace human educators in primary secondary or higher education contexts where direct instruction is required|MISSING
-> 6501:TEC-EDU-007|TEC|EDU|AI systems used in education must be evaluated for bias and must not disadvantage students based on race gender disability socioeconomic status or language background|MISSING
-> 6581:Recommendation
-> 6589:economic mobility
-> 6594:your economic justice pillar
-> 6615:no black-box economic gatekeeping
-> 6623:TEC-FIN-001|TEC|FIN|AI systems in finance credit and insurance must not undermine fairness transparency equal access or protection from discrimination in essential economic systems|MISSING
-> 6643:TEC-FIN-008|TEC|FIN|Human reviewers in insurance decisions may not rely solely on AI-generated recommendations and must exercise independent judgment|MISSING
-> 6647:TEC-FIN-010|TEC|FIN|Absence of AI approval or recommendation may not be used as evidence or implicit justification for denial restriction or delay of insurance claims or coverage|MISSING
-> 6648:5. Pricing / Risk Scoring / Economic Sorting
-> 6670:B. Ban unrelated secondary uses
-> 6685:C. Recordkeeping and traceability
-> 6694:TEC-FIN-028|TEC|FIN|Where finance credit or insurance systems function as essential gateways to housing healthcare transportation or economic participation they must be governed by heightened public-interest standards|MISSING
-> 6696:TEC-FIN-029|TEC|FIN|AI systems must not be allowed to automatically exclude people from essential economic systems needed for basic social participation|MISSING
-> 6704:ECO-INS-001 and 002
-> 6712:ECO-INS-001
-> 6713:ECO-INS-002
-> 6773:AI + media / information distribution / recommender systems in more detail
-> 6777:Recommendation
-> 6796:My recommendation:
-> 6823:SYS-AI-001|SYS|AI|Absence of AI approval recommendation or prioritization may not be used as evidence or implicit justification for denial restriction or adverse decisions in any domain|MISSING
-> 6829:SYS-AI-004|SYS|AI|AI-assisted decision systems must be designed to maintain fairness symmetry and equal consideration across all cases regardless of AI prioritization or recommendation|MISSING
-> 6841:JUS-AI-001|JUS|AI|AI systems may not be used to determine or recommend criminal sentencing outcomes including incarceration length or punitive measures|MISSING
-> 6855:JUS-AI-008|JUS|AI|AI systems may not be used to recommend or automate prosecutorial decisions such as charging strategies plea deals or case prioritization without human accountability and oversight|MISSING
-> 6899:SYS-AI-003|SYS|AI|Absence of AI recommendation or prioritization may not be used as evidence or implicit justification for denial restriction or adverse outcomes|MISSING
-> 6954:SYS-ECO-*
-> 7020:Next best move (strong recommendation)
-> 7042:Absolutely. Justice is one of the places where gaps matter most, because small loopholes here become life-altering harms.
-> 7126:sealing records
-> 7142:JUS-PRO-005|JUS|PRO|AI systems may not independently recommend charges plea terms or prosecutorial escalation without accountable human review|MISSING
-> 7174:JUS-JUV-003|JUS|JUV|Juvenile records should be sealed or expunged automatically in most cases to prevent lifelong harm|MISSING
-> 7178:JUS-CIV-002|JUS|CIV|Forced arbitration clauses that strip people of meaningful legal recourse should be banned or strictly limited|MISSING
-> 7182:JUS-IMM-001|JUS|IMM|Immigration detention must be subject to strict due process limits and may not become indefinite by default|MISSING
-> 7188:JUS-OVR-003|JUS|OVR|Independent oversight bodies must have access to justice-system data records and facilities necessary to investigate abuse or bias|MISSING
-> 7194:expungement and record-clearing generally
-> 7218:I recommend this order:
-> 7221:Expungement / record clearing
-> 7263:Media / recommender / distribution systems AI, if you want deeper coverage
-> 7324:It is still coherent, but later it should become one canonical doctrine with domain references.
-> 7427:That should probably become a reusable system rule later.
-> 7478:If prosecutors get advanced AI tooling and defenders do not, the system becomes even more unequal.
-> 7485:Second major AI gap: media / recommender / information-distribution systems
-> 7490:recommender systems
-> 7522:Can clerks use AI to summarize records?
-> 7544:Can AI-generated reconstructions be shown to juries?
-> 7548:Recommendation
-> 7657:Address economic inequality structurally
-> 7689:Absence of AI recommendation cannot count against a person
-> 7736:5. Rights / Civil Liberties / Economic Security
-> 7758:Status: good starter set, but still missing much of the detailed economic system design
-> 7776:Status: strong on journalist protections and disinformation, weaker on recommendation systems and platform power
-> 7938:Rights / Civil Liberties / Economic Security
-> 7954: Reconcile transition-state insurance policy with future single-payer model
-> 7958:Tax / Wealth / Welfare / Economy
-> 7961: Expand macroeconomic and cost-of-living mechanics
-> 7975: Consider deeper recommender-system and distribution-system framework
-> 7988: Reconcile edge cases and transition mechanics
-> 8148:Economic stability and material sufficiency
-> 8190:Drives: disclosure laws, open records, algorithmic transparency, governance visibility.
-> 8229:Excessive accumulation of economic, political, or technological power must be constrained.
-> 8260:Economic stability and material sufficiency
-> 8285:Systems must be designed to evolve alongside technological, social, and economic change.
-> 8338:→ prevents the system from becoming outdated again
-> 8366:That’s where this becomes extremely hard to break or exploit..
-> 8374:I am building a comprehensive policy platform and long-term reform framework. This is not just a list of policy preferences. It is intended to become:
-> 8395:concentration and abuse of political, economic, and technological power
-> 8402:economic instability and inability for ordinary people to build durable lives
-> 8431:Economic stability and material sufficiency
-> 8442:These values are not decorative. They are meant to function as a governing philosophy that can be used to derive:
-> 8490:recognition of rights for sentient AIs
-> 8509:Rights / Civil Liberties / Economic Security	~40	~75%	Strong core rights framework, but still needs refinement and review
-> 8621:Rights / Civil Liberties / Economic Security
-> 8636: Reconcile transition-state insurance rules with future single-payer model
+AI systems may not be used to deny restrict or reduce insurance coverage or claims without direct independent human review and accountability
 
-From: brainstorm-branch1part2.txt
+Prose mentions referencing ECO-INS-001:
 
-> 81:Economic stability and material sufficiency
-> 123:Drives: disclosure laws, open records, algorithmic transparency, governance visibility.
-> 162:Excessive accumulation of economic, political, or technological power must be constrained.
-> 193:Economic stability and material sufficiency
-> 218:Systems must be designed to evolve alongside technological, social, and economic change.
-> 271:→ prevents the system from becoming outdated again
-> 299:That’s where this becomes extremely hard to break or exploit..
-> 300:Another piece to add to AI and economics, companies should pay an "AI worker tax" as proposed by Sam Altman recently.
-> 336:Ability to gender and sex on birth records and legal records should be explicitly guaranteed, and no forced sterilization.
-> 367:The role of states beyond that should be mostly administrative and serve in the capacity of making the government and services more efficient by way of delegating powers and responsibilities, including justice and maintaining rule of law, administration of public and vital records, professional licenses, etc.
-> 373:Territories that are not states, like Puerto Rico should have the option of voting to either become a state, or ending ties with the U.S. and becoming their own country, with guarantee of U.S. assistance for a period of time to be negotiated by the leaving territory, and if an amicable agreement cannot be found, default to 10 years. This shall not affect citizenship of people born in the territories while they were part of the U.S. or for the transition period.
-> 379:I want an amendment that creates standards for new laws. Each new law should include a plain language statement of intent and context. Each large section or subsection and amendment should contain plain language summaries and intents. All provisions, amendments etc should be clearly relevant to said law. Loopholes, gaps, etc should be looked for, including via search against conflicting laws or laws that might create loopholes, and conflicts should be reconciled before any law is passed.
-> 383:I want to establish a committee or board that annually reviews federal laws for outdated or unenforceable language, or that are no longer in use or enforced, and recommend updates or removal of old laws.
-> 438:And I'm not using language about the Regan era specifically to blame him, but rather to help identify the root causes and policies that drive those factors. I don't want you to record that language directly, but rather use that to help determine the problem.
-> 494:I want a constitutionally created and funded regulatory body, whose explicit role is to prevent harm and misuse, to ensure new rules can be written to adapt to future developments quickly, the, basic economic, environmental, societal and other regulatory rules and limits should be established as a baseline with a requirement to enforce, and and enforce aggressively. 
-> 500:Individuals at corporations should be criminally liable for violations, including negligence. And this goes for all corporate malfeasance, not just where the economy is concerned and companies where there are regular violations should be investigated and officers and board members should be investigated. Companies whose cultures promote widespread criminal activity either proactively, by negligence, or a lack of institution control should be heavily fined and members of the governing body and should have control and oversight she also criminally liable.
-> 516:👉 “Simple for normal people, hard to game for the wealthy” should become a core design constraint for the entire tax system. We’ll bake that in next pass.
-> 525:TAX-COR-004 | Corporate tax systems must reflect real economic activity and may not be reduced through artificial accounting, legal structuring, or financial engineering.
-> 536:TAX-DED-005 | Transactions lacking economic substance beyond tax reduction must be disallowed.
-> 538:TAX-BEP-001 | Corporate income must be taxed based on real economic activity, including sales, workforce, and physical presence, rather than legal entity location alone.
-> 545:TAX-COR-005 | Corporations must pay a minimum effective tax rate based on real economic activity regardless of deductions, credits, or structural arrangements.
-> 556:⚖️ Enforcement (this is where your system becomes real)
-> 576:complexity becomes a weapon
-> 581:effective tax becomes real
-> 584:your AI, labor, housing, and education funding becomes viable
-> 627:Perfect. This is where tax policy stops feeling like a punishment maze for ordinary people and starts becoming a real public system.
-> 701:TAX-WTH-007 | High-wealth individuals may not use trusts, pass-through entities, shell structures, valuation games, or jurisdictional fragmentation to materially reduce tax obligations without real economic substance.
-> 719:TAX-CAP-008 | Carried interest, performance allocation, and similar mechanisms that function as compensation should be taxed in accordance with their economic substance.
-> 771:high-end evasion becomes a clearer target
-> 868:`ADM-IND-004 | Political oversight of agencies must not become political control over factual findings, scientific conclusions, or case-specific enforcement decisions.`
-> 886:`ADM-RUL-001 | Agencies must have authority to issue, revise, and clarify rules within their statutory mandate in response to technological, economic, scientific, and social change.`
-> 892:`ADM-RUL-004 | Adaptive rulemaking authority must include review, sunset, and correction mechanisms so flexibility does not become unbounded discretion.`
-> 896:`ADM-ENF-001 | Agencies must have sufficient investigatory powers, subpoena authority, audit authority, and access to records necessary to enforce the law effectively.`
-> 906:`ADM-ADJ-001 | Agency adjudication systems must provide clear notice, records access, explanation of decisions, and meaningful appeal rights.`
-> 924:`ADM-SCI-001 | Agencies relying on scientific, medical, technical, or economic evidence must maintain scientific-integrity standards that protect findings from political or commercial distortion.`
-> 946:`ADM-OVR-001 | Major agencies must have independent internal oversight functions, including inspectors general or equivalent bodies with access to records and investigatory authority.`
-> 1085:TAX-ENV-001 | Environmental tax policy must internalize environmental harms that are currently externalized onto the public, future generations, and ecosystems.
-> 1086:TAX-ENV-002 | Environmental taxation must be structured to reduce pollution, waste, emissions, ecosystem damage, and resource depletion while supporting a just transition.
-> 1094:TAX-ENV-008 | Water extraction and intensive water use may be subject to taxation, fees, or escalating charges where use patterns threaten sustainability, public access, or ecosystem health.
-> 1095:TAX-ENV-009 | Water-related taxation and pricing must account for local scarcity, watershed stress, aquifer depletion, and downstream ecological impact.
-> 1101:TAX-ENV-014 | Environmental taxes must account for lifecycle harm, including extraction, production, use, disposal, and leakage into ecosystems.
-> 1103:TAX-ENV-015 | Environmental tax policy should incentivize durable products, repairability, recyclability, material recovery, and reduced waste generation.
-> 1104:TAX-ENV-016 | Tax advantages may be used to support repair, remanufacturing, refurbishment, reuse systems, and circular-economy infrastructure.
-> 1111:TAX-ENV-021 | Revenue from environmental taxation should support environmental cleanup, climate resilience, public health protection, ecosystem restoration, and just-transition programs.
-> 1209:6. Circular economy incentives (TAX-ENV-015 to 017)
-> 1255:3. Economic shock / transition handling
-> 1277:- could become a loophole if not tightly defined
-> 1320:- penalties can become just a “cost of doing business”
-> 1340:RECOMMENDED IMPROVEMENTS (HIGH PRIORITY)
-
-## Review notes & suggested actions
-
-- Verify scope assignments; if mis-scoped, update data/pillar_reports/by_mapping/scope_to_pillar_mapping.csv and re-run importer.
-- For each linked policy_item, verify the canonical mapping and provenance.
-- Curate prose mentions for promotion in batches (see system_rules.md).
-
-
-## Research (excerpts from main + brainstorm logs)
-
-The following excerpts were extracted from the source chat logs and matched this pillar by scope code, rule IDs, or pillar keywords. They include proposals, discussion, and research notes. Preserve provenance when editing.
+- [441] desc:and 002 raw:ECO-INS-001 and 002 (source_id: 1 line:6704)
+- [885] desc:and 002 raw:ECO-INS-001 and 002 (source_id: 2 line:6704)
 
 ---
+
+### ECO-INS-002 — (ECO / INS)
+
+Status: MISSING | Occurrences: 2
+
+Statement:
+
+Human reviewers in insurance decisions must exercise independent judgment and may not rely solely on AI-generated recommendations
+
+---
+
+### ECO-LAB-004 — (ECO / LAB)
+
+Status: MISSING | Occurrences: 2
+
+Statement:
+
+Government must subsidize or support paid parental leave for small businesses
+
+---
+
+### ECO-SMB-001 — (ECO / SMB)
+
+Status: MISSING | Occurrences: 2
+
+Statement:
+
+Provide subsidies carveouts or public support to help small businesses comply with healthcare coverage requirements
+
+---
+
+### ECO-TAX-001 — (ECO / TAX)
+
+Status: PARTIAL | Occurrences: 1
+
+Statement:
+
+Anti-wealth hoarding
+
+Record links:
+
+- policy_item:128 — Anti-wealth hoarding — notes: 
+
+---
+
+## All prose mentions relevant to this pillar
+
+- [364] desc:(livable wage) raw:ECO-WRK-001 (livable wage) (source_id: 1 line:2885)
+- [441] desc:and 002 raw:ECO-INS-001 and 002 (source_id: 1 line:6704)
+- [808] desc:(livable wage) raw:ECO-WRK-001 (livable wage) (source_id: 2 line:2885)
+- [885] desc:and 002 raw:ECO-INS-001 and 002 (source_id: 2 line:6704)
+
+## Research excerpts (full)
 
 ### Excerpt 1
 
 ```
 Term limits currently appear only as broad concepts in your expanded doc, not with the detailed House/Senate/combined-service/wait-period rules you just added.
+Healthcare in the expanded doc currently says only “Universal healthcare / Protected from politics / Equal access,” so your newer single-payer / one-plan / service-level ideas remain missing.
+Anti-corruption / ethics currently includes dark money, lobbying, and transparency at a high level, but not the stock-trading ban structure you just added.
+Recommended placement
 ```
 
 ### Excerpt 2
 
 ```
-Healthcare in the expanded doc currently says only “Universal healthcare / Protected from politics / Equal access,” so your newer single-payer / one-plan / service-level ideas remain missing.
-```
-
-### Excerpt 3
-
-```
-Anti-corruption / ethics currently includes dark money, lobbying, and transparency at a high level, but not the stock-trading ban structure you just added.
-```
-
-### Excerpt 4
-
-```
-Recommended placement
-```
-
-### Excerpt 5
-
-```
-
-```
-
-### Excerpt 6
-
-```
 Governance / democracy
-```
-
-### Excerpt 7
-
-```
 Rights / economic structure
-```
-
-### Excerpt 8
-
-```
 Healthcare system architecture
-```
-
-### Excerpt 9
-
-```
 Scientific Governance / Healthcare Standards
-```
-
-### Excerpt 10
-
-```
 ID	Idea	Status	Target Pillar/File	Notes
-```
-
-### Excerpt 11
-
-```
 227	Establish an independent scientific governance body for determining covered treatments and standards of care	MISSING	pillar_9_healthcare_system.md + pillar_14_administrative_state.md	Core structural idea
-```
-
-### Excerpt 12
-
-```
 228	Body must be insulated from partisan political control	MISSING	same	Core requirement
-```
-
-### Excerpt 13
-
-```
 229	Appointments must be staggered to prevent single administration capture	MISSING	same	Term staggering
-```
-
-### Excerpt 14
-
-```
 230	Appointment structure should include both federal and state-level participation	MISSING	same	Mixed governance model
-```
-
-### Excerpt 15
-
-```
 231	Multi-layer guardrails required to prevent political and industry capture	MISSING	same	Needs detailed mechanisms
-```
-
-### Excerpt 16
-
-```
 232	Decision-making must be based on transparent, evidence-based scientific standards	MISSING	same	Already implied, now structural
-```
-
-### Excerpt 17
-
-```
 233	Public transparency required for methodologies, decisions, and conflicts of interest	MISSING	same	Anti-corruption tie-in
-```
-
-### Excerpt 18
-
-```
 234	Strict conflict-of-interest rules for members (financial, industry ties, advisory roles)	MISSING	same	Cross with anti-corruption pillar
-```
-
-### Excerpt 19
-
-```
 235	Independent audit mechanisms required for oversight of decisions and processes	MISSING	same	Oversight layer
-```
-
-### Excerpt 20
-
-```
 236	Separate scientific evaluation from political funding decisions wherever possible	MISSING	same	Decoupling mechanism
-```
-
-### Excerpt 21
-
-```
 🧠 Design directions (not final decisions, but important)
-```
-
-### Excerpt 22
-
-```
 Option A: New independent body
-```
-
-### Excerpt 23
-
-```
 Think:
-```
-
-### Excerpt 24
-
-```
 “Federal Scientific Standards Board”
-```
-
-### Excerpt 25
-
-```
 Pros:
-```
-
-### Excerpt 26
-
-```
 clean structure
-```
-
-### Excerpt 27
-
-```
 Cons:
-```
-
-### Excerpt 28
-
-```
 risk of becoming another captured agency
-```
-
-### Excerpt 29
-
-```
 Option B: Distributed governance (closer to what you’re hinting at)
-```
-
-### Excerpt 30
-
-```
 Multiple bodies:
-```
-
-### Excerpt 31
-
-```
 federal appointments
-```
-
-### Excerpt 32
-
-```
 state-appointed members
-```
-
-### Excerpt 33
-
-```
 rotating panels
-```
-
-### Excerpt 34
-
-```
 harder to capture
-```
-
-### Excerpt 35
-
-```
 slower, more complex
-```
-
-### Excerpt 36
-
-```
 Option C: Hybrid model (likely strongest)
-```
-
-### Excerpt 37
-
-```
 Central standards body
-```
-
-### Excerpt 38
-
-```
 PLUS:
-```
-
-### Excerpt 39
-
-```
 independent review panels
-```
-
-### Excerpt 40
-
-```
 audit boards
-```
-
-### Excerpt 41
-
-```
 public transparency requirements
-```
-
-### Excerpt 42
-
-```
 🧠 The key insight (this is the important part)
-```
-
-### Excerpt 43
-
-```
 “minority dissent reports”
-```
-
-### Excerpt 44
-
-```
 if board disagrees internally
-```
-
-### Excerpt 45
-
-```
 public record of disagreement
-```
-
-### Excerpt 46
-
-```
 How a few key countries handle it
-```
-
-### Excerpt 47
-
-```
 What actually works (patterns across them)
-```
-
-### Excerpt 48
-
-```
 What you can extract into your system (without copying blindly)
-```
-
-### Excerpt 49
-
-```
 🌍 1. How other countries handle this
-```
-
-### Excerpt 50
-
-```
 🇬🇧 United Kingdom — National Health Service + National Institute for Health and Care Excellence
-```
-
-### Excerpt 51
-
-```
 Structure:
-```
-
-### Excerpt 52
-
-```
 NHS = delivers care
-```
-
-### Excerpt 53
-
-```
 NICE = decides:
-```
-
-### Excerpt 54
-
-```
 what treatments are approved
-```
-
-### Excerpt 55
-
-```
 what gets covered
-```
-
-### Excerpt 56
-
-```
 based on evidence + cost-effectiveness
-```
-
-### Excerpt 57
-
-```
 Key features:
-```
-
-### Excerpt 58
-
-```
 Uses formal frameworks like cost per quality-adjusted life year (QALY)
-```
-
-### Excerpt 59
-
-```
 Independent review panels
-```
-
-### Excerpt 60
-
-```
 Publishes decisions and reasoning
-```
-
-### Excerpt 61
-
-```
 Strength:
-```
-
-### Excerpt 62
-
-```
 Centralized, consistent standards
-```
-
-### Excerpt 63
-
-```
 Evidence-driven decision making
-```
-
-### Excerpt 64
-
-```
 Weakness:
-```
-
-### Excerpt 65
-
-```
 Can become:
-```
-
-### Excerpt 66
-
-```
 bureaucratic
-```
-
-### Excerpt 67
-
-```
 slow
-```
-
-### Excerpt 68
-
-```
 Still influenced by government funding priorities
-```
-
-### Excerpt 69
-
-```
 🇩🇪 Germany — Federal Joint Committee (G-BA)
-```
-
-### Excerpt 70
-
-```
 Multi-stakeholder governing body:
-```
-
-### Excerpt 71
-
-```
 doctors
-```
-
-### Excerpt 72
-
-```
 hospitals
-```
-
-### Excerpt 73
-
-```
 insurers
-```
-
-### Excerpt 74
-
-```
 Oversees what is covered in statutory insurance
-```
-
-### Excerpt 75
-
-```
 Decisions based on:
-```
-
-### Excerpt 76
-
-```
 evidence
-```
-
-### Excerpt 77
-
-```
 negotiated standards
-```
-
-### Excerpt 78
-
-```
 Supported by scientific institute (IQWiG)
-```
-
-### Excerpt 79
-
-```
 Not controlled by a single political authority
-```
-
-### Excerpt 80
-
-```
 Shared governance model
-```
-
-### Excerpt 81
-
-```
 Can be:
-```
-
-### Excerpt 82
-
-```
 complex
-```
-
-### Excerpt 83
-
-```
 influenced by institutional stakeholders
-```
-
-### Excerpt 84
-
-```
 🇫🇷 France — Haute Autorité de Santé
-```
-
-### Excerpt 85
-
-```
 Independent authority evaluating:
-```
-
-### Excerpt 86
-
-```
 treatments
-```
-
-### Excerpt 87
-
-```
 drugs
-```
-
-### Excerpt 88
-
-```
 care standards
-```
-
-### Excerpt 89
-
-```
 Strong emphasis on:
-```
-
-### Excerpt 90
-
-```
 scientific review
-```
-
-### Excerpt 91
-
-```
 clinical effectiveness
-```
-
-### Excerpt 92
-
-```
 More insulated from day-to-day politics
-```
-
-### Excerpt 93
-
-```
 Still tied to national funding and policy environment
-```
-
-### Excerpt 94
-
-```
 🇨🇦 Canada — Canadian Agency for Drugs and Technologies in Health
-```
-
-### Excerpt 95
-
-```
 National body providing recommendations
-```
-
-### Excerpt 96
-
-```
 Provinces make final decisions
-```
-
-### Excerpt 97
-
-```
 Evidence-based evaluation
-```
-
-### Excerpt 98
-
-```
 Transparent reports
-```
-
-### Excerpt 99
-
-```
 Combines national expertise + regional control
-```
-
-### Excerpt 100
-
-```
 Fragmentation across provinces
-```
-
-### Excerpt 101
-
-```
 🧠 2. What actually works (common patterns)
-```
-
-### Excerpt 102
-
-```
 That’s how this becomes durable.
-```
-
-### Excerpt 103
-
-```
 Healthcare
-```
-
-### Excerpt 104
-
-```
 no state-level denial
-```
-
-### Excerpt 105
-
-```
 no regional coverage differences
-```
-
-### Excerpt 106
-
-```
 Voting
-```
-
-### Excerpt 107
-
-```
 no state-level voter suppression differences
-```
-
-### Excerpt 108
-
-```
 uniform access standards
-```
-
-### Excerpt 109
-
-```
 Identity / legal recognition
-```
-
-### Excerpt 110
-
-```
 no state-by-state identity rights
-```
-
-### Excerpt 111
-
-```
 Civil rights
-```
-
-### Excerpt 112
-
-```
 no patchwork protections
-```
-
-### Excerpt 113
-
-```
 Infrastructure
-```
-
-### Excerpt 114
-
-```
 internet access
-```
-
-### Excerpt 115
-
-```
 utilities
-```
-
-### Excerpt 116
-
-```
 public systems
-```
-
-### Excerpt 117
-
-```
 🧠 Constitutional implication (you’re correct)
-```
-
-### Excerpt 118
-
-```
 Yes—do this now. You’re at the exact point where IDs start becoming technical debt if you don’t fix them.
-```
-
-### Excerpt 119
-
-```
 🧠 Recommended ID System (refined)
-```
-
-### Excerpt 120
-
-```
 Code	Domain
-```
-
-### Excerpt 121
-
-```
 GOV	Governance / Executive
-```
-
-### Excerpt 122
-
-```
 ELE	Elections
-```
-
-### Excerpt 123
-
-```
 COR	Anti-Corruption
-```
-
-### Excerpt 124
-
-```
 JUS	Justice / Policing
-```
-
-### Excerpt 125
-
-```
 RGT	Rights & Civil Liberties
-```
-
-### Excerpt 126
-
-```
 HLT	Healthcare
-```
-
-### Excerpt 127
-
-```
 ECO	Economy / Tax / Welfare
-```
-
-### Excerpt 128
-
-```
 INF	Infrastructure / Environment
-```
-
-### Excerpt 129
-
-```
 MED	Media / Information
-```
-
-### Excerpt 130
-
-```
 ADM	Administrative State
-```
-
-### Excerpt 131
-
-```
 TRM	Term Limits / Eligibility
-```
-
-### Excerpt 132
-
-```
 GUN	Firearms / Armed Power
-```
-
-### Excerpt 133
-
-```
 CIV	Civic Systems (ID, records, etc.)
-```
-
-### Excerpt 134
-
-```
 SYS	System-wide rules
-```
-
-### Excerpt 135
-
-```
 🧩 Subdomain Examples
-```
-
-### Excerpt 136
-
-```
 Code	Meaning
-```
-
-### Excerpt 137
-
-```
 STD	Standards / governance
-```
-
-### Excerpt 138
-
-```
 MHC	Mental health
-```
-
-### Excerpt 139
-
-```
 SUP	Supplements / pharma
-```
-
-### Excerpt 140
-
-```
 EMS	Emergency services
-```
-
-### Excerpt 141
-
-```
 ACC	Access / eligibility
-```
-
-### Excerpt 142
-
-```
 Elections
-```
-
-### Excerpt 143
-
-```
 ACC	Access
-```
-
-### Excerpt 144
-
-```
 SEC	Security
-```
-
-### Excerpt 145
-
-```
 MAP	Districting
-```
-
-### Excerpt 146
-
-```
 GOV	Governance
-```
-
-### Excerpt 147
-
-```
 Rights
-```
-
-### Excerpt 148
-
-```
 PRV	Privacy
-```
-
-### Excerpt 149
-
-```
 BOD	Bodily autonomy
-```
-
-### Excerpt 150
-
-```
 EQT	Equality
-```
-
-### Excerpt 151
-
-```
 REL	Religion
-```
-
-### Excerpt 152
-
-```
 🧾 Your New Entries (converted)
-```
-
-### Excerpt 153
-
-```
 no grouping
-```
-
-### Excerpt 154
-
-```
 hard to filter
-```
-
-### Excerpt 155
-
-```
 becomes messy at scale
-```
-
-### Excerpt 156
-
-```
 This system:
-```
-
-### Excerpt 157
-
-```
 HLT-MHC-001
-```
-
-### Excerpt 158
-
-```
 ✅ Recommendation
-```
-
-### Excerpt 159
-
-```
 Recommended ID schema
-```
-
-### Excerpt 160
-
-```
 never reuse IDs
-```
-
-### Excerpt 161
-
-```
 never renumber IDs after assignment
-```
-
-### Excerpt 162
-
-```
 if something is removed, mark it deprecated instead of reusing the ID
-```
-
-### Excerpt 163
-
-```
 keep one migration file mapping old numeric IDs to new IDs
-```
-
-### Excerpt 164
-
-```
 Domain codes
-```
-
-### Excerpt 165
-
-```
 ELE	Elections / Representation
-```
-
-### Excerpt 166
-
-```
 COR	Anti-Corruption / Money / Power
-```
-
-### Excerpt 167
-
-```
 JUS	Justice / Policing / Drug Policy
-```
-
-### Excerpt 168
-
-```
 RGT	Rights / Civil Liberties
-```
-
-### Excerpt 169
-
-```
 INF	Infrastructure / Environment / Public Goods
-```
-
-### Excerpt 170
-
-```
 MED	Media / Information / Journalism
-```
-
-### Excerpt 171
-
-```
 ADM	Administrative State / Agencies
-```
-
-### Excerpt 172
-
-```
 TRM	Term Limits / Eligibility / Fitness
-```
-
-### Excerpt 173
-
-```
 CIV	Civic systems / records / identity access
-```
-
-### Excerpt 174
-
-```
 SYS	System-wide / meta-rules / cross-pillar rules
-```
-
-### Excerpt 175
-
-```
 MOV	Movement / communications / coalition / strategy
-```
-
-### Excerpt 176
-
-```
 Suggested subdomain codes
-```
-
-### Excerpt 177
-
-```
 GOV
-```
-
-### Excerpt 178
-
-```
 ACC = accountability
-```
-
-### Excerpt 179
-
-```
 EMR = emergency powers
-```
-
-### Excerpt 180
-
-```
 EXO = executive orders
-```
-
-### Excerpt 181
-
-```
 WAR = war powers
-```
-
-### Excerpt 182
-
-```
 PDN = pardon power
-```
-
-### Excerpt 183
-
-```
 DIV = divestment / self-dealing
-```
-
-### Excerpt 184
-
-```
 DOJ = law enforcement independence
-```
-
-### Excerpt 185
-
-```
 REC = records / transparency
-```
-
-### Excerpt 186
-
-```
 ELE
-```
-
-### Excerpt 187
-
-```
 VOT = voting rights / access
-```
-
-### Excerpt 188
-
-```
 SEC = security / auditability
-```
-
-### Excerpt 189
-
-```
 MAP = redistricting / maps
-```
-
-### Excerpt 190
-
-```
 CER = certification
-```
-
-### Excerpt 191
-
-```
 REP = representation
-```
-
-### Excerpt 192
-
-```
 IDA = voter ID access
-```
-
-### Excerpt 193
-
-```
 ROL = voter rolls
-```
-
-### Excerpt 194
-
-```
 OVR = elections oversight
-```
-
-### Excerpt 195
-
-```
 COR
-```
-
-### Excerpt 196
-
-```
 FIN = campaign finance
-```
-
-### Excerpt 197
-
-```
 LBY = lobbying
-```
-
-### Excerpt 198
-
-```
 WHB = whistleblowers
-```
-
-### Excerpt 199
-
-```
 ETH = ethics / conflicts / stock trading
-```
-
-### Excerpt 200
-
-```
 FOR = foreign influence
-```
-
-### Excerpt 201
-
-```
 MON = monopolistic influence
-```
-
-### Excerpt 202
-
-```
 JUS
-```
-
-### Excerpt 203
-
-```
 CRJ = criminal justice
-```
-
-### Excerpt 204
-
-```
 POL = policing
-```
-
-### Excerpt 205
-
-```
 DET = detention
-```
-
-### Excerpt 206
-
-```
 DRG = drug policy
-```
-
-### Excerpt 207
-
-```
 REB = rehab
-```
-
-### Excerpt 208
-
-```
 EQJ = equal justice / bias / profiling
-```
-
-### Excerpt 209
-
-```
 RGT
-```
-
-### Excerpt 210
-
-```
 PRV = privacy
-```
-
-### Excerpt 211
-
-```
 BOD = bodily autonomy
-```
-
-### Excerpt 212
-
-```
 EQT = equality
-```
-
-### Excerpt 213
-
-```
 REL = religion / freedom from religion
-```
-
-### Excerpt 214
-
-```
 EDU = education
-```
-
-### Excerpt 215
-
-```
 HOU = housing
-```
-
-### Excerpt 216
-
-```
 LAB = labor / leave
-```
-
-### Excerpt 217
-
-```
 TEC = tech / data rights
-```
-
-### Excerpt 218
-
-```
 HLT
-```
-
-### Excerpt 219
-
-```
 STD = standards / governance
-```
-
-### Excerpt 220
-
-```
 MHC = mental healthcare
-```
-
-### Excerpt 221
-
-```
 EMS = emergency services
-```
-
-### Excerpt 222
-
-```
 ACC = access / eligibility
-```
-
-### Excerpt 223
-
-```
 PHR = pharma / ingredient standards
-```
-
-### Excerpt 224
-
-```
 SUP = supplements
-```
-
-### Excerpt 225
-
-```
 TEL = telemedicine
-```
-
-### Excerpt 226
-
-```
 COV = coverage rules
-```
-
-### Excerpt 227
-
-```
 ECO
-```
-
-### Excerpt 228
-
-```
 TAX = taxation
-```
-
-### Excerpt 229
-
-```
 UBI = guaranteed income
-```
-
-### Excerpt 230
-
-```
 WLF = welfare / benefits
-```
-
-### Excerpt 231
-
-```
 SOC = Social Security / social insurance
-```
-
-### Excerpt 232
-
-```
 WRK = wages / work
-```
-
-### Excerpt 233
-
-```
 INF
-```
-
-### Excerpt 234
-
-```
 NET = internet / communications
-```
-
-### Excerpt 235
-
-```
 GRD = electrical grid
-```
-
-### Excerpt 236
-
-```
 ENR = energy generation
-```
-
-### Excerpt 237
-
-```
 WAT = water systems
-```
-
-### Excerpt 238
-
-```
 BLD = building standards
-```
-
-### Excerpt 239
-
-```
 DAT = data centers
-```
-
-### Excerpt 240
-
-```
 ENV = wildlife / habitat / parks
-```
-
-### Excerpt 241
-
-```
 URB = urban green space / city planning
-```
-
-### Excerpt 242
-
-```
 MED
-```
-
-### Excerpt 243
-
-```
 PRS = press / journalists / source protection
-```
-
-### Excerpt 244
-
-```
 DIS = disinformation / manipulation
-```
-
-### Excerpt 245
-
-```
 TRN = transparency / conflicts
-```
-
-### Excerpt 246
-
-```
 ALG = algorithmic / platform influence
-```
-
-### Excerpt 247
-
-```
 ADM
-```
-
-### Excerpt 248
-
-```
 AGY = agencies / authority
-```
-
-### Excerpt 249
-
-```
 CHV = Chevron / judicial deference
-```
-
-### Excerpt 250
-
-```
 CAP = anti-capture
-```
-
-### Excerpt 251
-
-```
 OVR = oversight
-```
-
-### Excerpt 252
-
-```
 TRM
-```
-
-### Excerpt 253
-
-```
 LIM = term limits
-```
-
-### Excerpt 254
-
-```
 AGE = age caps
-```
-
-### Excerpt 255
-
-```
 COG = cognitive fitness
-```
-
-### Excerpt 256
-
-```
 VAC = vacancy / special election rules
-```
-
-### Excerpt 257
-
-```
 RUN = candidacy restrictions
-```
-
-### Excerpt 258
-
-```
 GUN
-```
-
-### Excerpt 259
-
-```
 REG = regulation
-```
-
-### Excerpt 260
-
-```
 MIL = militias / private armies
-```
-
-### Excerpt 261
-
-```
 AUT = automatic weapons
-```
-
-### Excerpt 262
-
-```
 TRN = training / licensing
-```
-
-### Excerpt 263
-
-```
 ENF = armed state actors
-```
-
-### Excerpt 264
-
-```
 CIV
-```
-
-### Excerpt 265
-
-```
 VIT = vital records
-```
-
-### Excerpt 266
-
-```
 NAM = name changes / marriage docs
-```
-
-### Excerpt 267
-
-```
 DOC = certified document access
-```
-
-### Excerpt 268
-
-```
 IDN = identity document assistance
-```
-
-### Excerpt 269
-
-```
 SYS
-```
-
-### Excerpt 270
-
-```
 GEO = geography / anti-fragmentation
-```
-
-### Excerpt 271
-
-```
 FED = federalism balance
-```
-
-### Excerpt 272
-
-```
 FND = foundational values
-```
-
-### Excerpt 273
-
-```
 RUL = system rules
-```
-
-### Excerpt 274
-
-```
 CMP = completeness / project rules
-```
-
-### Excerpt 275
-
-```
 MOV
-```
-
-### Excerpt 276
-
-```
 COM = communications
-```
-
-### Excerpt 277
-
-```
 COA = coalition building
-```
-
-### Excerpt 278
-
-```
 ORG = movement identity / non-party structure
-```
-
-### Excerpt 279
-
-```
 NAM = naming / branding
-```
-
-### Excerpt 280
-
-```
 Example IDs from your current ideas
-```
-
-### Excerpt 281
-
-```
 HLT-MHC-001 Mental healthcare must be included
-```
-
-### Excerpt 282
-
-```
 HLT-STD-001 Coverage decisions must be evidence-based
-```
-
-### Excerpt 283
-
-```
 HLT-STD-002 Coverage must be insulated from partisan interference
-```
-
-### Excerpt 284
-
-```
 HLT-PHR-001 Stricter quality standards for generic medicine ingredients
-```
-
-### Excerpt 285
-
-```
 HLT-PHR-002 Ban non-essential common allergens in medicines
-```
-
-### Excerpt 286
-
-```
 HLT-SUP-001 Fund supplement efficacy/safety studies
-```
-
-### Excerpt 287
-
-```
 HLT-SUP-002 New supplement label standards
-```
-
-### Excerpt 288
-
-```
 HLT-SUP-003 Supplement lab testing transparency
-```
-
-### Excerpt 289
-
-```
 HLT-SUP-004 Minimum quality/testing standards for supplements
-```
-
-### Excerpt 290
-
-```
 HLT-PHR-003 End-to-end supply chain traceability for drugs/supplements
-```
-
-### Excerpt 291
-
-```
 HLT-EMS-001 Emergency services free for all regardless of citizenship
-```
-
-### Excerpt 292
-
-```
 HLT-EMS-002 Emergency care includes ambulance, ER, supplies, follow-up
-```
-
-### Excerpt 293
-
-```
 HLT-ACC-001 Coverage for citizens and long-term/permanent residents
-```
-
-### Excerpt 294
-
-```
 HLT-ACC-002 Two-year residency rule for elective/non-urgent procedures
-```
-
-### Excerpt 295
-
-```
 HLT-ACC-003 Exception for life-threatening or disability-causing conditions
-```
-
-### Excerpt 296
-
-```
 HLT-TEL-001 Telemedicine must not have regional restrictions
-```
-
-### Excerpt 297
-
-```
 HLT-TEL-002 Telemedicine must bridge unavailable local coverage
-```
-
-### Excerpt 298
-
-```
 HLT-COV-001 Ban tiered healthcare coverage
-```
-
-### Excerpt 299
-
-```
 HLT-COV-002 One plan for everyone
-```
-
-### Excerpt 300
-
-```
 HLT-COV-003 Single-payer healthcare
-```
-
-### Excerpt 301
-
-```
 HLT-STD-003 Minimum healthcare service levels
-```
-
-### Excerpt 302
-
-```
 HLT-STD-004 Maximum healthcare wait times
-```
-
-### Excerpt 303
-
-```
 Scientific governance / anti-fragmentation
-```
-
-### Excerpt 304
-
-```
 HLT-STD-005 Independent scientific governance body
-```
-
-### Excerpt 305
-
-```
 HLT-STD-006 Staggered appointments
-```
-
-### Excerpt 306
-
-```
 HLT-STD-007 Federal and state appointment participation
-```
-
-### Excerpt 307
-
-```
 HLT-STD-008 Multi-layer anti-capture guardrails
-```
-
-### Excerpt 308
-
-```
 HLT-STD-009 Full transparency of evidence, methods, exclusions
-```
-
-### Excerpt 309
-
-```
 HLT-STD-010 Publish dissenting scientific opinions
-```
-
-### Excerpt 310
-
-```
 HLT-STD-011 Independent audit of scientific integrity
-```
-
-### Excerpt 311
-
-```
 SYS-GEO-001 Geography must not determine access to fundamental rights or care
-```
-
-### Excerpt 312
-
-```
 SYS-GEO-002 National baseline of rights/services must be uniform
-```
-
-### Excerpt 313
-
-```
 SYS-GEO-003 States may not restrict federally guaranteed rights/services
-```
-
-### Excerpt 314
-
-```
 SYS-GEO-004 Cross-state access to care must be guaranteed
-```
-
-### Excerpt 315
-
-```
 SYS-GEO-005 Travel/accommodation support when local access unavailable
-```
-
-### Excerpt 316
-
-```
 SYS-FED-001 High-risk systems must not be fully centralized federally
-```
-
-### Excerpt 317
-
-```
 SYS-FED-002 Elections remain primarily state/local administered
-```
-
-### Excerpt 318
-
-```
 SYS-FED-003 Federal government may set standards but not directly control elections
-```
-
-### Excerpt 319
-
-```
 SYS-FED-004 Multiple oversight layers required for elections
-```
-
-### Excerpt 320
-
-```
 SYS-FED-005 Safeguards against both state suppression and federal manipulation
-```
-
-### Excerpt 321
-
-```
 Journalists / media
-```
-
-### Excerpt 322
-
-```
 MED-PRS-001 Protect journalists engaged in lawful newsgathering
-```
-
-### Excerpt 323
-
-```
 MED-PRS-002 Protect confidential sources
-```
-
-### Excerpt 324
-
-```
 MED-PRS-003 High-threshold limits on compelled source disclosure
-```
-
-### Excerpt 325
-
-```
 MED-PRS-004 Ban retaliation/surveillance/prosecution of journalists in public-interest reporting
-```
-
-### Excerpt 326
-
-```
 COR-WHB-001 Protect whistleblowers who provide information to journalists
-```
-
-### Excerpt 327
-
-```
 MED-PRS-005 Prohibit classification/national security misuse to conceal wrongdoing
-```
-
-### Excerpt 328
-
-```
 MED-PRS-006 Independent judicial review before compelled disclosure of journalistic materials
-```
-
-### Excerpt 329
-
-```
 MED-PRS-007 Limit subpoenas/warrants/surveillance targeting journalists
-```
-
-### Excerpt 330
-
-```
 MED-PRS-008 Extend protections to independent/digital journalists
-```
-
-### Excerpt 331
-
-```
 MED-PRS-009 Transparency/reporting on government actions targeting journalists
-```
-
-### Excerpt 332
-
-```
 Drug policy / rehab
-```
-
-### Excerpt 333
-
-```
 JUS-DRG-001 End the war on drugs framework
-```
-
-### Excerpt 334
-
-```
 JUS-DRG-002 Decriminalize personal possession
-```
-
-### Excerpt 335
-
-```
 HLT-STD-012 Treat substance use disorder as a medical condition
-```
-
-### Excerpt 336
-
-```
 JUS-DRG-003 Redirect enforcement funding to treatment/prevention/harm reduction
-```
-
-### Excerpt 337
-
-```
 JUS-DRG-004 Regulated frameworks for substances based on risk/evidence
-```
-
-### Excerpt 338
-
-```
 HLT-STD-013 Harm reduction strategies
-```
-
-### Excerpt 339
-
-```
 JUS-DRG-005 No criminal penalties when seeking emergency overdose help
-```
-
-### Excerpt 340
-
-```
 HLT-REB-001 National standards for rehab facilities
-```
-
-### Excerpt 341
-
-```
 HLT-REB-002 Evidence-based treatment required
-```
-
-### Excerpt 342
-
-```
 HLT-REB-003 Ban abusive/coercive/non-evidence-based rehab practices
-```
-
-### Excerpt 343
-
-```
 HLT-REB-004 Rehab transparency on outcomes and methods
-```
-
-### Excerpt 344
-
-```
 HLT-REB-005 Treatment must be accessible and affordable
-```
-
-### Excerpt 345
-
-```
 HLT-REB-006 Oversight and auditing of rehab facilities
-```
-
-### Excerpt 346
-
-```
 HLT-REB-007 Expand voluntary treatment and reduce court-mandated reliance
-```
-
-### Excerpt 347
-
-```
 RGT-BOD-001 Patient rights protections in rehab settings
-```
-
-### Excerpt 348
-
-```
 Term limits / ethics
-```
-
-### Excerpt 349
-
-```
 TRM-LIM-001 House maximum 6 terms
-```
-
-### Excerpt 350
-
-```
 TRM-LIM-002 Senate maximum 3 terms
-```
-
-### Excerpt 351
-
-```
 TRM-LIM-003 Combined maximum 8 terms or 20 years
-```
-
-### Excerpt 352
-
-```
 TRM-RUN-001 No running for any office while in office
-```
-
-### Excerpt 353
-
-```
 TRM-RUN-002 Two-year wait before election to another office
-```
-
-### Excerpt 354
-
-```
 TRM-VAC-001 Wait period also applies to appointments/special elections
-```
-
-### Excerpt 355
-
-```
 TRM-VAC-002 Special-election exception when term is more than halfway over
-```
-
-### Excerpt 356
-
-```
 TRM-VAC-003 Senate appointment exception under remaining-term rule
-```
-
-### Excerpt 357
-
-```
 COR-ETH-001 Covered officials may not directly trade stock
-```
-
-### Excerpt 358
-
-```
 COR-ETH-002 Applies to Congress
-```
-
-### Excerpt 359
-
-```
 COR-ETH-003 Applies to federal justices
-```
-
-### Excerpt 360
-
-```
 COR-ETH-004 Applies to cabinet and senior officials
-```
-
-### Excerpt 361
-
-```
 COR-ETH-005 Applies to President and Vice President
-```
-
-### Excerpt 362
-
-```
 COR-ETH-006 Applies to immediate family
-```
-
-### Excerpt 363
-
-```
 COR-ETH-007 Applies to spouses/domestic partners
-```
-
-### Excerpt 364
-
-```
 COR-ETH-008 Applies to spouses/partners of immediate family
-```
-
-### Excerpt 365
-
-```
 COR-ETH-009 Collective investment vehicles allowed if no investor trading input
-```
-
-### Excerpt 366
-
-```
 Recommended next step
-```
-
-### Excerpt 367
-
-```
 New idea
-```
-
-### Excerpt 368
-
-```
 Prevent judge shopping and venue shopping
-```
-
-### Excerpt 369
-
-```
 Suggested placement
-```
-
-### Excerpt 370
-
-```
 Primary: pillar_6_courts_and_judicial_system.md
-```
-
-### Excerpt 371
-
-```
 Secondary: pillar_7_checks_and_balances.md
-```
-
-### Excerpt 372
-
-```
 Suggested ID
-```
-
-### Excerpt 373
-
-```
 JUD-VEN-001 if you want a judiciary-specific domain code
-```
-
-### Excerpt 374
-
-```
 or, sticking to the schema we already set, use:
-```
-
-### Excerpt 375
-
-```
 ADM-OVR-001 only if you treat it as procedural oversight
-```
-
-### Excerpt 376
-
-```
 but my recommendation is to add a judiciary domain code:
-```
-
-### Excerpt 377
-
-```
 Small schema update
-```
-
-### Excerpt 378
-
-```
 | Code | Domain |
-```
-
-### Excerpt 379
-
-```
 |---|---|
-```
-
-### Excerpt 380
-
-```
 | GOV | Governance / Executive |
-```
-
-### Excerpt 381
-
-```
 | ELE | Elections / Representation |
-```
-
-### Excerpt 382
-
-```
 | COR | Anti-Corruption / Money / Power |
-```
-
-### Excerpt 383
-
-```
 | JUS | Justice / Policing / Drug Policy |
-```
-
-### Excerpt 384
-
-```
 | RGT | Rights / Civil Liberties |
-```
-
-### Excerpt 385
-
-```
 | HLT | Healthcare |
-```
-
-### Excerpt 386
-
-```
 | ECO | Economy / Tax / Welfare |
-```
-
-### Excerpt 387
-
-```
 | INF | Infrastructure / Environment / Public Goods |
-```
-
-### Excerpt 388
-
-```
 | MED | Media / Information / Journalism |
-```
-
-### Excerpt 389
-
-```
 | ADM | Administrative State / Agencies |
-```
-
-### Excerpt 390
-
-```
 | TRM | Term Limits / Eligibility / Fitness |
-```
-
-### Excerpt 391
-
-```
 | GUN | Firearms / Armed Power |
-```
-
-### Excerpt 392
-
-```
 | CIV | Civic systems / records / identity access |
-```
-
-### Excerpt 393
-
-```
 | SYS | System-wide / cross-pillar rules |
-```
-
-### Excerpt 394
-
-```
 | MOV | Movement / communications / coalition / strategy |
-```
-
-### Excerpt 395
-
-```
 | JUD | Courts / Judiciary |
-```
-
-### Excerpt 396
-
-```
 ### GOV
-```
-
-### Excerpt 397
-
-```
 - ACC = accountability
-```
-
-### Excerpt 398
-
-```
 - EMR = emergency powers
-```
-
-### Excerpt 399
-
-```
 - EXO = executive orders
-```
-
-### Excerpt 400
-
-```
 - WAR = war powers
-```
-
-### Excerpt 401
-
-```
 - PDN = pardon power
-```
-
-### Excerpt 402
-
-```
 - DIV = divestment / self-dealing
-```
-
-### Excerpt 403
-
-```
 - DOJ = law enforcement independence
-```
-
-### Excerpt 404
-
-```
 - REC = records / transparency
-```
-
-### Excerpt 405
-
-```
 ### ECO
-```
-
-### Excerpt 406
-
-```
 - TAX = taxation
-```
-
-### Excerpt 407
-
-```
 - UBI = guaranteed income
-```
-
-### Excerpt 408
-
-```
 - WLF = welfare / benefits
-```
-
-### Excerpt 409
-
-```
 - SOC = Social Security / social insurance
-```
-
-### Excerpt 410
-
-```
 - WRK = wages / work
-```
-
-### Excerpt 411
-
-```
 ### CIV
-```
-
-### Excerpt 412
-
-```
 - VIT = vital records
-```
-
-### Excerpt 413
-
-```
 - NAM = name changes / marriage docs
-```
-
-### Excerpt 414
-
-```
 - DOC = certified document access
-```
-
-### Excerpt 415
-
-```
 - IDN = identity assistance
-```
-
-### Excerpt 416
-
-```
 | old_id | new_id | short_label | target_file | status | notes |
-```
-
-### Excerpt 417
-
-```
 |---|---|---|---|---|---|
-```
-
-### Excerpt 418
-
-```
 | 18 | GOV-EXO-001 | Limit executive orders to emergencies | pillar_1_executive_power.md | PARTIAL | Time-limited emergency-only executive orders |
-```
-
-### Excerpt 419
-
-```
 | 19 | GOV-EMR-001 | Time limits on executive actions | pillar_1_executive_power.md | PARTIAL | Closely tied to emergency powers |
-```
-
-### Excerpt 420
-
-```
 | 20 | GOV-ACC-001 | President not immune | pillar_1_executive_power.md | INCLUDED | Explicit legal accountability |
-```
-
-### Excerpt 421
-
-```
 | 21 | GOV-ACC-002 | Ban political firings | pillar_1_executive_power.md | MISSING | Protect oversight and civil service |
-```
-
-### Excerpt 422
-
-```
 | 22 | GOV-PDN-001 | Restrict pardon powers | pillar_1_executive_power.md | PARTIAL | Self-pardons and co-conspirators |
-```
-
-### Excerpt 423
-
-```
 | 23 | GOV-DIV-001 | Mandatory divestment enforcement | pillar_1_executive_power.md | PARTIAL | Seizure/forfeiture mechanism |
-```
-
-### Excerpt 424
-
-```
 | 24 | GOV-WAR-001 | Ban open-ended AUMFs | pillar_1_executive_power.md | INCLUDED | |
-```
-
-### Excerpt 425
-
-```
 | 25 | GOV-WAR-002 | Require declared wars | pillar_1_executive_power.md | MISSING | |
-```
-
-### Excerpt 426
-
-```
 | 26 | GOV-WAR-003 | Limit military authority | pillar_1_executive_power.md | PARTIAL | |
-```
-
-### Excerpt 427
-
-```
 | 27 | GOV-ACC-003 | Ban executive kill lists | pillar_1_executive_power.md | PARTIAL | Cross-reference justice |
-```
-
-### Excerpt 428
-
-```
 | 28 | GOV-REC-001 | Constitutionalize presidential records | pillar_1_executive_power.md | PARTIAL | |
-```
-
-### Excerpt 429
-
-```
 | 31 | ELE-REP-001 | Abolish Electoral College | pillar_2_elections_and_representation.md | MISSING | |
-```
-
-### Excerpt 430
-
-```
 | 32 | ELE-SEC-001 | Paper ballots and auditability | pillar_2_elections_and_representation.md | INCLUDED | |
-```
-
-### Excerpt 431
-
-```
 | 33 | ELE-MAP-001 | Ban gerrymandering | pillar_2_elections_and_representation.md | INCLUDED | |
-```
-
-### Excerpt 432
-
-```
 | 34 | ELE-REP-002 | Ballot initiatives nationwide | pillar_2_elections_and_representation.md | INCLUDED | |
-```
-
-### Excerpt 433
-
-```
 | 35 | ELE-VOT-001 | Constitutional right to vote | pillar_2_elections_and_representation.md | INCLUDED | |
-```
-
-### Excerpt 434
-
-```
 | 44 | ELE-VOT-002 | Polling capacity limits | pillar_2_elections_and_representation.md | INCLUDED | |
-```
-
-### Excerpt 435
-
-```
 | 45 | ELE-VOT-003 | Flexible voting locations | pillar_2_elections_and_representation.md | INCLUDED | |
-```
-
-### Excerpt 436
-
-```
 | 46 | ELE-VOT-004 | Election Day holiday | pillar_2_elections_and_representation.md | INCLUDED | |
-```
-
-### Excerpt 437
-
-```
 | 47 | ELE-VOT-005 | Paid time off to vote | pillar_2_elections_and_representation.md | INCLUDED | |
-```
-
-### Excerpt 438
-
-```
 | 49 | ELE-OVR-001 | Insurrection enforcement | pillar_2_elections_and_representation.md | INCLUDED | |
-```
-
-### Excerpt 439
-
-```
 | 52 | ELE-REP-003 | Territorial House representation | pillar_2_elections_and_representation.md | MISSING | |
-```
-
-### Excerpt 440
-
-```
 | 54 | ELE-SEC-002 | Ban federal armed presence at polling sites | pillar_2_elections_and_representation.md | MISSING | |
-```
-
-### Excerpt 441
-
-```
 | 55 | ELE-SEC-003 | Ban weapons at polling sites | pillar_2_elections_and_representation.md | MISSING | |
-```
-
-### Excerpt 442
-
-```
 | 60 | JUD-ETH-001 | Supreme Court term limits | pillar_6_courts_and_judicial_system.md | MISSING | |
-```
-
-### Excerpt 443
-
-```
 | 61 | JUD-ETH-002 | Judicial ethics code | pillar_6_courts_and_judicial_system.md | MISSING | |
-```
-
-### Excerpt 444
-
-```
 | 62 | JUD-INT-001 | Require intent/context in interpretation | pillar_6_courts_and_judicial_system.md | MISSING | |
-```
-
-### Excerpt 445
-
-```
 | 64 | JUD-VEN-001 | Prevent judge and venue shopping | pillar_6_courts_and_judicial_system.md | MISSING | New addition |
-```
-
-### Excerpt 446
-
-```
 | 73 | COR-FIN-001 | Ban corporate political donations | pillar_3_anti_corruption_and_concentrated_power.md | INCLUDED | |
-```
-
-### Excerpt 447
-
-```
 | 74 | COR-FIN-002 | Ban Super PACs | pillar_3_anti_corruption_and_concentrated_power.md | PARTIAL | |
-```
-
-### Excerpt 448
-
-```
 | 81 | COR-ETH-001 | Ban industry lobbyists from governing boards | pillar_3_anti_corruption_and_concentrated_power.md | MISSING | Cross-ref ADM |
-```
-
-### Excerpt 449
-
-```
 | 94 | RGT-PRV-001 | Explicit right to privacy | pillar_5_rights_civil_liberties_and_economic_security.md | INCLUDED | |
-```
-
-### Excerpt 450
-
-```
 | 100 | RGT-BOD-001 | Protect gender-affirming care | pillar_5_rights_civil_liberties_and_economic_security.md | INCLUDED | |
-```
-
-### Excerpt 451
-
-```
 | 125 | JUS-POL-001 | Require police community service | pillar_4_equal_justice_policing_and_accountability.md | MISSING | |
-```
-
-### Excerpt 452
-
-```
 | 128 | ECO-TAX-001 | Anti-wealth hoarding | pillar_8_taxation_and_wealth.md | PARTIAL | |
-```
-
-### Excerpt 453
-
-```
 | 148 | ADM-CHV-001 | Restore Chevron deference | pillar_14_administrative_state.md | MISSING | |
-```
-
-### Excerpt 454
-
-```
 | 149 | ADM-AGY-001 | Congress explicitly empowered to create agencies | pillar_14_administrative_state.md | MISSING | |
-```
-
-### Excerpt 455
-
-```
 | 192 | TRM-LIM-001 | House max 6 terms | pillar_13_term_limits_and_fitness.md | MISSING | |
-```
-
-### Excerpt 456
-
-```
 | 193 | TRM-LIM-002 | Senate max 3 terms | pillar_13_term_limits_and_fitness.md | MISSING | |
-```
-
-### Excerpt 457
-
-```
 | 194 | TRM-LIM-003 | Combined 8 terms or 20 years | pillar_13_term_limits_and_fitness.md | MISSING | |
-```
-
-### Excerpt 458
-
-```
 | 195 | TRM-RUN-001 | No running for another office while in office | pillar_13_term_limits_and_fitness.md | MISSING | |
-```
-
-### Excerpt 459
-
-```
 | 196 | TRM-RUN-002 | Two-year wait before another office | pillar_13_term_limits_and_fitness.md | MISSING | |
-```
-
-### Excerpt 460
-
-```
 | 200 | COR-ETH-002 | Ban direct stock trading by covered officials | pillar_3_anti_corruption_and_concentrated_power.md | MISSING | |
-```
-
-### Excerpt 461
-
-```
 | 210 | HLT-MHC-001 | Mental healthcare included | pillar_9_healthcare_system.md | MISSING | |
-```
-
-### Excerpt 462
-
-```
 | 211 | HLT-STD-001 | Protect coverage from partisan interference | pillar_9_healthcare_system.md | MISSING | |
-```
-
-### Excerpt 463
-
-```
 | 212 | HLT-STD-002 | Evidence-based coverage decisions | pillar_9_healthcare_system.md | MISSING | |
-```
-
-### Excerpt 464
-
-```
 | 214 | HLT-TRL-001 | Streamline approval processes safely | pillar_9_healthcare_system.md | MISSING | |
-```
-
-### Excerpt 465
-
-```
 | 221 | HLT-PHR-003 | End-to-end supply chain traceability | pillar_9_healthcare_system.md | MISSING | |
-```
-
-### Excerpt 466
-
-```
 | 222 | HLT-EMS-001 | Emergency care free for all | pillar_9_healthcare_system.md | MISSING | |
-```
-
-### Excerpt 467
-
-```
 | 228 | HLT-STD-005 | Insulate standards body from partisan capture | pillar_9_healthcare_system.md | MISSING | |
-```
-
-### Excerpt 468
-
-```
 | 229 | HLT-STD-006 | Staggered appointments for standards body | pillar_9_healthcare_system.md | MISSING | |
-```
-
-### Excerpt 469
-
-```
 | 241 | HLT-STD-009 | Full transparency of data/methods/exclusions | pillar_9_healthcare_system.md | MISSING | |
-```
-
-### Excerpt 470
-
-```
 | 244 | HLT-STD-010 | Publish dissenting scientific opinions | pillar_9_healthcare_system.md | MISSING | |
-```
-
-### Excerpt 471
-
-```
 | 247 | SYS-GEO-001 | Geography must not determine access | system_rules.md | MISSING | |
-```
-
-### Excerpt 472
-
-```
 | 250 | SYS-GEO-004 | Cross-state access guarantee | system_rules.md | MISSING | |
-```
-
-### Excerpt 473
-
-```
 | 252 | HLT-TEL-001 | Telemedicine without regional restrictions | pillar_9_healthcare_system.md | MISSING | |
-```
-
-### Excerpt 474
-
-```
 | 255 | SYS-GEO-002 | National baseline must be uniform | system_rules.md | MISSING | |
-```
-
-### Excerpt 475
-
-```
 | 261 | SYS-FED-001 | High-risk systems not fully centralized | system_rules.md | MISSING | |
-```
-
-### Excerpt 476
-
-```
 | 262 | SYS-FED-002 | Elections remain primarily state/local | pillar_2_elections_and_representation.md | MISSING | |
-```
-
-### Excerpt 477
-
-```
 | 267 | MED-PRS-001 | Protect journalists | pillar_11_information_and_media.md | MISSING | |
-```
-
-### Excerpt 478
-
-```
 | 268 | MED-PRS-002 | Protect confidential sources | pillar_11_information_and_media.md | MISSING | |
-```
-
-### Excerpt 479
-
-```
 | 271 | COR-WHB-001 | Protect whistleblowers who go to journalists | pillar_3_anti_corruption_and_concentrated_power.md | MISSING | |
-```
-
-### Excerpt 480
-
-```
 | 278 | JUS-DRG-001 | End war on drugs framework | pillar_4_equal_justice_policing_and_accountability.md | MISSING | |
-```
-
-### Excerpt 481
-
-```
 | 279 | JUS-DRG-002 | Decriminalize personal possession | pillar_4_equal_justice_policing_and_accountability.md | MISSING | |
-```
-
-### Excerpt 482
-
-```
 | 285 | HLT-REB-001 | National rehab standards | pillar_9_healthcare_system.md | MISSING | |
-```
-
-### Excerpt 483
-
-```
 First batch of remapped IDs to use immediately
-```
-
-### Excerpt 484
-
-```
 JUD-VEN-001  Prevent judge shopping and venue shopping
-```
-
-### Excerpt 485
-
-```
 TRM-LIM-001  House maximum 6 terms
-```
-
-### Excerpt 486
-
-```
 TRM-LIM-002  Senate maximum 3 terms
-```
-
-### Excerpt 487
-
-```
 TRM-LIM-003  Combined maximum 8 terms or 20 years
-```
-
-### Excerpt 488
-
-```
 TRM-RUN-001  May not run for another office while in office
-```
-
-### Excerpt 489
-
-```
 TRM-RUN-002  Must wait 2 years before election to another office
-```
-
-### Excerpt 490
-
-```
 TRM-VAC-001  Vacancy rules must respect wait periods
-```
-
-### Excerpt 491
-
-```
 TRM-VAC-002  Special-election half-term exception
-```
-
-### Excerpt 492
-
-```
 TRM-VAC-003  Senate appointment remaining-term exception
-```
-
-### Excerpt 493
-
-```
 COR-ETH-002  Covered officials may not directly trade stock
-```
-
-### Excerpt 494
-
-```
 COR-ETH-003  Applies to members of Congress
-```
-
-### Excerpt 495
-
-```
 COR-ETH-004  Applies to federal justices
-```
-
-### Excerpt 496
-
-```
 COR-ETH-005  Applies to cabinet and senior officials
-```
-
-### Excerpt 497
-
-```
 COR-ETH-006  Applies to President and Vice President
-```
-
-### Excerpt 498
-
-```
 COR-ETH-007  Applies to immediate family
-```
-
-### Excerpt 499
-
-```
 COR-ETH-008  Applies to spouses and long-term domestic partners
-```
-
-### Excerpt 500
-
-```
 COR-ETH-009  Applies to spouses/partners of immediate family
-```
-
-### Excerpt 501
-
-```
 COR-ETH-010  Collective investment vehicles allowed without investor input
-```
-
-### Excerpt 502
-
-```
 HLT-MHC-001  Mental healthcare must be included
-```
-
-### Excerpt 503
-
-```
 HLT-STD-001  Coverage protected from partisan interference
-```
-
-### Excerpt 504
-
-```
 HLT-STD-002  Coverage decisions grounded in evidence-based research
-```
-
-### Excerpt 505
-
-```
 HLT-TRL-001  Approvals and trials for new treatments funded and streamlined
-```
-
-### Excerpt 506
-
-```
 HLT-PHR-001  Better quality standards for generic medicine ingredients
-```
-
-### Excerpt 507
-
-```
 HLT-PHR-002  Ban non-active common allergens where unnecessary
-```
-
-### Excerpt 508
-
-```
 HLT-SUP-001  Fund studies on supplement efficacy and safety
-```
-
-### Excerpt 509
-
-```
 HLT-SUP-002  New supplement label standards
-```
-
-### Excerpt 510
-
-```
 HLT-SUP-003  Supplement lab testing transparency
-```
-
-### Excerpt 511
-
-```
 HLT-SUP-004  Minimum supplement quality/testing standards
-```
-
-### Excerpt 512
-
-```
 HLT-PHR-003  End-to-end supply chain traceability for drugs and supplements
-```
-
-### Excerpt 513
-
-```
 HLT-EMS-001  Emergency services free to all people
-```
-
-### Excerpt 514
-
-```
 HLT-EMS-002  Emergency care includes ambulance, hospital care, supplies, and follow-up
-```
-
-### Excerpt 515
-
-```
 HLT-ACC-001  Full coverage for citizens and long-term/permanent residents
-```
-
-### Excerpt 516
-
-```
 HLT-ACC-002  Two-year residency rule for elective/non-urgent procedures
-```
-
-### Excerpt 517
-
-```
 HLT-ACC-003  Exception for life-threatening or disability-causing conditions
-```
-
-### Excerpt 518
-
-```
 HLT-COV-001  Ban tiered healthcare coverage
-```
-
-### Excerpt 519
-
-```
 HLT-COV-002  Everyone gets one plan
-```
-
-### Excerpt 520
-
-```
 HLT-COV-003  Healthcare is single payer
-```
-
-### Excerpt 521
-
-```
 HLT-STD-003  Minimum service levels for healthcare
-```
-
-### Excerpt 522
-
-```
 HLT-STD-004  Maximum wait times for healthcare
-```
-
-### Excerpt 523
-
-```
 SYS-GEO-001  Geography must not determine access to rights or care
-```
-
-### Excerpt 524
-
-```
 SYS-GEO-002  National baseline of rights/services must be uniform
-```
-
-### Excerpt 525
-
-```
 SYS-GEO-003  States may not degrade federally guaranteed access
-```
-
-### Excerpt 526
-
-```
 SYS-GEO-004  Cross-state access to care guaranteed
-```
-
-### Excerpt 527
-
-```
 SYS-GEO-005  Travel/accommodation support when local care unavailable
-```
-
-### Excerpt 528
-
-```
 SYS-FED-001  High-risk systems must not be fully centralized
-```
-
-### Excerpt 529
-
-```
 SYS-FED-002  Elections remain primarily state/local administered
-```
-
-### Excerpt 530
-
-```
 SYS-FED-003  Federal government may set standards but not directly run elections
-```
-
-### Excerpt 531
-
-```
 SYS-FED-004  Multiple independent oversight layers for elections
-```
-
-### Excerpt 532
-
-```
 SYS-FED-005  Safeguards against both state suppression and federal manipulation
-```
-
-### Excerpt 533
-
-```
 MED-PRS-001  Protect journalists engaged in lawful newsgathering
-```
-
-### Excerpt 534
-
-```
 MED-PRS-002  Protect confidential sources
-```
-
-### Excerpt 535
-
-```
 MED-PRS-003  High-threshold rule for compelled source disclosure
-```
-
-### Excerpt 536
-
-```
 MED-PRS-004  Ban retaliation/surveillance/prosecution of journalists in public-interest reporting
-```
-
-### Excerpt 537
-
-```
 MED-PRS-005  Misuse of secrecy/classification may not conceal wrongdoing
-```
-
-### Excerpt 538
-
-```
 MED-PRS-006  Independent judicial review before compelled disclosure of journalistic materials
-```
-
-### Excerpt 539
-
-```
 MED-PRS-007  Limit subpoenas, warrants, and surveillance targeting journalists
-```
-
-### Excerpt 540
-
-```
 MED-PRS-008  Extend protections to independent and digital journalists
-```
-
-### Excerpt 541
-
-```
 MED-PRS-009  Transparency when government targets journalists or news organizations
-```
-
-### Excerpt 542
-
-```
 JUS-DRG-001  End the war on drugs framework
-```
-
-### Excerpt 543
-
-```
 JUS-DRG-002  Decriminalize personal possession
-```
-
-### Excerpt 544
-
-```
 HLT-STD-012  Treat substance use disorder as a medical condition
-```
-
-### Excerpt 545
-
-```
 JUS-DRG-003  Redirect drug war funding to treatment, prevention, and harm reduction
-```
-
-### Excerpt 546
-
-```
 JUS-DRG-004  Regulated frameworks for substances based on risk and evidence
-```
-
-### Excerpt 547
-
-```
 HLT-STD-013  Harm reduction strategies required
-```
-
-### Excerpt 548
-
-```
 JUS-DRG-005  No criminal penalties when seeking overdose-related medical help
-```
-
-### Excerpt 549
-
-```
 HLT-REB-001  National standards for rehab facilities
-```
-
-### Excerpt 550
-
-```
 HLT-REB-002  Evidence-based treatment required in rehab facilities
-```
-
-### Excerpt 551
-
-```
 HLT-REB-003  Ban abusive, coercive, or non-evidence-based rehab practices
-```
-
-### Excerpt 552
-
-```
 HLT-REB-004  Rehab transparency on outcomes and methodologies
-```
-
-### Excerpt 553
-
-```
 HLT-REB-005  Rehab must be accessible and affordable
-```
-
-### Excerpt 554
-
-```
 HLT-REB-006  Rehab oversight, auditing, and enforcement
-```
-
-### Excerpt 555
-
-```
 HLT-REB-007  Expand voluntary treatment and reduce court-mandated reliance
-```
-
-### Excerpt 556
-
-```
 It is a count of distinct policy / structural ideas, not grouped themes.
-```
-
-### Excerpt 557
-
-```
 It includes cross-pillar rules as their own entries.
-```
-
-### Excerpt 558
-
-```
 It does not collapse near-duplicates if they represent materially different mechanisms.
-```
-
-### Excerpt 559
-
-```
 It assumes we are keeping:
-```
-
-### Excerpt 560
-
-```
 broad principles
-```
-
-### Excerpt 561
-
-```
 implementation rules
-```
-
-### Excerpt 562
-
-```
 exception rules
-```
-
-### Excerpt 563
-
-```
 governance rules
-```
-
-### Excerpt 564
-
-```
 as separate items.
-```
-
-### Excerpt 565
-
-```
 Current recommendation
-```
-
-### Excerpt 566
-
-```
 Final count (reconfirmed)
-```
-
-### Excerpt 567
-
-```
 Full remapped master checkpoint (structured, ready for copy/paste)
-```
-
-### Excerpt 568
-
-```
 Clean, consistent IDs using the schema we defined
-```
-
-### Excerpt 569
-
-```
 No gaps, no reuse, no renumber churn
-```
-
-### Excerpt 570
-
-```
 ✅ Final Count (after re-check)
-```
-
-### Excerpt 571
-
-```
 🧠 SYSTEM / FOUNDATIONAL RULES
-```
-
-### Excerpt 572
-
-```
 SYS-FND-001  Platform is both policy framework and long-term strategy
-```
-
-### Excerpt 573
-
-```
 SYS-FND-002  Restore checks and balances
-```
-
-### Excerpt 574
-
-```
 SYS-FND-003  Modernize Constitution
-```
-
-### Excerpt 575
-
-```
 SYS-FND-004  Universal equal rights guarantees
-```
-
-### Excerpt 576
-
-```
 SYS-FND-005  Address economic inequality structurally
-```
-
-### Excerpt 577
-
-```
 SYS-FND-006  Address modern systemic failures not covered by Constitution
-```
-
-### Excerpt 578
-
-```
 SYS-FND-007  Make modern life easier and technology serve people
-```
-
-### Excerpt 579
-
-```
 SYS-FND-008  Movement is not left vs right
-```
-
-### Excerpt 580
-
-```
 SYS-FND-009  Movement must be accessible to everyone
-```
-
-### Excerpt 581
-
-```
 SYS-FND-010  Movement includes communication and coalition strategy
-```
-
-### Excerpt 582
-
-```
 SYS-FND-011  Movement is not a political party
-```
-
-### Excerpt 583
-
-```
 SYS-FND-012  Origin includes post-Trump instability risk
-```
-
-### Excerpt 584
-
-```
 SYS-FND-013  Address ignored working-class problems
-```
-
-### Excerpt 585
-
-```
 SYS-FND-014  Address rising costs and declining quality of life
-```
-
-### Excerpt 586
-
-```
 SYS-FND-015  Address elite detachment and paternalism
-```
-
-### Excerpt 587
-
-```
 SYS-FND-016  Address wealth inequality concentration
-```
-
-### Excerpt 588
-
-```
 SYS-FND-017  Address declining trust in institutions/media
-```
-
-### Excerpt 589
-
-```
 SYS-FND-018  Values: truth, equality, freedom, dignity, human rights
-```
-
-### Excerpt 590
-
-```
 SYS-RUL-001  System rules ensure completeness and alignment
-```
-
-### Excerpt 591
-
-```
 🌍 GEOGRAPHIC EQUALITY / FEDERALISM BALANCE
-```
-
-### Excerpt 592
-
-```
 SYS-GEO-002  National baseline must be uniform
-```
-
-### Excerpt 593
-
-```
 SYS-GEO-003  States may not degrade federally guaranteed rights
-```
-
-### Excerpt 594
-
-```
 SYS-GEO-004  Cross-state access must be guaranteed
-```
-
-### Excerpt 595
-
-```
 SYS-GEO-005  Travel support required if care unavailable locally
-```
-
-### Excerpt 596
-
-```
 SYS-FED-003  Federal government sets standards but does not directly control elections
-```
-
-### Excerpt 597
-
-```
 SYS-FED-004  Multiple independent oversight layers required
-```
-
-### Excerpt 598
-
-```
 🏛️ EXECUTIVE / GOVERNANCE
-```
-
-### Excerpt 599
-
-```
 GOV-EXO-001  Limit executive orders to emergencies
-```
-
-### Excerpt 600
-
-```
 GOV-EMR-001  Time limits on executive actions
-```
-
-### Excerpt 601
-
-```
 GOV-ACC-001  President subject to law
-```
-
-### Excerpt 602
-
-```
 GOV-ACC-002  Ban political firings
-```
-
-### Excerpt 603
-
-```
 GOV-PDN-001  Restrict pardon power
-```
-
-### Excerpt 604
-
-```
 GOV-DIV-001  Mandatory divestment enforcement
-```
-
-### Excerpt 605
-
-```
 GOV-WAR-001  Ban open-ended AUMFs
-```
-
-### Excerpt 606
-
-```
 GOV-WAR-002  Require declared wars
-```
-
-### Excerpt 607
-
-```
 GOV-WAR-003  Limit military authority
-```
-
-### Excerpt 608
-
-```
 GOV-ACC-003  Ban executive kill lists
-```
-
-### Excerpt 609
-
-```
 GOV-REC-001  Constitutionalize presidential records
-```
-
-### Excerpt 610
-
-```
 GOV-SHD-001  No pay for officials during shutdown
-```
-
-### Excerpt 611
-
-```
 GOV-SHD-002  Permanent pay loss after 30 days
-```
-
-### Excerpt 612
-
-```
 🗳️ ELECTIONS
-```
-
-### Excerpt 613
-
-```
 ELE-REP-001  Abolish Electoral College
-```
-
-### Excerpt 614
-
-```
 ELE-SEC-001  Paper ballots and auditability
-```
-
-### Excerpt 615
-
-```
 ELE-MAP-001  Ban gerrymandering
-```
-
-### Excerpt 616
-
-```
 ELE-REP-002  National ballot initiatives
-```
-
-### Excerpt 617
-
-```
 ELE-VOT-001  Constitutional right to vote
-```
-
-### Excerpt 618
-
-```
 ELE-VOT-002  Polling capacity limits
-```
-
-### Excerpt 619
-
-```
 ELE-VOT-003  Flexible voting locations
-```
-
-### Excerpt 620
-
-```
 ELE-VOT-004  Election Day holiday
-```
-
-### Excerpt 621
-
-```
 ELE-VOT-005  Paid time off voting
-```
-
-### Excerpt 622
-
-```
 ELE-OVR-001  Insurrection enforcement mechanism
-```
-
-### Excerpt 623
-
-```
 ELE-REP-003  Territories get House representation
-```
-
-### Excerpt 624
-
-```
 ELE-SEC-002  Ban federal armed presence at polls
-```
-
-### Excerpt 625
-
-```
 ELE-SEC-003  Ban weapons at polling sites
-```
-
-### Excerpt 626
-
-```
 ELE-FIN-001  Equal campaign funding system
-```
-
-### Excerpt 627
-
-```
 ELE-FIN-002  Eliminate donation imbalance
-```
-
-### Excerpt 628
-
-```
 ELE-PAR-001  Remove two-party structural protections
-```
-
-### Excerpt 629
-
-```
 ELE-MAP-002  State-level independent redistricting boards
-```
-
-### Excerpt 630
-
-```
 ELE-OVR-002  National elections oversight board
-```
-
-### Excerpt 631
-
-```
 ELE-ROL-001  National voter database (state managed)
-```
-
-### Excerpt 632
-
-```
 ELE-ROL-002  Remove deceased voters automatically
-```
-
-### Excerpt 633
-
-```
 ELE-IDA-001  Free voter ID assistance
-```
-
-### Excerpt 634
-
-```
 ELE-IDA-002  Legal and case support for ID access
-```
-
-### Excerpt 635
-
-```
 ⚖️ JUDICIAL SYSTEM
-```
-
-### Excerpt 636
-
-```
 JUD-ETH-001  Supreme Court term limits
-```
-
-### Excerpt 637
-
-```
 JUD-ETH-002  Judicial ethics code
-```
-
-### Excerpt 638
-
-```
 JUD-INT-001  Require intent/context in interpretation
-```
-
-### Excerpt 639
-
-```
 JUD-INT-002  Reject strict textualism dominance
-```
-
-### Excerpt 640
-
-```
 JUD-INT-003  Laws must include plain-language intent
-```
-
-### Excerpt 641
-
-```
 JUD-VEN-001  Prevent judge and venue shopping
-```
-
-### Excerpt 642
-
-```
 JUD-REC-001  Strong recusal standards
-```
-
-### Excerpt 643
-
-```
 JUD-OVR-001  Oversight mechanisms for judiciary
-```
-
-### Excerpt 644
-
-```
 🚫 ANTI-CORRUPTION
-```
-
-### Excerpt 645
-
-```
 COR-FIN-001  Ban corporate political donations
-```
-
-### Excerpt 646
-
-```
 COR-FIN-002  Ban Super PACs
-```
-
-### Excerpt 647
-
-```
 COR-FIN-003  Limit individual donations
-```
-
-### Excerpt 648
-
-```
 COR-FIN-004  Limit political ad spending
-```
-
-### Excerpt 649
-
-```
 COR-WHB-001  Whistleblower protections
-```
-
-### Excerpt 650
-
-```
 COR-ETH-001  Ban lobbyists from governing industries
-```
-
-### Excerpt 651
-
-```
 COR-ETH-002  Ban stock trading by officials
-```
-
-### Excerpt 652
-
-```
 COR-ETH-003  Applies to Congress
-```
-
-### Excerpt 653
-
-```
 COR-ETH-004  Applies to judges
-```
-
-### Excerpt 654
-
-```
 COR-ETH-005  Applies to executive branch
-```
-
-### Excerpt 655
-
-```
 COR-ETH-006  Applies to president/VP
-```
-
-### Excerpt 656
-
-```
 COR-ETH-008  Applies to spouses/partners
-```
-
-### Excerpt 657
-
-```
 COR-ETH-009  Applies to extended relationships
-```
-
-### Excerpt 658
-
-```
 COR-ETH-010  Allow blind collective investment only
-```
-
-### Excerpt 659
-
-```
 🧾 RIGHTS & CIVIL LIBERTIES
-```
-
-### Excerpt 660
-
-```
 RGT-PRV-001  Explicit right to privacy
-```
-
-### Excerpt 661
-
-```
 RGT-PRV-002  Medical privacy protections
-```
-
-### Excerpt 662
-
-```
 RGT-PRV-003  Digital privacy protections
-```
-
-### Excerpt 663
-
-```
 RGT-BOD-001  Bodily autonomy
-```
-
-### Excerpt 664
-
-```
 RGT-BOD-002  Abortion rights
-```
-
-### Excerpt 665
-
-```
 RGT-BOD-003  Contraception rights
-```
-
-### Excerpt 666
-
-```
 RGT-BOD-004  Gender affirming care
-```
-
-### Excerpt 667
-
-```
 RGT-BOD-005  Ban intersex surgeries
-```
-
-### Excerpt 668
-
-```
 RGT-BOD-006  Ban conversion therapy
-```
-
-### Excerpt 669
-
-```
 RGT-EQT-001  Expanded equality protections
-```
-
-### Excerpt 670
-
-```
 RGT-EQT-002  Include sexual orientation
-```
-
-### Excerpt 671
-
-```
 RGT-EQT-003  Include romantic orientation
-```
-
-### Excerpt 672
-
-```
 RGT-EQT-004  Expandable protections
-```
-
-### Excerpt 673
-
-```
 RGT-REL-001  Freedom of religion
-```
-
-### Excerpt 674
-
-```
 RGT-REL-002  Freedom from religion
-```
-
-### Excerpt 675
-
-```
 RGT-REL-003  Remove abuse protections
-```
-
-### Excerpt 676
-
-```
 RGT-REL-004  Remove tax exemptions for abuse
-```
-
-### Excerpt 677
-
-```
 RGT-TEC-001  Ban government data purchases
-```
-
-### Excerpt 678
-
-```
 RGT-DET-001  Ban indefinite detention
-```
-
-### Excerpt 679
-
-```
 RGT-DET-002  Ban offshore incarceration
-```
-
-### Excerpt 680
-
-```
 RGT-EDU-001  Right to education
-```
-
-### Excerpt 681
-
-```
 🏥 HEALTHCARE (CORE + EXPANSION)
-```
-
-### Excerpt 682
-
-```
 HLT-MHC-001  Mental healthcare included
-```
-
-### Excerpt 683
-
-```
 HLT-STD-001  Evidence-based coverage
-```
-
-### Excerpt 684
-
-```
 HLT-STD-002  Protection from partisan interference
-```
-
-### Excerpt 685
-
-```
 HLT-STD-003  Minimum service levels
-```
-
-### Excerpt 686
-
-```
 HLT-STD-004  Maximum wait times
-```
-
-### Excerpt 687
-
-```
 HLT-STD-005  Independent scientific governance
-```
-
-### Excerpt 688
-
-```
 HLT-STD-006  Staggered appointments
-```
-
-### Excerpt 689
-
-```
 HLT-STD-007  Mixed federal/state appointments
-```
-
-### Excerpt 690
-
-```
 HLT-STD-008  Anti-capture guardrails
-```
-
-### Excerpt 691
-
-```
 HLT-STD-009  Full data transparency
-```
-
-### Excerpt 692
-
-```
 HLT-STD-010  Publish dissenting opinions
-```
-
-### Excerpt 693
-
-```
 HLT-STD-011  Independent audit mechanisms
-```
-
-### Excerpt 694
-
-```
 HLT-STD-012  Treat addiction as medical condition
-```
-
-### Excerpt 695
-
-```
 HLT-STD-013  Harm reduction systems
-```
-
-### Excerpt 696
-
-```
 I’d strongly recommend one of these:
-```
-
-### Excerpt 697
-
-```
 consistent schema
-```
-
-### Excerpt 698
-
-```
 no formatting noise
-```
-
-### Excerpt 699
-
-```
 easy to parse (CSV-like, but safer → pipe-delimited)
-```
-
-### Excerpt 700
-
-```
 stable IDs
-```
-
-### Excerpt 701
-
-```
 no missing fields
-```
-
-### Excerpt 702
-
-```
 📦 RAW MASTER DATA (PIPE-DELIMITED)
-```
-
-### Excerpt 703
-
-```
 Schema
-```
-
-### Excerpt 704
-
-```
 ID | DOMAIN | SUBDOMAIN | DESCRIPTION | STATUS
-```
-
-### Excerpt 705
-
-```
 SYS-FND-001|SYS|FND|Platform is both a policy framework and long-term strategy|INCLUDED
-```
-
-### Excerpt 706
-
-```
 SYS-FND-002|SYS|FND|Restore checks and balances|INCLUDED
-```
-
-### Excerpt 707
-
-```
 SYS-FND-003|SYS|FND|Modernize the Constitution|INCLUDED
-```
-
-### Excerpt 708
-
-```
 SYS-FND-004|SYS|FND|Guarantee universal equal rights|INCLUDED
-```
-
-### Excerpt 709
-
-```
 SYS-FND-005|SYS|FND|Address economic inequality structurally|INCLUDED
-```
-
-### Excerpt 710
-
-```
 SYS-FND-006|SYS|FND|Address modern systemic issues not covered by current law|INCLUDED
-```
-
-### Excerpt 711
-
-```
 SYS-FND-007|SYS|FND|Make technology work for people|INCLUDED
-```
-
-### Excerpt 712
-
-```
 SYS-FND-008|SYS|FND|Movement is not left vs right|INCLUDED
-```
-
-### Excerpt 713
-
-```
 SYS-FND-009|SYS|FND|Movement accessible to everyone|INCLUDED
-```
-
-### Excerpt 714
-
-```
 SYS-FND-010|SYS|FND|Includes communication and coalition strategy|INCLUDED
-```
-
-### Excerpt 715
-
-```
 SYS-FND-011|SYS|FND|Not a political party|INCLUDED
-```
-
-### Excerpt 716
-
-```
 SYS-FND-012|SYS|FND|Origin tied to post-Trump instability concerns|INCLUDED
-```
-
-### Excerpt 717
-
-```
 SYS-FND-013|SYS|FND|Address ignored working-class issues|INCLUDED
-```
-
-### Excerpt 718
-
-```
 SYS-FND-014|SYS|FND|Address rising costs and declining quality of life|INCLUDED
-```
-
-### Excerpt 719
-
-```
 SYS-FND-015|SYS|FND|Address elite detachment|INCLUDED
-```
-
-### Excerpt 720
-
-```
 SYS-FND-016|SYS|FND|Address wealth concentration|INCLUDED
-```
-
-### Excerpt 721
-
-```
 SYS-FND-017|SYS|FND|Address declining institutional trust|INCLUDED
-```
-
-### Excerpt 722
-
-```
 SYS-FND-018|SYS|FND|Core values include truth equality freedom dignity|INCLUDED
-```
-
-### Excerpt 723
-
-```
 SYS-RUL-001|SYS|RUL|System rules ensure completeness and alignment|INCLUDED
-```
-
-### Excerpt 724
-
-```
 GOV-EXO-001|GOV|EXO|Limit executive orders to emergencies|PARTIAL
-```
-
-### Excerpt 725
-
-```
 GOV-EMR-001|GOV|EMR|Time limits on executive actions|PARTIAL
-```
-
-### Excerpt 726
-
-```
 GOV-ACC-001|GOV|ACC|President subject to law|INCLUDED
-```
-
-### Excerpt 727
-
-```
 GOV-ACC-002|GOV|ACC|Ban political firings|MISSING
-```
-
-### Excerpt 728
-
-```
 GOV-PDN-001|GOV|PDN|Restrict pardon power|PARTIAL
-```
-
-### Excerpt 729
-
-```
 GOV-DIV-001|GOV|DIV|Mandatory divestment enforcement|PARTIAL
-```
-
-### Excerpt 730
-
-```
 GOV-WAR-001|GOV|WAR|Ban open-ended AUMFs|INCLUDED
-```
-
-### Excerpt 731
-
-```
 GOV-WAR-002|GOV|WAR|Require declared wars|MISSING
-```
-
-### Excerpt 732
-
-```
 GOV-WAR-003|GOV|WAR|Limit military authority|PARTIAL
-```
-
-### Excerpt 733
-
-```
 GOV-ACC-003|GOV|ACC|Ban executive kill lists|PARTIAL
-```
-
-### Excerpt 734
-
-```
 GOV-REC-001|GOV|REC|Constitutionalize presidential records|PARTIAL
-```
-
-### Excerpt 735
-
-```
 GOV-SHD-001|GOV|ACC|No pay during government shutdown|MISSING
-```
-
-### Excerpt 736
-
-```
 GOV-SHD-002|GOV|ACC|Permanent pay loss after 30 days shutdown|MISSING
-```
-
-### Excerpt 737
-
-```
 TRM-LIM-001|TRM|LIM|House max 6 terms|MISSING
-```
-
-### Excerpt 738
-
-```
 TRM-LIM-002|TRM|LIM|Senate max 3 terms|MISSING
-```
-
-### Excerpt 739
-
-```
 TRM-LIM-003|TRM|LIM|Combined max 8 terms or 20 years|MISSING
-```
-
-### Excerpt 740
-
-```
 TRM-RUN-001|TRM|RUN|No running while in office|MISSING
-```
-
-### Excerpt 741
-
-```
 TRM-RUN-002|TRM|RUN|Two-year wait before next office|MISSING
-```
-
-### Excerpt 742
-
-```
 TRM-VAC-001|TRM|VAC|Vacancy rules respect wait periods|MISSING
-```
-
-### Excerpt 743
-
-```
 TRM-VAC-002|TRM|VAC|Special election exception|MISSING
-```
-
-### Excerpt 744
-
-```
 TRM-VAC-003|TRM|VAC|Senate appointment exception|MISSING
-```
-
-### Excerpt 745
-
-```
 🧠 Final Notes
-```
-
-### Excerpt 746
-
-```
 This is clean enough to ingest directly into Python
-```
-
-### Excerpt 747
-
-```
 You can split on "|" safely
-```
-
-### Excerpt 748
-
-```
 No embedded pipes → no parsing issues
-```
-
-### Excerpt 749
-
-```
 Consistent schema across all rows
-```
-
-### Excerpt 750
-
-```
 If you want next (highly recommended)
-```
-
-### Excerpt 751
-
-```
 The file contains a valid schema and initial rows
-```
-
-### Excerpt 752
-
-```
 But it is NOT the complete 289-item dataset yet
-```
-
-### Excerpt 753
-
-```
 Next step (recommended)
-```
-
-### Excerpt 754
-
-```
 Option A (recommended)
-```
-
-### Excerpt 755
-
-```
 One single complete file (what you originally asked for)
-```
-
-### Excerpt 756
-
-```
 Fully verified, all ~289 entries
-```
-
-### Excerpt 757
-
-```
 Option B
-```
-
-### Excerpt 758
-
-```
 Split files by domain (better for Git + querying later)
-```
-
-### Excerpt 759
-
-```
 More items:
-```
-
-### Excerpt 760
-
-```
 * Enshrine a specific/explicit right to education.
-```
-
-### Excerpt 761
-
-```
 * Education standards should include protections against political ideological indoctrination
-```
-
-### Excerpt 762
-
-```
 * Student loan debt forgiveness
-```
-
-### Excerpt 763
-
-```
 * Equal pay and economic opportunities for everyone 
-```
-
-### Excerpt 764
-
-```
 * Paid parental leave, guaranteed by governments for small businesses
-```
-
-### Excerpt 765
-
-```
 * Create manufacturing industrial policies and infrastructure
-```
-
-### Excerpt 766
-
-```
 * Regenerative farming and agriculture processes
-```
-
-### Excerpt 767
-
-```
 forgiveness vs restructuring vs cancellation rules
-```
-
-### Excerpt 768
-
-```
 4. Equal pay and economic opportunity
-```
-
-### Excerpt 769
-
-```
 🔍 Existing?
-```
-
-### Excerpt 770
-
-```
 ECO-WRK-001 (livable wage)
-```
-
-### Excerpt 771
-
-```
 RGT-EQT-* (equality protections)
-```
-
-### Excerpt 772
-
-```
 ⚠️ Gap
-```
-
-### Excerpt 773
-
-```
 🆕 New ID
-```
-
-### Excerpt 774
-
-```
 ECO-EQT-001|ECO|EQT|Guarantee equal pay and equal economic opportunity regardless of protected class|MISSING
-```
-
-### Excerpt 775
-
-```
 5. Paid parental leave (government support for small businesses)
-```
-
-### Excerpt 776
-
-```
 ECO-LAB-004|ECO|LAB|Government must subsidize or support paid parental leave for small businesses|MISSING
-```
-
-### Excerpt 777
-
-```
 6. Manufacturing / industrial policy
-```
-
-### Excerpt 778
-
-```
 ECO-IND-001|ECO|IND|Establish national manufacturing and industrial policy to strengthen domestic production and supply chains|MISSING
-```
-
-### Excerpt 779
-
-```
 7. Regenerative agriculture
-```
-
-### Excerpt 780
-
-```
 environmental + infrastructure items
-```
-
-### Excerpt 781
-
-```
 but nothing specific to agriculture systems
-```
-
-### Excerpt 782
-
-```
 AGR-REG-001|AGR|REG|Promote regenerative agriculture and sustainable farming practices|MISSING
-```
-
-### Excerpt 783
-
-```
 📊 Summary of This Batch
-```
-
-### Excerpt 784
-
-```
 Reused / Expanded
-```
-
-### Excerpt 785
-
-```
 RGT-EDU-001 (refined, not duplicated)
-```
-
-### Excerpt 786
-
-```
 RGT-LAB-001 (extended via supporting rule)
-```
-
-### Excerpt 787
-
-```
 New IDs Created
-```
-
-### Excerpt 788
-
-```
 EDU-STD-001
-```
-
-### Excerpt 789
-
-```
 EDU-FIN-001
-```
-
-### Excerpt 790
-
-```
 ECO-EQT-001
-```
-
-### Excerpt 791
-
-```
 ECO-LAB-004
-```
-
-### Excerpt 792
-
-```
 ECO-IND-001
-```
-
-### Excerpt 793
-
-```
 AGR-REG-001
-```
-
-### Excerpt 794
-
-```
 📚 Education + Workforce + Economic Mobility
-```
-
-### Excerpt 795
-
-```
 RGT (rights)
-```
-
-### Excerpt 796
-
-```
 ECO (economics)
-```
-
-### Excerpt 797
-
-```
 EDU (new emerging domain)
-```
-
-### Excerpt 798
-
-```
 Recommendation later:
-```
-
-### Excerpt 799
-
-```
 union protections
-```
-
-### Excerpt 800
-
-```
 gig economy rules
-```
-
-### Excerpt 801
-
-```
 worker classification
-```
-
-### Excerpt 802
-
-```
 workplace safety modernization
-```
-
-### Excerpt 803
-
-```
 🧠 TECHNOLOGY / AI / DATA — SURPRISING GAP
-```
-
-### Excerpt 804
-
-```
 provider incentives
-```
-
-### Excerpt 805
-
-```
 malpractice reform
-```
-
-### Excerpt 806
-
-```
 hospital system structure
-```
-
-### Excerpt 807
-
-```
 ⚖️ ECONOMIC SYSTEM DESIGN — PARTIAL
-```
-
-### Excerpt 808
-
-```
 Option A — Deep dive one gap (recommended)
-```
-
-### Excerpt 809
-
-```
 what it covers
-```
-
-### Excerpt 810
-
-```
 the core subdomains (these become your future IDs)
-```
-
-### Excerpt 811
-
-```
 📚 DOMAIN: EDUCATION (EDU)
-```
-
-### Excerpt 812
-
-```
 Scope
-```
-
-### Excerpt 813
-
-```
 Climate, ecosystems, pollution, resource use, sustainability
-```
-
-### Excerpt 814
-
-```
 Subdomains
-```
-
-### Excerpt 815
-
-```
 LAB-WRK  Worker rights
-```
-
-### Excerpt 816
-
-```
 LAB-UNI  Unions & collective bargaining
-```
-
-### Excerpt 817
-
-```
 LAB-GIG  Gig economy & classification
-```
-
-### Excerpt 818
-
-```
 LAB-SAF  Workplace safety
-```
-
-### Excerpt 819
-
-```
 LAB-WLB  Work-life balance
-```
-
-### Excerpt 820
-
-```
 LAB-AUT  Automation & displacement
-```
-
-### Excerpt 821
-
-```
 🏭 DOMAIN: INDUSTRY & PRODUCTION (IND)
-```
-
-### Excerpt 822
-
-```
 How the economy actually produces things
-```
-
-### Excerpt 823
-
-```
 HOU-ACC  Housing access
-```
-
-### Excerpt 824
-
-```
 HOU-SUP  Housing supply
-```
-
-### Excerpt 825
-
-```
 HOU-REG  Market regulation
-```
-
-### Excerpt 826
-
-```
 HOU-ANT  Anti-gentrification (you flagged this)
-```
-
-### Excerpt 827
-
-```
 HOU-OWN  Ownership vs renting balance
-```
-
-### Excerpt 828
-
-```
 HOU-CST  Cost-of-living stabilization
-```
-
-### Excerpt 829
-
-```
 ⚙️ DOMAIN: ECONOMIC SYSTEM MECHANICS (ECO-ADV)
-```
-
-### Excerpt 830
-
-```
 ECO-INF  Inflation controls
-```
-
-### Excerpt 831
-
-```
 ECO-MKT  Market structure rules
-```
-
-### Excerpt 832
-
-```
 ECO-CMP  Competition policy (beyond antitrust)
-```
-
-### Excerpt 833
-
-```
 ECO-PRC  Price transparency & control mechanisms
-```
-
-### Excerpt 834
-
-```
 ECO-EXT  Externalities (ties to ENV)
-```
-
-### Excerpt 835
-
-```
 🧠 Key Insight
-```
-
-### Excerpt 836
-
-```
 RGT-TEC-001 (good foundation)
-```
-
-### Excerpt 837
-
-```
 🤖 AI GOVERNANCE
-```
-
-### Excerpt 838
-
-```
 TEC-AI-001  Require transparency in AI decision-making systems affecting rights or access
-```
-
-### Excerpt 839
-
-```
 TEC-AI-002  Ban fully automated decisions in critical domains (healthcare, legal, employment)
-```
-
-### Excerpt 840
-
-```
 TEC-AI-003  Require auditability of AI systems
-```
-
-### Excerpt 841
-
-```
 TEC-AI-004  Require training data disclosure (within reason / safety bounds)
-```
-
-### Excerpt 842
-
-```
 TEC-AI-005  Liability must exist for harm caused by AI systems
-```
-
-### Excerpt 843
-
-```
 ⚙️ ALGORITHMIC ACCOUNTABILITY
-```
-
-### Excerpt 844
-
-```
 TEC-ALG-001  Platforms must disclose when algorithmic ranking or filtering is used
-```
-
-### Excerpt 845
-
-```
 TEC-ALG-002  Users must have access to a non-algorithmic (chronological or neutral) option
-```
-
-### Excerpt 846
-
-```
 TEC-ALG-003  Require auditing of algorithms for bias and manipulation
-```
-
-### Excerpt 847
-
-```
 TEC-ALG-004  Ban manipulative engagement optimization targeting psychological vulnerabilities
-```
-
-### Excerpt 848
-
-```
 🌐 PLATFORM GOVERNANCE
-```
-
-### Excerpt 849
-
-```
 TEC-PLT-001  Large platforms treated as regulated public-facing infrastructure (not pure private actors)
-```
-
-### Excerpt 850
-
-```
 TEC-PLT-002  Require transparency in moderation policies and enforcement
-```
-
-### Excerpt 851
-
-```
 TEC-PLT-003  Protect lawful speech while allowing clear limits on harm (needs later precision)
-```
-
-### Excerpt 852
-
-```
 TEC-PLT-004  Require appeal mechanisms for moderation decisions
-```
-
-### Excerpt 853
-
-```
 👁️ SURVEILLANCE & TRACKING
-```
-
-### Excerpt 854
-
-```
 TEC-SUR-001  Ban warrantless mass surveillance
-```
-
-### Excerpt 855
-
-```
 TEC-SUR-002  Ban government purchase of private surveillance data (you already have this)
-```
-
-### Excerpt 856
-
-```
 TEC-SUR-003  Restrict facial recognition use in public spaces
-```
-
-### Excerpt 857
-
-```
 TEC-SUR-004  Require strict warrants and audit logs for surveillance access
-```
-
-### Excerpt 858
-
-```
 🌍 INTERNET STRUCTURE
-```
-
-### Excerpt 859
-
-```
 TEC-INT-001  Net neutrality protections
-```
-
-### Excerpt 860
-
-```
 TEC-INT-002  Prevent ISP-level discrimination or throttling
-```
-
-### Excerpt 861
-
-```
 TEC-INT-003  Ensure open access to the internet as a public utility
-```
-
-### Excerpt 862
-
-```
 My recommendation:
-```
-
-### Excerpt 863
-
-```
 👉 Do tech now while it’s fresh, then environment next
-```
-
-### Excerpt 864
-
-```
 On military AI, the strongest outside signal is that fully or highly autonomous force decisions are widely treated as a special category. The ICRC argues autonomous weapons raise immediate humanitarian concerns and calls for prohibitions and tight regulation, especially where systems cannot be predictably constrained under international humanitarian law. Even some industry-facing safety frameworks now talk in terms of capability thresholds, staged deployment, and restricted release when risk becomes too high.
-```
-
-### Excerpt 865
-
-```
 On surveillance, the pattern is also pretty consistent: civil-liberties groups are warning that AI makes older surveillance powers more scalable, cheaper, and harder to contest, especially when paired with police databases, pattern analysis, and facial recognition. ACLU materials stress that surveillance programs need strict use policies, transparency, auditing, and real consequences for misuse. That lines up with your instinct that AI surveillance is not just a privacy problem; it is also a democracy and power-concentration problem.
-```
-
-### Excerpt 866
-
-```
 👉 Do surveillance next
-```
-
-### Excerpt 867
-
-```
 This is broader than just facial recognition and catches future variants.
-```
-
-### Excerpt 868
-
-```
 3. Facial Recognition and Biometric Tracking
-```
-
-### Excerpt 869
-
-```
 A. Ban facial recognition in public-space dragnet surveillance
-```
-
-### Excerpt 870
-
-```
 TEC-BIO-001|TEC|BIO|Ban use of facial recognition for dragnet surveillance in public spaces|MISSING
-```
-
-### Excerpt 871
-
-```
 B. Restrict biometric identification to narrow high-threshold cases
-```
-
-### Excerpt 872
-
-```
 TEC-BIO-002|TEC|BIO|Biometric identification systems may only be used under strict judicial authorization in narrowly defined high-necessity investigations|MISSING
-```
-
-### Excerpt 873
-
-```
 C. Ban emotion recognition and pseudoscientific behavioral inference
-```
-
-### Excerpt 874
-
-```
 TEC-BIO-003|TEC|BIO|Ban use of AI systems that claim to infer emotion intent deception dangerousness or mental state from faces voices or body language for surveillance or law enforcement purposes|MISSING
-```
-
-### Excerpt 875
-
-```
 👉 AI + Military next
-```
-
-### Excerpt 876
-
-```
 A. Contractor accountability
-```
-
-### Excerpt 877
-
-```
 TEC-MIL-021|TEC|MIL|Private contractors developing AI for military use are subject to the same legal and ethical constraints as government entities|MISSING
-```
-
-### Excerpt 878
-
-```
 B. Ban outsourcing accountability
-```
-
-### Excerpt 879
-
-```
 TEC-MIL-022|TEC|MIL|Government may not outsource decision-making authority or accountability for use of force to private entities or AI systems|MISSING
-```
-
-### Excerpt 880
-
-```
 C. Export controls (light touch for now)
-```
-
-### Excerpt 881
-
-```
 TEC-MIL-023|TEC|MIL|Establish controls on export of high-risk military AI systems to prevent misuse by hostile actors or regimes with poor human-rights records|UNDEVELOPED
-```
-
-### Excerpt 882
-
-```
 🔍 DEDUPE CHECK
-```
-
-### Excerpt 883
-
-```
 No direct duplicates found
-```
-
-### Excerpt 884
-
-```
 AI generating kill lists
-```
-
-### Excerpt 885
-
-```
 humans just approving them
-```
-
-### Excerpt 886
-
-```
 diffusion of responsibility
-```
-
-### Excerpt 887
-
-```
 ✅ Replace with this (strict version)
-```
-
-### Excerpt 888
-
-```
 TEC-MIL-005|TEC|MIL|Ban AI systems from generating, recommending, or prioritizing targets for lethal action involving real persons; all such decisions must originate from human judgment and independently verifiable evidence|UPDATED
-```
-
-### Excerpt 889
-
-```
 “it’s just a shortlist”
-```
-
-### Excerpt 890
-
-```
 “it’s just recommendations”
-```
-
-### Excerpt 891
-
-```
 “it’s just confidence scoring”
-```
-
-### Excerpt 892
-
-```
 ⚖️ DEFENSIVE / SYSTEMS EXCEPTION (your cutout)
-```
-
-### Excerpt 893
-
-```
 ✅ Safe allowance
-```
-
-### Excerpt 894
-
-```
 TEC-MIL-026|TEC|MIL|AI may be used for analysis classification and situational awareness provided it does not generate or recommend specific human targets for lethal action|MISSING
-```
-
-### Excerpt 895
-
-```
 ⚠️ IMPORTANT DISTINCTION (this is the core philosophy)
-```
-
-### Excerpt 896
-
-```
 👉 Mental Health AI next (recommended)
-```
-
-### Excerpt 897
-
-```
 This prevents loopholes like “guidance” quietly becoming targeting.
-```
-
-### Excerpt 898
-
-```
 👉 Without constraints, guidance systems can effectively become:
-```
-
-### Excerpt 899
-
-```
 target drift
-```
-
-### Excerpt 900
-
-```
 last-second retargeting
-```
-
-### Excerpt 901
-
-```
 “oops it picked someone else”
-```
-
-### Excerpt 902
-
-```
 🧠 Where your position sits (honest assessment)
-```
-
-### Excerpt 903
-
-```
 Sanctions are 100% encouraged for violations, sanctions that are STRONG.
-```
-
-### Excerpt 904
-
-```
 Thought for a few seconds
-```
-
-### Excerpt 905
-
-```
 legally coherent
-```
-
-### Excerpt 906
-
-```
 not self-contradictory with your earlier “narrow guidance allowed” rule
-```
-
-### Excerpt 907
-
-```
 not so broad it becomes unenforceable
-```
-
-### Excerpt 908
-
-```
 your allowed guidance for collateral damage reduction
-```
-
-### Excerpt 909
-
-```
 potentially defensive actions that become counter-offensive
-```
-
-### Excerpt 910
-
-```
 a lot of existing lawful systems
-```
-
-### Excerpt 911
-
-```
 your ban on autonomous targeting
-```
-
-### Excerpt 912
-
-```
 your human accountability requirement
-```
-
-### Excerpt 913
-
-```
 2. Explicit Expansion (remove ambiguity)
-```
-
-### Excerpt 914
-
-```
 TEC-MIL-046|TEC|MIL|Deployment of AI systems that generate or recommend human targets for lethal action or that substitute for human judgment in use-of-force decisions should be prohibited under international law and treated as unlawful conduct|MISSING
-```
-
-### Excerpt 915
-
-```
 3. Tie to Existing War Law (important for realism)
-```
-
-### Excerpt 916
-
-```
 TEC-MIL-047|TEC|MIL|Use of AI systems in ways that violate principles of distinction proportionality or necessity under the laws of armed conflict constitutes a war crime regardless of whether a human operator is nominally involved|MISSING
-```
-
-### Excerpt 917
-
-```
 A. Mental health interaction data is highly protected
-```
-
-### Excerpt 918
-
-```
 HLT-MHC-016|HLT|MHC|Data generated through AI mental health interactions must be treated as highly sensitive health data with enhanced privacy protections|MISSING
-```
-
-### Excerpt 919
-
-```
 B. Ban secondary monetization
-```
-
-### Excerpt 920
-
-```
 HLT-MHC-017|HLT|MHC|Mental health AI data may not be sold shared for advertising or used for unrelated profiling or commercial targeting|MISSING
-```
-
-### Excerpt 921
-
-```
 C. Ban employer / insurer misuse
-```
-
-### Excerpt 922
-
-```
 HLT-MHC-018|HLT|MHC|Mental health data inferred or collected by AI systems may not be used by employers insurers schools or landlords to deny opportunity coverage or access|MISSING
-```
-
-### Excerpt 923
-
-```
 D. Tight consent standards
-```
-
-### Excerpt 924
-
-```
 HLT-MHC-019|HLT|MHC|Consent for use of mental health AI systems and their data practices must be explicit informed revocable and presented without dark patterns|MISSING
-```
-
-### Excerpt 925
-
-```
 7. Scientific Integrity / Quality Control
-```
-
-### Excerpt 926
-
-```
 A. No pseudoscience
-```
-
-### Excerpt 927
-
-```
 HLT-MHC-020|HLT|MHC|AI systems may not claim mental health efficacy diagnostic power or therapeutic value without scientifically supported evidence appropriate to those claims|MISSING
-```
-
-### Excerpt 928
-
-```
 B. Independent evaluation
-```
-
-### Excerpt 929
-
-```
 HLT-MHC-021|HLT|MHC|Mental health AI systems must be subject to independent evaluation rather than relying solely on vendor claims or internal testing|MISSING
-```
-
-### Excerpt 930
-
-```
 C. Public reporting
-```
-
-### Excerpt 931
-
-```
 HLT-MHC-022|HLT|MHC|Material risks limitations and known failure modes of mental health AI systems must be publicly disclosed|MISSING
-```
-
-### Excerpt 932
-
-```
 8. Rights / Autonomy / Dignity
-```
-
-### Excerpt 933
-
-```
 A. Right to human care
-```
-
-### Excerpt 934
-
-```
 HLT-MHC-023|HLT|MHC|People must retain a right to access human mental healthcare and may not be forced into AI-only mental health services because of cost convenience or availability policies|MISSING
-```
-
-### Excerpt 935
-
-```
 B. No coercive use
-```
-
-### Excerpt 936
-
-```
 HLT-MHC-024|HLT|MHC|AI mental health tools may not be imposed coercively in schools workplaces prisons detention settings or public benefits systems without strict legal safeguards|MISSING
-```
-
-### Excerpt 937
-
-```
 C. No behavioral compliance systems disguised as care
-```
-
-### Excerpt 938
-
-```
 HLT-MHC-025|HLT|MHC|AI systems may not be used to enforce behavioral conformity or ideological compliance under the guise of mental health support|MISSING
-```
-
-### Excerpt 939
-
-```
 9. High-Risk Institutional Uses
-```
-
-### Excerpt 940
-
-```
 My recommendation is employment / worker monitoring next, because it connects tech to everyday life in a very direct way.
-```
-
-### Excerpt 941
-
-```
 Systems quietly become:
-```
-
-### Excerpt 942
-
-```
 People become test subjects without knowing it
-```
-
-### Excerpt 943
-
-```
 🧠 What you’ve built (important to recognize)
-```
-
-### Excerpt 944
-
-```
 A. No provider data without explicit consent
-```
-
-### Excerpt 945
-
-```
 HLT-MHC-043|HLT|MHC|Mental health data from licensed providers therapy sessions or clinical records may not be used for AI training without explicit informed consent from all parties involved|MISSING
-```
-
-### Excerpt 946
-
-```
 B. Default prohibition on clinical data use
-```
-
-### Excerpt 947
-
-```
 HLT-MHC-044|HLT|MHC|Use of identifiable clinical mental health data for AI training is prohibited unless strict ethical legal and consent standards are met|MISSING
-```
-
-### Excerpt 948
-
-```
 5. Data Storage Restrictions
-```
-
-### Excerpt 949
-
-```
 HLT-MHC-045|HLT|MHC|Mental health data generated through AI interactions may not be stored beyond what is strictly necessary without explicit informed consent and user control|MISSING
-```
-
-### Excerpt 950
-
-```
 6. Anonymization Requirements (important but tricky)
-```
-
-### Excerpt 951
-
-```
 C. No opaque triage decisions
-```
-
-### Excerpt 952
-
-```
 HLT-AI-008|HLT|AI|AI systems may not make opaque triage or prioritization decisions that materially affect access to care without explainability and oversight|MISSING
-```
-
-### Excerpt 953
-
-```
 5. Insurance & Payer Use (critical area)
-```
-
-### Excerpt 954
-
-```
 A. Ban profit-driven harm via AI
-```
-
-### Excerpt 955
-
-```
 HLT-AI-009|HLT|AI|Use of AI by insurers or payers must not prioritize cost reduction over patient health outcomes or override licensed medical judgment|MISSING
-```
-
-### Excerpt 956
-
-```
 B. Transparency in decisions
-```
-
-### Excerpt 957
-
-```
 HLT-AI-010|HLT|AI|Patients and providers must have access to explanations and appeal processes for AI-influenced coverage decisions|MISSING
-```
-
-### Excerpt 958
-
-```
 6. Patient Rights & Autonomy
-```
-
-### Excerpt 959
-
-```
 HLT-AI-011|HLT|AI|Patients have the right to receive care from qualified human providers and may not be forced into AI-only care pathways|MISSING
-```
-
-### Excerpt 960
-
-```
 B. Informed consent
-```
-
-### Excerpt 961
-
-```
 HLT-AI-012|HLT|AI|Patients must be informed when AI systems are used in their care and must be able to opt out where feasible|MISSING
-```
-
-### Excerpt 962
-
-```
 7. Data & Privacy
-```
-
-### Excerpt 963
-
-```
 A. Healthcare data protection
-```
-
-### Excerpt 964
-
-```
 HLT-AI-013|HLT|AI|Healthcare data used by AI systems must be treated as highly sensitive with strict protections against misuse or unauthorized access|MISSING
-```
-
-### Excerpt 965
-
-```
 B. Ban secondary use
-```
-
-### Excerpt 966
-
-```
 HLT-AI-014|HLT|AI|Healthcare data may not be used for advertising profiling or unrelated commercial purposes|MISSING
-```
-
-### Excerpt 967
-
-```
 C. Training data standards
-```
-
-### Excerpt 968
-
-```
 HLT-AI-015|HLT|AI|Training data for healthcare AI must meet strict ethical legal and consent standards including safeguards against re-identification|MISSING
-```
-
-### Excerpt 969
-
-```
 8. Safety & Failure Modes
-```
-
-### Excerpt 970
-
-```
 A. Fail-safe requirement
-```
-
-### Excerpt 971
-
-```
 HLT-AI-016|HLT|AI|Healthcare AI systems must fail safely and defer to human providers when uncertain or operating outside validated scope|MISSING
-```
-
-### Excerpt 972
-
-```
 B. No false certainty
-```
-
-### Excerpt 973
-
-```
 HLT-AI-017|HLT|AI|AI systems may not present outputs with unwarranted certainty in clinical contexts where uncertainty materially affects outcomes|MISSING
-```
-
-### Excerpt 974
-
-```
 9. Bias & Equity
-```
-
-### Excerpt 975
-
-```
 A. Anti-bias requirement
-```
-
-### Excerpt 976
-
-```
 HLT-AI-018|HLT|AI|Healthcare AI systems must be evaluated and mitigated for bias across race gender socioeconomic status and other protected characteristics|MISSING
-```
-
-### Excerpt 977
-
-```
 B. Equal access
-```
-
-### Excerpt 978
-
-```
 HLT-AI-019|HLT|AI|AI deployment must not worsen disparities in healthcare access or outcomes|MISSING
-```
-
-### Excerpt 979
-
-```
 10. Research & Drug Development
-```
-
-### Excerpt 980
-
-```
 👉 Employment / workplace next
-```
-
-### Excerpt 981
-
-```
 Replace HLT-AI-007 with a stricter version (no AI-driven denial, period)
-```
-
-### Excerpt 982
-
-```
 Generalize language to “coverage decision-making entities” so it works for:
-```
-
-### Excerpt 983
-
-```
 insurers (current system)
-```
-
-### Excerpt 984
-
-```
 government (future single-payer)
-```
-
-### Excerpt 985
-
-```
 Add a reusable cross-domain rule so this can extend to other insurance types later
-```
-
-### Excerpt 986
-
-```
 🔧 REWRITE — HLT-AI-007 (STRONG VERSION)
-```
-
-### Excerpt 987
-
-```
 ❌ Old problem:
-```
-
-### Excerpt 988
-
-```
 Allowed AI to deny care as long as there was appeal
-```
-
-### Excerpt 989
-
-```
 Human review could be superficial
-```
-
-### Excerpt 990
-
-```
 ✅ New rule (hard constraint)
-```
-
-### Excerpt 991
-
-```
 HLT-AI-007|HLT|AI|AI systems may not be used to deny restrict or limit medically necessary care; any decision that would result in denial must be made directly and independently by a qualified human reviewer|UPDATED
-```
-
-### Excerpt 992
-
-```
 🔒 ADD REQUIRED ENFORCEMENT RULES
-```
-
-### Excerpt 993
-
-```
 1. No “rubber-stamping” AI
-```
-
-### Excerpt 994
-
-```
 HLT-AI-007A|HLT|AI|Human reviewers must exercise independent clinical judgment and may not rely solely on AI-generated recommendations when making decisions that affect access to care|MISSING
-```
-
-### Excerpt 995
-
-```
 2. AI may assist approvals, not denials
-```
-
-### Excerpt 996
-
-```
 HLT-AI-007B|HLT|AI|AI systems may be used to assist or expedite approval of care but may not be used as the primary basis for denial restriction or reduction of care|MISSING
-```
-
-### Excerpt 997
-
-```
 3. Pre-decision human requirement (not just appeal)
-```
-
-### Excerpt 998
-
-```
 HLT-AI-007C|HLT|AI|Human review must occur prior to any denial decision and may not be deferred to post-decision appeal processes|MISSING
-```
-
-### Excerpt 999
-
-```
 🧠 GENERALIZE LANGUAGE (IMPORTANT STRUCTURAL SHIFT)
-```
-
-### Excerpt 1000
-
-```
 ECO-INS-001|ECO|INS|AI systems may not be used to deny restrict or reduce insurance coverage or claims without direct independent human review and accountability|MISSING
-```
-
-### Excerpt 1001
-
-```
 And enforcement companion:
-```
-
-### Excerpt 1002
-
-```
 ECO-INS-002|ECO|INS|Human reviewers in insurance decisions must exercise independent judgment and may not rely solely on AI-generated recommendations|MISSING
-```
-
-### Excerpt 1003
-
-```
 single-payer direction
-```
-
-### Excerpt 1004
-
-```
 healthcare as a right
-```
-
-### Excerpt 1005
-
-```
 anti-extraction framework
-```
-
-### Excerpt 1006
-
-```
 Replaces (not duplicates) HLT-AI-007
-```
-
-### Excerpt 1007
-
-```
 Strengthens HLT-AI-009
-```
-
-### Excerpt 1008
-
-```
 Adds new enforcement rules
-```
-
-### Excerpt 1009
-
-```
 Introduces new insurance domain (ECO-INS)
-```
-
-### Excerpt 1010
-
-```
 📊 NET CHANGES
-```
-
-### Excerpt 1011
-
-```
 Updated:
-```
-
-### Excerpt 1012
-
-```
 HLT-AI-007
-```
-
-### Excerpt 1013
-
-```
 HLT-AI-009
-```
-
-### Excerpt 1014
-
-```
 New:
-```
-
-### Excerpt 1015
-
-```
 HLT-AI-007A
-```
-
-### Excerpt 1016
-
-```
 HLT-AI-007B
-```
-
-### Excerpt 1017
-
-```
 HLT-AI-007C
-```
-
-### Excerpt 1018
-
-```
 ECO-INS-001
-```
-
-### Excerpt 1019
-
-```
 ECO-INS-002
-```
-
-### Excerpt 1020
-
-```
 🧠 My take
-```
-
-### Excerpt 1021
-
-```
 Yes—this belongs in the record now, and you’re right that it should be revisited after we finish AI.
-```
-
-### Excerpt 1022
-
-```
 Add these now
-```
-
-### Excerpt 1023
-
-```
 HLT-COV-005|HLT|COV|Establish tighter overall rules limiting denial of healthcare coverage or service|MISSING
-```
-
-### Excerpt 1024
-
-```
 HLT-COV-006|HLT|COV|Until universal healthcare is implemented overhaul health insurance to reduce denials delays and gaps in coverage|MISSING
-```
-
-### Excerpt 1025
-
-```
 HLT-COV-007|HLT|COV|Require faster timelines for healthcare coverage decisions and prior authorization determinations|MISSING
-```
-
-### Excerpt 1026
-
-```
 HLT-COV-008|HLT|COV|Require expedited appeal processes for denials of healthcare coverage or service|MISSING
-```
-
-### Excerpt 1027
-
-```
 HLT-COV-009|HLT|COV|Increase required coverage of medicines procedures and medically necessary treatments|MISSING
-```
-
-### Excerpt 1028
-
-```
 HLT-COV-010|HLT|COV|Protect and strengthen bans on denial of coverage based on pre-existing conditions|MISSING
-```
-
-### Excerpt 1029
-
-```
 HLT-COV-011|HLT|COV|Expand required coverage for conditions that are often under-covered including obesity|MISSING
-```
-
-### Excerpt 1030
-
-```
 HLT-COV-012|HLT|COV|Require coverage of mental healthcare including talk therapy|MISSING
-```
-
-### Excerpt 1031
-
-```
 HLT-COV-013|HLT|COV|Require coverage of psychedelic therapy where medically appropriate and supported by evidence and law|MISSING
-```
-
-### Excerpt 1032
-
-```
 HLT-COV-014|HLT|COV|Require health plans to provide nationwide in-network care rather than only regional networks|MISSING
-```
-
-### Excerpt 1033
-
-```
 HLT-COV-015|HLT|COV|Expand HSA-style health spending cards or equivalent healthcare spending access tools to everyone rather than limiting them to high-deductible plans|MISSING
-```
-
-### Excerpt 1034
-
-```
 HLT-COV-016|HLT|COV|Ban employers from offering only high-deductible health insurance plans|MISSING
-```
-
-### Excerpt 1035
-
-```
 HLT-COV-017|HLT|COV|Require employers to pay all health insurance premiums subject to defined exceptions carveouts and subsidies for small businesses|MISSING
-```
-
-### Excerpt 1036
-
-```
 ECO-SMB-001|ECO|SMB|Provide subsidies carveouts or public support to help small businesses comply with healthcare coverage requirements|MISSING
-```
-
-### Excerpt 1037
-
-```
 Notes for later refinement
-```
-
-### Excerpt 1038
-
-```
 So the goal here is to prevent invisible coercion + economic harm while still allowing legitimate operational use.
-```
-
-### Excerpt 1039
-
-```
 doctrine → prohibitions → controlled uses → rights → enforcement → dedupe
-```
-
-### Excerpt 1040
-
-```
 🧑‍💼 AI + EMPLOYMENT / WORKPLACE — STRUCTURED FRAMEWORK
-```
-
-### Excerpt 1041
-
-```
 1. Core Principle
-```
-
-### Excerpt 1042
-
-```
 TEC-LAB-001|TEC|LAB|AI systems in employment must not undermine worker rights dignity privacy or fair access to economic opportunity|MISSING
-```
-
-### Excerpt 1043
-
-```
 🚫 2. Hiring & Employment Decisions
-```
-
-### Excerpt 1044
-
-```
 A. No fully automated hiring decisions
-```
-
-### Excerpt 1045
-
-```
 TEC-LAB-002|TEC|LAB|AI systems may not make fully automated hiring firing promotion or compensation decisions without meaningful human review and accountability|MISSING
-```
-
-### Excerpt 1046
-
-```
 B. No opaque candidate filtering
-```
-
-### Excerpt 1047
-
-```
 TEC-LAB-003|TEC|LAB|AI systems may not be used to filter or rank job candidates using opaque or unexplainable criteria that materially affect employment opportunities|MISSING
-```
-
-### Excerpt 1048
-
-```
 C. Anti-discrimination enforcement
-```
-
-### Excerpt 1049
-
-```
 TEC-LAB-004|TEC|LAB|AI systems used in employment must be evaluated and mitigated for bias and may not result in discrimination based on protected characteristics or their proxies|MISSING
-```
-
-### Excerpt 1050
-
-```
 D. Right to explanation
-```
-
-### Excerpt 1051
-
-```
 TEC-LAB-005|TEC|LAB|Applicants and employees have the right to receive meaningful explanations of AI-influenced employment decisions|MISSING
-```
-
-### Excerpt 1052
-
-```
 🚫 3. Workplace Surveillance & Monitoring
-```
-
-### Excerpt 1053
-
-```
 A. Ban intrusive surveillance
-```
-
-### Excerpt 1054
-
-```
 TEC-LAB-006|TEC|LAB|Ban use of AI systems for continuous intrusive monitoring of workers including biometric tracking keystroke logging and real-time behavioral surveillance except where strictly necessary and proportionate|MISSING
-```
-
-### Excerpt 1055
-
-```
 B. Ban emotion / mood tracking
-```
-
-### Excerpt 1056
-
-```
 TEC-LAB-007|TEC|LAB|Ban use of AI systems to infer or monitor worker emotions mood engagement or psychological state for employment decisions|MISSING
-```
-
-### Excerpt 1057
-
-```
 C. Ban off-duty surveillance
-```
-
-### Excerpt 1058
-
-```
 TEC-LAB-008|TEC|LAB|Employers may not use AI systems to monitor or infer worker behavior outside of working hours|MISSING
-```
-
-### Excerpt 1059
-
-```
 ⚖️ 4. Performance Management & Discipline
-```
-
-### Excerpt 1060
-
-```
 A. No AI-only discipline
-```
-
-### Excerpt 1061
-
-```
 TEC-LAB-009|TEC|LAB|AI systems may not be used as the sole basis for disciplinary actions termination or compensation changes|MISSING
-```
-
-### Excerpt 1062
-
-```
 B. No productivity scoring without transparency
-```
-
-### Excerpt 1063
-
-```
 TEC-LAB-010|TEC|LAB|AI-generated productivity or performance scores must be transparent auditable and may not be used without human review|MISSING
-```
-
-### Excerpt 1064
-
-```
 C. Ban coercive optimization systems
-```
-
-### Excerpt 1065
-
-```
 TEC-LAB-011|TEC|LAB|AI systems may not be used to coerce workers into unsafe unreasonable or exploitative productivity targets|MISSING
-```
-
-### Excerpt 1066
-
-```
 🧠 5. Worker Autonomy & Dignity
-```
-
-### Excerpt 1067
-
-```
 A. Right to refuse harmful systems
-```
-
-### Excerpt 1068
-
-```
 TEC-LAB-012|TEC|LAB|Workers must have the right to refuse use of AI systems that materially harm their dignity privacy or safety without retaliation|MISSING
-```
-
-### Excerpt 1069
-
-```
 B. Right to human interaction
-```
-
-### Excerpt 1070
-
-```
 TEC-LAB-013|TEC|LAB|Workers must have access to human managers or decision-makers for matters affecting employment status discipline or working conditions|MISSING
-```
-
-### Excerpt 1071
-
-```
 🔍 6. Data & Privacy
-```
-
-### Excerpt 1072
-
-```
 A. Limit data collection
-```
-
-### Excerpt 1073
-
-```
 TEC-LAB-014|TEC|LAB|AI systems may only collect worker data that is strictly necessary for legitimate business purposes|MISSING
-```
-
-### Excerpt 1074
-
-```
 TEC-LAB-015|TEC|LAB|Worker data collected through AI systems may not be sold shared or used for unrelated purposes|MISSING
-```
-
-### Excerpt 1075
-
-```
 C. Data access rights
-```
-
-### Excerpt 1076
-
-```
 TEC-LAB-016|TEC|LAB|Workers have the right to access review and correct data collected about them by AI systems|MISSING
-```
-
-### Excerpt 1077
-
-```
 🏛️ 7. Transparency & Governance
-```
-
-### Excerpt 1078
-
-```
 A. Disclosure requirement
-```
-
-### Excerpt 1079
-
-```
 TEC-LAB-017|TEC|LAB|Employers must disclose use of AI systems in hiring monitoring evaluation and decision-making processes|MISSING
-```
-
-### Excerpt 1080
-
-```
 B. Audit requirement
-```
-
-### Excerpt 1081
-
-```
 TEC-LAB-018|TEC|LAB|AI systems used in employment must be subject to regular independent audits for bias fairness and compliance|MISSING
-```
-
-### Excerpt 1082
-
-```
 C. Documentation
-```
-
-### Excerpt 1083
-
-```
 TEC-LAB-019|TEC|LAB|Employers must maintain documentation of AI system design purpose data sources and decision logic sufficient for oversight and accountability|MISSING
-```
-
-### Excerpt 1084
-
-```
 ⚠️ 8. High-Risk Use Cases (explicit bans)
-```
-
-### Excerpt 1085
-
-```
 A. Ban predictive “employee risk” scoring
-```
-
-### Excerpt 1086
-
-```
 TEC-LAB-020|TEC|LAB|Ban AI systems that assign risk scores predicting employee behavior such as likelihood of quitting unionizing or engaging in protected activity|MISSING
-```
-
-### Excerpt 1087
-
-```
 B. Ban union suppression tools
-```
-
-### Excerpt 1088
-
-```
 TEC-LAB-021|TEC|LAB|Ban use of AI systems to identify monitor or suppress union activity collective bargaining or labor organizing|MISSING
-```
-
-### Excerpt 1089
-
-```
 C. Ban automated personality profiling for hiring
-```
-
-### Excerpt 1090
-
-```
 TEC-LAB-022|TEC|LAB|Ban use of AI systems that infer personality traits or psychological characteristics for hiring decisions without strong scientific validation and safeguards|MISSING
-```
-
-### Excerpt 1091
-
-```
 🔄 9. Worker Participation (important and often missing)
-```
-
-### Excerpt 1092
-
-```
 A. Worker involvement
-```
-
-### Excerpt 1093
-
-```
 TEC-LAB-023|TEC|LAB|Workers or their representatives must have a role in reviewing and approving deployment of high-impact AI systems in the workplace|MISSING
-```
-
-### Excerpt 1094
-
-```
 B. Collective bargaining integration
-```
-
-### Excerpt 1095
-
-```
 TEC-LAB-024|TEC|LAB|Use of AI systems affecting working conditions must be subject to collective bargaining where applicable|MISSING
-```
-
-### Excerpt 1096
-
-```
 Overlaps:
-```
-
-### Excerpt 1097
-
-```
 LAB-* (general labor rights)
-```
-
-### Excerpt 1098
-
-```
 RGT-PRV-* (privacy)
-```
-
-### Excerpt 1099
-
-```
 TEC-SUR-* (surveillance)
-```
-
-### Excerpt 1100
-
-```
 HLT-MHC-* (mental health concerns)
-```
-
-### Excerpt 1101
-
-```
 Result:
-```
-
-### Excerpt 1102
-
-```
 👉 AI + Government / Benefits next
-```
-
-### Excerpt 1103
-
-```
 This is a critical area because here AI can quietly become:
-```
-
-### Excerpt 1104
-
-```
 No black-box government
-```
-
-### Excerpt 1105
-
-```
 No automated denial of rights or benefits
-```
-
-### Excerpt 1106
-
-```
 Human accountability before harm
-```
-
-### Excerpt 1107
-
-```
 Transparency, appeal, and auditability
-```
-
-### Excerpt 1108
-
-```
 No AI profiling of the public
-```
-
-### Excerpt 1109
-
-```
 TEC-GOV-001|TEC|GOV|AI systems used by government or public-service entities must not undermine due process equal protection transparency accountability or access to rights and services|MISSING
-```
-
-### Excerpt 1110
-
-```
 2. Benefits / Eligibility / Access Decisions
-```
-
-### Excerpt 1111
-
-```
 A. No fully automated denial of benefits or services
-```
-
-### Excerpt 1112
-
-```
 TEC-GOV-002|TEC|GOV|AI systems may not independently deny terminate reduce or suspend access to public benefits services or legal status determinations|MISSING
-```
-
-### Excerpt 1113
-
-```
 B. Human review must happen before harm, not only on appeal
-```
-
-### Excerpt 1114
-
-```
 TEC-GOV-003|TEC|GOV|Any decision that would deny reduce terminate or delay benefits services or rights must be made directly and independently by a qualified human decision-maker before harm occurs|MISSING
-```
-
-### Excerpt 1115
-
-```
 C. No rubber-stamping
-```
-
-### Excerpt 1116
-
-```
 TEC-GOV-004|TEC|GOV|Human reviewers may not rely solely on AI-generated recommendations when making public-service or benefits decisions and must exercise independent judgment|MISSING
-```
-
-### Excerpt 1117
-
-```
 D. AI may assist approvals, not denials
-```
-
-### Excerpt 1118
-
-```
 TEC-GOV-005|TEC|GOV|AI systems may be used to help identify likely eligibility or expedite approvals but may not be used as the primary basis for denial reduction or termination of benefits or services|MISSING
-```
-
-### Excerpt 1119
-
-```
 3. Due Process / Appeals / Explanations
-```
-
-### Excerpt 1120
-
-```
 A. Right to explanation
-```
-
-### Excerpt 1121
-
-```
 TEC-GOV-006|TEC|GOV|Individuals have the right to a meaningful explanation of any AI-influenced government decision affecting benefits services legal status or access to rights|MISSING
-```
-
-### Excerpt 1122
-
-```
 B. Right to appeal to a human
-```
-
-### Excerpt 1123
-
-```
 TEC-GOV-007|TEC|GOV|Individuals must have a timely accessible appeal process before a human decision-maker for any materially adverse AI-influenced government decision|MISSING
-```
-
-### Excerpt 1124
-
-```
 C. Notice requirement
-```
-
-### Excerpt 1125
-
-```
 TEC-GOV-008|TEC|GOV|Government agencies must clearly disclose when AI systems materially influence decisions affecting the public|MISSING
-```
-
-### Excerpt 1126
-
-```
 4. Anti-Profiling / Anti-Suspicion Systems
-```
-
-### Excerpt 1127
-
-```
 A. Ban public risk scoring
-```
-
-### Excerpt 1128
-
-```
 TEC-GOV-009|TEC|GOV|Government may not use AI systems to assign generalized risk trustworthiness fraud or compliance scores to individuals for access to public services or rights|MISSING
-```
-
-### Excerpt 1129
-
-```
 B. Ban proxy-based discrimination
-```
-
-### Excerpt 1130
-
-```
 TEC-GOV-010|TEC|GOV|Government AI systems may not use protected characteristics or their proxies to infer eligibility suspicion dangerousness or worthiness|MISSING
-```
-
-### Excerpt 1131
-
-```
 C. Ban behavioral compliance scoring
-```
-
-### Excerpt 1132
-
-```
 TEC-GOV-011|TEC|GOV|Government may not use AI systems to monitor or score behavioral conformity ideological alignment or social desirability as a condition of access to services or benefits|MISSING
-```
-
-### Excerpt 1133
-
-```
 5. Public-Facing Service Systems
-```
-
-### Excerpt 1134
-
-```
 A. Right to human access
-```
-
-### Excerpt 1135
-
-```
 TEC-GOV-012|TEC|GOV|People must retain access to human government representatives for matters involving benefits legal status healthcare housing education or essential public services|MISSING
-```
-
-### Excerpt 1136
-
-```
 B. No AI-only bureaucracy
-```
-
-### Excerpt 1137
-
-```
 TEC-GOV-013|TEC|GOV|Government may not force individuals into AI-only service channels where lack of human access would impair fairness comprehension or ability to contest decisions|MISSING
-```
-
-### Excerpt 1138
-
-```
 C. Accessibility protections
-```
-
-### Excerpt 1139
-
-```
 TEC-GOV-014|TEC|GOV|AI-enabled public services must be accessible to disabled low-income elderly and limited-English-proficiency users and may not create new access barriers|MISSING
-```
-
-### Excerpt 1140
-
-```
 6. Welfare / Disability / Social Insurance
-```
-
-### Excerpt 1141
-
-```
 HLT-AI-007* and your anti-denial healthcare rules
-```
-
-### Excerpt 1142
-
-```
 TEC-SUR-*
-```
-
-### Excerpt 1143
-
-```
 TEC-IMM-*
-```
-
-### Excerpt 1144
-
-```
 welfare and rights items already in your healthcare/economic pillars
-```
-
-### Excerpt 1145
-
-```
 Go straight to AI + Environment next while the AI framework is still active in your head.
-```
-
-### Excerpt 1146
-
-```
 👉 AI becomes the de facto gatekeeper
-```
-
-### Excerpt 1147
-
-```
 👉 Humans become “denial validators”
-```
-
-### Excerpt 1148
-
-```
 👉 Unapproved = implicitly suspect
-```
-
-### Excerpt 1149
-
-```
 ✅ Add These Safeguards
-```
-
-### Excerpt 1150
-
-```
 1. No negative inference from AI outputs
-```
-
-### Excerpt 1151
-
-```
 HLT-AI-007D|HLT|AI|Absence of AI approval or recommendation may not be used as evidence justification or implicit basis for denial restriction or limitation of care|MISSING
-```
-
-### Excerpt 1152
-
-```
 2. Independent review requirement (stronger framing)
-```
-
-### Excerpt 1153
-
-```
 HLT-AI-007E|HLT|AI|All denial decisions must be based on independent clinical evaluation and evidence and may not rely on absence of AI support or AI-generated prioritization|MISSING
-```
-
-### Excerpt 1154
-
-```
 3. Symmetry requirement (this is important)
-```
-
-### Excerpt 1155
-
-```
 energy use explodes (data centers, training runs)
-```
-
-### Excerpt 1156
-
-```
 water usage becomes significant
-```
-
-### Excerpt 1157
-
-```
 supply chains (rare earths, chips) expand
-```
-
-### Excerpt 1158
-
-```
 e-waste increases
-```
-
-### Excerpt 1159
-
-```
 and optimization systems can either help or harm at scale
-```
-
-### Excerpt 1160
-
-```
 core doctrine
-```
-
-### Excerpt 1161
-
-```
 infrastructure impact (data centers, compute)
-```
-
-### Excerpt 1162
-
-```
 resource use (energy, water, materials)
-```
-
-### Excerpt 1163
-
-```
 corporate accountability
-```
-
-### Excerpt 1164
-
-```
 AI used on the environment (optimization, modeling)
-```
-
-### Excerpt 1165
-
-```
 anti-greenwashing safeguards
-```
-
-### Excerpt 1166
-
-```
 integration with your existing infra/energy rules
-```
-
-### Excerpt 1167
-
-```
 TEC-ENV-001|TEC|ENV|AI systems and infrastructure must not externalize environmental costs and must operate within sustainable limits for energy water materials and ecological impact|MISSING
-```
-
-### Excerpt 1168
-
-```
 2. Data Centers & Compute Infrastructure
-```
-
-### Excerpt 1169
-
-```
 A. Water disclosure
-```
-
-### Excerpt 1170
-
-```
 TEC-ENV-005|TEC|ENV|AI infrastructure operators must disclose water usage including cooling consumption and local environmental impact|MISSING
-```
-
-### Excerpt 1171
-
-```
 B. Water impact limits
-```
-
-### Excerpt 1172
-
-```
 TEC-ENV-006|TEC|ENV|AI systems must not disproportionately strain local water resources particularly in drought-prone or vulnerable regions|MISSING
-```
-
-### Excerpt 1173
-
-```
 4. Materials & Supply Chain
-```
-
-### Excerpt 1174
-
-```
 A. Responsible sourcing
-```
-
-### Excerpt 1175
-
-```
 TEC-ENV-007|TEC|ENV|Materials used in AI hardware including rare earth elements must be sourced under strict environmental and labor standards|MISSING
-```
-
-### Excerpt 1176
-
-```
 B. Lifecycle responsibility
-```
-
-### Excerpt 1177
-
-```
 TEC-ENV-008|TEC|ENV|AI hardware producers must be responsible for full lifecycle impacts including manufacturing durability and end-of-life disposal|MISSING
-```
-
-### Excerpt 1178
-
-```
 5. E-Waste & Hardware Durability
-```
-
-### Excerpt 1179
-
-```
 A. Anti-disposability
-```
-
-### Excerpt 1180
-
-```
 TEC-ENV-009|TEC|ENV|AI-related hardware must meet durability repairability and reuse standards to reduce electronic waste|MISSING
-```
-
-### Excerpt 1181
-
-```
 B. Recycling requirements
-```
-
-### Excerpt 1182
-
-```
 TEC-ENV-010|TEC|ENV|Operators must implement responsible recycling and disposal programs for AI hardware and infrastructure components|MISSING
-```
-
-### Excerpt 1183
-
-```
 6. Corporate Accountability
-```
-
-### Excerpt 1184
-
-```
 A. Internalize environmental costs
-```
-
-### Excerpt 1185
-
-```
 TEC-ENV-011|TEC|ENV|Companies developing or deploying AI systems must internalize environmental costs rather than shifting them to the public or ecosystems|MISSING
-```
-
-### Excerpt 1186
-
-```
 B. Environmental impact assessments
-```
-
-### Excerpt 1187
-
-```
 TEC-ENV-012|TEC|ENV|Large-scale AI deployments must undergo environmental impact assessments prior to construction or expansion|MISSING
-```
-
-### Excerpt 1188
-
-```
 7. AI Used FOR Environmental Systems (positive use)
-```
-
-### Excerpt 1189
-
-```
 👉 Do AI + Education next, then you’ve covered nearly all major civilian domains.
-```
-
-### Excerpt 1190
-
-```
 TEC-ENV-016 and 017 already cover AI-specific anti-greenwashing.
-```
-
-### Excerpt 1191
-
-```
 Your new point should become a general environmental / corporate rule, not a replacement.
-```
-
-### Excerpt 1192
-
-```
 INF-GRD-*, INF-ENR-*, and INF-NET-* already cover grid modernization, renewable investment, and infrastructure themes.
-```
-
-### Excerpt 1193
-
-```
 Your new items are more specific and should sit beside them.
-```
-
-### Excerpt 1194
-
-```
 New items to capture
-```
-
-### Excerpt 1195
-
-```
 Data centers / environmental nuisance
-```
-
-### Excerpt 1196
-
-```
 TEC-ENV-021|TEC|ENV|Establish standards for noise pollution from AI data centers and other large data centers including monitoring mitigation and local community protections|MISSING
-```
-
-### Excerpt 1197
-
-```
 General environment: noise and light pollution
-```
-
-### Excerpt 1198
-
-```
 ENV-POL-001|ENV|POL|Establish stronger national standards to reduce and monitor noise pollution|MISSING
-```
-
-### Excerpt 1199
-
-```
 ENV-POL-002|ENV|POL|Establish stronger national standards to reduce and monitor light pollution|MISSING
-```
-
-### Excerpt 1200
-
-```
 Space / orbital environment / scientific protection
-```
-
-### Excerpt 1201
-
-```
 ENV-SPC-001|ENV|SPC|Establish rules for orbital sanitation and removal or mitigation of space junk|MISSING
-```
-
-### Excerpt 1202
-
-```
 ENV-SPC-002|ENV|SPC|Require stronger regulation of private satellite deployment to prevent interference with scientific research astronomy and observation|MISSING
-```
-
-### Excerpt 1203
-
-```
 ENV-SPC-003|ENV|SPC|Private satellite systems must meet environmental scientific and orbital-safety standards before approval and expansion|MISSING
-```
-
-### Excerpt 1204
-
-```
 Wildlife migration / habitat continuity
-```
-
-### Excerpt 1205
-
-```
 ENV-BIO-001|ENV|BIO|Protect and restore migratory patterns for animals through infrastructure and land-use planning|MISSING
-```
-
-### Excerpt 1206
-
-```
 ENV-BIO-002|ENV|BIO|Require wildlife crossings including bridges tunnels and related infrastructure where highways or railways disrupt migration routes and habitat continuity|MISSING
-```
-
-### Excerpt 1207
-
-```
 Rail modernization / public transportation
-```
-
-### Excerpt 1208
-
-```
 INF-RAIL-001|INF|RAIL|Modernize the U.S. rail system|MISSING
-```
-
-### Excerpt 1209
-
-```
 INF-RAIL-002|INF|RAIL|Expand high-speed rail|MISSING
-```
-
-### Excerpt 1210
-
-```
 INF-TRN-001|INF|TRN|Expand public transportation systems|MISSING
-```
-
-### Excerpt 1211
-
-```
 INF-TRN-002|INF|TRN|Prioritize reliable affordable and accessible public transportation in infrastructure planning|MISSING
-```
-
-### Excerpt 1212
-
-```
 Fossil fuel phaseout / energy transition
-```
-
-### Excerpt 1213
-
-```
 INF-ENR-004|INF|ENR|End oil and coal subsidies|MISSING
-```
-
-### Excerpt 1214
-
-```
 INF-ENR-005|INF|ENR|Guarantee phaseout of oil and coal for energy production|MISSING
-```
-
-### Excerpt 1215
-
-```
 INF-GRD-003|INF|GRD|Require a carbon-neutral or carbon-negative power grid|MISSING
-```
-
-### Excerpt 1216
-
-```
 INF-BLD-002|INF|BLD|Require infrastructure systems and buildouts to be carbon neutral or carbon negative|MISSING
-```
-
-### Excerpt 1217
-
-```
 Vehicles / transportation transition
-```
-
-### Excerpt 1218
-
-```
 INF-TRN-003|INF|TRN|Phase out gasoline-only and internal-combustion-only passenger vehicles|MISSING
-```
-
-### Excerpt 1219
-
-```
 INF-TRN-004|INF|TRN|Require at minimum plug-in hybrid capability during transition periods where full electrification is not yet feasible|MISSING
-```
-
-### Excerpt 1220
-
-```
 INF-TRN-005|INF|TRN|Establish extremely strict fuel-efficiency standards during transition away from internal combustion vehicles|MISSING
-```
-
-### Excerpt 1221
-
-```
 General anti-greenwashing (not AI-specific)
-```
-
-### Excerpt 1222
-
-```
 ENV-COR-001|ENV|COR|Establish general anti-greenwashing standards prohibiting false misleading or selectively incomplete environmental claims by companies organizations or public entities|MISSING
-```
-
-### Excerpt 1223
-
-```
 ENV-COR-002|ENV|COR|Require standardized verifiable environmental reporting to support anti-greenwashing enforcement across industries|MISSING
-```
-
-### Excerpt 1224
-
-```
 Recommended schema addition
-```
-
-### Excerpt 1225
-
-```
 Add domain
-```
-
-### Excerpt 1226
-
-```
 ENV = Environment / Climate / Ecology / Space environment
-```
-
-### Excerpt 1227
-
-```
 Useful subdomains
-```
-
-### Excerpt 1228
-
-```
 POL = pollution
-```
-
-### Excerpt 1229
-
-```
 SPC = space / orbital environment
-```
-
-### Excerpt 1230
-
-```
 BIO = biodiversity / wildlife / habitat continuity
-```
-
-### Excerpt 1231
-
-```
 COR = corporate environmental accountability
-```
-
-### Excerpt 1232
-
-```
 TEC-EDU-001|TEC|EDU|AI systems in education must enhance learning without replacing human instruction critical thinking or equitable access to education|MISSING
-```
-
-### Excerpt 1233
-
-```
 2. Non-Replacement of Educators
-```
-
-### Excerpt 1234
-
-```
 A. No AI-only instruction
-```
-
-### Excerpt 1235
-
-```
 TEC-EDU-002|TEC|EDU|AI systems may not replace human educators in primary secondary or higher education contexts where direct instruction is required|MISSING
-```
-
-### Excerpt 1236
-
-```
 B. AI as assistive tool only
-```
-
-### Excerpt 1237
-
-```
 TEC-EDU-003|TEC|EDU|AI systems may be used to support educators and students but may not substitute for qualified teaching or mentorship|MISSING
-```
-
-### Excerpt 1238
-
-```
 3. Student Assessment & Academic Integrity
-```
-
-### Excerpt 1239
-
-```
 A. No fully automated grading for high-stakes outcomes
-```
-
-### Excerpt 1240
-
-```
 TEC-EDU-004|TEC|EDU|AI systems may not be the sole basis for grading or evaluation in high-stakes academic decisions including advancement certification or disciplinary action|MISSING
-```
-
-### Excerpt 1241
-
-```
 B. Right to human review
-```
-
-### Excerpt 1242
-
-```
 TEC-EDU-005|TEC|EDU|Students have the right to human review of AI-influenced grading or evaluation decisions|MISSING
-```
-
-### Excerpt 1243
-
-```
 C. Academic integrity safeguards
-```
-
-### Excerpt 1244
-
-```
 TEC-EDU-006|TEC|EDU|Educational institutions must establish clear policies on AI use that promote learning and prevent misuse without relying on unreliable detection systems|MISSING
-```
-
-### Excerpt 1245
-
-```
 4. Bias, Fairness & Equity
-```
-
-### Excerpt 1246
-
-```
 TEC-EDU-007|TEC|EDU|AI systems used in education must be evaluated for bias and must not disadvantage students based on race gender disability socioeconomic status or language background|MISSING
-```
-
-### Excerpt 1247
-
-```
 TEC-EDU-008|TEC|EDU|AI tools used in education must be accessible to all students and may not create or reinforce educational inequality|MISSING
-```
-
-### Excerpt 1248
-
-```
 5. Student Data & Privacy
-```
-
-### Excerpt 1249
-
-```
 A. Strict data limits
-```
-
-### Excerpt 1250
-
-```
 TEC-EDU-009|TEC|EDU|Student data collected by AI systems must be limited to what is necessary for educational purposes|MISSING
-```
-
-### Excerpt 1251
-
-```
 B. Ban commercialization
-```
-
-### Excerpt 1252
-
-```
 TEC-EDU-010|TEC|EDU|Student data may not be sold shared or used for advertising profiling or unrelated commercial purposes|MISSING
-```
-
-### Excerpt 1253
-
-```
 C. Protection for minors
-```
-
-### Excerpt 1254
-
-```
 TEC-EDU-011|TEC|EDU|Enhanced privacy protections are required for minors using AI systems in educational settings|MISSING
-```
-
-### Excerpt 1255
-
-```
 6. Surveillance & Monitoring in Schools
-```
-
-### Excerpt 1256
-
-```
 A. Ban invasive monitoring
-```
-
-### Excerpt 1257
-
-```
 TEC-EDU-012|TEC|EDU|Ban use of AI systems for invasive surveillance of students including continuous monitoring behavioral tracking or biometric analysis without strict justification and safeguards|MISSING
-```
-
-### Excerpt 1258
-
-```
 B. Ban emotion tracking
-```
-
-### Excerpt 1259
-
-```
 TEC-EDU-013|TEC|EDU|AI systems may not be used to infer student emotions attention or psychological state for evaluation or discipline|MISSING
-```
-
-### Excerpt 1260
-
-```
 C. No behavioral scoring systems
-```
-
-### Excerpt 1261
-
-```
 TEC-EDU-014|TEC|EDU|Educational institutions may not use AI systems to assign behavioral or compliance scores to students|MISSING
-```
-
-### Excerpt 1262
-
-```
 7. Curriculum & Information Integrity
-```
-
-### Excerpt 1263
-
-```
 A. Transparency of AI-generated content
-```
-
-### Excerpt 1264
-
-```
 TEC-EDU-015|TEC|EDU|AI-generated educational content must be clearly identified and its limitations disclosed|MISSING
-```
-
-### Excerpt 1265
-
-```
 B. No ideological manipulation
-```
-
-### Excerpt 1266
-
-```
 TEC-EDU-016|TEC|EDU|AI systems may not be used to impose ideological viewpoints or manipulate educational content without transparency and oversight|MISSING
-```
-
-### Excerpt 1267
-
-```
 C. Encourage critical thinking
-```
-
-### Excerpt 1268
-
-```
 TEC-EDU-017|TEC|EDU|Educational use of AI must support development of critical thinking rather than passive consumption of generated answers|MISSING
-```
-
-### Excerpt 1269
-
-```
 8. Accessibility & Inclusion
-```
-
-### Excerpt 1270
-
-```
 A. Assistive use encouraged
-```
-
-### Excerpt 1271
-
-```
 TEC-EDU-018|TEC|EDU|AI may be used to improve accessibility for students with disabilities including translation transcription and adaptive learning tools|MISSING
-```
-
-### Excerpt 1272
-
-```
 B. Language access
-```
-
-### Excerpt 1273
-
-```
 TEC-EDU-019|TEC|EDU|AI systems should support multilingual education and reduce language barriers without compromising accuracy or fairness|MISSING
-```
-
-### Excerpt 1274
-
-```
 9. Institutional Governance
-```
-
-### Excerpt 1275
-
-```
 TEC-EDU-020|TEC|EDU|Educational institutions must disclose use of AI systems in teaching evaluation and administration|MISSING
-```
-
-### Excerpt 1276
-
-```
 TEC-EDU-021|TEC|EDU|AI systems used in education must be subject to regular independent audits for bias accuracy and educational impact|MISSING
-```
-
-### Excerpt 1277
-
-```
 C. No vendor opacity
-```
-
-### Excerpt 1278
-
-```
 TEC-EDU-022|TEC|EDU|Vendors providing AI systems to educational institutions may not use proprietary claims to avoid oversight or accountability|MISSING
-```
-
-### Excerpt 1279
-
-```
 10. Research & Development in Education
-```
-
-### Excerpt 1280
-
-```
 A. Evidence-based deployment
-```
-
-### Excerpt 1281
-
-```
 TEC-EDU-023|TEC|EDU|AI systems must demonstrate educational benefit through evidence before widespread deployment in classrooms|MISSING
-```
-
-### Excerpt 1282
-
-```
 B. No mass experimentation on students
-```
-
-### Excerpt 1283
-
-```
 TEC-EDU-024|TEC|EDU|Students may not be used as unwitting test subjects for AI systems without informed consent and appropriate safeguards|MISSING
-```
-
-### Excerpt 1284
-
-```
 🔍 Dedupe Check
-```
-
-### Excerpt 1285
-
-```
 High priority remaining
-```
-
-### Excerpt 1286
-
-```
 AI + Finance / Credit / Insurance (very important)
-```
-
-### Excerpt 1287
-
-```
 Lower priority but useful
-```
-
-### Excerpt 1288
-
-```
 AI + Media / Journalism (some overlap already)
-```
-
-### Excerpt 1289
-
-```
 AI + Scientific research integrity
-```
-
-### Excerpt 1290
-
-```
 Recommendation
-```
-
-### Excerpt 1291
-
-```
 housing
-```
-
-### Excerpt 1292
-
-```
 loans
-```
-
-### Excerpt 1293
-
-```
 economic mobility
-```
-
-### Excerpt 1294
-
-```
 discrimination
-```
-
-### Excerpt 1295
-
-```
 your economic justice pillar
-```
-
-### Excerpt 1296
-
-```
 your anti-extraction philosophy
-```
-
-### Excerpt 1297
-
-```
 no black-box economic gatekeeping
-```
-
-### Excerpt 1298
-
-```
 no AI-only denial decisions
-```
-
-### Excerpt 1299
-
-```
 strong human review before harm
-```
-
-### Excerpt 1300
-
-```
 anti-discrimination and anti-proxy rules
-```
-
-### Excerpt 1301
-
-```
 transparency, appeal, and auditability
-```
-
-### Excerpt 1302
-
-```
 limits on behavioral scoring and surveillance-based finance
-```
-
-### Excerpt 1303
-
-```
 💳 AI + FINANCE / CREDIT / INSURANCE — STRUCTURED FRAMEWORK
-```
-
-### Excerpt 1304
-
-```
 TEC-FIN-001|TEC|FIN|AI systems in finance credit and insurance must not undermine fairness transparency equal access or protection from discrimination in essential economic systems|MISSING
-```
-
-### Excerpt 1305
-
-```
 2. Credit, Loans, and Lending
-```
-
-### Excerpt 1306
-
-```
 A. No fully automated denial of credit
-```
-
-### Excerpt 1307
-
-```
 TEC-FIN-002|TEC|FIN|AI systems may not independently deny credit loans mortgages refinancing or other essential financial services without direct human review and accountability|MISSING
-```
-
-### Excerpt 1308
-
-```
 B. Human review before harm
-```
-
-### Excerpt 1309
-
-```
 TEC-FIN-003|TEC|FIN|Any decision that would deny restrict or materially worsen access to credit or lending must be made directly and independently by a qualified human reviewer before harm occurs|MISSING
-```
-
-### Excerpt 1310
-
-```
 C. No opaque underwriting
-```
-
-### Excerpt 1311
-
-```
 TEC-FIN-004|TEC|FIN|AI systems used in underwriting or creditworthiness assessments may not rely on opaque or unexplainable criteria that materially affect outcomes|MISSING
-```
-
-### Excerpt 1312
-
-```
 3. Anti-Discrimination / Proxy Bias
-```
-
-### Excerpt 1313
-
-```
 A. Ban discriminatory outcomes and proxy use
-```
-
-### Excerpt 1314
-
-```
 TEC-FIN-005|TEC|FIN|AI systems in finance and insurance must not discriminate based on protected characteristics or proxies for those characteristics including zip code language behavior or network data|MISSING
-```
-
-### Excerpt 1315
-
-```
 B. Audit for disparate impact
-```
-
-### Excerpt 1316
-
-```
 TEC-FIN-006|TEC|FIN|AI systems used in lending underwriting pricing or claims decisions must be regularly audited for disparate impact and discriminatory outcomes|MISSING
-```
-
-### Excerpt 1317
-
-```
 4. Insurance Decisions
-```
-
-### Excerpt 1318
-
-```
 A. No AI-only denials of claims or coverage
-```
-
-### Excerpt 1319
-
-```
 TEC-FIN-007|TEC|FIN|AI systems may not independently deny restrict reduce or terminate insurance coverage or claims without direct and independent human review|MISSING
-```
-
-### Excerpt 1320
-
-```
 B. No rubber-stamping
-```
-
-### Excerpt 1321
-
-```
 TEC-FIN-008|TEC|FIN|Human reviewers in insurance decisions may not rely solely on AI-generated recommendations and must exercise independent judgment|MISSING
-```
-
-### Excerpt 1322
-
-```
 C. AI may assist approvals, not denials
-```
-
-### Excerpt 1323
-
-```
 TEC-FIN-009|TEC|FIN|AI systems may be used to assist or expedite approval of insurance claims or coverage but may not be used as the primary basis for denial restriction or reduction|MISSING
-```
-
-### Excerpt 1324
-
-```
 D. No negative inference
-```
-
-### Excerpt 1325
-
-```
 TEC-FIN-010|TEC|FIN|Absence of AI approval or recommendation may not be used as evidence or implicit justification for denial restriction or delay of insurance claims or coverage|MISSING
-```
-
-### Excerpt 1326
-
-```
 5. Pricing / Risk Scoring / Economic Sorting
-```
-
-### Excerpt 1327
-
-```
 A. Ban unfair behavioral scoring
-```
-
-### Excerpt 1328
-
-```
 TEC-FIN-011|TEC|FIN|AI systems may not use generalized behavioral surveillance or social scoring to determine eligibility pricing or access in finance credit or insurance|MISSING
-```
-
-### Excerpt 1329
-
-```
 B. Restrict risk scoring to lawful transparent standards
-```
-
-### Excerpt 1330
-
-```
 TEC-FIN-012|TEC|FIN|Risk scoring in finance and insurance must be based on transparent lawful and relevant factors and may not rely on opaque behavioral inference|MISSING
-```
-
-### Excerpt 1331
-
-```
 C. Ban exploitative personalized pricing
-```
-
-### Excerpt 1332
-
-```
 TEC-FIN-013|TEC|FIN|AI systems may not use individualized vulnerability profiling to impose exploitative pricing rates fees or terms|MISSING
-```
-
-### Excerpt 1333
-
-```
 6. Housing / Mortgages / Essential Access
-```
-
-### Excerpt 1334
-
-```
 A. Protect housing access
-```
-
-### Excerpt 1335
-
-```
 TEC-FIN-014|TEC|FIN|AI systems used in mortgage housing finance or rental screening must not undermine fair access to housing or reproduce historical discrimination|MISSING
-```
-
-### Excerpt 1336
-
-```
 B. No black-box tenant screening
-```
-
-### Excerpt 1337
-
-```
 TEC-FIN-015|TEC|FIN|Tenant screening and housing-related AI systems may not rely on opaque scoring or unverifiable data that materially affect housing access|MISSING
-```
-
-### Excerpt 1338
-
-```
 7. Appeals, Notice, and Explanations
-```
-
-### Excerpt 1339
-
-```
 TEC-FIN-016|TEC|FIN|People have the right to a meaningful explanation of AI-influenced financial credit or insurance decisions affecting them|MISSING
-```
-
-### Excerpt 1340
-
-```
 B. Right to human appeal
-```
-
-### Excerpt 1341
-
-```
 TEC-FIN-017|TEC|FIN|People must have access to a timely human appeal process for materially adverse AI-influenced financial credit or insurance decisions|MISSING
-```
-
-### Excerpt 1342
-
-```
 TEC-FIN-018|TEC|FIN|Entities using AI in consequential financial or insurance decisions must disclose when such systems materially influence outcomes|MISSING
-```
-
-### Excerpt 1343
-
-```
 8. Data & Privacy
-```
-
-### Excerpt 1344
-
-```
 A. Data minimization
-```
-
-### Excerpt 1345
-
-```
 TEC-FIN-019|TEC|FIN|AI systems in finance and insurance may collect only data that is strictly necessary for lawful and relevant decision-making|MISSING
-```
-
-### Excerpt 1346
-
-```
 B. Ban unrelated secondary uses
-```
-
-### Excerpt 1347
-
-```
 TEC-FIN-020|TEC|FIN|Financial and insurance data used by AI systems may not be sold shared or repurposed for unrelated commercial targeting or behavioral profiling|MISSING
-```
-
-### Excerpt 1348
-
-```
 C. Ban covert data enrichment
-```
-
-### Excerpt 1349
-
-```
 TEC-FIN-021|TEC|FIN|Entities may not secretly enrich financial or insurance profiles with third-party consumer data social graph data or surveillance-derived data without explicit lawful authority and disclosure|MISSING
-```
-
-### Excerpt 1350
-
-```
 9. Government-Adjacent Finance / Benefits Crossover
-```
-
-### Excerpt 1351
-
-```
 A. No AI denial loops across systems
-```
-
-### Excerpt 1352
-
-```
 TEC-FIN-022|TEC|FIN|AI systems may not be used to create cross-system denial loops where credit insurance housing or public-benefit decisions reinforce each other without independent review and due process|MISSING
-```
-
-### Excerpt 1353
-
-```
 10. Oversight / Vendor Accountability
-```
-
-### Excerpt 1354
-
-```
 A. Mandatory audits
-```
-
-### Excerpt 1355
-
-```
 TEC-FIN-023|TEC|FIN|AI systems used in finance credit and insurance must be subject to regular independent audits for bias fairness legality and consumer harm|MISSING
-```
-
-### Excerpt 1356
-
-```
 B. No proprietary secrecy loophole
-```
-
-### Excerpt 1357
-
-```
 TEC-FIN-024|TEC|FIN|Trade secrecy or proprietary claims may not be used to prevent meaningful oversight explanation or appeal in consequential financial or insurance AI systems|MISSING
-```
-
-### Excerpt 1358
-
-```
 C. Recordkeeping and traceability
-```
-
-### Excerpt 1359
-
-```
 TEC-FIN-025|TEC|FIN|Entities deploying consequential AI systems in finance and insurance must maintain documentation sufficient for review audit and accountability|MISSING
-```
-
-### Excerpt 1360
-
-```
 11. Consumer Protection / Predation
-```
-
-### Excerpt 1361
-
-```
 A. Ban manipulation of financially vulnerable people
-```
-
-### Excerpt 1362
-
-```
 TEC-FIN-026|TEC|FIN|AI systems may not be used to identify and exploit financially vulnerable individuals through targeted loans fees insurance terms or sales practices|MISSING
-```
-
-### Excerpt 1363
-
-```
 B. Ban deceptive AI agents in finance
-```
-
-### Excerpt 1364
-
-```
 TEC-FIN-027|TEC|FIN|AI systems in finance and insurance may not impersonate human advisors or misrepresent their authority capabilities or obligations to consumers|MISSING
-```
-
-### Excerpt 1365
-
-```
 12. Market Structure / Public Interest
-```
-
-### Excerpt 1366
-
-```
 A. Essential systems need higher rules
-```
-
-### Excerpt 1367
-
-```
 TEC-FIN-028|TEC|FIN|Where finance credit or insurance systems function as essential gateways to housing healthcare transportation or economic participation they must be governed by heightened public-interest standards|MISSING
-```
-
-### Excerpt 1368
-
-```
 B. No automated exclusion from essential life systems
-```
-
-### Excerpt 1369
-
-```
 TEC-FIN-029|TEC|FIN|AI systems must not be allowed to automatically exclude people from essential economic systems needed for basic social participation|MISSING
-```
-
-### Excerpt 1370
-
-```
 DEDUPE CHECK
-```
-
-### Excerpt 1371
-
-```
 HLT-AI-007* and your healthcare anti-denial rules
-```
-
-### Excerpt 1372
-
-```
 ECO-INS-001 and 002
-```
-
-### Excerpt 1373
-
-```
 TEC-GOV-*
-```
-
-### Excerpt 1374
-
-```
 RGT-PRV-*
-```
-
-### Excerpt 1375
-
-```
 Could still be worth doing
-```
-
-### Excerpt 1376
-
-```
 AI + media / information distribution / recommender systems in more detail
-```
-
-### Excerpt 1377
-
-```
 AI + scientific research integrity
-```
-
-### Excerpt 1378
-
-```
 AI + family / children / consumer companionship beyond mental health
-```
-
-### Excerpt 1379
-
-```
 AI + criminal courts / sentencing (partly overlaps with justice, but could be its own AI section)
-```
-
-### Excerpt 1380
-
-```
 👉 Option A first — consolidate the AI framework while it’s hot.
-```
-
-### Excerpt 1381
-
-```
 A. No negative inference / denial bias (globalized)
-```
-
-### Excerpt 1382
-
-```
 SYS-AI-001|SYS|AI|Absence of AI approval recommendation or prioritization may not be used as evidence or implicit justification for denial restriction or adverse decisions in any domain|MISSING
-```
-
-### Excerpt 1383
-
-```
 B. Independent human decision before harm
-```
-
-### Excerpt 1384
-
-```
 SYS-AI-002|SYS|AI|Any decision that materially harms access to rights opportunities services or benefits must be made directly and independently by a qualified human decision-maker prior to harm|MISSING
-```
-
-### Excerpt 1385
-
-```
 C. No “fast lane / slow lane” bias
-```
-
-### Excerpt 1386
-
-```
 SYS-AI-003|SYS|AI|AI systems may not create or reinforce structural bias where approvals are accelerated while non-prioritized cases are delayed deprioritized or more likely to be denied|MISSING
-```
-
-### Excerpt 1387
-
-```
 D. Symmetry & fairness requirement
-```
-
-### Excerpt 1388
-
-```
 SYS-AI-004|SYS|AI|AI-assisted decision systems must be designed to maintain fairness symmetry and equal consideration across all cases regardless of AI prioritization or recommendation|MISSING
-```
-
-### Excerpt 1389
-
-```
 E. Mandatory bias detection & mitigation
-```
-
-### Excerpt 1390
-
-```
 SYS-AI-005|SYS|AI|AI systems used in decision-making must include explicit mechanisms to detect measure and mitigate bias and must be used to reduce rather than reinforce existing inequities|MISSING
-```
-
-### Excerpt 1391
-
-```
 F. Human accountability cannot be displaced
-```
-
-### Excerpt 1392
-
-```
 SYS-AI-006|SYS|AI|Use of AI systems does not reduce or transfer legal ethical or professional accountability from human decision-makers|MISSING
-```
-
-### Excerpt 1393
-
-```
 G. Domain-level system rules requirement
-```
-
-### Excerpt 1394
-
-```
 SYS-AI-007|SYS|AI|Each policy domain or pillar must define its own AI system rules consistent with these overarching principles and adapted to domain-specific risks|MISSING
-```
-
-### Excerpt 1395
-
-```
 ⚖️ 2. CRIMINAL JUSTICE / JUDICIAL AI
-```
-
-### Excerpt 1396
-
-```
 A. Ban AI in sentencing decisions
-```
-
-### Excerpt 1397
-
-```
 JUS-AI-001|JUS|AI|AI systems may not be used to determine or recommend criminal sentencing outcomes including incarceration length or punitive measures|MISSING
-```
-
-### Excerpt 1398
-
-```
 B. Ban risk scoring in sentencing
-```
-
-### Excerpt 1399
-
-```
 JUS-AI-002|JUS|AI|AI risk assessment tools predicting recidivism dangerousness or likelihood of reoffense may not be used in sentencing decisions|MISSING
-```
-
-### Excerpt 1400
-
-```
 C. Allow AI for appeals & case review (your positive use)
-```
-
-### Excerpt 1401
-
-```
 JUS-AI-003|JUS|AI|AI may be used to assist in identifying wrongful convictions procedural errors and case review opportunities to accelerate appeals and justice processes|MISSING
-```
-
-### Excerpt 1402
-
-```
 D. Use AI to detect bias (explicit requirement)
-```
-
-### Excerpt 1403
-
-```
 JUS-AI-004|JUS|AI|AI systems should be used to identify and mitigate bias in charging sentencing and judicial processes under strict oversight and transparency|MISSING
-```
-
-### Excerpt 1404
-
-```
 E. No black-box evidence
-```
-
-### Excerpt 1405
-
-```
 JUS-AI-005|JUS|AI|AI-generated evidence or analysis may not be used in court unless it is transparent auditable and subject to challenge by all parties|MISSING
-```
-
-### Excerpt 1406
-
-```
 F. Right to challenge AI in court
-```
-
-### Excerpt 1407
-
-```
 JUS-AI-006|JUS|AI|Defendants must have the right to examine challenge and cross-examine any AI system or output used in legal proceedings|MISSING
-```
-
-### Excerpt 1408
-
-```
 G. Juror selection restrictions
-```
-
-### Excerpt 1409
-
-```
 JUS-AI-007|JUS|AI|AI systems may not be used to profile rank or exclude jurors based on inferred characteristics behavioral patterns or demographic proxies|MISSING
-```
-
-### Excerpt 1410
-
-```
 H. No AI-driven prosecution strategy
-```
-
-### Excerpt 1411
-
-```
 JUS-AI-008|JUS|AI|AI systems may not be used to recommend or automate prosecutorial decisions such as charging strategies plea deals or case prioritization without human accountability and oversight|MISSING
-```
-
-### Excerpt 1412
-
-```
 🧑‍⚖️ 3. COURTROOM & EVIDENTIARY SAFEGUARDS
-```
-
-### Excerpt 1413
-
-```
 JUS-AI-009|JUS|AI|All use of AI in legal proceedings must be disclosed to all parties including purpose limitations and methodology|MISSING
-```
-
-### Excerpt 1414
-
-```
 B. Reliability standard
-```
-
-### Excerpt 1415
-
-```
 JUS-AI-010|JUS|AI|AI evidence must meet strict reliability and scientific validity standards equivalent to or exceeding existing evidentiary standards|MISSING
-```
-
-### Excerpt 1416
-
-```
 C. No synthetic evidence deception
-```
-
-### Excerpt 1417
-
-```
 JUS-AI-011|JUS|AI|AI-generated media or analysis may not be used
-```
-
-### Excerpt 1418
-
-```
 I right even see your suggestion on judicial before I hit send. 🤣
-```
-
-### Excerpt 1419
-
-```
 🔧 Add System Rule: Decision Integrity & Anti-Denial Bias
-```
-
-### Excerpt 1420
-
-```
 SYS-AI-001|SYS|AI|AI-assisted decision systems must not create asymmetrical processes that accelerate approvals while increasing delay scrutiny or denial likelihood for unapproved cases|MISSING
-```
-
-### Excerpt 1421
-
-```
 🔧 Add System Rule: Independent Human Judgment
-```
-
-### Excerpt 1422
-
-```
 SYS-AI-002|SYS|AI|Any decision that materially harms restricts or denies rights opportunities or access must be made through independent human judgment and may not rely on absence of AI support|MISSING
-```
-
-### Excerpt 1423
-
-```
 🔧 Add System Rule: No Negative Inference
-```
-
-### Excerpt 1424
-
-```
 SYS-AI-003|SYS|AI|Absence of AI recommendation or prioritization may not be used as evidence or implicit justification for denial restriction or adverse outcomes|MISSING
-```
-
-### Excerpt 1425
-
-```
 🔧 Add System Rule: Queue Fairness
-```
-
-### Excerpt 1426
-
-```
 SYS-AI-004|SYS|AI|All individuals must receive equal and timely consideration in decision-making systems regardless of AI prioritization or scoring|MISSING
-```
-
-### Excerpt 1427
-
-```
 🧠 2. REQUIRED: AI FOR BIAS DETECTION (VERY IMPORTANT)
-```
-
-### Excerpt 1428
-
-```
 SYS-GOV-*
-```
-
-### Excerpt 1429
-
-```
 SYS-ECO-*
-```
-
-### Excerpt 1430
-
-```
 SYS-RGT-*
-```
-
-### Excerpt 1431
-
-```
 SYS-JUD-*
-```
-
-### Excerpt 1432
-
-```
 🧠 5. LABOR / WORK WEEK (NON-AI BUT CONNECTED)
-```
-
-### Excerpt 1433
-
-```
 domains
-```
-
-### Excerpt 1434
-
-```
 cross-domain rules
-```
-
-### Excerpt 1435
-
-```
 enforcement logic
-```
-
-### Excerpt 1436
-
-```
 philosophical consistency
-```
-
-### Excerpt 1437
-
-```
 Next best move (strong recommendation)
-```
-
-### Excerpt 1438
-
-```
 Absolutely. Justice is one of the places where gaps matter most, because small loopholes here become life-altering harms.
-```
-
-### Excerpt 1439
-
-```
 special protections
-```
-
-### Excerpt 1440
-
-```
 education in custody
-```
-
-### Excerpt 1441
-
-```
 sealing records
-```
-
-### Excerpt 1442
-
-```
 treatment over punishment
-```
-
-### Excerpt 1443
-
-```
 9. Immigration detention / due process
-```
-
-### Excerpt 1444
-
-```
 New justice items
-```
-
-### Excerpt 1445
-
-```
 Prosecution and charging
-```
-
-### Excerpt 1446
-
-```
 JUS-PRO-001|JUS|PRO|Prosecutors may not use charging decisions to coerce plea deals through disproportionate threat of punishment|MISSING
-```
-
-### Excerpt 1447
-
-```
 JUS-PRO-002|JUS|PRO|Prosecutors must disclose exculpatory evidence fully promptly and automatically|MISSING
-```
-
-### Excerpt 1448
-
-```
 JUS-PRO-003|JUS|PRO|Retaliatory or politically motivated prosecution is prohibited and subject to independent review|MISSING
-```
-
-### Excerpt 1449
-
-```
 JUS-PRO-004|JUS|PRO|Prosecutorial offices must be subject to transparency and audit standards for charging plea and dismissal patterns|MISSING
-```
-
-### Excerpt 1450
-
-```
 JUS-PRO-005|JUS|PRO|AI systems may not independently recommend charges plea terms or prosecutorial escalation without accountable human review|MISSING
-```
-
-### Excerpt 1451
-
-```
 Defense rights and process fairness
-```
-
-### Excerpt 1452
-
-```
 JUS-DEF-001|JUS|DEF|Every person facing serious criminal charges must have access to competent adequately funded legal counsel|MISSING
-```
-
-### Excerpt 1453
-
-```
 JUS-DEF-002|JUS|DEF|Public defense systems must be funded at levels sufficient to ensure parity of process with prosecution|MISSING
-```
-
-### Excerpt 1454
-
-```
 JUS-DEF-003|JUS|DEF|Defendants must have timely access to discovery evidence and expert resources needed for an effective defense|MISSING
-```
-
-### Excerpt 1455
-
-```
 JUS-DEF-004|JUS|DEF|Courts must not permit procedural delay or administrative burden to undermine the right to a fair defense|MISSING
-```
-
-### Excerpt 1456
-
-```
 JUS-DEF-005|JUS|DEF|Defendants must have the right to challenge the scientific validity and technical reliability of evidence used against them|MISSING
-```
-
-### Excerpt 1457
-
-```
 Bail and pretrial justice
-```
-
-### Excerpt 1458
-
-```
 JUS-BAL-001|JUS|BAL|End or sharply limit cash bail systems that criminalize poverty|MISSING
-```
-
-### Excerpt 1459
-
-```
 JUS-BAL-002|JUS|BAL|Pretrial detention must be limited to cases with clear individualized and reviewable necessity|MISSING
-```
-
-### Excerpt 1460
-
-```
 JUS-BAL-003|JUS|BAL|AI systems may not be used to assign bail or pretrial release risk scores|MISSING
-```
-
-### Excerpt 1461
-
-```
 JUS-BAL-004|JUS|BAL|Pretrial release decisions must favor the least restrictive conditions consistent with safety and court appearance|MISSING
-```
-
-### Excerpt 1462
-
-```
 Evidence and forensic integrity
-```
-
-### Excerpt 1463
-
-```
 JUS-EVD-001|JUS|EVD|Forensic methods used in court must meet strict scientific validity and reliability standards|MISSING
-```
-
-### Excerpt 1464
-
-```
 JUS-EVD-002|JUS|EVD|Junk science and unsupported forensic techniques must be excluded from court proceedings|MISSING
-```
-
-### Excerpt 1465
-
-```
 JUS-EVD-003|JUS|EVD|Digital and physical evidence must maintain transparent documented chain-of-custody standards|MISSING
-```
-
-### Excerpt 1466
-
-```
 JUS-EVD-004|JUS|EVD|Synthetic or AI-generated evidence must be clearly identified and independently verifiable before admissibility|MISSING
-```
-
-### Excerpt 1467
-
-```
 JUS-EVD-005|JUS|EVD|When foundational science behind a conviction is later discredited affected cases must be eligible for review and reopening|MISSING
-```
-
-### Excerpt 1468
-
-```
 Appeals and post-conviction review
-```
-
-### Excerpt 1469
-
-```
 JUS-REV-001|JUS|REV|Post-conviction review processes must be expanded and accessible in cases involving new evidence procedural error or unreliable science|MISSING
-```
-
-### Excerpt 1470
-
-```
 JUS-REV-002|JUS|REV|Independent innocence review mechanisms should exist in every jurisdiction|MISSING
-```
-
-### Excerpt 1471
-
-```
 JUS-REV-003|JUS|REV|Wrongful-conviction indicators must trigger mandatory review rather than discretionary review alone|MISSING
-```
-
-### Excerpt 1472
-
-```
 JUS-REV-004|JUS|REV|AI may be used to identify patterns of wrongful conviction bias or procedural inconsistency under transparent oversight|MISSING
-```
-
-### Excerpt 1473
-
-```
 Conditions of confinement
-```
-
-### Excerpt 1474
-
-```
 JUS-CON-001|JUS|CON|People in custody retain human rights including access to adequate healthcare sanitation nutrition and safety|MISSING
-```
-
-### Excerpt 1475
-
-```
 JUS-CON-002|JUS|CON|Solitary confinement must be banned or strictly limited with strong safeguards and independent review|MISSING
-```
-
-### Excerpt 1476
-
-```
 JUS-CON-003|JUS|CON|Mental health needs in custody must be treated medically and may not be punished as disciplinary problems|MISSING
-```
-
-### Excerpt 1477
-
-```
 JUS-CON-004|JUS|CON|Disability access and accommodation must be guaranteed in all detention and correctional settings|MISSING
-```
-
-### Excerpt 1478
-
-```
 JUS-CON-005|JUS|CON|Independent inspections and public reporting are required for all detention and correctional facilities|MISSING
-```
-
-### Excerpt 1479
-
-```
 Juvenile justice
-```
-
-### Excerpt 1480
-
-```
 JUS-JUV-001|JUS|JUV|Juvenile justice systems must prioritize rehabilitation education and support over punishment|MISSING
-```
-
-### Excerpt 1481
-
-```
 JUS-JUV-002|JUS|JUV|Children may not be subjected to adult sentencing standards except under extremely narrow conditions|MISSING
-```
-
-### Excerpt 1482
-
-```
 JUS-JUV-003|JUS|JUV|Juvenile records should be sealed or expunged automatically in most cases to prevent lifelong harm|MISSING
-```
-
-### Excerpt 1483
-
-```
 JUS-JUV-004|JUS|JUV|Youth in custody must retain access to education mental healthcare and developmentally appropriate services|MISSING
-```
-
-### Excerpt 1484
-
-```
 Civil justice and access to courts
-```
-
-### Excerpt 1485
-
-```
 JUS-CIV-001|JUS|CIV|People must have meaningful access to civil courts for harms involving housing employment discrimination injury and consumer abuse|MISSING
-```
-
-### Excerpt 1486
-
-```
 JUS-CIV-002|JUS|CIV|Forced arbitration clauses that strip people of meaningful legal recourse should be banned or strictly limited|MISSING
-```
-
-### Excerpt 1487
-
-```
 JUS-CIV-003|JUS|CIV|Class actions and collective remedies must remain available where systemic harms affect large groups of people|MISSING
-```
-
-### Excerpt 1488
-
-```
 JUS-CIV-004|JUS|CIV|Court fees filing costs and procedural burdens must not block access to justice for low-income people|MISSING
-```
-
-### Excerpt 1489
-
-```
 Immigration justice overlap
-```
-
-### Excerpt 1490
-
-```
 JUS-IMM-001|JUS|IMM|Immigration detention must be subject to strict due process limits and may not become indefinite by default|MISSING
-```
-
-### Excerpt 1491
-
-```
 JUS-IMM-002|JUS|IMM|People in immigration proceedings must have meaningful access to counsel interpretation and judicial review|MISSING
-```
-
-### Excerpt 1492
-
-```
 JUS-IMM-003|JUS|IMM|Family separation and coercive detention practices must be prohibited except under narrowly defined and reviewable conditions|MISSING
-```
-
-### Excerpt 1493
-
-```
 Transparency and accountability
-```
-
-### Excerpt 1494
-
-```
 JUS-OVR-001|JUS|OVR|Justice institutions must publish standardized data on charging sentencing detention plea bargaining and appeals outcomes|MISSING
-```
-
-### Excerpt 1495
-
-```
 JUS-OVR-002|JUS|OVR|Justice data must be disaggregated to identify racial gender disability geographic and class disparities|MISSING
-```
-
-### Excerpt 1496
-
-```
 JUS-OVR-003|JUS|OVR|Independent oversight bodies must have access to justice-system data records and facilities necessary to investigate abuse or bias|MISSING
-```
-
-### Excerpt 1497
-
-```
 JUS-OVR-004|JUS|OVR|Justice agencies must be required to act on audit findings regarding bias rights violations or unlawful practices|MISSING
-```
-
-### Excerpt 1498
-
-```
 Strong candidates for later expansion
-```
-
-### Excerpt 1499
-
-```
 expungement and record-clearing generally
-```
-
-### Excerpt 1500
-
-```
 fines and fees reform
-```
-
-### Excerpt 1501
-
-```
 probation and parole reform
-```
-
-### Excerpt 1502
-
-```
 algorithmic policing beyond what we already covered
-```
-
-### Excerpt 1503
-
-```
 witness intimidation / police credibility disclosure
-```
-
-### Excerpt 1504
-
-```
 mandatory body-camera and evidence-retention rules
-```
-
-### Excerpt 1505
-
-```
 court interpreter access
-```
-
-### Excerpt 1506
-
-```
 restorative justice
-```
-
-### Excerpt 1507
-
-```
 victims’ rights without undermining defendants’ rights
-```
-
-### Excerpt 1508
-
-```
 Dedupe check
-```
-
-### Excerpt 1509
-
-```
 I recommend this order:
-```
-
-### Excerpt 1510
-
-```
 Probation / parole / fines / fees
-```
-
-### Excerpt 1511
-
-```
 Expungement / record clearing
-```
-
-### Excerpt 1512
-
-```
 Restorative justice / diversion
-```
-
-### Excerpt 1513
-
-```
 Victims / witnesses / police credibility rules
-```
-
-### Excerpt 1514
-
-```
 Immigration justice in depth
-```
-
-### Excerpt 1515
-
-```
 Running todo checklist
-```
-
-### Excerpt 1516
-
-```
 Active
-```
-
-### Excerpt 1517
-
-```
 Full dedupe / conflict / gap audit across the AI framework
-```
-
-### Excerpt 1518
-
-```
 Continue AI justice / judiciary / courts
-```
-
-### Excerpt 1519
-
-```
 Keep capturing new ideas with dedupe checks
-```
-
-### Excerpt 1520
-
-```
 Update this checklist every turn
-```
-
-### Excerpt 1521
-
-```
 Queued next
-```
-
-### Excerpt 1522
-
-```
 Revisit broader justice pillar after AI is complete
-```
-
-### Excerpt 1523
-
-```
 General healthcare / insurance overhaul after AI
-```
-
-### Excerpt 1524
-
-```
 Integrate oversight-board additions later
-```
-
-### Excerpt 1525
-
-```
 Consolidate system rules and per-domain system rules later
-```
-
-### Excerpt 1526
-
-```
 AI domains completed or substantially built
-```
-
-### Excerpt 1527
-
-```
 Synthetic media / deepfakes
-```
-
-### Excerpt 1528
-
-```
 Surveillance
-```
-
-### Excerpt 1529
-
-```
 Military AI
-```
-
-### Excerpt 1530
-
-```
 Mental health AI
-```
-
-### Excerpt 1531
-
-```
 General healthcare AI
-```
-
-### Excerpt 1532
-
-```
 Employment / workplace AI
-```
-
-### Excerpt 1533
-
-```
 Government / benefits / public services AI
-```
-
-### Excerpt 1534
-
-```
 Environment AI
-```
-
-### Excerpt 1535
-
-```
 Education AI
-```
-
-### Excerpt 1536
-
-```
 Finance / credit / insurance AI
-```
-
-### Excerpt 1537
-
-```
 AI domains still open or not fully closed
-```
-
-### Excerpt 1538
-
-```
 Justice / judiciary / courts AI
-```
-
-### Excerpt 1539
-
-```
 Media / recommender / distribution systems AI, if you want deeper coverage
-```
-
-### Excerpt 1540
-
-```
 Scientific research integrity AI, if you want a dedicated section
-```
-
-### Excerpt 1541
-
-```
 Consumer companionship / child-directed AI outside mental-health framing, if you want it separated
-```
-
-### Excerpt 1542
-
-```
 Full AI dedupe / conflict / gap audit
-```
-
-### Excerpt 1543
-
-```
 It is still coherent, but later it should become one canonical doctrine with domain references.
-```
-
-### Excerpt 1544
-
-```
 That should probably become a reusable system rule later.
-```
-
-### Excerpt 1545
-
-```
 Public defender / prosecutor asymmetry
-```
-
-### Excerpt 1546
-
-```
 Very important gap:
-```
-
-### Excerpt 1547
-
-```
 If prosecutors get advanced AI tooling and defenders do not, the system becomes even more unequal.
-```
-
-### Excerpt 1548
-
-```
 right for defense or opposing parties to inspect or challenge AI tools used by courts or prosecutors
-```
-
-### Excerpt 1549
-
-```
 public procurement and transparency standards for legal AI systems
-```
-
-### Excerpt 1550
-
-```
 Second major AI gap: media / recommender / information-distribution systems
-```
-
-### Excerpt 1551
-
-```
 algorithmic amplification
-```
-
-### Excerpt 1552
-
-```
 recommender systems
-```
-
-### Excerpt 1553
-
-```
 outrage / addiction optimization
-```
-
-### Excerpt 1554
-
-```
 political content ranking
-```
-
-### Excerpt 1555
-
-```
 manipulative distribution systems
-```
-
-### Excerpt 1556
-
-```
 Third AI gap: scientific research integrity
-```
-
-### Excerpt 1557
-
-```
 Can judges use AI to draft?
-```
-
-### Excerpt 1558
-
-```
 Can clerks use AI to summarize records?
-```
-
-### Excerpt 1559
-
-```
 Must AI use be disclosed?
-```
-
-### Excerpt 1560
-
-```
 Can AI be used to prioritize cases or motions?
-```
-
-### Excerpt 1561
-
-```
 B. Evidentiary use and admissibility
-```
-
-### Excerpt 1562
-
-```
 Can AI-generated reconstructions be shown to juries?
-```
-
-### Excerpt 1563
-
-```
 Can AI summarize testimony?
-```
-
-### Excerpt 1564
-
-```
 Can AI be used in voir dire or jury analytics?
-```
-
-### Excerpt 1565
-
-```
 Can courts rely on predictive models for juror behavior?
-```
-
-### Excerpt 1566
-
-```
 system rules: universal cross-domain rules
-```
-
-### Excerpt 1567
-
-```
 domain rules: rules tailored to the specific risks of each pillar or section
-```
-
-### Excerpt 1568
-
-```
 Current system rules
-```
-
-### Excerpt 1569
-
-```
 Foundational system rules
-```
-
-### Excerpt 1570
-
-```
 Platform is both a policy platform and a long-term strategy
-```
-
-### Excerpt 1571
-
-```
 Restore checks and balances
-```
-
-### Excerpt 1572
-
-```
 Modernize the Constitution
-```
-
-### Excerpt 1573
-
-```
 Universal and equal rights
-```
-
-### Excerpt 1574
-
-```
 Address economic inequality structurally
-```
-
-### Excerpt 1575
-
-```
 Address modern problems current law was not built to handle
-```
-
-### Excerpt 1576
-
-```
 Make technology work for people rather than against them
-```
-
-### Excerpt 1577
-
-```
 The project is not fundamentally left vs right
-```
-
-### Excerpt 1578
-
-```
 The movement should be broadly accessible
-```
-
-### Excerpt 1579
-
-```
 The movement is not a political party
-```
-
-### Excerpt 1580
-
-```
 System rules exist to ensure completeness and alignment with values
-```
-
-### Excerpt 1581
-
-```
 Geographic equality / anti-fragmentation rules
-```
-
-### Excerpt 1582
-
-```
 AI-assisted systems must not create asymmetrical processes that speed approvals while making everything else slower or more denial-prone
-```
-
-### Excerpt 1583
-
-```
 Harmful decisions must be made through independent human judgment before harm occurs
-```
-
-### Excerpt 1584
-
-```
 Absence of AI recommendation cannot count against a person
-```
-
-### Excerpt 1585
-
-```
 Queue fairness must be preserved even when AI prioritizes some cases
-```
-
-### Excerpt 1586
-
-```
 AI systems must include bias detection and bias-reduction mechanisms
-```
-
-### Excerpt 1587
-
-```
 Human accountability cannot be displaced by AI
-```
-
-### Excerpt 1588
-
-```
 Every domain should define its own domain-specific AI system rules
-```
-
-### Excerpt 1589
-
-```
 5. Rights / Civil Liberties / Economic Security
-```
-
-### Excerpt 1590
-
-```
 Count: ~20–25
-```
-
-### Excerpt 1591
-
-```
 Completeness: ~45%
-```
-
-### Excerpt 1592
-
-```
 Status: good starter set, but still missing much of the detailed economic system design
-```
-
-### Excerpt 1593
-
-```
 Count: ~20–30
-```
-
-### Excerpt 1594
-
-```
 Completeness: ~50%
-```
-
-### Excerpt 1595
-
-```
 Status: strong on journalist protections and disinformation, weaker on recommendation systems and platform power
-```
-
-### Excerpt 1596
-
-```
 first-pass drafting / brainstorming
-```
-
-### Excerpt 1597
-
-```
 audit and cleanup work
-```
-
-### Excerpt 1598
-
-```
 required future human reviews
-```
-
-### Excerpt 1599
-
-```
 Legend
-```
-
-### Excerpt 1600
-
-```
  done
-```
-
-### Excerpt 1601
-
-```
  not done
-```
-
-### Excerpt 1602
-
-```
 Global / project-level
-```
-
-### Excerpt 1603
-
-```
  Define mission and project framing
-```
-
-### Excerpt 1604
-
-```
  Establish foundational values
-```
-
-### Excerpt 1605
-
-```
  Introduce system rules as a formal architecture layer
-```
-
-### Excerpt 1606
-
-```
  Create structured policy ID system
-```
-
-### Excerpt 1607
-
-```
  Begin master checkpoint / dataset approach
-```
-
-### Excerpt 1608
-
-```
  Run full dedupe audit across every domain
-```
-
-### Excerpt 1609
-
-```
  Run full conflict audit across every domain
-```
-
-### Excerpt 1610
-
-```
  Run full gap audit across every domain
-```
-
-### Excerpt 1611
-
-```
  Run full completeness audit across every domain
-```
-
-### Excerpt 1612
-
-```
  Sync all later additions into one canonical master dataset
-```
-
-### Excerpt 1613
-
-```
  Human review pass 1 on the full project
-```
-
-### Excerpt 1614
-
-```
  Human review pass 2 on the full project
-```
-
-### Excerpt 1615
-
-```
 System rules / meta-governance
-```
-
-### Excerpt 1616
-
-```
  First-pass foundational system rules
-```
-
-### Excerpt 1617
-
-```
  First-pass geographic equality rules
-```
-
-### Excerpt 1618
-
-```
  First-pass federalism balance rules
-```
-
-### Excerpt 1619
-
-```
  First-pass AI system rules
-```
-
-### Excerpt 1620
-
-```
  Full internal consistency review
-```
-
-### Excerpt 1621
-
-```
  Human review pass 1
-```
-
-### Excerpt 1622
-
-```
  Human review pass 2
-```
-
-### Excerpt 1623
-
-```
 Executive Power
-```
-
-### Excerpt 1624
-
-```
  First-pass executive power rules
-```
-
-### Excerpt 1625
-
-```
  Expand enforcement mechanisms and edge cases
-```
-
-### Excerpt 1626
-
-```
  Full dedupe/conflict/gap/completeness audit
-```
-
-### Excerpt 1627
-
-```
 Elections and Representation
-```
-
-### Excerpt 1628
-
-```
  First-pass elections and voting rules
-```
-
-### Excerpt 1629
-
-```
  First-pass anti-capture federalism structure for elections
-```
-
-### Excerpt 1630
-
-```
  Expand unresolved mechanics and edge cases
-```
-
-### Excerpt 1631
-
-```
 Anti-Corruption / Money / Power
-```
-
-### Excerpt 1632
-
-```
  First-pass anti-corruption framework
-```
-
-### Excerpt 1633
-
-```
  Add stock-trading restrictions
-```
-
-### Excerpt 1634
-
-```
  Add oversight-related anti-capture concepts
-```
-
-### Excerpt 1635
-
-```
  Integrate oversight-board architecture fully
-```
-
-### Excerpt 1636
-
-```
 Justice / Policing / Accountability
-```
-
-### Excerpt 1637
-
-```
  First-pass policing and criminal justice rules
-```
-
-### Excerpt 1638
-
-```
  Add sentencing, detention, and profiling reforms
-```
-
-### Excerpt 1639
-
-```
  Add first-pass prosecution, defense, evidence, appeals, confinement, juvenile, civil, immigration, and transparency rules
-```
-
-### Excerpt 1640
-
-```
  Finish AI justice / judiciary / courts Phase 2
-```
-
-### Excerpt 1641
-
-```
  Return for broader justice pillar expansion after AI
-```
-
-### Excerpt 1642
-
-```
  Add probation/parole/fines/fees/expungement/restorative-justice layer
-```
-
-### Excerpt 1643
-
-```
 Courts / Judiciary
-```
-
-### Excerpt 1644
-
-```
  First-pass judicial reform concepts
-```
-
-### Excerpt 1645
-
-```
  Add anti-judge-shopping rule
-```
-
-### Excerpt 1646
-
-```
  Add first-pass judicial AI restrictions
-```
-
-### Excerpt 1647
-
-```
  Finish judicial workflow / evidentiary / jury / prosecutor-defender parity section
-```
-
-### Excerpt 1648
-
-```
 Checks and Balances
-```
-
-### Excerpt 1649
-
-```
  First-pass checks-and-balances concepts
-```
-
-### Excerpt 1650
-
-```
  Expand institutional accountability and impeachment architecture
-```
-
-### Excerpt 1651
-
-```
 Rights / Civil Liberties / Economic Security
-```
-
-### Excerpt 1652
-
-```
  First-pass rights architecture
-```
-
-### Excerpt 1653
-
-```
  Add privacy, bodily autonomy, equality, religion, and anti-detention rules
-```
-
-### Excerpt 1654
-
-```
  Expand unresolved edge cases and enforcement structure
-```
-
-### Excerpt 1655
-
-```
  First-pass healthcare rights and coverage structure
-```
-
-### Excerpt 1656
-
-```
  Add mental healthcare inclusion
-```
-
-### Excerpt 1657
-
-```
  Add scientific integrity / anti-capture rules
-```
-
-### Excerpt 1658
-
-```
  Add anti-fragmentation healthcare rules
-```
-
-### Excerpt 1659
-
-```
  Add AI healthcare framework
-```
-
-### Excerpt 1660
-
-```
  Add AI mental-health framework
-```
-
-### Excerpt 1661
-
-```
  Add anti-denial and anti-asymmetry rules
-```
-
-### Excerpt 1662
-
-```
  Return for general healthcare / insurance overhaul
-```
-
-### Excerpt 1663
-
-```
  Reconcile transition-state insurance policy with future single-payer model
-```
-
-### Excerpt 1664
-
-```
 Tax / Wealth / Welfare / Economy
-```
-
-### Excerpt 1665
-
-```
  First-pass tax and welfare concepts
-```
-
-### Excerpt 1666
-
-```
  Add UBI / wage / Social Security / welfare protections
-```
-
-### Excerpt 1667
-
-```
  Expand macroeconomic and cost-of-living mechanics
-```
-
-### Excerpt 1668
-
-```
 Antitrust / Corporate Power
-```
-
-### Excerpt 1669
-
-```
  First-pass antitrust concepts
-```
-
-### Excerpt 1670
-
-```
  Expand corporate concentration, product durability, platform power, and supply-chain control
-```
-
-### Excerpt 1671
-
-```
 Information / Media / Journalism
-```
-
-### Excerpt 1672
-
-```
  First-pass media / journalism / disinformation work
-```
-
-### Excerpt 1673
-
-```
  Add journalist and source protections
-```
-
-### Excerpt 1674
-
-```
  Add synthetic media / deepfake rules
-```
-
-### Excerpt 1675
-
-```
  Consider deeper recommender-system and distribution-system framework
-```
-
-### Excerpt 1676
-
-```
 Gun Policy / Armed Power
-```
-
-### Excerpt 1677
-
-```
  First-pass firearm and militia structure
-```
-
-### Excerpt 1678
-
-```
  Expand unresolved military / armed-power edge cases if needed
-```
-
-### Excerpt 1679
-
-```
 Term Limits / Fitness / Eligibility
-```
-
-### Excerpt 1680
-
-```
  First-pass term-limit framework
-```
-
-### Excerpt 1681
-
-```
  Add detailed service-cap and vacancy rules
-```
-
-### Excerpt 1682
-
-```
  Reconcile edge cases and transition mechanics
-```
-
-### Excerpt 1683
-
-```
 Administrative State / Agencies
-```
-
-### Excerpt 1684
-
-```
  First-pass administrative-state concepts
-```
-
-### Excerpt 1685
-
-```
  Add Chevron restoration and congressional agency authority
-```
-
-### Excerpt 1686
-
-```
  Expand agency anti-capture and governance structure
-```
-
-### Excerpt 1687
-
-```
 Oversight architecture
-```
-
-### Excerpt 1688
-
-```
  Capture federal / state / branch-level oversight board concepts
-```
-
-### Excerpt 1689
-
-```
  Integrate oversight architecture into the relevant pillars cleanly
-```
-
-### Excerpt 1690
-
-```
  Resolve overlap between oversight bodies and existing branches/agencies
-```
-
-### Excerpt 1691
-
-```
 Infrastructure / Environment / Public Goods
-```
-
-### Excerpt 1692
-
-```
  First-pass infrastructure / energy / public-goods concepts
-```
-
-### Excerpt 1693
-
-```
  Add rail, transit, wildlife crossings, orbital environment, pollution, and anti-greenwashing concepts
-```
-
-### Excerpt 1694
-
-```
  Expand climate / pollution / adaptation / land-use governance
-```
-
-### Excerpt 1695
-
-```
 Education
-```
-
-### Excerpt 1696
-
-```
  First-pass right-to-education and anti-indoctrination ideas
-```
-
-### Excerpt 1697
-
-```
  Add AI education framework
-```
-
-### Excerpt 1698
-
-```
  Expand non-AI education policy deeply
-```
-
-### Excerpt 1699
-
-```
 Labor / Work
-```
-
-### Excerpt 1700
-
-```
  First-pass wages / leave / workweek ideas
-```
-
-### Excerpt 1701
-
-```
  Add AI employment / workplace governance
-```
-
-### Excerpt 1702
-
-```
  Expand non-AI labor domain deeply
-```
-
-### Excerpt 1703
-
-```
 Housing / Cost of Living / Community
-```
-
-### Excerpt 1704
-
-```
  Capture housing-rights and anti-gentrification concepts
-```
-
-### Excerpt 1705
-
-```
  Expand housing / cost-of-living system properly
-```
-
-### Excerpt 1706
-
-```
 Immigration
-```
-
-### Excerpt 1707
-
-```
  Capture immigration-relevant concepts and AI overlaps
-```
-
-### Excerpt 1708
-
-```
  Build dedicated immigration reform section
-```
-
-### Excerpt 1709
-
-```
 Technology / AI (cross-domain)
-```
-
-### Excerpt 1710
-
-```
 AI overall
-```
-
-### Excerpt 1711
-
-```
  Establish AI as a cross-domain governance framework
-```
-
-### Excerpt 1712
-
-```
  Establish AI system rules
-```
-
-### Excerpt 1713
-
-```
  Run full AI-only dedupe/conflict/gap/completeness audit by subdomain
-```
-
-### Excerpt 1714
-
-```
 AI synthetic media / deepfakes
-```
-
-### Excerpt 1715
-
-```
  First pass complete
-```
-
-### Excerpt 1716
-
-```
 AI surveillance
-```
-
-### Excerpt 1717
-
-```
 AI military / cyber / treaty
-```
-
-### Excerpt 1718
-
-```
  Clarify remaining edge cases
-```
-
-### Excerpt 1719
-
-```
 AI mental health
-```
-
-### Excerpt 1720
-
-```
 AI healthcare
-```
-
-### Excerpt 1721
-
-```
 AI employment
-```
-
-### Excerpt 1722
-
-```
 AI government / benefits / public services
-```
-
-### Excerpt 1723
-
-```
 AI environment
-```
-
-### Excerpt 1724
-
-```
 AI education
-```
-
-### Excerpt 1725
-
-```
 AI finance / credit / insurance
-```
-
-### Excerpt 1726
-
-```
 AI justice / judiciary / courts
-```
-
-### Excerpt 1727
-
-```
  First pass started
-```
-
-### Excerpt 1728
-
-```
  Finish Phase 2
-```
-
-### Excerpt 1729
-
-```
 Short next-items list
-```
-
-### Excerpt 1730
-
-```
 Economic stability and material sufficiency
-```
-
-### Excerpt 1731
-
-```
 Transparency of systems and decisions
-```
-
-### Excerpt 1732
-
-```
 Systems affecting the public must be observable, auditable, and understandable.
-```
-
-### Excerpt 1733
-
-```
 Drives: disclosure laws, open records, algorithmic transparency, governance visibility.
-```
-
-### Excerpt 1734
-
-```
 Limits on concentration of power
-```
-
-### Excerpt 1735
-
-```
 Excessive accumulation of economic, political, or technological power must be constrained.
-```
-
-### Excerpt 1736
-
-```
 Drives: antitrust policy, decentralization, structural separation of power.
-```
-
-### Excerpt 1737
-
-```
 People must have reliable access to basic needs and the ability to build long-term stability.
-```
-
-### Excerpt 1738
-
-```
 Drives: UBI, wage policy, housing, healthcare guarantees.
-```
-
-### Excerpt 1739
-
-```
 Future-proofing and adaptive governance
-```
-
-### Excerpt 1740
-
-```
 Systems must be designed to evolve alongside technological, social, and economic change.
-```
-
-### Excerpt 1741
-
-```
 Drives: flexible regulatory frameworks, update mechanisms, long-term policy adaptability.
-```
-
-### Excerpt 1742
-
-```
 → prevents the system from becoming outdated again
-```
-
-### Excerpt 1743
-
-```
 That’s where this becomes extremely hard to break or exploit..
-```
-
-### Excerpt 1744
-
-```
 Thought for 7s
-```
-
-### Excerpt 1745
-
-```
 I am building a comprehensive policy platform and long-term reform framework. This is not just a list of policy preferences. It is intended to become:
-```
-
-### Excerpt 1746
-
-```
 concentration and abuse of political, economic, and technological power
-```
-
-### Excerpt 1747
-
-```
 corruption, opacity, and lack of accountability
-```
-
-### Excerpt 1748
-
-```
 erosion, ambiguity, or rollback of rights and protections
-```
-
-### Excerpt 1749
-
-```
 unequal treatment under law and unequal access to core systems
-```
-
-### Excerpt 1750
-
-```
 outdated constitutional and legal language that is too vague, too easy to exploit, or too open to bad-faith interpretation
-```
-
-### Excerpt 1751
-
-```
 patchwork systems that create different classes of rights and access depending on geography
-```
-
-### Excerpt 1752
-
-```
 systemic unfairness, rigging, and capture
-```
-
-### Excerpt 1753
-
-```
 economic instability and inability for ordinary people to build durable lives
-```
-
-### Excerpt 1754
-
-```
 failure of laws and institutions to keep pace with technology and modern infrastructure
-```
-
-### Excerpt 1755
-
-```
 lack of proactive governance and overreliance on reactive, after-the-fact fixes
-```
-
-### Excerpt 1756
-
-```
 failure to define rights and protections positively, clearly, and durably
-```
-
-### Excerpt 1757
-
-```
 failure to modernize institutions for current and future technological realities
-```
-
-### Excerpt 1758
-
-```
 Core values
-```
-
-### Excerpt 1759
-
-```
 Equal application of the law
-```
-
-### Excerpt 1760
-
-```
 Accountability of power
-```
-
-### Excerpt 1761
-
-```
 Evidence-based truth and epistemic rigor
-```
-
-### Excerpt 1762
-
-```
 Protection and expansion of human and civil rights
-```
-
-### Excerpt 1763
-
-```
 Prevention of abuse and exploitation
-```
-
-### Excerpt 1764
-
-```
 Anti-corruption and conflict-of-interest elimination
-```
-
-### Excerpt 1765
-
-```
 Restoration of checks and balances
-```
-
-### Excerpt 1766
-
-```
 Decentralization of power
-```
-
-### Excerpt 1767
-
-```
 Structural fairness and anti-rigging
-```
-
-### Excerpt 1768
-
-```
 Durability and resilience of systems
-```
-
-### Excerpt 1769
-
-```
 Modernization of systems and governing frameworks
-```
-
-### Excerpt 1770
-
-```
 Proactive governance and risk prevention
-```
-
-### Excerpt 1771
-
-```
 Human autonomy and agency
-```
-
-### Excerpt 1772
-
-```
 Privacy and control of personal data
-```
-
-### Excerpt 1773
-
-```
 Public-interest-aligned governance
-```
-
-### Excerpt 1774
-
-```
 Adversarial validation and system stress-testing
-```
-
-### Excerpt 1775
-
-```
 What these values mean in practice
-```
-
-### Excerpt 1776
-
-```
 These values are not decorative. They are meant to function as a governing philosophy that can be used to derive:
-```
-
-### Excerpt 1777
-
-```
 recognition of rights for sentient AIs
-```
-
-### Excerpt 1778
-
-```
 protections against abuse by corporations, governments, or individuals
-```
-
-### Excerpt 1779
-
-```
 guarantees of dignity and anti-cruelty protections
-```
-
-### Excerpt 1780
-
-```
 ethical and legal standards for treatment of sentient synthetic beings
-```
-
-### Excerpt 1781
-
-```
 Core pillars
-```
-
-### Excerpt 1782
-
-```
 Pillar / Domain	Rough Item Count	Rough Completeness	Status
-```
-
-### Excerpt 1783
-
-```
 Executive Power	~13	~60%	Good foundation, still needs deeper enforcement and edge-case work
-```
-
-### Excerpt 1784
-
-```
 Elections and Representation	~35	~75%	Strong first pass, still needs cleanup and final architecture review
-```
-
-### Excerpt 1785
-
-```
 Anti-Corruption / Money / Power	~35	~65%	Good structure, but still needs integration and deeper refinement
-```
-
-### Excerpt 1786
-
-```
 Justice / Policing / Accountability	~90	~55%	Strong early build, but still one of the biggest revisit areas
-```
-
-### Excerpt 1787
-
-```
 Rights / Civil Liberties / Economic Security	~40	~75%	Strong core rights framework, but still needs refinement and review
-```
-
-### Excerpt 1788
-
-```
 Courts / Judiciary	~25	~45%	Still underdeveloped relative to importance
-```
-
-### Excerpt 1789
-
-```
 Checks and Balances / Institutional Accountability	~15	~40%	Important but still thin
-```
-
-### Excerpt 1790
-
-```
 Tax / Wealth / Welfare	~25	~45%	Good start, but still underbuilt
-```
-
-### Excerpt 1791
-
-```
 Healthcare	~120	~70%	One of the strongest pillars, especially in architecture and protections
-```
-
-### Excerpt 1792
-
-```
 Antitrust / Corporate Power	~15	~35%	Still underdeveloped
-```
-
-### Excerpt 1793
-
-```
 Information / Media / Journalism	~25	~50%	Strong in some areas, still incomplete overall
-```
-
-### Excerpt 1794
-
-```
 Gun Policy / Armed Power	~15	~65%	More complete than many other pillars, but still review needed
-```
-
-### Excerpt 1795
-
-```
 Term Limits / Fitness / Eligibility	~15	~55%	Stronger now, but not finished
-```
-
-### Excerpt 1796
-
-```
 Administrative State / Agencies	~15	~35%	Early structure only
-```
-
-### Excerpt 1797
-
-```
 Cross-cutting and emerging domains
-```
-
-### Excerpt 1798
-
-```
 Domain	Rough Item Count	Rough Completeness	Status
-```
-
-### Excerpt 1799
-
-```
 System Rules / Meta-Governance	~40	~70%	One of the most important architectural advances so far
-```
-
-### Excerpt 1800
-
-```
 Movement / Communications / Coalition Building	~15	~25%	Conceptually present, lightly developed
-```
-
-### Excerpt 1801
-
-```
 Infrastructure / Environment / Public Goods	~60	~45%	Growing quickly, but still a major gap area overall
-```
-
-### Excerpt 1802
-
-```
 Education	~30	~30%	Early structure exists, but still underbuilt outside AI
-```
-
-### Excerpt 1803
-
-```
 Labor / Work / Worker Rights	~20	~35%	Emerging domain, still needs deeper non-AI buildout
-```
-
-### Excerpt 1804
-
-```
 Housing / Cost of Living / Community	~15	~25%	Still underbuilt
-```
-
-### Excerpt 1805
-
-```
 Immigration	~10	~15%	Clearly identified, not yet deeply expanded
-```
-
-### Excerpt 1806
-
-```
 Technology / AI Governance	~280	~75%	Most developed domain cluster so far
-```
-
-### Excerpt 1807
-
-```
 Total current policy item count
-```
-
-### Excerpt 1808
-
-```
 current status
-```
-
-### Excerpt 1809
-
-```
 next actions
-```
-
-### Excerpt 1810
-
-```
 future review requirements
-```
-
-### Excerpt 1811
-
-```
 Project-wide architecture
-```
-
-### Excerpt 1812
-
-```
  Establish core values and governing philosophy
-```
-
-### Excerpt 1813
-
-```
  Introduce system rules as an architectural layer
-```
-
-### Excerpt 1814
-
-```
  Establish dataset / master-checkpoint approach
-```
-
-### Excerpt 1815
-
-```
  Re-sync all policy items into one canonical audited dataset
-```
-
-### Excerpt 1816
-
-```
  Human review pass 1 for the overall project
-```
-
-### Excerpt 1817
-
-```
  Human review pass 2 for the overall project
-```
-
-### Excerpt 1818
-
-```
  First-pass federalism-balance rules
-```
-
-### Excerpt 1819
-
-```
  Consolidate system rules into cleaner canonical structure
-```
-
-### Excerpt 1820
-
-```
  First-pass executive power section
-```
-
-### Excerpt 1821
-
-```
  Expand enforcement mechanics and edge cases
-```
-
-### Excerpt 1822
-
-```
  First-pass elections section
-```
-
-### Excerpt 1823
-
-```
  First-pass anti-capture election structure
-```
-
-### Excerpt 1824
-
-```
  First-pass anti-corruption section
-```
-
-### Excerpt 1825
-
-```
  First-pass ethics / stock-trading restrictions
-```
-
-### Excerpt 1826
-
-```
  First-pass policing and criminal-justice section
-```
-
-### Excerpt 1827
-
-```
  First-pass detention / sentencing / profiling rules
-```
-
-### Excerpt 1828
-
-```
  First-pass prosecution / defense / evidence / appeals / confinement / juvenile / civil / immigration / transparency layer
-```
-
-### Excerpt 1829
-
-```
  Continue AI justice / judiciary / courts
-```
-
-### Excerpt 1830
-
-```
  Add probation / parole / fines / fees / expungement / restorative-justice layer
-```
-
-### Excerpt 1831
-
-```
  Anti-judge-shopping concept
-```
-
-### Excerpt 1832
-
-```
  First-pass AI judicial restrictions started
-```
-
-### Excerpt 1833
-
-```
  First-pass concepts
-```
-
-### Excerpt 1834
-
-```
  Expand impeachment and institutional-accountability architecture
-```
-
-### Excerpt 1835
-
-```
  First-pass privacy / bodily autonomy / equality / religion / detention protections
-```
-
-### Excerpt 1836
-
-```
  Expand unresolved enforcement and edge cases
-```
-
-### Excerpt 1837
-
-```
  Mental healthcare inclusion
-```
-
-### Excerpt 1838
-
-```
  Scientific integrity / anti-capture structure
-```
-
-### Excerpt 1839
-
-```
  Anti-fragmentation healthcare rules
-```
-
-### Excerpt 1840
-
-```
  AI healthcare framework
-```
-
-### Excerpt 1841
-
-```
  AI mental-health framework
-```
-
-### Excerpt 1842
-
-```
  Anti-denial and anti-asymmetry healthcare rules
-```
-
-### Excerpt 1843
-
-```
  Reconcile transition-state insurance rules with future single-payer model
-```
-
-### Excerpt 1844
-
-```
  First-pass tax and welfare structure
-```
-
-### Excerpt 1845
-
-```
  UBI / wage / Social Security / welfare protections
-```
-
-### Excerpt 1846
-
-```
  First-pass antitrust structure
-```
-
-### Excerpt 1847
-
-```
  Expand product durability, supply-chain concentration, platform power, and market-control rules
-```
-
-### Excerpt 1848
-
-```
  First-pass media / journalism / disinformation section
-```
-
-### Excerpt 1849
-
-```
  Journalist and source protections
-```
-
-### Excerpt 1850
-
-```
  Synthetic media / deepfake section
-```
-
-### Excerpt 1851
-
-```
  Consider deeper recommender / distribution-system framework
-```
-
-### Excerpt 1852
-
-```
  Expand remaining edge cases if needed
-```
-
-### Excerpt 1853
-
-```
  First-pass term-limit structure
-```
-
-### Excerpt 1854
-
-```
  Detailed service-cap and vacancy rules
-```
-
-### Excerpt 1855
-
-```
  First-pass administrative-state section
-```
-
-### Excerpt 1856
-
-```
  Chevron restoration and agency-authority concepts
-```
-
-### Excerpt 1857
-
-```
  Capture federal / state / branch-level oversight-board concepts
-```
-
-### Excerpt 1858
-
-```
  Integrate oversight architecture into relevant pillars
-```
-
-### Excerpt 1859
-
-```
  Resolve overlap between oversight structures and existing institutions
-```
-
-### Excerpt 1860
-
-```
  First-pass infrastructure / energy / public-goods structure
-```
-
-### Excerpt 1861
-
-```
  First-pass right-to-education and anti-indoctrination concepts
-```
-
-### Excerpt 1862
-
-```
  First-pass AI education section
-```
-
-### Excerpt 1863
-
-```
  First-pass wages / leave / workweek concepts
-```
-
-### Excerpt 1864
-
-```
  First-pass AI employment / workplace section
-```
-
-### Excerpt 1865
-
-```
 Technology / AI governance
-```
-
-### Excerpt 1866
-
-```
  Establish cross-domain AI governance framework
-```
-
-### Excerpt 1867
-
-```
  Run full AI-only dedupe / conflict / gap / completeness audit
-```
-
-### Excerpt 1868
-
-```
 Another piece to add to AI and economics, companies should pay an "AI worker tax" as proposed by Sam Altman recently.
-```
-
-### Excerpt 1869
-
-```
 Recent reporting says OpenAI’s new policy blueprint calls for shifting taxation away from labor and toward AI/automation-driven capital, including a “robot tax” or tax on automated labor, alongside a public wealth fund and a shorter workweek. That is close enough to your intent that it makes sense to add an AI worker tax / automated-labor tax item to the economics side of the platform.
-```
-
-### Excerpt 1870
-
-```
 ECO-AUT-001|ECO|AUT|Companies that replace or materially displace human labor with AI or automation should pay an AI worker tax or automated-labor tax|MISSING
-```
-
-### Excerpt 1871
-
-```
 ECO-AUT-002|ECO|AUT|Revenue from AI or automated-labor taxation should be used to support workers, public goods, and broad-based social benefit rather than private concentration alone|MISSING
-```
-
-### Excerpt 1872
-
-```
 ECO-AUT-003|ECO|AUT|AI or automated-labor taxation should be structured to discourage labor displacement without social responsibility and to share productivity gains broadly|MISSING
-```
-
-### Excerpt 1873
-
-```
 Short running checklist
-```
-
-### Excerpt 1874
-
-```
  Continue AI justice / judiciary / courts Phase 2
-```
-
-### Excerpt 1875
-
-```
  Add AI worker tax / automated-labor tax to economics
-```
-
-### Excerpt 1876
-
-```
  Full all-domain dedupe / conflict / gap / completeness audit
-```
-
-### Excerpt 1877
-
-```
  Return to broader justice after AI
-```
-
-### Excerpt 1878
-
-```
  Return to general healthcare / insurance overhaul after AI
-```
-
-### Excerpt 1879
-
-```
 AI justice / judiciary / courts — Phase 2
-```
-
-### Excerpt 1880
-
-```
 judicial workflow
-```
-
-### Excerpt 1881
-
-```
 evidentiary admissibility
-```
-
-### Excerpt 1882
-
-```
 prosecutor / defender parity
-```
-
-### Excerpt 1883
-
-```
 jury-facing restrictions
-```
-
-### Excerpt 1884
-
-```
 Judicial workflow
-```
-
-### Excerpt 1885
-
-```
 TEC-JUD-008|TEC|JUD|Judges and court staff may not rely on AI systems to make final determinations of fact law credibility or case outcome|MISSING
-```
-
-### Excerpt 1886
-
-```
 TEC-JUD-009|TEC|JUD|AI may be used to assist with clerical summarization research and document organization only under clear disclosure and human verification requirements|MISSING
-```
-
-### Excerpt 1887
-
-```
 TEC-JUD-010|TEC|JUD|Courts must disclose material use of AI in opinion drafting legal analysis record summarization or case management where it could affect litigants’ rights or case outcomes|MISSING
-```
-
-### Excerpt 1888
-
-```
 TEC-JUD-011|TEC|JUD|AI systems may not be used to prioritize dockets motions or hearings in ways that create unfairness bias or unequal access to timely justice|MISSING
-```
-
-### Excerpt 1889
-
-```
 TEC-JUD-012|TEC|JUD|Any AI-assisted judicial workflow must preserve a human-authored accountable and reviewable chain of reasoning for consequential rulings|MISSING
-```
-
-### Excerpt 1890
-
-```
 Evidentiary admissibility
-```
-
-### Excerpt 1891
-
-```
 TEC-JUD-013|TEC|JUD|AI-generated or AI-enhanced evidence must be authenticated with documented provenance methodology and chain of custody before admissibility|MISSING
-```
-
-### Excerpt 1892
-
-```
 TEC-JUD-014|TEC|JUD|Parties must receive sufficient technical disclosure to challenge the reliability validity and limitations of AI-generated or AI-analyzed evidence|MISSING
-```
-
-### Excerpt 1893
-
-```
 TEC-JUD-015|TEC|JUD|Courts may not admit AI outputs as expert-like evidence unless their methods are scientifically valid independently testable and subject to adversarial challenge|MISSING
-```
-
-### Excerpt 1894
-
-```
 TEC-JUD-016|TEC|JUD|Synthetic media evidence must be presumptively treated as high-risk and require enhanced authentication standards before admission|MISSING
-```
-
-### Excerpt 1895
-
-```
 TEC-JUD-017|TEC|JUD|If AI is used to analyze evidence all material logs model assumptions and transformation steps relevant to the output must be preservable and reviewable|MISSING
-```
-
-### Excerpt 1896
-
-```
 Prosecutor / defender parity
-```
-
-### Excerpt 1897
-
-```
 TEC-JUD-018|TEC|JUD|If prosecutors or the state use AI systems in investigation charging discovery or litigation support defendants must have equal access to the relevant outputs disclosures and technical challenge mechanisms|MISSING
-```
-
-### Excerpt 1898
-
-```
 TEC-JUD-019|TEC|JUD|Public defenders and defense counsel must be provided funding and access sufficient to avoid AI-driven asymmetry between prosecution and defense|MISSING
-```
-
-### Excerpt 1899
-
-```
 TEC-JUD-020|TEC|JUD|AI systems may not be used to pressure plea deals through opaque case scoring predicted conviction metrics or punishment leverage models|MISSING
-```
-
-### Excerpt 1900
-
-```
 TEC-JUD-021|TEC|JUD|Courts must guard against prosecutorial advantage created by proprietary or undisclosed AI tools unavailable to defense|MISSING
-```
-
-### Excerpt 1901
-
-```
 Jury-facing restrictions
-```
-
-### Excerpt 1902
-
-```
 TEC-JUD-022|TEC|JUD|AI systems may not be used to profile rank influence or strategically shape juror selection based on behavioral psychological or demographic inference|MISSING
-```
-
-### Excerpt 1903
-
-```
 TEC-JUD-023|TEC|JUD|AI-generated reconstructions simulations or visualizations shown to juries must be clearly disclosed as generated demonstrative material and subject to strict admissibility standards|MISSING
-```
-
-### Excerpt 1904
-
-```
 TEC-JUD-024|TEC|JUD|Courts may not provide juries with AI-generated summaries interpretations or credibility assessments of testimony or evidence|MISSING
-```
-
-### Excerpt 1905
-
-```
 TEC-JUD-025|TEC|JUD|Jury-facing use of AI must not distort the evidentiary record or create false impressions of certainty precision or neutrality|MISSING
-```
-
-### Excerpt 1906
-
-```
 Dedupe / conflict check
-```
-
-### Excerpt 1907
-
-```
 you want AI to speed review and reduce bias
-```
-
-### Excerpt 1908
-
-```
 but not quietly become court logic
-```
-
-### Excerpt 1909
-
-```
 ⚖️ AI + JUSTICE / COURTS — TIGHTENED RULESET
-```
-
-### Excerpt 1910
-
-```
 1. Core Doctrine (New – anchors everything)
-```
-
-### Excerpt 1911
-
-```
 TEC-JUD-026|TEC|JUD|AI use in courts and legal proceedings must default to prohibition except where narrowly permitted for transparent auditable non-generative analytical purposes under strict human oversight|MISSING
-```
-
-### Excerpt 1912
-
-```
 2. Ban on AI-Generated Evidence
-```
-
-### Excerpt 1913
-
-```
 A. Hard ban
-```
-
-### Excerpt 1914
-
-```
 TEC-JUD-027|TEC|JUD|AI-generated or AI-fabricated evidence including images video audio text or reconstructions is not admissible in legal proceedings|MISSING
-```
-
-### Excerpt 1915
-
-```
 B. Ban on AI-enhanced evidence that alters meaning
-```
-
-### Excerpt 1916
-
-```
 TEC-JUD-028|TEC|JUD|AI-enhanced evidence that alters interpretation content or meaning of underlying evidence is not admissible|MISSING
-```
-
-### Excerpt 1917
-
-```
 C. Narrow exception: analytical use only
-```
-
-### Excerpt 1918
-
-```
 TEC-JUD-029|TEC|JUD|AI may be used only for analytical purposes on existing evidence where it does not generate new content and does not alter underlying data|MISSING
-```
-
-### Excerpt 1919
-
-```
 3. Strict Limits on AI Analysis of Evidence
-```
-
-### Excerpt 1920
-
-```
 A. No generative models
-```
-
-### Excerpt 1921
-
-```
 TEC-JUD-030|TEC|JUD|Generative AI systems including large language models may not be used for evidentiary analysis in legal proceedings|MISSING
-```
-
-### Excerpt 1922
-
-```
 B. Preference for verifiable methods
-```
-
-### Excerpt 1923
-
-```
 TEC-JUD-031|TEC|JUD|Permitted analytical systems must use verifiable reproducible methods such as statistical or traditional machine learning models rather than generative systems|MISSING
-```
-
-### Excerpt 1924
-
-```
 C. Full disclosure requirement
-```
-
-### Excerpt 1925
-
-```
 TEC-JUD-032|TEC|JUD|Any use of AI in evidence analysis must be explicitly disclosed including methods data inputs limitations and error rates|MISSING
-```
-
-### Excerpt 1926
-
-```
 D. No black-box analysis
-```
-
-### Excerpt 1927
-
-```
 TEC-JUD-033|TEC|JUD|Black-box AI systems that cannot be meaningfully explained tested or challenged are not admissible in evidentiary contexts|MISSING
-```
-
-### Excerpt 1928
-
-```
 4. No AI Experts
-```
-
-### Excerpt 1929
-
-```
 A. Ban on AI as expert witness
-```
-
-### Excerpt 1930
-
-```
 TEC-JUD-034|TEC|JUD|AI systems may not be presented as expert witnesses or as authoritative sources in legal proceedings|MISSING
-```
-
-### Excerpt 1931
-
-```
 B. Human experts only
-```
-
-### Excerpt 1932
-
-```
 TEC-JUD-035|TEC|JUD|All expert testimony must be provided by qualified human experts who are accountable for their conclusions|MISSING
-```
-
-### Excerpt 1933
-
-```
 C. AI-assisted experts must disclose use
-```
-
-### Excerpt 1934
-
-```
 TEC-JUD-036|TEC|JUD|Human experts using AI-assisted analysis must disclose such use and remain fully responsible for all conclusions|MISSING
-```
-
-### Excerpt 1935
-
-```
 5. Judicial Use Restrictions
-```
-
-### Excerpt 1936
-
-```
 A. Ban on generative AI for opinions
-```
-
-### Excerpt 1937
-
-```
 TEC-JUD-037|TEC|JUD|Judges and justices may not use generative AI systems to draft write or materially shape judicial opinions or rulings|MISSING
-```
-
-### Excerpt 1938
-
-```
 B. No AI reasoning substitution
-```
-
-### Excerpt 1939
-
-```
 TEC-JUD-038|TEC|JUD|AI systems may not substitute for judicial reasoning legal analysis or interpretation of law|MISSING
-```
-
-### Excerpt 1940
-
-```
 C. Limited clerical use only
-```
-
-### Excerpt 1941
-
-```
 TEC-JUD-039|TEC|JUD|AI may be used for limited clerical tasks such as document organization or formatting only when it does not affect legal reasoning or outcomes|MISSING
-```
-
-### Excerpt 1942
-
-```
 6. Jury Protections (Tightened)
-```
-
-### Excerpt 1943
-
-```
 A. Ban on AI-generated courtroom materials
-```
-
-### Excerpt 1944
-
-```
 TEC-JUD-040|TEC|JUD|AI-generated reconstructions simulations or demonstrative materials may not be shown to juries|MISSING
-```
-
-### Excerpt 1945
-
-```
 B. No AI summaries
-```
-
-### Excerpt 1946
-
-```
 TEC-JUD-041|TEC|JUD|AI systems may not be used to summarize interpret or present evidence or testimony to juries|MISSING
-```
-
-### Excerpt 1947
-
-```
 C. No AI influence on jurors
-```
-
-### Excerpt 1948
-
-```
 TEC-JUD-042|TEC|JUD|AI systems may not be used to influence juror perception behavior or decision-making directly or indirectly|MISSING
-```
-
-### Excerpt 1949
-
-```
 7. Confirmation Bias & Reliability Safeguards
-```
-
-### Excerpt 1950
-
-```
 A. Explicit bias risk recognition
-```
-
-### Excerpt 1951
-
-```
 TEC-JUD-043|TEC|JUD|Courts must recognize that AI systems can amplify confirmation bias hallucination and false certainty and must treat AI outputs as inherently high-risk|MISSING
-```
-
-### Excerpt 1952
-
-```
 B. Elevated evidentiary standard
-```
-
-### Excerpt 1953
-
-```
 TEC-JUD-044|TEC|JUD|Any permitted AI-assisted analysis must meet elevated standards of reliability scrutiny and adversarial testing beyond traditional evidence|MISSING
-```
-
-### Excerpt 1954
-
-```
 8. Adversarial Challenge Rights
-```
-
-### Excerpt 1955
-
-```
 A. Full right to challenge
-```
-
-### Excerpt 1956
-
-```
 TEC-JUD-045|TEC|JUD|All parties must have full rights to challenge any AI-assisted analysis including methodology assumptions and outputs|MISSING
-```
-
-### Excerpt 1957
-
-```
 B. Reproducibility requirement
-```
-
-### Excerpt 1958
-
-```
 TEC-JUD-046|TEC|JUD|AI-assisted analysis must be reproducible by opposing parties using the same inputs and methods|MISSING
-```
-
-### Excerpt 1959
-
-```
 9. Logging, Preservation, and Auditability
-```
-
-### Excerpt 1960
-
-```
 A. Full logging requirement
-```
-
-### Excerpt 1961
-
-```
 TEC-JUD-047|TEC|JUD|All AI-assisted evidentiary analysis must include preserved logs of inputs outputs and transformation steps|MISSING
-```
-
-### Excerpt 1962
-
-```
 B. Audit access
-```
-
-### Excerpt 1963
-
-```
 TEC-JUD-048|TEC|JUD|Courts and opposing parties must have access to all materials necessary to audit AI-assisted analysis|MISSING
-```
-
-### Excerpt 1964
-
-```
 🔍 What changed (important)
-```
-
-### Excerpt 1965
-
-```
 merge old + new into a single canonical “AI in courts” section
-```
-
-### Excerpt 1966
-
-```
 remove weaker earlier phrasing
-```
-
-### Excerpt 1967
-
-```
 🧭 Updated short checklist
-```
-
-### Excerpt 1968
-
-```
  Continue AI justice / judiciary / courts (Phase 3 likely next)
-```
-
-### Excerpt 1969
-
-```
  Capture AI worker tax (done)
-```
-
-### Excerpt 1970
-
-```
  Return to broader justice pillar after AI
-```
-
-### Excerpt 1971
-
-```
  Return to healthcare / insurance overhaul
-```
-
-### Excerpt 1972
-
-```
 Next recommended step
-```
-
-### Excerpt 1973
-
-```
 Let's keep it going
-```
-
-### Excerpt 1974
-
-```
 family court
-```
-
-### Excerpt 1975
-
-```
 housing / eviction court
-```
-
-### Excerpt 1976
-
-```
 administrative tribunals
-```
-
-### Excerpt 1977
-
-```
 probation / parole
-```
-
-### Excerpt 1978
-
-```
 fines / fees / collections
-```
-
-### Excerpt 1979
-
-```
 legal aid access
-```
-
-### Excerpt 1980
-
-```
 court operations and record systems
-```
-
-### Excerpt 1981
-
-```
 TEC-JUD-049|TEC|JUD|AI systems may not be used to determine custody visitation parental fitness or family placement outcomes without direct accountable human judicial decision-making|MISSING
-```
-
-### Excerpt 1982
-
-```
 TEC-JUD-050|TEC|JUD|AI systems may not infer parental fitness abuse risk credibility or child welfare outcomes from behavioral proxies psychological profiling or opaque risk models|MISSING
-```
-
-### Excerpt 1983
-
-```
 TEC-JUD-051|TEC|JUD|Family courts may not rely on AI-generated summaries recommendations or credibility assessments in matters involving custody abuse allegations or child welfare|MISSING
-```
-
-### Excerpt 1984
-
-```
 TEC-JUD-052|TEC|JUD|Any AI-assisted tool used in family court administration must be fully disclosed and may not materially affect outcomes without adversarial challenge rights|MISSING
-```
-
-### Excerpt 1985
-
-```
 2. Housing / Eviction Court
-```
-
-### Excerpt 1986
-
-```
 This is a huge real-world area of harm. Automated screening, rent analytics, and court acceleration can easily become displacement machines.
-```
-
-### Excerpt 1987
-
-```
 TEC-JUD-057|TEC|JUD|AI systems may not independently determine outcomes in administrative hearings involving benefits licensing immigration disability housing or employment rights|MISSING
-```
-
-### Excerpt 1988
-
-```
 TEC-JUD-058|TEC|JUD|Administrative adjudication may not rely on opaque AI scoring or recommendation systems to determine credibility eligibility compliance or sanction outcomes|MISSING
-```
-
-### Excerpt 1989
-
-```
 TEC-JUD-059|TEC|JUD|Parties in administrative proceedings have the right to know when AI materially influenced a recommendation record summary or proposed outcome|MISSING
-```
-
-### Excerpt 1990
-
-```
 TEC-JUD-060|TEC|JUD|Administrative agencies must provide meaningful human review and appeal for any AI-influenced adverse decision|MISSING
-```
-
-### Excerpt 1991
-
-```
 4. Probation / Parole / Community Supervision
-```
-
-### Excerpt 1992
-
-```
 Quietly brutal area. AI could easily become an extraction engine.
-```
-
-### Excerpt 1993
-
-```
 TEC-JUD-069|TEC|JUD|AI may be used to assist legal aid intake document navigation and access to information provided it does not replace licensed legal counsel where counsel is required or appropriate|MISSING
-```
-
-### Excerpt 1994
-
-```
 TEC-JUD-070|TEC|JUD|AI tools used in legal-aid contexts must clearly disclose their limits and may not present themselves as human attorneys or as a substitute for legal representation|MISSING
-```
-
-### Excerpt 1995
-
-```
 TEC-JUD-071|TEC|JUD|Public legal-aid AI tools must be designed for accessibility clarity and fairness and may not steer users away from asserting rights or seeking counsel|MISSING
-```
-
-### Excerpt 1996
-
-```
 TEC-JUD-072|TEC|JUD|Governments and courts should fund public-interest legal access tools that improve navigation and review without automating final legal judgments|MISSING
-```
-
-### Excerpt 1997
-
-```
 7. Court Records, Search, and Administrative Infrastructure
-```
-
-### Excerpt 1998
-
-```
 TEC-JUD-073|TEC|JUD|AI systems used to classify search summarize or prioritize court records must be auditable and may not distort case visibility or public access|MISSING
-```
-
-### Excerpt 1999
-
-```
 TEC-JUD-074|TEC|JUD|Court administrative AI systems may not create unequal access to filing scheduling or record retrieval based on hidden prioritization logic|MISSING
-```
-
-### Excerpt 2000
-
-```
 TEC-JUD-075|TEC|JUD|Public court records systems using AI must preserve accuracy transparency and the ability to correct errors promptly|MISSING
-```
-
-### Excerpt 2001
-
-```
 TEC-JUD-076|TEC|JUD|Courts must maintain human override and review mechanisms for all AI-assisted administrative systems affecting litigants or public access|MISSING
-```
-
-### Excerpt 2002
-
-```
 8. Cross-Cutting Courtroom Safety Rule
-```
-
-### Excerpt 2003
-
-```
 court interpreter / translation AI safeguards
-```
-
-### Excerpt 2004
-
-```
 witness credibility analysis bans
-```
-
-### Excerpt 2005
-
-```
 police body-cam AI analysis rules
-```
-
-### Excerpt 2006
-
-```
 forensic lab AI workflows
-```
-
-### Excerpt 2007
-
-```
 sealed / juvenile / expunged record misuse through AI search
-```
-
-### Excerpt 2008
-
-```
 media influence on juries through synthetic evidence outside the courtroom
-```
-
-### Excerpt 2009
-
-```
 Status
-```
-
-### Excerpt 2010
-
-```
 Recommended next move
-```
-
-### Excerpt 2011
-
-```
 TEC-JUD-084|TEC|JUD|AI systems used in forensic laboratories must meet strict scientific validation standards and may not operate as opaque or unreviewable systems|MISSING
-```
-
-### Excerpt 2012
-
-```
 TEC-JUD-085|TEC|JUD|Forensic AI systems must be independently tested for accuracy bias and reproducibility before use in any evidentiary pipeline|MISSING
-```
-
-### Excerpt 2013
-
-```
 5. Sealed, Expunged, and Protected Records
-```
-
-### Excerpt 2014
-
-```
 TEC-JUD-086|TEC|JUD|AI systems may not reconstruct infer or surface sealed expunged or legally protected records through data aggregation or inference|MISSING
-```
-
-### Excerpt 2015
-
-```
 TEC-JUD-087|TEC|JUD|Use of AI to bypass legal protections on records privacy or expungement is prohibited and subject to enforcement|MISSING
-```
-
-### Excerpt 2016
-
-```
 6. External AI Influence on Courts and Juries
-```
-
-### Excerpt 2017
-
-```
 TEC-JUD-088|TEC|JUD|AI-generated content may not be used to influence jurors witnesses or proceedings outside the courtroom through targeted media or messaging|MISSING
-```
-
-### Excerpt 2018
-
-```
 TEC-JUD-089|TEC|JUD|Courts must recognize and mitigate risks of AI-driven public influence campaigns that could affect jury impartiality or trial fairness|MISSING
-```
-
-### Excerpt 2019
-
-```
 7. Model Drift, Updates, and Version Control
-```
-
-### Excerpt 2020
-
-```
 🧠 Status: AI Justice / Courts
-```
-
-### Excerpt 2021
-
-```
 Coverage
-```
-
-### Excerpt 2022
-
-```
 courtroom procedures
-```
-
-### Excerpt 2023
-
-```
 evidence rules
-```
-
-### Excerpt 2024
-
-```
 juries
-```
-
-### Excerpt 2025
-
-```
 prosecution / defense parity
-```
-
-### Excerpt 2026
-
-```
 housing court
-```
-
-### Excerpt 2027
-
-```
 administrative systems
-```
-
-### Excerpt 2028
-
-```
 fines / fees
-```
-
-### Excerpt 2029
-
-```
 legal aid
-```
-
-### Excerpt 2030
-
-```
 records systems
-```
-
-### Excerpt 2031
-
-```
 forensic labs
-```
-
-### Excerpt 2032
-
-```
 translation
-```
-
-### Excerpt 2033
-
-```
 public influence
-```
-
-### Excerpt 2034
-
-```
 procurement / oversight
-```
-
-### Excerpt 2035
-
-```
 Completeness estimate
-```
-
-### Excerpt 2036
-
-```
 🧭 Recommendation
-```
-
-### Excerpt 2037
-
-```
 This is not a problem, but later it should become one canonical doctrine with domain references.
-```
-
-### Excerpt 2038
-
-```
 You want AI to help access, but not to become the excuse for replacing people.
-```
-
-### Excerpt 2039
-
-```
 Coherent but fragile
-```
-
-### Excerpt 2040
-
-```
 This exception must stay narrow or it will become a loophole.
-```
-
-### Excerpt 2041
-
-```
 4. Domain-by-domain audit
-```
-
-### Excerpt 2042
-
-```
 Strengths
-```
-
-### Excerpt 2043
-
-```
 strong instincts on emergency powers
-```
-
-### Excerpt 2044
-
-```
 strong anti-immunity stance
-```
-
-### Excerpt 2045
-
-```
 war powers and records issues captured
-```
-
-### Excerpt 2046
-
-```
 good anti-self-dealing instincts
-```
-
-### Excerpt 2047
-
-```
 Gaps
-```
-
-### Excerpt 2048
-
-```
 not enough on appointments / removals structure
-```
-
-### Excerpt 2049
-
-```
 not enough on acting officials / shadow appointments
-```
-
-### Excerpt 2050
-
-```
 not enough on DOJ independence in detail
-```
-
-### Excerpt 2051
-
-```
 not enough on inspector-general protections
-```
-
-### Excerpt 2052
-
-```
 not enough on executive use of agencies against opponents
-```
-
-### Excerpt 2053
-
-```
 Completeness
-```
-
-### Excerpt 2054
-
-```
 one of the broadest sections now
-```
-
-### Excerpt 2055
-
-```
 good anti-profiling / anti-racial-bias rules
-```
-
-### Excerpt 2056
-
-```
 good detention instincts
-```
-
-### Excerpt 2057
-
-```
 sentencing and prison rules strong
-```
-
-### Excerpt 2058
-
-```
 recent prosecution / defense / evidence / appeals expansion was very valuable
-```
-
-### Excerpt 2059
-
-```
 still needs probation / parole / fines / fees
-```
-
-### Excerpt 2060
-
-```
 expungement / sealing / record-clearing needs work
-```
-
-### Excerpt 2061
-
-```
 restorative justice not yet built
-```
-
-### Excerpt 2062
-
-```
 victims / witnesses / police credibility rules still thin
-```
-
-### Excerpt 2063
-
-```
 immigration justice still not deep enough
-```
-
-### Excerpt 2064
-
-```
 broader carceral conditions can still go further
-```
-
-### Excerpt 2065
-
-```
 family court and civil process outside AI remain underdeveloped
-```
-
-### Excerpt 2066
-
-```
 one of the strongest philosophical sections
-```
-
-### Excerpt 2067
-
-```
 privacy and bodily autonomy are strong
-```
-
-### Excerpt 2068
-
-```
 rights-expansion orientation is strong
-```
-
-### Excerpt 2069
-
-```
 religion / freedom from religion captured well
-```
-
-### Excerpt 2070
-
-```
 economic rights integration is a major strength
-```
-
-### Excerpt 2071
-
-```
 needs more formal rights hierarchy / structure
-```
-
-### Excerpt 2072
-
-```
 right to education still thin outside mention
-```
-
-### Excerpt 2073
-
-```
 data rights could go deeper outside AI
-```
-
-### Excerpt 2074
-
-```
 labor rights and housing rights need stronger integration here or clearer separation elsewhere
-```
-
-### Excerpt 2075
-
-```
 enforcement and judicial-protection mechanisms need more depth
-```
-
-### Excerpt 2076
-
-```
 strong moral direction
-```
-
-### Excerpt 2077
-
-```
 UBI / wage / welfare protections are good
-```
-
-### Excerpt 2078
-
-```
 anti-hoarding instincts are clear
-```
-
-### Excerpt 2079
-
-```
 industrial policy only beginning
-```
-
-### Excerpt 2080
-
-```
 inflation / price / cost-of-living mechanics underbuilt
-```
-
-### Excerpt 2081
-
-```
 automation-tax and AI worker tax only just started
-```
-
-### Excerpt 2082
-
-```
 housing-economy integration underbuilt
-```
-
-### Excerpt 2083
-
-```
 benefits / tax interaction needs work
-```
-
-### Excerpt 2084
-
-```
 labor-capital rebalance still thin
-```
-
-### Excerpt 2085
-
-```
 journalist and source protections are strong
-```
-
-### Excerpt 2086
-
-```
 synthetic-media rules are strong
-```
-
-### Excerpt 2087
-
-```
 disinformation concern is clear
-```
-
-### Excerpt 2088
-
-```
 recommender systems and algorithmic amplification are underbuilt
-```
-
-### Excerpt 2089
-
-```
 platform-distribution power is underbuilt
-```
-
-### Excerpt 2090
-
-```
 audience manipulation / addiction loops underbuilt
-```
-
-### Excerpt 2091
-
-```
 information monopolies underbuilt
-```
-
-### Excerpt 2092
-
-```
 news ecosystem structure still thin
-```
-
-### Excerpt 2093
-
-```
 housing as a right is conceptually present
-```
-
-### Excerpt 2094
-
-```
 anti-gentrification recognized as important
-```
-
-### Excerpt 2095
-
-```
 massive gap area overall
-```
-
-### Excerpt 2096
-
-```
 affordability mechanisms
-```
-
-### Excerpt 2097
-
-```
 zoning / supply / social housing
-```
-
-### Excerpt 2098
-
-```
 tenant rights
-```
-
-### Excerpt 2099
-
-```
 ownership vs rental balance
-```
-
-### Excerpt 2100
-
-```
 homelessness policy
-```
-
-### Excerpt 2101
-
-```
 cost-of-living stabilization
-```
-
-### Excerpt 2102
-
-```
 strongest domain cluster overall
-```
-
-### Excerpt 2103
-
-```
 now broad, coherent, and cross-sector
-```
-
-### Excerpt 2104
-
-```
 strong system-rule integration
-```
-
-### Excerpt 2105
-
-```
 good bias, fairness, accountability, and human-review logic
-```
-
-### Excerpt 2106
-
-```
 strong on surveillance, healthcare, education, work, finance, and courts
-```
-
-### Excerpt 2107
-
-```
 media/recommender systems could go deeper
-```
-
-### Excerpt 2108
-
-```
 scientific research integrity could become its own AI section
-```
-
-### Excerpt 2109
-
-```
 consumer companionship / child-directed non-mental-health AI could go deeper
-```
-
-### Excerpt 2110
-
-```
 final internal AI cleanup and consolidation still needed
-```
-
-### Excerpt 2111
-
-```
 Housing / cost of living
-```
-
-### Excerpt 2112
-
-```
 Education outside AI
-```
-
-### Excerpt 2113
-
-```
 Administrative state / agencies
-```
-
-### Excerpt 2114
-
-```
 Antitrust / corporate power
-```
-
-### Excerpt 2115
-
-```
 Infrastructure / environment
-```
-
-### Excerpt 2116
-
-```
 Checks and balances
-```
-
-### Excerpt 2117
-
-```
 Labor outside AI
-```
-
-### Excerpt 2118
-
-```
 Broader justice follow-up after AI
-```
-
-### Excerpt 2119
-
-```
 General healthcare / insurance transition overhaul
-```
-
-### Excerpt 2120
-
-```
 6. Biggest platform-wide strengths
-```
-
-### Excerpt 2121
-
-```
 Core values and governing philosophy
-```
-
-### Excerpt 2122
-
-```
 System-rules architecture
-```
-
-### Excerpt 2123
-
-```
 Rights / privacy / bodily autonomy framing
-```
-
-### Excerpt 2124
-
-```
 Healthcare structure
-```
-
-### Excerpt 2125
-
-```
 AI governance framework
-```
-
-### Excerpt 2126
-
-```
 Anti-fragmentation and anti-capture logic
-```
-
-### Excerpt 2127
-
-```
 Strong instinct for accountability and bias prevention
-```
-
-### Excerpt 2128
-
-```
 7. Immediate recommendations
-```
-
-### Excerpt 2129
-
-```
 Second
-```
-
-### Excerpt 2130
-
-```
 probation
-```
-
-### Excerpt 2131
-
-```
 parole
-```
-
-### Excerpt 2132
-
-```
 fines and fees
-```
-
-### Excerpt 2133
-
-```
 expungement / record clearing
-```
-
-### Excerpt 2134
-
-```
 a few core process protections that sit naturally beside them
-```
-
-### Excerpt 2135
-
-```
 post-sentencing supervision
-```
-
-### Excerpt 2136
-
-```
 monetary punishment
-```
-
-### Excerpt 2137
-
-```
 long-tail consequences of records
-```
-
-### Excerpt 2138
-
-```
 non-carceral alternatives
-```
-
-### Excerpt 2139
-
-```
 process fairness after conviction
-```
-
-### Excerpt 2140
-
-```
 1. Probation and parole
-```
-
-### Excerpt 2141
-
-```
 JUS-FFF-001|JUS|FFF|Justice systems must not use fines fees and monetary penalties in ways that criminalize poverty or create coercive revenue extraction|MISSING
-```
-
-### Excerpt 2142
-
-```
 JUS-FFF-002|JUS|FFF|Ability to pay must be assessed before imposing or enforcing fines fees restitution schedules or other monetary penalties|MISSING
-```
-
-### Excerpt 2143
-
-```
 JUS-FFF-003|JUS|FFF|People may not be incarcerated detained or otherwise deprived of liberty solely because of inability to pay fines or fees|MISSING
-```
-
-### Excerpt 2144
-
-```
 JUS-FFF-004|JUS|FFF|Late fees interest penalties and compounding charges in justice-related debts must be strictly limited or prohibited|MISSING
-```
-
-### Excerpt 2145
-
-```
 JUS-FFF-005|JUS|FFF|Courts and agencies must provide accessible alternatives including waiver reduction community-based alternatives or income-based payment structures|MISSING
-```
-
-### Excerpt 2146
-
-```
 JUS-FFF-006|JUS|FFF|Justice institutions may not depend on fines fees or civil forfeiture as core operating revenue sources|MISSING
-```
-
-### Excerpt 2147
-
-```
 3. Expungement, sealing, and record clearing
-```
-
-### Excerpt 2148
-
-```
 JUS-REC-001|JUS|REC|People should have broad access to sealing expungement and record-clearing processes so past contact with the justice system does not create lifelong exclusion|MISSING
-```
-
-### Excerpt 2149
-
-```
 JUS-REC-002|JUS|REC|Expungement and sealing should be automatic in many categories rather than dependent on expensive complex petition processes|MISSING
-```
-
-### Excerpt 2150
-
-```
 JUS-REC-003|JUS|REC|Juvenile records should be sealed or expunged automatically in most cases absent extraordinary circumstances|MISSING
-```
-
-### Excerpt 2151
-
-```
 JUS-REC-004|JUS|REC|Dismissed charges acquittals and invalidated convictions should be removed or sealed promptly and without procedural barriers|MISSING
-```
-
-### Excerpt 2152
-
-```
 JUS-REC-005|JUS|REC|Background-check systems and public records systems must honor sealing and expungement and may not recreate protected records through aggregation or inference|MISSING
-```
-
-### Excerpt 2153
-
-```
 JUS-REC-006|JUS|REC|People must have accessible processes to correct errors in criminal-history records background reports and public databases|MISSING
-```
-
-### Excerpt 2154
-
-```
 4. Restorative justice and diversion
-```
-
-### Excerpt 2155
-
-```
 This sits naturally beside record clearing and supervision.
-```
-
-### Excerpt 2156
-
-```
 JUS-REV-005|JUS|REV|Post-conviction review should not be restricted by artificial deadlines where credible evidence of innocence legal error or scientific unreliability emerges later|MISSING
-```
-
-### Excerpt 2157
-
-```
 JUS-REV-006|JUS|REV|People seeking post-conviction relief must have meaningful access to counsel records forensic review and procedural guidance|MISSING
-```
-
-### Excerpt 2158
-
-```
 JUS-REV-007|JUS|REV|Justice systems should create presumptive review pathways when systemic misconduct or discredited methods affect classes of convictions|MISSING
-```
-
-### Excerpt 2159
-
-```
 Why these additions matter
-```
-
-### Excerpt 2160
-
-```
 what happens after conviction
-```
-
-### Excerpt 2161
-
-```
 what poverty does inside legal systems
-```
-
-### Excerpt 2162
-
-```
 how long records keep hurting people
-```
-
-### Excerpt 2163
-
-```
 how supervision becomes a hidden punishment system
-```
-
-### Excerpt 2164
-
-```
 how alternatives to incarceration should actually work
-```
-
-### Excerpt 2165
-
-```
 victims / witnesses / police credibility rules
-```
-
-### Excerpt 2166
-
-```
 interpreter access and language justice outside the AI-specific court context
-```
-
-### Excerpt 2167
-
-```
 family court and civil process outside the AI framing
-```
-
-### Excerpt 2168
-
-```
 immigration justice in full
-```
-
-### Excerpt 2169
-
-```
 police evidence retention / body cam / disclosure / misconduct records
-```
-
-### Excerpt 2170
-
-```
 probation/parole implementation details if you want deeper mechanisms
-```
-
-### Excerpt 2171
-
-```
 Recommended next justice pass
-```
-
-### Excerpt 2172
-
-```
 Phase 2
-```
-
-### Excerpt 2173
-
-```
 witness protections and anti-intimidation
-```
-
-### Excerpt 2174
-
-```
 police credibility disclosure / Brady-style issues
-```
-
-### Excerpt 2175
-
-```
 interpreter access / language access in justice systems
-```
-
-### Excerpt 2176
-
-```
 misconduct records and evidence disclosure
-```
-
-### Excerpt 2177
-
-```
 qualified immunity is a foundational gap
-```
-
-### Excerpt 2178
-
-```
 forfeiture reform closes a major abuse vector
-```
-
-### Excerpt 2179
-
-```
  AI justice / judiciary / courts first pass
-```
-
-### Excerpt 2180
-
-```
  Broader justice Phase 1 (supervision / fines / records / restorative)
-```
-
-### Excerpt 2181
-
-```
  Ban qualified immunity
-```
-
-### Excerpt 2182
-
-```
  Ban civil asset forfeiture
-```
-
-### Excerpt 2183
-
-```
  Broader justice Phase 2 (victims / witnesses / police credibility / interpreter access)
-```
-
-### Excerpt 2184
-
-```
  Re-sync canonical dataset
-```
-
-### Excerpt 2185
-
-```
 Next move
-```
-
-### Excerpt 2186
-
-```
 Go
-```
-
-### Excerpt 2187
-
-```
 Thought for a couple of seconds
-```
-
-### Excerpt 2188
-
-```
 Short checklist
-```
-
-### Excerpt 2189
-
-```
  Broader justice Phase 1
-```
-
-### Excerpt 2190
-
-```
  Broader justice Phase 2: victims / witnesses / police credibility / interpreter access / disclosure
-```
-
-### Excerpt 2191
-
-```
 Broader justice follow-up — Phase 2
-```
-
-### Excerpt 2192
-
-```
 real protection for witnesses
-```
-
-### Excerpt 2193
-
-```
 safeguards against abuse or coercion
-```
-
-### Excerpt 2194
-
-```
 JUS-WIT-001|JUS|WIT|Witnesses must be protected from intimidation retaliation coercion and violence through fair and accountable legal protections|MISSING
-```
-
-### Excerpt 2195
-
-```
 JUS-WIT-002|JUS|WIT|Witness-protection measures must be proportionate reviewable and structured to avoid becoming tools for coercion or secrecy abuse|MISSING
-```
-
-### Excerpt 2196
-
-```
 JUS-WIT-003|JUS|WIT|Courts and prosecutors must disclose material inducements benefits or pressures applied to witnesses so credibility can be fairly assessed|MISSING
-```
-
-### Excerpt 2197
-
-```
 JUS-WIT-004|JUS|WIT|Witness intimidation by officials law enforcement litigants or private actors must be subject to strong penalties and independent review|MISSING
-```
-
-### Excerpt 2198
-
-```
 JUS-WIT-005|JUS|WIT|Trauma-informed witness support should be available without compromising accuracy due process or adversarial fairness|MISSING
-```
-
-### Excerpt 2199
-
-```
 3. Police credibility, misconduct disclosure, and Brady-type obligations
-```
-
-### Excerpt 2200
-
-```
 JUS-POL-013|JUS|POL|Law enforcement misconduct records relevant to credibility honesty bias excessive force or constitutional violations must be preserved disclosed and made available where legally relevant|MISSING
-```
-
-### Excerpt 2201
-
-```
 JUS-POL-014|JUS|POL|Prosecutors must disclose credibility-related misconduct records of law enforcement witnesses and may not suppress Brady or Giglio material|MISSING
-```
-
-### Excerpt 2202
-
-```
 JUS-POL-015|JUS|POL|Police officers with substantiated records of dishonesty evidence tampering bias or repeated rights violations must face enforceable consequences including limits on testimony and decertification where appropriate|MISSING
-```
-
-### Excerpt 2203
-
-```
 JUS-POL-016|JUS|POL|Law enforcement agencies may not use internal secrecy confidentiality agreements or record-destruction practices to conceal misconduct relevant to justice proceedings|MISSING
-```
-
-### Excerpt 2204
-
-```
 JUS-POL-017|JUS|POL|Independent systems should track officer misconduct patterns decertification and credibility issues across jurisdictions to prevent silent rehiring and forum shopping|MISSING
-```
-
-### Excerpt 2205
-
-```
 4. Interpreter access and language justice
-```
-
-### Excerpt 2206
-
-```
 immigration justice as a full domain
-```
-
-### Excerpt 2207
-
-```
 family and civil justice outside the AI framing
-```
-
-### Excerpt 2208
-
-```
 police body-cam / evidence-retention / disciplinary architecture
-```
-
-### Excerpt 2209
-
-```
 probation/parole implementation detail if you want deeper mechanics
-```
-
-### Excerpt 2210
-
-```
 restorative justice deeper buildout if desired
-```
-
-### Excerpt 2211
-
-```
 wrongful-conviction and innocence architecture could still go deeper
-```
-
-### Excerpt 2212
-
-```
 victims / family-court interaction rules could be expanded carefully
-```
-
-### Excerpt 2213
-
-```
 👉 Return to healthcare / insurance overhaul next, while the anti-denial, fairness, and human-review logic is still hot.
-```
-
-### Excerpt 2214
-
-```
 Yes 
-```
-
-### Excerpt 2215
-
-```
  Broader justice follow-up phases 1 and 2
-```
-
-### Excerpt 2216
-
-```
  Re-sync canonical dataset after this healthcare pass
-```
-
-### Excerpt 2217
-
-```
  Continue full all-domain audit resolution pass
-```
-
-### Excerpt 2218
-
-```
 Healthcare / insurance overhaul — transition-state framework
-```
-
-### Excerpt 2219
-
-```
 If decisions are slow enough, delay becomes denial.
-```
-
-### Excerpt 2220
-
-```
 Biggest remaining healthcare gaps after this pass
-```
-
-### Excerpt 2221
-
-```
 hospital system and provider organization
-```
-
-### Excerpt 2222
-
-```
 public-health infrastructure and prevention
-```
-
-### Excerpt 2223
-
-```
 pharma pricing / manufacturing / supply policy
-```
-
-### Excerpt 2224
-
-```
 disability-care delivery specifics
-```
-
-### Excerpt 2225
-
-```
 long-term care / elder care
-```
-
-### Excerpt 2226
-
-```
 reproductive-care implementation details
-```
-
-### Excerpt 2227
-
-```
 final consolidation between current-system rules and single-payer end-state rules
-```
-
-### Excerpt 2228
-
-```
 👉 Immigration next, because it remains one of the thinnest high-stakes domains and overlaps strongly with rights, detention, justice, labor, and due process.
-```
-
-### Excerpt 2229
-
-```
 strengthens drug access and coverage guarantees
-```
-
-### Excerpt 2230
-
-```
 Anti-fragmentation rules
-```
-
-### Excerpt 2231
-
-```
 prevents regional scarcity from becoming a de facto denial
-```
-
-### Excerpt 2232
-
-```
 Evidence-based governance
-```
-
-### Excerpt 2233
-
-```
 ensures quotas are based on real data, not fear or politics
-```
-
-### Excerpt 2234
-
-```
 Anti-abuse framework
-```
-
-### Excerpt 2235
-
-```
 keeps safeguards, but prevents them from becoming denial tools
-```
-
-### Excerpt 2236
-
-```
 📊 Updated healthcare status
-```
-
-### Excerpt 2237
-
-```
 supply-side constraints were previously underdeveloped
-```
-
-### Excerpt 2238
-
-```
 controlled substances are a known systemic failure point
-```
-
-### Excerpt 2239
-
-```
  AI justice / judiciary / courts
-```
-
-### Excerpt 2240
-
-```
  Broader justice follow-up
-```
-
-### Excerpt 2241
-
-```
  Healthcare transition-state overhaul
-```
-
-### Excerpt 2242
-
-```
  Controlled substance quota reform
-```
-
-### Excerpt 2243
-
-```
  Choose next major underbuilt domain
-```
-
-### Excerpt 2244
-
-```
 Recommendation — next move
-```
-
-### Excerpt 2245
-
-```
 IMM-DUE-001|IMM|DUE|People in immigration proceedings must have meaningful due process including notice interpretation access to records and opportunity to be heard|MISSING
-```
-
-### Excerpt 2246
-
-```
 IMM-DUE-002|IMM|DUE|People must have timely access to counsel or accredited representation in immigration proceedings especially where detention removal or family separation is at stake|MISSING
-```
-
-### Excerpt 2247
-
-```
 IMM-DUE-003|IMM|DUE|Immigration proceedings may not rely on rushed scheduling procedural traps or inaccessible filing systems that functionally deny rights|MISSING
-```
-
-### Excerpt 2248
-
-```
 IMM-DUE-004|IMM|DUE|Immigration decisions must be reviewable and may not be insulated from judicial oversight through excessive secrecy or discretionary abuse|MISSING
-```
-
-### Excerpt 2249
-
-```
 IMM-DUE-005|IMM|DUE|Interpretation and translation services must be available at every critical stage of immigration processing and adjudication without cost barriers|MISSING
-```
-
-### Excerpt 2250
-
-```
 3. Detention and liberty
-```
-
-### Excerpt 2251
-
-```
 IMM-ADM-001|IMM|ADM|Immigration systems must be funded and staffed to reduce backlogs and delays that create injustice through prolonged uncertainty|MISSING
-```
-
-### Excerpt 2252
-
-```
 IMM-ADM-002|IMM|ADM|Administrative simplification should reduce complexity duplication and document burdens that make legal compliance inaccessible to ordinary people|MISSING
-```
-
-### Excerpt 2253
-
-```
 IMM-ADM-003|IMM|ADM|People must have accessible status updates document access and case information without relying on opaque or hostile bureaucratic systems|MISSING
-```
-
-### Excerpt 2254
-
-```
 IMM-ADM-004|IMM|ADM|Immigration forms notices deadlines and legal standards should be written in clearer language and supported by navigable public guidance|MISSING
-```
-
-### Excerpt 2255
-
-```
 IMM-ADM-005|IMM|ADM|Backlog reduction efforts may not sacrifice accuracy due process or individualized review|MISSING
-```
-
-### Excerpt 2256
-
-```
 10. Data, surveillance, and records in immigration systems
-```
-
-### Excerpt 2257
-
-```
 IMM-DAT-001|IMM|DAT|Immigration systems may not use broad data surveillance or commercially acquired data to bypass due process or create shadow enforcement profiles|MISSING
-```
-
-### Excerpt 2258
-
-```
 IMM-DAT-002|IMM|DAT|Data-sharing between immigration systems and other government systems must be tightly limited transparent and legally justified|MISSING
-```
-
-### Excerpt 2259
-
-```
 IMM-DAT-003|IMM|DAT|Immigration data must be treated as highly sensitive and may not be used for unrelated profiling commercial use or political targeting|MISSING
-```
-
-### Excerpt 2260
-
-```
 IMM-DAT-004|IMM|DAT|Record systems must include correction mechanisms so people can challenge inaccurate data that affects status detention or removal risk|MISSING
-```
-
-### Excerpt 2261
-
-```
 11. Access to citizenship and civic belonging
-```
-
-### Excerpt 2262
-
-```
 This is where the pillar becomes durable.
-```
-
-### Excerpt 2263
-
-```
 IMM-OVR-001|IMM|OVR|Immigration agencies and detention systems must be subject to strong independent oversight with access to facilities records and decision patterns|MISSING
-```
-
-### Excerpt 2264
-
-```
 IMM-OVR-002|IMM|OVR|Immigration systems must publish standardized data on detention removals processing times family separation outcomes legal representation access and rights complaints|MISSING
-```
-
-### Excerpt 2265
-
-```
 IMM-OVR-003|IMM|OVR|Patterns of abuse rights violations discriminatory enforcement or unlawful detention must trigger mandatory corrective action and review|MISSING
-```
-
-### Excerpt 2266
-
-```
 IMM-OVR-004|IMM|OVR|Immigration officials and agencies may not evade accountability through secrecy exceptional process or fragmented jurisdictional responsibility|MISSING
-```
-
-### Excerpt 2267
-
-```
 Why this matters
-```
-
-### Excerpt 2268
-
-```
 visa system design in more detail
-```
-
-### Excerpt 2269
-
-```
 asylum / refugee procedures in more detail
-```
-
-### Excerpt 2270
-
-```
 trafficking and asylum overlap
-```
-
-### Excerpt 2271
-
-```
 detention alternatives implementation specifics
-```
-
-### Excerpt 2272
-
-```
 employer visa dependency and sector-specific exploitation
-```
-
-### Excerpt 2273
-
-```
 integration / language / education / local support systems
-```
-
-### Excerpt 2274
-
-```
 immigrant access to healthcare and benefits in more detail
-```
-
-### Excerpt 2275
-
-```
 naturalization mechanics and fee reform details
-```
-
-### Excerpt 2276
-
-```
 👉 Housing / cost of living next, because it directly connects to your core theme of stability, ownership, material sufficiency, and “a life worth fighting for.”
-```
-
-### Excerpt 2277
-
-```
 Ability to gender and sex on birth records and legal records should be explicitly guaranteed, and no forced sterilization.
-```
-
-### Excerpt 2278
-
-```
 detention limits
-```
-
-### Excerpt 2279
-
-```
 border governance
-```
-
-### Excerpt 2280
-
-```
 family protections
-```
-
-### Excerpt 2281
-
-```
 status-pathway sections
-```
-
-### Excerpt 2282
-
-```
 legal records / identity rights
-```
-
-### Excerpt 2283
-
-```
 bodily autonomy rules
-```
-
-### Excerpt 2284
-
-```
 IMM-BRD-006|IMM|BRD|Border officials and agencies must be subject to strong body-camera record-retention and evidence-preservation rules where consistent with safety and privacy law|MISSING
-```
-
-### Excerpt 2285
-
-```
 IMM-BRD-007|IMM|BRD|Independent review mechanisms must investigate deaths abuse force incidents and rights violations occurring in border enforcement or custody contexts|MISSING
-```
-
-### Excerpt 2286
-
-```
 IMM-BRD-008|IMM|BRD|Border enforcement may not use deprivation of food water medical care shelter hygiene or communication access as tools of deterrence or compliance|MISSING
-```
-
-### Excerpt 2287
-
-```
 IMM-BRD-009|IMM|BRD|Border processing facilities must meet humane standards for healthcare sanitation temperature child safety disability access and family integrity|MISSING
-```
-
-### Excerpt 2288
-
-```
 IMM-BRD-010|IMM|BRD|Emergency border powers may not be used as permanent substitutes for lawful immigration governance or to bypass rights protections indefinitely|MISSING
-```
-
-### Excerpt 2289
-
-```
 IMM-BRD-011|IMM|BRD|Use of military or quasi-military structures in border governance must be tightly limited and may not displace civilian accountability or constitutional protections|MISSING
-```
-
-### Excerpt 2290
-
-```
 6. Sex and gender markers on IDs and passports
-```
-
-### Excerpt 2291
-
-```
 These belong partly in rights and partly in immigration / civic-record systems. Immigration and passports are a key implementation area, so they belong here too.
-```
-
-### Excerpt 2292
-
-```
 Remove sex/gender markers from IDs
-```
-
-### Excerpt 2293
-
-```
 RGT-IDN-001|RGT|IDN|Sex and gender markers should be removed from passports and government-issued identification documents including state drivers licenses unless a compelling rights-protective need is clearly demonstrated|MISSING
-```
-
-### Excerpt 2294
-
-```
 Update records rights
-```
-
-### Excerpt 2295
-
-```
 RGT-IDN-002|RGT|IDN|People must have an explicit right to update sex and gender markers on birth records passports identification documents and other legal records without abusive barriers|MISSING
-```
-
-### Excerpt 2296
-
-```
 RGT-IDN-003|RGT|IDN|No one may be required to undergo sterilization surgery or other irreversible medical procedures in order to update legal identity records|MISSING
-```
-
-### Excerpt 2297
-
-```
 Immigration document implementation
-```
-
-### Excerpt 2298
-
-```
 IMM-DOC-001|IMM|DOC|Immigration and travel document systems must respect updated legal identity information and may not impose contradictory marker rules across agencies|MISSING
-```
-
-### Excerpt 2299
-
-```
 IMM-DOC-002|IMM|DOC|Removal of sex and gender markers from passports and identity documents should be implemented in ways that do not create new barriers to travel status processing or safety|MISSING
-```
-
-### Excerpt 2300
-
-```
 7. Forced sterilization ban
-```
-
-### Excerpt 2301
-
-```
 RGT-BOD-008|RGT|BOD|Forced sterilization is prohibited in all contexts including criminal justice immigration disability guardianship public benefits and medical systems|MISSING
-```
-
-### Excerpt 2302
-
-```
 RGT-BOD-009|RGT|BOD|No government institution court agency or private actor may require sterilization as a condition of status recognition confinement release treatment or legal compliance|MISSING
-```
-
-### Excerpt 2303
-
-```
 8. Immigration process integrity and records expansion
-```
-
-### Excerpt 2304
-
-```
 IMM-ADM-006|IMM|ADM|Immigration applicants must have clear access to case status notices deadlines decisions and supporting records through understandable and accessible systems|MISSING
-```
-
-### Excerpt 2305
-
-```
 IMM-ADM-007|IMM|ADM|Immigration agencies may not use contradictory document standards shifting requirements or opaque procedural changes as de facto denial mechanisms|MISSING
-```
-
-### Excerpt 2306
-
-```
 IMM-ADM-008|IMM|ADM|Where agency error delay or lost records materially harms an applicant the system must provide corrective remedies rather than placing full burden on the applicant|MISSING
-```
-
-### Excerpt 2307
-
-```
 Immigration is no longer one of the weakest domains, though it still needs more work to become one of the stronger ones.
-```
-
-### Excerpt 2308
-
-```
 detailed visa-class design
-```
-
-### Excerpt 2309
-
-```
 asylum and refugee procedures in more depth
-```
-
-### Excerpt 2310
-
-```
 trafficking-specific protections
-```
-
-### Excerpt 2311
-
-```
 local integration and support systems
-```
-
-### Excerpt 2312
-
-```
 immigrant healthcare / education / public-service access in more detail
-```
-
-### Excerpt 2313
-
-```
 naturalization / fee reform / citizenship mechanics
-```
-
-### Excerpt 2314
-
-```
 immigration court structure in more detail
-```
-
-### Excerpt 2315
-
-```
 specific limits on detention contractors and private detention actors
-```
-
-### Excerpt 2316
-
-```
 these are foundational constraints
-```
-
-### Excerpt 2317
-
-```
 they apply across the entire immigration system
-```
-
-### Excerpt 2318
-
-```
 they prevent a wide class of abuses
-```
-
-### Excerpt 2319
-
-```
 Recommendation — next immigration pass
-```
-
-### Excerpt 2320
-
-```
 Keep going. We're not done yet
-```
-
-### Excerpt 2321
-
-```
 IMM-ASY-006|IMM|ASY|Asylum and refugee procedures must include clear timely and humane screening processes that do not function as constructive denial through delay confusion or intimidation|MISSING
-```
-
-### Excerpt 2322
-
-```
 IMM-ASY-007|IMM|ASY|Credible-fear and related threshold screenings must be designed to identify potentially valid claims rather than exclude applicants through overly narrow interpretation or rushed adjudication|MISSING
-```
-
-### Excerpt 2323
-
-```
 IMM-ASY-008|IMM|ASY|People seeking asylum or refugee protection must have sufficient time access to records and access to counsel or accredited representation to prepare and present claims meaningfully|MISSING
-```
-
-### Excerpt 2324
-
-```
 IMM-ASY-009|IMM|ASY|Asylum adjudication must account for trauma memory disruption language barriers cultural differences and lack of documentation without treating those factors as proof against the applicant|MISSING
-```
-
-### Excerpt 2325
-
-```
 IMM-ASY-010|IMM|ASY|Children survivors of trafficking survivors of gender-based violence LGBTQ+ applicants and other vulnerable groups must receive procedures tailored to their specific protection needs|MISSING
-```
-
-### Excerpt 2326
-
-```
 IMM-ASY-011|IMM|ASY|Detention may not be used to pressure abandonment of asylum or humanitarian claims|MISSING
-```
-
-### Excerpt 2327
-
-```
 IMM-ASY-012|IMM|ASY|Asylum and refugee decisions must be explained clearly in accessible language with meaningful review and appeal opportunities|MISSING
-```
-
-### Excerpt 2328
-
-```
 IMM-ASY-013|IMM|ASY|Return or removal decisions in protection cases must include individualized safety assessment and may not rely on generalized country assumptions alone|MISSING
-```
-
-### Excerpt 2329
-
-```
 2. Visa, green-card, and permanent-residence overhaul — deeper mechanics
-```
-
-### Excerpt 2330
-
-```
 IMM-CRT-001|IMM|CRT|Immigration adjudication systems must be structured for independence fairness and competence and may not function as rubber-stamp enforcement mechanisms|MISSING
-```
-
-### Excerpt 2331
-
-```
 IMM-CRT-002|IMM|CRT|Immigration courts or equivalent adjudicative bodies should be insulated from political pressure case quotas and enforcement-first incentives that undermine fair adjudication|MISSING
-```
-
-### Excerpt 2332
-
-```
 IMM-CRT-003|IMM|CRT|People in immigration proceedings must have clear access to records hearing dates evidence and procedural guidance sufficient for meaningful participation|MISSING
-```
-
-### Excerpt 2333
-
-```
 IMM-CRT-004|IMM|CRT|Adjudicators in immigration systems must receive trauma-informed culturally competent and rights-grounded training appropriate to high-stakes human-rights cases|MISSING
-```
-
-### Excerpt 2334
-
-```
 more detailed visa-class design if you want it
-```
-
-### Excerpt 2335
-
-```
 refugee-resettlement and international-coordination specifics
-```
-
-### Excerpt 2336
-
-```
 contractor / private-detention specifics
-```
-
-### Excerpt 2337
-
-```
 deportation procedure detail and post-order review
-```
-
-### Excerpt 2338
-
-```
 more detailed public-benefits / healthcare interaction rules
-```
-
-### Excerpt 2339
-
-```
 border-technology and surveillance specifics beyond the general AI framework
-```
-
-### Excerpt 2340
-
-```
 I do want to address the specific immigration gaps you laid out.  In particular contractor/private-detention and visa overhauls
-```
-
-### Excerpt 2341
-
-```
 This should be very strong. Immigration detention and processing should not become a profit-driven shadow system.
-```
-
-### Excerpt 2342
-
-```
 Core contractor / private-detention rules
-```
-
-### Excerpt 2343
-
-```
 IMM-DET-007|IMM|DET|Private immigration detention facilities are prohibited|MISSING
-```
-
-### Excerpt 2344
-
-```
 IMM-DET-008|IMM|DET|Detention custody transportation or confinement of immigrants may not be outsourced to private companies for profit|MISSING
-```
-
-### Excerpt 2345
-
-```
 IMM-DET-009|IMM|DET|Government may not use private contractors to evade accountability transparency or legal protections in detention or custody operations|MISSING
-```
-
-### Excerpt 2346
-
-```
 Contractor restrictions beyond detention
-```
-
-### Excerpt 2347
-
-```
 IMM-CON-001|IMM|CON|Private contractors involved in immigration processing transportation surveillance case management or service delivery must be subject to full public-law accountability standards|MISSING
-```
-
-### Excerpt 2348
-
-```
 IMM-CON-002|IMM|CON|Immigration contractors may not claim secrecy proprietary privilege or privatized status to avoid oversight disclosure or judicial review|MISSING
-```
-
-### Excerpt 2349
-
-```
 IMM-CON-003|IMM|CON|Contractors performing immigration-related functions must be subject to independent audit public reporting and enforceable penalties for abuse or noncompliance|MISSING
-```
-
-### Excerpt 2350
-
-```
 IMM-CON-004|IMM|CON|No contractor compensation structure may reward detention volume removals denial rates speed-over-fairness or other perverse enforcement incentives|MISSING
-```
-
-### Excerpt 2351
-
-```
 IMM-CON-005|IMM|CON|Immigration-service contracts must prioritize rights protection quality of care competence and accountability rather than lowest-cost extraction models|MISSING
-```
-
-### Excerpt 2352
-
-```
 Anti-outsourcing abuse safeguards
-```
-
-### Excerpt 2353
-
-```
 IMM-CON-006|IMM|CON|Government may not fragment immigration functions across contractors in ways that obscure responsibility for rights violations neglect abuse or wrongful detention|MISSING
-```
-
-### Excerpt 2354
-
-```
 IMM-CON-007|IMM|CON|People harmed by immigration contractors must have full access to remedies records complaint systems and legal claims against both the contractor and the government entity responsible|MISSING
-```
-
-### Excerpt 2355
-
-```
 IMM-CON-008|IMM|CON|Independent oversight bodies must have full access to contractor-run facilities records communications incident logs and complaint data|MISSING
-```
-
-### Excerpt 2356
-
-```
 Detention-specific service protections
-```
-
-### Excerpt 2357
-
-```
 IMM-DET-010|IMM|DET|Any non-private immigration detention or custody setting must meet strong standards for healthcare mental healthcare disability access child safety communication and humane treatment|MISSING
-```
-
-### Excerpt 2358
-
-```
 IMM-DET-011|IMM|DET|Deaths injuries medical neglect sexual abuse and serious rights violations in immigration custody must trigger mandatory independent investigation and public reporting|MISSING
-```
-
-### Excerpt 2359
-
-```
 IMM-DET-012|IMM|DET|Contractor or agency employees involved in immigration custody abuse neglect falsification or retaliation must face enforceable consequences including removal referral and decertification where applicable|MISSING
-```
-
-### Excerpt 2360
-
-```
 2. Visa system overhaul — deeper architecture
-```
-
-### Excerpt 2361
-
-```
 simpler
-```
-
-### Excerpt 2362
-
-```
 more legible
-```
-
-### Excerpt 2363
-
-```
 less employer-dominated
-```
-
-### Excerpt 2364
-
-```
 less arbitrary
-```
-
-### Excerpt 2365
-
-```
 less backlog-driven
-```
-
-### Excerpt 2366
-
-```
 less exclusionary by wealth and bureaucracy
-```
-
-### Excerpt 2367
-
-```
 Core visa-overhaul rule
-```
-
-### Excerpt 2368
-
-```
 IMM-VIS-010|IMM|VIS|The visa system must be comprehensively modernized to reduce arbitrariness backlog dependency complexity and vulnerability to abuse while preserving lawful orderly migration|MISSING
-```
-
-### Excerpt 2369
-
-```
 Category clarity and simplification
-```
-
-### Excerpt 2370
-
-```
 IMM-VIS-011|IMM|VIS|Visa categories should be simplified clarified and reorganized where necessary so applicants can understand available pathways without excessive legal complexity|MISSING
-```
-
-### Excerpt 2371
-
-```
 IMM-VIS-012|IMM|VIS|Overlapping or contradictory visa rules should be reduced to prevent arbitrary denials inconsistent adjudication and needless procedural traps|MISSING
-```
-
-### Excerpt 2372
-
-```
 IMM-VIS-013|IMM|VIS|Visa pathways should be designed to reflect real family humanitarian educational and labor realities rather than outdated assumptions or artificial scarcity alone|MISSING
-```
-
-### Excerpt 2373
-
-```
 Timelines and predictability
-```
-
-### Excerpt 2374
-
-```
 IMM-VIS-014|IMM|VIS|Visa adjudications must operate under transparent target timelines with public reporting on delays backlogs and queue movement|MISSING
-```
-
-### Excerpt 2375
-
-```
 IMM-VIS-015|IMM|VIS|Applicants must have meaningful access to real-time case status and understandable reasons for delay request for evidence or denial|MISSING
-```
-
-### Excerpt 2376
-
-```
 IMM-VIS-016|IMM|VIS|Administrative delay may not be used as a de facto denial mechanism in visa adjudication|MISSING
-```
-
-### Excerpt 2377
-
-```
 Anti-arbitrariness and evidentiary fairness
-```
-
-### Excerpt 2378
-
-```
 IMM-VIS-017|IMM|VIS|Visa adjudication standards must be clear consistent and written in language that reduces excessive discretion and arbitrary outcomes|MISSING
-```
-
-### Excerpt 2379
-
-```
 IMM-VIS-018|IMM|VIS|Requests for documentation or proof in visa cases must be proportional realistic and tied to legitimate adjudicative need rather than bureaucratic overreach|MISSING
-```
-
-### Excerpt 2380
-
-```
 IMM-VIS-019|IMM|VIS|Applicants must have meaningful opportunities to correct errors supplement records and respond to concerns before adverse decisions are finalized|MISSING
-```
-
-### Excerpt 2381
-
-```
 Worker and student visa protections
-```
-
-### Excerpt 2382
-
-```
 IMM-VIS-020|IMM|VIS|Employment-based visa systems must reduce dependency on single employers and allow meaningful mobility when workers face abuse retaliation or exploitation|MISSING
-```
-
-### Excerpt 2383
-
-```
 IMM-VIS-021|IMM|VIS|Student and trainee visa systems must protect against exploitation status confusion and arbitrary disruption of lawful educational pathways|MISSING
-```
-
-### Excerpt 2384
-
-```
 IMM-VIS-022|IMM|VIS|Temporary visa systems should not be designed to keep people in prolonged precarity where long-term contribution and lawful presence justify a path to permanence|MISSING
-```
-
-### Excerpt 2385
-
-```
 Family visa protections
-```
-
-### Excerpt 2386
-
-```
 IMM-VIS-023|IMM|VIS|Family-based visa systems should prioritize reunification and reduce needless backlog separation and procedural complexity|MISSING
-```
-
-### Excerpt 2387
-
-```
 IMM-VIS-024|IMM|VIS|Family-based applicants should not face excessive documentary or procedural burdens that functionally prevent ordinary families from accessing lawful pathways|MISSING
-```
-
-### Excerpt 2388
-
-```
 Fee and access fairness
-```
-
-### Excerpt 2389
-
-```
 IMM-VIS-025|IMM|VIS|Visa fees must be regulated so they cover legitimate administration without functioning as exclusionary wealth filters|MISSING
-```
-
-### Excerpt 2390
-
-```
 IMM-VIS-026|IMM|VIS|Fee waivers reductions or public support should be available where cost would otherwise make lawful application practically inaccessible|MISSING
-```
-
-### Excerpt 2391
-
-```
 Transition to permanence
-```
-
-### Excerpt 2392
-
-```
 IMM-VIS-027|IMM|VIS|Visa systems should include clear mechanisms for transition from temporary lawful status to permanent residence where residence contribution and stability justify it|MISSING
-```
-
-### Excerpt 2393
-
-```
 IMM-VIS-028|IMM|VIS|People should not be forced into repeated cycles of temporary renewal where a durable lawful path is more appropriate and administratively rational|MISSING
-```
-
-### Excerpt 2394
-
-```
 Protection from policy whiplash
-```
-
-### Excerpt 2395
-
-```
 IMM-VIS-029|IMM|VIS|Applicants already in lawful immigration processes should be protected from abrupt policy reversals that unfairly destabilize pending or near-complete cases|MISSING
-```
-
-### Excerpt 2396
-
-```
 IMM-VIS-030|IMM|VIS|Major changes to visa systems should include transition rules that protect reliance interests and avoid arbitrary disruption of lawful applicants and families|MISSING
-```
-
-### Excerpt 2397
-
-```
 3. Optional glue rule: immigration pathways should reduce black-market pressure
-```
-
-### Excerpt 2398
-
-```
 1. They prevent privatized abuse ecosystems
-```
-
-### Excerpt 2399
-
-```
 👉 do one quick immigration closure pass later if needed, but move next to housing / cost of living, because that remains one of the most underbuilt high-impact domains.
-```
-
-### Excerpt 2400
-
-```
 🔧 Revision — Contractor model (hardened)
-```
-
-### Excerpt 2401
-
-```
 Replace the previous approach with a near-total ban + narrow carve-outs
-```
-
-### Excerpt 2402
-
-```
 1. Core rule: contractor prohibition
-```
-
-### Excerpt 2403
-
-```
 IMM-CON-009|IMM|CON|Immigration enforcement detention adjudication and core administrative functions may not be delegated to private contractors and must be performed by publicly accountable government entities|MISSING
-```
-
-### Excerpt 2404
-
-```
 2. Define what “core functions” means (important to avoid loopholes)
-```
-
-### Excerpt 2405
-
-```
 IMM-CON-010|IMM|CON|Core immigration functions include detention custody transportation enforcement decision-making adjudication case management and access to legal or custodial records and may not be outsourced to private actors|MISSING
-```
-
-### Excerpt 2406
-
-```
 3. Narrow carve-outs (non-core support only)
-```
-
-### Excerpt 2407
-
-```
 IMM-CON-015|IMM|CON|All permitted contractors must be subject to full public-law accountability including transparency requirements records access audit authority and legal liability equivalent to government actors|MISSING
-```
-
-### Excerpt 2408
-
-```
 8. Rights enforcement and remedies
-```
-
-### Excerpt 2409
-
-```
 IMM-CON-016|IMM|CON|Individuals harmed by contractor actions must have full legal recourse against both the contractor and the responsible government entity without procedural barriers or liability shields|MISSING
-```
-
-### Excerpt 2410
-
-```
 🧠 Why this version is better
-```
-
-### Excerpt 2411
-
-```
 If you want my recommendation:
-```
-
-### Excerpt 2412
-
-```
 👉 You’re very close on immigration—either do one final tightening pass, or move on and come back later with fresh eyes.
-```
-
-### Excerpt 2413
-
-```
 Core removal fairness rules
-```
-
-### Excerpt 2414
-
-```
 IMM-REM-004|IMM|REM|Removal proceedings must include meaningful notice access to records access to counsel and sufficient time to challenge legal or factual errors before deportation occurs|MISSING
-```
-
-### Excerpt 2415
-
-```
 IMM-REM-005|IMM|REM|No person may be deported while a timely appeal motion to reopen habeas petition or other qualifying legal challenge remains pending unless a court specifically authorizes removal|MISSING
-```
-
-### Excerpt 2416
-
-```
 IMM-REM-006|IMM|REM|Removal orders must be based on individualized review and may not be executed through rushed mass-processing systems that undermine factual accuracy or procedural fairness|MISSING
-```
-
-### Excerpt 2417
-
-```
 IMM-REM-007|IMM|REM|People facing removal must have access to the full factual and legal basis for the government’s case including records evidence and claimed grounds for removal|MISSING
-```
-
-### Excerpt 2418
-
-```
 Anti-error and anti-wrongful-removal protections
-```
-
-### Excerpt 2419
-
-```
 IMM-REM-008|IMM|REM|Immigration systems must include strong safeguards against wrongful removal including mistaken identity record error citizenship error and failure to account for legal relief eligibility|MISSING
-```
-
-### Excerpt 2420
-
-```
 IMM-REM-009|IMM|REM|Where credible evidence suggests a removal may be unlawful factually mistaken or rights-violating the system must pause removal pending review|MISSING
-```
-
-### Excerpt 2421
-
-```
 IMM-REM-010|IMM|REM|Wrongful removal must trigger mandatory review accountability investigation and remedies including pathways for return or legal correction where possible|MISSING
-```
-
-### Excerpt 2422
-
-```
 Family, health, and vulnerability protections in removal
-```
-
-### Excerpt 2423
-
-```
 IMM-REM-011|IMM|REM|Removal decisions must account for family unity caregiving obligations disability medical dependence and other serious humanitarian factors rather than treating them as irrelevant collateral issues|MISSING
-```
-
-### Excerpt 2424
-
-```
 IMM-REM-012|IMM|REM|People may not be removed in ways that knowingly cut off access to essential ongoing medical care without lawful review and medically safe transition planning|MISSING
-```
-
-### Excerpt 2425
-
-```
 IMM-REM-013|IMM|REM|Removal procedures involving children families disabled people or medically vulnerable individuals require heightened review and safeguards|MISSING
-```
-
-### Excerpt 2426
-
-```
 Procedure and transparency
-```
-
-### Excerpt 2427
-
-```
 IMM-REM-014|IMM|REM|Government agencies must publicly report standardized data on removals appeals stays wrongful-removal findings and countries of destination|MISSING
-```
-
-### Excerpt 2428
-
-```
 IMM-REM-015|IMM|REM|Expedited or summary removal procedures must be strictly limited and may not be used in ways that nullify due process or humanitarian protection rights|MISSING
-```
-
-### Excerpt 2429
-
-```
 IMM-REM-016|IMM|REM|Removal transport and handoff procedures must be documented auditable and reviewable to prevent disappearance abuse or unlawful transfer|MISSING
-```
-
-### Excerpt 2430
-
-```
 2. Refugee resettlement architecture
-```
-
-### Excerpt 2431
-
-```
 Those can wait unless you want immigration to become one of the very deepest pillars immediately.
-```
-
-### Excerpt 2432
-
-```
 👉 move next to Housing / cost of living, because it is one of the weakest high-impact areas and ties directly to your central themes of stability, ownership, dignity, and real freedom.
-```
-
-### Excerpt 2433
-
-```
 What that means
-```
-
-### Excerpt 2434
-
-```
 Core philosophy: strong and coherent
-```
-
-### Excerpt 2435
-
-```
 System rules: well-formed and reusable
-```
-
-### Excerpt 2436
-
-```
 Major pillars: mostly defined
-```
-
-### Excerpt 2437
-
-```
 Depth: uneven but improving rapidly
-```
-
-### Excerpt 2438
-
-```
 Internal consistency: good, some cleanup needed
-```
-
-### Excerpt 2439
-
-```
 📊 2. Domain Coverage & Completeness
-```
-
-### Excerpt 2440
-
-```
 Domain	Est. Completion	Notes
-```
-
-### Excerpt 2441
-
-```
 AI / Technology Governance	80–85%	Most mature domain
-```
-
-### Excerpt 2442
-
-```
 Healthcare	84–88%	Very strong, near complete first pass
-```
-
-### Excerpt 2443
-
-```
 Justice / Courts / Policing	78–82%	Strong but could still deepen
-```
-
-### Excerpt 2444
-
-```
 Immigration	90–93%	Now one of the strongest domains
-```
-
-### Excerpt 2445
-
-```
 Rights / Civil Liberties	75–80%	Strong foundation, needs structuring
-```
-
-### Excerpt 2446
-
-```
 Elections / Representation	75%	Solid but not deeply expanded
-```
-
-### Excerpt 2447
-
-```
 Anti-Corruption / Money in Politics	65%	Needs consolidation
-```
-
-### Excerpt 2448
-
-```
 Executive Power	60%	Underbuilt structurally
-```
-
-### Excerpt 2449
-
-```
 Judiciary Structure (non-AI)	55–60%	Mid-stage
-```
-
-### Excerpt 2450
-
-```
 Term Limits / Eligibility	60%	Needs integration
-```
-
-### Excerpt 2451
-
-```
 Labor / Work (non-AI)	40%	Thin outside AI
-```
-
-### Excerpt 2452
-
-```
 Economy / Tax / Wealth	45–50%	Conceptual, not detailed
-```
-
-### Excerpt 2453
-
-```
 Antitrust / Corporate Power	35–40%	Major gap
-```
-
-### Excerpt 2454
-
-```
 Administrative State / Agencies	35–40%	Major gap
-```
-
-### Excerpt 2455
-
-```
 Infrastructure / Environment	45–50%	Growing, still thin
-```
-
-### Excerpt 2456
-
-```
 Education (non-AI)	30–35%	Major gap
-```
-
-### Excerpt 2457
-
-```
 Housing / Cost of Living	25–30%	Weakest major domain
-```
-
-### Excerpt 2458
-
-```
 🔢 3. Policy Count (Estimate)
-```
-
-### Excerpt 2459
-
-```
 Method (assumption)
-```
-
-### Excerpt 2460
-
-```
 Count based on all structured IDs (IMM-*, HLT-*, JUS-*, TEC-*, RGT-*, etc.)
-```
-
-### Excerpt 2461
-
-```
 Includes all phases of expansion
-```
-
-### Excerpt 2462
-
-```
 Estimated totals
-```
-
-### Excerpt 2463
-
-```
 Domain	Approx Count
-```
-
-### Excerpt 2464
-
-```
 AI / Tech	~90–110
-```
-
-### Excerpt 2465
-
-```
 Healthcare	~80–100
-```
-
-### Excerpt 2466
-
-```
 Justice	~80–95
-```
-
-### Excerpt 2467
-
-```
 Immigration	~110–130
-```
-
-### Excerpt 2468
-
-```
 Rights	~40–60
-```
-
-### Excerpt 2469
-
-```
 Other domains combined	~120–160
-```
-
-### Excerpt 2470
-
-```
 ✅ Total estimated policy items: ~550–650
-```
-
-### Excerpt 2471
-
-```
 🧩 4. Running Checklist (Full)
-```
-
-### Excerpt 2472
-
-```
 Phase: Core Platform Buildout
-```
-
-### Excerpt 2473
-
-```
 System Layer
-```
-
-### Excerpt 2474
-
-```
  Core values defined
-```
-
-### Excerpt 2475
-
-```
  System-rule philosophy established
-```
-
-### Excerpt 2476
-
-```
  Initial system rules created
-```
-
-### Excerpt 2477
-
-```
  Convert core values → strict system rules ("No system may…" form)
-```
-
-### Excerpt 2478
-
-```
  Normalize system rules across all domains
-```
-
-### Excerpt 2479
-
-```
 AI / Technology
-```
-
-### Excerpt 2480
-
-```
  AI governance baseline
-```
-
-### Excerpt 2481
-
-```
  AI + healthcare
-```
-
-### Excerpt 2482
-
-```
  AI + justice
-```
-
-### Excerpt 2483
-
-```
  AI + education
-```
-
-### Excerpt 2484
-
-```
  AI + labor
-```
-
-### Excerpt 2485
-
-```
  AI + environment (explicit pass still pending)
-```
-
-### Excerpt 2486
-
-```
  AI + media / recommender systems deeper pass
-```
-
-### Excerpt 2487
-
-```
 Justice
-```
-
-### Excerpt 2488
-
-```
  Core justice system
-```
-
-### Excerpt 2489
-
-```
  Courts + AI restrictions
-```
-
-### Excerpt 2490
-
-```
  Probation / parole / fines / fees
-```
-
-### Excerpt 2491
-
-```
  Expungement / records
-```
-
-### Excerpt 2492
-
-```
  Restorative justice
-```
-
-### Excerpt 2493
-
-```
  Victims / witnesses / disclosure
-```
-
-### Excerpt 2494
-
-```
  Qualified immunity banned
-```
-
-### Excerpt 2495
-
-```
  Civil forfeiture banned
-```
-
-### Excerpt 2496
-
-```
  Family court (non-AI) deeper pass
-```
-
-### Excerpt 2497
-
-```
  Wrongful conviction systems deeper pass
-```
-
-### Excerpt 2498
-
-```
  Universal care direction
-```
-
-### Excerpt 2499
-
-```
  Mental healthcare
-```
-
-### Excerpt 2500
-
-```
  Transition-state insurance overhaul
-```
-
-### Excerpt 2501
-
-```
  Anti-denial + appeals system
-```
-
-### Excerpt 2502
-
-```
  Drug access + quotas (Vyvanse etc.)
-```
-
-### Excerpt 2503
-
-```
  Provider / hospital system design
-```
-
-### Excerpt 2504
-
-```
  Pharma pricing / manufacturing
-```
-
-### Excerpt 2505
-
-```
  Public health + prevention layer
-```
-
-### Excerpt 2506
-
-```
  Core principles
-```
-
-### Excerpt 2507
-
-```
  Due process + detention limits
-```
-
-### Excerpt 2508
-
-```
  ICE abolition + replacement structure
-```
-
-### Excerpt 2509
-
-```
  Contractor near-ban
-```
-
-### Excerpt 2510
-
-```
  Visa system overhaul (first + second pass)
-```
-
-### Excerpt 2511
-
-```
  Asylum system (expanded)
-```
-
-### Excerpt 2512
-
-```
  Deportation process safeguards
-```
-
-### Excerpt 2513
-
-```
  Refugee resettlement
-```
-
-### Excerpt 2514
-
-```
  Labor protections
-```
-
-### Excerpt 2515
-
-```
  Service access (healthcare, education)
-```
-
-### Excerpt 2516
-
-```
  Equal protection rules
-```
-
-### Excerpt 2517
-
-```
  Fine-grained visa class design (optional future pass)
-```
-
-### Excerpt 2518
-
-```
 Rights / Civil Liberties
-```
-
-### Excerpt 2519
-
-```
  Identity protections (gender markers, etc.)
-```
-
-### Excerpt 2520
-
-```
  Bodily autonomy (forced sterilization ban)
-```
-
-### Excerpt 2521
-
-```
  Formal rights framework (structured hierarchy)
-```
-
-### Excerpt 2522
-
-```
  Enforcement mechanisms
-```
-
-### Excerpt 2523
-
-```
 Major Weak Domains (Next Targets)
-```
-
-### Excerpt 2524
-
-```
 Housing / Cost of Living
-```
-
-### Excerpt 2525
-
-```
  Entire pillar (not yet built)
-```
-
-### Excerpt 2526
-
-```
 Education (non-AI)
-```
-
-### Excerpt 2527
-
-```
  Entire pillar (very thin)
-```
-
-### Excerpt 2528
-
-```
 Administrative State
-```
-
-### Excerpt 2529
-
-```
  Agency structure + oversight
-```
-
-### Excerpt 2530
-
-```
  Anti-capture framework
-```
-
-### Excerpt 2531
-
-```
 Environment / Infrastructure
-```
-
-### Excerpt 2532
-
-```
  Climate architecture
-```
-
-### Excerpt 2533
-
-```
  Pollution / land use
-```
-
-### Excerpt 2534
-
-```
  Transportation system (rail, transit)
-```
-
-### Excerpt 2535
-
-```
 Cross-Domain Work
-```
-
-### Excerpt 2536
-
-```
  Full dedupe pass (mechanical, not conceptual)
-```
-
-### Excerpt 2537
-
-```
  Conflict resolution pass
-```
-
-### Excerpt 2538
-
-```
  Normalize ID system across all items
-```
-
-### Excerpt 2539
-
-```
  Tag each policy with:
-```
-
-### Excerpt 2540
-
-```
 domain
-```
-
-### Excerpt 2541
-
-```
 subdomain
-```
-
-### Excerpt 2542
-
-```
 priority
-```
-
-### Excerpt 2543
-
-```
 implementation type
-```
-
-### Excerpt 2544
-
-```
 🗄️ 5. The “Database” — Current Reality
-```
-
-### Excerpt 2545
-
-```
 Right now
-```
-
-### Excerpt 2546
-
-```
 Format recommendation (best for you as an engineer):
-```
-
-### Excerpt 2547
-
-```
 memory → not reliable
-```
-
-### Excerpt 2548
-
-```
 chat → not scalable
-```
-
-### Excerpt 2549
-
-```
 iteration → becomes duplication
-```
-
-### Excerpt 2550
-
-```
 🧭 Recommendation (Strong)
-```
-
-### Excerpt 2551
-
-```
 The role of states beyond that should be mostly administrative and serve in the capacity of making the government and services more efficient by way of delegating powers and responsibilities, including justice and maintaining rule of law, administration of public and vital records, professional licenses, etc.
-```
-
-### Excerpt 2552
-
-```
 Territories that are not states, like Puerto Rico should have the option of voting to either become a state, or ending ties with the U.S. and becoming their own country, with guarantee of U.S. assistance for a period of time to be negotiated by the leaving territory, and if an amicable agreement cannot be found, default to 10 years. This shall not affect citizenship of people born in the territories while they were part of the U.S. or for the transition period.
-```
-
-### Excerpt 2553
-
-```
 I want an amendment that creates standards for new laws. Each new law should include a plain language statement of intent and context. Each large section or subsection and amendment should contain plain language summaries and intents. All provisions, amendments etc should be clearly relevant to said law. Loopholes, gaps, etc should be looked for, including via search against conflicting laws or laws that might create loopholes, and conflicts should be reconciled before any law is passed.
-```
-
-### Excerpt 2554
-
-```
 I want to establish a committee or board that annually reviews federal laws for outdated or unenforceable language, or that are no longer in use or enforced, and recommend updates or removal of old laws.
-```
-
-### Excerpt 2555
-
-```
 And I'm not using language about the Regan era specifically to blame him, but rather to help identify the root causes and policies that drive those factors. I don't want you to record that language directly, but rather use that to help determine the problem.
-```
-
-### Excerpt 2556
-
-```
 No, I mean that for you to find the policies that have caused house prices to vastly outpace inflation, not as a root-cause diagnostic tool, that may be okay, but it also has the potential to be ignored or be used and interpreted based on political bias.
-```
-
-### Excerpt 2557
-
-```
 I don't believe that all regulation is bad, in fact, I believe that blind deregulation is foolish and only allows for the abuses that we have today. The only people that really really want deregulation are private businesses who want to increase profits at the expense of safety, quality, etc.
-```
-
-### Excerpt 2558
-
-```
 I never meant that Regan era regulations were the cause, it's more that deregulation was the cause.
-```
-
-### Excerpt 2559
-
-```
 I want a constitutionally created and funded regulatory body, whose explicit role is to prevent harm and misuse, to ensure new rules can be written to adapt to future developments quickly, the, basic economic, environmental, societal and other regulatory rules and limits should be established as a baseline with a requirement to enforce, and and enforce aggressively. 
-```
-
-### Excerpt 2560
-
-```
 Individuals at corporations should be criminally liable for violations, including negligence. And this goes for all corporate malfeasance, not just where the economy is concerned and companies where there are regular violations should be investigated and officers and board members should be investigated. Companies whose cultures promote widespread criminal activity either proactively, by negligence, or a lack of institution control should be heavily fined and members of the governing body and should have control and oversight she also criminally liable.
-```
-
-### Excerpt 2561
-
-```
 Noted—and you’re right to flag that now.
-```
-
-### Excerpt 2562
-
-```
 👉 “Simple for normal people, hard to game for the wealthy” should become a core design constraint for the entire tax system. We’ll bake that in next pass.
-```
-
-### Excerpt 2563
-
-```
 🧠 Core principle
-```
-
-### Excerpt 2564
-
-```
 TAX-COR-004 | Corporate tax systems must reflect real economic activity and may not be reduced through artificial accounting, legal structuring, or financial engineering.
-```
-
-### Excerpt 2565
-
-```
 🚫 Loophole elimination (core rules)
-```
-
-### Excerpt 2566
-
-```
 TAX-LOP-001 | Tax provisions that primarily enable avoidance, deferral, or artificial reduction of tax liability without corresponding public benefit must be eliminated.
-```
-
-### Excerpt 2567
-
-```
 TAX-LOP-002 | Corporate tax law must be regularly reviewed to identify and remove emergent loopholes, avoidance schemes, and unintended gaps.
-```
-
-### Excerpt 2568
-
-```
 🧾 Deductions and write-offs
-```
-
-### Excerpt 2569
-
-```
 Limit abusive deductions
-```
-
-### Excerpt 2570
-
-```
 TAX-DED-001 | Deductions must be directly tied to legitimate business activity and may not be used to artificially reduce taxable income through unrelated or inflated expenses.
-```
-
-### Excerpt 2571
-
-```
 TAX-DED-002 | Excessive executive compensation, stock-based compensation, and similar mechanisms may be limited in deductibility where they function as tax avoidance tools.
-```
-
-### Excerpt 2572
-
-```
 TAX-DED-003 | Interest deductions may be limited where used to artificially shift profits or create internal debt structures for tax avoidance.
-```
-
-### Excerpt 2573
-
-```
 Anti-financial engineering
-```
-
-### Excerpt 2574
-
-```
 TAX-DED-004 | Internal financial arrangements, including intercompany loans, royalties, and licensing structures, may not be used to shift profits or erode the tax base.
-```
-
-### Excerpt 2575
-
-```
 TAX-DED-005 | Transactions lacking economic substance beyond tax reduction must be disallowed.
-```
-
-### Excerpt 2576
-
-```
 🌍 Profit shifting & base erosion (tightening your earlier rules)
-```
-
-### Excerpt 2577
-
-```
 TAX-BEP-001 | Corporate income must be taxed based on real economic activity, including sales, workforce, and physical presence, rather than legal entity location alone.
-```
-
-### Excerpt 2578
-
-```
 TAX-BEP-002 | Transfer pricing must reflect real market value and may not be manipulated to shift profits across jurisdictions.
-```
-
-### Excerpt 2579
-
-```
 TAX-BEP-003 | Artificial profit allocation to low-tax jurisdictions without corresponding real activity is prohibited.
-```
-
-### Excerpt 2580
-
-```
 📊 Minimum effective taxation
-```
-
-### Excerpt 2581
-
-```
 TAX-COR-005 | Corporations must pay a minimum effective tax rate based on real economic activity regardless of deductions, credits, or structural arrangements.
-```
-
-### Excerpt 2582
-
-```
 TAX-COR-006 | Effective tax rate calculations must account for global income and may not be reduced through jurisdictional fragmentation.
-```
-
-### Excerpt 2583
-
-```
 💸 Stock buybacks & extraction
-```
-
-### Excerpt 2584
-
-```
 TAX-EXT-001 | Stock buybacks and similar financial extraction mechanisms may be subject to taxation or limitation where they do not contribute to productive investment.
-```
-
-### Excerpt 2585
-
-```
 TAX-EXT-002 | Tax policy may not incentivize financial engineering, short-term shareholder extraction, or non-productive capital allocation.
-```
-
-### Excerpt 2586
-
-```
 🧠 Corporate behavior alignment
-```
-
-### Excerpt 2587
-
-```
 TAX-INC-004 | Corporate tax structures should reward long-term investment, worker compensation, domestic reinvestment, and public-benefit outcomes.
-```
-
-### Excerpt 2588
-
-```
 TAX-INC-005 | Corporate tax incentives may not reward offshoring, wage suppression, or environmental harm.
-```
-
-### Excerpt 2589
-
-```
 🔍 Transparency & reporting
-```
-
-### Excerpt 2590
-
-```
 TAX-TRN-004 | Large corporations must publicly report revenue, profit, tax paid, workforce, and activity by jurisdiction.
-```
-
-### Excerpt 2591
-
-```
 TAX-TRN-005 | Corporate structures, subsidiaries, and ownership chains must be fully disclosed for tax and regulatory purposes.
-```
-
-### Excerpt 2592
-
-```
 ⚖️ Enforcement (this is where your system becomes real)
-```
-
-### Excerpt 2593
-
-```
 Audit targeting
-```
-
-### Excerpt 2594
-
-```
 TAX-ENF-005 | Tax enforcement must prioritize large corporations, complex structures, and high-risk avoidance behavior rather than low-risk individual taxpayers.
-```
-
-### Excerpt 2595
-
-```
 Anti-facilitator rules (important)
-```
-
-### Excerpt 2596
-
-```
 TAX-ENF-006 | Professional enablers of corporate tax avoidance, including law firms, accounting firms, and consultants, may be held liable where they design or implement abusive schemes.
-```
-
-### Excerpt 2597
-
-```
 Escalation
-```
-
-### Excerpt 2598
-
-```
 TAX-ENF-007 | Repeated or large-scale corporate tax avoidance must trigger escalating penalties, including fines, back taxes, structural remedies, and potential criminal liability.
-```
-
-### Excerpt 2599
-
-```
 Anti-delay tactics
-```
-
-### Excerpt 2600
-
-```
 TAX-ENF-008 | Corporations may not indefinitely delay tax enforcement through litigation, procedural complexity, or jurisdictional fragmentation.
-```
-
-### Excerpt 2601
-
-```
 🧠 Anti-capture protection
-```
-
-### Excerpt 2602
-
-```
 corporations don’t pay statutory rates
-```
-
-### Excerpt 2603
-
-```
 complexity becomes a weapon
-```
-
-### Excerpt 2604
-
-```
 enforcement targets the wrong people
-```
-
-### Excerpt 2605
-
-```
 effective tax becomes real
-```
-
-### Excerpt 2606
-
-```
 avoidance shrinks
-```
-
-### Excerpt 2607
-
-```
 fairness improves
-```
-
-### Excerpt 2608
-
-```
 your AI, labor, housing, and education funding becomes viable
-```
-
-### Excerpt 2609
-
-```
 📊 Rough count added
-```
-
-### Excerpt 2610
-
-```
 Perfect. This is where tax policy stops feeling like a punishment maze for ordinary people and starts becoming a real public system.
-```
-
-### Excerpt 2611
-
-```
 TAX-WTH-007 | High-wealth individuals may not use trusts, pass-through entities, shell structures, valuation games, or jurisdictional fragmentation to materially reduce tax obligations without real economic substance.
-```
-
-### Excerpt 2612
-
-```
 TAX-CAP-008 | Carried interest, performance allocation, and similar mechanisms that function as compensation should be taxed in accordance with their economic substance.
-```
-
-### Excerpt 2613
-
-```
 compliance gets easier
-```
-
-### Excerpt 2614
-
-```
 trust improves
-```
-
-### Excerpt 2615
-
-```
 high-end evasion becomes a clearer target
-```
-
-### Excerpt 2616
-
-```
 complexity stops being a class weapon
-```
-
-### Excerpt 2617
-
-```
 Rough count added
-```
-
-### Excerpt 2618
-
-```
 `ADM-IND-004 | Political oversight of agencies must not become political control over factual findings, scientific conclusions, or case-specific enforcement decisions.`
-```
-
-### Excerpt 2619
-
-```
 `ADM-RUL-001 | Agencies must have authority to issue, revise, and clarify rules within their statutory mandate in response to technological, economic, scientific, and social change.`
-```
-
-### Excerpt 2620
-
-```
 `ADM-RUL-004 | Adaptive rulemaking authority must include review, sunset, and correction mechanisms so flexibility does not become unbounded discretion.`
-```
-
-### Excerpt 2621
-
-```
 `ADM-ENF-001 | Agencies must have sufficient investigatory powers, subpoena authority, audit authority, and access to records necessary to enforce the law effectively.`
-```
-
-### Excerpt 2622
-
-```
 `ADM-ADJ-001 | Agency adjudication systems must provide clear notice, records access, explanation of decisions, and meaningful appeal rights.`
-```
-
-### Excerpt 2623
-
-```
 `ADM-SCI-001 | Agencies relying on scientific, medical, technical, or economic evidence must maintain scientific-integrity standards that protect findings from political or commercial distortion.`
-```
-
-### Excerpt 2624
-
-```
 `ADM-OVR-001 | Major agencies must have independent internal oversight functions, including inspectors general or equivalent bodies with access to records and investigatory authority.`
-```
-
-### Excerpt 2625
-
-```
 TAX-ENV-001 | Environmental tax policy must internalize environmental harms that are currently externalized onto the public, future generations, and ecosystems.
-```
-
-### Excerpt 2626
-
-```
 TAX-ENV-002 | Environmental taxation must be structured to reduce pollution, waste, emissions, ecosystem damage, and resource depletion while supporting a just transition.
-```
-
-### Excerpt 2627
-
-```
 TAX-ENV-003 | Environmental taxes and fees may not be used as substitutes for direct regulation where direct regulation is necessary to prevent serious harm.
-```
-
-### Excerpt 2628
-
-```
 TAX-ENV-008 | Water extraction and intensive water use may be subject to taxation, fees, or escalating charges where use patterns threaten sustainability, public access, or ecosystem health.
-```
-
-### Excerpt 2629
-
-```
 TAX-ENV-009 | Water-related taxation and pricing must account for local scarcity, watershed stress, aquifer depletion, and downstream ecological impact.
-```
-
-### Excerpt 2630
-
-```
 TAX-ENV-010 | Large-scale industrial water use may be subject to enhanced reporting, monitoring, and environmental contribution requirements.
-```
-
-### Excerpt 2631
-
-```
 TAX-ENV-011 | Water taxation and fee systems must not undermine basic household access to safe water or create hardship for essential personal use.
-```
-
-### Excerpt 2632
-
-```
 TAX-ENV-012 | Polluting activities and persistent pollutants may be subject to taxes, fees, or strict liability charges proportionate to the harm they create.
-```
-
-### Excerpt 2633
-
-```
 TAX-ENV-013 | Tax and fee systems may be used to discourage plastics, toxic byproducts, non-recyclable packaging, persistent waste, and environmentally destructive production methods.
-```
-
-### Excerpt 2634
-
-```
 TAX-ENV-014 | Environmental taxes must account for lifecycle harm, including extraction, production, use, disposal, and leakage into ecosystems.
-```
-
-### Excerpt 2635
-
-```
 TAX-ENV-015 | Environmental tax policy should incentivize durable products, repairability, recyclability, material recovery, and reduced waste generation.
-```
-
-### Excerpt 2636
-
-```
 TAX-ENV-016 | Tax advantages may be used to support repair, remanufacturing, refurbishment, reuse systems, and circular-economy infrastructure.
-```
-
-### Excerpt 2637
-
-```
 TAX-ENV-017 | Tax policy may disfavor disposable, non-repairable, short-lifecycle, or environmentally persistent products where viable alternatives exist.
-```
-
-### Excerpt 2638
-
-```
 TAX-ENV-021 | Revenue from environmental taxation should support environmental cleanup, climate resilience, public health protection, ecosystem restoration, and just-transition programs.
-```
-
-### Excerpt 2639
-
-```
 TAX-ENV-022 | Environmental tax revenue should also support household cost relief, public transportation, energy transition, and adaptation for communities most affected by environmental harm.
-```
-
-### Excerpt 2640
-
-```
 TAX-ENV-023 | Environmental tax systems must be designed so that working households and low-income communities are not unfairly burdened relative to major industrial polluters and concentrated private gain.
-```
-
-### Excerpt 2641
-
-```
 6. Circular economy incentives (TAX-ENV-015 to 017)
-```
-
-### Excerpt 2642
-
-```
 Strong alignment with your right-to-repair, anti-waste, and anti-enshittification goals.
-```
-
-### Excerpt 2643
-
-```
 3. Economic shock / transition handling
-```
-
-### Excerpt 2644
-
-```
 Risk:
-```
-
-### Excerpt 2645
-
-```
 - could become a loophole if not tightly defined
-```
-
-### Excerpt 2646
-
-```
 - larger firms could fragment into smaller entities
-```
-
-### Excerpt 2647
-
-```
 Without this:
-```
-
-### Excerpt 2648
-
-```
 - penalties can become just a “cost of doing business”
-```
-
-### Excerpt 2649
-
-```
 RECOMMENDED IMPROVEMENTS (HIGH PRIORITY)
 ```
+
+## Exports and supporting files
+
+- Per-pillar CSVs: data/pillar_reports/by_mapping/csvs/pillar_8_taxation_and_wealth_rule_items.csv etc.
+- Research file: pillars/research/pillar_8_taxation_and_wealth_research.txt
 

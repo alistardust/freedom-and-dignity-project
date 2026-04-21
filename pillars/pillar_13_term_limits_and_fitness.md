@@ -1,2924 +1,756 @@
 # pillar 13 term limits and fitness
 
-> Compiled canonical and source material for this pillar. Review and edit for tone and finalization.
+> Comprehensive compilation for pillar_13_term_limits_and_fitness. Includes ALL canonical rules, linked policy_items, record_links, prose mentions, and research excerpts from logs.
 
 ## Intent and scope
 
-This pillar aggregates rules with scope codes: TRM. Content below includes canonical rules, linked policy items, explicit record links, and all matching source excerpts from the main and brainstorm logs.
+This pillar aggregates scope codes: TRM.
 
 ## System rules compliance
 
-All entries must be validated against system_rules.md: human oversight for high-risk decisions, non-fragmentation of rights, provenance, and layered oversight for centralized risks.
+All entries must be validated against system_rules.md.
 
-## Canonical rules (full)
+## Canonical rules (complete)
 
-### TRM-LIM-002 — TRM
+### TRM-LIM-001 — (TRM / LIM)
 
-Status: MISSING | Occurrences: 2 | Linked policy_items: 1
+Status: MISSING | Occurrences: 2
 
-Statement: "Senate max 3 terms"
+Statement:
 
-Linked policy_items:
-
-
-Record links (from legacy items):
-
----
-
-### TRM-LIM-003 — TRM
-
-Status: MISSING | Occurrences: 2 | Linked policy_items: 1
-
-Statement: "Combined max 8 terms or 20 years"
+House max 6 terms
 
 Linked policy_items:
 
+- 192 (MISSING): House term limit: maximum 6 terms
 
-Record links (from legacy items):
+Record links:
+
+- policy_item:192 — House max 6 terms — notes: Context-based conversion to the later structured ID corpus.
+
+Prose mentions referencing TRM-LIM-001:
+
+- [89] desc:House maximum 6 terms raw:TRM-LIM-001 House maximum 6 terms (source_id: 1 line:1706)
+- [110] desc:House maximum 6 terms raw:TRM-LIM-001  House maximum 6 terms (source_id: 1 line:2076)
+- [352] desc:House max 6 terms raw:TRM-LIM-001  House max 6 terms (source_id: 1 line:2415)
+- [533] desc:House maximum 6 terms raw:TRM-LIM-001 House maximum 6 terms (source_id: 2 line:1706)
+- [554] desc:House maximum 6 terms raw:TRM-LIM-001  House maximum 6 terms (source_id: 2 line:2076)
+- [796] desc:House max 6 terms raw:TRM-LIM-001  House max 6 terms (source_id: 2 line:2415)
 
 ---
 
-### TRM-RUN-001 — TRM
+### TRM-LIM-002 — (TRM / LIM)
 
-Status: MISSING | Occurrences: 2 | Linked policy_items: 1
+Status: MISSING | Occurrences: 2
 
-Statement: "No running while in office"
+Statement:
+
+Senate max 3 terms
 
 Linked policy_items:
 
+- 193 (MISSING): Senate term limit: maximum 3 terms
 
-Record links (from legacy items):
+Record links:
+
+- policy_item:193 — Senate max 3 terms — notes: Context-based conversion to the later structured ID corpus.
+
+Prose mentions referencing TRM-LIM-002:
+
+- [90] desc:Senate maximum 3 terms raw:TRM-LIM-002 Senate maximum 3 terms (source_id: 1 line:1707)
+- [111] desc:Senate maximum 3 terms raw:TRM-LIM-002  Senate maximum 3 terms (source_id: 1 line:2077)
+- [353] desc:Senate max 3 terms raw:TRM-LIM-002  Senate max 3 terms (source_id: 1 line:2416)
+- [534] desc:Senate maximum 3 terms raw:TRM-LIM-002 Senate maximum 3 terms (source_id: 2 line:1707)
+- [555] desc:Senate maximum 3 terms raw:TRM-LIM-002  Senate maximum 3 terms (source_id: 2 line:2077)
+- [797] desc:Senate max 3 terms raw:TRM-LIM-002  Senate max 3 terms (source_id: 2 line:2416)
 
 ---
 
-### TRM-RUN-002 — TRM
+### TRM-LIM-003 — (TRM / LIM)
 
-Status: MISSING | Occurrences: 2 | Linked policy_items: 1
+Status: MISSING | Occurrences: 2
 
-Statement: "Two-year wait before next office"
+Statement:
+
+Combined max 8 terms or 20 years
 
 Linked policy_items:
 
+- 194 (MISSING): Combined maximum service time: 8 combined terms or 20 years
 
-Record links (from legacy items):
+Record links:
+
+- policy_item:194 — Combined max 8 terms or 20 years — notes: Context-based conversion to the later structured ID corpus.
+
+Prose mentions referencing TRM-LIM-003:
+
+- [91] desc:Combined maximum 8 terms or 20 years raw:TRM-LIM-003 Combined maximum 8 terms or 20 years (source_id: 1 line:1708)
+- [112] desc:Combined maximum 8 terms or 20 years raw:TRM-LIM-003  Combined maximum 8 terms or 20 years (source_id: 1 line:2078)
+- [354] desc:Combined max 8 terms / 20 years raw:TRM-LIM-003  Combined max 8 terms / 20 years (source_id: 1 line:2417)
+- [535] desc:Combined maximum 8 terms or 20 years raw:TRM-LIM-003 Combined maximum 8 terms or 20 years (source_id: 2 line:1708)
+- [556] desc:Combined maximum 8 terms or 20 years raw:TRM-LIM-003  Combined maximum 8 terms or 20 years (source_id: 2 line:2078)
+- [798] desc:Combined max 8 terms / 20 years raw:TRM-LIM-003  Combined max 8 terms / 20 years (source_id: 2 line:2417)
 
 ---
 
-### TRM-VAC-001 — TRM
+### TRM-RUN-001 — (TRM / RUN)
 
-Status: MISSING | Occurrences: 2 | Linked policy_items: 1
+Status: MISSING | Occurrences: 2
 
-Statement: "Vacancy rules respect wait periods"
+Statement:
+
+No running while in office
 
 Linked policy_items:
 
+- 195 (MISSING): While in office, an official may not run for election to any other office, including re-election planning for another office while still serving
 
-Record links (from legacy items):
+Record links:
+
+- policy_item:195 — No running while in office — notes: Context-based conversion to the later structured ID corpus.
+
+Prose mentions referencing TRM-RUN-001:
+
+- [92] desc:No running for any office while in office raw:TRM-RUN-001 No running for any office while in office (source_id: 1 line:1709)
+- [113] desc:May not run for another office while in office raw:TRM-RUN-001  May not run for another office while in office (source_id: 1 line:2079)
+- [355] desc:No running while in office raw:TRM-RUN-001  No running while in office (source_id: 1 line:2418)
+- [536] desc:No running for any office while in office raw:TRM-RUN-001 No running for any office while in office (source_id: 2 line:1709)
+- [557] desc:May not run for another office while in office raw:TRM-RUN-001  May not run for another office while in office (source_id: 2 line:2079)
+- [799] desc:No running while in office raw:TRM-RUN-001  No running while in office (source_id: 2 line:2418)
 
 ---
 
-### TRM-VAC-002 — TRM
+### TRM-RUN-002 — (TRM / RUN)
 
-Status: MISSING | Occurrences: 2 | Linked policy_items: 1
+Status: MISSING | Occurrences: 2
 
-Statement: "Special election exception"
+Statement:
+
+Two-year wait before next office
 
 Linked policy_items:
 
+- 196 (MISSING): Must wait at least 2 years before being elected to another office
 
-Record links (from legacy items):
+Record links:
+
+- policy_item:196 — Two-year wait before next office — notes: Context-based conversion to the later structured ID corpus.
+
+Prose mentions referencing TRM-RUN-002:
+
+- [93] desc:Two-year wait before election to another office raw:TRM-RUN-002 Two-year wait before election to another office (source_id: 1 line:1710)
+- [114] desc:Must wait 2 years before election to another office raw:TRM-RUN-002  Must wait 2 years before election to another office (source_id: 1 line:2080)
+- [356] desc:Two-year wait rule raw:TRM-RUN-002  Two-year wait rule (source_id: 1 line:2419)
+- [537] desc:Two-year wait before election to another office raw:TRM-RUN-002 Two-year wait before election to another office (source_id: 2 line:1710)
+- [558] desc:Must wait 2 years before election to another office raw:TRM-RUN-002  Must wait 2 years before election to another office (source_id: 2 line:2080)
+- [800] desc:Two-year wait rule raw:TRM-RUN-002  Two-year wait rule (source_id: 2 line:2419)
 
 ---
 
-### TRM-VAC-003 — TRM
+### TRM-VAC-001 — (TRM / VAC)
 
-Status: MISSING | Occurrences: 2 | Linked policy_items: 1
+Status: MISSING | Occurrences: 2
 
-Statement: "Senate appointment exception"
+Statement:
+
+Vacancy rules respect wait periods
 
 Linked policy_items:
 
+- 197 (MISSING): Cannot be appointed or run in a special election to fill a vacancy if doing so would violate the wait period
 
-Record links (from legacy items):
+Record links:
+
+- policy_item:197 — Vacancy rules respect wait periods — notes: Context-based conversion to the later structured ID corpus.
+
+Prose mentions referencing TRM-VAC-001:
+
+- [94] desc:Wait period also applies to appointments/special elections raw:TRM-VAC-001 Wait period also applies to appointments/special elections (source_id: 1 line:1711)
+- [115] desc:Vacancy rules must respect wait periods raw:TRM-VAC-001  Vacancy rules must respect wait periods (source_id: 1 line:2081)
+- [357] desc:Vacancy rules respect wait periods raw:TRM-VAC-001  Vacancy rules respect wait periods (source_id: 1 line:2420)
+- [538] desc:Wait period also applies to appointments/special elections raw:TRM-VAC-001 Wait period also applies to appointments/special elections (source_id: 2 line:1711)
+- [559] desc:Vacancy rules must respect wait periods raw:TRM-VAC-001  Vacancy rules must respect wait periods (source_id: 2 line:2081)
+- [801] desc:Vacancy rules respect wait periods raw:TRM-VAC-001  Vacancy rules respect wait periods (source_id: 2 line:2420)
+
+---
+
+### TRM-VAC-002 — (TRM / VAC)
+
+Status: MISSING | Occurrences: 2
+
+Statement:
+
+Special election exception
+
+Linked policy_items:
+
+- 198 (MISSING): If elected in a special election to fill a vacancy and the term is more than halfway over, it does not count toward the term limit, no wait is needed for re-election, and it does not count toward maximum service time
+
+Record links:
+
+- policy_item:198 — Special election exception — notes: Context-based conversion to the later structured ID corpus.
+
+Prose mentions referencing TRM-VAC-002:
+
+- [95] desc:Special-election exception when term is more than halfway over raw:TRM-VAC-002 Special-election exception when term is more than halfway over (source_id: 1 line:1712)
+- [116] desc:Special-election half-term exception raw:TRM-VAC-002  Special-election half-term exception (source_id: 1 line:2082)
+- [358] desc:Special election exception raw:TRM-VAC-002  Special election exception (source_id: 1 line:2421)
+- [539] desc:Special-election exception when term is more than halfway over raw:TRM-VAC-002 Special-election exception when term is more than halfway over (source_id: 2 line:1712)
+- [560] desc:Special-election half-term exception raw:TRM-VAC-002  Special-election half-term exception (source_id: 2 line:2082)
+- [802] desc:Special election exception raw:TRM-VAC-002  Special election exception (source_id: 2 line:2421)
 
 ---
 
-## Prose mentions referencing these rules
+### TRM-VAC-003 — (TRM / VAC)
 
-## Source excerpts (main + brainstorm logs)
+Status: MISSING | Occurrences: 2
 
-From: main-branch.txt
+Statement:
 
-> 1354:TRM	Term Limits / Eligibility
-> 1527:TRM	Term Limits / Eligibility / Fitness
-> 1608:TRM
-> 1706:TRM-LIM-001 House maximum 6 terms
-> 1707:TRM-LIM-002 Senate maximum 3 terms
-> 1708:TRM-LIM-003 Combined maximum 8 terms or 20 years
-> 1709:TRM-RUN-001 No running for any office while in office
-> 1710:TRM-RUN-002 Two-year wait before election to another office
-> 1711:TRM-VAC-001 Wait period also applies to appointments/special elections
-> 1712:TRM-VAC-002 Special-election exception when term is more than halfway over
-> 1713:TRM-VAC-003 Senate appointment exception under remaining-term rule
-> 1839:| TRM | Term Limits / Eligibility / Fitness |
-> 1934:### TRM
-> 2046:| 192 | TRM-LIM-001 | House max 6 terms | pillar_13_term_limits_and_fitness.md | MISSING | |
-> 2047:| 193 | TRM-LIM-002 | Senate max 3 terms | pillar_13_term_limits_and_fitness.md | MISSING | |
-> 2048:| 194 | TRM-LIM-003 | Combined 8 terms or 20 years | pillar_13_term_limits_and_fitness.md | MISSING | |
-> 2049:| 195 | TRM-RUN-001 | No running for another office while in office | pillar_13_term_limits_and_fitness.md | MISSING | |
-> 2050:| 196 | TRM-RUN-002 | Two-year wait before another office | pillar_13_term_limits_and_fitness.md | MISSING | |
-> 2076:TRM-LIM-001  House maximum 6 terms
-> 2077:TRM-LIM-002  Senate maximum 3 terms
-> 2078:TRM-LIM-003  Combined maximum 8 terms or 20 years
-> 2079:TRM-RUN-001  May not run for another office while in office
-> 2080:TRM-RUN-002  Must wait 2 years before election to another office
-> 2081:TRM-VAC-001  Vacancy rules must respect wait periods
-> 2082:TRM-VAC-002  Special-election half-term exception
-> 2083:TRM-VAC-003  Senate appointment remaining-term exception
-> 2415:TRM-LIM-001  House max 6 terms
-> 2416:TRM-LIM-002  Senate max 3 terms
-> 2417:TRM-LIM-003  Combined max 8 terms / 20 years
-> 2418:TRM-RUN-001  No running while in office
-> 2419:TRM-RUN-002  Two-year wait rule
-> 2420:TRM-VAC-001  Vacancy rules respect wait periods
-> 2421:TRM-VAC-002  Special election exception
-> 2422:TRM-VAC-003  Senate appointment exception
-> 2640:TRM-LIM-001|TRM|LIM|House max 6 terms|MISSING
-> 2641:TRM-LIM-002|TRM|LIM|Senate max 3 terms|MISSING
-> 2642:TRM-LIM-003|TRM|LIM|Combined max 8 terms or 20 years|MISSING
-> 2643:TRM-RUN-001|TRM|RUN|No running while in office|MISSING
-> 2644:TRM-RUN-002|TRM|RUN|Two-year wait before next office|MISSING
-> 2645:TRM-VAC-001|TRM|VAC|Vacancy rules respect wait periods|MISSING
-> 2646:TRM-VAC-002|TRM|VAC|Special election exception|MISSING
-> 2647:TRM-VAC-003|TRM|VAC|Senate appointment exception|MISSING
+Senate appointment exception
 
-From: brainstorm-branch1part2.txt
+Linked policy_items:
 
+- 199 (MISSING): If appointed and less than 2 years remain in a Senate term, it does not count toward Senate term limits, but does count toward total service time if more than 1 year remains
 
-## Review notes & suggested actions
+Record links:
 
-- Verify scope assignments; if mis-scoped, update data/pillar_reports/by_mapping/scope_to_pillar_mapping.csv and re-run importer.
-- For each linked policy_item, verify the canonical mapping and provenance.
-- Curate prose mentions for promotion in batches (see system_rules.md).
+- policy_item:199 — Senate appointment exception — notes: Context-based conversion to the later structured ID corpus.
 
+Prose mentions referencing TRM-VAC-003:
 
-## Research (excerpts from main + brainstorm logs)
-
-The following excerpts were extracted from the source chat logs and matched this pillar by scope code, rule IDs, or pillar keywords. They include proposals, discussion, and research notes. Preserve provenance when editing.
+- [96] desc:Senate appointment exception under remaining-term rule raw:TRM-VAC-003 Senate appointment exception under remaining-term rule (source_id: 1 line:1713)
+- [117] desc:Senate appointment remaining-term exception raw:TRM-VAC-003  Senate appointment remaining-term exception (source_id: 1 line:2083)
+- [359] desc:Senate appointment exception raw:TRM-VAC-003  Senate appointment exception (source_id: 1 line:2422)
+- [540] desc:Senate appointment exception under remaining-term rule raw:TRM-VAC-003 Senate appointment exception under remaining-term rule (source_id: 2 line:1713)
+- [561] desc:Senate appointment remaining-term exception raw:TRM-VAC-003  Senate appointment remaining-term exception (source_id: 2 line:2083)
+- [803] desc:Senate appointment exception raw:TRM-VAC-003  Senate appointment exception (source_id: 2 line:2422)
 
 ---
+
+## All prose mentions relevant to this pillar
+
+- [89] desc:House maximum 6 terms raw:TRM-LIM-001 House maximum 6 terms (source_id: 1 line:1706)
+- [90] desc:Senate maximum 3 terms raw:TRM-LIM-002 Senate maximum 3 terms (source_id: 1 line:1707)
+- [91] desc:Combined maximum 8 terms or 20 years raw:TRM-LIM-003 Combined maximum 8 terms or 20 years (source_id: 1 line:1708)
+- [92] desc:No running for any office while in office raw:TRM-RUN-001 No running for any office while in office (source_id: 1 line:1709)
+- [93] desc:Two-year wait before election to another office raw:TRM-RUN-002 Two-year wait before election to another office (source_id: 1 line:1710)
+- [94] desc:Wait period also applies to appointments/special elections raw:TRM-VAC-001 Wait period also applies to appointments/special elections (source_id: 1 line:1711)
+- [95] desc:Special-election exception when term is more than halfway over raw:TRM-VAC-002 Special-election exception when term is more than halfway over (source_id: 1 line:1712)
+- [96] desc:Senate appointment exception under remaining-term rule raw:TRM-VAC-003 Senate appointment exception under remaining-term rule (source_id: 1 line:1713)
+- [110] desc:House maximum 6 terms raw:TRM-LIM-001  House maximum 6 terms (source_id: 1 line:2076)
+- [111] desc:Senate maximum 3 terms raw:TRM-LIM-002  Senate maximum 3 terms (source_id: 1 line:2077)
+- [112] desc:Combined maximum 8 terms or 20 years raw:TRM-LIM-003  Combined maximum 8 terms or 20 years (source_id: 1 line:2078)
+- [113] desc:May not run for another office while in office raw:TRM-RUN-001  May not run for another office while in office (source_id: 1 line:2079)
+- [114] desc:Must wait 2 years before election to another office raw:TRM-RUN-002  Must wait 2 years before election to another office (source_id: 1 line:2080)
+- [115] desc:Vacancy rules must respect wait periods raw:TRM-VAC-001  Vacancy rules must respect wait periods (source_id: 1 line:2081)
+- [116] desc:Special-election half-term exception raw:TRM-VAC-002  Special-election half-term exception (source_id: 1 line:2082)
+- [117] desc:Senate appointment remaining-term exception raw:TRM-VAC-003  Senate appointment remaining-term exception (source_id: 1 line:2083)
+- [352] desc:House max 6 terms raw:TRM-LIM-001  House max 6 terms (source_id: 1 line:2415)
+- [353] desc:Senate max 3 terms raw:TRM-LIM-002  Senate max 3 terms (source_id: 1 line:2416)
+- [354] desc:Combined max 8 terms / 20 years raw:TRM-LIM-003  Combined max 8 terms / 20 years (source_id: 1 line:2417)
+- [355] desc:No running while in office raw:TRM-RUN-001  No running while in office (source_id: 1 line:2418)
+- [356] desc:Two-year wait rule raw:TRM-RUN-002  Two-year wait rule (source_id: 1 line:2419)
+- [357] desc:Vacancy rules respect wait periods raw:TRM-VAC-001  Vacancy rules respect wait periods (source_id: 1 line:2420)
+- [358] desc:Special election exception raw:TRM-VAC-002  Special election exception (source_id: 1 line:2421)
+- [359] desc:Senate appointment exception raw:TRM-VAC-003  Senate appointment exception (source_id: 1 line:2422)
+- [533] desc:House maximum 6 terms raw:TRM-LIM-001 House maximum 6 terms (source_id: 2 line:1706)
+- [534] desc:Senate maximum 3 terms raw:TRM-LIM-002 Senate maximum 3 terms (source_id: 2 line:1707)
+- [535] desc:Combined maximum 8 terms or 20 years raw:TRM-LIM-003 Combined maximum 8 terms or 20 years (source_id: 2 line:1708)
+- [536] desc:No running for any office while in office raw:TRM-RUN-001 No running for any office while in office (source_id: 2 line:1709)
+- [537] desc:Two-year wait before election to another office raw:TRM-RUN-002 Two-year wait before election to another office (source_id: 2 line:1710)
+- [538] desc:Wait period also applies to appointments/special elections raw:TRM-VAC-001 Wait period also applies to appointments/special elections (source_id: 2 line:1711)
+- [539] desc:Special-election exception when term is more than halfway over raw:TRM-VAC-002 Special-election exception when term is more than halfway over (source_id: 2 line:1712)
+- [540] desc:Senate appointment exception under remaining-term rule raw:TRM-VAC-003 Senate appointment exception under remaining-term rule (source_id: 2 line:1713)
+- [554] desc:House maximum 6 terms raw:TRM-LIM-001  House maximum 6 terms (source_id: 2 line:2076)
+- [555] desc:Senate maximum 3 terms raw:TRM-LIM-002  Senate maximum 3 terms (source_id: 2 line:2077)
+- [556] desc:Combined maximum 8 terms or 20 years raw:TRM-LIM-003  Combined maximum 8 terms or 20 years (source_id: 2 line:2078)
+- [557] desc:May not run for another office while in office raw:TRM-RUN-001  May not run for another office while in office (source_id: 2 line:2079)
+- [558] desc:Must wait 2 years before election to another office raw:TRM-RUN-002  Must wait 2 years before election to another office (source_id: 2 line:2080)
+- [559] desc:Vacancy rules must respect wait periods raw:TRM-VAC-001  Vacancy rules must respect wait periods (source_id: 2 line:2081)
+- [560] desc:Special-election half-term exception raw:TRM-VAC-002  Special-election half-term exception (source_id: 2 line:2082)
+- [561] desc:Senate appointment remaining-term exception raw:TRM-VAC-003  Senate appointment remaining-term exception (source_id: 2 line:2083)
+- [796] desc:House max 6 terms raw:TRM-LIM-001  House max 6 terms (source_id: 2 line:2415)
+- [797] desc:Senate max 3 terms raw:TRM-LIM-002  Senate max 3 terms (source_id: 2 line:2416)
+- [798] desc:Combined max 8 terms / 20 years raw:TRM-LIM-003  Combined max 8 terms / 20 years (source_id: 2 line:2417)
+- [799] desc:No running while in office raw:TRM-RUN-001  No running while in office (source_id: 2 line:2418)
+- [800] desc:Two-year wait rule raw:TRM-RUN-002  Two-year wait rule (source_id: 2 line:2419)
+- [801] desc:Vacancy rules respect wait periods raw:TRM-VAC-001  Vacancy rules respect wait periods (source_id: 2 line:2420)
+- [802] desc:Special election exception raw:TRM-VAC-002  Special election exception (source_id: 2 line:2421)
+- [803] desc:Senate appointment exception raw:TRM-VAC-003  Senate appointment exception (source_id: 2 line:2422)
+
+## Research excerpts (full)
 
 ### Excerpt 1
 
 ```
 Code	Domain
+GOV	Governance / Executive
+ELE	Elections
+COR	Anti-Corruption
+JUS	Justice / Policing
+RGT	Rights & Civil Liberties
+HLT	Healthcare
+ECO	Economy / Tax / Welfare
+INF	Infrastructure / Environment
+MED	Media / Information
+ADM	Administrative State
+TRM	Term Limits / Eligibility
+GUN	Firearms / Armed Power
+CIV	Civic Systems (ID, records, etc.)
+SYS	System-wide rules
+🧩 Subdomain Examples
+Healthcare
+Code	Meaning
+STD	Standards / governance
+MHC	Mental health
+SUP	Supplements / pharma
+EMS	Emergency services
+ACC	Access / eligibility
+Elections
+ACC	Access
+SEC	Security
+MAP	Districting
+GOV	Governance
+Rights
+PRV	Privacy
+BOD	Bodily autonomy
+EQT	Equality
+REL	Religion
+🧾 Your New Entries (converted)
 ```
 
 ### Excerpt 2
 
 ```
-GOV	Governance / Executive
-```
-
-### Excerpt 3
-
-```
-ELE	Elections
-```
-
-### Excerpt 4
-
-```
-COR	Anti-Corruption
-```
-
-### Excerpt 5
-
-```
-JUS	Justice / Policing
-```
-
-### Excerpt 6
-
-```
-RGT	Rights & Civil Liberties
-```
-
-### Excerpt 7
-
-```
-HLT	Healthcare
-```
-
-### Excerpt 8
-
-```
-ECO	Economy / Tax / Welfare
-```
-
-### Excerpt 9
-
-```
-INF	Infrastructure / Environment
-```
-
-### Excerpt 10
-
-```
-MED	Media / Information
-```
-
-### Excerpt 11
-
-```
-ADM	Administrative State
-```
-
-### Excerpt 12
-
-```
-TRM	Term Limits / Eligibility
-```
-
-### Excerpt 13
-
-```
-GUN	Firearms / Armed Power
-```
-
-### Excerpt 14
-
-```
-CIV	Civic Systems (ID, records, etc.)
-```
-
-### Excerpt 15
-
-```
-SYS	System-wide rules
-```
-
-### Excerpt 16
-
-```
-🧩 Subdomain Examples
-```
-
-### Excerpt 17
-
-```
-Healthcare
-```
-
-### Excerpt 18
-
-```
-Code	Meaning
-```
-
-### Excerpt 19
-
-```
-STD	Standards / governance
-```
-
-### Excerpt 20
-
-```
-MHC	Mental health
-```
-
-### Excerpt 21
-
-```
-SUP	Supplements / pharma
-```
-
-### Excerpt 22
-
-```
-EMS	Emergency services
-```
-
-### Excerpt 23
-
-```
-ACC	Access / eligibility
-```
-
-### Excerpt 24
-
-```
-Elections
-```
-
-### Excerpt 25
-
-```
-ACC	Access
-```
-
-### Excerpt 26
-
-```
-SEC	Security
-```
-
-### Excerpt 27
-
-```
-MAP	Districting
-```
-
-### Excerpt 28
-
-```
-GOV	Governance
-```
-
-### Excerpt 29
-
-```
-Rights
-```
-
-### Excerpt 30
-
-```
-PRV	Privacy
-```
-
-### Excerpt 31
-
-```
-BOD	Bodily autonomy
-```
-
-### Excerpt 32
-
-```
-EQT	Equality
-```
-
-### Excerpt 33
-
-```
-REL	Religion
-```
-
-### Excerpt 34
-
-```
-🧾 Your New Entries (converted)
-```
-
-### Excerpt 35
-
-```
-
-```
-
-### Excerpt 36
-
-```
 never reuse IDs
-```
-
-### Excerpt 37
-
-```
 never renumber IDs after assignment
-```
-
-### Excerpt 38
-
-```
 if something is removed, mark it deprecated instead of reusing the ID
-```
-
-### Excerpt 39
-
-```
 keep one migration file mapping old numeric IDs to new IDs
-```
-
-### Excerpt 40
-
-```
 Domain codes
-```
-
-### Excerpt 41
-
-```
 ELE	Elections / Representation
-```
-
-### Excerpt 42
-
-```
 COR	Anti-Corruption / Money / Power
-```
-
-### Excerpt 43
-
-```
 JUS	Justice / Policing / Drug Policy
-```
-
-### Excerpt 44
-
-```
 RGT	Rights / Civil Liberties
-```
-
-### Excerpt 45
-
-```
 INF	Infrastructure / Environment / Public Goods
-```
-
-### Excerpt 46
-
-```
 MED	Media / Information / Journalism
-```
-
-### Excerpt 47
-
-```
 ADM	Administrative State / Agencies
-```
-
-### Excerpt 48
-
-```
 TRM	Term Limits / Eligibility / Fitness
-```
-
-### Excerpt 49
-
-```
 CIV	Civic systems / records / identity access
-```
-
-### Excerpt 50
-
-```
 SYS	System-wide / meta-rules / cross-pillar rules
-```
-
-### Excerpt 51
-
-```
 MOV	Movement / communications / coalition / strategy
-```
-
-### Excerpt 52
-
-```
 Suggested subdomain codes
-```
-
-### Excerpt 53
-
-```
 GOV
-```
-
-### Excerpt 54
-
-```
 ACC = accountability
-```
-
-### Excerpt 55
-
-```
 EMR = emergency powers
-```
-
-### Excerpt 56
-
-```
 EXO = executive orders
-```
-
-### Excerpt 57
-
-```
 WAR = war powers
-```
-
-### Excerpt 58
-
-```
 PDN = pardon power
-```
-
-### Excerpt 59
-
-```
 DIV = divestment / self-dealing
-```
-
-### Excerpt 60
-
-```
 DOJ = law enforcement independence
-```
-
-### Excerpt 61
-
-```
 REC = records / transparency
-```
-
-### Excerpt 62
-
-```
 ELE
-```
-
-### Excerpt 63
-
-```
 VOT = voting rights / access
-```
-
-### Excerpt 64
-
-```
 SEC = security / auditability
-```
-
-### Excerpt 65
-
-```
 MAP = redistricting / maps
-```
-
-### Excerpt 66
-
-```
 CER = certification
-```
-
-### Excerpt 67
-
-```
 REP = representation
-```
-
-### Excerpt 68
-
-```
 IDA = voter ID access
-```
-
-### Excerpt 69
-
-```
 ROL = voter rolls
-```
-
-### Excerpt 70
-
-```
 OVR = elections oversight
-```
-
-### Excerpt 71
-
-```
 COR
-```
-
-### Excerpt 72
-
-```
 FIN = campaign finance
-```
-
-### Excerpt 73
-
-```
 LBY = lobbying
-```
-
-### Excerpt 74
-
-```
 WHB = whistleblowers
-```
-
-### Excerpt 75
-
-```
 ETH = ethics / conflicts / stock trading
-```
-
-### Excerpt 76
-
-```
 FOR = foreign influence
-```
-
-### Excerpt 77
-
-```
 MON = monopolistic influence
-```
-
-### Excerpt 78
-
-```
 JUS
-```
-
-### Excerpt 79
-
-```
 CRJ = criminal justice
-```
-
-### Excerpt 80
-
-```
 POL = policing
-```
-
-### Excerpt 81
-
-```
 DET = detention
-```
-
-### Excerpt 82
-
-```
 DRG = drug policy
-```
-
-### Excerpt 83
-
-```
 REB = rehab
-```
-
-### Excerpt 84
-
-```
 EQJ = equal justice / bias / profiling
-```
-
-### Excerpt 85
-
-```
 RGT
-```
-
-### Excerpt 86
-
-```
 PRV = privacy
-```
-
-### Excerpt 87
-
-```
 BOD = bodily autonomy
-```
-
-### Excerpt 88
-
-```
 EQT = equality
-```
-
-### Excerpt 89
-
-```
 REL = religion / freedom from religion
-```
-
-### Excerpt 90
-
-```
 EDU = education
-```
-
-### Excerpt 91
-
-```
 HOU = housing
-```
-
-### Excerpt 92
-
-```
 LAB = labor / leave
-```
-
-### Excerpt 93
-
-```
 TEC = tech / data rights
-```
-
-### Excerpt 94
-
-```
 HLT
-```
-
-### Excerpt 95
-
-```
 STD = standards / governance
-```
-
-### Excerpt 96
-
-```
 MHC = mental healthcare
-```
-
-### Excerpt 97
-
-```
 EMS = emergency services
-```
-
-### Excerpt 98
-
-```
 ACC = access / eligibility
-```
-
-### Excerpt 99
-
-```
 PHR = pharma / ingredient standards
-```
-
-### Excerpt 100
-
-```
 SUP = supplements
-```
-
-### Excerpt 101
-
-```
 TEL = telemedicine
-```
-
-### Excerpt 102
-
-```
 COV = coverage rules
-```
-
-### Excerpt 103
-
-```
 ECO
-```
-
-### Excerpt 104
-
-```
 TAX = taxation
-```
-
-### Excerpt 105
-
-```
 UBI = guaranteed income
-```
-
-### Excerpt 106
-
-```
 WLF = welfare / benefits
-```
-
-### Excerpt 107
-
-```
 SOC = Social Security / social insurance
-```
-
-### Excerpt 108
-
-```
 WRK = wages / work
-```
-
-### Excerpt 109
-
-```
 INF
-```
-
-### Excerpt 110
-
-```
 NET = internet / communications
-```
-
-### Excerpt 111
-
-```
 GRD = electrical grid
-```
-
-### Excerpt 112
-
-```
 ENR = energy generation
-```
-
-### Excerpt 113
-
-```
 WAT = water systems
-```
-
-### Excerpt 114
-
-```
 BLD = building standards
-```
-
-### Excerpt 115
-
-```
 DAT = data centers
-```
-
-### Excerpt 116
-
-```
 ENV = wildlife / habitat / parks
-```
-
-### Excerpt 117
-
-```
 URB = urban green space / city planning
-```
-
-### Excerpt 118
-
-```
 MED
-```
-
-### Excerpt 119
-
-```
 PRS = press / journalists / source protection
-```
-
-### Excerpt 120
-
-```
 DIS = disinformation / manipulation
-```
-
-### Excerpt 121
-
-```
 TRN = transparency / conflicts
-```
-
-### Excerpt 122
-
-```
 ALG = algorithmic / platform influence
-```
-
-### Excerpt 123
-
-```
 ADM
-```
-
-### Excerpt 124
-
-```
 AGY = agencies / authority
-```
-
-### Excerpt 125
-
-```
 CHV = Chevron / judicial deference
-```
-
-### Excerpt 126
-
-```
 CAP = anti-capture
-```
-
-### Excerpt 127
-
-```
 OVR = oversight
-```
-
-### Excerpt 128
-
-```
 TRM
-```
-
-### Excerpt 129
-
-```
 LIM = term limits
-```
-
-### Excerpt 130
-
-```
 AGE = age caps
-```
-
-### Excerpt 131
-
-```
 COG = cognitive fitness
-```
-
-### Excerpt 132
-
-```
 VAC = vacancy / special election rules
-```
-
-### Excerpt 133
-
-```
 RUN = candidacy restrictions
-```
-
-### Excerpt 134
-
-```
 GUN
-```
-
-### Excerpt 135
-
-```
 REG = regulation
-```
-
-### Excerpt 136
-
-```
 MIL = militias / private armies
-```
-
-### Excerpt 137
-
-```
 AUT = automatic weapons
-```
-
-### Excerpt 138
-
-```
 TRN = training / licensing
-```
-
-### Excerpt 139
-
-```
 ENF = armed state actors
-```
-
-### Excerpt 140
-
-```
 CIV
-```
-
-### Excerpt 141
-
-```
 VIT = vital records
-```
-
-### Excerpt 142
-
-```
 NAM = name changes / marriage docs
-```
-
-### Excerpt 143
-
-```
 DOC = certified document access
-```
-
-### Excerpt 144
-
-```
 IDN = identity document assistance
-```
-
-### Excerpt 145
-
-```
 SYS
-```
-
-### Excerpt 146
-
-```
 GEO = geography / anti-fragmentation
-```
-
-### Excerpt 147
-
-```
 FED = federalism balance
-```
-
-### Excerpt 148
-
-```
 FND = foundational values
-```
-
-### Excerpt 149
-
-```
 RUL = system rules
-```
-
-### Excerpt 150
-
-```
 CMP = completeness / project rules
-```
-
-### Excerpt 151
-
-```
 MOV
-```
-
-### Excerpt 152
-
-```
 COM = communications
-```
-
-### Excerpt 153
-
-```
 COA = coalition building
-```
-
-### Excerpt 154
-
-```
 ORG = movement identity / non-party structure
-```
-
-### Excerpt 155
-
-```
 NAM = naming / branding
-```
-
-### Excerpt 156
-
-```
 Example IDs from your current ideas
-```
-
-### Excerpt 157
-
-```
 HLT-MHC-001 Mental healthcare must be included
-```
-
-### Excerpt 158
-
-```
 HLT-STD-001 Coverage decisions must be evidence-based
-```
-
-### Excerpt 159
-
-```
 HLT-STD-002 Coverage must be insulated from partisan interference
-```
-
-### Excerpt 160
-
-```
 HLT-PHR-001 Stricter quality standards for generic medicine ingredients
-```
-
-### Excerpt 161
-
-```
 HLT-PHR-002 Ban non-essential common allergens in medicines
-```
-
-### Excerpt 162
-
-```
 HLT-SUP-001 Fund supplement efficacy/safety studies
-```
-
-### Excerpt 163
-
-```
 HLT-SUP-002 New supplement label standards
-```
-
-### Excerpt 164
-
-```
 HLT-SUP-003 Supplement lab testing transparency
-```
-
-### Excerpt 165
-
-```
 HLT-SUP-004 Minimum quality/testing standards for supplements
-```
-
-### Excerpt 166
-
-```
 HLT-PHR-003 End-to-end supply chain traceability for drugs/supplements
-```
-
-### Excerpt 167
-
-```
 HLT-EMS-001 Emergency services free for all regardless of citizenship
-```
-
-### Excerpt 168
-
-```
 HLT-EMS-002 Emergency care includes ambulance, ER, supplies, follow-up
-```
-
-### Excerpt 169
-
-```
 HLT-ACC-001 Coverage for citizens and long-term/permanent residents
-```
-
-### Excerpt 170
-
-```
 HLT-ACC-002 Two-year residency rule for elective/non-urgent procedures
-```
-
-### Excerpt 171
-
-```
 HLT-ACC-003 Exception for life-threatening or disability-causing conditions
-```
-
-### Excerpt 172
-
-```
 HLT-TEL-001 Telemedicine must not have regional restrictions
-```
-
-### Excerpt 173
-
-```
 HLT-TEL-002 Telemedicine must bridge unavailable local coverage
-```
-
-### Excerpt 174
-
-```
 HLT-COV-001 Ban tiered healthcare coverage
-```
-
-### Excerpt 175
-
-```
 HLT-COV-002 One plan for everyone
-```
-
-### Excerpt 176
-
-```
 HLT-COV-003 Single-payer healthcare
-```
-
-### Excerpt 177
-
-```
 HLT-STD-003 Minimum healthcare service levels
-```
-
-### Excerpt 178
-
-```
 HLT-STD-004 Maximum healthcare wait times
-```
-
-### Excerpt 179
-
-```
 Scientific governance / anti-fragmentation
-```
-
-### Excerpt 180
-
-```
 HLT-STD-005 Independent scientific governance body
-```
-
-### Excerpt 181
-
-```
 HLT-STD-006 Staggered appointments
-```
-
-### Excerpt 182
-
-```
 HLT-STD-007 Federal and state appointment participation
-```
-
-### Excerpt 183
-
-```
 HLT-STD-008 Multi-layer anti-capture guardrails
-```
-
-### Excerpt 184
-
-```
 HLT-STD-009 Full transparency of evidence, methods, exclusions
-```
-
-### Excerpt 185
-
-```
 HLT-STD-010 Publish dissenting scientific opinions
-```
-
-### Excerpt 186
-
-```
 HLT-STD-011 Independent audit of scientific integrity
-```
-
-### Excerpt 187
-
-```
 SYS-GEO-001 Geography must not determine access to fundamental rights or care
-```
-
-### Excerpt 188
-
-```
 SYS-GEO-002 National baseline of rights/services must be uniform
-```
-
-### Excerpt 189
-
-```
 SYS-GEO-003 States may not restrict federally guaranteed rights/services
-```
-
-### Excerpt 190
-
-```
 SYS-GEO-004 Cross-state access to care must be guaranteed
-```
-
-### Excerpt 191
-
-```
 SYS-GEO-005 Travel/accommodation support when local access unavailable
-```
-
-### Excerpt 192
-
-```
 SYS-FED-001 High-risk systems must not be fully centralized federally
-```
-
-### Excerpt 193
-
-```
 SYS-FED-002 Elections remain primarily state/local administered
-```
-
-### Excerpt 194
-
-```
 SYS-FED-003 Federal government may set standards but not directly control elections
-```
-
-### Excerpt 195
-
-```
 SYS-FED-004 Multiple oversight layers required for elections
-```
-
-### Excerpt 196
-
-```
 SYS-FED-005 Safeguards against both state suppression and federal manipulation
-```
-
-### Excerpt 197
-
-```
 Journalists / media
-```
-
-### Excerpt 198
-
-```
 MED-PRS-001 Protect journalists engaged in lawful newsgathering
-```
-
-### Excerpt 199
-
-```
 MED-PRS-002 Protect confidential sources
-```
-
-### Excerpt 200
-
-```
 MED-PRS-003 High-threshold limits on compelled source disclosure
-```
-
-### Excerpt 201
-
-```
 MED-PRS-004 Ban retaliation/surveillance/prosecution of journalists in public-interest reporting
-```
-
-### Excerpt 202
-
-```
 COR-WHB-001 Protect whistleblowers who provide information to journalists
-```
-
-### Excerpt 203
-
-```
 MED-PRS-005 Prohibit classification/national security misuse to conceal wrongdoing
-```
-
-### Excerpt 204
-
-```
 MED-PRS-006 Independent judicial review before compelled disclosure of journalistic materials
-```
-
-### Excerpt 205
-
-```
 MED-PRS-007 Limit subpoenas/warrants/surveillance targeting journalists
-```
-
-### Excerpt 206
-
-```
 MED-PRS-008 Extend protections to independent/digital journalists
-```
-
-### Excerpt 207
-
-```
 MED-PRS-009 Transparency/reporting on government actions targeting journalists
-```
-
-### Excerpt 208
-
-```
 Drug policy / rehab
-```
-
-### Excerpt 209
-
-```
 JUS-DRG-001 End the war on drugs framework
-```
-
-### Excerpt 210
-
-```
 JUS-DRG-002 Decriminalize personal possession
-```
-
-### Excerpt 211
-
-```
 HLT-STD-012 Treat substance use disorder as a medical condition
-```
-
-### Excerpt 212
-
-```
 JUS-DRG-003 Redirect enforcement funding to treatment/prevention/harm reduction
-```
-
-### Excerpt 213
-
-```
 JUS-DRG-004 Regulated frameworks for substances based on risk/evidence
-```
-
-### Excerpt 214
-
-```
 HLT-STD-013 Harm reduction strategies
-```
-
-### Excerpt 215
-
-```
 JUS-DRG-005 No criminal penalties when seeking emergency overdose help
-```
-
-### Excerpt 216
-
-```
 HLT-REB-001 National standards for rehab facilities
-```
-
-### Excerpt 217
-
-```
 HLT-REB-002 Evidence-based treatment required
-```
-
-### Excerpt 218
-
-```
 HLT-REB-003 Ban abusive/coercive/non-evidence-based rehab practices
-```
-
-### Excerpt 219
-
-```
 HLT-REB-004 Rehab transparency on outcomes and methods
-```
-
-### Excerpt 220
-
-```
 HLT-REB-005 Treatment must be accessible and affordable
-```
-
-### Excerpt 221
-
-```
 HLT-REB-006 Oversight and auditing of rehab facilities
-```
-
-### Excerpt 222
-
-```
 HLT-REB-007 Expand voluntary treatment and reduce court-mandated reliance
-```
-
-### Excerpt 223
-
-```
 RGT-BOD-001 Patient rights protections in rehab settings
-```
-
-### Excerpt 224
-
-```
 Term limits / ethics
-```
-
-### Excerpt 225
-
-```
 TRM-LIM-001 House maximum 6 terms
-```
-
-### Excerpt 226
-
-```
 TRM-LIM-002 Senate maximum 3 terms
-```
-
-### Excerpt 227
-
-```
 TRM-LIM-003 Combined maximum 8 terms or 20 years
-```
-
-### Excerpt 228
-
-```
 TRM-RUN-001 No running for any office while in office
-```
-
-### Excerpt 229
-
-```
 TRM-RUN-002 Two-year wait before election to another office
-```
-
-### Excerpt 230
-
-```
 TRM-VAC-001 Wait period also applies to appointments/special elections
-```
-
-### Excerpt 231
-
-```
 TRM-VAC-002 Special-election exception when term is more than halfway over
-```
-
-### Excerpt 232
-
-```
 TRM-VAC-003 Senate appointment exception under remaining-term rule
-```
-
-### Excerpt 233
-
-```
 COR-ETH-001 Covered officials may not directly trade stock
-```
-
-### Excerpt 234
-
-```
 COR-ETH-002 Applies to Congress
-```
-
-### Excerpt 235
-
-```
 COR-ETH-003 Applies to federal justices
-```
-
-### Excerpt 236
-
-```
 COR-ETH-004 Applies to cabinet and senior officials
-```
-
-### Excerpt 237
-
-```
 COR-ETH-005 Applies to President and Vice President
-```
-
-### Excerpt 238
-
-```
 COR-ETH-006 Applies to immediate family
-```
-
-### Excerpt 239
-
-```
 COR-ETH-007 Applies to spouses/domestic partners
-```
-
-### Excerpt 240
-
-```
 COR-ETH-008 Applies to spouses/partners of immediate family
-```
-
-### Excerpt 241
-
-```
 COR-ETH-009 Collective investment vehicles allowed if no investor trading input
-```
-
-### Excerpt 242
-
-```
 Recommended next step
-```
-
-### Excerpt 243
-
-```
 | Code | Domain |
-```
-
-### Excerpt 244
-
-```
 |---|---|
-```
-
-### Excerpt 245
-
-```
 | GOV | Governance / Executive |
-```
-
-### Excerpt 246
-
-```
 | ELE | Elections / Representation |
-```
-
-### Excerpt 247
-
-```
 | COR | Anti-Corruption / Money / Power |
-```
-
-### Excerpt 248
-
-```
 | JUS | Justice / Policing / Drug Policy |
-```
-
-### Excerpt 249
-
-```
 | RGT | Rights / Civil Liberties |
-```
-
-### Excerpt 250
-
-```
 | HLT | Healthcare |
-```
-
-### Excerpt 251
-
-```
 | ECO | Economy / Tax / Welfare |
-```
-
-### Excerpt 252
-
-```
 | INF | Infrastructure / Environment / Public Goods |
-```
-
-### Excerpt 253
-
-```
 | MED | Media / Information / Journalism |
-```
-
-### Excerpt 254
-
-```
 | ADM | Administrative State / Agencies |
-```
-
-### Excerpt 255
-
-```
 | TRM | Term Limits / Eligibility / Fitness |
-```
-
-### Excerpt 256
-
-```
 | GUN | Firearms / Armed Power |
-```
-
-### Excerpt 257
-
-```
 | CIV | Civic systems / records / identity access |
-```
-
-### Excerpt 258
-
-```
 | SYS | System-wide / cross-pillar rules |
-```
-
-### Excerpt 259
-
-```
 | MOV | Movement / communications / coalition / strategy |
-```
-
-### Excerpt 260
-
-```
 | JUD | Courts / Judiciary |
-```
-
-### Excerpt 261
-
-```
 ### TRM
-```
-
-### Excerpt 262
-
-```
 - LIM = term limits
-```
-
-### Excerpt 263
-
-```
 - AGE = age caps
-```
-
-### Excerpt 264
-
-```
 - COG = cognitive fitness
-```
-
-### Excerpt 265
-
-```
 - VAC = vacancy / special-election rules
-```
-
-### Excerpt 266
-
-```
 - RUN = candidacy restrictions
-```
-
-### Excerpt 267
-
-```
 | old_id | new_id | short_label | target_file | status | notes |
-```
-
-### Excerpt 268
-
-```
 |---|---|---|---|---|---|
-```
-
-### Excerpt 269
-
-```
 | 18 | GOV-EXO-001 | Limit executive orders to emergencies | pillar_1_executive_power.md | PARTIAL | Time-limited emergency-only executive orders |
-```
-
-### Excerpt 270
-
-```
 | 19 | GOV-EMR-001 | Time limits on executive actions | pillar_1_executive_power.md | PARTIAL | Closely tied to emergency powers |
-```
-
-### Excerpt 271
-
-```
 | 20 | GOV-ACC-001 | President not immune | pillar_1_executive_power.md | INCLUDED | Explicit legal accountability |
-```
-
-### Excerpt 272
-
-```
 | 21 | GOV-ACC-002 | Ban political firings | pillar_1_executive_power.md | MISSING | Protect oversight and civil service |
-```
-
-### Excerpt 273
-
-```
 | 22 | GOV-PDN-001 | Restrict pardon powers | pillar_1_executive_power.md | PARTIAL | Self-pardons and co-conspirators |
-```
-
-### Excerpt 274
-
-```
 | 23 | GOV-DIV-001 | Mandatory divestment enforcement | pillar_1_executive_power.md | PARTIAL | Seizure/forfeiture mechanism |
-```
-
-### Excerpt 275
-
-```
 | 24 | GOV-WAR-001 | Ban open-ended AUMFs | pillar_1_executive_power.md | INCLUDED | |
-```
-
-### Excerpt 276
-
-```
 | 25 | GOV-WAR-002 | Require declared wars | pillar_1_executive_power.md | MISSING | |
-```
-
-### Excerpt 277
-
-```
 | 26 | GOV-WAR-003 | Limit military authority | pillar_1_executive_power.md | PARTIAL | |
-```
-
-### Excerpt 278
-
-```
 | 27 | GOV-ACC-003 | Ban executive kill lists | pillar_1_executive_power.md | PARTIAL | Cross-reference justice |
-```
-
-### Excerpt 279
-
-```
 | 28 | GOV-REC-001 | Constitutionalize presidential records | pillar_1_executive_power.md | PARTIAL | |
-```
-
-### Excerpt 280
-
-```
 | 31 | ELE-REP-001 | Abolish Electoral College | pillar_2_elections_and_representation.md | MISSING | |
-```
-
-### Excerpt 281
-
-```
 | 32 | ELE-SEC-001 | Paper ballots and auditability | pillar_2_elections_and_representation.md | INCLUDED | |
-```
-
-### Excerpt 282
-
-```
 | 33 | ELE-MAP-001 | Ban gerrymandering | pillar_2_elections_and_representation.md | INCLUDED | |
-```
-
-### Excerpt 283
-
-```
 | 34 | ELE-REP-002 | Ballot initiatives nationwide | pillar_2_elections_and_representation.md | INCLUDED | |
-```
-
-### Excerpt 284
-
-```
 | 35 | ELE-VOT-001 | Constitutional right to vote | pillar_2_elections_and_representation.md | INCLUDED | |
-```
-
-### Excerpt 285
-
-```
 | 44 | ELE-VOT-002 | Polling capacity limits | pillar_2_elections_and_representation.md | INCLUDED | |
-```
-
-### Excerpt 286
-
-```
 | 45 | ELE-VOT-003 | Flexible voting locations | pillar_2_elections_and_representation.md | INCLUDED | |
-```
-
-### Excerpt 287
-
-```
 | 46 | ELE-VOT-004 | Election Day holiday | pillar_2_elections_and_representation.md | INCLUDED | |
-```
-
-### Excerpt 288
-
-```
 | 47 | ELE-VOT-005 | Paid time off to vote | pillar_2_elections_and_representation.md | INCLUDED | |
-```
-
-### Excerpt 289
-
-```
 | 49 | ELE-OVR-001 | Insurrection enforcement | pillar_2_elections_and_representation.md | INCLUDED | |
-```
-
-### Excerpt 290
-
-```
 | 52 | ELE-REP-003 | Territorial House representation | pillar_2_elections_and_representation.md | MISSING | |
-```
-
-### Excerpt 291
-
-```
 | 54 | ELE-SEC-002 | Ban federal armed presence at polling sites | pillar_2_elections_and_representation.md | MISSING | |
-```
-
-### Excerpt 292
-
-```
 | 55 | ELE-SEC-003 | Ban weapons at polling sites | pillar_2_elections_and_representation.md | MISSING | |
-```
-
-### Excerpt 293
-
-```
 | 60 | JUD-ETH-001 | Supreme Court term limits | pillar_6_courts_and_judicial_system.md | MISSING | |
-```
-
-### Excerpt 294
-
-```
 | 61 | JUD-ETH-002 | Judicial ethics code | pillar_6_courts_and_judicial_system.md | MISSING | |
-```
-
-### Excerpt 295
-
-```
 | 62 | JUD-INT-001 | Require intent/context in interpretation | pillar_6_courts_and_judicial_system.md | MISSING | |
-```
-
-### Excerpt 296
-
-```
 | 64 | JUD-VEN-001 | Prevent judge and venue shopping | pillar_6_courts_and_judicial_system.md | MISSING | New addition |
-```
-
-### Excerpt 297
-
-```
 | 73 | COR-FIN-001 | Ban corporate political donations | pillar_3_anti_corruption_and_concentrated_power.md | INCLUDED | |
-```
-
-### Excerpt 298
-
-```
 | 74 | COR-FIN-002 | Ban Super PACs | pillar_3_anti_corruption_and_concentrated_power.md | PARTIAL | |
-```
-
-### Excerpt 299
-
-```
 | 81 | COR-ETH-001 | Ban industry lobbyists from governing boards | pillar_3_anti_corruption_and_concentrated_power.md | MISSING | Cross-ref ADM |
-```
-
-### Excerpt 300
-
-```
 | 94 | RGT-PRV-001 | Explicit right to privacy | pillar_5_rights_civil_liberties_and_economic_security.md | INCLUDED | |
-```
-
-### Excerpt 301
-
-```
 | 100 | RGT-BOD-001 | Protect gender-affirming care | pillar_5_rights_civil_liberties_and_economic_security.md | INCLUDED | |
-```
-
-### Excerpt 302
-
-```
 | 125 | JUS-POL-001 | Require police community service | pillar_4_equal_justice_policing_and_accountability.md | MISSING | |
-```
-
-### Excerpt 303
-
-```
 | 128 | ECO-TAX-001 | Anti-wealth hoarding | pillar_8_taxation_and_wealth.md | PARTIAL | |
-```
-
-### Excerpt 304
-
-```
 | 148 | ADM-CHV-001 | Restore Chevron deference | pillar_14_administrative_state.md | MISSING | |
-```
-
-### Excerpt 305
-
-```
 | 149 | ADM-AGY-001 | Congress explicitly empowered to create agencies | pillar_14_administrative_state.md | MISSING | |
-```
-
-### Excerpt 306
-
-```
 | 192 | TRM-LIM-001 | House max 6 terms | pillar_13_term_limits_and_fitness.md | MISSING | |
-```
-
-### Excerpt 307
-
-```
 | 193 | TRM-LIM-002 | Senate max 3 terms | pillar_13_term_limits_and_fitness.md | MISSING | |
-```
-
-### Excerpt 308
-
-```
 | 194 | TRM-LIM-003 | Combined 8 terms or 20 years | pillar_13_term_limits_and_fitness.md | MISSING | |
-```
-
-### Excerpt 309
-
-```
 | 195 | TRM-RUN-001 | No running for another office while in office | pillar_13_term_limits_and_fitness.md | MISSING | |
-```
-
-### Excerpt 310
-
-```
 | 196 | TRM-RUN-002 | Two-year wait before another office | pillar_13_term_limits_and_fitness.md | MISSING | |
-```
-
-### Excerpt 311
-
-```
 | 200 | COR-ETH-002 | Ban direct stock trading by covered officials | pillar_3_anti_corruption_and_concentrated_power.md | MISSING | |
-```
-
-### Excerpt 312
-
-```
 | 210 | HLT-MHC-001 | Mental healthcare included | pillar_9_healthcare_system.md | MISSING | |
-```
-
-### Excerpt 313
-
-```
 | 211 | HLT-STD-001 | Protect coverage from partisan interference | pillar_9_healthcare_system.md | MISSING | |
-```
-
-### Excerpt 314
-
-```
 | 212 | HLT-STD-002 | Evidence-based coverage decisions | pillar_9_healthcare_system.md | MISSING | |
-```
-
-### Excerpt 315
-
-```
 | 214 | HLT-TRL-001 | Streamline approval processes safely | pillar_9_healthcare_system.md | MISSING | |
-```
-
-### Excerpt 316
-
-```
 | 221 | HLT-PHR-003 | End-to-end supply chain traceability | pillar_9_healthcare_system.md | MISSING | |
-```
-
-### Excerpt 317
-
-```
 | 222 | HLT-EMS-001 | Emergency care free for all | pillar_9_healthcare_system.md | MISSING | |
-```
-
-### Excerpt 318
-
-```
 | 228 | HLT-STD-005 | Insulate standards body from partisan capture | pillar_9_healthcare_system.md | MISSING | |
-```
-
-### Excerpt 319
-
-```
 | 229 | HLT-STD-006 | Staggered appointments for standards body | pillar_9_healthcare_system.md | MISSING | |
-```
-
-### Excerpt 320
-
-```
 | 241 | HLT-STD-009 | Full transparency of data/methods/exclusions | pillar_9_healthcare_system.md | MISSING | |
-```
-
-### Excerpt 321
-
-```
 | 244 | HLT-STD-010 | Publish dissenting scientific opinions | pillar_9_healthcare_system.md | MISSING | |
-```
-
-### Excerpt 322
-
-```
 | 247 | SYS-GEO-001 | Geography must not determine access | system_rules.md | MISSING | |
-```
-
-### Excerpt 323
-
-```
 | 250 | SYS-GEO-004 | Cross-state access guarantee | system_rules.md | MISSING | |
-```
-
-### Excerpt 324
-
-```
 | 252 | HLT-TEL-001 | Telemedicine without regional restrictions | pillar_9_healthcare_system.md | MISSING | |
-```
-
-### Excerpt 325
-
-```
 | 255 | SYS-GEO-002 | National baseline must be uniform | system_rules.md | MISSING | |
-```
-
-### Excerpt 326
-
-```
 | 261 | SYS-FED-001 | High-risk systems not fully centralized | system_rules.md | MISSING | |
-```
-
-### Excerpt 327
-
-```
 | 262 | SYS-FED-002 | Elections remain primarily state/local | pillar_2_elections_and_representation.md | MISSING | |
-```
-
-### Excerpt 328
-
-```
 | 267 | MED-PRS-001 | Protect journalists | pillar_11_information_and_media.md | MISSING | |
-```
-
-### Excerpt 329
-
-```
 | 268 | MED-PRS-002 | Protect confidential sources | pillar_11_information_and_media.md | MISSING | |
-```
-
-### Excerpt 330
-
-```
 | 271 | COR-WHB-001 | Protect whistleblowers who go to journalists | pillar_3_anti_corruption_and_concentrated_power.md | MISSING | |
-```
-
-### Excerpt 331
-
-```
 | 278 | JUS-DRG-001 | End war on drugs framework | pillar_4_equal_justice_policing_and_accountability.md | MISSING | |
-```
-
-### Excerpt 332
-
-```
 | 279 | JUS-DRG-002 | Decriminalize personal possession | pillar_4_equal_justice_policing_and_accountability.md | MISSING | |
-```
-
-### Excerpt 333
-
-```
 | 285 | HLT-REB-001 | National rehab standards | pillar_9_healthcare_system.md | MISSING | |
-```
-
-### Excerpt 334
-
-```
 First batch of remapped IDs to use immediately
-```
-
-### Excerpt 335
-
-```
 JUD-VEN-001  Prevent judge shopping and venue shopping
-```
-
-### Excerpt 336
-
-```
 TRM-LIM-001  House maximum 6 terms
-```
-
-### Excerpt 337
-
-```
 TRM-LIM-002  Senate maximum 3 terms
-```
-
-### Excerpt 338
-
-```
 TRM-LIM-003  Combined maximum 8 terms or 20 years
-```
-
-### Excerpt 339
-
-```
 TRM-RUN-001  May not run for another office while in office
-```
-
-### Excerpt 340
-
-```
 TRM-RUN-002  Must wait 2 years before election to another office
-```
-
-### Excerpt 341
-
-```
 TRM-VAC-001  Vacancy rules must respect wait periods
-```
-
-### Excerpt 342
-
-```
 TRM-VAC-002  Special-election half-term exception
-```
-
-### Excerpt 343
-
-```
 TRM-VAC-003  Senate appointment remaining-term exception
-```
-
-### Excerpt 344
-
-```
 COR-ETH-002  Covered officials may not directly trade stock
-```
-
-### Excerpt 345
-
-```
 COR-ETH-003  Applies to members of Congress
-```
-
-### Excerpt 346
-
-```
 COR-ETH-004  Applies to federal justices
-```
-
-### Excerpt 347
-
-```
 COR-ETH-005  Applies to cabinet and senior officials
-```
-
-### Excerpt 348
-
-```
 COR-ETH-006  Applies to President and Vice President
-```
-
-### Excerpt 349
-
-```
 COR-ETH-007  Applies to immediate family
-```
-
-### Excerpt 350
-
-```
 COR-ETH-008  Applies to spouses and long-term domestic partners
-```
-
-### Excerpt 351
-
-```
 COR-ETH-009  Applies to spouses/partners of immediate family
-```
-
-### Excerpt 352
-
-```
 COR-ETH-010  Collective investment vehicles allowed without investor input
-```
-
-### Excerpt 353
-
-```
 HLT-MHC-001  Mental healthcare must be included
-```
-
-### Excerpt 354
-
-```
 HLT-STD-001  Coverage protected from partisan interference
-```
-
-### Excerpt 355
-
-```
 HLT-STD-002  Coverage decisions grounded in evidence-based research
-```
-
-### Excerpt 356
-
-```
 HLT-TRL-001  Approvals and trials for new treatments funded and streamlined
-```
-
-### Excerpt 357
-
-```
 HLT-PHR-001  Better quality standards for generic medicine ingredients
-```
-
-### Excerpt 358
-
-```
 HLT-PHR-002  Ban non-active common allergens where unnecessary
-```
-
-### Excerpt 359
-
-```
 HLT-SUP-001  Fund studies on supplement efficacy and safety
-```
-
-### Excerpt 360
-
-```
 HLT-SUP-002  New supplement label standards
-```
-
-### Excerpt 361
-
-```
 HLT-SUP-003  Supplement lab testing transparency
-```
-
-### Excerpt 362
-
-```
 HLT-SUP-004  Minimum supplement quality/testing standards
-```
-
-### Excerpt 363
-
-```
 HLT-PHR-003  End-to-end supply chain traceability for drugs and supplements
-```
-
-### Excerpt 364
-
-```
 HLT-EMS-001  Emergency services free to all people
-```
-
-### Excerpt 365
-
-```
 HLT-EMS-002  Emergency care includes ambulance, hospital care, supplies, and follow-up
-```
-
-### Excerpt 366
-
-```
 HLT-ACC-001  Full coverage for citizens and long-term/permanent residents
-```
-
-### Excerpt 367
-
-```
 HLT-ACC-002  Two-year residency rule for elective/non-urgent procedures
-```
-
-### Excerpt 368
-
-```
 HLT-ACC-003  Exception for life-threatening or disability-causing conditions
-```
-
-### Excerpt 369
-
-```
 HLT-COV-001  Ban tiered healthcare coverage
-```
-
-### Excerpt 370
-
-```
 HLT-COV-002  Everyone gets one plan
-```
-
-### Excerpt 371
-
-```
 HLT-COV-003  Healthcare is single payer
-```
-
-### Excerpt 372
-
-```
 HLT-STD-003  Minimum service levels for healthcare
-```
-
-### Excerpt 373
-
-```
 HLT-STD-004  Maximum wait times for healthcare
-```
-
-### Excerpt 374
-
-```
 SYS-GEO-001  Geography must not determine access to rights or care
-```
-
-### Excerpt 375
-
-```
 SYS-GEO-002  National baseline of rights/services must be uniform
-```
-
-### Excerpt 376
-
-```
 SYS-GEO-003  States may not degrade federally guaranteed access
-```
-
-### Excerpt 377
-
-```
 SYS-GEO-004  Cross-state access to care guaranteed
-```
-
-### Excerpt 378
-
-```
 SYS-GEO-005  Travel/accommodation support when local care unavailable
-```
-
-### Excerpt 379
-
-```
 SYS-FED-001  High-risk systems must not be fully centralized
-```
-
-### Excerpt 380
-
-```
 SYS-FED-002  Elections remain primarily state/local administered
-```
-
-### Excerpt 381
-
-```
 SYS-FED-003  Federal government may set standards but not directly run elections
-```
-
-### Excerpt 382
-
-```
 SYS-FED-004  Multiple independent oversight layers for elections
-```
-
-### Excerpt 383
-
-```
 SYS-FED-005  Safeguards against both state suppression and federal manipulation
-```
-
-### Excerpt 384
-
-```
 MED-PRS-001  Protect journalists engaged in lawful newsgathering
-```
-
-### Excerpt 385
-
-```
 MED-PRS-002  Protect confidential sources
-```
-
-### Excerpt 386
-
-```
 MED-PRS-003  High-threshold rule for compelled source disclosure
-```
-
-### Excerpt 387
-
-```
 MED-PRS-004  Ban retaliation/surveillance/prosecution of journalists in public-interest reporting
-```
-
-### Excerpt 388
-
-```
 MED-PRS-005  Misuse of secrecy/classification may not conceal wrongdoing
-```
-
-### Excerpt 389
-
-```
 MED-PRS-006  Independent judicial review before compelled disclosure of journalistic materials
-```
-
-### Excerpt 390
-
-```
 MED-PRS-007  Limit subpoenas, warrants, and surveillance targeting journalists
-```
-
-### Excerpt 391
-
-```
 MED-PRS-008  Extend protections to independent and digital journalists
-```
-
-### Excerpt 392
-
-```
 MED-PRS-009  Transparency when government targets journalists or news organizations
-```
-
-### Excerpt 393
-
-```
 JUS-DRG-001  End the war on drugs framework
-```
-
-### Excerpt 394
-
-```
 JUS-DRG-002  Decriminalize personal possession
-```
-
-### Excerpt 395
-
-```
 HLT-STD-012  Treat substance use disorder as a medical condition
-```
-
-### Excerpt 396
-
-```
 JUS-DRG-003  Redirect drug war funding to treatment, prevention, and harm reduction
-```
-
-### Excerpt 397
-
-```
 JUS-DRG-004  Regulated frameworks for substances based on risk and evidence
-```
-
-### Excerpt 398
-
-```
 HLT-STD-013  Harm reduction strategies required
-```
-
-### Excerpt 399
-
-```
 JUS-DRG-005  No criminal penalties when seeking overdose-related medical help
-```
-
-### Excerpt 400
-
-```
 HLT-REB-001  National standards for rehab facilities
-```
-
-### Excerpt 401
-
-```
 HLT-REB-002  Evidence-based treatment required in rehab facilities
-```
-
-### Excerpt 402
-
-```
 HLT-REB-003  Ban abusive, coercive, or non-evidence-based rehab practices
-```
-
-### Excerpt 403
-
-```
 HLT-REB-004  Rehab transparency on outcomes and methodologies
-```
-
-### Excerpt 404
-
-```
 HLT-REB-005  Rehab must be accessible and affordable
-```
-
-### Excerpt 405
-
-```
 HLT-REB-006  Rehab oversight, auditing, and enforcement
-```
-
-### Excerpt 406
-
-```
 HLT-REB-007  Expand voluntary treatment and reduce court-mandated reliance
-```
-
-### Excerpt 407
-
-```
 JUS-DRG-001  End war on drugs
-```
-
-### Excerpt 408
-
-```
 JUS-DRG-002  Decriminalize possession
-```
-
-### Excerpt 409
-
-```
 JUS-DRG-003  Redirect funding to treatment
-```
-
-### Excerpt 410
-
-```
 JUS-DRG-004  Regulated substance frameworks
-```
-
-### Excerpt 411
-
-```
 JUS-DRG-005  No penalty for overdose assistance
-```
-
-### Excerpt 412
-
-```
 🧠 REHAB SYSTEM
-```
-
-### Excerpt 413
-
-```
 HLT-REB-001  National rehab standards
-```
-
-### Excerpt 414
-
-```
 HLT-REB-002  Evidence-based treatment required
-```
-
-### Excerpt 415
-
-```
 HLT-REB-003  Ban abusive practices
-```
-
-### Excerpt 416
-
-```
 HLT-REB-004  Outcome transparency
-```
-
-### Excerpt 417
-
-```
 HLT-REB-005  Accessible treatment
-```
-
-### Excerpt 418
-
-```
 HLT-REB-006  Oversight and audits
-```
-
-### Excerpt 419
-
-```
 HLT-REB-007  Expand voluntary programs
-```
-
-### Excerpt 420
-
-```
 📰 MEDIA / JOURNALISTS
-```
-
-### Excerpt 421
-
-```
 MED-PRS-001  Protect journalists
-```
-
-### Excerpt 422
-
-```
 MED-PRS-002  Protect sources
-```
-
-### Excerpt 423
-
-```
 MED-PRS-003  Limit compelled disclosure
-```
-
-### Excerpt 424
-
-```
 MED-PRS-004  Ban retaliation
-```
-
-### Excerpt 425
-
-```
 MED-PRS-005  Prevent misuse of secrecy laws
-```
-
-### Excerpt 426
-
-```
 MED-PRS-006  Judicial review before disclosure
-```
-
-### Excerpt 427
-
-```
 MED-PRS-007  Limit surveillance of journalists
-```
-
-### Excerpt 428
-
-```
 MED-PRS-008  Include independent journalists
-```
-
-### Excerpt 429
-
-```
 MED-PRS-009  Transparency on targeting journalists
-```
-
-### Excerpt 430
-
-```
 ⏳ TERM LIMITS
-```
-
-### Excerpt 431
-
-```
 TRM-LIM-001  House max 6 terms
-```
-
-### Excerpt 432
-
-```
 TRM-LIM-002  Senate max 3 terms
-```
-
-### Excerpt 433
-
-```
 TRM-LIM-003  Combined max 8 terms / 20 years
-```
-
-### Excerpt 434
-
-```
 TRM-RUN-001  No running while in office
-```
-
-### Excerpt 435
-
-```
 TRM-RUN-002  Two-year wait rule
-```
-
-### Excerpt 436
-
-```
 TRM-VAC-001  Vacancy rules respect wait periods
-```
-
-### Excerpt 437
-
-```
 TRM-VAC-002  Special election exception
-```
-
-### Excerpt 438
-
-```
 TRM-VAC-003  Senate appointment exception
-```
-
-### Excerpt 439
-
-```
 ✅ Final Result
-```
-
-### Excerpt 440
-
-```
 Total items: 289
-```
-
-### Excerpt 441
-
-```
 Fully structured
-```
-
-### Excerpt 442
-
-```
 ID system applied consistently
-```
-
-### Excerpt 443
-
-```
 No renumbering required going forward
-```
-
-### Excerpt 444
-
-```
 Ready for Git whenever you are
-```
-
-### Excerpt 445
-
-```
 If you want next
-```
-
-### Excerpt 446
-
-```
 TRM-LIM-001|TRM|LIM|House max 6 terms|MISSING
-```
-
-### Excerpt 447
-
-```
 TRM-LIM-002|TRM|LIM|Senate max 3 terms|MISSING
-```
-
-### Excerpt 448
-
-```
 TRM-LIM-003|TRM|LIM|Combined max 8 terms or 20 years|MISSING
-```
-
-### Excerpt 449
-
-```
 TRM-RUN-001|TRM|RUN|No running while in office|MISSING
-```
-
-### Excerpt 450
-
-```
 TRM-RUN-002|TRM|RUN|Two-year wait before next office|MISSING
-```
-
-### Excerpt 451
-
-```
 TRM-VAC-001|TRM|VAC|Vacancy rules respect wait periods|MISSING
-```
-
-### Excerpt 452
-
-```
 TRM-VAC-002|TRM|VAC|Special election exception|MISSING
-```
-
-### Excerpt 453
-
-```
 TRM-VAC-003|TRM|VAC|Senate appointment exception|MISSING
-```
-
-### Excerpt 454
-
-```
 🧠 Final Notes
-```
-
-### Excerpt 455
-
-```
 This is clean enough to ingest directly into Python
-```
-
-### Excerpt 456
-
-```
 You can split on "|" safely
-```
-
-### Excerpt 457
-
-```
 No embedded pipes → no parsing issues
-```
-
-### Excerpt 458
-
-```
 Consistent schema across all rows
-```
-
-### Excerpt 459
-
-```
 If you want next (highly recommended)
 ```
+
+## Exports and supporting files
+
+- Per-pillar CSVs: data/pillar_reports/by_mapping/csvs/pillar_13_term_limits_and_fitness_rule_items.csv etc.
+- Research file: pillars/research/pillar_13_term_limits_and_fitness_research.txt
 

@@ -1,4101 +1,844 @@
 # pillar 7 checks and balances
 
-> Compiled canonical and source material for this pillar. Review and edit for tone and finalization.
+> Comprehensive compilation for pillar_7_checks_and_balances. Includes ALL canonical rules, linked policy_items, record_links, prose mentions, and research excerpts from logs.
 
 ## Intent and scope
 
-This pillar aggregates rules with scope codes: OVR. Content below includes canonical rules, linked policy items, explicit record links, and all matching source excerpts from the main and brainstorm logs.
+This pillar aggregates scope codes: OVR.
 
 ## System rules compliance
 
-All entries must be validated against system_rules.md: human oversight for high-risk decisions, non-fragmentation of rights, provenance, and layered oversight for centralized risks.
+All entries must be validated against system_rules.md.
 
-## Canonical rules (full)
+## Canonical rules (complete)
 
-### OVR-BRN-002 — OVR
+### OVR-BRN-001 — (OVR / BRN)
 
-Status: MISSING | Occurrences: 2 | Linked policy_items: 0
+Status: MISSING | Occurrences: 2
 
-Statement: "Oversight boards must be independent from the bodies they oversee"
+Statement:
 
-Record links (from legacy items):
-
----
-
-### OVR-FED-001 — OVR
-
-Status: MISSING | Occurrences: 2 | Linked policy_items: 0
-
-Statement: "Establish a federal independent oversight and investigations body"
-
-Record links (from legacy items):
+Each branch of government and major constitutional body must establish an independent criminal and ethics oversight board
 
 ---
 
-### OVR-FED-002 — OVR
+### OVR-BRN-002 — (OVR / BRN)
 
-Status: MISSING | Occurrences: 2 | Linked policy_items: 0
+Status: MISSING | Occurrences: 2
 
-Statement: "Federal oversight body has authority to investigate any federally elected official"
+Statement:
 
-Record links (from legacy items):
-
----
-
-### OVR-FED-003 — OVR
-
-Status: MISSING | Occurrences: 2 | Linked policy_items: 0
-
-Statement: "Federal oversight body includes one elected member and members appointed by each branch of government"
-
-Record links (from legacy items):
+Oversight boards must be independent from the bodies they oversee
 
 ---
 
-### OVR-FED-004 — OVR
+### OVR-FED-001 — (OVR / FED)
 
-Status: MISSING | Occurrences: 2 | Linked policy_items: 0
+Status: MISSING | Occurrences: 2
 
-Statement: "Federal oversight body has subpoena and deposition powers"
+Statement:
 
-Record links (from legacy items):
-
----
-
-### OVR-FND-001 — OVR
-
-Status: MISSING | Occurrences: 2 | Linked policy_items: 0
-
-Statement: "Funding for oversight and investigation bodies must be guaranteed and adequate"
-
-Record links (from legacy items):
+Establish a federal independent oversight and investigations body
 
 ---
 
-### OVR-FND-002 — OVR
+### OVR-FED-002 — (OVR / FED)
 
-Status: MISSING | Occurrences: 2 | Linked policy_items: 0
+Status: MISSING | Occurrences: 2
 
-Statement: "If funding is not passed oversight bodies automatically receive a 6-month extension"
+Statement:
 
-Record links (from legacy items):
-
----
-
-### OVR-FND-003 — OVR
-
-Status: MISSING | Occurrences: 2 | Linked policy_items: 0
-
-Statement: "Automatic funding extension includes a 10 percent increase"
-
-Record links (from legacy items):
+Federal oversight body has authority to investigate any federally elected official
 
 ---
 
-### OVR-FND-004 — OVR
+### OVR-FED-003 — (OVR / FED)
 
-Status: MISSING | Occurrences: 2 | Linked policy_items: 0
+Status: MISSING | Occurrences: 2
 
-Statement: "Oversight funding must be separate from the departments they oversee"
+Statement:
 
-Record links (from legacy items):
-
----
-
-### OVR-FND-005 — OVR
-
-Status: MISSING | Occurrences: 2 | Linked policy_items: 0
-
-Statement: "Oversight funding must be protected from political and external influence"
-
-Record links (from legacy items):
+Federal oversight body includes one elected member and members appointed by each branch of government
 
 ---
 
-### OVR-JUR-001 — OVR
+### OVR-FED-004 — (OVR / FED)
 
-Status: MISSING | Occurrences: 2 | Linked policy_items: 0
+Status: MISSING | Occurrences: 2
 
-Statement: "Federal oversight body may investigate governors and high-level state officials"
+Statement:
 
-Record links (from legacy items):
-
----
-
-### OVR-JUR-002 — OVR
-
-Status: MISSING | Occurrences: 2 | Linked policy_items: 0
-
-Statement: "Federal oversight body may investigate state oversight boards if they fail to perform duties"
-
-Record links (from legacy items):
+Federal oversight body has subpoena and deposition powers
 
 ---
 
-### OVR-STA-001 — OVR
+### OVR-FND-001 — (OVR / FND)
 
-Status: MISSING | Occurrences: 2 | Linked policy_items: 0
+Status: MISSING | Occurrences: 2
 
-Statement: "Each state must establish its own independent oversight board"
+Statement:
 
-Record links (from legacy items):
-
----
-
-### OVR-STA-002 — OVR
-
-Status: MISSING | Occurrences: 2 | Linked policy_items: 0
-
-Statement: "State oversight boards include directly elected members"
-
-Record links (from legacy items):
+Funding for oversight and investigation bodies must be guaranteed and adequate
 
 ---
 
-### OVR-STA-003 — OVR
+### OVR-FND-002 — (OVR / FND)
 
-Status: MISSING | Occurrences: 2 | Linked policy_items: 0
+Status: MISSING | Occurrences: 2
 
-Statement: "State oversight boards include members appointed by legislatures and governors"
+Statement:
 
-Record links (from legacy items):
+If funding is not passed oversight bodies automatically receive a 6-month extension
+
+---
+
+### OVR-FND-003 — (OVR / FND)
+
+Status: MISSING | Occurrences: 2
+
+Statement:
+
+Automatic funding extension includes a 10 percent increase
 
 ---
 
-## Prose mentions referencing these rules
+### OVR-FND-004 — (OVR / FND)
 
-## Source excerpts (main + brainstorm logs)
+Status: MISSING | Occurrences: 2
 
-From: main-branch.txt
+Statement:
 
-> 1550:OVR = elections oversight
-> 1607:OVR = oversight
-> 1760:ADM-OVR-001 only if you treat it as procedural oversight
-> 1776:OVR	oversight
-> 1866:- OVR = elections oversight
-> 1932:- OVR = oversight
-> 1972:- OVR = oversight
-> 2029:| 49 | ELE-OVR-001 | Insurrection enforcement | pillar_2_elections_and_representation.md | INCLUDED | |
-> 2280:ELE-OVR-001  Insurrection enforcement mechanism
-> 2288:ELE-OVR-002  National elections oversight board
-> 2301:JUD-OVR-001  Oversight mechanisms for judiciary
-> 2507:ELE-OVR-001|ELE|OVR|Insurrection enforcement mechanism|INCLUDED
-> 2515:ELE-OVR-002|ELE|OVR|National elections oversight board|MISSING
-> 2528:JUD-OVR-001|JUD|OVR|Judicial oversight mechanisms|MISSING
-> 2759:OVR-BRN-001|OVR|BRN|Each branch of government and major constitutional body must establish an independent criminal and ethics oversight board|MISSING
-> 2760:OVR-BRN-002|OVR|BRN|Oversight boards must be independent from the bodies they oversee|MISSING
-> 2765:OVR-FED-001|OVR|FED|Establish a federal independent oversight and investigations body|MISSING
-> 2766:OVR-FED-002|OVR|FED|Federal oversight body has authority to investigate any federally elected official|MISSING
-> 2767:OVR-FED-003|OVR|FED|Federal oversight body includes one elected member and members appointed by each branch of government|MISSING
-> 2768:OVR-FED-004|OVR|FED|Federal oversight body has subpoena and deposition powers|MISSING
-> 2770:OVR-STA-001|OVR|STA|Each state must establish its own independent oversight board|MISSING
-> 2771:OVR-STA-002|OVR|STA|State oversight boards include directly elected members|MISSING
-> 2772:OVR-STA-003|OVR|STA|State oversight boards include members appointed by legislatures and governors|MISSING
-> 2774:OVR-JUR-001|OVR|JUR|Federal oversight body may investigate governors and high-level state officials|MISSING
-> 2775:OVR-JUR-002|OVR|JUR|Federal oversight body may investigate state oversight boards if they fail to perform duties|MISSING
-> 2780:OVR-FND-001|OVR|FND|Funding for oversight and investigation bodies must be guaranteed and adequate|MISSING
-> 2781:OVR-FND-002|OVR|FND|If funding is not passed oversight bodies automatically receive a 6-month extension|MISSING
-> 2782:OVR-FND-003|OVR|FND|Automatic funding extension includes a 10 percent increase|MISSING
-> 2783:OVR-FND-004|OVR|FND|Oversight funding must be separate from the departments they oversee|MISSING
-> 2784:OVR-FND-005|OVR|FND|Oversight funding must be protected from political and external influence|MISSING
-> 3057:OVR-BRN-*
-> 3058:OVR-FED-*
-> 3059:OVR-STA-*
-> 3060:OVR-JUR-*
-> 3061:OVR-FND-*
-> 3806:TEC-OVR-001|TEC|OVR|Require public registration and disclosure of all government AI surveillance systems including purpose authority data sources and oversight structure|MISSING
-> 3808:TEC-OVR-002|TEC|OVR|Require regular independent audits of all authorized government AI surveillance systems for legality bias accuracy and civil-liberties impacts|MISSING
-> 3810:TEC-OVR-003|TEC|OVR|All government AI surveillance authorities and systems must have sunset dates and require periodic reauthorization|MISSING
-> 3859:TEC-OVR-001
-> 3860:TEC-OVR-002
-> 3861:TEC-OVR-003
-> 7186:JUS-OVR-001|JUS|OVR|Justice institutions must publish standardized data on charging sentencing detention plea bargaining and appeals outcomes|MISSING
-> 7187:JUS-OVR-002|JUS|OVR|Justice data must be disaggregated to identify racial gender disability geographic and class disparities|MISSING
-> 7188:JUS-OVR-003|JUS|OVR|Independent oversight bodies must have access to justice-system data records and facilities necessary to investigate abuse or bias|MISSING
-> 7189:JUS-OVR-004|JUS|OVR|Justice agencies must be required to act on audit findings regarding bias rights violations or unlawful practices|MISSING
-> 10543:HLT-OVR-001|HLT|OVR|Coverage entities must publicly report denial rates appeal outcomes prior authorization burden network adequacy failures and major access complaints in standardized formats|MISSING
-> 10544:HLT-OVR-002|HLT|OVR|Healthcare oversight bodies must have authority to investigate systemic denial delay undercoverage or misleading plan design and impose meaningful penalties|MISSING
-> 10545:HLT-OVR-003|HLT|OVR|Coverage entities may not hide harmful practices behind proprietary standards trade secrecy or intentionally complex plan language|MISSING
-> 10546:HLT-OVR-004|HLT|OVR|Regulators must be empowered to require corrective action restitution or suspension of plan participation where repeated patient harm occurs|MISSING
-> 10878:IMM-OVR-001|IMM|OVR|Immigration agencies and detention systems must be subject to strong independent oversight with access to facilities records and decision patterns|MISSING
-> 10879:IMM-OVR-002|IMM|OVR|Immigration systems must publish standardized data on detention removals processing times family separation outcomes legal representation access and rights complaints|MISSING
-> 10880:IMM-OVR-003|IMM|OVR|Patterns of abuse rights violations discriminatory enforcement or unlawful detention must trigger mandatory corrective action and review|MISSING
-> 10881:IMM-OVR-004|IMM|OVR|Immigration officials and agencies may not evade accountability through secrecy exceptional process or fragmented jurisdictional responsibility|MISSING
-
-From: brainstorm-branch1part2.txt
-
-> 946:`ADM-OVR-001 | Major agencies must have independent internal oversight functions, including inspectors general or equivalent bodies with access to records and investigatory authority.`
-> 948:`ADM-OVR-002 | Internal oversight bodies must be protected from retaliation, interference, and politically motivated removal.`
-> 950:`ADM-OVR-003 | Findings of systemic agency failure, capture, abuse, or chronic non-enforcement must trigger mandatory corrective review.`
-
-## Review notes & suggested actions
-
-- Verify scope assignments; if mis-scoped, update data/pillar_reports/by_mapping/scope_to_pillar_mapping.csv and re-run importer.
-- For each linked policy_item, verify the canonical mapping and provenance.
-- Curate prose mentions for promotion in batches (see system_rules.md).
-
-
-## Research (excerpts from main + brainstorm logs)
-
-The following excerpts were extracted from the source chat logs and matched this pillar by scope code, rule IDs, or pillar keywords. They include proposals, discussion, and research notes. Preserve provenance when editing.
+Oversight funding must be separate from the departments they oversee
 
 ---
+
+### OVR-FND-005 — (OVR / FND)
+
+Status: MISSING | Occurrences: 2
+
+Statement:
+
+Oversight funding must be protected from political and external influence
+
+---
+
+### OVR-JUR-001 — (OVR / JUR)
+
+Status: MISSING | Occurrences: 2
+
+Statement:
+
+Federal oversight body may investigate governors and high-level state officials
+
+---
+
+### OVR-JUR-002 — (OVR / JUR)
+
+Status: MISSING | Occurrences: 2
+
+Statement:
+
+Federal oversight body may investigate state oversight boards if they fail to perform duties
+
+---
+
+### OVR-STA-001 — (OVR / STA)
+
+Status: MISSING | Occurrences: 2
+
+Statement:
+
+Each state must establish its own independent oversight board
+
+---
+
+### OVR-STA-002 — (OVR / STA)
+
+Status: MISSING | Occurrences: 2
+
+Statement:
+
+State oversight boards include directly elected members
+
+---
+
+### OVR-STA-003 — (OVR / STA)
+
+Status: MISSING | Occurrences: 2
+
+Statement:
+
+State oversight boards include members appointed by legislatures and governors
+
+---
+
+## All prose mentions relevant to this pillar
+
+- [107] desc:only if you treat it as procedural oversight raw:ADM-OVR-001 only if you treat it as procedural oversight (source_id: 1 line:1760)
+- [232] desc:Insurrection enforcement mechanism raw:ELE-OVR-001  Insurrection enforcement mechanism (source_id: 1 line:2280)
+- [240] desc:National elections oversight board raw:ELE-OVR-002  National elections oversight board (source_id: 1 line:2288)
+- [252] desc:Oversight mechanisms for judiciary raw:JUD-OVR-001  Oversight mechanisms for judiciary (source_id: 1 line:2301)
+- [551] desc:only if you treat it as procedural oversight raw:ADM-OVR-001 only if you treat it as procedural oversight (source_id: 2 line:1760)
+- [676] desc:Insurrection enforcement mechanism raw:ELE-OVR-001  Insurrection enforcement mechanism (source_id: 2 line:2280)
+- [684] desc:National elections oversight board raw:ELE-OVR-002  National elections oversight board (source_id: 2 line:2288)
+- [696] desc:Oversight mechanisms for judiciary raw:JUD-OVR-001  Oversight mechanisms for judiciary (source_id: 2 line:2301)
+
+## Research excerpts (full)
 
 ### Excerpt 1
 
 ```
 never reuse IDs
+never renumber IDs after assignment
+if something is removed, mark it deprecated instead of reusing the ID
+keep one migration file mapping old numeric IDs to new IDs
+Domain codes
+Code	Domain
+GOV	Governance / Executive
+ELE	Elections / Representation
+COR	Anti-Corruption / Money / Power
+JUS	Justice / Policing / Drug Policy
+RGT	Rights / Civil Liberties
+HLT	Healthcare
+ECO	Economy / Tax / Welfare
+INF	Infrastructure / Environment / Public Goods
+MED	Media / Information / Journalism
+ADM	Administrative State / Agencies
+TRM	Term Limits / Eligibility / Fitness
+GUN	Firearms / Armed Power
+CIV	Civic systems / records / identity access
+SYS	System-wide / meta-rules / cross-pillar rules
+MOV	Movement / communications / coalition / strategy
+Suggested subdomain codes
+GOV
+ACC = accountability
+EMR = emergency powers
+EXO = executive orders
+WAR = war powers
+PDN = pardon power
+DIV = divestment / self-dealing
+DOJ = law enforcement independence
+REC = records / transparency
+ELE
+VOT = voting rights / access
+SEC = security / auditability
+MAP = redistricting / maps
+CER = certification
+REP = representation
+IDA = voter ID access
+ROL = voter rolls
+OVR = elections oversight
+COR
+FIN = campaign finance
+LBY = lobbying
+WHB = whistleblowers
+ETH = ethics / conflicts / stock trading
+FOR = foreign influence
+MON = monopolistic influence
+JUS
+CRJ = criminal justice
+POL = policing
+DET = detention
+DRG = drug policy
+REB = rehab
+EQJ = equal justice / bias / profiling
+RGT
+PRV = privacy
+BOD = bodily autonomy
+EQT = equality
+REL = religion / freedom from religion
+EDU = education
+HOU = housing
+LAB = labor / leave
+TEC = tech / data rights
+HLT
+STD = standards / governance
+MHC = mental healthcare
+EMS = emergency services
+ACC = access / eligibility
+PHR = pharma / ingredient standards
+SUP = supplements
+TEL = telemedicine
+COV = coverage rules
+ECO
+TAX = taxation
+UBI = guaranteed income
+WLF = welfare / benefits
+SOC = Social Security / social insurance
+WRK = wages / work
+INF
+NET = internet / communications
+GRD = electrical grid
+ENR = energy generation
+WAT = water systems
+BLD = building standards
+DAT = data centers
+ENV = wildlife / habitat / parks
+URB = urban green space / city planning
+MED
+PRS = press / journalists / source protection
+DIS = disinformation / manipulation
+TRN = transparency / conflicts
+ALG = algorithmic / platform influence
+ADM
+AGY = agencies / authority
+CHV = Chevron / judicial deference
+CAP = anti-capture
+OVR = oversight
+TRM
+LIM = term limits
+AGE = age caps
+COG = cognitive fitness
+VAC = vacancy / special election rules
+RUN = candidacy restrictions
+GUN
+REG = regulation
+MIL = militias / private armies
+AUT = automatic weapons
+TRN = training / licensing
+ENF = armed state actors
+CIV
+VIT = vital records
+NAM = name changes / marriage docs
+DOC = certified document access
+IDN = identity document assistance
+SYS
+GEO = geography / anti-fragmentation
+FED = federalism balance
+FND = foundational values
+RUL = system rules
+CMP = completeness / project rules
+MOV
+COM = communications
+COA = coalition building
+ORG = movement identity / non-party structure
+NAM = naming / branding
+Example IDs from your current ideas
+Healthcare
+HLT-MHC-001 Mental healthcare must be included
+HLT-STD-001 Coverage decisions must be evidence-based
+HLT-STD-002 Coverage must be insulated from partisan interference
+HLT-PHR-001 Stricter quality standards for generic medicine ingredients
+HLT-PHR-002 Ban non-essential common allergens in medicines
+HLT-SUP-001 Fund supplement efficacy/safety studies
+HLT-SUP-002 New supplement label standards
+HLT-SUP-003 Supplement lab testing transparency
+HLT-SUP-004 Minimum quality/testing standards for supplements
+HLT-PHR-003 End-to-end supply chain traceability for drugs/supplements
+HLT-EMS-001 Emergency services free for all regardless of citizenship
+HLT-EMS-002 Emergency care includes ambulance, ER, supplies, follow-up
+HLT-ACC-001 Coverage for citizens and long-term/permanent residents
+HLT-ACC-002 Two-year residency rule for elective/non-urgent procedures
+HLT-ACC-003 Exception for life-threatening or disability-causing conditions
+HLT-TEL-001 Telemedicine must not have regional restrictions
+HLT-TEL-002 Telemedicine must bridge unavailable local coverage
+HLT-COV-001 Ban tiered healthcare coverage
+HLT-COV-002 One plan for everyone
+HLT-COV-003 Single-payer healthcare
+HLT-STD-003 Minimum healthcare service levels
+HLT-STD-004 Maximum healthcare wait times
+Scientific governance / anti-fragmentation
+HLT-STD-005 Independent scientific governance body
+HLT-STD-006 Staggered appointments
+HLT-STD-007 Federal and state appointment participation
+HLT-STD-008 Multi-layer anti-capture guardrails
+HLT-STD-009 Full transparency of evidence, methods, exclusions
+HLT-STD-010 Publish dissenting scientific opinions
+HLT-STD-011 Independent audit of scientific integrity
+SYS-GEO-001 Geography must not determine access to fundamental rights or care
+SYS-GEO-002 National baseline of rights/services must be uniform
+SYS-GEO-003 States may not restrict federally guaranteed rights/services
+SYS-GEO-004 Cross-state access to care must be guaranteed
+SYS-GEO-005 Travel/accommodation support when local access unavailable
+SYS-FED-001 High-risk systems must not be fully centralized federally
+SYS-FED-002 Elections remain primarily state/local administered
+SYS-FED-003 Federal government may set standards but not directly control elections
+SYS-FED-004 Multiple oversight layers required for elections
+SYS-FED-005 Safeguards against both state suppression and federal manipulation
+Journalists / media
+MED-PRS-001 Protect journalists engaged in lawful newsgathering
+MED-PRS-002 Protect confidential sources
+MED-PRS-003 High-threshold limits on compelled source disclosure
+MED-PRS-004 Ban retaliation/surveillance/prosecution of journalists in public-interest reporting
+COR-WHB-001 Protect whistleblowers who provide information to journalists
+MED-PRS-005 Prohibit classification/national security misuse to conceal wrongdoing
+MED-PRS-006 Independent judicial review before compelled disclosure of journalistic materials
+MED-PRS-007 Limit subpoenas/warrants/surveillance targeting journalists
+MED-PRS-008 Extend protections to independent/digital journalists
+MED-PRS-009 Transparency/reporting on government actions targeting journalists
+Drug policy / rehab
+JUS-DRG-001 End the war on drugs framework
+JUS-DRG-002 Decriminalize personal possession
+HLT-STD-012 Treat substance use disorder as a medical condition
+JUS-DRG-003 Redirect enforcement funding to treatment/prevention/harm reduction
+JUS-DRG-004 Regulated frameworks for substances based on risk/evidence
+HLT-STD-013 Harm reduction strategies
+JUS-DRG-005 No criminal penalties when seeking emergency overdose help
+HLT-REB-001 National standards for rehab facilities
+HLT-REB-002 Evidence-based treatment required
+HLT-REB-003 Ban abusive/coercive/non-evidence-based rehab practices
+HLT-REB-004 Rehab transparency on outcomes and methods
+HLT-REB-005 Treatment must be accessible and affordable
+HLT-REB-006 Oversight and auditing of rehab facilities
+HLT-REB-007 Expand voluntary treatment and reduce court-mandated reliance
+RGT-BOD-001 Patient rights protections in rehab settings
+Term limits / ethics
+TRM-LIM-001 House maximum 6 terms
+TRM-LIM-002 Senate maximum 3 terms
+TRM-LIM-003 Combined maximum 8 terms or 20 years
+TRM-RUN-001 No running for any office while in office
+TRM-RUN-002 Two-year wait before election to another office
+TRM-VAC-001 Wait period also applies to appointments/special elections
+TRM-VAC-002 Special-election exception when term is more than halfway over
+TRM-VAC-003 Senate appointment exception under remaining-term rule
+COR-ETH-001 Covered officials may not directly trade stock
+COR-ETH-002 Applies to Congress
+COR-ETH-003 Applies to federal justices
+COR-ETH-004 Applies to cabinet and senior officials
+COR-ETH-005 Applies to President and Vice President
+COR-ETH-006 Applies to immediate family
+COR-ETH-007 Applies to spouses/domestic partners
+COR-ETH-008 Applies to spouses/partners of immediate family
+COR-ETH-009 Collective investment vehicles allowed if no investor trading input
+Recommended next step
 ```
 
 ### Excerpt 2
 
 ```
-never renumber IDs after assignment
-```
-
-### Excerpt 3
-
-```
-if something is removed, mark it deprecated instead of reusing the ID
-```
-
-### Excerpt 4
-
-```
-keep one migration file mapping old numeric IDs to new IDs
-```
-
-### Excerpt 5
-
-```
-Domain codes
-```
-
-### Excerpt 6
-
-```
-Code	Domain
-```
-
-### Excerpt 7
-
-```
-GOV	Governance / Executive
-```
-
-### Excerpt 8
-
-```
-ELE	Elections / Representation
-```
-
-### Excerpt 9
-
-```
-COR	Anti-Corruption / Money / Power
-```
-
-### Excerpt 10
-
-```
-JUS	Justice / Policing / Drug Policy
-```
-
-### Excerpt 11
-
-```
-RGT	Rights / Civil Liberties
-```
-
-### Excerpt 12
-
-```
-HLT	Healthcare
-```
-
-### Excerpt 13
-
-```
-ECO	Economy / Tax / Welfare
-```
-
-### Excerpt 14
-
-```
-INF	Infrastructure / Environment / Public Goods
-```
-
-### Excerpt 15
-
-```
-MED	Media / Information / Journalism
-```
-
-### Excerpt 16
-
-```
-ADM	Administrative State / Agencies
-```
-
-### Excerpt 17
-
-```
-TRM	Term Limits / Eligibility / Fitness
-```
-
-### Excerpt 18
-
-```
-GUN	Firearms / Armed Power
-```
-
-### Excerpt 19
-
-```
-CIV	Civic systems / records / identity access
-```
-
-### Excerpt 20
-
-```
-SYS	System-wide / meta-rules / cross-pillar rules
-```
-
-### Excerpt 21
-
-```
-MOV	Movement / communications / coalition / strategy
-```
-
-### Excerpt 22
-
-```
-Suggested subdomain codes
-```
-
-### Excerpt 23
-
-```
-GOV
-```
-
-### Excerpt 24
-
-```
-ACC = accountability
-```
-
-### Excerpt 25
-
-```
-EMR = emergency powers
-```
-
-### Excerpt 26
-
-```
-EXO = executive orders
-```
-
-### Excerpt 27
-
-```
-WAR = war powers
-```
-
-### Excerpt 28
-
-```
-PDN = pardon power
-```
-
-### Excerpt 29
-
-```
-DIV = divestment / self-dealing
-```
-
-### Excerpt 30
-
-```
-DOJ = law enforcement independence
-```
-
-### Excerpt 31
-
-```
-REC = records / transparency
-```
-
-### Excerpt 32
-
-```
-ELE
-```
-
-### Excerpt 33
-
-```
-VOT = voting rights / access
-```
-
-### Excerpt 34
-
-```
-SEC = security / auditability
-```
-
-### Excerpt 35
-
-```
-MAP = redistricting / maps
-```
-
-### Excerpt 36
-
-```
-CER = certification
-```
-
-### Excerpt 37
-
-```
-REP = representation
-```
-
-### Excerpt 38
-
-```
-IDA = voter ID access
-```
-
-### Excerpt 39
-
-```
-ROL = voter rolls
-```
-
-### Excerpt 40
-
-```
-OVR = elections oversight
-```
-
-### Excerpt 41
-
-```
-COR
-```
-
-### Excerpt 42
-
-```
-FIN = campaign finance
-```
-
-### Excerpt 43
-
-```
-LBY = lobbying
-```
-
-### Excerpt 44
-
-```
-WHB = whistleblowers
-```
-
-### Excerpt 45
-
-```
-ETH = ethics / conflicts / stock trading
-```
-
-### Excerpt 46
-
-```
-FOR = foreign influence
-```
-
-### Excerpt 47
-
-```
-MON = monopolistic influence
-```
-
-### Excerpt 48
-
-```
-JUS
-```
-
-### Excerpt 49
-
-```
-CRJ = criminal justice
-```
-
-### Excerpt 50
-
-```
-POL = policing
-```
-
-### Excerpt 51
-
-```
-DET = detention
-```
-
-### Excerpt 52
-
-```
-DRG = drug policy
-```
-
-### Excerpt 53
-
-```
-REB = rehab
-```
-
-### Excerpt 54
-
-```
-EQJ = equal justice / bias / profiling
-```
-
-### Excerpt 55
-
-```
-RGT
-```
-
-### Excerpt 56
-
-```
-PRV = privacy
-```
-
-### Excerpt 57
-
-```
-BOD = bodily autonomy
-```
-
-### Excerpt 58
-
-```
-EQT = equality
-```
-
-### Excerpt 59
-
-```
-REL = religion / freedom from religion
-```
-
-### Excerpt 60
-
-```
-EDU = education
-```
-
-### Excerpt 61
-
-```
-HOU = housing
-```
-
-### Excerpt 62
-
-```
-LAB = labor / leave
-```
-
-### Excerpt 63
-
-```
-TEC = tech / data rights
-```
-
-### Excerpt 64
-
-```
-HLT
-```
-
-### Excerpt 65
-
-```
-STD = standards / governance
-```
-
-### Excerpt 66
-
-```
-MHC = mental healthcare
-```
-
-### Excerpt 67
-
-```
-EMS = emergency services
-```
-
-### Excerpt 68
-
-```
-ACC = access / eligibility
-```
-
-### Excerpt 69
-
-```
-PHR = pharma / ingredient standards
-```
-
-### Excerpt 70
-
-```
-SUP = supplements
-```
-
-### Excerpt 71
-
-```
-TEL = telemedicine
-```
-
-### Excerpt 72
-
-```
-COV = coverage rules
-```
-
-### Excerpt 73
-
-```
-ECO
-```
-
-### Excerpt 74
-
-```
-TAX = taxation
-```
-
-### Excerpt 75
-
-```
-UBI = guaranteed income
-```
-
-### Excerpt 76
-
-```
-WLF = welfare / benefits
-```
-
-### Excerpt 77
-
-```
-SOC = Social Security / social insurance
-```
-
-### Excerpt 78
-
-```
-WRK = wages / work
-```
-
-### Excerpt 79
-
-```
-INF
-```
-
-### Excerpt 80
-
-```
-NET = internet / communications
-```
-
-### Excerpt 81
-
-```
-GRD = electrical grid
-```
-
-### Excerpt 82
-
-```
-ENR = energy generation
-```
-
-### Excerpt 83
-
-```
-WAT = water systems
-```
-
-### Excerpt 84
-
-```
-BLD = building standards
-```
-
-### Excerpt 85
-
-```
-DAT = data centers
-```
-
-### Excerpt 86
-
-```
-ENV = wildlife / habitat / parks
-```
-
-### Excerpt 87
-
-```
-URB = urban green space / city planning
-```
-
-### Excerpt 88
-
-```
-MED
-```
-
-### Excerpt 89
-
-```
-PRS = press / journalists / source protection
-```
-
-### Excerpt 90
-
-```
-DIS = disinformation / manipulation
-```
-
-### Excerpt 91
-
-```
-TRN = transparency / conflicts
-```
-
-### Excerpt 92
-
-```
-ALG = algorithmic / platform influence
-```
-
-### Excerpt 93
-
-```
-ADM
-```
-
-### Excerpt 94
-
-```
-AGY = agencies / authority
-```
-
-### Excerpt 95
-
-```
-CHV = Chevron / judicial deference
-```
-
-### Excerpt 96
-
-```
-CAP = anti-capture
-```
-
-### Excerpt 97
-
-```
-OVR = oversight
-```
-
-### Excerpt 98
-
-```
-TRM
-```
-
-### Excerpt 99
-
-```
-LIM = term limits
-```
-
-### Excerpt 100
-
-```
-AGE = age caps
-```
-
-### Excerpt 101
-
-```
-COG = cognitive fitness
-```
-
-### Excerpt 102
-
-```
-VAC = vacancy / special election rules
-```
-
-### Excerpt 103
-
-```
-RUN = candidacy restrictions
-```
-
-### Excerpt 104
-
-```
-GUN
-```
-
-### Excerpt 105
-
-```
-REG = regulation
-```
-
-### Excerpt 106
-
-```
-MIL = militias / private armies
-```
-
-### Excerpt 107
-
-```
-AUT = automatic weapons
-```
-
-### Excerpt 108
-
-```
-TRN = training / licensing
-```
-
-### Excerpt 109
-
-```
-ENF = armed state actors
-```
-
-### Excerpt 110
-
-```
-CIV
-```
-
-### Excerpt 111
-
-```
-VIT = vital records
-```
-
-### Excerpt 112
-
-```
-NAM = name changes / marriage docs
-```
-
-### Excerpt 113
-
-```
-DOC = certified document access
-```
-
-### Excerpt 114
-
-```
-IDN = identity document assistance
-```
-
-### Excerpt 115
-
-```
-SYS
-```
-
-### Excerpt 116
-
-```
-GEO = geography / anti-fragmentation
-```
-
-### Excerpt 117
-
-```
-FED = federalism balance
-```
-
-### Excerpt 118
-
-```
-FND = foundational values
-```
-
-### Excerpt 119
-
-```
-RUL = system rules
-```
-
-### Excerpt 120
-
-```
-CMP = completeness / project rules
-```
-
-### Excerpt 121
-
-```
-MOV
-```
-
-### Excerpt 122
-
-```
-COM = communications
-```
-
-### Excerpt 123
-
-```
-COA = coalition building
-```
-
-### Excerpt 124
-
-```
-ORG = movement identity / non-party structure
-```
-
-### Excerpt 125
-
-```
-NAM = naming / branding
-```
-
-### Excerpt 126
-
-```
-Example IDs from your current ideas
-```
-
-### Excerpt 127
-
-```
-Healthcare
-```
-
-### Excerpt 128
-
-```
-HLT-MHC-001 Mental healthcare must be included
-```
-
-### Excerpt 129
-
-```
-HLT-STD-001 Coverage decisions must be evidence-based
-```
-
-### Excerpt 130
-
-```
-HLT-STD-002 Coverage must be insulated from partisan interference
-```
-
-### Excerpt 131
-
-```
-HLT-PHR-001 Stricter quality standards for generic medicine ingredients
-```
-
-### Excerpt 132
-
-```
-HLT-PHR-002 Ban non-essential common allergens in medicines
-```
-
-### Excerpt 133
-
-```
-HLT-SUP-001 Fund supplement efficacy/safety studies
-```
-
-### Excerpt 134
-
-```
-HLT-SUP-002 New supplement label standards
-```
-
-### Excerpt 135
-
-```
-HLT-SUP-003 Supplement lab testing transparency
-```
-
-### Excerpt 136
-
-```
-HLT-SUP-004 Minimum quality/testing standards for supplements
-```
-
-### Excerpt 137
-
-```
-HLT-PHR-003 End-to-end supply chain traceability for drugs/supplements
-```
-
-### Excerpt 138
-
-```
-HLT-EMS-001 Emergency services free for all regardless of citizenship
-```
-
-### Excerpt 139
-
-```
-HLT-EMS-002 Emergency care includes ambulance, ER, supplies, follow-up
-```
-
-### Excerpt 140
-
-```
-HLT-ACC-001 Coverage for citizens and long-term/permanent residents
-```
-
-### Excerpt 141
-
-```
-HLT-ACC-002 Two-year residency rule for elective/non-urgent procedures
-```
-
-### Excerpt 142
-
-```
-HLT-ACC-003 Exception for life-threatening or disability-causing conditions
-```
-
-### Excerpt 143
-
-```
-HLT-TEL-001 Telemedicine must not have regional restrictions
-```
-
-### Excerpt 144
-
-```
-HLT-TEL-002 Telemedicine must bridge unavailable local coverage
-```
-
-### Excerpt 145
-
-```
-HLT-COV-001 Ban tiered healthcare coverage
-```
-
-### Excerpt 146
-
-```
-HLT-COV-002 One plan for everyone
-```
-
-### Excerpt 147
-
-```
-HLT-COV-003 Single-payer healthcare
-```
-
-### Excerpt 148
-
-```
-HLT-STD-003 Minimum healthcare service levels
-```
-
-### Excerpt 149
-
-```
-HLT-STD-004 Maximum healthcare wait times
-```
-
-### Excerpt 150
-
-```
-Scientific governance / anti-fragmentation
-```
-
-### Excerpt 151
-
-```
-HLT-STD-005 Independent scientific governance body
-```
-
-### Excerpt 152
-
-```
-HLT-STD-006 Staggered appointments
-```
-
-### Excerpt 153
-
-```
-HLT-STD-007 Federal and state appointment participation
-```
-
-### Excerpt 154
-
-```
-HLT-STD-008 Multi-layer anti-capture guardrails
-```
-
-### Excerpt 155
-
-```
-HLT-STD-009 Full transparency of evidence, methods, exclusions
-```
-
-### Excerpt 156
-
-```
-HLT-STD-010 Publish dissenting scientific opinions
-```
-
-### Excerpt 157
-
-```
-HLT-STD-011 Independent audit of scientific integrity
-```
-
-### Excerpt 158
-
-```
-SYS-GEO-001 Geography must not determine access to fundamental rights or care
-```
-
-### Excerpt 159
-
-```
-SYS-GEO-002 National baseline of rights/services must be uniform
-```
-
-### Excerpt 160
-
-```
-SYS-GEO-003 States may not restrict federally guaranteed rights/services
-```
-
-### Excerpt 161
-
-```
-SYS-GEO-004 Cross-state access to care must be guaranteed
-```
-
-### Excerpt 162
-
-```
-SYS-GEO-005 Travel/accommodation support when local access unavailable
-```
-
-### Excerpt 163
-
-```
-SYS-FED-001 High-risk systems must not be fully centralized federally
-```
-
-### Excerpt 164
-
-```
-SYS-FED-002 Elections remain primarily state/local administered
-```
-
-### Excerpt 165
-
-```
-SYS-FED-003 Federal government may set standards but not directly control elections
-```
-
-### Excerpt 166
-
-```
-SYS-FED-004 Multiple oversight layers required for elections
-```
-
-### Excerpt 167
-
-```
-SYS-FED-005 Safeguards against both state suppression and federal manipulation
-```
-
-### Excerpt 168
-
-```
-Journalists / media
-```
-
-### Excerpt 169
-
-```
-MED-PRS-001 Protect journalists engaged in lawful newsgathering
-```
-
-### Excerpt 170
-
-```
-MED-PRS-002 Protect confidential sources
-```
-
-### Excerpt 171
-
-```
-MED-PRS-003 High-threshold limits on compelled source disclosure
-```
-
-### Excerpt 172
-
-```
-MED-PRS-004 Ban retaliation/surveillance/prosecution of journalists in public-interest reporting
-```
-
-### Excerpt 173
-
-```
-COR-WHB-001 Protect whistleblowers who provide information to journalists
-```
-
-### Excerpt 174
-
-```
-MED-PRS-005 Prohibit classification/national security misuse to conceal wrongdoing
-```
-
-### Excerpt 175
-
-```
-MED-PRS-006 Independent judicial review before compelled disclosure of journalistic materials
-```
-
-### Excerpt 176
-
-```
-MED-PRS-007 Limit subpoenas/warrants/surveillance targeting journalists
-```
-
-### Excerpt 177
-
-```
-MED-PRS-008 Extend protections to independent/digital journalists
-```
-
-### Excerpt 178
-
-```
-MED-PRS-009 Transparency/reporting on government actions targeting journalists
-```
-
-### Excerpt 179
-
-```
-Drug policy / rehab
-```
-
-### Excerpt 180
-
-```
-JUS-DRG-001 End the war on drugs framework
-```
-
-### Excerpt 181
-
-```
-JUS-DRG-002 Decriminalize personal possession
-```
-
-### Excerpt 182
-
-```
-HLT-STD-012 Treat substance use disorder as a medical condition
-```
-
-### Excerpt 183
-
-```
-JUS-DRG-003 Redirect enforcement funding to treatment/prevention/harm reduction
-```
-
-### Excerpt 184
-
-```
-JUS-DRG-004 Regulated frameworks for substances based on risk/evidence
-```
-
-### Excerpt 185
-
-```
-HLT-STD-013 Harm reduction strategies
-```
-
-### Excerpt 186
-
-```
-JUS-DRG-005 No criminal penalties when seeking emergency overdose help
-```
-
-### Excerpt 187
-
-```
-HLT-REB-001 National standards for rehab facilities
-```
-
-### Excerpt 188
-
-```
-HLT-REB-002 Evidence-based treatment required
-```
-
-### Excerpt 189
-
-```
-HLT-REB-003 Ban abusive/coercive/non-evidence-based rehab practices
-```
-
-### Excerpt 190
-
-```
-HLT-REB-004 Rehab transparency on outcomes and methods
-```
-
-### Excerpt 191
-
-```
-HLT-REB-005 Treatment must be accessible and affordable
-```
-
-### Excerpt 192
-
-```
-HLT-REB-006 Oversight and auditing of rehab facilities
-```
-
-### Excerpt 193
-
-```
-HLT-REB-007 Expand voluntary treatment and reduce court-mandated reliance
-```
-
-### Excerpt 194
-
-```
-RGT-BOD-001 Patient rights protections in rehab settings
-```
-
-### Excerpt 195
-
-```
-Term limits / ethics
-```
-
-### Excerpt 196
-
-```
-TRM-LIM-001 House maximum 6 terms
-```
-
-### Excerpt 197
-
-```
-TRM-LIM-002 Senate maximum 3 terms
-```
-
-### Excerpt 198
-
-```
-TRM-LIM-003 Combined maximum 8 terms or 20 years
-```
-
-### Excerpt 199
-
-```
-TRM-RUN-001 No running for any office while in office
-```
-
-### Excerpt 200
-
-```
-TRM-RUN-002 Two-year wait before election to another office
-```
-
-### Excerpt 201
-
-```
-TRM-VAC-001 Wait period also applies to appointments/special elections
-```
-
-### Excerpt 202
-
-```
-TRM-VAC-002 Special-election exception when term is more than halfway over
-```
-
-### Excerpt 203
-
-```
-TRM-VAC-003 Senate appointment exception under remaining-term rule
-```
-
-### Excerpt 204
-
-```
-COR-ETH-001 Covered officials may not directly trade stock
-```
-
-### Excerpt 205
-
-```
-COR-ETH-002 Applies to Congress
-```
-
-### Excerpt 206
-
-```
-COR-ETH-003 Applies to federal justices
-```
-
-### Excerpt 207
-
-```
-COR-ETH-004 Applies to cabinet and senior officials
-```
-
-### Excerpt 208
-
-```
-COR-ETH-005 Applies to President and Vice President
-```
-
-### Excerpt 209
-
-```
-COR-ETH-006 Applies to immediate family
-```
-
-### Excerpt 210
-
-```
-COR-ETH-007 Applies to spouses/domestic partners
-```
-
-### Excerpt 211
-
-```
-COR-ETH-008 Applies to spouses/partners of immediate family
-```
-
-### Excerpt 212
-
-```
-COR-ETH-009 Collective investment vehicles allowed if no investor trading input
-```
-
-### Excerpt 213
-
-```
-Recommended next step
-```
-
-### Excerpt 214
-
-```
-
-```
-
-### Excerpt 215
-
-```
 New idea
-```
-
-### Excerpt 216
-
-```
 Prevent judge shopping and venue shopping
-```
-
-### Excerpt 217
-
-```
 Suggested placement
-```
-
-### Excerpt 218
-
-```
 Primary: pillar_6_courts_and_judicial_system.md
-```
-
-### Excerpt 219
-
-```
 Secondary: pillar_7_checks_and_balances.md
-```
-
-### Excerpt 220
-
-```
 Suggested ID
-```
-
-### Excerpt 221
-
-```
 JUD-VEN-001 if you want a judiciary-specific domain code
-```
-
-### Excerpt 222
-
-```
 or, sticking to the schema we already set, use:
-```
-
-### Excerpt 223
-
-```
 ADM-OVR-001 only if you treat it as procedural oversight
-```
-
-### Excerpt 224
-
-```
 but my recommendation is to add a judiciary domain code:
-```
-
-### Excerpt 225
-
-```
 Small schema update
-```
-
-### Excerpt 226
-
-```
 Code	Meaning
-```
-
-### Excerpt 227
-
-```
 ETH	ethics
-```
-
-### Excerpt 228
-
-```
 INT	interpretation
-```
-
-### Excerpt 229
-
-```
 VEN	venue / assignment / anti-forum-shopping
-```
-
-### Excerpt 230
-
-```
 REC	recusal
-```
-
-### Excerpt 231
-
-```
 OVR	oversight
-```
-
-### Excerpt 232
-
-```
 ### ELE
-```
-
-### Excerpt 233
-
-```
 - VOT = voting rights / access
-```
-
-### Excerpt 234
-
-```
 - SEC = security / auditability
-```
-
-### Excerpt 235
-
-```
 - MAP = districting / maps
-```
-
-### Excerpt 236
-
-```
 - CER = certification
-```
-
-### Excerpt 237
-
-```
 - REP = representation
-```
-
-### Excerpt 238
-
-```
 - IDA = voter ID access
-```
-
-### Excerpt 239
-
-```
 - ROL = voter rolls
-```
-
-### Excerpt 240
-
-```
 - OVR = elections oversight
-```
-
-### Excerpt 241
-
-```
 ### ADM
-```
-
-### Excerpt 242
-
-```
 - AGY = agencies / authority
-```
-
-### Excerpt 243
-
-```
 - CHV = Chevron / judicial deference
-```
-
-### Excerpt 244
-
-```
 - CAP = anti-capture
-```
-
-### Excerpt 245
-
-```
 - OVR = oversight
-```
-
-### Excerpt 246
-
-```
 ### JUD
-```
-
-### Excerpt 247
-
-```
 - ETH = ethics
-```
-
-### Excerpt 248
-
-```
 - INT = interpretation
-```
-
-### Excerpt 249
-
-```
 - VEN = venue / assignment / anti-forum-shopping
-```
-
-### Excerpt 250
-
-```
 - REC = recusal
-```
-
-### Excerpt 251
-
-```
 | old_id | new_id | short_label | target_file | status | notes |
-```
-
-### Excerpt 252
-
-```
 |---|---|---|---|---|---|
-```
-
-### Excerpt 253
-
-```
 | 18 | GOV-EXO-001 | Limit executive orders to emergencies | pillar_1_executive_power.md | PARTIAL | Time-limited emergency-only executive orders |
-```
-
-### Excerpt 254
-
-```
 | 19 | GOV-EMR-001 | Time limits on executive actions | pillar_1_executive_power.md | PARTIAL | Closely tied to emergency powers |
-```
-
-### Excerpt 255
-
-```
 | 20 | GOV-ACC-001 | President not immune | pillar_1_executive_power.md | INCLUDED | Explicit legal accountability |
-```
-
-### Excerpt 256
-
-```
 | 21 | GOV-ACC-002 | Ban political firings | pillar_1_executive_power.md | MISSING | Protect oversight and civil service |
-```
-
-### Excerpt 257
-
-```
 | 22 | GOV-PDN-001 | Restrict pardon powers | pillar_1_executive_power.md | PARTIAL | Self-pardons and co-conspirators |
-```
-
-### Excerpt 258
-
-```
 | 23 | GOV-DIV-001 | Mandatory divestment enforcement | pillar_1_executive_power.md | PARTIAL | Seizure/forfeiture mechanism |
-```
-
-### Excerpt 259
-
-```
 | 24 | GOV-WAR-001 | Ban open-ended AUMFs | pillar_1_executive_power.md | INCLUDED | |
-```
-
-### Excerpt 260
-
-```
 | 25 | GOV-WAR-002 | Require declared wars | pillar_1_executive_power.md | MISSING | |
-```
-
-### Excerpt 261
-
-```
 | 26 | GOV-WAR-003 | Limit military authority | pillar_1_executive_power.md | PARTIAL | |
-```
-
-### Excerpt 262
-
-```
 | 27 | GOV-ACC-003 | Ban executive kill lists | pillar_1_executive_power.md | PARTIAL | Cross-reference justice |
-```
-
-### Excerpt 263
-
-```
 | 28 | GOV-REC-001 | Constitutionalize presidential records | pillar_1_executive_power.md | PARTIAL | |
-```
-
-### Excerpt 264
-
-```
 | 31 | ELE-REP-001 | Abolish Electoral College | pillar_2_elections_and_representation.md | MISSING | |
-```
-
-### Excerpt 265
-
-```
 | 32 | ELE-SEC-001 | Paper ballots and auditability | pillar_2_elections_and_representation.md | INCLUDED | |
-```
-
-### Excerpt 266
-
-```
 | 33 | ELE-MAP-001 | Ban gerrymandering | pillar_2_elections_and_representation.md | INCLUDED | |
-```
-
-### Excerpt 267
-
-```
 | 34 | ELE-REP-002 | Ballot initiatives nationwide | pillar_2_elections_and_representation.md | INCLUDED | |
-```
-
-### Excerpt 268
-
-```
 | 35 | ELE-VOT-001 | Constitutional right to vote | pillar_2_elections_and_representation.md | INCLUDED | |
-```
-
-### Excerpt 269
-
-```
 | 44 | ELE-VOT-002 | Polling capacity limits | pillar_2_elections_and_representation.md | INCLUDED | |
-```
-
-### Excerpt 270
-
-```
 | 45 | ELE-VOT-003 | Flexible voting locations | pillar_2_elections_and_representation.md | INCLUDED | |
-```
-
-### Excerpt 271
-
-```
 | 46 | ELE-VOT-004 | Election Day holiday | pillar_2_elections_and_representation.md | INCLUDED | |
-```
-
-### Excerpt 272
-
-```
 | 47 | ELE-VOT-005 | Paid time off to vote | pillar_2_elections_and_representation.md | INCLUDED | |
-```
-
-### Excerpt 273
-
-```
 | 49 | ELE-OVR-001 | Insurrection enforcement | pillar_2_elections_and_representation.md | INCLUDED | |
-```
-
-### Excerpt 274
-
-```
 | 52 | ELE-REP-003 | Territorial House representation | pillar_2_elections_and_representation.md | MISSING | |
-```
-
-### Excerpt 275
-
-```
 | 54 | ELE-SEC-002 | Ban federal armed presence at polling sites | pillar_2_elections_and_representation.md | MISSING | |
-```
-
-### Excerpt 276
-
-```
 | 55 | ELE-SEC-003 | Ban weapons at polling sites | pillar_2_elections_and_representation.md | MISSING | |
-```
-
-### Excerpt 277
-
-```
 | 60 | JUD-ETH-001 | Supreme Court term limits | pillar_6_courts_and_judicial_system.md | MISSING | |
-```
-
-### Excerpt 278
-
-```
 | 61 | JUD-ETH-002 | Judicial ethics code | pillar_6_courts_and_judicial_system.md | MISSING | |
-```
-
-### Excerpt 279
-
-```
 | 62 | JUD-INT-001 | Require intent/context in interpretation | pillar_6_courts_and_judicial_system.md | MISSING | |
-```
-
-### Excerpt 280
-
-```
 | 64 | JUD-VEN-001 | Prevent judge and venue shopping | pillar_6_courts_and_judicial_system.md | MISSING | New addition |
-```
-
-### Excerpt 281
-
-```
 | 73 | COR-FIN-001 | Ban corporate political donations | pillar_3_anti_corruption_and_concentrated_power.md | INCLUDED | |
-```
-
-### Excerpt 282
-
-```
 | 74 | COR-FIN-002 | Ban Super PACs | pillar_3_anti_corruption_and_concentrated_power.md | PARTIAL | |
-```
-
-### Excerpt 283
-
-```
 | 81 | COR-ETH-001 | Ban industry lobbyists from governing boards | pillar_3_anti_corruption_and_concentrated_power.md | MISSING | Cross-ref ADM |
-```
-
-### Excerpt 284
-
-```
 | 94 | RGT-PRV-001 | Explicit right to privacy | pillar_5_rights_civil_liberties_and_economic_security.md | INCLUDED | |
-```
-
-### Excerpt 285
-
-```
 | 100 | RGT-BOD-001 | Protect gender-affirming care | pillar_5_rights_civil_liberties_and_economic_security.md | INCLUDED | |
-```
-
-### Excerpt 286
-
-```
 | 125 | JUS-POL-001 | Require police community service | pillar_4_equal_justice_policing_and_accountability.md | MISSING | |
-```
-
-### Excerpt 287
-
-```
 | 128 | ECO-TAX-001 | Anti-wealth hoarding | pillar_8_taxation_and_wealth.md | PARTIAL | |
-```
-
-### Excerpt 288
-
-```
 | 148 | ADM-CHV-001 | Restore Chevron deference | pillar_14_administrative_state.md | MISSING | |
-```
-
-### Excerpt 289
-
-```
 | 149 | ADM-AGY-001 | Congress explicitly empowered to create agencies | pillar_14_administrative_state.md | MISSING | |
-```
-
-### Excerpt 290
-
-```
 | 192 | TRM-LIM-001 | House max 6 terms | pillar_13_term_limits_and_fitness.md | MISSING | |
-```
-
-### Excerpt 291
-
-```
 | 193 | TRM-LIM-002 | Senate max 3 terms | pillar_13_term_limits_and_fitness.md | MISSING | |
-```
-
-### Excerpt 292
-
-```
 | 194 | TRM-LIM-003 | Combined 8 terms or 20 years | pillar_13_term_limits_and_fitness.md | MISSING | |
-```
-
-### Excerpt 293
-
-```
 | 195 | TRM-RUN-001 | No running for another office while in office | pillar_13_term_limits_and_fitness.md | MISSING | |
-```
-
-### Excerpt 294
-
-```
 | 196 | TRM-RUN-002 | Two-year wait before another office | pillar_13_term_limits_and_fitness.md | MISSING | |
-```
-
-### Excerpt 295
-
-```
 | 200 | COR-ETH-002 | Ban direct stock trading by covered officials | pillar_3_anti_corruption_and_concentrated_power.md | MISSING | |
-```
-
-### Excerpt 296
-
-```
 | 210 | HLT-MHC-001 | Mental healthcare included | pillar_9_healthcare_system.md | MISSING | |
-```
-
-### Excerpt 297
-
-```
 | 211 | HLT-STD-001 | Protect coverage from partisan interference | pillar_9_healthcare_system.md | MISSING | |
-```
-
-### Excerpt 298
-
-```
 | 212 | HLT-STD-002 | Evidence-based coverage decisions | pillar_9_healthcare_system.md | MISSING | |
-```
-
-### Excerpt 299
-
-```
 | 214 | HLT-TRL-001 | Streamline approval processes safely | pillar_9_healthcare_system.md | MISSING | |
-```
-
-### Excerpt 300
-
-```
 | 221 | HLT-PHR-003 | End-to-end supply chain traceability | pillar_9_healthcare_system.md | MISSING | |
-```
-
-### Excerpt 301
-
-```
 | 222 | HLT-EMS-001 | Emergency care free for all | pillar_9_healthcare_system.md | MISSING | |
-```
-
-### Excerpt 302
-
-```
 | 228 | HLT-STD-005 | Insulate standards body from partisan capture | pillar_9_healthcare_system.md | MISSING | |
-```
-
-### Excerpt 303
-
-```
 | 229 | HLT-STD-006 | Staggered appointments for standards body | pillar_9_healthcare_system.md | MISSING | |
-```
-
-### Excerpt 304
-
-```
 | 241 | HLT-STD-009 | Full transparency of data/methods/exclusions | pillar_9_healthcare_system.md | MISSING | |
-```
-
-### Excerpt 305
-
-```
 | 244 | HLT-STD-010 | Publish dissenting scientific opinions | pillar_9_healthcare_system.md | MISSING | |
-```
-
-### Excerpt 306
-
-```
 | 247 | SYS-GEO-001 | Geography must not determine access | system_rules.md | MISSING | |
-```
-
-### Excerpt 307
-
-```
 | 250 | SYS-GEO-004 | Cross-state access guarantee | system_rules.md | MISSING | |
-```
-
-### Excerpt 308
-
-```
 | 252 | HLT-TEL-001 | Telemedicine without regional restrictions | pillar_9_healthcare_system.md | MISSING | |
-```
-
-### Excerpt 309
-
-```
 | 255 | SYS-GEO-002 | National baseline must be uniform | system_rules.md | MISSING | |
-```
-
-### Excerpt 310
-
-```
 | 261 | SYS-FED-001 | High-risk systems not fully centralized | system_rules.md | MISSING | |
-```
-
-### Excerpt 311
-
-```
 | 262 | SYS-FED-002 | Elections remain primarily state/local | pillar_2_elections_and_representation.md | MISSING | |
-```
-
-### Excerpt 312
-
-```
 | 267 | MED-PRS-001 | Protect journalists | pillar_11_information_and_media.md | MISSING | |
-```
-
-### Excerpt 313
-
-```
 | 268 | MED-PRS-002 | Protect confidential sources | pillar_11_information_and_media.md | MISSING | |
-```
-
-### Excerpt 314
-
-```
 | 271 | COR-WHB-001 | Protect whistleblowers who go to journalists | pillar_3_anti_corruption_and_concentrated_power.md | MISSING | |
-```
-
-### Excerpt 315
-
-```
 | 278 | JUS-DRG-001 | End war on drugs framework | pillar_4_equal_justice_policing_and_accountability.md | MISSING | |
-```
-
-### Excerpt 316
-
-```
 | 279 | JUS-DRG-002 | Decriminalize personal possession | pillar_4_equal_justice_policing_and_accountability.md | MISSING | |
-```
-
-### Excerpt 317
-
-```
 | 285 | HLT-REB-001 | National rehab standards | pillar_9_healthcare_system.md | MISSING | |
-```
-
-### Excerpt 318
-
-```
 First batch of remapped IDs to use immediately
-```
-
-### Excerpt 319
-
-```
 JUD-VEN-001  Prevent judge shopping and venue shopping
-```
-
-### Excerpt 320
-
-```
 TRM-LIM-001  House maximum 6 terms
-```
-
-### Excerpt 321
-
-```
 TRM-LIM-002  Senate maximum 3 terms
-```
-
-### Excerpt 322
-
-```
 TRM-LIM-003  Combined maximum 8 terms or 20 years
-```
-
-### Excerpt 323
-
-```
 TRM-RUN-001  May not run for another office while in office
-```
-
-### Excerpt 324
-
-```
 TRM-RUN-002  Must wait 2 years before election to another office
-```
-
-### Excerpt 325
-
-```
 TRM-VAC-001  Vacancy rules must respect wait periods
-```
-
-### Excerpt 326
-
-```
 TRM-VAC-002  Special-election half-term exception
-```
-
-### Excerpt 327
-
-```
 TRM-VAC-003  Senate appointment remaining-term exception
-```
-
-### Excerpt 328
-
-```
 COR-ETH-002  Covered officials may not directly trade stock
-```
-
-### Excerpt 329
-
-```
 COR-ETH-003  Applies to members of Congress
-```
-
-### Excerpt 330
-
-```
 COR-ETH-004  Applies to federal justices
-```
-
-### Excerpt 331
-
-```
 COR-ETH-005  Applies to cabinet and senior officials
-```
-
-### Excerpt 332
-
-```
 COR-ETH-006  Applies to President and Vice President
-```
-
-### Excerpt 333
-
-```
 COR-ETH-007  Applies to immediate family
-```
-
-### Excerpt 334
-
-```
 COR-ETH-008  Applies to spouses and long-term domestic partners
-```
-
-### Excerpt 335
-
-```
 COR-ETH-009  Applies to spouses/partners of immediate family
-```
-
-### Excerpt 336
-
-```
 COR-ETH-010  Collective investment vehicles allowed without investor input
-```
-
-### Excerpt 337
-
-```
 HLT-MHC-001  Mental healthcare must be included
-```
-
-### Excerpt 338
-
-```
 HLT-STD-001  Coverage protected from partisan interference
-```
-
-### Excerpt 339
-
-```
 HLT-STD-002  Coverage decisions grounded in evidence-based research
-```
-
-### Excerpt 340
-
-```
 HLT-TRL-001  Approvals and trials for new treatments funded and streamlined
-```
-
-### Excerpt 341
-
-```
 HLT-PHR-001  Better quality standards for generic medicine ingredients
-```
-
-### Excerpt 342
-
-```
 HLT-PHR-002  Ban non-active common allergens where unnecessary
-```
-
-### Excerpt 343
-
-```
 HLT-SUP-001  Fund studies on supplement efficacy and safety
-```
-
-### Excerpt 344
-
-```
 HLT-SUP-002  New supplement label standards
-```
-
-### Excerpt 345
-
-```
 HLT-SUP-003  Supplement lab testing transparency
-```
-
-### Excerpt 346
-
-```
 HLT-SUP-004  Minimum supplement quality/testing standards
-```
-
-### Excerpt 347
-
-```
 HLT-PHR-003  End-to-end supply chain traceability for drugs and supplements
-```
-
-### Excerpt 348
-
-```
 HLT-EMS-001  Emergency services free to all people
-```
-
-### Excerpt 349
-
-```
 HLT-EMS-002  Emergency care includes ambulance, hospital care, supplies, and follow-up
-```
-
-### Excerpt 350
-
-```
 HLT-ACC-001  Full coverage for citizens and long-term/permanent residents
-```
-
-### Excerpt 351
-
-```
 HLT-ACC-002  Two-year residency rule for elective/non-urgent procedures
-```
-
-### Excerpt 352
-
-```
 HLT-ACC-003  Exception for life-threatening or disability-causing conditions
-```
-
-### Excerpt 353
-
-```
 HLT-COV-001  Ban tiered healthcare coverage
-```
-
-### Excerpt 354
-
-```
 HLT-COV-002  Everyone gets one plan
-```
-
-### Excerpt 355
-
-```
 HLT-COV-003  Healthcare is single payer
-```
-
-### Excerpt 356
-
-```
 HLT-STD-003  Minimum service levels for healthcare
-```
-
-### Excerpt 357
-
-```
 HLT-STD-004  Maximum wait times for healthcare
-```
-
-### Excerpt 358
-
-```
 SYS-GEO-001  Geography must not determine access to rights or care
-```
-
-### Excerpt 359
-
-```
 SYS-GEO-002  National baseline of rights/services must be uniform
-```
-
-### Excerpt 360
-
-```
 SYS-GEO-003  States may not degrade federally guaranteed access
-```
-
-### Excerpt 361
-
-```
 SYS-GEO-004  Cross-state access to care guaranteed
-```
-
-### Excerpt 362
-
-```
 SYS-GEO-005  Travel/accommodation support when local care unavailable
-```
-
-### Excerpt 363
-
-```
 SYS-FED-001  High-risk systems must not be fully centralized
-```
-
-### Excerpt 364
-
-```
 SYS-FED-002  Elections remain primarily state/local administered
-```
-
-### Excerpt 365
-
-```
 SYS-FED-003  Federal government may set standards but not directly run elections
-```
-
-### Excerpt 366
-
-```
 SYS-FED-004  Multiple independent oversight layers for elections
-```
-
-### Excerpt 367
-
-```
 SYS-FED-005  Safeguards against both state suppression and federal manipulation
-```
-
-### Excerpt 368
-
-```
 MED-PRS-001  Protect journalists engaged in lawful newsgathering
-```
-
-### Excerpt 369
-
-```
 MED-PRS-002  Protect confidential sources
-```
-
-### Excerpt 370
-
-```
 MED-PRS-003  High-threshold rule for compelled source disclosure
-```
-
-### Excerpt 371
-
-```
 MED-PRS-004  Ban retaliation/surveillance/prosecution of journalists in public-interest reporting
-```
-
-### Excerpt 372
-
-```
 MED-PRS-005  Misuse of secrecy/classification may not conceal wrongdoing
-```
-
-### Excerpt 373
-
-```
 MED-PRS-006  Independent judicial review before compelled disclosure of journalistic materials
-```
-
-### Excerpt 374
-
-```
 MED-PRS-007  Limit subpoenas, warrants, and surveillance targeting journalists
-```
-
-### Excerpt 375
-
-```
 MED-PRS-008  Extend protections to independent and digital journalists
-```
-
-### Excerpt 376
-
-```
 MED-PRS-009  Transparency when government targets journalists or news organizations
-```
-
-### Excerpt 377
-
-```
 JUS-DRG-001  End the war on drugs framework
-```
-
-### Excerpt 378
-
-```
 JUS-DRG-002  Decriminalize personal possession
-```
-
-### Excerpt 379
-
-```
 HLT-STD-012  Treat substance use disorder as a medical condition
-```
-
-### Excerpt 380
-
-```
 JUS-DRG-003  Redirect drug war funding to treatment, prevention, and harm reduction
-```
-
-### Excerpt 381
-
-```
 JUS-DRG-004  Regulated frameworks for substances based on risk and evidence
-```
-
-### Excerpt 382
-
-```
 HLT-STD-013  Harm reduction strategies required
-```
-
-### Excerpt 383
-
-```
 JUS-DRG-005  No criminal penalties when seeking overdose-related medical help
-```
-
-### Excerpt 384
-
-```
 HLT-REB-001  National standards for rehab facilities
-```
-
-### Excerpt 385
-
-```
 HLT-REB-002  Evidence-based treatment required in rehab facilities
-```
-
-### Excerpt 386
-
-```
 HLT-REB-003  Ban abusive, coercive, or non-evidence-based rehab practices
-```
-
-### Excerpt 387
-
-```
 HLT-REB-004  Rehab transparency on outcomes and methodologies
-```
-
-### Excerpt 388
-
-```
 HLT-REB-005  Rehab must be accessible and affordable
-```
-
-### Excerpt 389
-
-```
 HLT-REB-006  Rehab oversight, auditing, and enforcement
-```
-
-### Excerpt 390
-
-```
 HLT-REB-007  Expand voluntary treatment and reduce court-mandated reliance
-```
-
-### Excerpt 391
-
-```
 SYS-FED-003  Federal government sets standards but does not directly control elections
-```
-
-### Excerpt 392
-
-```
 SYS-FED-004  Multiple independent oversight layers required
-```
-
-### Excerpt 393
-
-```
 🏛️ EXECUTIVE / GOVERNANCE
-```
-
-### Excerpt 394
-
-```
 GOV-EXO-001  Limit executive orders to emergencies
-```
-
-### Excerpt 395
-
-```
 GOV-EMR-001  Time limits on executive actions
-```
-
-### Excerpt 396
-
-```
 GOV-ACC-001  President subject to law
-```
-
-### Excerpt 397
-
-```
 GOV-ACC-002  Ban political firings
-```
-
-### Excerpt 398
-
-```
 GOV-PDN-001  Restrict pardon power
-```
-
-### Excerpt 399
-
-```
 GOV-DIV-001  Mandatory divestment enforcement
-```
-
-### Excerpt 400
-
-```
 GOV-WAR-001  Ban open-ended AUMFs
-```
-
-### Excerpt 401
-
-```
 GOV-WAR-002  Require declared wars
-```
-
-### Excerpt 402
-
-```
 GOV-WAR-003  Limit military authority
-```
-
-### Excerpt 403
-
-```
 GOV-ACC-003  Ban executive kill lists
-```
-
-### Excerpt 404
-
-```
 GOV-REC-001  Constitutionalize presidential records
-```
-
-### Excerpt 405
-
-```
 GOV-SHD-001  No pay for officials during shutdown
-```
-
-### Excerpt 406
-
-```
 GOV-SHD-002  Permanent pay loss after 30 days
-```
-
-### Excerpt 407
-
-```
 🗳️ ELECTIONS
-```
-
-### Excerpt 408
-
-```
 ELE-REP-001  Abolish Electoral College
-```
-
-### Excerpt 409
-
-```
 ELE-SEC-001  Paper ballots and auditability
-```
-
-### Excerpt 410
-
-```
 ELE-MAP-001  Ban gerrymandering
-```
-
-### Excerpt 411
-
-```
 ELE-REP-002  National ballot initiatives
-```
-
-### Excerpt 412
-
-```
 ELE-VOT-001  Constitutional right to vote
-```
-
-### Excerpt 413
-
-```
 ELE-VOT-002  Polling capacity limits
-```
-
-### Excerpt 414
-
-```
 ELE-VOT-003  Flexible voting locations
-```
-
-### Excerpt 415
-
-```
 ELE-VOT-004  Election Day holiday
-```
-
-### Excerpt 416
-
-```
 ELE-VOT-005  Paid time off voting
-```
-
-### Excerpt 417
-
-```
 ELE-OVR-001  Insurrection enforcement mechanism
-```
-
-### Excerpt 418
-
-```
 ELE-REP-003  Territories get House representation
-```
-
-### Excerpt 419
-
-```
 ELE-SEC-002  Ban federal armed presence at polls
-```
-
-### Excerpt 420
-
-```
 ELE-SEC-003  Ban weapons at polling sites
-```
-
-### Excerpt 421
-
-```
 ELE-FIN-001  Equal campaign funding system
-```
-
-### Excerpt 422
-
-```
 ELE-FIN-002  Eliminate donation imbalance
-```
-
-### Excerpt 423
-
-```
 ELE-PAR-001  Remove two-party structural protections
-```
-
-### Excerpt 424
-
-```
 ELE-MAP-002  State-level independent redistricting boards
-```
-
-### Excerpt 425
-
-```
 ELE-OVR-002  National elections oversight board
-```
-
-### Excerpt 426
-
-```
 ELE-ROL-001  National voter database (state managed)
-```
-
-### Excerpt 427
-
-```
 ELE-ROL-002  Remove deceased voters automatically
-```
-
-### Excerpt 428
-
-```
 ELE-IDA-001  Free voter ID assistance
-```
-
-### Excerpt 429
-
-```
 ELE-IDA-002  Legal and case support for ID access
-```
-
-### Excerpt 430
-
-```
 ⚖️ JUDICIAL SYSTEM
-```
-
-### Excerpt 431
-
-```
 JUD-ETH-001  Supreme Court term limits
-```
-
-### Excerpt 432
-
-```
 JUD-ETH-002  Judicial ethics code
-```
-
-### Excerpt 433
-
-```
 JUD-INT-001  Require intent/context in interpretation
-```
-
-### Excerpt 434
-
-```
 JUD-INT-002  Reject strict textualism dominance
-```
-
-### Excerpt 435
-
-```
 JUD-INT-003  Laws must include plain-language intent
-```
-
-### Excerpt 436
-
-```
 JUD-VEN-001  Prevent judge and venue shopping
-```
-
-### Excerpt 437
-
-```
 JUD-REC-001  Strong recusal standards
-```
-
-### Excerpt 438
-
-```
 JUD-OVR-001  Oversight mechanisms for judiciary
-```
-
-### Excerpt 439
-
-```
 🚫 ANTI-CORRUPTION
-```
-
-### Excerpt 440
-
-```
 COR-FIN-001  Ban corporate political donations
-```
-
-### Excerpt 441
-
-```
 COR-FIN-002  Ban Super PACs
-```
-
-### Excerpt 442
-
-```
 COR-FIN-003  Limit individual donations
-```
-
-### Excerpt 443
-
-```
 COR-FIN-004  Limit political ad spending
-```
-
-### Excerpt 444
-
-```
 COR-WHB-001  Whistleblower protections
-```
-
-### Excerpt 445
-
-```
 COR-ETH-001  Ban lobbyists from governing industries
-```
-
-### Excerpt 446
-
-```
 COR-ETH-002  Ban stock trading by officials
-```
-
-### Excerpt 447
-
-```
 COR-ETH-003  Applies to Congress
-```
-
-### Excerpt 448
-
-```
 COR-ETH-004  Applies to judges
-```
-
-### Excerpt 449
-
-```
 COR-ETH-005  Applies to executive branch
-```
-
-### Excerpt 450
-
-```
 COR-ETH-006  Applies to president/VP
-```
-
-### Excerpt 451
-
-```
 COR-ETH-008  Applies to spouses/partners
-```
-
-### Excerpt 452
-
-```
 COR-ETH-009  Applies to extended relationships
-```
-
-### Excerpt 453
-
-```
 COR-ETH-010  Allow blind collective investment only
-```
-
-### Excerpt 454
-
-```
 🧾 RIGHTS & CIVIL LIBERTIES
-```
-
-### Excerpt 455
-
-```
 RGT-PRV-001  Explicit right to privacy
-```
-
-### Excerpt 456
-
-```
 RGT-PRV-002  Medical privacy protections
-```
-
-### Excerpt 457
-
-```
 RGT-PRV-003  Digital privacy protections
-```
-
-### Excerpt 458
-
-```
 RGT-BOD-001  Bodily autonomy
-```
-
-### Excerpt 459
-
-```
 RGT-BOD-002  Abortion rights
-```
-
-### Excerpt 460
-
-```
 RGT-BOD-003  Contraception rights
-```
-
-### Excerpt 461
-
-```
 RGT-BOD-004  Gender affirming care
-```
-
-### Excerpt 462
-
-```
 RGT-BOD-005  Ban intersex surgeries
-```
-
-### Excerpt 463
-
-```
 RGT-BOD-006  Ban conversion therapy
-```
-
-### Excerpt 464
-
-```
 RGT-EQT-001  Expanded equality protections
-```
-
-### Excerpt 465
-
-```
 RGT-EQT-002  Include sexual orientation
-```
-
-### Excerpt 466
-
-```
 RGT-EQT-003  Include romantic orientation
-```
-
-### Excerpt 467
-
-```
 RGT-EQT-004  Expandable protections
-```
-
-### Excerpt 468
-
-```
 RGT-REL-001  Freedom of religion
-```
-
-### Excerpt 469
-
-```
 RGT-REL-002  Freedom from religion
-```
-
-### Excerpt 470
-
-```
 RGT-REL-003  Remove abuse protections
-```
-
-### Excerpt 471
-
-```
 RGT-REL-004  Remove tax exemptions for abuse
-```
-
-### Excerpt 472
-
-```
 RGT-TEC-001  Ban government data purchases
-```
-
-### Excerpt 473
-
-```
 RGT-DET-001  Ban indefinite detention
-```
-
-### Excerpt 474
-
-```
 RGT-DET-002  Ban offshore incarceration
-```
-
-### Excerpt 475
-
-```
 RGT-EDU-001  Right to education
-```
-
-### Excerpt 476
-
-```
 🏥 HEALTHCARE (CORE + EXPANSION)
-```
-
-### Excerpt 477
-
-```
 HLT-MHC-001  Mental healthcare included
-```
-
-### Excerpt 478
-
-```
 HLT-STD-001  Evidence-based coverage
-```
-
-### Excerpt 479
-
-```
 HLT-STD-002  Protection from partisan interference
-```
-
-### Excerpt 480
-
-```
 HLT-STD-003  Minimum service levels
-```
-
-### Excerpt 481
-
-```
 HLT-STD-004  Maximum wait times
-```
-
-### Excerpt 482
-
-```
 HLT-STD-005  Independent scientific governance
-```
-
-### Excerpt 483
-
-```
 HLT-STD-006  Staggered appointments
-```
-
-### Excerpt 484
-
-```
 HLT-STD-007  Mixed federal/state appointments
-```
-
-### Excerpt 485
-
-```
 HLT-STD-008  Anti-capture guardrails
-```
-
-### Excerpt 486
-
-```
 HLT-STD-009  Full data transparency
-```
-
-### Excerpt 487
-
-```
 HLT-STD-010  Publish dissenting opinions
-```
-
-### Excerpt 488
-
-```
 HLT-STD-011  Independent audit mechanisms
-```
-
-### Excerpt 489
-
-```
 HLT-STD-012  Treat addiction as medical condition
-```
-
-### Excerpt 490
-
-```
 HLT-STD-013  Harm reduction systems
-```
-
-### Excerpt 491
-
-```
 ELE-REP-001|ELE|REP|Abolish Electoral College|MISSING
-```
-
-### Excerpt 492
-
-```
 ELE-SEC-001|ELE|SEC|Paper ballots and auditability|INCLUDED
-```
-
-### Excerpt 493
-
-```
 ELE-MAP-001|ELE|MAP|Ban gerrymandering|INCLUDED
-```
-
-### Excerpt 494
-
-```
 ELE-REP-002|ELE|REP|National ballot initiatives|INCLUDED
-```
-
-### Excerpt 495
-
-```
 ELE-VOT-001|ELE|VOT|Constitutional right to vote|INCLUDED
-```
-
-### Excerpt 496
-
-```
 ELE-VOT-002|ELE|VOT|Polling capacity limits|INCLUDED
-```
-
-### Excerpt 497
-
-```
 ELE-VOT-003|ELE|VOT|Flexible voting locations|INCLUDED
-```
-
-### Excerpt 498
-
-```
 ELE-VOT-004|ELE|VOT|Election Day holiday|INCLUDED
-```
-
-### Excerpt 499
-
-```
 ELE-VOT-005|ELE|VOT|Paid time off for voting|INCLUDED
-```
-
-### Excerpt 500
-
-```
 ELE-OVR-001|ELE|OVR|Insurrection enforcement mechanism|INCLUDED
-```
-
-### Excerpt 501
-
-```
 ELE-REP-003|ELE|REP|Territories get House representation|MISSING
-```
-
-### Excerpt 502
-
-```
 ELE-SEC-002|ELE|SEC|Ban federal armed presence at polls|MISSING
-```
-
-### Excerpt 503
-
-```
 ELE-SEC-003|ELE|SEC|Ban weapons at polling sites|MISSING
-```
-
-### Excerpt 504
-
-```
 ELE-FIN-001|ELE|REP|Equal campaign funding system|MISSING
-```
-
-### Excerpt 505
-
-```
 ELE-FIN-002|ELE|REP|Eliminate donation imbalance|MISSING
-```
-
-### Excerpt 506
-
-```
 ELE-PAR-001|ELE|REP|Remove two-party structural protections|MISSING
-```
-
-### Excerpt 507
-
-```
 ELE-MAP-002|ELE|MAP|Independent redistricting boards|MISSING
-```
-
-### Excerpt 508
-
-```
 ELE-OVR-002|ELE|OVR|National elections oversight board|MISSING
-```
-
-### Excerpt 509
-
-```
 ELE-ROL-001|ELE|ROL|National voter database|MISSING
-```
-
-### Excerpt 510
-
-```
 ELE-ROL-002|ELE|ROL|Automatic removal of deceased voters|MISSING
-```
-
-### Excerpt 511
-
-```
 ELE-IDA-001|ELE|IDA|Free voter ID assistance|MISSING
-```
-
-### Excerpt 512
-
-```
 ELE-IDA-002|ELE|IDA|Legal and case support for ID access|MISSING
-```
-
-### Excerpt 513
-
-```
 JUD-ETH-001|JUD|ETH|Supreme Court term limits|MISSING
-```
-
-### Excerpt 514
-
-```
 JUD-ETH-002|JUD|ETH|Judicial ethics code|MISSING
-```
-
-### Excerpt 515
-
-```
 JUD-INT-001|JUD|INT|Require intent-based interpretation|MISSING
-```
-
-### Excerpt 516
-
-```
 JUD-INT-002|JUD|INT|Limit strict textualism|MISSING
-```
-
-### Excerpt 517
-
-```
 JUD-INT-003|JUD|INT|Require plain-language intent in laws|MISSING
-```
-
-### Excerpt 518
-
-```
 JUD-VEN-001|JUD|VEN|Prevent judge and venue shopping|MISSING
-```
-
-### Excerpt 519
-
-```
 JUD-REC-001|JUD|REC|Strong recusal standards|MISSING
-```
-
-### Excerpt 520
-
-```
 JUD-OVR-001|JUD|OVR|Judicial oversight mechanisms|MISSING
-```
-
-### Excerpt 521
-
-```
 🔍 Internal Oversight per Branch / Body
-```
-
-### Excerpt 522
-
-```
 OVR-BRN-001|OVR|BRN|Each branch of government and major constitutional body must establish an independent criminal and ethics oversight board|MISSING
-```
-
-### Excerpt 523
-
-```
 OVR-BRN-002|OVR|BRN|Oversight boards must be independent from the bodies they oversee|MISSING
-```
-
-### Excerpt 524
-
-```
 🧠 Federal Independent Oversight Authority
-```
-
-### Excerpt 525
-
-```
 OVR-FED-001|OVR|FED|Establish a federal independent oversight and investigations body|MISSING
-```
-
-### Excerpt 526
-
-```
 OVR-FED-002|OVR|FED|Federal oversight body has authority to investigate any federally elected official|MISSING
-```
-
-### Excerpt 527
-
-```
 OVR-FED-003|OVR|FED|Federal oversight body includes one elected member and members appointed by each branch of government|MISSING
-```
-
-### Excerpt 528
-
-```
 OVR-FED-004|OVR|FED|Federal oversight body has subpoena and deposition powers|MISSING
-```
-
-### Excerpt 529
-
-```
 🏛️ State-Level Oversight Systems
-```
-
-### Excerpt 530
-
-```
 OVR-STA-001|OVR|STA|Each state must establish its own independent oversight board|MISSING
-```
-
-### Excerpt 531
-
-```
 OVR-STA-002|OVR|STA|State oversight boards include directly elected members|MISSING
-```
-
-### Excerpt 532
-
-```
 OVR-STA-003|OVR|STA|State oversight boards include members appointed by legislatures and governors|MISSING
-```
-
-### Excerpt 533
-
-```
 ⚖️ Federal → State Oversight Escalation
-```
-
-### Excerpt 534
-
-```
 OVR-JUR-001|OVR|JUR|Federal oversight body may investigate governors and high-level state officials|MISSING
-```
-
-### Excerpt 535
-
-```
 OVR-JUR-002|OVR|JUR|Federal oversight body may investigate state oversight boards if they fail to perform duties|MISSING
-```
-
-### Excerpt 536
-
-```
 💰 Guaranteed Funding + Anti-Sabotage Mechanisms
-```
-
-### Excerpt 537
-
-```
 OVR-FND-001|OVR|FND|Funding for oversight and investigation bodies must be guaranteed and adequate|MISSING
-```
-
-### Excerpt 538
-
-```
 OVR-FND-002|OVR|FND|If funding is not passed oversight bodies automatically receive a 6-month extension|MISSING
-```
-
-### Excerpt 539
-
-```
 OVR-FND-003|OVR|FND|Automatic funding extension includes a 10 percent increase|MISSING
-```
-
-### Excerpt 540
-
-```
 OVR-FND-004|OVR|FND|Oversight funding must be separate from the departments they oversee|MISSING
-```
-
-### Excerpt 541
-
-```
 OVR-FND-005|OVR|FND|Oversight funding must be protected from political and external influence|MISSING
-```
-
-### Excerpt 542
-
-```
 📊 Summary
-```
-
-### Excerpt 543
-
-```
 OVR-BRN-*
-```
-
-### Excerpt 544
-
-```
 OVR-FED-*
-```
-
-### Excerpt 545
-
-```
 OVR-STA-*
-```
-
-### Excerpt 546
-
-```
 OVR-JUR-*
-```
-
-### Excerpt 547
-
-```
 OVR-FND-*
-```
-
-### Excerpt 548
-
-```
 A. Public registry of surveillance systems
-```
-
-### Excerpt 549
-
-```
 TEC-OVR-001|TEC|OVR|Require public registration and disclosure of all government AI surveillance systems including purpose authority data sources and oversight structure|MISSING
-```
-
-### Excerpt 550
-
-```
 B. Mandatory audits
-```
-
-### Excerpt 551
-
-```
 TEC-OVR-002|TEC|OVR|Require regular independent audits of all authorized government AI surveillance systems for legality bias accuracy and civil-liberties impacts|MISSING
-```
-
-### Excerpt 552
-
-```
 C. Automatic sunset clauses
-```
-
-### Excerpt 553
-
-```
 TEC-OVR-003|TEC|OVR|All government AI surveillance authorities and systems must have sunset dates and require periodic reauthorization|MISSING
-```
-
-### Excerpt 554
-
-```
 NEW IDs CREATED IN THIS PASS
-```
-
-### Excerpt 555
-
-```
 TEC-SUR-001
-```
-
-### Excerpt 556
-
-```
 TEC-SUR-002
-```
-
-### Excerpt 557
-
-```
 TEC-SUR-003
-```
-
-### Excerpt 558
-
-```
 TEC-SUR-004
-```
-
-### Excerpt 559
-
-```
 TEC-BIO-001
-```
-
-### Excerpt 560
-
-```
 TEC-BIO-002
-```
-
-### Excerpt 561
-
-```
 TEC-BIO-003
-```
-
-### Excerpt 562
-
-```
 TEC-SUR-005
-```
-
-### Excerpt 563
-
-```
 TEC-SUR-006
-```
-
-### Excerpt 564
-
-```
 TEC-SUR-007
-```
-
-### Excerpt 565
-
-```
 TEC-DAT-001
-```
-
-### Excerpt 566
-
-```
 TEC-DAT-002
-```
-
-### Excerpt 567
-
-```
 TEC-DAT-003
-```
-
-### Excerpt 568
-
-```
 TEC-SUR-008
-```
-
-### Excerpt 569
-
-```
 TEC-SUR-009
-```
-
-### Excerpt 570
-
-```
 TEC-IMM-001
-```
-
-### Excerpt 571
-
-```
 TEC-IMM-002
-```
-
-### Excerpt 572
-
-```
 TEC-SUR-010
-```
-
-### Excerpt 573
-
-```
 TEC-OVR-001
-```
-
-### Excerpt 574
-
-```
 TEC-OVR-002
-```
-
-### Excerpt 575
-
-```
 TEC-OVR-003
-```
-
-### Excerpt 576
-
-```
 New justice items
-```
-
-### Excerpt 577
-
-```
 Prosecution and charging
-```
-
-### Excerpt 578
-
-```
 JUS-PRO-001|JUS|PRO|Prosecutors may not use charging decisions to coerce plea deals through disproportionate threat of punishment|MISSING
-```
-
-### Excerpt 579
-
-```
 JUS-PRO-002|JUS|PRO|Prosecutors must disclose exculpatory evidence fully promptly and automatically|MISSING
-```
-
-### Excerpt 580
-
-```
 JUS-PRO-003|JUS|PRO|Retaliatory or politically motivated prosecution is prohibited and subject to independent review|MISSING
-```
-
-### Excerpt 581
-
-```
 JUS-PRO-004|JUS|PRO|Prosecutorial offices must be subject to transparency and audit standards for charging plea and dismissal patterns|MISSING
-```
-
-### Excerpt 582
-
-```
 JUS-PRO-005|JUS|PRO|AI systems may not independently recommend charges plea terms or prosecutorial escalation without accountable human review|MISSING
-```
-
-### Excerpt 583
-
-```
 Defense rights and process fairness
-```
-
-### Excerpt 584
-
-```
 JUS-DEF-001|JUS|DEF|Every person facing serious criminal charges must have access to competent adequately funded legal counsel|MISSING
-```
-
-### Excerpt 585
-
-```
 JUS-DEF-002|JUS|DEF|Public defense systems must be funded at levels sufficient to ensure parity of process with prosecution|MISSING
-```
-
-### Excerpt 586
-
-```
 JUS-DEF-003|JUS|DEF|Defendants must have timely access to discovery evidence and expert resources needed for an effective defense|MISSING
-```
-
-### Excerpt 587
-
-```
 JUS-DEF-004|JUS|DEF|Courts must not permit procedural delay or administrative burden to undermine the right to a fair defense|MISSING
-```
-
-### Excerpt 588
-
-```
 JUS-DEF-005|JUS|DEF|Defendants must have the right to challenge the scientific validity and technical reliability of evidence used against them|MISSING
-```
-
-### Excerpt 589
-
-```
 Bail and pretrial justice
-```
-
-### Excerpt 590
-
-```
 JUS-BAL-001|JUS|BAL|End or sharply limit cash bail systems that criminalize poverty|MISSING
-```
-
-### Excerpt 591
-
-```
 JUS-BAL-002|JUS|BAL|Pretrial detention must be limited to cases with clear individualized and reviewable necessity|MISSING
-```
-
-### Excerpt 592
-
-```
 JUS-BAL-003|JUS|BAL|AI systems may not be used to assign bail or pretrial release risk scores|MISSING
-```
-
-### Excerpt 593
-
-```
 JUS-BAL-004|JUS|BAL|Pretrial release decisions must favor the least restrictive conditions consistent with safety and court appearance|MISSING
-```
-
-### Excerpt 594
-
-```
 Evidence and forensic integrity
-```
-
-### Excerpt 595
-
-```
 JUS-EVD-001|JUS|EVD|Forensic methods used in court must meet strict scientific validity and reliability standards|MISSING
-```
-
-### Excerpt 596
-
-```
 JUS-EVD-002|JUS|EVD|Junk science and unsupported forensic techniques must be excluded from court proceedings|MISSING
-```
-
-### Excerpt 597
-
-```
 JUS-EVD-003|JUS|EVD|Digital and physical evidence must maintain transparent documented chain-of-custody standards|MISSING
-```
-
-### Excerpt 598
-
-```
 JUS-EVD-004|JUS|EVD|Synthetic or AI-generated evidence must be clearly identified and independently verifiable before admissibility|MISSING
-```
-
-### Excerpt 599
-
-```
 JUS-EVD-005|JUS|EVD|When foundational science behind a conviction is later discredited affected cases must be eligible for review and reopening|MISSING
-```
-
-### Excerpt 600
-
-```
 Appeals and post-conviction review
-```
-
-### Excerpt 601
-
-```
 JUS-REV-001|JUS|REV|Post-conviction review processes must be expanded and accessible in cases involving new evidence procedural error or unreliable science|MISSING
-```
-
-### Excerpt 602
-
-```
 JUS-REV-002|JUS|REV|Independent innocence review mechanisms should exist in every jurisdiction|MISSING
-```
-
-### Excerpt 603
-
-```
 JUS-REV-003|JUS|REV|Wrongful-conviction indicators must trigger mandatory review rather than discretionary review alone|MISSING
-```
-
-### Excerpt 604
-
-```
 JUS-REV-004|JUS|REV|AI may be used to identify patterns of wrongful conviction bias or procedural inconsistency under transparent oversight|MISSING
-```
-
-### Excerpt 605
-
-```
 Conditions of confinement
-```
-
-### Excerpt 606
-
-```
 JUS-CON-001|JUS|CON|People in custody retain human rights including access to adequate healthcare sanitation nutrition and safety|MISSING
-```
-
-### Excerpt 607
-
-```
 JUS-CON-002|JUS|CON|Solitary confinement must be banned or strictly limited with strong safeguards and independent review|MISSING
-```
-
-### Excerpt 608
-
-```
 JUS-CON-003|JUS|CON|Mental health needs in custody must be treated medically and may not be punished as disciplinary problems|MISSING
-```
-
-### Excerpt 609
-
-```
 JUS-CON-004|JUS|CON|Disability access and accommodation must be guaranteed in all detention and correctional settings|MISSING
-```
-
-### Excerpt 610
-
-```
 JUS-CON-005|JUS|CON|Independent inspections and public reporting are required for all detention and correctional facilities|MISSING
-```
-
-### Excerpt 611
-
-```
 Juvenile justice
-```
-
-### Excerpt 612
-
-```
 JUS-JUV-001|JUS|JUV|Juvenile justice systems must prioritize rehabilitation education and support over punishment|MISSING
-```
-
-### Excerpt 613
-
-```
 JUS-JUV-002|JUS|JUV|Children may not be subjected to adult sentencing standards except under extremely narrow conditions|MISSING
-```
-
-### Excerpt 614
-
-```
 JUS-JUV-003|JUS|JUV|Juvenile records should be sealed or expunged automatically in most cases to prevent lifelong harm|MISSING
-```
-
-### Excerpt 615
-
-```
 JUS-JUV-004|JUS|JUV|Youth in custody must retain access to education mental healthcare and developmentally appropriate services|MISSING
-```
-
-### Excerpt 616
-
-```
 Civil justice and access to courts
-```
-
-### Excerpt 617
-
-```
 JUS-CIV-001|JUS|CIV|People must have meaningful access to civil courts for harms involving housing employment discrimination injury and consumer abuse|MISSING
-```
-
-### Excerpt 618
-
-```
 JUS-CIV-002|JUS|CIV|Forced arbitration clauses that strip people of meaningful legal recourse should be banned or strictly limited|MISSING
-```
-
-### Excerpt 619
-
-```
 JUS-CIV-003|JUS|CIV|Class actions and collective remedies must remain available where systemic harms affect large groups of people|MISSING
-```
-
-### Excerpt 620
-
-```
 JUS-CIV-004|JUS|CIV|Court fees filing costs and procedural burdens must not block access to justice for low-income people|MISSING
-```
-
-### Excerpt 621
-
-```
 Immigration justice overlap
-```
-
-### Excerpt 622
-
-```
 JUS-IMM-001|JUS|IMM|Immigration detention must be subject to strict due process limits and may not become indefinite by default|MISSING
-```
-
-### Excerpt 623
-
-```
 JUS-IMM-002|JUS|IMM|People in immigration proceedings must have meaningful access to counsel interpretation and judicial review|MISSING
-```
-
-### Excerpt 624
-
-```
 JUS-IMM-003|JUS|IMM|Family separation and coercive detention practices must be prohibited except under narrowly defined and reviewable conditions|MISSING
-```
-
-### Excerpt 625
-
-```
 Transparency and accountability
-```
-
-### Excerpt 626
-
-```
 JUS-OVR-001|JUS|OVR|Justice institutions must publish standardized data on charging sentencing detention plea bargaining and appeals outcomes|MISSING
-```
-
-### Excerpt 627
-
-```
 JUS-OVR-002|JUS|OVR|Justice data must be disaggregated to identify racial gender disability geographic and class disparities|MISSING
-```
-
-### Excerpt 628
-
-```
 JUS-OVR-003|JUS|OVR|Independent oversight bodies must have access to justice-system data records and facilities necessary to investigate abuse or bias|MISSING
-```
-
-### Excerpt 629
-
-```
 JUS-OVR-004|JUS|OVR|Justice agencies must be required to act on audit findings regarding bias rights violations or unlawful practices|MISSING
-```
-
-### Excerpt 630
-
-```
 Strong candidates for later expansion
-```
-
-### Excerpt 631
-
-```
 HLT-OVR-001|HLT|OVR|Coverage entities must publicly report denial rates appeal outcomes prior authorization burden network adequacy failures and major access complaints in standardized formats|MISSING
-```
-
-### Excerpt 632
-
-```
 HLT-OVR-002|HLT|OVR|Healthcare oversight bodies must have authority to investigate systemic denial delay undercoverage or misleading plan design and impose meaningful penalties|MISSING
-```
-
-### Excerpt 633
-
-```
 HLT-OVR-003|HLT|OVR|Coverage entities may not hide harmful practices behind proprietary standards trade secrecy or intentionally complex plan language|MISSING
-```
-
-### Excerpt 634
-
-```
 HLT-OVR-004|HLT|OVR|Regulators must be empowered to require corrective action restitution or suspension of plan participation where repeated patient harm occurs|MISSING
-```
-
-### Excerpt 635
-
-```
 14. Research funding for neglected conditions and treatment gaps
-```
-
-### Excerpt 636
-
-```
 IMM-OVR-001|IMM|OVR|Immigration agencies and detention systems must be subject to strong independent oversight with access to facilities records and decision patterns|MISSING
-```
-
-### Excerpt 637
-
-```
 IMM-OVR-002|IMM|OVR|Immigration systems must publish standardized data on detention removals processing times family separation outcomes legal representation access and rights complaints|MISSING
-```
-
-### Excerpt 638
-
-```
 IMM-OVR-003|IMM|OVR|Patterns of abuse rights violations discriminatory enforcement or unlawful detention must trigger mandatory corrective action and review|MISSING
-```
-
-### Excerpt 639
-
-```
 IMM-OVR-004|IMM|OVR|Immigration officials and agencies may not evade accountability through secrecy exceptional process or fragmented jurisdictional responsibility|MISSING
-```
-
-### Excerpt 640
-
-```
 Why this matters
-```
-
-### Excerpt 641
-
-```
 `ADM-OVR-001 | Major agencies must have independent internal oversight functions, including inspectors general or equivalent bodies with access to records and investigatory authority.`
-```
-
-### Excerpt 642
-
-```
 `ADM-OVR-002 | Internal oversight bodies must be protected from retaliation, interference, and politically motivated removal.`
-```
-
-### Excerpt 643
-
-```
 `ADM-OVR-003 | Findings of systemic agency failure, capture, abuse, or chronic non-enforcement must trigger mandatory corrective review.`
 ```
+
+## Exports and supporting files
+
+- Per-pillar CSVs: data/pillar_reports/by_mapping/csvs/pillar_7_checks_and_balances_rule_items.csv etc.
+- Research file: pillars/research/pillar_7_checks_and_balances_research.txt
 
