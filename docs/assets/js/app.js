@@ -45,12 +45,14 @@
     // Depth-counting breaks on GitHub Pages because the repo base path adds a segment.
     const inSubdir = /\/(pillars|compare)\//.test(location.pathname);
     const base = inSubdir ? '../' : '';
+    const aboutUsHref = base + 'about-us.html';
     const aiHref = base + 'about-ai.html';
     const missionHref = base + 'mission.html';
     const constitutionHref = base + 'constitution.html';
     const isAiPage = pageName === 'about-ai';
     const isMissionPage = pageName === 'mission';
     const isConstitutionPage = pageName === 'constitution';
+    const isAboutUsPage = pageName === 'about-us';
 
     if (navList && !navList.querySelector('a[href*="mission"]')) {
       const li = document.createElement('li');
@@ -64,13 +66,19 @@
       navList.appendChild(li);
     }
 
+    if (navList && !navList.querySelector('a[href*="about-us"]')) {
+      const li = document.createElement('li');
+      li.innerHTML = `<a href="${aboutUsHref}"${isAboutUsPage ? ' class="active"' : ''}>About Us</a>`;
+      navList.appendChild(li);
+    }
+
     if (navList && !navList.querySelector('a[href*="about-ai"]')) {
       const li = document.createElement('li');
       li.innerHTML = `<a href="${aiHref}"${isAiPage ? ' class="active"' : ''}>About AI</a>`;
       navList.appendChild(li);
     }
 
-    // Inject Mission, Constitution, and About AI into footer-links
+    // Inject Mission, Constitution, About Us, and About AI into footer-links
     const footerLinks = document.querySelector('ul.footer-links');
     if (footerLinks && !footerLinks.querySelector('a[href*="mission"]')) {
       const fli = document.createElement('li');
@@ -80,6 +88,11 @@
     if (footerLinks && !footerLinks.querySelector('a[href*="constitution"]')) {
       const fli = document.createElement('li');
       fli.innerHTML = `<a href="${constitutionHref}">Constitution</a>`;
+      footerLinks.appendChild(fli);
+    }
+    if (footerLinks && !footerLinks.querySelector('a[href*="about-us"]')) {
+      const fli = document.createElement('li');
+      fli.innerHTML = `<a href="${aboutUsHref}">About Us</a>`;
       footerLinks.appendChild(fli);
     }
     if (footerLinks && !footerLinks.querySelector('a[href*="about-ai"]')) {

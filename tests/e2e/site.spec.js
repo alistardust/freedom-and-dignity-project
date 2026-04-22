@@ -37,8 +37,8 @@ test.describe('Homepage', () => {
     await expect(page.locator('.demand-list li')).toHaveCount(10);
   });
 
-  test('nav has 7 links (4 static + Mission, Constitution, About AI injected by app.js)', async ({ page }) => {
-    await expect(page.locator('.nav-links a')).toHaveCount(7);
+  test('nav has 8 links (4 static + Mission, Constitution, About Us, About AI injected by app.js)', async ({ page }) => {
+    await expect(page.locator('.nav-links a')).toHaveCount(8);
   });
 
   test('name notice banner is present and dismissible', async ({ page }) => {
@@ -584,6 +584,7 @@ test.describe('Roadmap page', () => {
   test('nav has Mission and Constitution links', async ({ page }) => {
     await expect(page.locator('.nav-links a[href*="mission"]')).toBeAttached();
     await expect(page.locator('.nav-links a[href*="constitution"]')).toBeAttached();
+    await expect(page.locator('.nav-links a[href*="about-us"]')).toBeAttached();
   });
 });
 
@@ -641,4 +642,60 @@ test.describe('Mission and Constitution nav links from all page types', () => {
       await expect(page).toHaveTitle(/Constitution.*American Renewal/i);
     });
   }
+});
+
+// ── ABOUT US PAGE ─────────────────────────────────────────────────────────────
+
+test.describe('About Us page', () => {
+  test.beforeEach(async ({ page }) => { await page.goto('/about-us.html'); });
+
+  test('has correct page title', async ({ page }) => {
+    await expect(page).toHaveTitle(/About Us.*American Renewal/i);
+  });
+
+  test('displays the founder name', async ({ page }) => {
+    await expect(page.locator('.profile-name')).toBeVisible();
+    await expect(page.locator('.profile-name')).toHaveText('Alice Thomas');
+  });
+
+  test('mentions Northwest Whitfield High School', async ({ page }) => {
+    await expect(page.locator('text=Northwest Whitfield High School')).toBeVisible();
+  });
+
+  test('mentions Southern Polytechnic State University', async ({ page }) => {
+    await expect(page.locator('text=Southern Polytechnic State University')).toBeVisible();
+  });
+
+  test('faith section is present', async ({ page }) => {
+    await expect(page.locator('text=Grove Level Baptist Church')).toBeVisible();
+  });
+
+  test('faith section includes key scripture references', async ({ page }) => {
+    const body = await page.locator('.about-body').textContent();
+    expect(body).toMatch(/Matthew 22:37/);
+    expect(body).toMatch(/1 Corinthians 13/);
+    expect(body).toMatch(/1 John 4/);
+    expect(body).toMatch(/Matthew 25:40/);
+  });
+
+  test('values list has 4 items', async ({ page }) => {
+    await expect(page.locator('.values-list li')).toHaveCount(4);
+  });
+
+  test('mentions the dogs Chipper and Riley', async ({ page }) => {
+    const text = await page.locator('.about-body').textContent();
+    expect(text).toMatch(/Chipper/);
+    expect(text).toMatch(/Riley/);
+  });
+
+  test('contributor notice is present and links to about-ai', async ({ page }) => {
+    await expect(page.locator('.contrib-notice')).toBeVisible();
+    await expect(page.locator('.contrib-notice a[href*="about-ai"]')).toBeAttached();
+  });
+
+  test('nav has About Us as active link', async ({ page }) => {
+    const aboutUsLink = page.locator('.nav-links a[href*="about-us"]');
+    await expect(aboutUsLink).toBeAttached();
+    await expect(aboutUsLink).toHaveClass(/active/);
+  });
 });

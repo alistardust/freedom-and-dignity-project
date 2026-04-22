@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us — American Renewal Project</title>
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" type="image/svg+xml" href="assets/img/logo.svg">
+<style>
+/* ── HERO ──────────────────────────────────────────────── */
+.about-hero {
+  background: var(--navy);
+  padding: 4rem 2rem 3rem;
+  text-align: center;
+  border-bottom: 4px solid var(--gold);
+}
+.about-hero-eyebrow {
+  font-family: "Libre Franklin", sans-serif;
+  font-size: .7rem; letter-spacing: .22em; text-transform: uppercase;
+  color: rgba(255,255,255,.38); display: block; margin-bottom: 1rem;
+}
+.about-hero h1 {
+  font-family: "Oswald", sans-serif;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 700; text-transform: uppercase; letter-spacing: .04em;
+  color: #fff; margin: 0 0 1.25rem;
+}
+.about-hero h1 span { color: var(--gold); }
+.about-hero-statement {
+  font-family: "Playfair Display", serif; font-style: italic;
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  color: rgba(255,255,255,.72);
+  max-width: 640px; margin: 0 auto; line-height: 1.7;
+}
+
+/* ── BODY ──────────────────────────────────────────────── */
+.about-body { max-width: 760px; margin: 0 auto; padding: 3rem 1.5rem; }
+.about-body h2 {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.3rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .06em;
+  color: var(--navy); margin: 2.5rem 0 .75rem;
+  border-left: 3px solid var(--gold); padding-left: .9rem;
+}
+.about-body p {
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 1rem; line-height: 1.85; color: var(--ink); margin: 0 0 1.2rem;
+}
+.about-body p strong { color: var(--navy); }
+
+/* ── PROFILE CARD ──────────────────────────────────────── */
+.profile-card {
+  display: flex; gap: 1.75rem; align-items: flex-start;
+  background: var(--parchment);
+  border-left: 4px solid var(--gold);
+  padding: 1.5rem 1.75rem; margin: 1.5rem 0 2rem;
+}
+.profile-avatar {
+  width: 80px; height: 80px; flex-shrink: 0;
+  background: var(--navy);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: "Oswald", sans-serif;
+  font-size: 2rem; font-weight: 700; color: var(--gold);
+  letter-spacing: .04em;
+}
+.profile-details { flex: 1; }
+.profile-name {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.35rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .05em;
+  color: var(--navy); margin: 0 0 .3rem;
+}
+.profile-title {
+  font-family: "Libre Franklin", sans-serif;
+  font-size: .88rem; color: var(--mid); margin: 0 0 .75rem;
+}
+.profile-tags {
+  display: flex; flex-wrap: wrap; gap: .4rem; margin: 0;
+}
+.profile-tag {
+  font-family: "Libre Franklin", sans-serif;
+  font-size: .75rem; letter-spacing: .06em; text-transform: uppercase;
+  background: var(--navy); color: var(--gold-light);
+  padding: .2rem .6rem; border-radius: 2px;
+}
+
+/* ── PULLQUOTE ─────────────────────────────────────────── */
+.about-pullquote {
+  border-left: 4px solid var(--red);
+  background: var(--parchment); padding: 1.2rem 1.5rem; margin: 2rem 0;
+}
+.about-pullquote p {
+  font-family: "Playfair Display", serif; font-style: italic;
+  font-size: 1.1rem; color: var(--navy); line-height: 1.7; margin: 0;
+}
+
+/* ── VALUES LIST ───────────────────────────────────────── */
+.values-list {
+  list-style: none; margin: 1.25rem 0 1.5rem; padding: 0;
+  display: flex; flex-direction: column; gap: .85rem;
+}
+.values-list li {
+  font-family: "Libre Franklin", sans-serif;
+  font-size: .97rem; line-height: 1.75;
+  padding: .85rem 1.1rem;
+  background: var(--sky);
+  border-left: 3px solid var(--navy);
+  color: var(--ink);
+}
+.values-list li strong { color: var(--navy); }
+
+/* ── CONTRIB NOTICE ────────────────────────────────────── */
+.contrib-notice {
+  background: var(--navy); color: rgba(255,255,255,.85);
+  padding: 1.5rem 1.75rem; margin: 1.5rem 0 2rem;
+  border-top: 3px solid var(--gold);
+}
+.contrib-notice h3 {
+  font-family: "Oswald", sans-serif;
+  font-size: 1rem; font-weight: 700; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--gold); margin: 0 0 .75rem;
+}
+.contrib-notice p {
+  font-family: "Libre Franklin", sans-serif;
+  font-size: .93rem; line-height: 1.8; color: rgba(255,255,255,.82); margin: 0 0 .75rem;
+}
+.contrib-notice p:last-child { margin: 0; }
+
+@media (max-width: 580px) {
+  .profile-card { flex-direction: column; }
+  .profile-avatar { width: 60px; height: 60px; font-size: 1.5rem; }
+}
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">
+      <img src="assets/img/logo.svg" alt="American Renewal Project" width="36" height="36">
+      <span class="nav-wordmark">American Renewal<span>Project</span></span>
+    </a>
+    <button class="nav-hamburger" aria-label="Menu">☰</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="foundations.html">Foundations</a></li>
+      <li><a href="pillars/index.html">Pillars</a></li>
+      <li><a href="compare/index.html">Compare</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="about-hero">
+  <span class="about-hero-eyebrow">The People Behind the Platform</span>
+  <h1>Who <span>We Are</span></h1>
+  <p class="about-hero-statement">A project built in the open, by ordinary people, about the country we know we can be.</p>
+</div>
+
+<div class="about-body">
+
+  <h2>The Founder</h2>
+
+  <div class="profile-card">
+    <div class="profile-avatar" aria-hidden="true">AT</div>
+    <div class="profile-details">
+      <div class="profile-name">Alice Thomas</div>
+      <div class="profile-title">Founder &amp; Sole Human Contributor &mdash; DevOps &amp; Cloud Engineer &mdash; Atlanta, Georgia</div>
+      <div class="profile-tags">
+        <span class="profile-tag">Software Engineering</span>
+        <span class="profile-tag">DevOps &amp; Cloud</span>
+        <span class="profile-tag">Atlanta, GA</span>
+        <span class="profile-tag">Whitfield County Native</span>
+      </div>
+    </div>
+  </div>
+
+  <p>Alice Thomas was born and raised in Whitfield County, Georgia — Dalton, in the hills of northwest Georgia. She
+  graduated from <strong>Northwest Whitfield High School</strong> in 2005, then went on to attend
+  <strong>Southern Polytechnic State University</strong> (now part of Kennesaw State University), earning a degree in
+  <strong>Software Engineering</strong>. She has spent her career as a DevOps and Cloud engineer, now based in Atlanta,
+  and is married to her wife of fourteen years.</p>
+
+  <p>She started this project because she grew up watching the country she loved — the country she was taught to believe in —
+  fail the test it set for itself. Not with a dramatic break, but with a slow accumulation: of small betrayals, of institutions
+  that bent when they should have held, of a constitutional framework brilliant enough to survive two centuries and fragile
+  enough to be dismantled piece by piece without anyone technically breaking a rule. She built this platform because she
+  believes the problems are structural, the solutions are knowable, and silence is not an option.</p>
+
+  <h2>Faith, Family &amp; Values</h2>
+
+  <p>Alice's mother was a staff member at <strong>Grove Level Baptist Church</strong> in Dalton for many years. Alice grew up
+  in a Baptist household, in a conservative Republican family, in a community where faith was not a political accessory but a
+  genuine way of organizing one's life around love and obligation to others.</p>
+
+  <p>She takes the teachings of Jesus seriously — not selectively. The case is not built on one verse or one passage.
+  It is built on the cumulative weight of what the New Testament actually says about love, about obligation, about what
+  faith requires of us in practice.</p>
+
+  <p><strong>Matthew 22:37–40</strong> — the two great commandments — organizes everything else:
+  <em>"Love the Lord your God with all your heart and with all your soul and with all your mind. This is the first and
+  greatest commandment. And the second is like it: Love your neighbor as yourself. All the Law and the Prophets hang on
+  these two commandments."</em> All the Law and the Prophets. Everything. Two commandments. That is not a framework with
+  a lot of room for exceptions.</p>
+
+  <p><strong>1 Corinthians 13</strong> — Paul's great treatise on love — makes the terms explicit. Verse 13 lands the
+  point: <em>"And now these three remain: faith, hope and love. But the greatest of these is love."</em> Not doctrine.
+  Not political alignment. Not who you vote for. Love. And the verses that precede it spell out what love actually looks
+  like in practice: it is patient, it is kind, it does not keep a record of wrongs, it does not delight in evil but
+  rejoices with the truth, it always protects, always trusts, always hopes, always perseveres. Paul's argument is that
+  without love, everything else — prophecy, knowledge, sacrifice, even faith — amounts to nothing. <em>"If I have not
+  love, I am nothing."</em></p>
+
+  <p><strong>1 John 4:7–21</strong> closes the case. <em>"Beloved, let us love one another, for love comes from God.
+  Everyone who loves has been born of God and knows God. Whoever does not love does not know God, because God is
+  love."</em> And then verse 20, which is perhaps the most direct verse in the entire New Testament on the subject of
+  what it means to claim faith while treating other people badly: <em>"Whoever claims to love God yet hates a brother
+  or sister is a liar. For whoever does not love their brother and sister, whom they have seen, cannot love God, whom
+  they have not seen."</em> The commandment follows immediately: <em>"Anyone who loves God must also love their brother
+  and sister."</em></p>
+
+  <p>And <strong>Matthew 25:40</strong>: <em>"Whatever you did for the least of these brothers and sisters of mine,
+  you did for me."</em> This is not a metaphor about being kind to people you find easy to love. It is a direct
+  statement about where God is to be found — in the hungry, the stranger, the sick, the imprisoned. A platform built
+  on healthcare access, housing security, immigration dignity, and the rights of people who have been discarded by
+  every other political framework is not a departure from Christian values. It is an application of them.</p>
+
+  <div class="about-pullquote">
+    <p>"And now these three remain: faith, hope and love. But the greatest of these is love." — 1 Corinthians 13:13</p>
+  </div>
+
+  <p>These passages do not come with footnotes, asterisks, or a list of people they do not apply to. The tradition
+  Alice was raised in taught her to read scripture as binding, not decorative. She still does. That is why this
+  platform looks the way it does.</p>
+
+  <p>Her conservative upbringing left its mark too — and she is grateful for it, even where she has arrived at different
+  conclusions than her family. From that tradition, she carries:</p>
+
+  <ul class="values-list">
+    <li><strong>Government has no business in your bedroom, your doctor's office, or your personal decisions.</strong>
+    The conservative principle of keeping government out of private life is one she holds sincerely — and believes should
+    be applied consistently, not selectively based on whose privacy is at stake.</li>
+    <li><strong>The rule of law is sacred.</strong> No one is above it. Not the powerful. Not the well-connected. Not
+    anyone who holds or has held high office. This is a conservative principle at its best, and it is one of the
+    load-bearing pillars of this platform.</li>
+    <li><strong>Fiscal responsibility and accountability in government matter.</strong> Public money is a public trust.
+    The waste, the corruption, the revolving door between government and industry — these are not partisan complaints.
+    They are legitimate grievances that deserve structural answers.</li>
+    <li><strong>Community is real, and it comes with obligations.</strong> The Baptist tradition she was raised in
+    understood that neighbors are not optional. A community that lets its members fall through the floor — without
+    healthcare, without housing, without dignity in old age — has failed its most basic obligation. The social safety
+    net is not charity; it is what community looks like at scale.</li>
+  </ul>
+
+  <p>This platform is not anti-religion. It does not ask anyone to abandon their faith. It asks only that the rights and
+  dignity guaranteed by this framework be extended to every person — as every serious faith tradition, at its best,
+  demands.</p>
+
+  <p>Alice is not na&iuml;ve about the distance between where she was raised and where she now stands on some questions. She
+  has thought about that distance carefully. Her conclusion: the values she was taught — love, fairness, dignity,
+  accountability, and the obligation to show up for the people around you — are exactly the values this platform is built
+  on. The journey was not away from those values. It was deeper into them.</p>
+
+  <h2>The Braves, The Dogs &amp; The Music</h2>
+
+  <p>Alice has been an <strong>Atlanta Braves</strong> devotee since childhood. She named both her dogs after Braves third
+  basemen: <strong>Chipper</strong>, named after Chipper Jones — the greatest Brave to ever put on the tomahawk, a
+  Hall-of-Famer who spent his entire career in Atlanta — and <strong>Riley</strong>, named after Austin Riley, who carries
+  the tradition at third base today.</p>
+
+  <p>Music is her primary hobby and abiding love. Her taste resists easy categorization: <strong>David Bowie</strong>'s
+  boundless reinvention, the feverish confessional energy of <strong>Chappell Roan</strong>,
+  <strong>Pink Floyd</strong>'s vast sonic architecture, and the irreducible cool and wit of <strong>De La Soul</strong>.
+  What these artists have in common is that they did not do the expected thing — they made something that could not have
+  been predicted from the inputs. That quality is, she would say, the whole point.</p>
+
+  <h2>Sole Contributor — So Far</h2>
+
+  <div class="contrib-notice">
+    <h3>A Note on Contributions</h3>
+    <p>At this stage, Alice Thomas is the sole human contributor to this project. The research, writing, framing, policy
+    positions, and decisions about what this platform is and is not are hers.</p>
+    <p>AI tools — principally <strong>GitHub Copilot</strong> and <strong>ChatGPT</strong> — have been used extensively
+    throughout the development of this project: for research assistance, drafting, editing, code generation, and
+    adversarial review. The project's full transparency statement on AI use can be found on the
+    <a href="about-ai.html" style="color:var(--gold-light);">About AI page</a>.</p>
+    <p>A number of people have offered feedback and suggestions, and that input has been valuable. But no one else has
+    directly contributed code, writing, or policy content to this repository. If and when that changes, it will be
+    acknowledged here and in the commit history.</p>
+    <p>This project is open. If the ideas resonate with you and you want to contribute — as a writer, researcher,
+    policy expert, designer, or developer — the repository is public and the door is open.</p>
+  </div>
+
+  <h2>Why This, Why Now</h2>
+
+  <p>People sometimes ask what qualifies someone to write a constitutional platform. It is a fair question. The answer
+  Alice gives is this: the same thing that qualified the people who wrote the original — a combination of serious reading,
+  lived experience, moral urgency, and the conviction that waiting for someone more credentialed to do it is how the work
+  never gets done.</p>
+
+  <p>She is an engineer by training and profession. Engineers build things designed to hold under pressure, to fail
+  gracefully when they do fail, and to be maintainable by the people who come after. She looked at the American system of
+  government and saw a structure that has not been properly maintained, that is failing under predictable stresses, and
+  that has known fixes — fixes that have been avoided not because they are impossible but because the people who benefit
+  from the broken state of things have made them politically costly.</p>
+
+  <p>She is from Georgia. She loves this country. She is not willing to give up on it.</p>
+
+  <p style="margin-top: 2rem;">
+    <a href="mission.html" class="btn-primary" style="background:var(--navy)">Read Our Mission →</a>
+  </p>
+
+</div>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span class="footer-brand">American Renewal Project</span>
+    <ul class="footer-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="foundations.html">Foundations</a></li>
+      <li><a href="pillars/index.html">Pillars</a></li>
+      <li><a href="compare/index.html">Compare</a></li>
+    </ul>
+    <span class="footer-note">A Third Bill of Rights for the 21st Century.</span>
+  </div>
+</footer>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
