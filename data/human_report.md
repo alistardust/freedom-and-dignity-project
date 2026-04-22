@@ -1,11 +1,11 @@
-# American Renewal Project — Human Report
+# Freedom and Dignity Project — Human Report
 Generated: Tue Apr 21 10:58:42 PM UTC 2026
 
 ---
 
 ## Project description (README)
 
-# American Renewal Project
+# Freedom and Dignity Project
 
 This repository is now organized around the architecture described in the branch chats: a document-first policy platform with pillar docs, a cross-domain system-rules layer, strategy materials, and a structured catalog of tracked policy items.
 

@@ -225,7 +225,7 @@ Every code change must be accompanied by tests that verify the **behavior change
 - Write tests that only check element existence when behavior is what matters
 
 ### GitHub Pages path handling
-The site runs on GitHub Pages at `/american-renewal-project/`. Path logic in `app.js` must account for the repo base path being a path segment. Use named subdir checks (`/\/(pillars|compare)\//.test(location.pathname)`) rather than segment counting, which breaks at the root level.
+The site runs on GitHub Pages at `/freedom-and-dignity-project/`. Path logic in `app.js` must account for the repo base path being a path segment. Use named subdir checks (`/\/(pillars|compare)\//.test(location.pathname)`) rather than segment counting, which breaks at the root level.
 
 ### Test patterns to follow
 

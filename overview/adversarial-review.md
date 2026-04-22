@@ -1,4 +1,4 @@
-# Adversarial Review — American Renewal Project
+# Adversarial Review — Freedom and Dignity Project
 
 > **Purpose:** A rigorous, pedantic stress-test of every major policy position in this platform. Every strong objection, every contested research claim, every implementation gap, every constitutional vulnerability — documented honestly, without softening. A platform that claims to value intellectual honesty must apply that standard to itself.
 

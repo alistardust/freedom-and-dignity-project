@@ -1,4 +1,4 @@
-# Roadmap — American Renewal Project
+# Roadmap — Freedom and Dignity Project
 
 > Where we are, what comes next, and the work still ahead — across policy development,
 > organization, outreach, and technical infrastructure.
@@ -9,7 +9,7 @@
 
 ## Overview
 
-The American Renewal Project is a living platform — built in the open, subject to revision,
+The Freedom and Dignity Project is a living platform — built in the open, subject to revision,
 and committed to intellectual honesty. This roadmap tracks six parallel work streams:
 policy content, organizational formation, outreach, fundraising, branding, and technical
 infrastructure.

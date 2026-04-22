@@ -1,6 +1,6 @@
 # Policy Classification & Gap Analysis
 
-**American Renewal Project — Adversarial Policy Audit**
+**Freedom and Dignity Project — Adversarial Policy Audit**
 **Date:** July 2025 (pre-expansion DB state)
 **Total rules audited:** 1,095 across 20 scope codes
 

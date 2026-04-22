@@ -1,5 +1,5 @@
 /**
- * Playwright E2E tests — American Renewal Project
+ * Playwright E2E tests — Freedom and Dignity Project
  * Browser: Firefox (isolated profile, never touches your existing Firefox)
  */
 
@@ -11,7 +11,7 @@ test.describe('Homepage', () => {
   test.beforeEach(async ({ page }) => { await page.goto('/'); });
 
   test('has correct page title', async ({ page }) => {
-    await expect(page).toHaveTitle(/American Renewal/i);
+    await expect(page).toHaveTitle(/Freedom and Dignity/i);
   });
 
   test('displays the core quote without quotation marks', async ({ page }) => {
@@ -458,7 +458,7 @@ test.describe('Mission page', () => {
   test.beforeEach(async ({ page }) => { await page.goto('/mission.html'); });
 
   test('has correct page title', async ({ page }) => {
-    await expect(page).toHaveTitle(/Mission.*American Renewal/i);
+    await expect(page).toHaveTitle(/Mission.*Freedom and Dignity/i);
   });
 
   test('renders hero heading', async ({ page }) => {
@@ -510,7 +510,7 @@ test.describe('Constitution page', () => {
   test.beforeEach(async ({ page }) => { await page.goto('/constitution.html'); });
 
   test('has correct page title', async ({ page }) => {
-    await expect(page).toHaveTitle(/Constitution.*American Renewal/i);
+    await expect(page).toHaveTitle(/Constitution.*Freedom and Dignity/i);
   });
 
   test('renders hero heading', async ({ page }) => {
@@ -565,7 +565,7 @@ test.describe('Roadmap page', () => {
   test.beforeEach(async ({ page }) => { await page.goto('/roadmap.html'); });
 
   test('has correct page title', async ({ page }) => {
-    await expect(page).toHaveTitle(/Roadmap.*American Renewal/i);
+    await expect(page).toHaveTitle(/Roadmap.*Freedom and Dignity/i);
   });
 
   test('renders hero heading', async ({ page }) => {
@@ -631,7 +631,7 @@ test.describe('Mission and Constitution nav links from all page types', () => {
       await expect(link).toBeAttached();
       const href = await link.getAttribute('href');
       await page.goto(href.startsWith('http') ? href : new URL(href, page.url()).toString());
-      await expect(page).toHaveTitle(/Mission.*American Renewal/i);
+      await expect(page).toHaveTitle(/Mission.*Freedom and Dignity/i);
     });
 
     test(`${label} has Constitution in nav`, async ({ page }) => {
@@ -640,7 +640,7 @@ test.describe('Mission and Constitution nav links from all page types', () => {
       await expect(link).toBeAttached();
       const href = await link.getAttribute('href');
       await page.goto(href.startsWith('http') ? href : new URL(href, page.url()).toString());
-      await expect(page).toHaveTitle(/Constitution.*American Renewal/i);
+      await expect(page).toHaveTitle(/Constitution.*Freedom and Dignity/i);
     });
   }
 });
@@ -651,7 +651,7 @@ test.describe('About Us page', () => {
   test.beforeEach(async ({ page }) => { await page.goto('/about-us.html'); });
 
   test('has correct page title', async ({ page }) => {
-    await expect(page).toHaveTitle(/About Us.*American Renewal/i);
+    await expect(page).toHaveTitle(/About Us.*Freedom and Dignity/i);
   });
 
   test('displays the founder name', async ({ page }) => {

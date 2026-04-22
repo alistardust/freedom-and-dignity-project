@@ -18,7 +18,7 @@ This pillar closes those gaps. It establishes that emerging technology cannot be
 
 ## Design Logic
 
-The Technology and AI pillar is the largest and most technically comprehensive domain in the American Renewal Project, encompassing **361 policy rules across 21 distinct family codes**. This reflects the breadth and complexity of modern digital systems and their intersection with nearly every aspect of public and private life.
+The Technology and AI pillar is the largest and most technically comprehensive domain in the Freedom and Dignity Project, encompassing **361 policy rules across 21 distinct family codes**. This reflects the breadth and complexity of modern digital systems and their intersection with nearly every aspect of public and private life.
 
 The pillar is organized into the following families:
 

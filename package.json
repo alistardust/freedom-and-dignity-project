@@ -1,5 +1,5 @@
 {
-  "name": "american-renewal-project",
+  "name": "freedom-and-dignity-project",
   "version": "1.0.0",
   "description": "This repository is now organized around the architecture described in the branch chats: a document-first policy platform with pillar docs, a cross-domain system-rules layer, strategy materials, and a structured catalog of tracked policy items.",
   "main": "index.js",
@@ -14,16 +14,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alistardust/american-renewal-project.git"
+    "url": "git+https://github.com/alistardust/freedom-and-dignity-project.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "bugs": {
-    "url": "https://github.com/alistardust/american-renewal-project/issues"
+    "url": "https://github.com/alistardust/freedom-and-dignity-project/issues"
   },
-  "homepage": "https://github.com/alistardust/american-renewal-project#readme",
+  "homepage": "https://github.com/alistardust/freedom-and-dignity-project#readme",
   "devDependencies": {
     "@playwright/test": "^1.59.1",
     "serve": "^14.2.6",

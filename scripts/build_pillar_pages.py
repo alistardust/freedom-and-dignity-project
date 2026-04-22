@@ -307,8 +307,8 @@ NAV_HTML = '''\
 <nav class="site-nav">
   <div class="nav-inner">
     <a href="../index.html" class="nav-brand">
-      <img src="../assets/img/logo.svg" alt="American Renewal Project" width="36" height="36">
-      <span class="nav-wordmark">American Renewal<span>Project</span></span>
+      <img src="../assets/img/logo.svg" alt="Freedom and Dignity Project" width="36" height="36">
+      <span class="nav-wordmark">Freedom and Dignity<span>Project</span></span>
     </a>
     <button class="nav-hamburger" aria-label="Menu">☰</button>
     <ul class="nav-links">
@@ -323,7 +323,7 @@ NAV_HTML = '''\
 FOOTER_HTML = '''\
 <footer class="site-footer">
   <div class="wrap">
-    <span class="footer-brand">American Renewal Project</span>
+    <span class="footer-brand">Freedom and Dignity Project</span>
     <ul class="footer-links">
       <li><a href="../index.html">Home</a></li>
       <li><a href="../foundations.html">Foundations</a></li>
@@ -740,7 +740,7 @@ def generate_page(slug, src_slug, title, foundation_key):
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{title} — American Renewal Project</title>
+<title>{title} — Freedom and Dignity Project</title>
 <link rel="stylesheet" href="../assets/css/style.css">
 <link rel="icon" type="image/svg+xml" href="../assets/img/logo.svg">
 {PILLAR_CSS.replace("var(--accent-color,#0a2240)", color).replace("var(--accent-color,#fff)", color).replace("var(--accent-color,#c9952a)", color)}
