@@ -42,8 +42,8 @@ describe('ARP.foundations', () => {
 // ── PILLARS ───────────────────────────────────────────────────────────────────
 
 describe('ARP.pillars', () => {
-  test('has exactly 22 pillars', () => {
-    expect(ARP.pillars).toHaveLength(22);
+  test('has exactly 23 pillars', () => {
+    expect(ARP.pillars).toHaveLength(23);
   });
 
   test.each(ARP.pillars)('pillar "$title" has all required fields', (p) => {
@@ -104,10 +104,10 @@ describe('ARP.getPillarsByFoundation()', () => {
     pillars.forEach(p => expect(p.foundation).toBe('freedom-to-thrive'));
   });
 
-  test('all 22 pillars are covered across foundations', () => {
+  test('all 23 pillars are covered across foundations', () => {
     const total = ARP.foundations.reduce((sum, f) =>
       sum + ARP.getPillarsByFoundation(f.id).length, 0);
-    expect(total).toBe(22);
+    expect(total).toBe(23);
   });
 
   test('returns empty array for unknown foundation', () => {

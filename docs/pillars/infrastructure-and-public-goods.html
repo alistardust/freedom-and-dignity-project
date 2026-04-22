@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Infrastructure &amp; Public Goods — American Renewal Project</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="icon" type="image/svg+xml" href="../assets/img/logo.svg">
+<style>
+/* ── Pillar page styles ─────────────────────────────────────── */
+.pil-snav {
+  position: sticky; top: 63px; z-index: 150;
+  background: var(--navy); border-bottom: 2px solid rgba(255,255,255,.12);
+  overflow-x: auto; white-space: nowrap;
+}
+.pil-snav ul { display:flex; gap:0; list-style:none; margin:0; padding:0; }
+.pil-snav a {
+  display:block; padding:.55rem 1.1rem; font-family:'Oswald',sans-serif;
+  font-size:.78rem; letter-spacing:.06em; text-transform:uppercase;
+  color:rgba(255,255,255,.62); text-decoration:none; transition:color .15s;
+}
+.pil-snav a:hover, .pil-snav a.active { color:#fff; }
+.pil-snav a.active { border-bottom:2px solid #1a6b8a; }
+
+/* ── Section layouts ────────────────────────────────────────── */
+.pil-intro { display:grid; grid-template-columns:1fr 1fr; gap:2rem; }
+@media(max-width:700px){ .pil-intro { grid-template-columns:1fr; } }
+
+.pil-intro h2 { font-size:1.1rem; text-transform:uppercase; letter-spacing:.08em; margin-bottom:.6rem; }
+.pil-intro p, .pil-intro li { font-size:1rem; line-height:1.75; }
+
+.problem-card {
+  background:#fff; border-radius:6px; padding:1.2rem 1.4rem;
+  border-left:4px solid #1a6b8a;
+  box-shadow:0 1px 4px rgba(0,0,0,.07);
+}
+.problem-card h3 { font-size:1rem; margin:0 0 .4rem; color:var(--navy); }
+.problem-card p  { font-size:.92rem; line-height:1.65; margin:0; color:#333; }
+
+.reform-card {
+  background:var(--navy); color:#fff; border-radius:6px;
+  padding:1.1rem 1.3rem; border-top:3px solid #1a6b8a;
+}
+.reform-card h3 { font-size:.95rem; margin:0 0 .4rem; color:#1a6b8a; text-transform:uppercase; letter-spacing:.04em; }
+.reform-card p  { font-size:.88rem; line-height:1.6; margin:0; color:rgba(255,255,255,.8); }
+
+/* ── Policy rules ───────────────────────────────────────────── */
+.policy-family { margin-bottom:2.5rem; }
+.family-header {
+  display:flex; align-items:baseline; gap:.8rem; margin-bottom:1rem;
+  padding-bottom:.5rem; border-bottom:2px solid #1a6b8a;
+}
+.family-code {
+  font-family:'Oswald',sans-serif; font-size:1.1rem;
+  color:#1a6b8a; min-width:3rem;
+}
+.family-title { font-size:1rem; font-weight:600; color:var(--ink); }
+.family-count { margin-left:auto; font-size:.8rem; color:#888; white-space:nowrap; }
+
+.rule-card {
+  border-radius:5px; padding:.9rem 1rem;
+  background:#fff; border:1px solid #e0d8c8;
+  font-size:.88rem; line-height:1.55;
+}
+.rule-card.status-included { border-left:4px solid #1e8449; }
+.rule-card.status-updated  { border-left:4px solid #2471a3; }
+.rule-card.status-partial  { border-left:4px solid #1a6b8a; }
+.rule-card.status-missing  { border-left:4px solid #ccc; opacity:.72; }
+
+.rule-header { display:flex; align-items:center; gap:.5rem; margin-bottom:.35rem; }
+.rule-id { font-size:.72rem; color:#888; letter-spacing:.03em; }
+.rule-badge {
+  font-size:.68rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em;
+  padding:.12em .45em; border-radius:3px;
+}
+.status-included .rule-badge { background:#d4edda; color:#155724; }
+.status-updated  .rule-badge { background:#cce5ff; color:#004085; }
+.status-partial  .rule-badge { background:#d1ecf1; color:#0c5460; }
+.status-missing  .rule-badge { background:#f0f0f0; color:#666; }
+
+.rule-title { font-weight:600; margin:.2rem 0 .2rem; color:var(--ink); }
+.rule-stmt  { font-size:.85rem; color:#444; margin:.15rem 0 0; }
+.rule-notes { font-size:.8rem; color:#666; font-style:italic; margin:.25rem 0 0; }
+
+/* ── Research section ───────────────────────────────────────── */
+.research-body h3 { font-size:1.05rem; color:#1a6b8a; margin:1.5rem 0 .4rem; }
+.research-body p  { line-height:1.8; font-size:.97rem; }
+
+/* ── Related pillars ────────────────────────────────────────── */
+.related-card {
+  background:var(--navy); color:#fff; border-radius:6px; padding:1rem;
+  text-decoration:none; transition:opacity .15s;
+}
+.related-card:hover { opacity:.82; }
+.related-card strong { display:block; font-size:.95rem; margin-bottom:.3rem; }
+.related-card span   { font-size:.8rem; color:rgba(255,255,255,.65); }
+
+/* ── Summary stats bar ──────────────────────────────────────── */
+.stats-bar {
+  display:flex; flex-wrap:wrap; gap:1.5rem; margin:1.2rem 0;
+  padding:1rem 1.2rem; background:#fff; border-radius:6px;
+  border:1px solid #e0d8c8;
+}
+.stat-item { text-align:center; }
+.stat-num { display:block; font-family:'Oswald',sans-serif; font-size:2rem; color:#1a6b8a; }
+.stat-label { font-size:.78rem; text-transform:uppercase; letter-spacing:.06em; color:#888; }
+
+/* ── Design logic accordion ─────────────────────────────────── */
+details.design-logic { margin-top:1rem; }
+details.design-logic summary {
+  cursor:pointer; font-weight:700; padding:.6rem .8rem;
+  background:rgba(0,0,0,.06); border-radius:4px; user-select:none;
+}
+details.design-logic[open] summary { border-radius:4px 4px 0 0; }
+details.design-logic .design-body { padding:.8rem 1rem; background:#fff; border:1px solid #e0d8c8; border-top:none; border-radius:0 0 4px 4px; }
+details.design-logic .design-body p { font-size:.93rem; line-height:1.75; }
+details.design-logic .design-body ul { padding-left:1.3rem; }
+details.design-logic .design-body li { font-size:.93rem; line-height:1.65; margin-bottom:.3rem; }
+
+/* ── Rule grid ──────────────────────────────────────────────── */
+.rule-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:1rem; }
+.problem-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:1rem; margin:.5rem 0 1rem; }
+.reform-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:1rem; }
+.related-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:1rem; }
+.completion-status { margin:1rem 0 1.5rem; padding:1rem 1.2rem; background:#fff; border-radius:6px; border:1px solid #e0d8c8; border-left:5px solid #1a6b8a; }
+.gap-callout { margin-top:.75rem; padding:.7rem 1rem; background:#f0f8ff; border-radius:4px; border-left:3px solid #1a6b8a; }
+</style>
+<style>:root { --accent-color: #1a6b8a; }</style>
+</head>
+<body>
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-brand">
+      <img src="../assets/img/logo.svg" alt="American Renewal Project" width="36" height="36">
+      <span class="nav-wordmark">American Renewal<span>Project</span></span>
+    </a>
+    <button class="nav-hamburger" aria-label="Menu">☰</button>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../foundations.html">Foundations</a></li>
+      <li><a href="index.html">Pillars</a></li>
+      <li><a href="../compare/index.html">Compare</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="page-hero compact" style="border-bottom:4px solid #1a6b8a">
+  <div class="hero-eyebrow">
+    <a href="../foundations.html#freedom-to-thrive" style="color:rgba(255,255,255,.6);text-decoration:none">
+      Foundation V: Freedom to Thrive
+    </a>
+  </div>
+  <h1 class="hero-title" style="font-size:clamp(1.8rem,5vw,2.8rem)">Infrastructure &amp; Public Goods</h1>
+  <div class="hero-divider"><span>★ ★ ★</span></div>
+  <p class="hero-statement" style="font-size:1rem;max-width:680px;margin:0 auto">Physical infrastructure — the electrical grid, internet connections, transportation networks, water systems, and public spaces — must serve everyone. The backbone of modern life cannot be left to extraction, monopoly, or neglect.</p>
+</div>
+<nav class="pil-snav" id="pil-snav"><ul><li><a href="#pil-intro">Overview</a></li><li><a href="#pil-problem">The Problem</a></li><li><a href="#pil-reform">Reform Areas</a></li><li><a href="#pil-policy">Policy Positions</a></li><li><a href="#pil-research">Research</a></li><li><a href="#pil-related">Related</a></li></ul></nav>
+<section class="bg-parchment ruled" id="pil-intro">
+<div class="wrap">
+  <div class="stats-bar">
+  <div class="stat-item"><span class="stat-num">21</span><span class="stat-label">Total Positions</span></div>
+  <div class="stat-item"><span class="stat-num" style="color:#1e8449">0</span><span class="stat-label">Active</span></div>
+  <div class="stat-item"><span class="stat-num" style="color:#1a6b8a">0</span><span class="stat-label">Partial</span></div>
+  <div class="stat-item"><span class="stat-num" style="color:#888">21</span><span class="stat-label">Proposed</span></div>
+</div>
+  <div class="completion-status">
+  <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap">
+    <div>
+      <span style="font-family:'Oswald',sans-serif;font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;color:#888">Development Status</span>
+      <div style="font-size:1.1rem;font-weight:700;color:#1a6b8a;margin-top:.15rem">🔵 New Pillar</div>
+    </div>
+    <div style="flex:1;min-width:200px">
+      <div style="height:8px;background:#eee;border-radius:4px;overflow:hidden">
+        <div style="width:10%;height:100%;background:#1a6b8a;border-radius:4px"></div>
+      </div>
+      <div style="font-size:.8rem;color:#666;margin-top:.3rem">Rules defined; full content build in progress</div>
+    </div>
+  </div>
+  <div class="gap-callout">
+    <strong style="color:#1a6b8a;font-size:.82rem">ℹ New pillar:</strong>
+    <span style="font-size:.85rem;color:#555"> Rules sourced from Section O of the main platform log (items 177–187) and structured INF-domain rules from the brainstorm log. Rail, transit, and vehicle transition rules added from brainstorm log families INF-RAIL and INF-TRN.</span>
+  </div>
+</div>
+  <div class="pil-intro">
+    <div>
+      <h2 style="color:#1a6b8a;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.06em">Purpose</h2>
+      <p>Establish that physical infrastructure — the electrical grid, internet and communications systems, transportation networks, water infrastructure, and public construction — is a public good that must be built, owned, and maintained in the public interest. Define the rules by which physical systems are decarbonized, modernized, and made universally accessible.</p>
+    </div>
+    <div>
+      <h2 style="color:#1a6b8a;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.06em">Core Principle</h2>
+      <p>The physical systems that make modern life possible — electricity, clean water, internet access, transportation — must not be monopolized, neglected, or left to decay. Every person deserves reliable, affordable access to the infrastructure of daily life. Public investment in infrastructure is not charity; it is the precondition for a functioning economy, democracy, and society.</p>
+    </div>
+  </div>
+</div>
+</section>
+<section class="bg-dark on-dark ruled" id="pil-problem">
+<div class="wrap" style="margin-bottom:0">
+  <h2 style="color:#1a6b8a">The Problem It Solves</h2>
+</div>
+<div class="wrap">
+<div class="problem-grid">
+  <div class="problem-card">
+    <h3>Aging and fragile electrical grid</h3>
+    <p>The U.S. electrical grid is decades behind in reliability, capacity, and resilience. Transmission lines built for 20th-century centralized generation are ill-suited to distributed renewable sources. Extreme weather events knock out power for days or weeks. A fragile centralized grid is a national security vulnerability.</p>
+  </div>
+  <div class="problem-card">
+    <h3>Monopolized internet infrastructure</h3>
+    <p>Physical internet infrastructure — fiber cables, conduits, exchange points — has been built under monopoly or duopoly conditions in most U.S. markets. ISPs charge high prices for mediocre service, lobby against competition, and leave rural communities disconnected. The physical network is a natural monopoly that benefits from public ownership or strict public-interest regulation.</p>
+  </div>
+  <div class="problem-card">
+    <h3>Rural broadband deserts</h3>
+    <p>Tens of millions of Americans in rural and remote communities lack access to reliable broadband internet. This is not a market failure — it is a policy failure. Universal telephone service was achieved through public investment and universal service obligations. Internet access requires the same commitment.</p>
+  </div>
+  <div class="problem-card">
+    <h3>Carbon-intensive infrastructure buildout</h3>
+    <p>Construction and operation of new infrastructure — roads, buildings, data centers, transmission lines — contributes massively to carbon emissions. There is no path to decarbonization without decarbonizing the construction sector and imposing carbon-neutrality requirements on new infrastructure.</p>
+  </div>
+  <div class="problem-card">
+    <h3>Water scarcity and outdated systems</h3>
+    <p>Growing water scarcity in the American West and Southwest, combined with aging water infrastructure and lack of investment in alternatives like desalination, threatens communities and agriculture. Water management remains fragmented across state and federal jurisdictions with insufficient investment in resilient systems.</p>
+  </div>
+  <div class="problem-card">
+    <h3>Underinvestment in rail and public transit</h3>
+    <p>The United States underinvests dramatically in passenger rail and public transit relative to peer nations. Car dependency is built into land use and infrastructure policy. The result is higher transportation costs for low-income people, increased emissions, and exclusion of those who cannot drive.</p>
+  </div>
+</div>
+</div>
+</section>
+<section class="bg-cream ruled" id="pil-reform">
+<div class="wrap" style="margin-bottom:0">
+  <h2 style="color:#1a6b8a">Key Reform Areas</h2>
+</div>
+<div class="wrap"><div class="reform-grid">
+<div class="reform-card">
+  <h3>Internet as Public Infrastructure</h3>
+  <p>Treat physical internet and communications networks as public infrastructure. ISPs may compete on service; the underlying physical network must serve the public. Guarantee universal rural access.</p>
+</div>
+<div class="reform-card">
+  <h3>Grid Modernization and Decarbonization</h3>
+  <p>Modernize the electrical grid for reliability and distributed generation. Transition to microgrid architecture. Require a carbon-neutral or carbon-negative power grid.</p>
+</div>
+<div class="reform-card">
+  <h3>Clean Energy Investment and Transition</h3>
+  <p>Invest in renewable energy at national scale. Streamline nuclear energy projects. End fossil fuel subsidies. Establish a guaranteed phaseout schedule for oil and coal in power generation.</p>
+</div>
+<div class="reform-card">
+  <h3>Decarbonized Construction</h3>
+  <p>Modernize building and construction standards for efficiency and sustainable materials. Require all new infrastructure projects to be carbon neutral or negative, including the buildout process itself.</p>
+</div>
+<div class="reform-card">
+  <h3>Water Infrastructure</h3>
+  <p>Invest in desalination, water recycling, and other drought-resilient systems in water-scarce regions, without depleting water tables. Build the water infrastructure the 21st century requires.</p>
+</div>
+<div class="reform-card">
+  <h3>Rail, Transit, and Clean Transportation</h3>
+  <p>Modernize and expand rail and public transit. Begin the transition away from internal-combustion vehicles through strict standards, phase-out schedules, and transition support.</p>
+</div>
+</div></div>
+<div class="wrap">
+<details class="design-logic">
+  <summary>Design Logic — How These Positions Work Together</summary>
+  <div class="design-body">
+    <p>This pillar addresses physical infrastructure as a category of public goods distinct from environmental policy (which covers ecology, pollution, and climate governance) and technology policy (which covers digital rights, AI governance, and algorithmic accountability). The overlap areas — carbon-neutral data centers, internet regulation — are handled as follows:</p>
+    <ul>
+      <li><strong>Internet as public infrastructure (INF-NET)</strong> addresses physical network ownership and universal access. Net neutrality and ISP regulation as digital rights questions are covered in the Technology &amp; AI pillar (TEC-INT). These are complementary but distinct — this pillar addresses who owns the wire; the technology pillar addresses how the wire may be used.</li>
+      <li><strong>Carbon-neutral data centers (INF-DAT)</strong> addresses large data centers as physical infrastructure consumers. The Technology &amp; AI pillar's TEC-ENV rules address AI-specific environmental obligations. INF-DAT is a broader standard applying to all large data centers, not only AI.</li>
+      <li><strong>Energy rules (INF-ENR, INF-GRD)</strong> address the physical grid and generation infrastructure. The Environment &amp; Agriculture pillar addresses climate policy, emissions targets, and environmental accountability — which are the governance layer above the physical infrastructure addressed here.</li>
+      <li><strong>Transportation transition (INF-TRN, INF-RAIL)</strong> addresses vehicle standards and transit investment. Labor policy for workers in the automotive and fossil fuel sectors is addressed in the Labor &amp; Workers' Rights pillar.</li>
+    </ul>
+  </div>
+</details>
+</div>
+</section>
+<section class="bg-cream ruled" id="pil-policy">
+<div class="wrap">
+  <h2 style="color:#1a6b8a">Full Policy Platform</h2>
+  <p style="font-size:.95rem;color:#555;margin-bottom:1.5rem">
+    Every rule in this pillar, organized by policy area.
+    <strong style="color:#1e8449">Active</strong> rules are current platform commitments.
+    <strong style="color:#1a6b8a">Partial</strong> rules are in development.
+    <strong style="color:#888">Proposed</strong> rules are planned for future inclusion.
+  </p>
+
+<div class="policy-family" id="fam-inf-net">
+  <div class="family-header">
+    <span class="family-code">INF</span>
+    <span class="family-title">NET — Internet and Communications Infrastructure</span>
+    <span class="family-count">0/3 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">INF-NET-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Internet and communications infrastructure must be treated as public infrastructure</p>
+  <p class="rule-stmt">Internet and communications infrastructure must be treated as public infrastructure managed in the public interest, not as private property subject to monopoly extraction</p>
+  <p class="rule-notes">Physical internet infrastructure — fiber optic cables, conduits, switching equipment, exchange points, and rights-of-way — is a natural monopoly. In most U.S. markets, one or two providers control the physical connection to homes and businesses, with no realistic prospect of competition because the cost of duplicating physical infrastructure is prohibitive. This makes treating physical networks as private property and allowing monopoly pricing economically irrational and socially harmful. The historical precedent is clear: public telephone service, rural electrification, interstate highways, and municipal water systems were all achieved through public ownership, public investment, or strict public-interest obligations rather than market competition in natural monopoly conditions.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">INF-NET-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">ISPs may operate as service providers; physical network ownership must preserve public access and prevent monopoly control</p>
+  <p class="rule-stmt">Internet service providers may compete on service quality and price as tenants of shared physical infrastructure, but ownership and control of the physical network layer must be structured to prevent monopoly and ensure universal access</p>
+  <p class="rule-notes">This rule separates the service layer from the infrastructure layer. ISPs can compete — on price, speed, reliability, customer service — if they operate on shared physical infrastructure rather than vertically integrated monopoly networks. The model is analogous to airline competition on shared airport infrastructure, or retail competition in shared shopping facilities. Physical infrastructure managed as a public utility or public asset can support competitive service markets above it. The current model — where a single company owns the physical connection, provides the service, and faces no competition — is a structural barrier to both access and affordability.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">INF-NET-003</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Universal internet access must be guaranteed in rural, remote, and underserved communities</p>
+  <p class="rule-stmt">Universal internet access must be guaranteed in rural, remote, and underserved communities through public investment and infrastructure buildout requirements, with the same priority and public commitment as rural electrification</p>
+  <p class="rule-notes">Rural broadband gaps are not a temporary market inefficiency — they are a permanent structural failure. Private markets will not profitably serve low-density rural communities when the cost per subscriber is high and alternatives (satellite, fixed wireless) remain inferior. The Rural Electrification Act of 1936 solved an identical problem for electricity through public investment and cooperative ownership. A similar commitment is required for internet access. Rural broadband is not a luxury — it is required for telehealth, remote work, education, commerce, and civic participation. Communities without broadband are structurally disadvantaged in the modern economy.</p>
+</div>
+  </div>
+</div>
+
+<div class="policy-family" id="fam-inf-grd">
+  <div class="family-header">
+    <span class="family-code">INF</span>
+    <span class="family-title">GRD — Electrical Grid Modernization</span>
+    <span class="family-count">0/3 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">INF-GRD-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Modernize the national electrical grid for reliability, resilience, and clean energy capacity</p>
+  <p class="rule-stmt">Modernize the national electrical grid to support distributed generation, clean energy integration, increased capacity, and resilience against extreme weather and cyber threats</p>
+  <p class="rule-notes">The U.S. electrical grid was largely built in the mid-20th century for centralized fossil fuel generation flowing in one direction from large plants to consumers. This architecture is incompatible with the distributed generation model required by renewable energy, where solar panels on homes and businesses, wind farms, and battery storage inject power across the grid. Grid modernization requires: bidirectional power flow capability; advanced metering and monitoring infrastructure; replacement of aging transmission lines and transformers; expansion of high-voltage direct current (HVDC) transmission for long-distance energy transfer; and integration of smart-grid technology for load management and demand response.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">INF-GRD-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Transition to microgrid architecture for local resilience and reduced cascading failure risk</p>
+  <p class="rule-stmt">Invest in microgrid architecture that allows communities to operate independently when the larger grid fails, improving local resilience against weather events, attacks, and cascading failures</p>
+  <p class="rule-notes">A microgrid is a locally controlled energy system that can operate both connected to and disconnected from the main grid. When the main grid fails — as it frequently does during hurricanes, ice storms, wildfires, and cyberattacks — microgrids can "island" and continue providing power to hospitals, emergency services, water treatment plants, and communities. Microgrid architecture also enables local renewable generation and storage without dependence on long transmission lines. Transitioning to microgrid-compatible architecture does not mean abandoning the main grid — it means designing the system so that local failures do not cascade and local communities have resilience options.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">INF-GRD-003</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Require a carbon-neutral or carbon-negative power grid</p>
+  <p class="rule-stmt">The national electrical grid must be transitioned to carbon-neutral or carbon-negative operation on a defined schedule, with interim milestones and enforceable standards</p>
+  <p class="rule-notes">Decarbonizing the electrical grid is the single most impactful step available in climate policy because it enables the electrification of transportation, heating, and industrial processes. A carbon-neutral grid combined with electric vehicles, electric heating, and electric industrial equipment eliminates carbon emissions across multiple sectors simultaneously. This requires: significant expansion of solar, wind, and geothermal generation; energy storage systems (batteries, pumped hydro, other technologies) to manage intermittency; smart grid management for demand response; and responsible nuclear energy as a firm clean power source. A defined schedule with enforceable interim milestones prevents indefinite delay while allowing realistic planning.</p>
+</div>
+  </div>
+</div>
+
+<div class="policy-family" id="fam-inf-enr">
+  <div class="family-header">
+    <span class="family-code">INF</span>
+    <span class="family-title">ENR — Energy Generation and Transition</span>
+    <span class="family-count">0/4 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">INF-ENR-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Invest substantially in renewable energy generation and storage at national scale</p>
+  <p class="rule-stmt">The federal government must invest substantially in renewable energy generation and storage infrastructure at national scale, treating it as a strategic infrastructure priority equivalent to the interstate highway system</p>
+  <p class="rule-notes">Renewable energy — solar, wind, geothermal, and hydropower — is the foundation of a decarbonized energy system. Costs have fallen dramatically: utility-scale solar and onshore wind are now the cheapest forms of new electricity generation in history. The barrier to full renewable transition is not cost but deployment pace, grid integration, and storage capacity. Public investment is required because the infrastructure buildout timescale and scale exceed what private markets will deliver at the pace needed. This is not a subsidy to an uncompetitive technology — it is public investment in strategic infrastructure, the same kind of investment that built the interstate highway system, rural electrification, and the internet.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">INF-ENR-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Streamline permitting and regulatory processes for nuclear energy projects that meet safety standards</p>
+  <p class="rule-stmt">Nuclear energy permitting and regulatory processes must be streamlined for projects that meet safety standards, with predictable timelines and reduced procedural obstacles to responsible nuclear development</p>
+  <p class="rule-notes">Nuclear energy is a firm, low-carbon power source that can generate electricity 24 hours a day regardless of weather, unlike solar and wind. Modern nuclear designs, including small modular reactors (SMRs) and advanced reactor designs, offer improved safety, scalability, and reduced construction costs compared to traditional large-scale plants. The current U.S. regulatory process makes nuclear projects economically uncompetitive not through strict safety standards but through procedural obstacles, uncertain timelines, and regulatory unpredictability. Streamlining does not mean weakening safety — it means designing the regulatory process for modern reactor designs, with clear standards, predictable timelines, and efficient review.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">INF-ENR-003</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">End oil and coal subsidies and redirect that funding toward clean energy development</p>
+  <p class="rule-stmt">Federal and state subsidies, tax preferences, and preferential treatment for oil and coal extraction and combustion must be eliminated and the redirected resources applied to clean energy development and transition support</p>
+  <p class="rule-notes">Fossil fuel subsidies — including percentage depletion allowances, intangible drilling cost deductions, enhanced oil recovery credits, coal royalty preferences, and other tax preferences — represent public support for an industry whose products cause documented climate harm. Eliminating these subsidies does not ban fossil fuels; it removes the artificial competitive advantage that makes fossil fuels appear cheaper than they are. When fossil fuels compete on a level playing field that includes their environmental costs, clean energy is already more economical in most contexts. Redirecting subsidy resources toward clean energy transition support, including worker retraining for displaced fossil fuel workers, converts a regressive public expenditure into a forward-looking investment.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">INF-ENR-004</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Establish a guaranteed phaseout schedule for oil and coal in electricity generation</p>
+  <p class="rule-stmt">Federal policy must establish a guaranteed phaseout schedule for oil and coal in electricity generation, with defined milestones, transition support mechanisms, and no extensions absent demonstrated safety or security necessity</p>
+  <p class="rule-notes">A guaranteed phaseout schedule serves two functions: it signals to the market that continued investment in fossil fuel generation infrastructure is economically unwise (preventing "stranded asset" lobbying when the phaseout arrives), and it creates predictable transition timelines for communities and workers dependent on fossil fuel industries. The schedule must be credible and enforceable — not aspirational targets that can be deferred. Transition support for fossil fuel communities (economic development investment, worker retraining, infrastructure maintenance during the transition period) is a necessary component, not an optional add-on. Communities should not bear disproportionate costs for a societal transition that benefits everyone.</p>
+</div>
+  </div>
+</div>
+
+<div class="policy-family" id="fam-inf-bld">
+  <div class="family-header">
+    <span class="family-code">INF</span>
+    <span class="family-title">BLD — Building and Construction Standards</span>
+    <span class="family-count">0/2 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">INF-BLD-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Modernize building and construction standards for energy efficiency and sustainable materials</p>
+  <p class="rule-stmt">Federal building and construction standards must be modernized to require high energy efficiency, renewable energy integration, and sustainable materials use, with regular updates as technology advances</p>
+  <p class="rule-notes">Buildings account for approximately 40% of U.S. energy consumption and a significant share of carbon emissions, through both operational energy use and the embodied carbon in construction materials. Modern building standards can dramatically reduce both. Energy efficiency requirements (insulation, window standards, HVAC efficiency, passive solar design) reduce operational consumption. Sustainable materials requirements (lower-carbon concrete, mass timber, recycled materials) reduce embodied carbon. These standards must be updated regularly because building technology advances rapidly — a building code frozen in 2010 is already obsolete in 2025. Codes must also preempt state and local resistance to efficiency requirements, preventing a patchwork of weaker standards in states with fossil fuel industry influence.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">INF-BLD-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Require all infrastructure projects to be carbon neutral or negative across full lifecycle including construction</p>
+  <p class="rule-stmt">All major public infrastructure projects must achieve carbon neutrality or carbon negativity across their full lifecycle, including the construction phase, materials production, and operations</p>
+  <p class="rule-notes">Infrastructure projects have two carbon footprints: the operational carbon (energy used to run the infrastructure) and the embodied carbon (carbon emitted in manufacturing materials, transportation, and construction). A solar farm built with carbon-intensive processes may take years to pay back its carbon debt. A highway built with standard concrete and asphalt creates substantial embodied emissions regardless of what vehicles use it. Carbon-neutral infrastructure standards require lifecycle assessment for major projects, procurement of low-carbon construction materials, and operational decarbonization plans. This does not mean no new infrastructure — it means decarbonizing how infrastructure is built and operated.</p>
+</div>
+  </div>
+</div>
+
+<div class="policy-family" id="fam-inf-wat">
+  <div class="family-header">
+    <span class="family-code">INF</span>
+    <span class="family-title">WAT — Water Infrastructure</span>
+    <span class="family-count">0/1 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">INF-WAT-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Build desalination and clean-water systems in water-scarce areas without depleting water tables or aquifers</p>
+  <p class="rule-stmt">Invest in desalination plants, water recycling systems, and other drought-resilient water infrastructure in water-scarce regions, operated under strict environmental standards that prevent depletion of existing water tables, aquifers, and freshwater ecosystems</p>
+  <p class="rule-notes">Growing water scarcity in the American West and Southwest, driven by climate change, population growth, and agricultural demand, requires investment in water infrastructure beyond traditional watershed management. Desalination and advanced water recycling can provide drought-resilient water supplies not dependent on precipitation or snowpack. However, desalination has significant energy requirements and must be powered by clean energy to avoid carbon emissions. It also risks environmental impacts from brine disposal, intake effects on marine life, and local ecosystem impacts that require careful siting and management. "Without destroying water tables" is a critical constraint: in some cases, well-field-based desalination has damaged agricultural and municipal water supplies. Any new water infrastructure investment must be governed by strict environmental standards that protect existing water sources rather than replacing one water problem with another.</p>
+</div>
+  </div>
+</div>
+
+<div class="policy-family" id="fam-inf-dat">
+  <div class="family-header">
+    <span class="family-code">INF</span>
+    <span class="family-title">DAT — Data Center Environmental Standards</span>
+    <span class="family-count">0/1 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">INF-DAT-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Large data centers must be carbon neutral or negative and must supply or offset their own power through dedicated clean energy sources</p>
+  <p class="rule-stmt">Large data centers must achieve carbon neutrality or carbon negativity and must supply or credibly offset their energy usage through dedicated renewable or low-impact energy sources, rather than relying on general grid extraction from carbon-emitting sources</p>
+  <p class="rule-notes">Large data centers — including those operated by major technology companies, cloud providers, and AI operators — are among the fastest-growing electricity consumers in the U.S. economy. They are projected to consume a growing share of national electricity generation as AI and cloud computing scale. "Carbon neutral through grid extraction" is not acceptable when the grid itself remains carbon-intensive: claiming carbon neutrality by purchasing renewable energy certificates (RECs) while actually drawing power from coal or gas plants does not reduce real-world emissions. This rule requires either direct clean energy sourcing (on-site generation, dedicated power purchase agreements for new capacity) or credible, verifiable offsets. It applies to all large data centers, not only AI — the rule is about infrastructure physical footprint, not technology type. AI-specific environmental obligations are addressed additionally in the Technology &amp; AI pillar (TEC-ENV).</p>
+</div>
+  </div>
+</div>
+
+<div class="policy-family" id="fam-inf-rail">
+  <div class="family-header">
+    <span class="family-code">INF</span>
+    <span class="family-title">RAIL — Rail Modernization</span>
+    <span class="family-count">0/2 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">INF-RAIL-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Modernize the U.S. rail system</p>
+  <p class="rule-stmt">Invest substantially in modernizing the U.S. rail system, including upgrading track, signal systems, electrification, and station infrastructure to support reliable, safe, and efficient passenger and freight service</p>
+  <p class="rule-notes">U.S. passenger rail infrastructure is significantly outdated compared to peer nations. Amtrak's Northeast Corridor — the highest-ridership rail corridor in the country — runs on infrastructure that includes bridges and tunnels from the 19th century, signal systems that require costly replacement, and electrification systems that are decades old. Modernization requires sustained investment in track replacement, grade crossing elimination, electrification, positive train control, and station accessibility. Modernized rail produces multiple public benefits: reduced highway and air traffic congestion, lower per-passenger carbon emissions, economic development along corridors, and transportation access for those who cannot drive.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">INF-RAIL-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Expand high-speed rail to connect major metropolitan regions</p>
+  <p class="rule-stmt">Invest in high-speed rail development to connect major metropolitan regions with reliable, frequent, and competitive passenger rail service as an alternative to short-haul air travel and highway congestion</p>
+  <p class="rule-notes">High-speed rail (operating at 150+ mph) connects cities within corridors of 100–500 miles faster than flying when airport transit time is included, at lower cost and significantly lower carbon emissions per passenger. The U.S. has one high-speed rail corridor (Acela, Northeast Corridor, averaging around 80 mph due to infrastructure constraints) while France, Japan, China, Spain, Germany, and others have extensive high-speed networks. Corridors with strong ridership potential include California (Los Angeles–San Francisco), Texas (Dallas–Houston), the Southeast (Charlotte–Atlanta), and the Midwest (Chicago–Detroit–Milwaukee). High-speed rail development requires dedicated rights-of-way, electrified track, and advanced signal systems that are a significant public investment — but they are investments in infrastructure that lasts a century, not annual operating costs.</p>
+</div>
+  </div>
+</div>
+
+<div class="policy-family" id="fam-inf-trn">
+  <div class="family-header">
+    <span class="family-code">INF</span>
+    <span class="family-title">TRN — Public Transit and Transportation Transition</span>
+    <span class="family-count">0/5 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">INF-TRN-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Expand public transportation systems in urban, suburban, and rural communities</p>
+  <p class="rule-stmt">Invest substantially in expanding public transportation systems including bus, light rail, subway, and on-demand transit to provide reliable transportation access in urban, suburban, and rural communities</p>
+  <p class="rule-notes">Public transportation provides essential mobility for people who cannot afford cars, who cannot drive due to age or disability, or who choose not to drive. It reduces traffic congestion, lowers per-passenger carbon emissions, and enables economic mobility. Decades of underinvestment in U.S. transit systems — particularly outside dense urban cores — has created transit deserts where car ownership is a de facto requirement for participation in the labor market. Expanding public transit requires sustained capital investment in vehicles and infrastructure, adequate operating subsidies, and land use policies that support transit ridership. Transit investment also generates economic returns: the American Public Transportation Association estimates that every $1 invested in public transit generates approximately $5 in economic returns.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">INF-TRN-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Prioritize reliable, affordable, and accessible public transportation in all infrastructure planning</p>
+  <p class="rule-stmt">Public transportation access, reliability, affordability, and accessibility for people with disabilities must be considered and prioritized in all major infrastructure planning and investment decisions</p>
+  <p class="rule-notes">Infrastructure decisions — highway routing, land use zoning, development incentives, utility placement — shape whether communities are accessible by transit or require car ownership. When highways are built through neighborhoods and highways receive orders of magnitude more public investment than transit, the result is forced car dependency. This rule requires infrastructure planning processes to consider transit access as a core outcome metric, not an afterthought. It also requires that transit systems are accessible to people with disabilities under the Americans with Disabilities Act, with meaningful enforcement of accessibility requirements rather than symbolic compliance.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">INF-TRN-003</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Phase out gasoline-only and internal-combustion-only passenger vehicles on a defined schedule</p>
+  <p class="rule-stmt">Establish a defined, credible phaseout schedule for the sale of gasoline-only and internal-combustion-engine-only passenger vehicles, with transition support mechanisms for manufacturers, workers, and consumers</p>
+  <p class="rule-notes">The transportation sector is the largest source of greenhouse gas emissions in the U.S. Phasing out new ICE vehicle sales is the most direct policy available to decarbonize transportation. A defined phaseout schedule — with sufficient lead time for manufacturer transition planning — is far more effective than fuel economy standards alone, because it creates a clear market signal for investment in electric vehicle technology, charging infrastructure, and battery supply chains. Several U.S. states (California and others) have set phaseout dates; federal coordination creates national consistency and prevents market fragmentation. Transition support must include: worker assistance for those employed in ICE manufacturing; consumer incentives to accelerate adoption before the phaseout date; and infrastructure investment to ensure charging access is universal.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">INF-TRN-004</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Require plug-in hybrid capability during transition periods where full electrification is not yet feasible</p>
+  <p class="rule-stmt">During transition periods where full electrification of specific vehicle categories is not yet technically or economically feasible, require at minimum plug-in hybrid capability to enable partial electrification and charging infrastructure investment</p>
+  <p class="rule-notes">Some vehicle categories — long-haul trucks, construction equipment, farm vehicles — face greater electrification challenges than passenger cars due to range, duty cycle, and weight requirements. For these categories, plug-in hybrid capability serves as an interim standard that enables: partial electrification of daily operations (most trips are short enough for battery range); investment in charging infrastructure that benefits later full electrification; and manufacturer development of electrification technologies at scale. This rule is a transition standard, not a permanent alternative to full electrification. It is paired with a phaseout schedule for full electrification once technology matures.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">INF-TRN-005</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Establish extremely strict fuel-efficiency standards during the transition away from internal combustion vehicles</p>
+  <p class="rule-stmt">During the transition period before the ICE vehicle phaseout, establish extremely strict and regularly tightened fuel-efficiency standards to reduce emissions from the existing ICE fleet, with no grandfather exemptions or rollback provisions</p>
+  <p class="rule-notes">During the period before an ICE vehicle phaseout takes effect, the existing ICE fleet will continue to emit. Strict fuel efficiency standards reduce these emissions and create market incentives for manufacturers to invest in electrification technology. The U.S. has a long history of successful Corporate Average Fuel Economy (CAFE) standards — and a history of industry lobbying to weaken them. This rule requires standards that are: ambitious (achievable with best available technology, not average technology); regularly tightened (on a defined schedule, not subject to indefinite delay); applied across all vehicle categories without SUV/truck loopholes that have historically allowed manufacturers to avoid efficiency gains; and insulated from administrative rollback without congressional action. Standards must apply until the phaseout date, with no relaxation of requirements for legacy ICE vehicles sold near the end of the transition period.</p>
+</div>
+  </div>
+</div>
+
+</div>
+</section>
+<section class="bg-dark on-dark ruled" id="pil-research">
+<div class="wrap">
+  <h2 style="color:#1a6b8a">Research &amp; Context</h2>
+  <div class="research-body" style="color:rgba(255,255,255,.85)">
+<h3>Infrastructure as public goods</h3>
+<p>Infrastructure economics recognizes that certain physical systems have natural monopoly characteristics that make competitive markets inefficient or impossible. Electrical transmission, water distribution, physical telecommunications networks, rail rights-of-way, and road systems are all natural monopolies — the cost of building parallel competing infrastructure is prohibitive, so the first entrant captures the market permanently. Natural monopolies require either public ownership or strong public-interest regulation to prevent extraction. The 20th century solution in the U.S. was a mix: public ownership for water and many transit systems, regulated utilities for electricity and phone service, and public subsidy for rail and highways. The 21st century infrastructure agenda must extend this logic to digital networks, energy transition, and clean water.</p>
+<h3>Grid modernization and clean energy</h3>
+<p>The transition to a carbon-neutral electrical grid is technically feasible and economically competitive with continued fossil fuel investment. Multiple independent analyses, including from the National Renewable Energy Laboratory (NREL) and Lawrence Berkeley National Laboratory, have found that a 100% clean electricity grid is achievable within current technology and economic constraints.<sup><a href="#fn1" id="ref1">[1]</a></sup> The primary barriers are regulatory (permitting delays for transmission infrastructure), political (fossil fuel industry lobbying), and coordination (matching generation and demand across a continental grid). Microgrid architecture improves resilience by creating "islands" that can operate independently when the main grid fails — a capability increasingly important as extreme weather events increase in frequency and intensity due to climate change.</p>
+<h3>Internet access and rural broadband</h3>
+<p>The digital divide between urban and rural America is significant and persistent. The Federal Communications Commission estimated in 2021 that approximately 14.5 million Americans lacked access to broadband internet meeting minimum speed thresholds, with rural and tribal areas disproportionately affected.<sup><a href="#fn2" id="ref2">[2]</a></sup> The 2021 Infrastructure Investment and Jobs Act allocated $65 billion for broadband infrastructure, the largest public broadband investment in U.S. history. However, the structural problem — that private providers will not profitably serve low-density rural areas — requires ongoing public investment and universal service obligations, not a one-time appropriation. The Rural Electrification Act model, which brought electricity to rural America through public investment and cooperative ownership, remains the relevant precedent.</p>
+<h3>Building codes and construction decarbonization</h3>
+<p>Buildings account for approximately 40% of U.S. energy consumption and roughly 30% of greenhouse gas emissions.<sup><a href="#fn3" id="ref3">[3]</a></sup> Modern building codes — such as those developed by the International Energy Conservation Code (IECC) — have progressively tightened efficiency requirements, but adoption is uneven across states, and enforcement is often inadequate. Embodied carbon in construction materials (particularly cement and steel) represents a growing share of total building emissions as operational efficiency improves. Mass timber, low-carbon concrete alternatives, and high-recycled-content steel can significantly reduce embodied carbon. Federal building codes and green procurement standards for publicly funded construction are the most direct policy levers.</p>
+<h3>Transportation transition</h3>
+<p>The transportation sector became the largest source of U.S. greenhouse gas emissions in 2016, when it surpassed electricity generation.<sup><a href="#fn4" id="ref4">[4]</a></sup> Electric vehicles have achieved cost and performance parity with ICE vehicles in most categories, and battery costs have fallen more than 90% since 2010. The transition to electric vehicles requires coordinated investment in charging infrastructure — particularly in multi-unit housing and rural areas where home charging is not feasible — and in clean electricity generation to ensure that EVs are charged with clean power. Vehicle phaseout schedules create market certainty for manufacturers, supply chain investors, and charging infrastructure developers.</p>
+</div>
+</div>
+</section>
+<section class="bg-parchment ruled" id="pil-refs">
+<div class="wrap">
+  <h2 style="color:#1a6b8a">References</h2>
+  <ol class="footnotes" style="font-size:.87rem;line-height:1.75;padding-left:1.3rem">
+    <li id="fn1">National Renewable Energy Laboratory. (2022). <em>Electrification futures study: Long-run scenarios for the North American electric system</em>. https://www.nrel.gov/docs/fy22osti/80725.pdf <a href="#ref1" style="font-size:.8rem;text-decoration:none">↩</a></li>
+    <li id="fn2">Federal Communications Commission. (2021). <em>Fourteenth broadband deployment report</em>. https://www.fcc.gov/reports-research/reports/broadband-progress-reports/fourteenth-broadband-deployment-report <a href="#ref2" style="font-size:.8rem;text-decoration:none">↩</a></li>
+    <li id="fn3">U.S. Department of Energy, Office of Energy Efficiency and Renewable Energy. (2023). <em>Buildings energy data book</em>. https://www.energy.gov/eere/buildings/buildings-energy-data-book <a href="#ref3" style="font-size:.8rem;text-decoration:none">↩</a></li>
+    <li id="fn4">U.S. Environmental Protection Agency. (2024). <em>Inventory of U.S. greenhouse gas emissions and sinks: 1990–2022</em>. https://www.epa.gov/ghgemissions/inventory-us-greenhouse-gas-emissions-and-sinks <a href="#ref4" style="font-size:.8rem;text-decoration:none">↩</a></li>
+  </ol>
+</div>
+</section>
+<section class="bg-parchment ruled" id="pil-related">
+<div class="wrap" style="margin-bottom:0">
+  <h2 style="color:#1a6b8a">Related Pillars</h2>
+  <p style="font-size:.92rem;color:#666;margin-bottom:.5rem">These pillars intersect with and reinforce this one.</p>
+</div>
+<div class="wrap"><div class="related-grid">
+<a href="environment-and-agriculture.html" class="related-card"><strong>Environment &amp; Agriculture</strong><span>— Climate policy, emissions governance, biodiversity protection, and environmental accountability that this pillar's physical infrastructure must support</span></a>
+<a href="technology-and-ai.html" class="related-card"><strong>Technology &amp; AI</strong><span>— AI-specific environmental obligations (TEC-ENV), internet governance and net neutrality (TEC-INT), and digital rights that complement public internet infrastructure rules</span></a>
+<a href="housing.html" class="related-card"><strong>Housing</strong><span>— Building standards, infrastructure access, and transportation access are prerequisites for stable, affordable housing; anti-displacement rules apply to infrastructure projects</span></a>
+<a href="labor-and-workers-rights.html" class="related-card"><strong>Labor &amp; Workers' Rights</strong><span>— Workers in fossil fuel, automotive, and construction industries require transition support and worker protections during the infrastructure transition</span></a>
+<a href="antitrust-and-corporate-power.html" class="related-card"><strong>Antitrust &amp; Corporate Power</strong><span>— ISP monopolies, utility concentration, and infrastructure market power require antitrust enforcement and structural remedies</span></a>
+<a href="taxation-and-wealth.html" class="related-card"><strong>Taxation &amp; Wealth</strong><span>— Infrastructure investment requires adequate public revenue; fossil fuel subsidy elimination redirects public resources toward clean energy transition</span></a>
+</div></div>
+<div class="wrap" style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap">
+  <a href="../foundations.html#freedom-to-thrive" class="btn-primary" style="background:#1a6b8a">← Foundation V: Freedom to Thrive</a>
+  <a href="index.html" class="btn-primary" style="background:var(--navy)">All Pillars</a>
+</div>
+</section>
+<footer class="site-footer">
+  <div class="wrap">
+    <span class="footer-brand">American Renewal Project</span>
+    <ul class="footer-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../foundations.html">Foundations</a></li>
+      <li><a href="index.html">Pillars</a></li>
+      <li><a href="../compare/index.html">Compare</a></li>
+    </ul>
+    <span class="footer-note">A Third Bill of Rights for the 21st Century. · <a href="../about-ai.html" style="color:inherit;opacity:.7">On the Use of AI</a></span>
+  </div>
+</footer>
+<script src="../assets/js/data.js"></script>
+<script src="../assets/js/app.js"></script>
+<script>
+(function(){
+  var nav = document.getElementById('pil-snav');
+  if(!nav) return;
+  var links = nav.querySelectorAll('a[href^="#"]');
+  var sections = Array.from(links).map(function(a){
+    return document.querySelector(a.getAttribute('href'));
+  }).filter(Boolean);
+  function onScroll(){
+    var y = window.scrollY + 120;
+    var active = sections[0];
+    sections.forEach(function(s){ if(s.offsetTop <= y) active = s; });
+    links.forEach(function(a){
+      a.classList.toggle('active', a.getAttribute('href') === '#'+active.id);
+    });
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+})();
+</script>
+</body>
+</html>
