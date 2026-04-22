@@ -6,6 +6,124 @@
 <title>Anti-Corruption — American Renewal Project</title>
 <link rel="stylesheet" href="../assets/css/style.css">
 <link rel="icon" type="image/svg+xml" href="../assets/img/logo.svg">
+<style>
+/* ── Pillar page styles ─────────────────────────────────────── */
+.pil-snav {
+  position: sticky; top: 63px; z-index: 150;
+  background: var(--navy); border-bottom: 2px solid rgba(255,255,255,.12);
+  overflow-x: auto; white-space: nowrap;
+}
+.pil-snav ul { display:flex; gap:0; list-style:none; margin:0; padding:0; }
+.pil-snav a {
+  display:block; padding:.55rem 1.1rem; font-family:'Oswald',sans-serif;
+  font-size:.78rem; letter-spacing:.06em; text-transform:uppercase;
+  color:rgba(255,255,255,.62); text-decoration:none; transition:color .15s;
+}
+.pil-snav a:hover, .pil-snav a.active { color:#fff; }
+.pil-snav a.active { border-bottom:2px solid #2471a3; }
+
+/* ── Section layouts ────────────────────────────────────────── */
+.pil-intro { display:grid; grid-template-columns:1fr 1fr; gap:2rem; }
+@media(max-width:700px){ .pil-intro { grid-template-columns:1fr; } }
+
+.pil-intro h2 { font-size:1.1rem; text-transform:uppercase; letter-spacing:.08em; margin-bottom:.6rem; }
+.pil-intro p, .pil-intro li { font-size:1rem; line-height:1.75; }
+
+.problem-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:1.25rem; margin-top:1rem; }
+.problem-card {
+  background:#fff; border-radius:6px; padding:1.2rem 1.4rem;
+  border-left:4px solid #2471a3;
+  box-shadow:0 1px 4px rgba(0,0,0,.07);
+}
+.problem-card h3 { font-size:1rem; margin:0 0 .4rem; color:var(--navy); }
+.problem-card p  { font-size:.92rem; line-height:1.65; margin:0; color:#333; }
+
+.reform-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:1rem; margin-top:1rem; }
+.reform-card {
+  background:var(--navy); color:#fff; border-radius:6px;
+  padding:1.1rem 1.3rem; border-top:3px solid #2471a3;
+}
+.reform-card h3 { font-size:.95rem; margin:0 0 .4rem; color:#2471a3; text-transform:uppercase; letter-spacing:.04em; }
+.reform-card p  { font-size:.88rem; line-height:1.6; margin:0; color:rgba(255,255,255,.8); }
+
+/* ── Policy rules ───────────────────────────────────────────── */
+.policy-family { margin-bottom:2.5rem; }
+.family-header {
+  display:flex; align-items:baseline; gap:.8rem; margin-bottom:1rem;
+  padding-bottom:.5rem; border-bottom:2px solid #2471a3;
+}
+.family-code {
+  font-family:'Oswald',sans-serif; font-size:1.1rem;
+  color:#2471a3; min-width:3rem;
+}
+.family-title { font-size:1rem; font-weight:600; color:var(--ink); }
+.family-count { margin-left:auto; font-size:.8rem; color:#888; white-space:nowrap; }
+
+.rule-grid {
+  display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:.75rem;
+}
+.rule-card {
+  border-radius:5px; padding:.9rem 1rem;
+  background:#fff; border:1px solid #e0d8c8;
+  font-size:.88rem; line-height:1.55;
+}
+.rule-card.status-included { border-left:4px solid #1e8449; }
+.rule-card.status-updated  { border-left:4px solid #2471a3; }
+.rule-card.status-partial  { border-left:4px solid #c9952a; }
+.rule-card.status-missing  { border-left:4px solid #ccc; opacity:.72; }
+
+.rule-header { display:flex; align-items:center; gap:.5rem; margin-bottom:.35rem; }
+.rule-id { font-size:.72rem; color:#888; letter-spacing:.03em; }
+.rule-badge {
+  font-size:.68rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em;
+  padding:.12em .45em; border-radius:3px;
+}
+.status-included .rule-badge { background:#d4edda; color:#155724; }
+.status-updated  .rule-badge { background:#cce5ff; color:#004085; }
+.status-partial  .rule-badge { background:#fff3cd; color:#856404; }
+.status-missing  .rule-badge { background:#f0f0f0; color:#666; }
+
+.rule-title { font-weight:600; margin:.2rem 0 .2rem; color:var(--ink); }
+.rule-stmt  { font-size:.85rem; color:#444; margin:.15rem 0 0; }
+.rule-notes { font-size:.8rem; color:#666; font-style:italic; margin:.25rem 0 0; }
+
+/* ── Research section ───────────────────────────────────────── */
+.research-body h3 { font-size:1.05rem; color:#2471a3; margin:1.5rem 0 .4rem; }
+.research-body p  { line-height:1.8; font-size:.97rem; }
+
+/* ── Related pillars ────────────────────────────────────────── */
+.related-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:.85rem; margin-top:1rem; }
+.related-card {
+  background:var(--navy); color:#fff; border-radius:6px; padding:1rem;
+  text-decoration:none; transition:opacity .15s;
+}
+.related-card:hover { opacity:.82; }
+.related-card strong { display:block; font-size:.95rem; margin-bottom:.3rem; }
+.related-card span   { font-size:.8rem; color:rgba(255,255,255,.65); }
+
+/* ── Summary stats bar ──────────────────────────────────────── */
+.stats-bar {
+  display:flex; flex-wrap:wrap; gap:1.5rem; margin:1.2rem 0;
+  padding:1rem 1.2rem; background:#fff; border-radius:6px;
+  border:1px solid #e0d8c8;
+}
+.stat-item { text-align:center; }
+.stat-num { display:block; font-family:'Oswald',sans-serif; font-size:2rem; color:#2471a3; }
+.stat-label { font-size:.78rem; text-transform:uppercase; letter-spacing:.06em; color:#888; }
+
+/* ── Design logic accordion ─────────────────────────────────── */
+details.design-logic { margin-top:1rem; }
+details.design-logic summary {
+  cursor:pointer; font-weight:700; padding:.6rem .8rem;
+  background:rgba(0,0,0,.06); border-radius:4px; user-select:none;
+}
+details.design-logic[open] summary { border-radius:4px 4px 0 0; }
+details.design-logic .design-body { padding:.8rem 1rem; background:#fff; border:1px solid #e0d8c8; border-top:none; border-radius:0 0 4px 4px; }
+details.design-logic .design-body p { font-size:.93rem; line-height:1.75; }
+details.design-logic .design-body ul { padding-left:1.3rem; }
+details.design-logic .design-body li { font-size:.93rem; line-height:1.65; margin-bottom:.3rem; }
+</style>
+<style>:root { --accent-color: #2471a3; }</style>
 </head>
 <body>
 <nav class="site-nav">
@@ -18,13 +136,12 @@
     <ul class="nav-links">
       <li><a href="../index.html">Home</a></li>
       <li><a href="../foundations.html">Foundations</a></li>
-      <li><a href="../pillars/index.html">Pillars</a></li>
+      <li><a href="index.html">Pillars</a></li>
       <li><a href="../compare/index.html">Compare</a></li>
     </ul>
   </div>
 </nav>
-
-<div class="page-hero compact" style="border-bottom: 4px solid #2471a3">
+<div class="page-hero compact" style="border-bottom:4px solid #2471a3">
   <div class="hero-eyebrow">
     <a href="../foundations.html#clean-democracy" style="color:rgba(255,255,255,.6);text-decoration:none">
       Foundation II: Clean Democracy
@@ -32,59 +149,253 @@
   </div>
   <h1 class="hero-title" style="font-size:clamp(1.8rem,5vw,2.8rem)">Anti-Corruption</h1>
   <div class="hero-divider"><span>★ ★ ★</span></div>
-  <p class="hero-statement" style="font-size:1rem;max-width:620px;margin:0 auto">Public office must not be a path to private enrichment.</p>
+  <p class="hero-statement" style="font-size:1rem;max-width:680px;margin:0 auto">Government must answer to the public, not wealthy donors, dark-money networks, monopolistic corporations, foreign influence operations, or shadow lobbying systems that undermine democratic legitimacy.</p>
 </div>
-
+<nav class="pil-snav" id="pil-snav"><ul><li><a href="#pil-intro">Overview</a></li><li><a href="#pil-problem">The Problem</a></li><li><a href="#pil-reform">Reform Areas</a></li><li><a href="#pil-policy">Policy Rules</a></li><li><a href="#pil-research">Research</a></li><li><a href="#pil-related">Related</a></li></ul></nav>
+<section class="bg-parchment ruled" id="pil-intro">
+<div class="wrap">
+  <div class="stats-bar">
+  <div class="stat-item"><span class="stat-num">15</span><span class="stat-label">Total Rules</span></div>
+  <div class="stat-item"><span class="stat-num" style="color:#1e8449">2</span><span class="stat-label">Active</span></div>
+  <div class="stat-item"><span class="stat-num" style="color:#c9952a">1</span><span class="stat-label">Partial</span></div>
+  <div class="stat-item"><span class="stat-num" style="color:#888">12</span><span class="stat-label">Proposed</span></div>
+</div>
+  <div class="pil-intro">
+    <div>
+      <h2 style="color:#2471a3;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.06em">Purpose</h2>
+      <p>Government must answer to the public, not wealthy donors, dark-money networks, monopolistic corporations, foreign influence operations, or shadow lobbying systems that undermine democratic legitimacy.</p>
+    </div>
+    <div>
+      <h2 style="color:#2471a3;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.06em">Core Principle</h2>
+      <p>Political power must not be controlled by concentrated wealth, hidden influence, private access networks, or covert manipulation. Democratic governance requires that decisions serve the public interest rather than private financial gain or concealed agenda-setting by powerful actors.</p>
+    </div>
+  </div>
+</div>
+</section>
+<section class="bg-dark on-dark ruled" id="pil-problem">
+<div class="wrap" style="margin-bottom:0">
+  <h2 style="color:#2471a3">The Problem It Solves</h2>
+</div>
+<div class="wrap"><p>The American system nominally limits corruption, but in practice leaves extensive room for legalized influence-buying, hidden money, informal access, weak enforcement, and tech-enabled manipulation. Federal lobbying spending exceeded $4.44 billion in 2024 and rose past $5 billion in 2025—both record territory—demonstrating how organizations with money already have a huge structural advantage in shaping legislation and regulation. Dark-money groups, nonprofits, and shell companies poured a record $1.9 billion into the 2024 federal cycle, up from $1 billion in 2020, meaning vast amounts of election influence can be exercised without voters knowing who is behind it. The revolving door between government and regulated industries creates self-dealing risks, while Citizens United-style distortions allow unlimited independent expenditures that function as political spending in practice. This pillar addresses the danger that government becomes answerable to whoever can pay the most, access the right networks, or manipulate information systems—rather than serving the public will.</p></div>
+</section>
+<section class="bg-cream ruled" id="pil-reform">
+<div class="wrap" style="margin-bottom:0">
+  <h2 style="color:#2471a3">Key Reform Areas</h2>
+</div>
+<div class="wrap"><div class="reform-grid"><div class="reform-card"><h3>Ban corporate political donations and eliminate Super PACs</h3><p></p></div>
+</div></div>
+</section>
 <section class="bg-parchment ruled">
 <div class="wrap">
-  <h2>Why This Matters</h2>
-  <p style="font-size:1.05rem;line-height:1.8">Corruption in American politics is not primarily the dramatic bribery of film — it is the structural corruption of revolving doors, dark money, and stock trades that turn legislative knowledge into personal profit.</p>
+  <details class="design-logic">
+    <summary>Design Logic — How These Rules Work Together</summary>
+    <div class="design-body"><p>Anti-corruption rules must regulate flows and networks, not just channels, because if one money channel is capped, influence will reroute elsewhere. The rules are structured around five internal modules: (1) campaign money and political spending broadly defined; (2) lobbying and shadow influence that includes consultants, strategic advisors, think-tank-style paid campaigns, and lawyers functioning as lobbyists; (3) revolving door and self-dealing protections; (4) transparency, media, AI disclosure, and information integrity; and (5) enforcement architecture with independent anti-corruption bodies. The system must close coordination loopholes (shared vendors, data, strategic alignment), require beneficial ownership transparency to prevent shell-company concealment, implement near-real-time disclosure so voters have information when it matters most, and address both current weaknesses (dark money, record lobbying, legal-but-corrupt access systems) and future threats (AI-enabled manipulation, tech-firm pre-capture of policy, richer systems driving even more influence spending).</p></div>
+  </details>
 </div>
 </section>
-
-<section class="bg-dark on-dark ruled">
-<div class="wrap" style="display:grid;grid-template-columns:1fr 1fr;gap:2rem">
-  <div>
-    <h2 style="color:#2471a3">What It Demands</h2>
-    <ul style="list-style:disc;padding-left:1.2rem;color:rgba(255,255,255,.82)">
-        <li>Complete ban on stock trading by members of Congress and their immediate families</li>
-        <li>Mandatory disclosure of all political contributions over $200, including LLCs and pass-through entities</li>
-        <li>Criminal penalties for officials who take positions at companies they regulated within two years of departure</li>
-    </ul>
-  </div>
-  <div>
-    <h2 style="color:#2471a3">What It Rejects</h2>
-    <ul style="list-style:disc;padding-left:1.2rem;color:rgba(255,255,255,.82)">
-        <li>Dark money as a legitimate vehicle for political influence</li>
-        <li>Stock trading by officials with access to non-public legislative information</li>
-        <li>A culture where public service is understood as a prelude to private enrichment</li>
-    </ul>
-  </div>
-</div>
-</section>
-
-<section class="bg-cream ruled">
+<section class="bg-cream ruled" id="pil-policy">
 <div class="wrap">
-  <h2>Key Policy Points</h2>
-  <ol style="padding-left:1.4rem;font-size:1rem;line-height:2">
-          <li>Disclosure of all political spending</li>
-          <li>Congressional stock trading ban</li>
-          <li>Post-government employment restrictions</li>
-  </ol>
-  <div style="margin-top:2.5rem;display:flex;gap:1rem;flex-wrap:wrap">
-    <a href="../foundations.html#clean-democracy" class="btn-primary" style="background:#2471a3">← Foundation II: Clean Democracy</a>
-    <a href="index.html" class="btn-primary" style="background:var(--navy)">All Pillars</a>
+  <h2 style="color:#2471a3">Full Policy Platform</h2>
+  <p style="font-size:.95rem;color:#555;margin-bottom:1.5rem">
+    Every rule in this pillar, organized by policy area.
+    <strong style="color:#1e8449">Active</strong> rules are current platform commitments.
+    <strong style="color:#c9952a">Partial</strong> rules are in development.
+    <strong style="color:#888">Proposed</strong> rules are planned for future inclusion.
+  </p>
+  <div class="policy-family" id="fam-eth">
+  <div class="family-header">
+    <span class="family-code">ETH</span>
+    <span class="family-title">Ethics and Lobbying</span>
+    <span class="family-count">0/10 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">COR-ETH-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Ban lobbyists from governing industries</p>
+  
+  <p class="rule-notes">Prevents regulatory capture where individuals who lobbied for an industry then move into positions regulating that same industry, creating direct conflicts of interest and undermining public trust in neutral governance.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">COR-ETH-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Ban stock trading by officials</p>
+  
+  <p class="rule-notes">Prevents conflicts of interest where officials can use insider knowledge from their government roles to trade stocks, or where financial holdings create incentives to favor certain industries or companies in policy decisions.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">COR-ETH-003</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Applies to Congress</p>
+  
+  <p class="rule-notes">Stock trading and lobbying bans apply to all members of Congress, preventing legislators from profiting from their policy knowledge or industry relationships.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">COR-ETH-004</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Applies to judges</p>
+  
+  <p class="rule-notes">Stock trading and lobbying bans apply to federal judges, ensuring judicial independence and preventing financial conflicts from influencing legal decisions.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">COR-ETH-005</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Applies to executive branch</p>
+  
+  <p class="rule-notes">Stock trading and lobbying bans apply to executive branch officials, preventing conflicts of interest in regulatory and enforcement decisions.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">COR-ETH-006</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Applies to president and VP</p>
+  
+  <p class="rule-notes">Stock trading and lobbying bans apply to the president and vice president, ensuring the highest offices are free from financial conflicts and cannot use their positions for personal enrichment.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">COR-ETH-007</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Applies to immediate family</p>
+  
+  <p class="rule-notes">Stock trading and conflict-of-interest rules extend to immediate family members of covered officials to prevent circumvention through family proxies.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">COR-ETH-008</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Applies to spouses and partners</p>
+  
+  <p class="rule-notes">Specifically includes spouses and domestic partners in conflict-of-interest protections to close common loopholes where officials claim no control over spouse's financial activities.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">COR-ETH-009</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Applies to extended relationships</p>
+  
+  <p class="rule-notes">Extends scrutiny to broader family and financial relationships where there is evidence of coordination or benefit-sharing, preventing evasion through extended networks.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">COR-ETH-010</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Allow only blind collective investment</p>
+  
+  <p class="rule-notes">Permits covered officials to hold investments only in blind trusts or broad-based collective investment vehicles (like index funds) where they cannot influence or know specific holdings, ensuring complete separation from potential conflicts.</p>
+</div>
   </div>
 </div>
+<div class="policy-family" id="fam-fin">
+  <div class="family-header">
+    <span class="family-code">FIN</span>
+    <span class="family-title">Financial Conflicts and Campaign Finance</span>
+    <span class="family-count">1/4 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-included">
+  <div class="rule-header">
+    <code class="rule-id">COR-FIN-001</code>
+    <span class="rule-badge">Included</span>
+  </div>
+  <p class="rule-title">Ban corporate political donations</p>
+  
+  <p class="rule-notes">Prohibits corporations from making political donations to candidates, parties, or political committees, addressing the core Citizens United problem where corporate money can dominate political processes and drown out individual voices.</p>
+</div>
+<div class="rule-card status-partial">
+  <div class="rule-header">
+    <code class="rule-id">COR-FIN-002</code>
+    <span class="rule-badge">Partial</span>
+  </div>
+  <p class="rule-title">Ban Super PACs</p>
+  
+  <p class="rule-notes">Eliminates Super PACs that allow unlimited political spending by individuals, unions, and corporations under the guise of "independence," closing a major channel for concentrated wealth to influence elections.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">COR-FIN-003</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Limit individual donations</p>
+  
+  <p class="rule-notes">Establishes strict caps on individual political donations to prevent wealthy individuals from exercising outsized influence through large contributions, ensuring more equal political voice.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">COR-FIN-004</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Limit political ad spending</p>
+  
+  <p class="rule-notes">Considers limits on advertisement spending and broadcast/streaming political ad saturation to prevent elections from becoming pure spending contests and reduce the advantage wealth provides in shaping public discourse.</p>
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-whb">
+  <div class="family-header">
+    <span class="family-code">WHB</span>
+    <span class="family-title">White House and Executive Branch Ethics</span>
+    <span class="family-count">1/1 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-included">
+  <div class="rule-header">
+    <code class="rule-id">COR-WHB-001</code>
+    <span class="rule-badge">Included</span>
+  </div>
+  <p class="rule-title">Whistleblower protections</p>
+  
+  <p class="rule-notes">Provides strong legal protections for whistleblowers who expose corruption, fraud, abuse of power, or illegal conduct in government, ensuring they cannot be fired, demoted, harassed, or prosecuted in retaliation for reporting wrongdoing. Essential for enforcement because insiders are often the only ones with knowledge of hidden corruption.</p>
+</div>
+  </div>
+</div>
+</div>
 </section>
-
+<section class="bg-dark on-dark ruled" id="pil-research">
+<div class="wrap">
+  <h2 style="color:#2471a3">Research & Context</h2>
+  <div class="research-body" style="color:rgba(255,255,255,.85)"><p>The structural weaknesses in American anti-corruption systems are not hypothetical—they are operating at record scale right now. Reuters reported that federal lobbying spending exceeded $4.44 billion in 2024, then rose past $5 billion in 2025, both record territory. That does not prove every lobbyist is corrupt, but it does show that organizations with money already have a huge structural advantage in shaping legislation and regulation. The Brennan Center reported that dark-money groups, nonprofits, and shell companies poured a record $1.9 billion into the 2024 federal cycle, up from the previous record of $1 billion in 2020. That means a very large amount of election influence can still be exercised without voters knowing who is behind it. These numbers are not isolated accidents—they are signs of a system whose incentives are moving in the wrong direction, where the richer and more polarized the system gets, the more valuable influence becomes, which drives even more spending on lobbying and electioneering.</p>
+<p>The basic pattern is that nominally regulated systems leave multiple pathways for "legal but corrupt" influence. Citizens United bars government from prohibiting independent expenditures by corporations and unions, while current FEC rules still allow substantial political giving and reporting structures that do not fully solve hidden influence. If you regulate registered lobbyists, influence moves into shadow lobbying: consultants, lawyers, trade groups, think tanks, former staffers, media surrogates, donors, and informal policy networks who shape outcomes without always triggering classic lobbying definitions. Reuters' reporting on the overall scale and growth of lobbying underscores the incentive for this ecosystem to expand and professionalize. Similarly, if you ban obvious quid pro quo corruption, influence simply shifts to access-buying without explicit deals—the public rarely sees a written contract saying "donation for favor." Instead, the practical exchange is access, agenda-setting, favorable staffing, favorable rulemaking, softer enforcement, or delay. That is why this pillar must not be limited to bribery-style corruption but must use Brennan's better definition: corruption as decisions motivated by money or undue private gain.</p>
+<p>Brennan warned in early 2025 that federal contracts, tariffs, regulations, and taxes can be used to benefit donors, senior officials, and even the president—exactly the kind of "technically legal but democratically poisonous" influence system this pillar must target. The revolving door and self-dealing risk inside government creates scenarios where public office is used to enrich self, family, donors, or business networks. The only way to counter this is with mandatory disclosure of financial interests, real divestment or blind trusts, actual recusal requirements with teeth, and criminal and financial penalties for violations. Cooling-off periods must be robust enough that former officials cannot immediately monetize their insider knowledge and relationships with regulated industries.</p>
+<p>Looking forward, the biggest near-term threat is AI-enabled manipulation. Brennan warned in 2025 that AI did not fully disrupt the 2024 election, but its effects are likely to be greater going forward. Reuters reported that by March 2026, AI deepfakes were already blurring reality in U.S. midterm campaigns, with weak or patchwork regulation. That creates a new corruption vector: not just money buying ads, but money buying cheap, scalable, plausible deception. This is corruption becoming informational, not just financial—coordinated persuasion campaigns using AI to generate fake video, fake audio, fake testimonials, fake grassroots support, and synthetic media at industrial scale. A second future threat is that tech and AI firms can shape the rules before the public even understands the stakes. Reuters and other reporting show major industries are ramping up lobbying around AI policy, meaning the next generation of governance fights may be pre-captured by firms with the biggest lobbying budgets, data access, and platform control.</p>
+<p>The enforcement lesson from anti-corruption work generally is that a rule without credible enforcement becomes a speed bump. If you create an enforcement body, bad actors will test whether it is captured, deadlocked, underfunded, or politically intimidated. That is why enforcement architecture must include an independent anti-corruption enforcement body with protected funding that does not depend on partisan appropriations, subpoena power, mandatory public reporting, automatic triggers for investigation, criminal penalties and financial penalties, whistleblower protection, and structures that ensure enforcement does not deadlock or depend on partisan goodwill. Real-time or near-real-time disclosure is also critical, especially close to elections and for major issue campaigns. Existing reporting rules matter, but lagged transparency still leaves voters in the dark when it counts most—reporting that happens after an election often does not solve the democratic harm.</p>
+<p>This pillar also recognizes that concentration of private economic power can become a democratic-governance problem. Strengthening antitrust enforcement, breaking up monopolies, and preventing excessive consolidation in key industries, supply chains, and essential services is necessary to protect competition and small actors, and to limit the ability of a handful of corporations to dominate daily life, pricing, production quality, access, or distribution. When monopolistic power becomes entrenched, it translates directly into political influence that ordinary citizens cannot match.</p>
+<p>The pressure-test lessons that must be incorporated: "independent" spending is easy to fake through vendors, data, or informal signaling, so anti-coordination rules must be strict; shell-company and proxy-ownership rules must be closed tightly with beneficial ownership tracing; registered-lobbyist rules alone are not enough because shadow lobbying can replace them; anti-corruption rules must address "legal but corrupt" systems built around access and agenda control, not only explicit bribery; disclosure that arrives too late does not protect democracy; and AI and platform-based manipulation are future-proofing necessities, not optional extras. This pillar has been pressure-tested against current American weak points (record dark money, record lobbying, Citizens United loopholes, revolving door risks) and likely future threats (AI manipulation, tech-firm lobbying dominance, escalating influence spending in polarized systems). The result is a comprehensive framework that closes loopholes, regulates flows and networks rather than just channels, and builds enforcement structures capable of withstanding legal and political challenges.</p></div>
+</div>
+</section>
+<section class="bg-parchment ruled" id="pil-related">
+<div class="wrap" style="margin-bottom:0">
+  <h2 style="color:#2471a3">Related Pillars</h2>
+  <p style="font-size:.92rem;color:#666;margin-bottom:.5rem">These pillars intersect with and reinforce this one.</p>
+</div>
+<div class="wrap"><p>This pillar connects directly to <strong>Elections and Representation</strong> (campaign finance reform protects voting fairness), <strong>Executive Power</strong> (preventing self-dealing and emoluments violations), <strong>Judicial Reform</strong> (ensuring courts are not captured by moneyed interests), and <strong>Rights and Civil Liberties</strong> (protecting against government use of purchased data and information manipulation). The anti-monopoly provisions connect to <strong>Economic Security</strong> (concentration of corporate power affects affordability and wages). The foreign influence safeguards connect to <strong>National Security</strong> (protecting democratic integrity from external manipulation). Media transparency and AI disclosure connect to <strong>Information Integrity</strong> efforts across the framework.</p></div>
+<div class="wrap" style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap">
+  <a href="../foundations.html#clean-democracy" class="btn-primary" style="background:#2471a3">← Foundation II: Clean Democracy</a>
+  <a href="index.html" class="btn-primary" style="background:var(--navy)">All Pillars</a>
+</div>
+</section>
 <footer class="site-footer">
   <div class="wrap">
     <span class="footer-brand">American Renewal Project</span>
     <ul class="footer-links">
       <li><a href="../index.html">Home</a></li>
       <li><a href="../foundations.html">Foundations</a></li>
-      <li><a href="../pillars/index.html">Pillars</a></li>
+      <li><a href="index.html">Pillars</a></li>
       <li><a href="../compare/index.html">Compare</a></li>
     </ul>
     <span class="footer-note">A Third Bill of Rights for the 21st Century. · <a href="../about-ai.html" style="color:inherit;opacity:.7">On the Use of AI</a></span>
@@ -92,5 +403,25 @@
 </footer>
 <script src="../assets/js/data.js"></script>
 <script src="../assets/js/app.js"></script>
+<script>
+(function(){
+  var nav = document.getElementById('pil-snav');
+  if(!nav) return;
+  var links = nav.querySelectorAll('a[href^="#"]');
+  var sections = Array.from(links).map(function(a){
+    return document.querySelector(a.getAttribute('href'));
+  }).filter(Boolean);
+  function onScroll(){
+    var y = window.scrollY + 120;
+    var active = sections[0];
+    sections.forEach(function(s){ if(s.offsetTop <= y) active = s; });
+    links.forEach(function(a){
+      a.classList.toggle('active', a.getAttribute('href') === '#'+active.id);
+    });
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+})();
+</script>
 </body>
 </html>

@@ -6,6 +6,124 @@
 <title>Environment & Agriculture — American Renewal Project</title>
 <link rel="stylesheet" href="../assets/css/style.css">
 <link rel="icon" type="image/svg+xml" href="../assets/img/logo.svg">
+<style>
+/* ── Pillar page styles ─────────────────────────────────────── */
+.pil-snav {
+  position: sticky; top: 63px; z-index: 150;
+  background: var(--navy); border-bottom: 2px solid rgba(255,255,255,.12);
+  overflow-x: auto; white-space: nowrap;
+}
+.pil-snav ul { display:flex; gap:0; list-style:none; margin:0; padding:0; }
+.pil-snav a {
+  display:block; padding:.55rem 1.1rem; font-family:'Oswald',sans-serif;
+  font-size:.78rem; letter-spacing:.06em; text-transform:uppercase;
+  color:rgba(255,255,255,.62); text-decoration:none; transition:color .15s;
+}
+.pil-snav a:hover, .pil-snav a.active { color:#fff; }
+.pil-snav a.active { border-bottom:2px solid #c9952a; }
+
+/* ── Section layouts ────────────────────────────────────────── */
+.pil-intro { display:grid; grid-template-columns:1fr 1fr; gap:2rem; }
+@media(max-width:700px){ .pil-intro { grid-template-columns:1fr; } }
+
+.pil-intro h2 { font-size:1.1rem; text-transform:uppercase; letter-spacing:.08em; margin-bottom:.6rem; }
+.pil-intro p, .pil-intro li { font-size:1rem; line-height:1.75; }
+
+.problem-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:1.25rem; margin-top:1rem; }
+.problem-card {
+  background:#fff; border-radius:6px; padding:1.2rem 1.4rem;
+  border-left:4px solid #c9952a;
+  box-shadow:0 1px 4px rgba(0,0,0,.07);
+}
+.problem-card h3 { font-size:1rem; margin:0 0 .4rem; color:var(--navy); }
+.problem-card p  { font-size:.92rem; line-height:1.65; margin:0; color:#333; }
+
+.reform-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:1rem; margin-top:1rem; }
+.reform-card {
+  background:var(--navy); color:#fff; border-radius:6px;
+  padding:1.1rem 1.3rem; border-top:3px solid #c9952a;
+}
+.reform-card h3 { font-size:.95rem; margin:0 0 .4rem; color:#c9952a; text-transform:uppercase; letter-spacing:.04em; }
+.reform-card p  { font-size:.88rem; line-height:1.6; margin:0; color:rgba(255,255,255,.8); }
+
+/* ── Policy rules ───────────────────────────────────────────── */
+.policy-family { margin-bottom:2.5rem; }
+.family-header {
+  display:flex; align-items:baseline; gap:.8rem; margin-bottom:1rem;
+  padding-bottom:.5rem; border-bottom:2px solid #c9952a;
+}
+.family-code {
+  font-family:'Oswald',sans-serif; font-size:1.1rem;
+  color:#c9952a; min-width:3rem;
+}
+.family-title { font-size:1rem; font-weight:600; color:var(--ink); }
+.family-count { margin-left:auto; font-size:.8rem; color:#888; white-space:nowrap; }
+
+.rule-grid {
+  display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:.75rem;
+}
+.rule-card {
+  border-radius:5px; padding:.9rem 1rem;
+  background:#fff; border:1px solid #e0d8c8;
+  font-size:.88rem; line-height:1.55;
+}
+.rule-card.status-included { border-left:4px solid #1e8449; }
+.rule-card.status-updated  { border-left:4px solid #2471a3; }
+.rule-card.status-partial  { border-left:4px solid #c9952a; }
+.rule-card.status-missing  { border-left:4px solid #ccc; opacity:.72; }
+
+.rule-header { display:flex; align-items:center; gap:.5rem; margin-bottom:.35rem; }
+.rule-id { font-size:.72rem; color:#888; letter-spacing:.03em; }
+.rule-badge {
+  font-size:.68rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em;
+  padding:.12em .45em; border-radius:3px;
+}
+.status-included .rule-badge { background:#d4edda; color:#155724; }
+.status-updated  .rule-badge { background:#cce5ff; color:#004085; }
+.status-partial  .rule-badge { background:#fff3cd; color:#856404; }
+.status-missing  .rule-badge { background:#f0f0f0; color:#666; }
+
+.rule-title { font-weight:600; margin:.2rem 0 .2rem; color:var(--ink); }
+.rule-stmt  { font-size:.85rem; color:#444; margin:.15rem 0 0; }
+.rule-notes { font-size:.8rem; color:#666; font-style:italic; margin:.25rem 0 0; }
+
+/* ── Research section ───────────────────────────────────────── */
+.research-body h3 { font-size:1.05rem; color:#c9952a; margin:1.5rem 0 .4rem; }
+.research-body p  { line-height:1.8; font-size:.97rem; }
+
+/* ── Related pillars ────────────────────────────────────────── */
+.related-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:.85rem; margin-top:1rem; }
+.related-card {
+  background:var(--navy); color:#fff; border-radius:6px; padding:1rem;
+  text-decoration:none; transition:opacity .15s;
+}
+.related-card:hover { opacity:.82; }
+.related-card strong { display:block; font-size:.95rem; margin-bottom:.3rem; }
+.related-card span   { font-size:.8rem; color:rgba(255,255,255,.65); }
+
+/* ── Summary stats bar ──────────────────────────────────────── */
+.stats-bar {
+  display:flex; flex-wrap:wrap; gap:1.5rem; margin:1.2rem 0;
+  padding:1rem 1.2rem; background:#fff; border-radius:6px;
+  border:1px solid #e0d8c8;
+}
+.stat-item { text-align:center; }
+.stat-num { display:block; font-family:'Oswald',sans-serif; font-size:2rem; color:#c9952a; }
+.stat-label { font-size:.78rem; text-transform:uppercase; letter-spacing:.06em; color:#888; }
+
+/* ── Design logic accordion ─────────────────────────────────── */
+details.design-logic { margin-top:1rem; }
+details.design-logic summary {
+  cursor:pointer; font-weight:700; padding:.6rem .8rem;
+  background:rgba(0,0,0,.06); border-radius:4px; user-select:none;
+}
+details.design-logic[open] summary { border-radius:4px 4px 0 0; }
+details.design-logic .design-body { padding:.8rem 1rem; background:#fff; border:1px solid #e0d8c8; border-top:none; border-radius:0 0 4px 4px; }
+details.design-logic .design-body p { font-size:.93rem; line-height:1.75; }
+details.design-logic .design-body ul { padding-left:1.3rem; }
+details.design-logic .design-body li { font-size:.93rem; line-height:1.65; margin-bottom:.3rem; }
+</style>
+<style>:root { --accent-color: #c9952a; }</style>
 </head>
 <body>
 <nav class="site-nav">
@@ -18,13 +136,12 @@
     <ul class="nav-links">
       <li><a href="../index.html">Home</a></li>
       <li><a href="../foundations.html">Foundations</a></li>
-      <li><a href="../pillars/index.html">Pillars</a></li>
+      <li><a href="index.html">Pillars</a></li>
       <li><a href="../compare/index.html">Compare</a></li>
     </ul>
   </div>
 </nav>
-
-<div class="page-hero compact" style="border-bottom: 4px solid #c9952a">
+<div class="page-hero compact" style="border-bottom:4px solid #c9952a">
   <div class="hero-eyebrow">
     <a href="../foundations.html#freedom-to-thrive" style="color:rgba(255,255,255,.6);text-decoration:none">
       Foundation V: Freedom to Thrive
@@ -32,59 +149,329 @@
   </div>
   <h1 class="hero-title" style="font-size:clamp(1.8rem,5vw,2.8rem)">Environment & Agriculture</h1>
   <div class="hero-divider"><span>★ ★ ★</span></div>
-  <p class="hero-statement" style="font-size:1rem;max-width:620px;margin:0 auto">A livable planet and a food supply that is clean, safe, and fairly produced are non-negotiable.</p>
+  <p class="hero-statement" style="font-size:1rem;max-width:680px;margin:0 auto">Establish comprehensive environmental protection, pollution control, biodiversity preservation, and sustainable agriculture frameworks that address climate change, corporate accountability, and the full scope of human en</p>
 </div>
-
+<nav class="pil-snav" id="pil-snav"><ul><li><a href="#pil-intro">Overview</a></li><li><a href="#pil-problem">The Problem</a></li><li><a href="#pil-reform">Reform Areas</a></li><li><a href="#pil-policy">Policy Rules</a></li><li><a href="#pil-research">Research</a></li><li><a href="#pil-related">Related</a></li></ul></nav>
+<section class="bg-parchment ruled" id="pil-intro">
+<div class="wrap">
+  <div class="stats-bar">
+  <div class="stat-item"><span class="stat-num">15</span><span class="stat-label">Total Rules</span></div>
+  <div class="stat-item"><span class="stat-num" style="color:#1e8449">0</span><span class="stat-label">Active</span></div>
+  <div class="stat-item"><span class="stat-num" style="color:#c9952a">0</span><span class="stat-label">Partial</span></div>
+  <div class="stat-item"><span class="stat-num" style="color:#888">15</span><span class="stat-label">Proposed</span></div>
+</div>
+  <div class="pil-intro">
+    <div>
+      <h2 style="color:#c9952a;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.06em">Purpose</h2>
+      <p>Establish comprehensive environmental protection, pollution control, biodiversity preservation, and sustainable agriculture frameworks that address climate change, corporate accountability, and the full scope of human environmental impact from terrestrial ecosystems to orbital space.</p>
+    </div>
+    <div>
+      <h2 style="color:#c9952a;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.06em">Core Principle</h2>
+      <p>Environmental systems are interconnected and finite. Human activity must operate within ecological limits, internalize environmental costs rather than externalizing them onto ecosystems and future generations, and preserve biodiversity and planetary habitability as a precondition for all other human flourishing.</p>
+    </div>
+  </div>
+</div>
+</section>
+<section class="bg-dark on-dark ruled" id="pil-problem">
+<div class="wrap" style="margin-bottom:0">
+  <h2 style="color:#c9952a">The Problem It Solves</h2>
+</div>
+<div class="wrap"><p>Environmental policy in America suffers from fragmentation, regulatory capture, and systematic cost externalization:</p>
+<ol>
+<li><strong>Externalized costs</strong> — Corporations profit by shifting environmental costs onto the public: pollution cleanup is socialized, health impacts from air and water contamination fall on communities, climate change damages are borne by future generations, and ecosystem degradation undermines long-term productivity. Without forcing internalization of these costs, the market systematically underprices environmental harm.</li>
+</ol>
+<ol>
+<li><strong>Greenwashing and false claims</strong> — Companies make misleading environmental claims to gain competitive advantage without actually reducing harm. "Carbon neutral" claims based on questionable offsets, "sustainable" products that rely on destructive supply chains, and selective environmental reporting create false confidence while enabling continued environmental degradation.</li>
+</ol>
+<ol>
+<li><strong>Fragmented protections</strong> — Environmental policy treats air, water, soil, biodiversity, noise, light, and orbital space as separate domains rather than interconnected systems. Pollution regulations may address emissions without considering ecosystem impacts. Agriculture policy may incentivize production without addressing soil depletion or water contamination. Infrastructure development may proceed without protecting wildlife migration corridors. This fragmentation enables harm-shifting where addressing one problem creates others.</li>
+</ol>
+<ol>
+<li><strong>Industrial agriculture extraction</strong> — Modern industrial agriculture depletes soil, contaminates groundwater with pesticides and fertilizers, destroys biodiversity through monoculture, and contributes significantly to greenhouse gas emissions. Subsidies and market incentives favor extractive practices over regenerative approaches that build long-term productivity.</li>
+</ol>
+<p>Without comprehensive environmental governance that treats ecosystems as interconnected, requires internalization of costs, prevents greenwashing, and supports regenerative practices, we face accelerating ecological collapse that undermines the material basis for human civilization.</p></div>
+</section>
+<section class="bg-cream ruled" id="pil-reform">
+<div class="wrap" style="margin-bottom:0">
+  <h2 style="color:#c9952a">Key Reform Areas</h2>
+</div>
+<div class="wrap"><div class="reform-grid"><div class="reform-card"><h3>Strong national standards for noise and light pollution with monitoring and enforcement</h3><p></p></div>
+</div></div>
+</section>
 <section class="bg-parchment ruled">
 <div class="wrap">
-  <h2>Why This Matters</h2>
-  <p style="font-size:1.05rem;line-height:1.8">Climate change is not a future problem — it is the defining crisis of this century, already reshaping where people can live, what they can eat, and how severe the next disaster will be. Simultaneously, four companies now control most of the American food supply, and the farmers who grow that food are being squeezed out of existence.</p>
+  <details class="design-logic">
+    <summary>Design Logic — How These Rules Work Together</summary>
+    <div class="design-body"><p>This pillar addresses environmental protection at multiple scales:</p>
+<p><strong>Pollution as systemic harm</strong> — Pollution is not just a localized problem but a systemic transfer of costs from polluters to the public. Air pollution causes respiratory disease and premature death. Water contamination requires expensive remediation and harms ecosystems. Noise pollution disrupts wildlife and degrades quality of life. Light pollution disrupts ecosystems and astronomical research. Each represents a cost that polluters avoid by shifting it onto others. Strong national standards with monitoring and enforcement prevent this cost externalization by making polluters internalize the harm they cause.</p>
+<p><strong>Biodiversity as infrastructure</strong> — Biodiversity is not a luxury — it is the functional infrastructure of ecosystems that provide water filtration, pollination, pest control, soil formation, and climate regulation. When infrastructure (highways, railways) disrupts migration corridors and habitat continuity, it degrades this ecological infrastructure. Wildlife crossings (bridges, tunnels, underpasses designed for animal passage) reconnect fragmented habitats and restore ecosystem function. This is not sentimentality — it is maintenance of the natural systems that human activity depends on.</p>
+<p><strong>Corporate accountability and anti-greenwashing</strong> — Markets fail to address environmental harm because companies can gain competitive advantage through misleading claims. "Green" branding increases sales without requiring actual environmental improvement. Effective anti-greenwashing requires standardized, verifiable environmental reporting that prevents selective disclosure and false claims. Companies must disclose full environmental impact (energy, water, emissions, waste, supply chain impacts) using standardized metrics that enable comparison and prevent manipulation.</p>
+<p><strong>Regenerative agriculture as system transition</strong> — Industrial agriculture is extractive: it depletes soil, requires increasing chemical inputs, and degrades long-term productivity. Regenerative agriculture builds soil health, increases water retention, sequesters carbon, supports biodiversity, and improves long-term yields. Transitioning from extractive to regenerative agriculture requires policy support: research funding, technical assistance, market incentives for regenerative practices, and elimination of subsidies that favor extractive approaches. This is not anti-agriculture — it is a transition toward farming systems that are productive over centuries rather than decades.</p>
+<p><strong>Labor and education connections</strong> — Worker protections (4-day work week, overtime pay, productivity-sharing from automation) and education reforms (student loan relief, anti-indoctrination protections) appear in this pillar because the policy catalog groups them with ENV/AGR scope codes. This reflects the reality that environmental, labor, and education policies are interconnected: sustainable agriculture requires educated farmers and fair labor practices; environmental justice requires addressing how environmental harms disproportionately impact workers and low-income communities; education shapes environmental awareness and technical capacity for ecological restoration.</p>
+<p><strong>Orbital environment</strong> — The expansion of human activity into orbital space creates new environmental challenges: space junk threatens functional satellites and future space access; massive satellite constellations (Starlink, OneWeb) interfere with astronomical research and observation; orbital debris accumulates without removal mechanisms. Rules for orbital sanitation, satellite deployment standards, and environmental impact assessments for space systems prevent the replication of terrestrial environmental failures in space.</p></div>
+  </details>
 </div>
 </section>
-
-<section class="bg-dark on-dark ruled">
-<div class="wrap" style="display:grid;grid-template-columns:1fr 1fr;gap:2rem">
-  <div>
-    <h2 style="color:#c9952a">What It Demands</h2>
-    <ul style="list-style:disc;padding-left:1.2rem;color:rgba(255,255,255,.82)">
-        <li>Carbon pricing that makes the true cost of fossil fuels visible in the market, with revenue returned to households</li>
-        <li>Antitrust enforcement in agriculture: break up the four-company consolidation of meat, grain, and seed markets</li>
-        <li>Fully fund and enforce the Clean Water Act; prosecute industrial polluters, not just fine them</li>
-    </ul>
-  </div>
-  <div>
-    <h2 style="color:#c9952a">What It Rejects</h2>
-    <ul style="list-style:disc;padding-left:1.2rem;color:rgba(255,255,255,.82)">
-        <li>Environmental deregulation framed as economic freedom when it is simply the socialization of pollution costs</li>
-        <li>An agricultural system optimized for the profit margins of three or four companies at the expense of farmers, communities, and eaters</li>
-        <li>Climate denial or delay as policy</li>
-    </ul>
-  </div>
-</div>
-</section>
-
-<section class="bg-cream ruled">
+<section class="bg-cream ruled" id="pil-policy">
 <div class="wrap">
-  <h2>Key Policy Points</h2>
-  <ol style="padding-left:1.4rem;font-size:1rem;line-height:2">
-          <li>Carbon pricing and clean energy transition</li>
-          <li>Family farm protections</li>
-          <li>Clean water enforcement</li>
-  </ol>
-  <div style="margin-top:2.5rem;display:flex;gap:1rem;flex-wrap:wrap">
-    <a href="../foundations.html#freedom-to-thrive" class="btn-primary" style="background:#c9952a">← Foundation V: Freedom to Thrive</a>
-    <a href="index.html" class="btn-primary" style="background:var(--navy)">All Pillars</a>
+  <h2 style="color:#c9952a">Full Policy Platform</h2>
+  <p style="font-size:.95rem;color:#555;margin-bottom:1.5rem">
+    Every rule in this pillar, organized by policy area.
+    <strong style="color:#1e8449">Active</strong> rules are current platform commitments.
+    <strong style="color:#c9952a">Partial</strong> rules are in development.
+    <strong style="color:#888">Proposed</strong> rules are planned for future inclusion.
+  </p>
+  <div class="policy-family" id="fam-agr">
+  <div class="family-header">
+    <span class="family-code">AGR</span>
+    <span class="family-title">REG — Regenerative Agriculture</span>
+    <span class="family-count">0/1 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">AGR-REG-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Promote regenerative agriculture and sustainable farming practices</p>
+  
+  <p class="rule-notes">Regenerative agriculture transitions farming from extractive practices that deplete soil and require increasing chemical inputs toward practices that build long-term productivity and ecological health. Key regenerative practices include: - <strong>Cover cropping</strong> — Keeping soil covered year-round to prevent erosion, build organic matter, and support soil microbial life - <strong>Crop rotation</strong> — Alternating crops to break pest cycles, improve soil health, and reduce chemical dependency - <strong>Reduced tillage</strong> — Minimizing soil disturbance to preserve soil structure and carbon storage - <strong>Integrated livestock</strong> — Using grazing animals to cycle nutrients and manage vegetation - <strong>Agroforestry</strong> — Integrating trees and shrubs into farming systems for erosion control and biodiversity Regenerative agriculture sequesters carbon, increases water retention, reduces chemical runoff, supports biodiversity, and improves long-term yields. Transitioning requires policy support: - Research funding for regenerative techniques and outcomes - Technical assistance for farmers during transition - Market incentives for regenerative products (premium pricing, certification systems) - Elimination of subsidies favoring monoculture commodity production - Financial support during transition periods when yields may temporarily decrease - Education and training programs for regenerative practices This is not about reducing agricultural productivity — it is about building farming systems that remain productive over centuries rather than decades.</p>
+</div>
   </div>
 </div>
+<div class="policy-family" id="fam-edu">
+  <div class="family-header">
+    <span class="family-code">EDU</span>
+    <span class="family-title">FIN — Education Finance</span>
+    <span class="family-count">0/1 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">EDU-FIN-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Student loan debt forgiveness or large-scale restructuring</p>
+  
+  <p class="rule-notes">Student loan debt has reached crisis levels, forcing graduates into high-paying jobs regardless of social value and preventing career choices aligned with public service, environmental work, or community organizing. Broad federal student loan forgiveness addresses this by: - Reducing or eliminating unsustainable debt burdens that prevent economic mobility - Enabling career choices in fields like education, environmental protection, public health, and social services that serve public interest but are lower-paying - Addressing economic inequality where debt burdens fall disproportionately on students from low-income backgrounds - Correcting predatory lending practices that encouraged students to take on debt for low-return educational programs Debt relief must be paired with systemic restructuring to prevent re-accumulation of unsustainable debt. This includes: - Reducing or eliminating tuition at public colleges and universities - Regulating for-profit education institutions that produce poor outcomes - Expanding income-driven repayment programs with reasonable forgiveness timelines - Increasing direct federal funding for higher education to reduce reliance on tuition Student debt relief is an investment in human capital and enables a more educated workforce pursuing socially valuable work rather than being trapped by debt obligations.</p>
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-edu">
+  <div class="family-header">
+    <span class="family-code">EDU</span>
+    <span class="family-title">STD — Education Standards</span>
+    <span class="family-count">0/1 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">EDU-STD-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Education standards must include protections against political or ideological indoctrination</p>
+  
+  <p class="rule-notes">Education should cultivate critical thinking, evidence-based reasoning, and civic literacy rather than imposing partisan ideology or suppressing inconvenient facts. This rule protects against indoctrination from all directions: - Teaching scientific consensus (climate change, evolution, public health) without political interference or false "both sides" equivalence - Presenting accurate history including uncomfortable topics (slavery, genocide, civil rights struggles, labor movements) without ideological whitewashing - Developing critical thinking skills rather than requiring acceptance of particular political or religious viewpoints - Protecting teachers from retaliation for teaching evidence-based content that may conflict with political or religious ideology This is not about imposing "liberal" or "conservative" viewpoints — it is about protecting education from political manipulation. Students should learn to evaluate evidence, understand multiple perspectives, and form their own conclusions based on facts and reasoning. Protection against indoctrination includes: - Standards requiring evidence-based curriculum development - Protection for teachers who teach scientific consensus or historical facts - Prohibition of curriculum mandates that require teaching partisan political or religious ideology as fact - Transparency in curriculum development with input from educators, scientists, and historians rather than political appointees - Protection of academic freedom at all education levels</p>
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-env">
+  <div class="family-header">
+    <span class="family-code">ENV</span>
+    <span class="family-title">BIO — Biodiversity and Conservation</span>
+    <span class="family-count">0/2 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">ENV-BIO-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Protect and restore migratory patterns for animals through infrastructure and land-use planning</p>
+  
+  <p class="rule-notes">Many species require large territories or migrate seasonally between breeding and feeding grounds. Infrastructure development (highways, railways, urban expansion) fragments habitats and disrupts migration routes, isolating populations, reducing genetic diversity, and degrading ecosystem function. This rule requires: - Infrastructure planning that considers wildlife migration corridors and habitat connectivity - Protection of critical migration routes and wildlife corridors through land-use planning - Coordination between federal, state, and local authorities to maintain habitat connectivity across jurisdictions - Requirements for wildlife impact assessments before major infrastructure projects - Restoration of degraded migration corridors through habitat reconnection projects Maintaining wildlife migration is not sentimental — it preserves ecosystem functions like pollination, seed dispersal, nutrient cycling, and predator-prey relationships that agriculture and human communities depend on.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">ENV-BIO-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Require wildlife crossings including bridges tunnels and related infrastructure where highways or railways disrupt migration routes and habitat continuity</p>
+  
+  <p class="rule-notes">Wildlife crossings are bridges, tunnels, underpasses, and culverts designed to allow animals to safely cross highways and railways. They are cost-effective: a wildlife overpass costs $3–5 million but prevents millions in vehicle-wildlife collisions, preserves ecosystem connectivity, maintains genetic diversity, and reduces roadkill. Effective wildlife crossings require: - Identification of high-collision areas and critical migration corridors - Design appropriate to target species (large mammals need different structures than amphibians) - Fencing to guide animals to crossings rather than attempting to cross highways directly - Vegetation and terrain design that makes crossings attractive to wildlife - Monitoring to assess effectiveness and inform future designs Countries like the Netherlands and Canada have implemented extensive wildlife crossing systems with documented success. In Banff National Park, wildlife crossings reduced collisions by over 80% while maintaining population connectivity. This is proven, cost-effective infrastructure that should be standard practice.</p>
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-env">
+  <div class="family-header">
+    <span class="family-code">ENV</span>
+    <span class="family-title">COR — Corporate Environmental Accountability</span>
+    <span class="family-count">0/2 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">ENV-COR-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Establish general anti-greenwashing standards prohibiting false misleading or selectively incomplete environmental claims by companies organizations or public entities</p>
+  
+  <p class="rule-notes">Greenwashing allows companies to gain competitive advantage through misleading environmental claims without reducing actual harm. Common greenwashing tactics include: - <strong>False carbon neutrality</strong> — Claiming "carbon neutral" based on questionable offsets (tree-planting that may not succeed, offsets that would have occurred anyway) while continuing high emissions - <strong>Selective disclosure</strong> — Highlighting minor environmental improvements while hiding larger impacts - <strong>Vague claims</strong> — Using terms like "eco-friendly," "sustainable," or "green" without specific, verifiable meaning - <strong>Hidden tradeoffs</strong> — Reducing one impact (switching from plastic to paper packaging) while increasing others (deforestation, higher carbon footprint from production) - <strong>Misleading imagery</strong> — Using nature imagery and green coloring to suggest environmental benefits that do not exist Effective anti-greenwashing prohibits: - False environmental claims (stating something is "biodegradable" when it requires specific industrial composting conditions) - Misleading claims (implying carbon neutrality through offsets while increasing absolute emissions) - Selectively incomplete claims (highlighting recycled content while hiding toxic manufacturing processes) - Unverifiable claims ("sustainable" without specific, measurable standards) Enforcement requires clear standards, mandatory reporting, and meaningful penalties that exceed the competitive advantage gained from greenwashing.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">ENV-COR-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Require standardized verifiable environmental reporting to support anti-greenwashing enforcement across industries</p>
+  
+  <p class="rule-notes">Anti-greenwashing enforcement requires companies to disclose comprehensive environmental impact using standardized, verifiable metrics. This prevents selective reporting and enables meaningful comparison. Required disclosures should include: - <strong>Energy consumption</strong> — Total energy use by source (fossil fuels, renewable, nuclear) across full operations including supply chain - <strong>Water usage</strong> — Total water consumption, sources, discharge water quality, impact on local water resources - <strong>Emissions</strong> — Greenhouse gas emissions across all scopes (direct emissions, purchased energy, supply chain and product use) - <strong>Waste generation</strong> — Total waste by type, disposal methods, recycling and reuse rates - <strong>Supply chain impacts</strong> — Environmental impacts of upstream suppliers and raw material extraction - <strong>Product lifecycle</strong> — Environmental impacts of product use and end-of-life disposal Reporting must be: - <strong>Standardized</strong> — Using common metrics and methodologies to enable comparison - <strong>Verifiable</strong> — Subject to independent audit and validation - <strong>Comprehensive</strong> — Covering full lifecycle impacts, not just convenient highlights - <strong>Public</strong> — Accessible to consumers, researchers, and regulators - <strong>Regular</strong> — Updated annually or more frequently for real-time accountability This does not require perfection — it requires honesty. Companies can disclose high environmental impact if they are working to reduce it. The prohibition is on hiding, misrepresenting, or selectively disclosing impacts to gain unfair advantage.</p>
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-env">
+  <div class="family-header">
+    <span class="family-code">ENV</span>
+    <span class="family-title">POL — Pollution Control</span>
+    <span class="family-count">0/2 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">ENV-POL-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Establish stronger national standards to reduce and monitor noise pollution</p>
+  
+  <p class="rule-notes">Noise pollution from highways, airports, industrial facilities, railways, and data centers (including AI data centers with loud cooling systems) imposes significant costs on communities: - Health impacts: sleep disruption, cardiovascular stress, cognitive impairment in children - Economic impacts: reduced property values, decreased productivity, healthcare costs - Quality of life degradation: inability to enjoy outdoor spaces, constant background noise Current noise regulation is fragmented and often delegated to local jurisdictions, creating sacrifice zones where communities bear excessive noise burdens. Strong national standards prevent localities from becoming dumping grounds for noise externalities. Standards should cover: - <strong>Transportation noise</strong> — Highways, railways, airports with noise mitigation requirements (sound barriers, route planning, operational restrictions) - <strong>Industrial noise</strong> — Manufacturing, data centers, extraction operations with limits on noise emissions and requirements for mitigation - <strong>Construction noise</strong> — Time restrictions, equipment standards, mitigation requirements - <strong>Commercial noise</strong> — Limits on outdoor amplification, delivery hours, mechanical equipment Enforcement requires: - Noise monitoring systems in affected areas - Complaint mechanisms with responsive enforcement - Penalties for violations that exceed mitigation costs - Requirements for noise impact assessments before new development Noise pollution is preventable through design, technology, and operational practices. National standards ensure that these measures are implemented rather than noise costs being externalized onto communities.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">ENV-POL-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Establish stronger national standards to reduce and monitor light pollution</p>
+  
+  <p class="rule-notes">Light pollution from excessive outdoor lighting disrupts ecosystems and human activities: - <strong>Ecosystem disruption</strong> — Bird migration routes disrupted by urban light, insect populations collapse from attraction to artificial light, nocturnal predator-prey relationships disrupted, plant phenology (seasonal timing) thrown off by artificial light - <strong>Astronomical interference</strong> — Ground-based telescopes increasingly unusable due to skyglow, professional and amateur astronomy degraded, loss of cultural and scientific connection to night sky - <strong>Human health impacts</strong> — Sleep disruption from excessive outdoor lighting, circadian rhythm disruption linked to health problems - <strong>Energy waste</strong> — Billions spent on unnecessary or poorly designed outdoor lighting National standards for outdoor lighting can reduce these harms without eliminating necessary illumination: - <strong>Shielding requirements</strong> — Light fixtures must direct light downward rather than horizontally or upward (reducing skyglow and glare) - <strong>Intensity limits</strong> — Restrictions on overlighting (parking lots, building facades, billboards) - <strong>Timing controls</strong> — Reduced lighting intensity or complete shutdown during late-night hours when activity is minimal - <strong>Color temperature standards</strong> — Limiting blue-spectrum light that is particularly disruptive to ecosystems and astronomy Effective outdoor lighting for safety and navigation does not require wasteful, poorly designed systems that light the sky rather than the ground. Standards should be developed in coordination with: - Dark sky advocates and astronomical community - Ecologists studying wildlife impacts - Lighting engineers and designers - Municipal planning authorities - Energy efficiency experts</p>
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-env">
+  <div class="family-header">
+    <span class="family-code">ENV</span>
+    <span class="family-title">SPC — Space and Orbital Environment</span>
+    <span class="family-count">0/3 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">ENV-SPC-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Establish rules for orbital sanitation and removal or mitigation of space junk</p>
+  
+  <p class="rule-notes">Space debris (defunct satellites, rocket stages, collision fragments) accumulates in orbital space and threatens functional satellites, space stations, and future space access. Without removal mechanisms, orbital debris will continue to accumulate until densely used orbits become unusable (Kessler syndrome — cascading collisions create exponentially increasing debris). Orbital sanitation requires: - <strong>Active debris removal</strong> — Development and deployment of systems to capture and de-orbit large debris objects - <strong>Mandatory de-orbiting</strong> — Requirements for satellites and rocket stages to de-orbit at end of life (either controlled descent or orbital decay within specified timeframe) - <strong>Collision avoidance</strong> — Requirements for tracking, notification, and maneuvering to avoid debris collisions - <strong>Design standards</strong> — Requirements for satellites to be designed for end-of-life disposal (passivation to prevent explosions, de-orbiting capability) - <strong>Liability for debris creation</strong> — Operators responsible for costs of debris removal and damages from debris collisions - <strong>International coordination</strong> — Orbital debris is a global commons problem requiring international treaties and coordination This is not hypothetical — the International Space Station regularly maneuvers to avoid debris, operational satellites are increasingly threatened, and the number of debris objects is growing exponentially. Rules for orbital sanitation are urgent to prevent loss of space access.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">ENV-SPC-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Require stronger regulation of private satellite deployment to prevent interference with scientific research astronomy and observation</p>
+  
+  <p class="rule-notes">Massive satellite constellations (Starlink planning 40,000+ satellites, OneWeb, Amazon Kuiper, others) create multiple forms of interference with astronomical research: - <strong>Optical interference</strong> — Satellites create bright streaks across telescope images, contaminating observations - <strong>Radio interference</strong> — Satellite downlinks interfere with radio telescope observations across multiple frequency bands - <strong>Orbital crowding</strong> — Large constellations restrict orbital access and increase collision risk While satellite internet provides valuable services, deployment must be regulated to prevent irreversible harm to scientific research: - <strong>Brightness limits</strong> — Requirements for satellites to minimize reflectivity (dark coatings, orientation to minimize sun reflection) - <strong>Radio coordination</strong> — Frequency allocation that protects radio astronomy bands from interference - <strong>Constellation size limits</strong> — Caps on number of satellites to prevent orbital crowding and collision risk - <strong>Deployment coordination</strong> — Requirement for consultation with astronomical community before approval - <strong>Environmental impact assessments</strong> — Comprehensive assessment of impacts on astronomy, orbital debris risk, and atmospheric reentry pollution before large constellation approval Current FCC approval processes do not adequately consider astronomical impacts. By the time harm is evident, tens of thousands of satellites may be deployed. Stronger regulation must occur before deployment, not as attempted remediation afterward.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">ENV-SPC-003</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Private satellite systems must meet environmental scientific and orbital-safety standards before approval and expansion</p>
+  
+  <p class="rule-notes">This rule establishes comprehensive standards for satellite system approval covering: - Atmospheric reentry pollution impacts from large numbers of satellites burning up - Manufacturing environmental footprint (energy, materials, toxic chemicals) - Launch environmental impacts (rocket emissions, noise pollution, safety risks) - Optical brightness limits and mitigation requirements - Radio frequency interference protections for research bands - Coordination requirements with astronomical community - Debris creation risk assessment and mitigation - Collision avoidance capability and coordination - End-of-life disposal plans and enforcement - Insurance and liability for debris and collisions Approval should be conditional on: - Demonstrated compliance with standards - Independent scientific review of impacts - Ongoing monitoring and compliance enforcement - Ability to revoke approval or halt expansion for non-compliance Expansion of existing systems (adding thousands more satellites to existing constellations) should require renewed approval demonstrating continued compliance with standards. This prevents the lock-in problem where companies deploy thousands of satellites rapidly before regulation can respond, then argue that removal would be impractical or economically harmful.</p>
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-lab">
+  <div class="family-header">
+    <span class="family-code">LAB</span>
+    <span class="family-title">WRK — Worker Protections and Labor Standards</span>
+    <span class="family-count">0/3 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">LAB-WRK-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Establish a standard 4-day 32-hour work week without reduction in pay</p>
+  
+  <p class="rule-notes">Productivity gains from automation, AI, and technological advancement have not been shared with workers through reduced working hours. Instead, productivity gains are captured as profit or as pressure for increased output. A 4-day, 32-hour work week shares productivity gains with workers while maintaining or increasing pay. Benefits include: - <strong>Worker wellbeing</strong> — Reduced stress, better work-life balance, improved physical and mental health - <strong>Economic stimulus</strong> — Increased consumer spending and leisure activity - <strong>Employment</strong> — More jobs as companies hire additional workers to cover shifts - <strong>Productivity</strong> — Studies show productivity often increases with reduced hours due to improved focus, reduced burnout, and better morale - <strong>Sustainability</strong> — Reduced consumption pressure, more time for non-market activities (civic participation, community building, environmental stewardship) Implementation can be phased: - Initial standards apply to large companies and government employment - Gradual expansion to smaller businesses with support during transition - Sector-specific variations where needed (healthcare, emergency services) - Overtime rules adjusted to reflect new standard (overtime after 32 hours) This is not about working less — it is about sharing the benefits of productivity gains. When automation and AI increase output per worker, workers should benefit through reduced hours rather than just through higher profits for capital.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">LAB-WRK-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Productivity gains from AI and automation must benefit workers through reduced working hours rather than increased workload</p>
+  
+  <p class="rule-notes">AI and automation enable workers to produce more output in less time. Without policy intervention, these gains are captured as: - <strong>Increased profit</strong> — Companies capture productivity gains without sharing with workers - <strong>Increased workload</strong> — Workers are expected to use AI/automation to produce more output in the same time rather than same output in less time - <strong>Job elimination</strong> — Automation displaces workers without sharing gains with remaining workers or creating new opportunities This rule requires that productivity gains from AI and automation benefit workers through reduced working hours. Mechanisms include: - Linking work hour reductions to demonstrated productivity gains from AI/automation adoption - Negotiation frameworks where workers share in benefits of automation through reduced hours, increased pay, or both - Protection against workload intensification where AI tools are used to increase expected output without reducing hours - Requirements for companies to assess automation impacts on workers and negotiate transition plans This is about ensuring that technological progress benefits workers rather than just extracting more labor. If AI enables a task that previously took 40 hours to be completed in 32 hours, workers should work 32 hours at the same or higher pay, not work 40 hours doing more tasks.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">LAB-WRK-003</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Guarantee overtime pay protections for all workers including salaried employees subject to defined thresholds and safeguards</p>
+  
+  <p class="rule-notes">Overtime pay requirements currently exempt many salaried employees, enabling exploitation where workers are classified as "salaried" to avoid overtime requirements while being expected to work 50–60+ hours per week. This rule extends overtime protections to salaried employees with appropriate thresholds: - Salary level — Overtime protections apply to salaried employees below a specified income threshold (e.g., $100,000), adjusted for inflation and regional cost of living - Actual duties — Exemption requires genuine executive, administrative, or professional duties, not just job title - Industry standards — Sector-specific thresholds reflecting typical compensation patterns - Time-and-a-half pay for hours beyond standard work week (32 hours under 4-day week, or phased transition) - Prohibition of coerced overtime (workers can refuse excessive overtime without retaliation) - Limits on total hours (e.g., maximum 50–60 hours per week including overtime) to prevent exploitation - Requirements for accurate time tracking even for salaried employees - Whistleblower protections for reporting violations - Private right of action for workers to sue for unpaid overtime - Penalties for misclassification and wage theft This prevents the exploitation where workers are given "manager" titles without management authority, paid low salaries, and expected to work unlimited hours without overtime pay. This pillar contains <strong>15 formalized rules</strong> across four scope codes: - <strong>AGR (Agriculture):</strong> 1 rule — Regenerative agriculture promotion - <strong>EDU (Education):</strong> 2 rules — Student loan forgiveness, anti-indoctrination protections - <strong>ENV (Environment):</strong> 9 rules — Biodiversity protection (2), corporate accountability (2), pollution control (2), orbital environment (3) - <strong>LAB (Labor):</strong> 3 rules — 4-day work week, automation productivity-sharing, overtime protections These rules reflect the interconnected nature of environmental, labor, and education policies. Environmental protection requires addressing how corporate power externalizes costs, how labor practices shape environmental impacts, and how education influences capacity for ecological restoration and civic engagement in environmental governance.</p>
+</div>
+  </div>
+</div>
+</div>
 </section>
-
+<section class="bg-dark on-dark ruled" id="pil-research">
+<div class="wrap">
+  <h2 style="color:#c9952a">Research & Context</h2>
+  <div class="research-body" style="color:rgba(255,255,255,.85)"><p>Environmental policy has historically treated pollution, conservation, and resource management as separate domains. The Clean Air Act addresses air pollution, the Clean Water Act addresses water contamination, the Endangered Species Act addresses biodiversity loss, but these are implemented through separate agencies with limited coordination. This fragmentation enables harm-shifting: reducing air emissions by shifting to processes that increase water contamination, protecting individual species without addressing habitat fragmentation, addressing point-source pollution while ignoring diffuse agricultural runoff.</p>
+<p>A systems approach recognizes that environmental harms are interconnected. Air pollution contributes to climate change which disrupts ecosystems and threatens biodiversity. Water contamination from agricultural runoff creates dead zones in rivers and coastal areas. Habitat fragmentation from infrastructure development disrupts ecosystem function and accelerates species loss. Light pollution disrupts wildlife behavior (bird migration, insect reproduction, predator-prey relationships) and interferes with astronomical observation. Noise pollution from data centers, highways, and industrial operations degrades quality of life and disrupts wildlife communication and navigation. Space debris from satellite deployments threatens functional satellites and future space access. Each of these harms imposes costs that are not reflected in market prices, creating systematic underpricing of environmental destruction.</p>
+<p>The concept of "pollution" must expand beyond traditional toxins to include noise, light, orbital debris, and other forms of environmental degradation that impose costs on others. Noise pollution from highways, airports, industrial facilities, and data centers (including AI data centers with loud cooling systems) disrupts sleep, increases stress, and degrades property values. Strong national standards with monitoring and enforcement prevent localities from becoming sacrifice zones where industry externalizes noise costs onto residents. Light pollution from excessive outdoor lighting disrupts ecosystems (bird migration routes are thrown off by urban light, insect populations collapse from attraction to artificial light, nocturnal predators lose hunting advantages) and interferes with astronomical research (ground-based telescopes are increasingly unusable due to light pollution). National standards for outdoor lighting (shielding, intensity limits, timing controls) reduce these harms without eliminating necessary illumination.</p>
+<p>Wildlife migration and habitat continuity are critical to ecosystem function. Many species require large territories or migrate seasonally between breeding and feeding grounds. When highways, railways, and urban development fragment habitats, they isolate populations, reduce genetic diversity, and disrupt ecosystem functions like seed dispersal and nutrient cycling. Wildlife crossings — bridges, tunnels, and underpasses designed for animal passage — reconnect fragmented habitats. These are cost-effective: a wildlife overpass costs $3–5 million but prevents millions in vehicle-wildlife collisions, preserves ecosystem function, and maintains biodiversity. Infrastructure planning must incorporate wildlife crossing requirements where highways or railways disrupt migration routes.</p>
+<p>Corporate environmental accountability requires addressing greenwashing — misleading environmental claims that allow companies to gain competitive advantage without reducing harm. "Carbon neutral" claims often rely on questionable offsets (paying to plant trees that may not survive or that would have been planted anyway) rather than reducing emissions. "Sustainable" labels are applied to products with destructive supply chains. "Eco-friendly" branding is used for products with marginal environmental improvements while ignoring larger impacts. Effective anti-greenwashing requires three elements: prohibition of false, misleading, or selectively incomplete environmental claims; standardized environmental reporting using verifiable metrics; and enforcement mechanisms with meaningful penalties for violations. Companies must disclose full environmental impact (energy use, water consumption, emissions, waste generation, supply chain impacts) using standardized metrics that enable comparison and prevent selective reporting.</p>
+<p>Regenerative agriculture is a transition away from extractive industrial farming toward practices that build long-term productivity. Industrial agriculture depletes soil through monoculture and heavy tillage, requires increasing chemical inputs to maintain yields, contaminates groundwater with pesticides and fertilizers, and contributes significantly to greenhouse gas emissions. Regenerative agriculture uses practices like cover cropping (keeping soil covered year-round to prevent erosion and build organic matter), crop rotation (alternating crops to break pest cycles and improve soil health), reduced tillage (minimizing soil disturbance to preserve structure and microbial life), and integrated livestock (using grazing animals to cycle nutrients and manage vegetation). These practices build soil organic matter, increase water retention, sequester carbon, support biodiversity, reduce chemical inputs, and improve long-term yields. Transitioning requires policy support: research funding for regenerative techniques, technical assistance for farmers, market incentives for regenerative products, elimination of subsidies that favor monoculture commodity production, and support for farmers during the transition period when yields may temporarily decrease.</p>
+<p>The labor rules grouped with environmental policy (LAB-WRK-001, LAB-WRK-002, LAB-WRK-003) reflect the interconnection between environmental and labor justice. Environmental harms disproportionately impact workers: farmworkers are exposed to pesticides, industrial workers face toxic chemicals, low-income communities are located near polluting facilities. Environmental justice requires addressing these disparities. The 4-day work week and productivity-sharing from automation also connect to environmental sustainability: reducing working hours reduces consumption pressure and enables time for non-market activities like civic participation, community building, and environmental stewardship. When productivity gains from AI and automation are captured entirely by capital rather than shared with workers through reduced hours, it drives consumption-based growth that increases environmental pressure. Sharing productivity gains through reduced working hours without pay reduction enables sustainable prosperity rather than endless growth.</p>
+<p>The education rules (EDU-FIN-001, EDU-STD-001) connect to environmental policy through educational content and access. Student loan debt forces graduates into high-paying jobs regardless of social value, reducing capacity for environmental work, public service, or community organizing. Debt relief enables career choices aligned with social and environmental priorities. Anti-indoctrination protections ensure that education includes accurate environmental science without political interference — critical for developing the informed citizenry necessary for environmental governance.</p>
+<p>Orbital space is an emerging environmental domain. Satellite constellations like Starlink (planned for 40,000+ satellites) create multiple harms: space debris from collisions and failed satellites threatens functional satellites and future space access; satellite light pollution interferes with astronomical observation (streaks across telescope images, radio interference with radio telescopes); orbital debris accumulates without natural removal mechanisms. Rules for orbital sanitation (debris removal, de-orbiting requirements for defunct satellites), satellite deployment standards (environmental and scientific impact assessments before approval, limits on constellation size, coordination with astronomical community), and orbital safety requirements prevent the replication of terrestrial environmental failures in space. This is not anti-technology — it is ensuring that space development is sustainable rather than creating an orbital debris field that makes space unusable.</p>
+<p>One critical question is the relationship between environmental protection and economic development. Industry arguments against regulation consistently claim that environmental protections destroy jobs and economic growth. Historical evidence contradicts this: the Clean Air Act and Clean Water Act produced enormous public health benefits while the economy continued to grow. Pollution controls force internalization of costs that were previously externalized, creating a level playing field where companies cannot gain advantage by poisoning communities. Regenerative agriculture is more labor-intensive than industrial agriculture but produces higher-value products and builds long-term productivity. Wildlife crossings prevent millions in vehicle-collision costs. The choice is not between environment and economy but between sustainable prosperity and extractive decline.</p>
+<p>Another critical question is enforcement. Environmental regulations are only effective if they are monitored and enforced. Industry systematically underfunds enforcement by lobbying to reduce agency budgets, challenging regulations in court, and gaming reporting requirements. Effective enforcement requires adequate agency funding, whistleblower protections, citizen suit provisions allowing public enforcement where agencies fail to act, and meaningful penalties that exceed the cost of compliance.</p>
+<p>This pillar connects to multiple other policy domains: infrastructure (transportation, energy, water systems), public health (air and water quality impacts), economic policy (subsidies, market incentives, pricing mechanisms), technology (monitoring systems, renewable energy), and democratic accountability (transparency, public participation in environmental decisions).</p></div>
+</div>
+</section>
+<section class="bg-parchment ruled" id="pil-related">
+<div class="wrap" style="margin-bottom:0">
+  <h2 style="color:#c9952a">Related Pillars</h2>
+  <p style="font-size:.92rem;color:#666;margin-bottom:.5rem">These pillars intersect with and reinforce this one.</p>
+</div>
+<div class="wrap"><div class="related-grid"><a href="infrastructure-and-transportation.html" class="related-card"><strong>Infrastructure and Transportation</strong><span>— Wildlife crossings, rail modernization, public transit expansion, grid modernization</span></a>
+<a href="taxation-and-wealth.html" class="related-card"><strong>Taxation and Wealth</strong><span>— Environmental taxation, elimination of fossil fuel subsidies, pricing mechanisms that internalize environmental costs</span></a>
+<a href="technology-and-ai.html" class="related-card"><strong>Technology and AI</strong><span>— AI energy consumption, data center environmental impact, satellite deployment regulation</span></a>
+<a href="anti-corruption-and-concentrated-power.html" class="related-card"><strong>Anti-Corruption and Concentrated Power</strong><span>— Industry capture of environmental agencies, lobbying influence on environmental policy</span></a>
+<a href="public-health.html" class="related-card"><strong>Public Health</strong><span>— Air and water quality impacts on health outcomes, environmental justice and health disparities</span></a>
+<a href="rights-and-civil-liberties.html" class="related-card"><strong>Rights and Civil Liberties</strong><span>— Environmental justice, right to clean air and water, protection of future generations</span></a>
+<a href="economic-security.html" class="related-card"><strong>Economic Security</strong><span>— Regenerative agriculture transitions, worker protections, education access</span></a>
+</div></div>
+<div class="wrap" style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap">
+  <a href="../foundations.html#freedom-to-thrive" class="btn-primary" style="background:#c9952a">← Foundation V: Freedom to Thrive</a>
+  <a href="index.html" class="btn-primary" style="background:var(--navy)">All Pillars</a>
+</div>
+</section>
 <footer class="site-footer">
   <div class="wrap">
     <span class="footer-brand">American Renewal Project</span>
     <ul class="footer-links">
       <li><a href="../index.html">Home</a></li>
       <li><a href="../foundations.html">Foundations</a></li>
-      <li><a href="../pillars/index.html">Pillars</a></li>
+      <li><a href="index.html">Pillars</a></li>
       <li><a href="../compare/index.html">Compare</a></li>
     </ul>
     <span class="footer-note">A Third Bill of Rights for the 21st Century. · <a href="../about-ai.html" style="color:inherit;opacity:.7">On the Use of AI</a></span>
@@ -92,5 +479,25 @@
 </footer>
 <script src="../assets/js/data.js"></script>
 <script src="../assets/js/app.js"></script>
+<script>
+(function(){
+  var nav = document.getElementById('pil-snav');
+  if(!nav) return;
+  var links = nav.querySelectorAll('a[href^="#"]');
+  var sections = Array.from(links).map(function(a){
+    return document.querySelector(a.getAttribute('href'));
+  }).filter(Boolean);
+  function onScroll(){
+    var y = window.scrollY + 120;
+    var active = sections[0];
+    sections.forEach(function(s){ if(s.offsetTop <= y) active = s; });
+    links.forEach(function(a){
+      a.classList.toggle('active', a.getAttribute('href') === '#'+active.id);
+    });
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+})();
+</script>
 </body>
 </html>

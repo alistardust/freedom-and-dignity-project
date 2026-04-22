@@ -159,13 +159,12 @@ for (const { slug, title } of SAMPLE_PILLARS) {
       await expect(page).toHaveTitle(new RegExp(title.split(' ')[0], 'i'));
     });
 
-    test('has Why This Matters section', async ({ page }) => {
-      await expect(page.locator('text=Why This Matters')).toBeVisible();
+    test('has Purpose section', async ({ page }) => {
+      await expect(page.locator('#pil-intro')).toBeVisible();
     });
 
-    test('has What It Demands and What It Rejects sections', async ({ page }) => {
-      await expect(page.locator('text=What It Demands')).toBeVisible();
-      await expect(page.locator('text=What It Rejects')).toBeVisible();
+    test('has Full Policy Platform section', async ({ page }) => {
+      await expect(page.locator('#pil-policy')).toBeVisible();
     });
 
     test('has back link to foundations', async ({ page }) => {

@@ -6,6 +6,124 @@
 <title>Gun Policy — American Renewal Project</title>
 <link rel="stylesheet" href="../assets/css/style.css">
 <link rel="icon" type="image/svg+xml" href="../assets/img/logo.svg">
+<style>
+/* ── Pillar page styles ─────────────────────────────────────── */
+.pil-snav {
+  position: sticky; top: 63px; z-index: 150;
+  background: var(--navy); border-bottom: 2px solid rgba(255,255,255,.12);
+  overflow-x: auto; white-space: nowrap;
+}
+.pil-snav ul { display:flex; gap:0; list-style:none; margin:0; padding:0; }
+.pil-snav a {
+  display:block; padding:.55rem 1.1rem; font-family:'Oswald',sans-serif;
+  font-size:.78rem; letter-spacing:.06em; text-transform:uppercase;
+  color:rgba(255,255,255,.62); text-decoration:none; transition:color .15s;
+}
+.pil-snav a:hover, .pil-snav a.active { color:#fff; }
+.pil-snav a.active { border-bottom:2px solid #7d3c98; }
+
+/* ── Section layouts ────────────────────────────────────────── */
+.pil-intro { display:grid; grid-template-columns:1fr 1fr; gap:2rem; }
+@media(max-width:700px){ .pil-intro { grid-template-columns:1fr; } }
+
+.pil-intro h2 { font-size:1.1rem; text-transform:uppercase; letter-spacing:.08em; margin-bottom:.6rem; }
+.pil-intro p, .pil-intro li { font-size:1rem; line-height:1.75; }
+
+.problem-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:1.25rem; margin-top:1rem; }
+.problem-card {
+  background:#fff; border-radius:6px; padding:1.2rem 1.4rem;
+  border-left:4px solid #7d3c98;
+  box-shadow:0 1px 4px rgba(0,0,0,.07);
+}
+.problem-card h3 { font-size:1rem; margin:0 0 .4rem; color:var(--navy); }
+.problem-card p  { font-size:.92rem; line-height:1.65; margin:0; color:#333; }
+
+.reform-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:1rem; margin-top:1rem; }
+.reform-card {
+  background:var(--navy); color:#fff; border-radius:6px;
+  padding:1.1rem 1.3rem; border-top:3px solid #7d3c98;
+}
+.reform-card h3 { font-size:.95rem; margin:0 0 .4rem; color:#7d3c98; text-transform:uppercase; letter-spacing:.04em; }
+.reform-card p  { font-size:.88rem; line-height:1.6; margin:0; color:rgba(255,255,255,.8); }
+
+/* ── Policy rules ───────────────────────────────────────────── */
+.policy-family { margin-bottom:2.5rem; }
+.family-header {
+  display:flex; align-items:baseline; gap:.8rem; margin-bottom:1rem;
+  padding-bottom:.5rem; border-bottom:2px solid #7d3c98;
+}
+.family-code {
+  font-family:'Oswald',sans-serif; font-size:1.1rem;
+  color:#7d3c98; min-width:3rem;
+}
+.family-title { font-size:1rem; font-weight:600; color:var(--ink); }
+.family-count { margin-left:auto; font-size:.8rem; color:#888; white-space:nowrap; }
+
+.rule-grid {
+  display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:.75rem;
+}
+.rule-card {
+  border-radius:5px; padding:.9rem 1rem;
+  background:#fff; border:1px solid #e0d8c8;
+  font-size:.88rem; line-height:1.55;
+}
+.rule-card.status-included { border-left:4px solid #1e8449; }
+.rule-card.status-updated  { border-left:4px solid #2471a3; }
+.rule-card.status-partial  { border-left:4px solid #c9952a; }
+.rule-card.status-missing  { border-left:4px solid #ccc; opacity:.72; }
+
+.rule-header { display:flex; align-items:center; gap:.5rem; margin-bottom:.35rem; }
+.rule-id { font-size:.72rem; color:#888; letter-spacing:.03em; }
+.rule-badge {
+  font-size:.68rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em;
+  padding:.12em .45em; border-radius:3px;
+}
+.status-included .rule-badge { background:#d4edda; color:#155724; }
+.status-updated  .rule-badge { background:#cce5ff; color:#004085; }
+.status-partial  .rule-badge { background:#fff3cd; color:#856404; }
+.status-missing  .rule-badge { background:#f0f0f0; color:#666; }
+
+.rule-title { font-weight:600; margin:.2rem 0 .2rem; color:var(--ink); }
+.rule-stmt  { font-size:.85rem; color:#444; margin:.15rem 0 0; }
+.rule-notes { font-size:.8rem; color:#666; font-style:italic; margin:.25rem 0 0; }
+
+/* ── Research section ───────────────────────────────────────── */
+.research-body h3 { font-size:1.05rem; color:#7d3c98; margin:1.5rem 0 .4rem; }
+.research-body p  { line-height:1.8; font-size:.97rem; }
+
+/* ── Related pillars ────────────────────────────────────────── */
+.related-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:.85rem; margin-top:1rem; }
+.related-card {
+  background:var(--navy); color:#fff; border-radius:6px; padding:1rem;
+  text-decoration:none; transition:opacity .15s;
+}
+.related-card:hover { opacity:.82; }
+.related-card strong { display:block; font-size:.95rem; margin-bottom:.3rem; }
+.related-card span   { font-size:.8rem; color:rgba(255,255,255,.65); }
+
+/* ── Summary stats bar ──────────────────────────────────────── */
+.stats-bar {
+  display:flex; flex-wrap:wrap; gap:1.5rem; margin:1.2rem 0;
+  padding:1rem 1.2rem; background:#fff; border-radius:6px;
+  border:1px solid #e0d8c8;
+}
+.stat-item { text-align:center; }
+.stat-num { display:block; font-family:'Oswald',sans-serif; font-size:2rem; color:#7d3c98; }
+.stat-label { font-size:.78rem; text-transform:uppercase; letter-spacing:.06em; color:#888; }
+
+/* ── Design logic accordion ─────────────────────────────────── */
+details.design-logic { margin-top:1rem; }
+details.design-logic summary {
+  cursor:pointer; font-weight:700; padding:.6rem .8rem;
+  background:rgba(0,0,0,.06); border-radius:4px; user-select:none;
+}
+details.design-logic[open] summary { border-radius:4px 4px 0 0; }
+details.design-logic .design-body { padding:.8rem 1rem; background:#fff; border:1px solid #e0d8c8; border-top:none; border-radius:0 0 4px 4px; }
+details.design-logic .design-body p { font-size:.93rem; line-height:1.75; }
+details.design-logic .design-body ul { padding-left:1.3rem; }
+details.design-logic .design-body li { font-size:.93rem; line-height:1.65; margin-bottom:.3rem; }
+</style>
+<style>:root { --accent-color: #7d3c98; }</style>
 </head>
 <body>
 <nav class="site-nav">
@@ -18,13 +136,12 @@
     <ul class="nav-links">
       <li><a href="../index.html">Home</a></li>
       <li><a href="../foundations.html">Foundations</a></li>
-      <li><a href="../pillars/index.html">Pillars</a></li>
+      <li><a href="index.html">Pillars</a></li>
       <li><a href="../compare/index.html">Compare</a></li>
     </ul>
   </div>
 </nav>
-
-<div class="page-hero compact" style="border-bottom: 4px solid #7d3c98">
+<div class="page-hero compact" style="border-bottom:4px solid #7d3c98">
   <div class="hero-eyebrow">
     <a href="../foundations.html#real-freedom" style="color:rgba(255,255,255,.6);text-decoration:none">
       Foundation IV: Real Freedom
@@ -32,59 +149,212 @@
   </div>
   <h1 class="hero-title" style="font-size:clamp(1.8rem,5vw,2.8rem)">Gun Policy</h1>
   <div class="hero-divider"><span>★ ★ ★</span></div>
-  <p class="hero-statement" style="font-size:1rem;max-width:620px;margin:0 auto">Public safety and the Second Amendment are not in conflict. Sensible policy honors both.</p>
+  <p class="hero-statement" style="font-size:1rem;max-width:680px;margin:0 auto">Clarify government authority to regulate firearms and armed groups while balancing individual rights with public safety, preventing private militarization, and establishing accountability frameworks for lawful armed acti</p>
 </div>
-
+<nav class="pil-snav" id="pil-snav"><ul><li><a href="#pil-intro">Overview</a></li><li><a href="#pil-problem">The Problem</a></li><li><a href="#pil-reform">Reform Areas</a></li><li><a href="#pil-policy">Policy Rules</a></li><li><a href="#pil-research">Research</a></li><li><a href="#pil-related">Related</a></li></ul></nav>
+<section class="bg-parchment ruled" id="pil-intro">
+<div class="wrap">
+  <div class="stats-bar">
+  <div class="stat-item"><span class="stat-num">2</span><span class="stat-label">Total Rules</span></div>
+  <div class="stat-item"><span class="stat-num" style="color:#1e8449">0</span><span class="stat-label">Active</span></div>
+  <div class="stat-item"><span class="stat-num" style="color:#c9952a">0</span><span class="stat-label">Partial</span></div>
+  <div class="stat-item"><span class="stat-num" style="color:#888">2</span><span class="stat-label">Proposed</span></div>
+</div>
+  <div class="pil-intro">
+    <div>
+      <h2 style="color:#7d3c98;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.06em">Purpose</h2>
+      <p>Clarify government authority to regulate firearms and armed groups while balancing individual rights with public safety, preventing private militarization, and establishing accountability frameworks for lawful armed activity.</p>
+    </div>
+    <div>
+      <h2 style="color:#7d3c98;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.06em">Core Principle</h2>
+      <p>The state must retain control over organized violence while protecting lawful individual rights to firearm ownership. Private armies, unaccountable militias, and weapons of war in civilian hands represent threats to democratic order that must be regulated, while legitimate self-defense, sport, and lawful militia service remain protected under clear safety and accountability standards.</p>
+    </div>
+  </div>
+</div>
+</section>
+<section class="bg-dark on-dark ruled" id="pil-problem">
+<div class="wrap" style="margin-bottom:0">
+  <h2 style="color:#7d3c98">The Problem It Solves</h2>
+</div>
+<div class="wrap"><p>Gun policy in America suffers from three interrelated failures:</p>
+<ol>
+<li><strong>Constitutional ambiguity</strong> — The Second Amendment's language ("well regulated militia" and "right of the people to keep and bear arms") has been interpreted in contradictory ways, preventing effective regulation while also failing to define what "well regulated" means. This creates legal uncertainty where basic safety regulations are challenged as unconstitutional while dangerous armed groups claim constitutional protection.</li>
+</ol>
+<ol>
+<li><strong>Weapons-of-war proliferation</strong> — Civilian ownership of automatic weapons, semi-automatic rifles designed for military use, and comparable weapons intended to evade regulation has enabled mass-casualty attacks while serving no legitimate civilian purpose. The distinction between lawful firearms and weapons of war has been systematically eroded.</li>
+</ol>
+<ol>
+<li><strong>Private militarization</strong> — Private armies, mercenary groups, and unaccountable armed formations operate with minimal oversight, creating parallel structures of violence outside state control. Militias claim Second Amendment protection while refusing transparency, accountability, or safety training requirements.</li>
+</ol>
+<p>Without clear constitutional authority to regulate firearms, weaponry, and armed groups, we face two extremes: either arbitrary prohibition that violates legitimate self-defense rights, or unregulated proliferation that enables mass violence and private militarization. The goal is a framework that permits lawful gun ownership while preventing weapons-of-war proliferation, requires accountability for organized armed groups, and establishes safety-based regulations that reduce preventable deaths.</p></div>
+</section>
+<section class="bg-cream ruled" id="pil-reform">
+<div class="wrap" style="margin-bottom:0">
+  <h2 style="color:#7d3c98">Key Reform Areas</h2>
+</div>
+<div class="wrap"><div class="reform-grid"><div class="reform-card"><h3>Constitutional clarification affirming government authority to regulate firearms and weaponry</h3><p></p></div>
+</div></div>
+</section>
 <section class="bg-parchment ruled">
 <div class="wrap">
-  <h2>Why This Matters</h2>
-  <p style="font-size:1.05rem;line-height:1.8">More Americans have died from gun violence since 1968 than in all of America's wars combined. This is not an inevitable feature of freedom — it is a policy failure. The Second Amendment does not prohibit sensible regulation.</p>
+  <details class="design-logic">
+    <summary>Design Logic — How These Rules Work Together</summary>
+    <div class="design-body"><p>This pillar rests on three structural distinctions:</p>
+<p><strong>Individual rights vs weapons of war</strong> — There is a meaningful difference between firearms suitable for self-defense, hunting, and sport versus weapons designed for military combat. Automatic weapons and semi-automatic rifles designed to maximize casualties have no legitimate civilian use. Prohibiting these does not violate self-defense rights — it prevents mass-casualty attacks while preserving access to firearms that serve lawful purposes. The key is defining "weapons of war" clearly enough to prevent evasion (banning not just automatic weapons but "demilitarized semi-automatic civilian versions" designed to circumvent regulation) while not prohibiting all semi-automatic firearms (many common handguns and hunting rifles are semi-automatic without being designed for mass casualties).</p>
+<p><strong>Safety-based regulation vs categorical prohibition</strong> — Regulation should focus on reducing preventable harm through background checks, safety training, de-escalation training, secure storage requirements, and narrowly tailored dangerousness-based mental health evaluations. These measures do not prohibit gun ownership — they ensure that those who own firearms are trained, accountable, and not presenting immediate danger to themselves or others. Mental health evaluations must be narrowly tailored: they can determine whether someone is likely to harm themselves or others, but cannot categorically exclude groups based on diagnosis (e.g., ADHD or autism do not make someone dangerous). This prevents both arbitrary prohibition and discriminatory exclusion while addressing genuine risk.</p>
+<p><strong>Regulated militias vs private armies</strong> — The Second Amendment explicitly references "well regulated militia," but this term has never been clearly defined. Militias can serve legitimate functions (disaster relief, search and rescue, community emergency response) if properly regulated, transparent, and accountable. But private armies and mercenary groups — armed formations that refuse transparency, reject democratic accountability, and operate as parallel structures of violence — are incompatible with democratic order. The distinction is accountability: regulated militias must maintain membership records, disclose chains of command, carry insurance, submit to audits, follow approved safety standards, and coordinate with state and federal oversight. Private armies and mercenary groups that refuse these requirements must be prohibited.</p>
+<p>The system assumes that gun ownership is legitimate but that proliferation of weapons of war and unaccountable armed groups are not. It seeks to reduce preventable deaths through safety-based regulation while preventing private militarization that threatens democratic stability.</p></div>
+  </details>
 </div>
 </section>
-
-<section class="bg-dark on-dark ruled">
-<div class="wrap" style="display:grid;grid-template-columns:1fr 1fr;gap:2rem">
-  <div>
-    <h2 style="color:#7d3c98">What It Demands</h2>
-    <ul style="list-style:disc;padding-left:1.2rem;color:rgba(255,255,255,.82)">
-        <li>Universal background checks for all firearm transfers, including private sales and gun shows</li>
-        <li>Federal red flag law allowing courts to temporarily remove firearms from individuals who pose a documented danger</li>
-        <li>Reinstate and strengthen the federal assault weapons ban; restrict magazines over 10 rounds</li>
-    </ul>
-  </div>
-  <div>
-    <h2 style="color:#7d3c98">What It Rejects</h2>
-    <ul style="list-style:disc;padding-left:1.2rem;color:rgba(255,255,255,.82)">
-        <li>The interpretation of the Second Amendment as an absolute right without any room for regulation</li>
-        <li>Weapons designed for military use as appropriate for civilian ownership</li>
-        <li>The idea that any gun regulation is unconstitutional</li>
-    </ul>
-  </div>
-</div>
-</section>
-
-<section class="bg-cream ruled">
+<section class="bg-cream ruled" id="pil-policy">
 <div class="wrap">
-  <h2>Key Policy Points</h2>
-  <ol style="padding-left:1.4rem;font-size:1rem;line-height:2">
-          <li>Universal background checks</li>
-          <li>Red flag laws</li>
-          <li>Assault weapons and high-capacity magazine restrictions</li>
-  </ol>
-  <div style="margin-top:2.5rem;display:flex;gap:1rem;flex-wrap:wrap">
-    <a href="../foundations.html#real-freedom" class="btn-primary" style="background:#7d3c98">← Foundation IV: Real Freedom</a>
-    <a href="index.html" class="btn-primary" style="background:var(--navy)">All Pillars</a>
+  <h2 style="color:#7d3c98">Full Policy Platform</h2>
+  <p style="font-size:.95rem;color:#555;margin-bottom:1.5rem">
+    Every rule in this pillar, organized by policy area.
+    <strong style="color:#1e8449">Active</strong> rules are current platform commitments.
+    <strong style="color:#c9952a">Partial</strong> rules are in development.
+    <strong style="color:#888">Proposed</strong> rules are planned for future inclusion.
+  </p>
+  <div class="policy-family" id="fam-jus">
+  <div class="family-header">
+    <span class="family-code">JUS</span>
+    <span class="family-title">POL — Police Use of Force and Weaponry</span>
+    <span class="family-count">0/2 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-POL-006</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Ban police automatic weapons</p>
+  
+  <p class="rule-notes">This rule prohibits police departments from possessing or deploying automatic weapons in routine policing operations. Automatic weapons (machine guns, assault rifles capable of sustained automatic fire) are designed for military combat, not law enforcement. Their use escalates violence, undermines de-escalation principles, and militarizes police-community relations. Specialized tactical units may require access to specific weapons for high-risk situations (active shooter response, hostage rescue, counter-terrorism operations), but these should be strictly limited, subject to oversight, and not part of general patrol equipment. The militarization of routine policing has transformed police departments into occupying forces in many communities, particularly communities of color. Banning automatic weapons for police is part of a broader de-militarization and accountability framework. This rule does not disarm police — it limits them to weapons appropriate for law enforcement rather than military combat. Standard service pistols, shotguns, and precision rifles for specialized situations remain available. The goal is to prevent the arms-race dynamic where police militarization drives civilian armament and vice versa.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-POL-007</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Ban police weapons of war</p>
+  
+  <p class="rule-notes">This rule extends beyond automatic weapons to prohibit police possession of any weapons designed for military combat rather than law enforcement. This includes: - Armored personnel carriers and military-grade vehicles (MRAPs, tanks) - Grenade launchers and explosive devices - Bayonets and other military combat weapons - Military-grade body armor and tactical gear designed for combat rather than protection - Surveillance and weapons systems designed for warfare (armed drones, military-grade surveillance equipment) The 1033 Program has transferred billions of dollars of surplus military equipment to local police departments, transforming law enforcement into a paramilitary force. This equipment is not designed for community policing, de-escalation, or public safety — it is designed for combat operations against enemy combatants. Its presence in policing escalates violence, undermines trust, and creates a mentality where communities are viewed as battlegrounds rather than neighborhoods to protect. Exceptions may be necessary for specialized federal units dealing with terrorism or organized crime, but these should be strictly limited, transparent, and subject to oversight. General municipal and county police departments should not possess weapons of war. This rule addresses the root cause of police violence: when police are equipped like soldiers, they act like soldiers. De-militarization is a prerequisite for accountability, de-escalation, and community trust.</p>
+</div>
   </div>
 </div>
+<div class="policy-family" id="fam-gun">
+  <div class="family-header">
+    <span class="family-code">GUN</span>
+    <span class="family-title">REG — General Firearm Regulation Authority</span>
+    <span class="family-count">0/0 active</span>
+  </div>
+  <div class="rule-grid">
+    
+  </div>
+</div>
+<div class="policy-family" id="fam-gun">
+  <div class="family-header">
+    <span class="family-code">GUN</span>
+    <span class="family-title">BAN — Prohibited Weapons and Ownership</span>
+    <span class="family-count">0/0 active</span>
+  </div>
+  <div class="rule-grid">
+    
+  </div>
+</div>
+<div class="policy-family" id="fam-gun">
+  <div class="family-header">
+    <span class="family-code">GUN</span>
+    <span class="family-title">ACQ — Acquisition and Background Checks</span>
+    <span class="family-count">0/0 active</span>
+  </div>
+  <div class="rule-grid">
+    
+  </div>
+</div>
+<div class="policy-family" id="fam-gun">
+  <div class="family-header">
+    <span class="family-code">GUN</span>
+    <span class="family-title">TRN — Training and Safety Requirements</span>
+    <span class="family-count">0/0 active</span>
+  </div>
+  <div class="rule-grid">
+    
+  </div>
+</div>
+<div class="policy-family" id="fam-gun">
+  <div class="family-header">
+    <span class="family-code">GUN</span>
+    <span class="family-title">MHE — Mental Health Evaluations</span>
+    <span class="family-count">0/0 active</span>
+  </div>
+  <div class="rule-grid">
+    
+  </div>
+</div>
+<div class="policy-family" id="fam-gun">
+  <div class="family-header">
+    <span class="family-code">GUN</span>
+    <span class="family-title">RFL — Red Flag / Extreme Risk Protection Orders</span>
+    <span class="family-count">0/0 active</span>
+  </div>
+  <div class="rule-grid">
+    
+  </div>
+</div>
+<div class="policy-family" id="fam-gun">
+  <div class="family-header">
+    <span class="family-code">GUN</span>
+    <span class="family-title">MIL — Militia Regulation and Armed Groups</span>
+    <span class="family-count">0/0 active</span>
+  </div>
+  <div class="rule-grid">
+    
+  </div>
+</div>
+</div>
 </section>
-
+<section class="bg-dark on-dark ruled" id="pil-research">
+<div class="wrap">
+  <h2 style="color:#7d3c98">Research & Context</h2>
+  <div class="research-body" style="color:rgba(255,255,255,.85)"><p>The Second Amendment states: "A well regulated Militia, being necessary to the security of a free State, the right of the people to keep and bear Arms, shall not be infringed." This language has generated two centuries of interpretive conflict. Does "well regulated militia" mean that gun rights are collective (tied to militia service) or individual? What does "well regulated" mean — does it authorize government regulation or simply refer to militias being well-organized? Does "the right to keep and bear Arms" prohibit all regulation or only prohibit complete disarmament?</p>
+<p>The Supreme Court's decision in <em>District of Columbia v. Heller</em> (2008) established an individual right to firearm ownership untethered from militia service, striking down D.C.'s handgun ban while acknowledging that this right is "not unlimited" and that "longstanding prohibitions" like bans on concealed carry or possession by felons remain constitutional. <em>McDonald v. City of Chicago</em> (2010) incorporated this right against the states. More recently, <em>New York State Rifle & Pistol Association, Inc. v. Bruen</em> (2022) invalidated New York's "proper cause" requirement for concealed-carry permits, holding that gun regulations must be consistent with "the Nation's historical tradition of firearm regulation." This "history and tradition" test has been criticized for cherry-picking historical examples and making modern regulation difficult by requiring historical analogues to 18th-century laws.</p>
+<p>The effect has been to create constitutional uncertainty where basic safety regulations (universal background checks, assault weapon bans, high-capacity magazine limits, red-flag laws) are challenged as unconstitutional, while also leaving undefined what "well regulated" means and whether organized armed groups can be required to maintain transparency and accountability. This pillar seeks to resolve this uncertainty by explicitly affirming government authority to regulate firearms while clarifying that this regulation must be safety-based (not arbitrary prohibition) and that militias can be required to meet "well regulated" standards.</p>
+<p>The distinction between lawful firearms and weapons of war is critical. Automatic weapons have been heavily regulated since the National Firearms Act of 1934 and effectively banned for civilian manufacture since 1986. But the proliferation of semi-automatic rifles designed for military use — AR-15 variants, AK-47 variants, and comparable weapons — has enabled mass-casualty attacks while serving no legitimate civilian purpose. These weapons are designed to maximize lethality in combat: high-capacity magazines, rapid fire, and ergonomic features optimized for sustained shooting. They are not traditional hunting rifles or self-defense handguns. Banning "weapons of war" must include not just automatic weapons but semi-automatic civilian versions designed to circumvent regulation. This does not mean banning all semi-automatic firearms — many common handguns and hunting rifles are semi-automatic without being designed for mass casualties. The distinction is design intent and lethality optimization.</p>
+<p>Mental health evaluations for gun ownership present difficult tradeoffs. On one hand, individuals experiencing acute mental health crises or expressing intent to harm themselves or others present genuine risk. On the other hand, categorical exclusions based on diagnosis (e.g., banning gun ownership for anyone ever diagnosed with depression, ADHD, autism, or other conditions) are both discriminatory and ineffective. Most people with mental health conditions are not dangerous, and most gun violence is not committed by people with diagnosed mental illness. The solution is narrowly tailored dangerousness-based evaluation: trained professionals can assess whether a specific individual presents imminent risk of harm to themselves or others, but cannot categorically exclude groups based on diagnosis. This prevents discrimination while addressing genuine risk.</p>
+<p>Red-flag laws (extreme risk protection orders) allow family members or law enforcement to petition courts to temporarily remove firearms from individuals presenting immediate danger. These laws have been effective in preventing suicides and domestic violence homicides, but they require due process protections to prevent abuse. The standard must be clear evidence of imminent risk, not mere allegation or political targeting. Temporary removal must be time-limited and subject to judicial review.</p>
+<p>The regulation of militias is perhaps the most underdeveloped area. The Second Amendment explicitly references "well regulated militia," but neither the Constitution nor federal law clearly defines what this means. Some militias operate as community disaster-response teams, providing legitimate services like search and rescue or emergency shelter coordination. Others are armed groups that reject government oversight, refuse transparency, and train for violent confrontation with federal authorities. The distinction is accountability: regulated militias must maintain membership records, disclose officers and chain of command, carry liability insurance, submit to regular audits, coordinate with state and federal oversight, and follow approved training standards. They can train for disaster relief and work alongside police, fire departments, and the National Guard under clear oversight structures. Private armies and mercenary groups — armed formations that refuse transparency and operate outside democratic accountability — must be explicitly prohibited.</p>
+<p>This is not about disarming citizens or eliminating all militias. It is about defining "well regulated" in enforceable terms. A militia that maintains public records, carries insurance, follows safety standards, and coordinates with government authorities for disaster response is meaningfully different from an armed group that refuses all transparency and trains for insurrection. The former can be accommodated; the latter represents a threat to democratic order.</p>
+<p>One critical question is the relationship between federal and state regulation. Gun policy has historically been a state-level issue, with federal law establishing minimum standards (background checks for federally licensed dealers, bans on automatic weapons) while states implement stricter or looser requirements. This creates fragmentation where guns purchased in states with weak regulations flow into states with strong regulations, undermining enforcement. Universal background checks, red-flag laws, and assault weapon bans must be national standards to prevent this arbitrage. At the same time, states should retain authority to implement additional protections (waiting periods, training requirements, licensing systems) provided they do not fall below the federal floor.</p>
+<p>Another critical question is enforcement. Background checks are only effective if databases are comprehensive and interoperable. Many mass shooters passed background checks because prior offenses or mental health records were not properly reported to federal databases. Training requirements are only effective if training standards are meaningful (not just box-checking exercises). Red-flag laws are only effective if family members and law enforcement know they exist and courts process petitions quickly. Enforcement requires both legal authority and institutional capacity.</p>
+<p>This pillar connects to broader policing and accountability reforms. Police should not possess weapons of war either — the militarization of police departments has escalated violence and undermined community trust. Rules JUS-POL-006 (ban police automatic weapons) and JUS-POL-007 (ban police weapons of war) address this. If these weapons are too dangerous for civilian streets, they are too dangerous for routine policing as well. Specialized units may require tactical weapons for specific high-risk situations, but general patrol should not involve military-grade armament.</p>
+<p>Finally, this pillar must address the symbolic and political dimensions of gun policy. For many Americans, gun ownership is tied to self-reliance, individual freedom, and resistance to tyranny. For others, gun violence is a public health crisis that demands immediate action. Effective policy must acknowledge both perspectives: regulation is not confiscation, safety training is not infringement, and reducing preventable deaths does not require eliminating all firearms. The goal is a framework that respects legitimate gun ownership while preventing weapons-of-war proliferation, requiring accountability for armed groups, and reducing the tens of thousands of preventable deaths that occur annually from gun violence.</p></div>
+</div>
+</section>
+<section class="bg-parchment ruled" id="pil-related">
+<div class="wrap" style="margin-bottom:0">
+  <h2 style="color:#7d3c98">Related Pillars</h2>
+  <p style="font-size:.92rem;color:#666;margin-bottom:.5rem">These pillars intersect with and reinforce this one.</p>
+</div>
+<div class="wrap"><div class="related-grid"><a href="rights-and-civil-liberties.html" class="related-card"><strong>Rights and Civil Liberties</strong><span>— Defines the scope of individual gun rights within a broader framework of balancing liberties with public safety</span></a>
+<a href="equal-justice-and-policing.html" class="related-card"><strong>Equal Justice and Policing</strong><span>— Addresses police militarization and use of weapons of war (JUS-POL-006, JUS-POL-007)</span></a>
+<a href="anti-corruption-and-concentrated-power.html" class="related-card"><strong>Anti-Corruption and Concentrated Power</strong><span>— Gun industry lobbying has systematically blocked safety regulations; anti-corruption frameworks address this influence</span></a>
+<a href="public-safety-and-democratic-order.html" class="related-card"><strong>Public Safety and Democratic Order</strong><span>— Militias and armed groups connect to broader questions about private violence and state authority</span></a>
+<a href="courts-and-judicial-system.html" class="related-card"><strong>Courts and Judicial System</strong><span>— Judicial interpretation of Second Amendment and standards for reviewing gun regulations</span></a>
+</div></div>
+<div class="wrap" style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap">
+  <a href="../foundations.html#real-freedom" class="btn-primary" style="background:#7d3c98">← Foundation IV: Real Freedom</a>
+  <a href="index.html" class="btn-primary" style="background:var(--navy)">All Pillars</a>
+</div>
+</section>
 <footer class="site-footer">
   <div class="wrap">
     <span class="footer-brand">American Renewal Project</span>
     <ul class="footer-links">
       <li><a href="../index.html">Home</a></li>
       <li><a href="../foundations.html">Foundations</a></li>
-      <li><a href="../pillars/index.html">Pillars</a></li>
+      <li><a href="index.html">Pillars</a></li>
       <li><a href="../compare/index.html">Compare</a></li>
     </ul>
     <span class="footer-note">A Third Bill of Rights for the 21st Century. · <a href="../about-ai.html" style="color:inherit;opacity:.7">On the Use of AI</a></span>
@@ -92,5 +362,25 @@
 </footer>
 <script src="../assets/js/data.js"></script>
 <script src="../assets/js/app.js"></script>
+<script>
+(function(){
+  var nav = document.getElementById('pil-snav');
+  if(!nav) return;
+  var links = nav.querySelectorAll('a[href^="#"]');
+  var sections = Array.from(links).map(function(a){
+    return document.querySelector(a.getAttribute('href'));
+  }).filter(Boolean);
+  function onScroll(){
+    var y = window.scrollY + 120;
+    var active = sections[0];
+    sections.forEach(function(s){ if(s.offsetTop <= y) active = s; });
+    links.forEach(function(a){
+      a.classList.toggle('active', a.getAttribute('href') === '#'+active.id);
+    });
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+})();
+</script>
 </body>
 </html>

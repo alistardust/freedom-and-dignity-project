@@ -6,6 +6,124 @@
 <title>Taxation & Wealth — American Renewal Project</title>
 <link rel="stylesheet" href="../assets/css/style.css">
 <link rel="icon" type="image/svg+xml" href="../assets/img/logo.svg">
+<style>
+/* ── Pillar page styles ─────────────────────────────────────── */
+.pil-snav {
+  position: sticky; top: 63px; z-index: 150;
+  background: var(--navy); border-bottom: 2px solid rgba(255,255,255,.12);
+  overflow-x: auto; white-space: nowrap;
+}
+.pil-snav ul { display:flex; gap:0; list-style:none; margin:0; padding:0; }
+.pil-snav a {
+  display:block; padding:.55rem 1.1rem; font-family:'Oswald',sans-serif;
+  font-size:.78rem; letter-spacing:.06em; text-transform:uppercase;
+  color:rgba(255,255,255,.62); text-decoration:none; transition:color .15s;
+}
+.pil-snav a:hover, .pil-snav a.active { color:#fff; }
+.pil-snav a.active { border-bottom:2px solid #c9952a; }
+
+/* ── Section layouts ────────────────────────────────────────── */
+.pil-intro { display:grid; grid-template-columns:1fr 1fr; gap:2rem; }
+@media(max-width:700px){ .pil-intro { grid-template-columns:1fr; } }
+
+.pil-intro h2 { font-size:1.1rem; text-transform:uppercase; letter-spacing:.08em; margin-bottom:.6rem; }
+.pil-intro p, .pil-intro li { font-size:1rem; line-height:1.75; }
+
+.problem-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:1.25rem; margin-top:1rem; }
+.problem-card {
+  background:#fff; border-radius:6px; padding:1.2rem 1.4rem;
+  border-left:4px solid #c9952a;
+  box-shadow:0 1px 4px rgba(0,0,0,.07);
+}
+.problem-card h3 { font-size:1rem; margin:0 0 .4rem; color:var(--navy); }
+.problem-card p  { font-size:.92rem; line-height:1.65; margin:0; color:#333; }
+
+.reform-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:1rem; margin-top:1rem; }
+.reform-card {
+  background:var(--navy); color:#fff; border-radius:6px;
+  padding:1.1rem 1.3rem; border-top:3px solid #c9952a;
+}
+.reform-card h3 { font-size:.95rem; margin:0 0 .4rem; color:#c9952a; text-transform:uppercase; letter-spacing:.04em; }
+.reform-card p  { font-size:.88rem; line-height:1.6; margin:0; color:rgba(255,255,255,.8); }
+
+/* ── Policy rules ───────────────────────────────────────────── */
+.policy-family { margin-bottom:2.5rem; }
+.family-header {
+  display:flex; align-items:baseline; gap:.8rem; margin-bottom:1rem;
+  padding-bottom:.5rem; border-bottom:2px solid #c9952a;
+}
+.family-code {
+  font-family:'Oswald',sans-serif; font-size:1.1rem;
+  color:#c9952a; min-width:3rem;
+}
+.family-title { font-size:1rem; font-weight:600; color:var(--ink); }
+.family-count { margin-left:auto; font-size:.8rem; color:#888; white-space:nowrap; }
+
+.rule-grid {
+  display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:.75rem;
+}
+.rule-card {
+  border-radius:5px; padding:.9rem 1rem;
+  background:#fff; border:1px solid #e0d8c8;
+  font-size:.88rem; line-height:1.55;
+}
+.rule-card.status-included { border-left:4px solid #1e8449; }
+.rule-card.status-updated  { border-left:4px solid #2471a3; }
+.rule-card.status-partial  { border-left:4px solid #c9952a; }
+.rule-card.status-missing  { border-left:4px solid #ccc; opacity:.72; }
+
+.rule-header { display:flex; align-items:center; gap:.5rem; margin-bottom:.35rem; }
+.rule-id { font-size:.72rem; color:#888; letter-spacing:.03em; }
+.rule-badge {
+  font-size:.68rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em;
+  padding:.12em .45em; border-radius:3px;
+}
+.status-included .rule-badge { background:#d4edda; color:#155724; }
+.status-updated  .rule-badge { background:#cce5ff; color:#004085; }
+.status-partial  .rule-badge { background:#fff3cd; color:#856404; }
+.status-missing  .rule-badge { background:#f0f0f0; color:#666; }
+
+.rule-title { font-weight:600; margin:.2rem 0 .2rem; color:var(--ink); }
+.rule-stmt  { font-size:.85rem; color:#444; margin:.15rem 0 0; }
+.rule-notes { font-size:.8rem; color:#666; font-style:italic; margin:.25rem 0 0; }
+
+/* ── Research section ───────────────────────────────────────── */
+.research-body h3 { font-size:1.05rem; color:#c9952a; margin:1.5rem 0 .4rem; }
+.research-body p  { line-height:1.8; font-size:.97rem; }
+
+/* ── Related pillars ────────────────────────────────────────── */
+.related-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:.85rem; margin-top:1rem; }
+.related-card {
+  background:var(--navy); color:#fff; border-radius:6px; padding:1rem;
+  text-decoration:none; transition:opacity .15s;
+}
+.related-card:hover { opacity:.82; }
+.related-card strong { display:block; font-size:.95rem; margin-bottom:.3rem; }
+.related-card span   { font-size:.8rem; color:rgba(255,255,255,.65); }
+
+/* ── Summary stats bar ──────────────────────────────────────── */
+.stats-bar {
+  display:flex; flex-wrap:wrap; gap:1.5rem; margin:1.2rem 0;
+  padding:1rem 1.2rem; background:#fff; border-radius:6px;
+  border:1px solid #e0d8c8;
+}
+.stat-item { text-align:center; }
+.stat-num { display:block; font-family:'Oswald',sans-serif; font-size:2rem; color:#c9952a; }
+.stat-label { font-size:.78rem; text-transform:uppercase; letter-spacing:.06em; color:#888; }
+
+/* ── Design logic accordion ─────────────────────────────────── */
+details.design-logic { margin-top:1rem; }
+details.design-logic summary {
+  cursor:pointer; font-weight:700; padding:.6rem .8rem;
+  background:rgba(0,0,0,.06); border-radius:4px; user-select:none;
+}
+details.design-logic[open] summary { border-radius:4px 4px 0 0; }
+details.design-logic .design-body { padding:.8rem 1rem; background:#fff; border:1px solid #e0d8c8; border-top:none; border-radius:0 0 4px 4px; }
+details.design-logic .design-body p { font-size:.93rem; line-height:1.75; }
+details.design-logic .design-body ul { padding-left:1.3rem; }
+details.design-logic .design-body li { font-size:.93rem; line-height:1.65; margin-bottom:.3rem; }
+</style>
+<style>:root { --accent-color: #c9952a; }</style>
 </head>
 <body>
 <nav class="site-nav">
@@ -18,13 +136,12 @@
     <ul class="nav-links">
       <li><a href="../index.html">Home</a></li>
       <li><a href="../foundations.html">Foundations</a></li>
-      <li><a href="../pillars/index.html">Pillars</a></li>
+      <li><a href="index.html">Pillars</a></li>
       <li><a href="../compare/index.html">Compare</a></li>
     </ul>
   </div>
 </nav>
-
-<div class="page-hero compact" style="border-bottom: 4px solid #c9952a">
+<div class="page-hero compact" style="border-bottom:4px solid #c9952a">
   <div class="hero-eyebrow">
     <a href="../foundations.html#freedom-to-thrive" style="color:rgba(255,255,255,.6);text-decoration:none">
       Foundation V: Freedom to Thrive
@@ -32,59 +149,271 @@
   </div>
   <h1 class="hero-title" style="font-size:clamp(1.8rem,5vw,2.8rem)">Taxation & Wealth</h1>
   <div class="hero-divider"><span>★ ★ ★</span></div>
-  <p class="hero-statement" style="font-size:1rem;max-width:620px;margin:0 auto">The tax system must reward work, not inheritance. Extreme concentration of wealth is incompatible with democracy.</p>
+  <p class="hero-statement" style="font-size:1rem;max-width:680px;margin:0 auto">To establish progressive taxation, prevent wealth concentration from undermining democratic self-governance, support workers and small businesses, ensure economic opportunity regardless of class or circumstance, and stru</p>
 </div>
+<nav class="pil-snav" id="pil-snav"><ul><li><a href="#pil-intro">Overview</a></li><li><a href="#pil-reform">Reform Areas</a></li><li><a href="#pil-policy">Policy Rules</a></li><li><a href="#pil-research">Research</a></li><li><a href="#pil-related">Related</a></li></ul></nav>
+<section class="bg-parchment ruled" id="pil-intro">
+<div class="wrap">
+  <div class="stats-bar">
+  <div class="stat-item"><span class="stat-num">10</span><span class="stat-label">Total Rules</span></div>
+  <div class="stat-item"><span class="stat-num" style="color:#1e8449">0</span><span class="stat-label">Active</span></div>
+  <div class="stat-item"><span class="stat-num" style="color:#c9952a">1</span><span class="stat-label">Partial</span></div>
+  <div class="stat-item"><span class="stat-num" style="color:#888">9</span><span class="stat-label">Proposed</span></div>
+</div>
+  <div class="pil-intro">
+    <div>
+      <h2 style="color:#c9952a;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.06em">Purpose</h2>
+      <p>To establish progressive taxation, prevent wealth concentration from undermining democratic self-governance, support workers and small businesses, ensure economic opportunity regardless of class or circumstance, and structure the economy to distribute productivity gains broadly rather than concentrating them at the top.</p>
+    </div>
+    <div>
+      <h2 style="color:#c9952a;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.06em">Core Principle</h2>
+      <p>Extreme wealth concentration is incompatible with democratic equality. When a small number of individuals or families control vast portions of national wealth, they gain power to shape policy, avoid accountability, and structure the economy in their favor. Taxation must be progressive, wealth-hoarding must be actively prevented, and economic policy must support labor and small enterprise rather than only large capital.</p>
+    </div>
+  </div>
+</div>
+</section>
 
+<section class="bg-cream ruled" id="pil-reform">
+<div class="wrap" style="margin-bottom:0">
+  <h2 style="color:#c9952a">Key Reform Areas</h2>
+</div>
+<div class="wrap"><p style="margin-bottom:1rem">### Progressive Taxation and Anti-Hoarding
+- Constitutional authority for progressive taxation of wealth, inheritance, and concentrated income
+- Anti-wealth hoarding mechanisms (ECO-TAX-001)
+- Closure of tax avoidance structures and loopholes
+- Taxation of monopoly rents and unearned income
+- Land value taxation (Georgist principles)
+- Alignment between tax system and democratic stability</p><div class="reform-grid"><div class="reform-card"><h3>Automation and Technological Displacement</h3><p>- AI worker tax / automated-labor tax for labor displacement (ECO-AUT-001)</p></div>
+<div class="reform-card"><h3>Small Business and Economic Opportunity</h3><p>- Subsidies and support for small business healthcare coverage (ECO-SMB-001)</p></div>
+<div class="reform-card"><h3>Industrial Policy and Supply Chains</h3><p>- National manufacturing and industrial policy (ECO-IND-001)</p></div>
+<div class="reform-card"><h3>Insurance and AI in Economic Decisions</h3><p>- Prohibition on AI-based insurance denials without human review (ECO-INS-001)</p></div>
+</div></div>
+</section>
 <section class="bg-parchment ruled">
 <div class="wrap">
-  <h2>Why This Matters</h2>
-  <p style="font-size:1.05rem;line-height:1.8">The top 1% now own more wealth than the entire middle class combined. The tax code has been systematically rewritten to protect and compound that concentration. A democratic society cannot function when economic power is this unevenly distributed.</p>
+  <details class="design-logic">
+    <summary>Design Logic — How These Rules Work Together</summary>
+    <div class="design-body"><h3>Progressive Taxation as Structural Requirement</h3>
+<p>This pillar treats progressive taxation not as a policy preference but as a constitutional-level structural requirement for democratic stability. Just as the Constitution establishes separation of powers to prevent political tyranny, it must establish progressive taxation and anti-hoarding mechanisms to prevent economic oligarchy.</p>
+<p>The framework creates constitutional authority for Congress to tax extreme concentrations of wealth, inheritance, monopoly rents, and unearned income at higher rates than moderate income and small-scale wealth. It does not set specific rates—those remain statutory—but establishes the principle that taxation must be progressive and that wealth concentration threatening democratic self-government may be regulated.</p>
+<p>This approach avoids the political pitfall of writing specific rates (like "70% for top 1%") into constitutional text, which would make the document unnecessarily rigid and politically explosive. Instead, it establishes durable norms that statutory politics can implement through specific rates and mechanisms.</p>
+<h3>Automation and AI Taxation</h3>
+<p>As artificial intelligence and automation increasingly displace human labor, productivity gains flow primarily to capital owners rather than workers. This creates a structural problem: economic growth that once supported broad-based prosperity now concentrates wealth while eliminating jobs.</p>
+<p>The automation tax addresses this by requiring companies that replace or materially displace human labor with AI or automation to pay a levy proportional to the displacement. Revenue from this tax supports affected workers, retraining programs, public goods, and broad-based social benefit rather than allowing productivity gains to concentrate privately.</p>
+<p>The tax is designed to discourage labor displacement without social responsibility while encouraging automation that augments rather than replaces human work. Companies that use AI to make workers more productive without eliminating positions would not face the same tax burden as those that eliminate positions to maximize profit.</p>
+<h3>Small Business Support and Labor Rights</h3>
+<p>Small businesses face structural disadvantages in complying with requirements that large corporations can absorb easily—healthcare coverage, paid leave, benefits administration. This pillar establishes subsidies, carveouts, and public support to help small businesses meet social obligations without being crushed by compliance costs.</p>
+<p>Similarly, labor rights protections can burden small employers disproportionately. The framework requires government to provide support systems—subsidized paid parental leave, healthcare coverage assistance, benefits administration help—so that social guarantees do not inadvertently privilege large corporations over small businesses.</p>
+<h3>Insurance Regulation and AI in Economic Decisions</h3>
+<p>AI systems in insurance and economic decision-making create systematic bias, deny coverage or benefits based on opaque algorithms, and remove human judgment from consequential decisions. This pillar prohibits use of AI to deny, restrict, or reduce insurance coverage without direct independent human review and accountability.</p>
+<p>Human reviewers must exercise genuine independent judgment and cannot rubber-stamp AI recommendations. This prevents the "automation bias" where humans defer to algorithmic decisions without critical evaluation. The requirement applies across insurance domains—health, property, auto, disability—and extends to economic decisions affecting access to credit, housing, and opportunity.</p>
+<h3>Economic Equality and Anti-Discrimination</h3>
+<p>Economic opportunity and compensation must not depend on protected class status. Equal pay for equal work is insufficient if hiring, promotion, and opportunity are discriminatory. This pillar requires equal economic opportunity regardless of race, gender, sexuality, religion, disability, or other protected characteristics.</p>
+<p>This extends beyond employment discrimination law by addressing structural barriers—networking advantages, geographic concentration, cultural capital, educational access—that create de facto discrimination even when explicit discrimination is prohibited.</p></div>
+  </details>
 </div>
 </section>
-
-<section class="bg-dark on-dark ruled">
-<div class="wrap" style="display:grid;grid-template-columns:1fr 1fr;gap:2rem">
-  <div>
-    <h2 style="color:#c9952a">What It Demands</h2>
-    <ul style="list-style:disc;padding-left:1.2rem;color:rgba(255,255,255,.82)">
-        <li>Annual wealth tax of 1-2% on fortunes over $50 million, 3% over $1 billion</li>
-        <li>Tax capital gains at the same rate as ordinary income for households earning over $400,000</li>
-        <li>Eliminate the stepped-up basis at death, which allows unrealized gains to pass tax-free across generations</li>
-    </ul>
-  </div>
-  <div>
-    <h2 style="color:#c9952a">What It Rejects</h2>
-    <ul style="list-style:disc;padding-left:1.2rem;color:rgba(255,255,255,.82)">
-        <li>A tax code where billionaires pay lower effective rates than their secretaries</li>
-        <li>Inheritance as a mechanism for creating a permanent hereditary aristocracy</li>
-        <li>The carried interest loophole and other provisions with no purpose other than enriching the already-wealthy</li>
-    </ul>
-  </div>
-</div>
-</section>
-
-<section class="bg-cream ruled">
+<section class="bg-cream ruled" id="pil-policy">
 <div class="wrap">
-  <h2>Key Policy Points</h2>
-  <ol style="padding-left:1.4rem;font-size:1rem;line-height:2">
-          <li>Wealth tax on extreme fortunes</li>
-          <li>Capital gains taxed as ordinary income</li>
-          <li>End of stepped-up basis loophole</li>
-  </ol>
-  <div style="margin-top:2.5rem;display:flex;gap:1rem;flex-wrap:wrap">
-    <a href="../foundations.html#freedom-to-thrive" class="btn-primary" style="background:#c9952a">← Foundation V: Freedom to Thrive</a>
-    <a href="index.html" class="btn-primary" style="background:var(--navy)">All Pillars</a>
+  <h2 style="color:#c9952a">Full Policy Platform</h2>
+  <p style="font-size:.95rem;color:#555;margin-bottom:1.5rem">
+    Every rule in this pillar, organized by policy area.
+    <strong style="color:#1e8449">Active</strong> rules are current platform commitments.
+    <strong style="color:#c9952a">Partial</strong> rules are in development.
+    <strong style="color:#888">Proposed</strong> rules are planned for future inclusion.
+  </p>
+  <div class="policy-family" id="fam-eco">
+  <div class="family-header">
+    <span class="family-code">ECO</span>
+    <span class="family-title">AUT — Automation and Labor Displacement</span>
+    <span class="family-count">0/3 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">ECO-AUT-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Automation Tax on Labor Displacement</p>
+  <p class="rule-stmt">Companies that replace or materially displace human labor with AI or automation should pay an AI worker tax or automated-labor tax.</p>
+  <p class="rule-notes">Establishes taxation on labor displacement by artificial intelligence or automation systems. Tax should be proportional to the extent of displacement—not merely automation adoption, but actual reduction in human employment or hours. Applies to both AI systems (algorithms, machine learning, large language models) and physical automation (robotics, automated manufacturing). Does not tax automation that augments human productivity without displacing workers. Revenue supports affected workers, retraining, and public goods. - Measurement: Track headcount reduction, hours reduction, or wage bill reduction correlated with automation adoption - Exemptions: Automation that creates new positions or increases productivity without displacement - Phasing: Graduated implementation to allow adjustment and prevent shock - Gaming prevention: Close loopholes like offshoring automation or contractor reclassification</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">ECO-AUT-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Automation Tax Revenue for Public Benefit</p>
+  <p class="rule-stmt">Revenue from AI or automated-labor taxation should be used to support workers, public goods, and broad-based social benefit rather than private concentration alone.</p>
+  <p class="rule-notes">Directs automation tax revenue to public purposes aligned with addressing displacement effects. Specific uses may include: worker retraining and education programs, transition support for displaced workers, universal basic income or social dividend programs, infrastructure investment, research and development, healthcare and social services expansion. Prevents revenue from being captured by general budget where it might subsidize further concentration. Creates direct connection between productivity gains from automation and public benefit.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">ECO-AUT-003</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Structure Tax to Discourage Irresponsible Displacement</p>
+  <p class="rule-stmt">AI or automated-labor taxation should be structured to discourage labor displacement without social responsibility and to share productivity gains broadly.</p>
+  <p class="rule-notes">Tax design should create incentives for responsible automation practices. Companies that invest in worker retraining, create new positions, share productivity gains through higher wages, or gradually transition workers rather than abruptly eliminating positions should face lower tax burden. Companies that maximize short-term profit through mass layoffs and automation should face higher burden. Tax structure should encourage augmentation (making workers more productive) over replacement (eliminating workers). Recognizes that some automation is inevitable and beneficial but should not be subsidized or incentivized when it harms workers and communities without offsetting social benefit.</p>
+</div>
   </div>
 </div>
+<div class="policy-family" id="fam-eco">
+  <div class="family-header">
+    <span class="family-code">ECO</span>
+    <span class="family-title">EQT — Economic Equality and Opportunity</span>
+    <span class="family-count">0/1 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">ECO-EQT-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Equal Pay and Economic Opportunity</p>
+  <p class="rule-stmt">Guarantee equal pay and equal economic opportunity regardless of protected class.</p>
+  <p class="rule-notes">Extends beyond "equal pay for equal work" to address structural barriers to economic opportunity. Requires not only non-discrimination in compensation but also in hiring, promotion, training, networking access, and opportunity. Addresses both explicit discrimination and structural disadvantages that create de facto discrimination. Protected classes include race, gender, sexuality, religion, disability, age, national origin, and other characteristics protected by law. Enforcement must address systemic patterns, not only individual complaints. - Requires affirmative measures to counteract historical discrimination and structural barriers - Regular auditing of pay equity and opportunity across protected classes - Transparency requirements for compensation and advancement - Addresses "cultural fit" and "networking" justifications that perpetuate discrimination</p>
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-eco">
+  <div class="family-header">
+    <span class="family-code">ECO</span>
+    <span class="family-title">IND — Industrial Policy and Manufacturing</span>
+    <span class="family-count">0/1 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">ECO-IND-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">National Manufacturing and Industrial Policy</p>
+  <p class="rule-stmt">Establish national manufacturing and industrial policy to strengthen domestic production and supply chains.</p>
+  <p class="rule-notes">Creates framework for affirmative government support of manufacturing and strategic industries. Recognizes that relying entirely on market forces has led to offshoring of production, supply chain vulnerabilities, loss of industrial capacity, and economic hollowing. Industrial policy should prioritize: domestic manufacturing capacity in strategic sectors (semiconductors, pharmaceuticals, renewable energy, batteries, critical minerals), resilient supply chains not dependent on single sources or adversarial nations, worker training and labor standards, alignment with climate and sustainability goals, coordination between federal research and commercial production, support for innovation and advanced manufacturing techniques.</p>
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-eco">
+  <div class="family-header">
+    <span class="family-code">ECO</span>
+    <span class="family-title">INS — Insurance Regulation and AI</span>
+    <span class="family-count">0/2 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">ECO-INS-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">AI Cannot Deny Insurance Without Human Review</p>
+  <p class="rule-stmt">AI systems may not be used to deny restrict or reduce insurance coverage or claims without direct independent human review and accountability.</p>
+  <p class="rule-notes">Prohibits use of artificial intelligence or algorithmic systems to deny, restrict, reduce, or delay insurance coverage or claims without direct review by an independent human decision-maker with genuine authority and accountability. Applies to all insurance types: health, property, auto, disability, life, and others. Human reviewer must have access to full information, time to consider the case, and authority to override algorithmic recommendation. Reviewer cannot be penalized for overriding the algorithm or incentivized to defer to it. Creates individual accountability: if human reviewer merely rubber-stamps algorithm without independent judgment, both reviewer and system are liable.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">ECO-INS-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Independent Human Judgment Required</p>
+  <p class="rule-stmt">Human reviewers in insurance decisions must exercise independent judgment and may not rely solely on AI-generated recommendations.</p>
+  <p class="rule-notes">Reinforces ECO-INS-001 by specifying that human review must be substantive, not perfunctory. Reviewers must: examine the specific case facts, consider information beyond algorithmic inputs, document reasoning that is independent of AI recommendation, be held accountable for decision quality not processing speed. Organizational structures and incentives must support independent judgment—high caseloads, time pressure, or performance metrics based on agreement with algorithm violate this requirement.</p>
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-eco">
+  <div class="family-header">
+    <span class="family-code">ECO</span>
+    <span class="family-title">LAB — Labor Rights and Protections</span>
+    <span class="family-count">0/1 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">ECO-LAB-004</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Government Support for Small Business Parental Leave</p>
+  <p class="rule-stmt">Government must subsidize or support paid parental leave for small businesses.</p>
+  <p class="rule-notes">Recognizes that mandating paid parental leave can burden small businesses disproportionately. Rather than exempting small businesses (which would leave their workers without protection) or imposing unsustainable costs, government provides subsidy, reimbursement, or direct provision. Models include: insurance fund paid through small payroll tax to which employers contribute and from which leave is paid, direct reimbursement to small businesses for wages paid during parental leave, government provision of leave benefits directly to workers with employer accommodation requirements but not wage payment requirements.</p>
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-eco">
+  <div class="family-header">
+    <span class="family-code">ECO</span>
+    <span class="family-title">SMB — Small Business Support</span>
+    <span class="family-count">0/1 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">ECO-SMB-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Small Business Healthcare Coverage Support</p>
+  <p class="rule-stmt">Provide subsidies carveouts or public support to help small businesses comply with healthcare coverage requirements.</p>
+  <p class="rule-notes">Similar logic to ECO-LAB-004 for parental leave. If healthcare coverage is mandated (or strongly incentivized), small businesses need support to comply without being driven out by costs. Approaches include: subsidies for small business purchase of employee health coverage, public option or government-provided healthcare that reduces employer burden, graduated requirements where businesses below certain size have reduced obligations or receive offsetting support, carveouts that exempt very small businesses with alternative mechanisms to ensure workers still receive coverage.</p>
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-eco">
+  <div class="family-header">
+    <span class="family-code">ECO</span>
+    <span class="family-title">TAX — Taxation Structure</span>
+    <span class="family-count">0/1 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-partial">
+  <div class="rule-header">
+    <code class="rule-id">ECO-TAX-001</code>
+    <span class="rule-badge">Partial</span>
+  </div>
+  <p class="rule-title">Anti-Wealth Hoarding</p>
+  <p class="rule-stmt">Anti-wealth hoarding.</p>
+  <p class="rule-notes">Constitutional-level principle that extreme wealth concentration may be regulated and taxed to prevent threats to democratic self-governance. Does not specify exact mechanisms or rates (which remain statutory) but establishes authority for: progressive income taxation with high marginal rates on extreme income, wealth taxation on assets above defined thresholds, inheritance and estate taxation to prevent dynastic accumulation, land value taxation (Georgist principle) to capture unearned value, taxation of monopoly rents and unearned income at higher rates than labor income. The ECO pillar addresses economic structure while anti-corruption addresses translation of wealth into political power. Both are necessary: limit wealth concentration (ECO) and block channels through which remaining wealth buys influence (COR). Wealth taxation reduces resources available for political capture. Campaign finance limits prevent existing wealth from dominating politics. The ECO pillar structures the economy; Pillar 5 guarantees individual economic security. ECO creates conditions for broad prosperity (progressive taxation, automation revenue, small business support). Pillar 5 ensures individuals have healthcare, housing, livable wages regardless of economic structure. They work together: structure the economy for fairness, and guarantee security for individuals. Wealth concentration and market concentration are mutually reinforcing. Monopolies generate monopoly rents that concentrate wealth. Concentrated wealth funds lobbying and political influence that protects monopolies. Breaking market concentration (antitrust) reduces wealth concentration. Taxing wealth reduces resources for market manipulation. Both pillars attack the same problem from different angles. The SYS-AI rules in Pillar 13 establish overarching principles for AI in government decision-making. The ECO-INS rules are domain-specific implementation for insurance. Both prohibit AI-driven harm without human accountability. The system-level rules ensure consistency across domains; the economic rules provide specific enforcement in insurance and economic decisions.</p>
+</div>
+  </div>
+</div>
+</div>
 </section>
-
+<section class="bg-dark on-dark ruled" id="pil-research">
+<div class="wrap">
+  <h2 style="color:#c9952a">Research & Context</h2>
+  <div class="research-body" style="color:rgba(255,255,255,.85)"><p>The concentration of wealth in the United States has reached levels not seen since the Gilded Age. The top 1% control over 30% of national wealth, while the bottom 50% control less than 2%. This concentration is not merely an economic statistic—it is a structural threat to democratic governance. When individuals have resources measured in hundreds of billions of dollars, they can fund political movements, shape media narratives, influence policy directly, and operate largely above the law through legal resources and political connections.</p>
+<p>The brainstorm branch materials emphasize reframing wealth taxation from a specific rate proposal ("70% on top 1%") to a constitutional principle: taxation must be progressive, wealth concentration threatening democratic self-government may be regulated, and Congress has authority to tax extreme concentrations through wealth taxes, inheritance taxes, progressive income taxation, and land value capture. This framing is politically durable because it establishes a principle without prescribing specific mechanisms, leaving room for statutory evolution while preventing the system from drifting toward plutocracy.</p>
+<p>The automation tax concept has gained prominence as AI capabilities advance. Recent reporting indicates that OpenAI's policy proposals include shifting taxation away from labor toward automation-driven capital, including a "robot tax" on automated labor displacement. This aligns with the project's ECO-AUT rules. The economic logic is straightforward: if productivity gains from automation flow entirely to capital owners while workers lose jobs and bargaining power, inequality accelerates and consumption-based economies face demand problems. An automation tax captures a portion of those gains for public benefit, supporting displaced workers and funding public goods.</p>
+<p>The challenge is implementation: how to measure labor displacement, how to distinguish between augmentation (making workers more productive) and replacement (eliminating positions), and how to prevent gaming through offshore automation or contractor structures. The framework establishes the principle—companies that replace labor with automation should share the gains—while leaving technical implementation to regulatory process.</p>
+<p>Small business support is politically essential. Progressive policies that impose costs on employers—healthcare mandates, paid leave, benefits requirements—can be framed as anti-small-business even when they support workers. The solution is to provide government subsidies, carveouts, or direct support so small businesses can meet social obligations without being driven out of business. This is particularly important for paid parental leave, which small businesses struggle to fund on their own. Government subsidy or direct provision (paid leave insurance fund) makes the policy viable.</p>
+<p>The insurance and AI decision-making rules address a growing problem: algorithmic systems are used to deny claims, reduce coverage, restrict access, and make consequential economic decisions without meaningful human oversight. Humans in the loop often become rubber-stamps because they face pressure to process high volumes, lack information to challenge algorithmic recommendations, and develop automation bias (assuming the computer is right). The requirement for independent human judgment—with accountability if that judgment is merely deference to the algorithm—is essential to prevent AI-driven denial systems.</p>
+<p>Economic equality provisions extend beyond employment discrimination to structural opportunity. "Equal pay for equal work" is insufficient if hiring, promotion, networking, education, and access are discriminatory. The pillar requires genuine equality of economic opportunity, recognizing that formal legal equality can coexist with systematic structural disadvantage.</p>
+<p>Industrial policy is included because economic structure cannot be left entirely to market forces when market forces have been shaped by decades of policy favoring financialization over production. Rebuilding domestic manufacturing capacity, securing critical supply chains, and supporting strategic industries requires affirmative government action. This is particularly important for climate transition (renewable energy manufacturing, battery production) and national security (semiconductors, pharmaceuticals).</p>
+<p>The Georgist land value taxation concept appears in source materials as part of the wealth taxation framework. The logic is that land value is largely unearned (created by community development and public investment) and therefore a particularly appropriate target for taxation. Taxing land value also discourages speculative holding and encourages productive use, addressing housing affordability and economic concentration.</p></div>
+</div>
+</section>
+<section class="bg-parchment ruled" id="pil-related">
+<div class="wrap" style="margin-bottom:0">
+  <h2 style="color:#c9952a">Related Pillars</h2>
+  <p style="font-size:.92rem;color:#666;margin-bottom:.5rem">These pillars intersect with and reinforce this one.</p>
+</div>
+<div class="wrap"><div class="related-grid"><a href="pillar-3-anti-corruption-and-concentrated-power.html" class="related-card"><strong>Pillar 3: Anti-Corruption and Concentrated Power</strong><span>— Limits on wealth translation into political power, campaign finance rules</span></a>
+<a href="pillar-5-rights-civil-liberties-and-economic-security.html" class="related-card"><strong>Pillar 5: Rights, Civil Liberties, and Economic Security</strong><span>— Economic security guarantees, livable wage, social safety net</span></a>
+<a href="pillar-11-antitrust-and-corporate-power.html" class="related-card"><strong>Pillar 11: Antitrust and Corporate Power</strong><span>— Market concentration limits, monopoly rent taxation, corporate structure</span></a>
+<a href="pillar-13-checks-and-balances.html" class="related-card"><strong>Pillar 13: Checks and Balances</strong><span>— AI in government oversight, system-level rules on decision-making fairness</span></a>
+<a href="climate-and-environmental-justice.html" class="related-card"><strong>Climate and Environmental Justice</strong><span>— Industrial policy alignment with climate goals, carbon taxation, transition support</span></a>
+</div></div>
+<div class="wrap" style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap">
+  <a href="../foundations.html#freedom-to-thrive" class="btn-primary" style="background:#c9952a">← Foundation V: Freedom to Thrive</a>
+  <a href="index.html" class="btn-primary" style="background:var(--navy)">All Pillars</a>
+</div>
+</section>
 <footer class="site-footer">
   <div class="wrap">
     <span class="footer-brand">American Renewal Project</span>
     <ul class="footer-links">
       <li><a href="../index.html">Home</a></li>
       <li><a href="../foundations.html">Foundations</a></li>
-      <li><a href="../pillars/index.html">Pillars</a></li>
+      <li><a href="index.html">Pillars</a></li>
       <li><a href="../compare/index.html">Compare</a></li>
     </ul>
     <span class="footer-note">A Third Bill of Rights for the 21st Century. · <a href="../about-ai.html" style="color:inherit;opacity:.7">On the Use of AI</a></span>
@@ -92,5 +421,25 @@
 </footer>
 <script src="../assets/js/data.js"></script>
 <script src="../assets/js/app.js"></script>
+<script>
+(function(){
+  var nav = document.getElementById('pil-snav');
+  if(!nav) return;
+  var links = nav.querySelectorAll('a[href^="#"]');
+  var sections = Array.from(links).map(function(a){
+    return document.querySelector(a.getAttribute('href'));
+  }).filter(Boolean);
+  function onScroll(){
+    var y = window.scrollY + 120;
+    var active = sections[0];
+    sections.forEach(function(s){ if(s.offsetTop <= y) active = s; });
+    links.forEach(function(a){
+      a.classList.toggle('active', a.getAttribute('href') === '#'+active.id);
+    });
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+})();
+</script>
 </body>
 </html>

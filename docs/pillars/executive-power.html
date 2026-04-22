@@ -6,6 +6,124 @@
 <title>Executive Power — American Renewal Project</title>
 <link rel="stylesheet" href="../assets/css/style.css">
 <link rel="icon" type="image/svg+xml" href="../assets/img/logo.svg">
+<style>
+/* ── Pillar page styles ─────────────────────────────────────── */
+.pil-snav {
+  position: sticky; top: 63px; z-index: 150;
+  background: var(--navy); border-bottom: 2px solid rgba(255,255,255,.12);
+  overflow-x: auto; white-space: nowrap;
+}
+.pil-snav ul { display:flex; gap:0; list-style:none; margin:0; padding:0; }
+.pil-snav a {
+  display:block; padding:.55rem 1.1rem; font-family:'Oswald',sans-serif;
+  font-size:.78rem; letter-spacing:.06em; text-transform:uppercase;
+  color:rgba(255,255,255,.62); text-decoration:none; transition:color .15s;
+}
+.pil-snav a:hover, .pil-snav a.active { color:#fff; }
+.pil-snav a.active { border-bottom:2px solid #bf0a30; }
+
+/* ── Section layouts ────────────────────────────────────────── */
+.pil-intro { display:grid; grid-template-columns:1fr 1fr; gap:2rem; }
+@media(max-width:700px){ .pil-intro { grid-template-columns:1fr; } }
+
+.pil-intro h2 { font-size:1.1rem; text-transform:uppercase; letter-spacing:.08em; margin-bottom:.6rem; }
+.pil-intro p, .pil-intro li { font-size:1rem; line-height:1.75; }
+
+.problem-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:1.25rem; margin-top:1rem; }
+.problem-card {
+  background:#fff; border-radius:6px; padding:1.2rem 1.4rem;
+  border-left:4px solid #bf0a30;
+  box-shadow:0 1px 4px rgba(0,0,0,.07);
+}
+.problem-card h3 { font-size:1rem; margin:0 0 .4rem; color:var(--navy); }
+.problem-card p  { font-size:.92rem; line-height:1.65; margin:0; color:#333; }
+
+.reform-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:1rem; margin-top:1rem; }
+.reform-card {
+  background:var(--navy); color:#fff; border-radius:6px;
+  padding:1.1rem 1.3rem; border-top:3px solid #bf0a30;
+}
+.reform-card h3 { font-size:.95rem; margin:0 0 .4rem; color:#bf0a30; text-transform:uppercase; letter-spacing:.04em; }
+.reform-card p  { font-size:.88rem; line-height:1.6; margin:0; color:rgba(255,255,255,.8); }
+
+/* ── Policy rules ───────────────────────────────────────────── */
+.policy-family { margin-bottom:2.5rem; }
+.family-header {
+  display:flex; align-items:baseline; gap:.8rem; margin-bottom:1rem;
+  padding-bottom:.5rem; border-bottom:2px solid #bf0a30;
+}
+.family-code {
+  font-family:'Oswald',sans-serif; font-size:1.1rem;
+  color:#bf0a30; min-width:3rem;
+}
+.family-title { font-size:1rem; font-weight:600; color:var(--ink); }
+.family-count { margin-left:auto; font-size:.8rem; color:#888; white-space:nowrap; }
+
+.rule-grid {
+  display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:.75rem;
+}
+.rule-card {
+  border-radius:5px; padding:.9rem 1rem;
+  background:#fff; border:1px solid #e0d8c8;
+  font-size:.88rem; line-height:1.55;
+}
+.rule-card.status-included { border-left:4px solid #1e8449; }
+.rule-card.status-updated  { border-left:4px solid #2471a3; }
+.rule-card.status-partial  { border-left:4px solid #c9952a; }
+.rule-card.status-missing  { border-left:4px solid #ccc; opacity:.72; }
+
+.rule-header { display:flex; align-items:center; gap:.5rem; margin-bottom:.35rem; }
+.rule-id { font-size:.72rem; color:#888; letter-spacing:.03em; }
+.rule-badge {
+  font-size:.68rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em;
+  padding:.12em .45em; border-radius:3px;
+}
+.status-included .rule-badge { background:#d4edda; color:#155724; }
+.status-updated  .rule-badge { background:#cce5ff; color:#004085; }
+.status-partial  .rule-badge { background:#fff3cd; color:#856404; }
+.status-missing  .rule-badge { background:#f0f0f0; color:#666; }
+
+.rule-title { font-weight:600; margin:.2rem 0 .2rem; color:var(--ink); }
+.rule-stmt  { font-size:.85rem; color:#444; margin:.15rem 0 0; }
+.rule-notes { font-size:.8rem; color:#666; font-style:italic; margin:.25rem 0 0; }
+
+/* ── Research section ───────────────────────────────────────── */
+.research-body h3 { font-size:1.05rem; color:#bf0a30; margin:1.5rem 0 .4rem; }
+.research-body p  { line-height:1.8; font-size:.97rem; }
+
+/* ── Related pillars ────────────────────────────────────────── */
+.related-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:.85rem; margin-top:1rem; }
+.related-card {
+  background:var(--navy); color:#fff; border-radius:6px; padding:1rem;
+  text-decoration:none; transition:opacity .15s;
+}
+.related-card:hover { opacity:.82; }
+.related-card strong { display:block; font-size:.95rem; margin-bottom:.3rem; }
+.related-card span   { font-size:.8rem; color:rgba(255,255,255,.65); }
+
+/* ── Summary stats bar ──────────────────────────────────────── */
+.stats-bar {
+  display:flex; flex-wrap:wrap; gap:1.5rem; margin:1.2rem 0;
+  padding:1rem 1.2rem; background:#fff; border-radius:6px;
+  border:1px solid #e0d8c8;
+}
+.stat-item { text-align:center; }
+.stat-num { display:block; font-family:'Oswald',sans-serif; font-size:2rem; color:#bf0a30; }
+.stat-label { font-size:.78rem; text-transform:uppercase; letter-spacing:.06em; color:#888; }
+
+/* ── Design logic accordion ─────────────────────────────────── */
+details.design-logic { margin-top:1rem; }
+details.design-logic summary {
+  cursor:pointer; font-weight:700; padding:.6rem .8rem;
+  background:rgba(0,0,0,.06); border-radius:4px; user-select:none;
+}
+details.design-logic[open] summary { border-radius:4px 4px 0 0; }
+details.design-logic .design-body { padding:.8rem 1rem; background:#fff; border:1px solid #e0d8c8; border-top:none; border-radius:0 0 4px 4px; }
+details.design-logic .design-body p { font-size:.93rem; line-height:1.75; }
+details.design-logic .design-body ul { padding-left:1.3rem; }
+details.design-logic .design-body li { font-size:.93rem; line-height:1.65; margin-bottom:.3rem; }
+</style>
+<style>:root { --accent-color: #bf0a30; }</style>
 </head>
 <body>
 <nav class="site-nav">
@@ -18,13 +136,12 @@
     <ul class="nav-links">
       <li><a href="../index.html">Home</a></li>
       <li><a href="../foundations.html">Foundations</a></li>
-      <li><a href="../pillars/index.html">Pillars</a></li>
+      <li><a href="index.html">Pillars</a></li>
       <li><a href="../compare/index.html">Compare</a></li>
     </ul>
   </div>
 </nav>
-
-<div class="page-hero compact" style="border-bottom: 4px solid #bf0a30">
+<div class="page-hero compact" style="border-bottom:4px solid #bf0a30">
   <div class="hero-eyebrow">
     <a href="../foundations.html#accountable-power" style="color:rgba(255,255,255,.6);text-decoration:none">
       Foundation I: Accountable Power
@@ -32,59 +149,292 @@
   </div>
   <h1 class="hero-title" style="font-size:clamp(1.8rem,5vw,2.8rem)">Executive Power</h1>
   <div class="hero-divider"><span>★ ★ ★</span></div>
-  <p class="hero-statement" style="font-size:1rem;max-width:620px;margin:0 auto">The presidency must be accountable to law and to Congress, not just to norms and custom.</p>
+  <p class="hero-statement" style="font-size:1rem;max-width:680px;margin:0 auto">Prevent the presidency from becoming a quasi-monarchical office by limiting, constraining, and making transparent all executive power, ensuring presidents remain fully accountable to law and unable to use the office for </p>
 </div>
-
+<nav class="pil-snav" id="pil-snav"><ul><li><a href="#pil-intro">Overview</a></li><li><a href="#pil-problem">The Problem</a></li><li><a href="#pil-reform">Reform Areas</a></li><li><a href="#pil-policy">Policy Rules</a></li><li><a href="#pil-research">Research</a></li><li><a href="#pil-related">Related</a></li></ul></nav>
+<section class="bg-parchment ruled" id="pil-intro">
+<div class="wrap">
+  <div class="stats-bar">
+  <div class="stat-item"><span class="stat-num">13</span><span class="stat-label">Total Rules</span></div>
+  <div class="stat-item"><span class="stat-num" style="color:#1e8449">2</span><span class="stat-label">Active</span></div>
+  <div class="stat-item"><span class="stat-num" style="color:#c9952a">7</span><span class="stat-label">Partial</span></div>
+  <div class="stat-item"><span class="stat-num" style="color:#888">4</span><span class="stat-label">Proposed</span></div>
+</div>
+  <div class="pil-intro">
+    <div>
+      <h2 style="color:#bf0a30;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.06em">Purpose</h2>
+      <p>Prevent the presidency from becoming a quasi-monarchical office by limiting, constraining, and making transparent all executive power, ensuring presidents remain fully accountable to law and unable to use the office for personal, political, or financial gain.</p>
+    </div>
+    <div>
+      <h2 style="color:#bf0a30;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.06em">Core Principle</h2>
+      <p>No president should be able to act above the law, consolidate unchecked power, or use the office for personal, political, or financial gain. The executive is subject to law, not above it.</p>
+    </div>
+  </div>
+</div>
+</section>
+<section class="bg-dark on-dark ruled" id="pil-problem">
+<div class="wrap" style="margin-bottom:0">
+  <h2 style="color:#bf0a30">The Problem It Solves</h2>
+</div>
+<div class="wrap"><p>The American presidency has accumulated dangerous levels of unchecked power through emergency declarations, executive orders, immunity doctrines, financial conflicts of interest, pardon abuse, war powers expansion, and systematic erosion of checks and balances. Without structural reform, the executive branch can effectively operate as an elected monarchy, shielded from accountability, able to self-deal, retaliate against opponents, bypass Congress, and undermine the rule of law itself. This pillar prevents authoritarian consolidation by restoring hard constitutional limits on executive authority.</p></div>
+</section>
+<section class="bg-cream ruled" id="pil-reform">
+<div class="wrap" style="margin-bottom:0">
+  <h2 style="color:#bf0a30">Key Reform Areas</h2>
+</div>
+<div class="wrap"><div class="reform-grid"><div class="reform-card"><h3>Legal Accountability</h3><p>Presidents subject to criminal and civil law; no immunity for official acts that violate law; no self-pardons; independent prosecutorial mechanisms with safeguards against weaponization</p></div>
+<div class="reform-card"><h3>Emergency Powers</h3><p>Automatic expiration of emergency declarations (30-60 days); congressional approval required for extensions; narrowly defined categories; periodic re-justification; fast judicial review; prohibition on using emergencies as substitute for le</p></div>
+<div class="reform-card"><h3>Executive Orders</h3><p>Must cite explicit constitutional or statutory authority; written legal justification required; orders affecting fundamental rights automatically expire unless ratified; prohibition on executive legislation; narrow scope and time limits</p></div>
+<div class="reform-card"><h3>Financial Conflicts and Self-Dealing</h3><p>Mandatory full divestment or true blind trust with fixed timeline; automatic asset forfeiture for non-compliance; ban on using office to benefit self, family, business associates, or donors; real enforcement with civil and criminal penaltie</p></div>
+<div class="reform-card"><h3>Pardon Power Reform</h3><p>No self-pardons; no pardons for family members in presidential misconduct cases; no pardons for co-conspirators; no blanket or preemptive pardons in abuse scenarios; mandatory written justification and public disclosure; independent review </p></div>
+<div class="reform-card"><h3>War Powers and Military Authority</h3><p>No sustained military action without explicit congressional authorization; ban on open-ended AUMFs; all authorizations must include scope, duration, objectives, and review schedule; automatic funding restrictions for unauthorized actions; s</p></div>
+<div class="reform-card"><h3>DOJ and Law Enforcement Independence</h3><p>Protected independence for DOJ in sensitive investigations; all White House-DOJ communications logged and reviewable; removal of key officials requires cause and documentation; criminal penalties for improper interference; explicit ban on t</p></div>
+<div class="reform-card"><h3>Appointments and Senate Confirmation</h3><p>Strict time limits for acting officials; no rotating titles to bypass confirmation; clearly defined positions requiring Senate confirmation; key offices become vacant if confirmation deadlines not met</p></div>
+<div class="reform-card"><h3>Duty to Faithfully Execute Law</h3><p>President cannot nullify laws through systematic non-enforcement; mechanism for challenge when laws are intentionally ignored; courts or oversight mechanisms can intervene</p></div>
+<div class="reform-card"><h3>Government Shutdown Accountability</h3><p>No pay for officials during shutdowns; permanent pay loss after 30 days; prevents using shutdowns as political weapons</p></div>
+</div></div>
+</section>
 <section class="bg-parchment ruled">
 <div class="wrap">
-  <h2>Why This Matters</h2>
-  <p style="font-size:1.05rem;line-height:1.8">When executive power operates without constraint, everything downstream fails. The norms that once restrained the presidency have proven insufficient — they must be replaced with law.</p>
+  <details class="design-logic">
+    <summary>Design Logic — How These Rules Work Together</summary>
+    <div class="design-body"><p>This pillar establishes hard constraints rather than soft norms. Rules use automatic triggers, mandatory expiration dates, independent oversight mechanisms, and real enforcement with civil and criminal penalties. The design prioritizes automatic enforcement mechanisms over good-faith compliance: emergency powers expire automatically, not by choice; divestment is mandatory with asset forfeiture for non-compliance; records must be preserved with criminal penalties for destruction. Where flexibility is necessary (genuine emergencies, national security), the rules preserve operational capability while requiring rapid review, narrow scope, time limits, and transparency. The logic is "trust but verify" replaced with "assume abuse and design accordingly."</p>
+<p>Rules are organized by family code to address distinct mechanisms of executive overreach: accountability (ACC), conflicts of interest (DIV), emergency powers (EMR), executive orders (EXO), pardon power (PDN), records preservation (REC), and war powers (WAR). Each family targets a specific pathway to unchecked authority.</p></div>
+  </details>
 </div>
 </section>
-
-<section class="bg-dark on-dark ruled">
-<div class="wrap" style="display:grid;grid-template-columns:1fr 1fr;gap:2rem">
-  <div>
-    <h2 style="color:#bf0a30">What It Demands</h2>
-    <ul style="list-style:disc;padding-left:1.2rem;color:rgba(255,255,255,.82)">
-        <li>Independent special prosecutors insulated from removal by the president</li>
-        <li>Require congressional authorization for military action beyond 72 hours</li>
-        <li>Full disclosure of executive orders, signing statements, and agency directives</li>
-    </ul>
-  </div>
-  <div>
-    <h2 style="color:#bf0a30">What It Rejects</h2>
-    <ul style="list-style:disc;padding-left:1.2rem;color:rgba(255,255,255,.82)">
-        <li>Presidential immunity doctrines that place the executive above the law</li>
-        <li>Signing statements used to nullify legislation</li>
-        <li>Emergency powers invoked to circumvent Congress</li>
-    </ul>
-  </div>
-</div>
-</section>
-
-<section class="bg-cream ruled">
+<section class="bg-cream ruled" id="pil-policy">
 <div class="wrap">
-  <h2>Key Policy Points</h2>
-  <ol style="padding-left:1.4rem;font-size:1rem;line-height:2">
-          <li>Restore congressional war powers</li>
-          <li>Enforce separation of powers through the courts</li>
-          <li>Require transparency in executive action</li>
-  </ol>
-  <div style="margin-top:2.5rem;display:flex;gap:1rem;flex-wrap:wrap">
-    <a href="../foundations.html#accountable-power" class="btn-primary" style="background:#bf0a30">← Foundation I: Accountable Power</a>
-    <a href="index.html" class="btn-primary" style="background:var(--navy)">All Pillars</a>
+  <h2 style="color:#bf0a30">Full Policy Platform</h2>
+  <p style="font-size:.95rem;color:#555;margin-bottom:1.5rem">
+    Every rule in this pillar, organized by policy area.
+    <strong style="color:#1e8449">Active</strong> rules are current platform commitments.
+    <strong style="color:#c9952a">Partial</strong> rules are in development.
+    <strong style="color:#888">Proposed</strong> rules are planned for future inclusion.
+  </p>
+  <div class="policy-family" id="fam-acc">
+  <div class="family-header">
+    <span class="family-code">ACC</span>
+    <span class="family-title">Accountability and Legal Constraints</span>
+    <span class="family-count">1/5 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-included">
+  <div class="rule-header">
+    <code class="rule-id">GOV-ACC-001</code>
+    <span class="rule-badge">Included</span>
+  </div>
+  <p class="rule-title">President subject to law</p>
+  
+  <p class="rule-notes">Establishes the fundamental principle that presidents are not above the law. No immunity for official acts that violate the law. Independent prosecutorial mechanisms with safeguards against weaponization. This is the foundational rule for all executive accountability measures.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">GOV-ACC-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Ban political firings</p>
+  
+  <p class="rule-notes">Prohibits firing officials for political reasons where the purpose is to obstruct oversight, punish lawful conduct, or consolidate personal power. Protects civil service, whistleblowers, and oversight officials. Requires cause for removal of key law enforcement and oversight positions.</p>
+</div>
+<div class="rule-card status-partial">
+  <div class="rule-header">
+    <code class="rule-id">GOV-ACC-003</code>
+    <span class="rule-badge">Partial</span>
+  </div>
+  <p class="rule-title">Ban executive kill lists</p>
+  
+  <p class="rule-notes">Prohibits targeted killing of U.S. citizens without due process. Addresses drone strike programs and assassination authority. Requires judicial process for any targeting of citizens.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">GOV-SHD-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">No pay during government shutdown</p>
+  
+  <p class="rule-notes">Eliminates pay for elected and appointed officials during government shutdowns. Changes incentive structure so officials cannot use shutdowns as consequence-free negotiating tactics while federal workers go unpaid.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">GOV-SHD-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Permanent pay loss after 30 days shutdown</p>
+  
+  <p class="rule-notes">After 30 days of government shutdown, officials suffer permanent loss of pay for the shutdown period—it cannot be retroactively recovered. Escalates consequences to force resolution.</p>
+</div>
   </div>
 </div>
+<div class="policy-family" id="fam-div">
+  <div class="family-header">
+    <span class="family-code">DIV</span>
+    <span class="family-title">Divestiture and Financial Conflicts</span>
+    <span class="family-count">0/1 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-partial">
+  <div class="rule-header">
+    <code class="rule-id">GOV-DIV-001</code>
+    <span class="rule-badge">Partial</span>
+  </div>
+  <p class="rule-title">Mandatory divestment enforcement</p>
+  
+  <p class="rule-notes">Requires full divestment or true blind trust within fixed timeline (30-day grace period discussed, with potential 60-day congressional extension). Non-compliance triggers automatic asset forfeiture and liquidation. Bans using office to benefit self, family, business associates, political donors, or entities with concealed interests. Addresses systematic self-dealing through presidential properties, federal contracts, foreign payments, tariffs, taxes, and enforcement decisions. Real enforcement backed by civil and criminal penalties, not voluntary compliance or ethics recommendations.</p>
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-emr">
+  <div class="family-header">
+    <span class="family-code">EMR</span>
+    <span class="family-title">Emergency Powers</span>
+    <span class="family-count">0/1 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-partial">
+  <div class="rule-header">
+    <code class="rule-id">GOV-EMR-001</code>
+    <span class="rule-badge">Partial</span>
+  </div>
+  <p class="rule-title">Time limits on executive actions</p>
+  
+  <p class="rule-notes">Emergency declarations automatically expire within 30-60 days. Congress must affirmatively approve extensions. Emergency categories narrowly defined in law. Powers tied to specific invoked category. Periodic re-justification and renewal required. Fast judicial review automatically available. Emergencies may not be used as substitute for legislation. Preserves flexibility for genuine crises while preventing permanent emergency governance and expansion of executive power through endless declared emergencies.</p>
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-exo">
+  <div class="family-header">
+    <span class="family-code">EXO</span>
+    <span class="family-title">Executive Orders</span>
+    <span class="family-count">0/1 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-partial">
+  <div class="rule-header">
+    <code class="rule-id">GOV-EXO-001</code>
+    <span class="rule-badge">Partial</span>
+  </div>
+  <p class="rule-title">Limit executive orders to emergencies</p>
+  
+  <p class="rule-notes">Executive orders must cite explicit constitutional or statutory authority. Must include written legal justification. Orders affecting fundamental rights or large-scale policy shifts automatically expire unless ratified or face fast-track congressional override. Explicit prohibition on using executive orders to legislate without Congress. Orders must be narrowly scoped and time-limited when based on emergency authority. Generic, continuing, or open-ended executive policymaking is disallowed. Preserves legitimate administrative authority while preventing transformation of executive orders into de facto legislation.</p>
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-pdn">
+  <div class="family-header">
+    <span class="family-code">PDN</span>
+    <span class="family-title">Pardon Power</span>
+    <span class="family-count">0/1 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-partial">
+  <div class="rule-header">
+    <code class="rule-id">GOV-PDN-001</code>
+    <span class="rule-badge">Partial</span>
+  </div>
+  <p class="rule-title">Restrict pardon power</p>
+  
+  <p class="rule-notes">No self-pardons. No pardons for family members in cases involving presidential misconduct. No pardons for co-conspirators in executive wrongdoing. No blanket or preemptive pardons in defined abuse scenarios. Mandatory written justification and public disclosure for all pardons, clemency grants, and commutations. Independent review mechanism for abuse. Severely limits ability to use pardon, clemency, or commutation powers for self-protection or political corruption while preserving legitimate clemency function.</p>
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-rec">
+  <div class="family-header">
+    <span class="family-code">REC</span>
+    <span class="family-title">Records and Transparency</span>
+    <span class="family-count">0/1 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-partial">
+  <div class="rule-header">
+    <code class="rule-id">GOV-REC-001</code>
+    <span class="rule-badge">Partial</span>
+  </div>
+  <p class="rule-title">Constitutionalize presidential records</p>
+  
+  <p class="rule-notes">Constitutional baseline for presidential records preservation and disclosure. Presidential Records Act framework elevated to constitutional requirement. Mandatory preservation and disclosure. Criminal penalties for destruction, concealment, or unlawful withholding. Fast disclosure mechanisms in constitutional crises. Creates permanent documentary record necessary for accountability, historical analysis, and prosecution of misconduct. Prevents evasion through statute weakening, defunding, or classification abuse.</p>
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-war">
+  <div class="family-header">
+    <span class="family-code">WAR</span>
+    <span class="family-title">War Powers</span>
+    <span class="family-count">1/3 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-included">
+  <div class="rule-header">
+    <code class="rule-id">GOV-WAR-001</code>
+    <span class="rule-badge">Included</span>
+  </div>
+  <p class="rule-title">Ban open-ended AUMFs</p>
+  
+  <p class="rule-notes">Prohibits open-ended or continuing authorizations for use of military force. No sustained military action without explicit congressional authorization. All authorizations must include scope, duration, objectives, and review schedule. Addresses post-9/11 expansion of presidential military authority through 2001 and 2002 AUMFs used to justify military action across multiple continents for decades. Restores Congress's constitutional war-making authority while preserving operational flexibility for genuine defense.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">GOV-WAR-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Require declared wars</p>
+  
+  <p class="rule-notes">Wars must be officially declared or specifically authorized within tight constitutional limits. No generic or indefinite military authorizations. Returns to constitutional requirement for congressional declaration of war.</p>
+</div>
+<div class="rule-card status-partial">
+  <div class="rule-header">
+    <code class="rule-id">GOV-WAR-003</code>
+    <span class="rule-badge">Partial</span>
+  </div>
+  <p class="rule-title">Limit military authority</p>
+  
+  <p class="rule-notes">Strict limits on domestic military or federal force deployment. Narrow statutory and constitutional limits on domestic use of force, including reforms to emergency and insurrection-related authorities. Automatic funding restrictions for unauthorized actions. Mandatory reporting plus rapid review. Strong civil liberties protections. Prevents normalization of domestic military force as tool of political control.</p>
+</div>
+  </div>
+</div>
+</div>
 </section>
-
+<section class="bg-dark on-dark ruled" id="pil-research">
+<div class="wrap">
+  <h2 style="color:#bf0a30">Research & Context</h2>
+  <div class="research-body" style="color:rgba(255,255,255,.85)"><p>The executive power pillar emerged from systematic analysis of presidential overreach across multiple administrations, but crystallized in response to recent extreme examples: the Trump administration's systematic defiance of congressional subpoenas, self-dealing through presidential properties, blanket immunity claims, pardon abuse for political allies, emergency declaration to bypass Congress on border wall funding, and the Supreme Court's 2024 ruling granting broad immunity for "official acts." These examples revealed that existing constitutional checks have failed catastrophically.</p>
+<p>The legal accountability framework addresses the fundamental question: is the president above the law? The framers clearly intended no king, yet modern immunity doctrines, self-pardon debates, and lack of enforcement mechanisms have created precisely that outcome. The pillar establishes that presidents are explicitly subject to criminal and civil law, with independent prosecutorial mechanisms to avoid both impunity and weaponization. The challenge is balancing protection from frivolous political prosecutions with accountability for genuine criminality. The solution uses high evidentiary thresholds, structured review processes, and independent oversight rather than blanket immunity.</p>
+<p>Emergency powers reform tackles the historical expansion of executive authority through declared emergencies that never end. Over thirty declared national emergencies remain active, some for decades, granting presidents extraordinary powers with minimal oversight. The Trump administration's attempt to use emergency declarations to bypass congressional appropriations (border wall) exemplified the abuse potential. The reform requires automatic expiration (30-60 days), affirmative congressional approval for extensions, narrow category definitions tied to specific powers, periodic re-justification, and fast judicial review. This preserves genuine emergency flexibility while preventing permanent crisis governance.</p>
+<p>Executive order reform confronts the transformation of executive orders from administrative housekeeping into de facto legislation. Modern presidents use executive orders to create sweeping policy changes without congressional input: DACA, travel bans, environmental regulations, pandemic responses. While some executive discretion is necessary for administration, the pillar requires that orders cite explicit constitutional or statutory authority, include written legal justification, and either expire automatically or face fast-track congressional override when affecting fundamental rights or creating large-scale policy shifts. This prevents executive legislation while preserving legitimate administrative authority.</p>
+<p>The financial conflicts and divestment rules emerged from the Trump administration's unprecedented refusal to divest from business interests, resulting in systematic self-dealing: foreign governments purchasing hotel rooms and memberships at Trump properties, federal agencies and political groups booking events at Trump venues, policy decisions affecting Trump business interests, obstruction of emoluments clause enforcement. The original proposal discussed complete asset forfeiture for non-compliance: all non-divested investments seized upon inauguration, with a 30-day grace period that Congress may extend by 60 days on a president-by-president basis. This radical approach reflects the failure of voluntary compliance, honor systems, and ethics office recommendations. The enforcement must be automatic and severe because voluntary divestment has proven ineffective.</p>
+<p>Pardon power reform addresses the constitutional crisis posed by unlimited pardon authority combined with potential criminality. The framers did not anticipate self-pardons, preemptive pardons for co-conspirators, or systematic use of pardons to obstruct justice. Recent examples include pardons for campaign associates convicted of crimes related to presidential conduct, family member pardons, blanket pardons issued minutes before leaving office, and serious discussion of self-pardon legality. The reform bans self-pardons, family member pardons in cases involving presidential misconduct, co-conspirator pardons, and blanket or preemptive pardons in defined abuse scenarios. It requires mandatory written justification and public disclosure for all pardons, plus independent review mechanisms. This preserves legitimate clemency power while ending pardon abuse for self-protection.</p>
+<p>War powers reform confronts the post-9/11 expansion of presidential military authority through open-ended authorizations. The 2001 and 2002 AUMFs have been used to justify military action across multiple continents, in countries not contemplated when passed, against groups that didn't exist when passed, for two decades and counting. Presidents have interpreted these authorizations to grant nearly unlimited war-making authority. The reform bans open-ended AUMFs, requires all authorizations to include scope, duration, objectives, and review schedules, creates automatic funding restrictions for unauthorized actions, and strictly limits domestic military deployment. This restores Congress's constitutional war-making authority while preserving necessary operational flexibility for genuine defense.</p>
+<p>DOJ independence rules emerged from repeated attempts to use the Department of Justice as a personal law firm or political weapon: pressure to prosecute opponents, interference in ongoing investigations, installation of loyalists to block prosecutions, improper communications about pending cases, firing or threatening officials who refuse improper orders. The pillar creates protected independence standards for DOJ in sensitive investigations, requires logging of all White House-DOJ communications in sensitive matters, mandates cause and documentation for removing key officials, establishes criminal penalties for improper interference, and explicitly bans targeting opponents or shielding allies. This protects law enforcement independence without making the DOJ unaccountable—independence is protected for investigative and prosecutorial decisions, not for policy or administration.</p>
+<p>The appointments and acting officials rules close loopholes revealed through systematic abuse of "acting" positions to bypass Senate confirmation. Multiple administrations have used rotating "acting" titles, reassignment chains, and indefinite temporary appointments to install officials without Senate approval in positions requiring confirmation. The reform establishes strict time limits, prevents title rotation tricks, clearly defines positions requiring confirmation, and makes key offices automatically vacant if confirmation deadlines aren't met. This restores the advice-and-consent function without paralyzing government operation.</p>
+<p>Records preservation constitutionalization responds to repeated attempts to destroy, conceal, or withhold presidential records: the Nixon tapes, email deletions, document removal from the White House, classification to hide misconduct. The Presidential Records Act established statutory requirements, but statutes can be weakened, defunded, or ignored. Constitutionalizing the base framework makes records preservation a constitutional requirement with criminal penalties for destruction, concealment, or unlawful withholding. This creates a permanent documentary record necessary for accountability, historical analysis, and future prosecution of misconduct.</p>
+<p>The government shutdown accountability rules emerged from the use of shutdowns as political weapons, with elected officials continuing to receive pay while causing economic hardship for federal workers and the public. The rules eliminate pay for all officials during shutdowns and create permanent pay loss after 30 days. This changes the incentive structure: officials can no longer use shutdowns as a consequence-free negotiating tactic when they personally suffer the same consequences as those they govern.</p>
+<p>Throughout the pillar, the design philosophy is consistent: assume bad faith, design for worst-case scenarios, use automatic mechanisms rather than discretionary enforcement, build in multiple overlapping safeguards, preserve flexibility only where operationally necessary with compensating controls, and make violations costly through civil penalties, criminal penalties, automatic consequences (forfeiture, expiration, vacancy), and public transparency. The goal is not to make the presidency weak, but to make it lawful, accountable, and unable to accumulate authoritarian power.</p>
+<p>The pressure-test lessons that shaped this pillar include: avoid relying on good faith or voluntary compliance; use hard constraints instead of norms or recommendations; build automatic triggers into the system wherever possible; preserve emergency flexibility without creating loopholes for abuse; include safeguards against weaponized prosecutions while ending immunity; prevent bypass through informal influence, shadow chains of command, or administrative technicalities; make transparency and documentation mandatory, not optional; create independent oversight with real enforcement power; and recognize that any mechanism can be subverted given sufficient motivation, so layer defenses and make subversion costly, visible, and prosecutable.</p></div>
+</div>
+</section>
+<section class="bg-parchment ruled" id="pil-related">
+<div class="wrap" style="margin-bottom:0">
+  <h2 style="color:#bf0a30">Related Pillars</h2>
+  <p style="font-size:.92rem;color:#666;margin-bottom:.5rem">These pillars intersect with and reinforce this one.</p>
+</div>
+<div class="wrap"><div class="related-grid"><a href="courts-and-judicial-system.html" class="related-card"><strong>Courts and Judicial System</strong><span>Judicial review mechanisms for executive actions; interpretation standards for executive authority; venue reform for cas</span></a>
+<a href="congressional-power.html" class="related-card"><strong>Congressional Power</strong><span>Emergency power extensions; AUMF authorization; appropriations enforcement; oversight mechanisms; impeachment processes</span></a>
+<a href="government-ethics-and-accountability.html" class="related-card"><strong>Government Ethics and Accountability</strong><span>Independent oversight bodies; corruption enforcement; conflicts of interest; transparency requirements; whistleblower pr</span></a>
+<a href="rights-and-civil-liberties.html" class="related-card"><strong>Rights and Civil Liberties</strong><span>Protection against executive surveillance; limits on domestic use of force; due process in national security contexts</span></a>
+<a href="democratic-institutions.html" class="related-card"><strong>Democratic Institutions</strong><span>Records preservation for democratic accountability; protection of civil service; separation of official duties from poli</span></a>
+</div></div>
+<div class="wrap" style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap">
+  <a href="../foundations.html#accountable-power" class="btn-primary" style="background:#bf0a30">← Foundation I: Accountable Power</a>
+  <a href="index.html" class="btn-primary" style="background:var(--navy)">All Pillars</a>
+</div>
+</section>
 <footer class="site-footer">
   <div class="wrap">
     <span class="footer-brand">American Renewal Project</span>
     <ul class="footer-links">
       <li><a href="../index.html">Home</a></li>
       <li><a href="../foundations.html">Foundations</a></li>
-      <li><a href="../pillars/index.html">Pillars</a></li>
+      <li><a href="index.html">Pillars</a></li>
       <li><a href="../compare/index.html">Compare</a></li>
     </ul>
     <span class="footer-note">A Third Bill of Rights for the 21st Century. · <a href="../about-ai.html" style="color:inherit;opacity:.7">On the Use of AI</a></span>
@@ -92,5 +442,25 @@
 </footer>
 <script src="../assets/js/data.js"></script>
 <script src="../assets/js/app.js"></script>
+<script>
+(function(){
+  var nav = document.getElementById('pil-snav');
+  if(!nav) return;
+  var links = nav.querySelectorAll('a[href^="#"]');
+  var sections = Array.from(links).map(function(a){
+    return document.querySelector(a.getAttribute('href'));
+  }).filter(Boolean);
+  function onScroll(){
+    var y = window.scrollY + 120;
+    var active = sections[0];
+    sections.forEach(function(s){ if(s.offsetTop <= y) active = s; });
+    links.forEach(function(a){
+      a.classList.toggle('active', a.getAttribute('href') === '#'+active.id);
+    });
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+})();
+</script>
 </body>
 </html>

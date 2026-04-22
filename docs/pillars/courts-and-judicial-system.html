@@ -6,6 +6,124 @@
 <title>Courts & Judicial System — American Renewal Project</title>
 <link rel="stylesheet" href="../assets/css/style.css">
 <link rel="icon" type="image/svg+xml" href="../assets/img/logo.svg">
+<style>
+/* ── Pillar page styles ─────────────────────────────────────── */
+.pil-snav {
+  position: sticky; top: 63px; z-index: 150;
+  background: var(--navy); border-bottom: 2px solid rgba(255,255,255,.12);
+  overflow-x: auto; white-space: nowrap;
+}
+.pil-snav ul { display:flex; gap:0; list-style:none; margin:0; padding:0; }
+.pil-snav a {
+  display:block; padding:.55rem 1.1rem; font-family:'Oswald',sans-serif;
+  font-size:.78rem; letter-spacing:.06em; text-transform:uppercase;
+  color:rgba(255,255,255,.62); text-decoration:none; transition:color .15s;
+}
+.pil-snav a:hover, .pil-snav a.active { color:#fff; }
+.pil-snav a.active { border-bottom:2px solid #bf0a30; }
+
+/* ── Section layouts ────────────────────────────────────────── */
+.pil-intro { display:grid; grid-template-columns:1fr 1fr; gap:2rem; }
+@media(max-width:700px){ .pil-intro { grid-template-columns:1fr; } }
+
+.pil-intro h2 { font-size:1.1rem; text-transform:uppercase; letter-spacing:.08em; margin-bottom:.6rem; }
+.pil-intro p, .pil-intro li { font-size:1rem; line-height:1.75; }
+
+.problem-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:1.25rem; margin-top:1rem; }
+.problem-card {
+  background:#fff; border-radius:6px; padding:1.2rem 1.4rem;
+  border-left:4px solid #bf0a30;
+  box-shadow:0 1px 4px rgba(0,0,0,.07);
+}
+.problem-card h3 { font-size:1rem; margin:0 0 .4rem; color:var(--navy); }
+.problem-card p  { font-size:.92rem; line-height:1.65; margin:0; color:#333; }
+
+.reform-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:1rem; margin-top:1rem; }
+.reform-card {
+  background:var(--navy); color:#fff; border-radius:6px;
+  padding:1.1rem 1.3rem; border-top:3px solid #bf0a30;
+}
+.reform-card h3 { font-size:.95rem; margin:0 0 .4rem; color:#bf0a30; text-transform:uppercase; letter-spacing:.04em; }
+.reform-card p  { font-size:.88rem; line-height:1.6; margin:0; color:rgba(255,255,255,.8); }
+
+/* ── Policy rules ───────────────────────────────────────────── */
+.policy-family { margin-bottom:2.5rem; }
+.family-header {
+  display:flex; align-items:baseline; gap:.8rem; margin-bottom:1rem;
+  padding-bottom:.5rem; border-bottom:2px solid #bf0a30;
+}
+.family-code {
+  font-family:'Oswald',sans-serif; font-size:1.1rem;
+  color:#bf0a30; min-width:3rem;
+}
+.family-title { font-size:1rem; font-weight:600; color:var(--ink); }
+.family-count { margin-left:auto; font-size:.8rem; color:#888; white-space:nowrap; }
+
+.rule-grid {
+  display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:.75rem;
+}
+.rule-card {
+  border-radius:5px; padding:.9rem 1rem;
+  background:#fff; border:1px solid #e0d8c8;
+  font-size:.88rem; line-height:1.55;
+}
+.rule-card.status-included { border-left:4px solid #1e8449; }
+.rule-card.status-updated  { border-left:4px solid #2471a3; }
+.rule-card.status-partial  { border-left:4px solid #c9952a; }
+.rule-card.status-missing  { border-left:4px solid #ccc; opacity:.72; }
+
+.rule-header { display:flex; align-items:center; gap:.5rem; margin-bottom:.35rem; }
+.rule-id { font-size:.72rem; color:#888; letter-spacing:.03em; }
+.rule-badge {
+  font-size:.68rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em;
+  padding:.12em .45em; border-radius:3px;
+}
+.status-included .rule-badge { background:#d4edda; color:#155724; }
+.status-updated  .rule-badge { background:#cce5ff; color:#004085; }
+.status-partial  .rule-badge { background:#fff3cd; color:#856404; }
+.status-missing  .rule-badge { background:#f0f0f0; color:#666; }
+
+.rule-title { font-weight:600; margin:.2rem 0 .2rem; color:var(--ink); }
+.rule-stmt  { font-size:.85rem; color:#444; margin:.15rem 0 0; }
+.rule-notes { font-size:.8rem; color:#666; font-style:italic; margin:.25rem 0 0; }
+
+/* ── Research section ───────────────────────────────────────── */
+.research-body h3 { font-size:1.05rem; color:#bf0a30; margin:1.5rem 0 .4rem; }
+.research-body p  { line-height:1.8; font-size:.97rem; }
+
+/* ── Related pillars ────────────────────────────────────────── */
+.related-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:.85rem; margin-top:1rem; }
+.related-card {
+  background:var(--navy); color:#fff; border-radius:6px; padding:1rem;
+  text-decoration:none; transition:opacity .15s;
+}
+.related-card:hover { opacity:.82; }
+.related-card strong { display:block; font-size:.95rem; margin-bottom:.3rem; }
+.related-card span   { font-size:.8rem; color:rgba(255,255,255,.65); }
+
+/* ── Summary stats bar ──────────────────────────────────────── */
+.stats-bar {
+  display:flex; flex-wrap:wrap; gap:1.5rem; margin:1.2rem 0;
+  padding:1rem 1.2rem; background:#fff; border-radius:6px;
+  border:1px solid #e0d8c8;
+}
+.stat-item { text-align:center; }
+.stat-num { display:block; font-family:'Oswald',sans-serif; font-size:2rem; color:#bf0a30; }
+.stat-label { font-size:.78rem; text-transform:uppercase; letter-spacing:.06em; color:#888; }
+
+/* ── Design logic accordion ─────────────────────────────────── */
+details.design-logic { margin-top:1rem; }
+details.design-logic summary {
+  cursor:pointer; font-weight:700; padding:.6rem .8rem;
+  background:rgba(0,0,0,.06); border-radius:4px; user-select:none;
+}
+details.design-logic[open] summary { border-radius:4px 4px 0 0; }
+details.design-logic .design-body { padding:.8rem 1rem; background:#fff; border:1px solid #e0d8c8; border-top:none; border-radius:0 0 4px 4px; }
+details.design-logic .design-body p { font-size:.93rem; line-height:1.75; }
+details.design-logic .design-body ul { padding-left:1.3rem; }
+details.design-logic .design-body li { font-size:.93rem; line-height:1.65; margin-bottom:.3rem; }
+</style>
+<style>:root { --accent-color: #bf0a30; }</style>
 </head>
 <body>
 <nav class="site-nav">
@@ -18,13 +136,12 @@
     <ul class="nav-links">
       <li><a href="../index.html">Home</a></li>
       <li><a href="../foundations.html">Foundations</a></li>
-      <li><a href="../pillars/index.html">Pillars</a></li>
+      <li><a href="index.html">Pillars</a></li>
       <li><a href="../compare/index.html">Compare</a></li>
     </ul>
   </div>
 </nav>
-
-<div class="page-hero compact" style="border-bottom: 4px solid #bf0a30">
+<div class="page-hero compact" style="border-bottom:4px solid #bf0a30">
   <div class="hero-eyebrow">
     <a href="../foundations.html#accountable-power" style="color:rgba(255,255,255,.6);text-decoration:none">
       Foundation I: Accountable Power
@@ -32,59 +149,235 @@
   </div>
   <h1 class="hero-title" style="font-size:clamp(1.8rem,5vw,2.8rem)">Courts & Judicial System</h1>
   <div class="hero-divider"><span>★ ★ ★</span></div>
-  <p class="hero-statement" style="font-size:1rem;max-width:620px;margin:0 auto">Federal courts must be accountable, ethical, and structurally independent from political capture.</p>
+  <p class="hero-statement" style="font-size:1rem;max-width:680px;margin:0 auto">Define how courts operate, how judges are selected and constrained, and how interpretation of law and rights is governed, ensuring the judiciary remains independent, accountable, ethically bound, and structurally designe</p>
 </div>
-
+<nav class="pil-snav" id="pil-snav"><ul><li><a href="#pil-intro">Overview</a></li><li><a href="#pil-problem">The Problem</a></li><li><a href="#pil-reform">Reform Areas</a></li><li><a href="#pil-policy">Policy Rules</a></li><li><a href="#pil-research">Research</a></li><li><a href="#pil-related">Related</a></li></ul></nav>
+<section class="bg-parchment ruled" id="pil-intro">
+<div class="wrap">
+  <div class="stats-bar">
+  <div class="stat-item"><span class="stat-num">8</span><span class="stat-label">Total Rules</span></div>
+  <div class="stat-item"><span class="stat-num" style="color:#1e8449">0</span><span class="stat-label">Active</span></div>
+  <div class="stat-item"><span class="stat-num" style="color:#c9952a">0</span><span class="stat-label">Partial</span></div>
+  <div class="stat-item"><span class="stat-num" style="color:#888">8</span><span class="stat-label">Proposed</span></div>
+</div>
+  <div class="pil-intro">
+    <div>
+      <h2 style="color:#bf0a30;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.06em">Purpose</h2>
+      <p>Define how courts operate, how judges are selected and constrained, and how interpretation of law and rights is governed, ensuring the judiciary remains independent, accountable, ethically bound, and structurally designed to uphold rights rather than undermine them.</p>
+    </div>
+    <div>
+      <h2 style="color:#bf0a30;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.06em">Core Principle</h2>
+      <p>The judiciary must be independent, accountable, ethically bound, and structurally designed to uphold rights, not undermine them. Courts exist to protect constitutional principles and individual rights, not to impose ideological preferences or partisan outcomes.</p>
+    </div>
+  </div>
+</div>
+</section>
+<section class="bg-dark on-dark ruled" id="pil-problem">
+<div class="wrap" style="margin-bottom:0">
+  <h2 style="color:#bf0a30">The Problem It Solves</h2>
+</div>
+<div class="wrap"><p>The federal judiciary, particularly the Supreme Court, has accumulated immense power without corresponding accountability mechanisms. Lifetime appointments create incentives to appoint the youngest possible ideologues who will shape law for 30-40 years. No binding ethics code governs Supreme Court justices, enabling conflicts of interest, undisclosed gifts, political activities, and spouse involvement in cases without consequence. Interpretive methodologies like strict textualism are weaponized to ignore legislative intent and dismantle established rights. Recent Supreme Court decisions—overturning Roe v. Wade in Dobbs, granting broad presidential immunity, gutting the Voting Rights Act, eliminating affirmative action, expanding gun rights while restricting regulatory authority—demonstrate a court willing to overturn precedent and impose ideological outcomes with sweeping consequences. Venue shopping allows plaintiffs to select sympathetic judges for nationwide injunctions. Recusal standards are voluntary and unenforceable, with justices deciding their own conflicts. The result is a judiciary that operates more as a partisan super-legislature than an independent arbiter of law.</p></div>
+</section>
+<section class="bg-cream ruled" id="pil-reform">
+<div class="wrap" style="margin-bottom:0">
+  <h2 style="color:#bf0a30">Key Reform Areas</h2>
+</div>
+<div class="wrap"><div class="reform-grid"><div class="reform-card"><h3>Supreme Court Term Limits</h3><p>18-year staggered terms to ensure regular turnover, eliminate strategic retirement timing, reduce confirmation stakes, and address age-related decline without voluntary retirement</p></div>
+<div class="reform-card"><h3>Binding Judicial Ethics Code</h3><p>Enforceable ethics requirements for all federal judges including Supreme Court; covering financial conflicts, gifts, political activity, recusal standards, family involvement; real enforcement mechanisms with consequences</p></div>
+<div class="reform-card"><h3>Mandatory Recusal Standards</h3><p>Clear, enforceable triggers for recusal based on financial interest, family involvement, prior participation, or public prejudgment; independent review of recusal decisions; penalties for refusing appropriate recusal</p></div>
+<div class="reform-card"><h3>Interpretive Standards Reform</h3><p>Courts must consider intent, context, and purpose alongside text when interpreting laws, especially rights-related laws; limits on strict textualism as tool to subvert clear legislative meaning; encouragement for Congress to include plain-l</p></div>
+<div class="reform-card"><h3>Venue Reform</h3><p>Prevent judge and forum shopping; require substantive local connection for venue; limit nationwide injunctions from single district judges; consider multi-judge panels for cases with national scope</p></div>
+<div class="reform-card"><h3>Judicial Oversight Mechanisms</h3><p>Independent bodies to investigate ethics complaints, review recusal decisions, and enforce conduct standards; transparency requirements for financial disclosures and reasoning in opinions; public records of judicial decision-making</p></div>
+</div></div>
+</section>
 <section class="bg-parchment ruled">
 <div class="wrap">
-  <h2>Why This Matters</h2>
-  <p style="font-size:1.05rem;line-height:1.8">The federal judiciary has been captured by a decades-long coordinated effort to install ideologically predetermined judges. The result is a court system that increasingly reflects donor interest rather than constitutional principle.</p>
+  <details class="design-logic">
+    <summary>Design Logic — How These Rules Work Together</summary>
+    <div class="design-body"><p>This pillar addresses judicial dysfunction through four mechanisms: structural reform (term limits to end lifetime appointments), ethical enforcement (binding codes with real penalties), interpretive standards (requiring consideration of intent and context, not just text), and procedural improvements (venue reform, mandatory recusal standards, transparency).</p>
+<p>Term limits for Supreme Court justices (18-year staggered terms frequently discussed) solve multiple problems simultaneously: eliminate strategic retirement timing, reduce confirmation stakes, ensure regular turnover that reflects democratic change, discourage appointing extremists who will serve for decades, and address age-related decline without relying on voluntary retirement. The same logic applies to lower federal judges, though implementation details differ.</p>
+<p>Ethics reform establishes binding codes applicable to all federal judges including Supreme Court justices. Current "ethics standards" for the Supreme Court are voluntary, unenforceable, and routinely ignored. Binding codes would cover: financial conflicts and disclosure, gifts and outside income, political activities and public statements, recusal requirements, spouse and family involvement in cases before the court, transparency of financial arrangements, and enforcement mechanisms with real consequences (censure, removal from cases, potential impeachment for egregious violations).</p>
+<p>Interpretive standards address the weaponization of textualism to ignore legislative intent. Strict textualism claims to interpret only the text as written, ignoring context, purpose, or consequences. In practice, this becomes a tool to undermine laws by reading them in the most narrow, literal way regardless of obvious legislative intent. The reform requires courts to consider intent, context, and purpose alongside text—not ignoring text, but not weaponizing selective literalism to subvert clear meaning. It also encourages Congress to include plain-language intent statements in legislation, creating an explicit interpretive record.</p>
+<p>Venue reform prevents judge shopping. Current rules allow plaintiffs to file cases in any district with minimal connection, enabling selection of single sympathetic judges (often ideologically aligned or appointed by same party) who then issue nationwide injunctions affecting the entire country based on one judge's view. Reform would require substantive local connection for venue, limit or eliminate nationwide injunctions from single district judges, or require multi-judge panels for cases with national scope.</p>
+<p>Recusal standards make conflict-of-interest rules mandatory and enforceable. Currently justices decide their own recusal with no review or consequence for refusing. Reform would establish clear, mandatory recusal triggers (financial interest, family involvement, prior participation in case, public statements indicating prejudgment) with independent review mechanisms and enforcement.</p>
+<p>Rules are organized by family: ethics (ETH) for conduct and accountability codes, integrity (INT) for interpretive standards ensuring legal reasoning serves justice rather than ideology, oversight (OVR) for mechanisms ensuring accountability, records (REC) for transparency and recusal documentation, and venue (VEN) for procedural reforms preventing judge shopping.</p></div>
+  </details>
 </div>
 </section>
-
-<section class="bg-dark on-dark ruled">
-<div class="wrap" style="display:grid;grid-template-columns:1fr 1fr;gap:2rem">
-  <div>
-    <h2 style="color:#bf0a30">What It Demands</h2>
-    <ul style="list-style:disc;padding-left:1.2rem;color:rgba(255,255,255,.82)">
-        <li>Binding ethics code for Supreme Court justices with enforceable recusal standards</li>
-        <li>Term limits or mandatory senior status after 18 years on the Supreme Court</li>
-        <li>Transparent, standardized criteria for judicial nominations and confirmation hearings</li>
-    </ul>
-  </div>
-  <div>
-    <h2 style="color:#bf0a30">What It Rejects</h2>
-    <ul style="list-style:disc;padding-left:1.2rem;color:rgba(255,255,255,.82)">
-        <li>The Supreme Court as a political prize to be seized by whichever party holds power</li>
-        <li>Justices who accept gifts from litigants without disclosure or recusal</li>
-        <li>Confirmation processes used to install predetermined outcomes rather than evaluate qualifications</li>
-    </ul>
-  </div>
-</div>
-</section>
-
-<section class="bg-cream ruled">
+<section class="bg-cream ruled" id="pil-policy">
 <div class="wrap">
-  <h2>Key Policy Points</h2>
-  <ol style="padding-left:1.4rem;font-size:1rem;line-height:2">
-          <li>Supreme Court reform and expansion</li>
-          <li>Ethics enforcement for federal judges</li>
-          <li>Transparent confirmation standards</li>
-  </ol>
-  <div style="margin-top:2.5rem;display:flex;gap:1rem;flex-wrap:wrap">
-    <a href="../foundations.html#accountable-power" class="btn-primary" style="background:#bf0a30">← Foundation I: Accountable Power</a>
-    <a href="index.html" class="btn-primary" style="background:var(--navy)">All Pillars</a>
+  <h2 style="color:#bf0a30">Full Policy Platform</h2>
+  <p style="font-size:.95rem;color:#555;margin-bottom:1.5rem">
+    Every rule in this pillar, organized by policy area.
+    <strong style="color:#1e8449">Active</strong> rules are current platform commitments.
+    <strong style="color:#c9952a">Partial</strong> rules are in development.
+    <strong style="color:#888">Proposed</strong> rules are planned for future inclusion.
+  </p>
+  <div class="policy-family" id="fam-eth">
+  <div class="family-header">
+    <span class="family-code">ETH</span>
+    <span class="family-title">Judicial Ethics</span>
+    <span class="family-count">0/2 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUD-ETH-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Supreme Court term limits</p>
+  
+  <p class="rule-notes">Establish term limits for Supreme Court justices, with 18-year staggered terms frequently discussed as the standard proposal. Each presidential term would include two Supreme Court appointments, creating predictable and regular turnover. This eliminates strategic retirement timing, reduces confirmation stakes, ensures court composition gradually reflects democratic change rather than being frozen by lifetime appointments, and addresses age-related decline without relying on voluntary retirement. Appointments remain secure (18 years exceeds most careers) while preventing single presidents from dominating the court for generations. May extend to lower federal court judges with different term lengths appropriate to those positions.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUD-ETH-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Judicial ethics code</p>
+  
+  <p class="rule-notes">Establish binding, enforceable code of ethics applicable to all federal judges including Supreme Court justices. Must cover: financial conflicts and mandatory disclosure, gifts and outside income from interested parties, political activities and public statements, recusal requirements for conflicts, spouse and family involvement in cases, transparency of financial arrangements, and enforcement mechanisms with real consequences. Currently Supreme Court operates under voluntary guidance without enforcement, resulting in undisclosed gifts, financial conflicts, family member political activity in related cases, and refusal to recuse without consequence. Binding code establishes baseline ethical standards comparable to those governing all other public officials and federal judges, with enforcement through ethics investigations, public censure, removal from specific cases, and potential impeachment for egregious violations.</p>
+</div>
   </div>
 </div>
+<div class="policy-family" id="fam-int">
+  <div class="family-header">
+    <span class="family-code">INT</span>
+    <span class="family-title">Judicial Integrity and Interpretation</span>
+    <span class="family-count">0/3 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUD-INT-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Require intent-based interpretation</p>
+  
+  <p class="rule-notes">Courts must consider legislative intent, context, and purpose alongside statutory text when interpreting laws. Prohibits using strict textualism to ignore obvious legislative intent or reach absurd results. Does not ban consideration of text or require ignoring plain language, but prevents weaponization of selective literalism to subvert clear meaning. Particularly important for rights-related laws where narrow textualism has been used to dismantle protections. Courts should interpret statutes honestly to serve their purpose, not use interpretive methodology as tool to impose ideological outcomes.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUD-INT-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Limit strict textualism</p>
+  
+  <p class="rule-notes">Strict textualism claims to interpret only statutory text while ignoring context, purpose, legislative history, or consequences. In practice this becomes tool for results-oriented judging: selectively reading text narrowly to reach preferred outcomes, using dictionary definitions from different eras to support conclusions, and claiming consideration of purpose is "activism." This rule limits use of strict textualism to undermine clear legislative intent. Requires courts to use multiple interpretive tools: text, intent, context, purpose, consequences, and common sense. When text and obvious intent conflict due to drafting imperfection, courts should not weaponize the gap to subvert the law's purpose. Goal is honest interpretation serving justice.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUD-INT-003</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Require plain-language intent in laws</p>
+  
+  <p class="rule-notes">Encourage or require Congress to include plain-language intent statements in legislation explaining: what problem the law addresses, what outcome it seeks to achieve, how provisions should be interpreted to accomplish purpose, and what interpretations would subvert the law's intent. Creates explicit interpretive record making bad-faith distortion harder. Does not bind courts to follow Congress's preferred interpretation (separation of powers) but provides authoritative statement of legislative purpose rather than forcing courts to reconstruct intent from scattered sources. Makes honest interpretation easier and dishonest interpretation more visible.</p>
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-ovr">
+  <div class="family-header">
+    <span class="family-code">OVR</span>
+    <span class="family-title">Judicial Oversight</span>
+    <span class="family-count">0/1 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUD-OVR-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Judicial oversight mechanisms</p>
+  
+  <p class="rule-notes">Establish independent oversight for judicial conduct without undermining judicial independence on legal decisions. Key distinction: judges cannot be punished for legal decisions (even unpopular or wrong ones, reversible on appeal); but judges must be accountable for unethical conduct, conflicts of interest, bias, or abuse of office. Mechanisms include: independent inspector general or ethics office to investigate conduct complaints, transparent process for reviewing ethics concerns with public documentation, power to recommend sanctions (censure, fine, removal from specific cases), and clear distinction between reviewable conduct (ethics, conflicts, bias) versus protected judicial decisions (legal interpretations, rulings). Preserves judicial independence while ending ethical impunity.</p>
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-rec">
+  <div class="family-header">
+    <span class="family-code">REC</span>
+    <span class="family-title">Records and Recusal Standards</span>
+    <span class="family-count">0/1 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUD-REC-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Strong recusal standards</p>
+  
+  <p class="rule-notes">Establish mandatory, enforceable recusal standards for all federal judges including Supreme Court justices. Clear triggers requiring recusal: direct financial interest in outcome, immediate family member with financial or professional interest, prior participation in case (as attorney, consultant, lower court judge), public statements indicating prejudgment on specific legal issue, receipt of substantial gifts or payments from parties or their representatives, or reasonable appearance that impartiality is compromised. Independent review mechanism to assess contested recusal decisions with public documentation of basis for recusing or declining. Consequences for inappropriate refusal to recuse include reversal on appeal, public censure, and potential disciplinary action for repeated violations. Ends current system where justices decide their own conflicts with no review or consequence, resulting in judges hearing cases involving their financial interests, their family members' political activities, or issues where they've publicly prejudged the outcome.</p>
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-ven">
+  <div class="family-header">
+    <span class="family-code">VEN</span>
+    <span class="family-title">Venue Reform</span>
+    <span class="family-count">0/1 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUD-VEN-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Prevent judge and venue shopping</p>
+  
+  <p class="rule-notes">Reform venue rules to prevent forum shopping for sympathetic judges who issue nationwide injunctions. Current practice allows plaintiffs to file in any district with minimal connection, enabling strategic selection of single ideologically aligned judges who then block national policies through nationwide injunctions. Reform would: require plaintiffs to demonstrate substantial local connection to chosen venue (actual localized harm or substantial local operations, not just theoretical possibility of harm); limit geographic scope of district court injunctions to the affected district or circuit (not nationwide from single judge); or require multi-judge panels for cases seeking nationwide relief. Preserves access to courts for genuine local claims while preventing strategic judge shopping for nationwide policy blockades. Addresses immigration, environmental, healthcare, and election law cases being blocked nationwide by single district judges in carefully chosen venues.</p>
+</div>
+  </div>
+</div>
+</div>
 </section>
-
+<section class="bg-dark on-dark ruled" id="pil-research">
+<div class="wrap">
+  <h2 style="color:#bf0a30">Research & Context</h2>
+  <div class="research-body" style="color:rgba(255,255,255,.85)"><p>The courts and judicial reform pillar emerged from recognition that the judiciary has become a primary battleground for imposing ideological agendas without democratic accountability. The Supreme Court's recent term exemplifies the problem: overturning 50 years of precedent on abortion rights (Dobbs), inventing broad presidential immunity without constitutional text or historical support, systematically dismantling regulatory authority, gutting voting rights protections, and imposing originalist interpretations that ignore modern society while selectively reading history to support preferred outcomes.</p>
+<p>The Dobbs decision particularly crystallized the problem of an unaccountable court overturning settled precedent based on contested historical interpretation and textualist reading of a Constitution written when women couldn't vote, own property, or serve on juries. The majority opinion claimed abortion wasn't "deeply rooted in history"—using selective 19th century history to deny rights in the 21st century, while ignoring that almost nothing about modern life (privacy, equality, technology, medicine) is "deeply rooted" in 1868. The decision demonstrated how interpretive methodology becomes ideology: textualism and originalism as tools to dismantle rights rather than neutral interpretive frameworks.</p>
+<p>The presidential immunity decision similarly showed judicial overreach: inventing sweeping immunity for "official acts" without constitutional text, creating a tiered immunity system nowhere in the Constitution, and effectively placing presidents above the law based on policy preferences about executive function. The dissent noted this creates precisely the monarchical power the framers explicitly rejected. These are not marginal decisions or modest adjustments—they're fundamental restructurings of constitutional law by a court operating without meaningful constraints.</p>
+<p>The term limits proposal addresses the root structural problem: lifetime appointment. The framers designed lifetime tenure to ensure independence from political pressure, before modern life expectancy made "lifetime" mean 30-40+ year careers. Current practice creates perverse incentives: presidents appoint the youngest possible ideologues to maximize decades of influence, confirmation battles become apocalyptic because each appointment reshapes law for a generation, justices strategically time retirement to ensure same-party replacement, and age-related decline becomes constitutional crisis as justices serve into their 80s rather than voluntarily retiring.</p>
+<p>The 18-year staggered term proposal solves these problems: each presidential term includes two appointments (predictable, regular), appointments are still secure (18 years is longer than most careers), but no single president dominates the court for decades, strategic retirement timing becomes less important, and regular turnover ensures the court gradually reflects democratic change rather than being frozen in the ideology of past political moments. This doesn't make the court "political"—it makes appointments regular rather than arbitrary based on when justices die or retire. The court's composition would still shift slowly, but it wouldn't be possible for one or two presidents to lock in a supermajority for a generation.</p>
+<p>The binding ethics code addresses the reality that Supreme Court justices currently operate with fewer ethical constraints than any other federal judges. Lower court judges are bound by the Code of Conduct for U.S. Judges. Supreme Court justices have "voluntary" ethics guidance with no enforcement. The result has been predictable: undisclosed luxury gifts and travel from wealthy donors with interests before the court, real estate transactions with parties in pending cases, spouse involvement in political activities directly related to cases, outside income from ideologically aligned organizations, financial conflicts not disclosed or recused, and public statements indicating prejudgment on issues likely to come before the court. When challenged, justices simply assert they've done nothing wrong and refuse recusal, with no review or consequence possible.</p>
+<p>The binding code would establish clear rules: financial disclosure requirements matching or exceeding those for other federal officials, prohibition on gifts above minimal value from anyone with potential business before the court, prohibition on outside income from ideologically aligned organizations, restrictions on political activity and public statements on issues likely to come before the court, mandatory disclosure of spouse's income and activities, clear recusal requirements for financial conflicts or family involvement, and enforcement mechanisms including ethics investigations, public censure, removal from specific cases, and potential impeachment for egregious violations. The goal is not to micromanage justices, but to establish baseline ethical standards comparable to those governing every other public official.</p>
+<p>The recusal standards address the current voluntary system where justices decide their own conflicts. Recent examples include: Justice Thomas not recusing despite his wife's active involvement in efforts to overturn the 2020 election in cases about that exact topic, justices refusing recusal despite receiving gifts or payments from parties or ideological allies with interests in pending cases, justices hearing cases involving companies where they own stock, and justices remaining on cases where their prior public statements indicate they've prejudged the issue. When challenged, justices simply decline recusal with no review possible.</p>
+<p>Mandatory recusal standards would establish clear triggers: direct financial interest in the outcome, immediate family member with financial or professional interest in the outcome, prior participation in the case (as attorney, consultant, lower court judge), public statements indicating prejudgment on the specific legal issue, receipt of substantial gifts or payments from parties or their representatives, and reasonable appearance of impartiality compromised. An independent review mechanism would assess contested recusal decisions, with public documentation of the basis for recusing or declining to recuse. Consequences for inappropriate refusal to recuse would include reversal on appeal, public censure, and potential disciplinary action for repeated violations.</p>
+<p>The interpretive standards reform addresses how strict textualism has been weaponized to dismantle rights and undermine clear legislative intent. Textualism claims to interpret laws based solely on the text, ignoring context, purpose, legislative history, or consequences. In practice, this becomes a tool for results-oriented judging: selectively reading text in the most narrow way to reach preferred outcomes, ignoring obvious intent when inconvenient, using dictionary definitions from different eras to support conclusions, and claiming any consideration of purpose or consequence is "judicial activism."</p>
+<p>The reform doesn't ban textualism or require ignoring statutory text. It requires courts to consider multiple interpretive tools: text (obviously), but also legislative intent, context, purpose, consequences, and common sense. When a statute says X, and all evidence shows Congress meant X to accomplish Y, and interpreting X to prevent Y makes no sense, courts should not contort text to reach absurd results. The goal is honest interpretation serving justice, not ideological outcomes dressed as neutral textualism.</p>
+<p>The plain-language intent requirement encourages Congress to make interpretation easier by including explicit statements of purpose, intent, and context in legislation. Rather than leaving courts to guess at legislative intent from scattered floor statements, committee reports, and statutory text, Congress would include a "Plain Language Intent" section explaining: what problem the law addresses, what outcome it seeks to achieve, how provisions should be interpreted to accomplish that purpose, and what interpretations would subvert the law's intent. This doesn't bind courts to follow Congress's interpretation (separation of powers), but it creates a clear interpretive record making bad-faith distortion harder.</p>
+<p>The venue reform addresses judge shopping: plaintiffs filing cases in districts chosen specifically because a single sympathetic judge can be assigned, then obtaining nationwide injunctions from that one judge affecting the entire country. Recent examples include immigration policy, environmental regulations, healthcare rules, and election laws all being blocked nationwide by single district judges in carefully chosen venues. The plaintiffs forum-shop, the judge issues a sweeping injunction, and national policy is paralyzed by one jurist's opinion.</p>
+<p>Reform would require plaintiffs to demonstrate substantial local connection to the chosen venue (not just "harm could occur here" but actual localized harm or substantial local operations), limit the geographic scope of district court injunctions to the affected district or circuit (not nationwide from a single judge), or require multi-judge panels for cases seeking nationwide relief. This preserves access to courts for genuine local claims while preventing strategic judge shopping for nationwide policy blockades.</p>
+<p>The oversight mechanisms establish independent review for judicial conduct without undermining judicial independence on legal decisions. The distinction is crucial: independence means judges can't be punished for their legal decisions, even unpopular or wrong ones (reversible on appeal, not through discipline). But independence doesn't mean zero accountability for unethical conduct, conflicts of interest, bias, or abuse of office. Oversight mechanisms would include: independent inspector general or ethics office to investigate conduct complaints, transparent process for reviewing ethics concerns with public documentation, power to recommend sanctions (censure, fine, removal from specific cases), and clear distinction between reviewable conduct (ethics, conflicts, bias) versus protected judicial decisions (legal interpretations, rulings).</p>
+<p>The transparency requirements ensure courts operate visibly. Current practice already requires publishing opinions and disclosing some financial information, but compliance is inconsistent and enforcement is weak. Strengthened transparency would mandate: timely publication of all decisions with full reasoning (not just orders), financial disclosures covering all sources of income and substantial gifts with regular updates, documentation of recusal decisions and reasons, disclosure of contacts with parties or interested persons in pending cases, and public records of ethical complaints and their resolution. This allows public and professional scrutiny without interfering with judicial decision-making.</p>
+<p>Throughout the pillar, the design challenge is balancing independence with accountability. Judges must be free to make unpopular decisions without fear of retaliation—that's judicial independence and it's essential. But judges must also follow ethical standards, avoid conflicts of interest, recuse when appropriate, and interpret law honestly rather than imposing ideological outcomes. The reforms target the accountability gap while preserving legitimate independence: term limits provide regular turnover without making judges responsive to immediate political pressure, ethics codes constrain conduct without dictating legal decisions, recusal standards prevent biased judges from hearing cases without preventing judges from having legal philosophies, interpretive standards require honest reasoning without mandating specific interpretations, and oversight mechanisms investigate unethical conduct without reviewing legal correctness.</p>
+<p>The pressure-test lessons informing this pillar include: lifetime appointment plus polarization creates incentives for extreme ideological appointments; voluntary ethics standards without enforcement are worthless; interpretive methodologies become tools for imposing preferred outcomes unless constrained; strategic behavior (judge shopping, recusal refusal, retirement timing) will occur unless structurally prevented; transparency must be mandatory because voluntary disclosure produces selective information; and courts will accumulate power unless structurally limited—the current Supreme Court is extraordinarily activist in overturning precedent, inventing doctrines, and reshaping law, while claiming to practice judicial restraint.</p></div>
+</div>
+</section>
+<section class="bg-parchment ruled" id="pil-related">
+<div class="wrap" style="margin-bottom:0">
+  <h2 style="color:#bf0a30">Related Pillars</h2>
+  <p style="font-size:.92rem;color:#666;margin-bottom:.5rem">These pillars intersect with and reinforce this one.</p>
+</div>
+<div class="wrap"><div class="related-grid"><a href="executive-power.html" class="related-card"><strong>Executive Power</strong><span>Judicial review of executive actions; interpretation of presidential authority; venue for cases against federal governme</span></a>
+<a href="congressional-power.html" class="related-card"><strong>Congressional Power</strong><span>Legislative intent and interpretation standards; judicial deference to legislation; limits on courts overriding democrat</span></a>
+<a href="rights-and-civil-liberties.html" class="related-card"><strong>Rights and Civil Liberties</strong><span>Courts as protectors of rights versus courts as tools for dismantling rights; interpretation of rights provisions; balan</span></a>
+<a href="government-ethics-and-accountability.html" class="related-card"><strong>Government Ethics and Accountability</strong><span>Judicial ethics standards; conflicts of interest; financial disclosure; enforcement of ethical conduct</span></a>
+<a href="democratic-institutions.html" class="related-card"><strong>Democratic Institutions</strong><span>Courts' role in protecting versus undermining democratic processes; election law interpretation; access to courts versus</span></a>
+</div></div>
+<div class="wrap" style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap">
+  <a href="../foundations.html#accountable-power" class="btn-primary" style="background:#bf0a30">← Foundation I: Accountable Power</a>
+  <a href="index.html" class="btn-primary" style="background:var(--navy)">All Pillars</a>
+</div>
+</section>
 <footer class="site-footer">
   <div class="wrap">
     <span class="footer-brand">American Renewal Project</span>
     <ul class="footer-links">
       <li><a href="../index.html">Home</a></li>
       <li><a href="../foundations.html">Foundations</a></li>
-      <li><a href="../pillars/index.html">Pillars</a></li>
+      <li><a href="index.html">Pillars</a></li>
       <li><a href="../compare/index.html">Compare</a></li>
     </ul>
     <span class="footer-note">A Third Bill of Rights for the 21st Century. · <a href="../about-ai.html" style="color:inherit;opacity:.7">On the Use of AI</a></span>
@@ -92,5 +385,25 @@
 </footer>
 <script src="../assets/js/data.js"></script>
 <script src="../assets/js/app.js"></script>
+<script>
+(function(){
+  var nav = document.getElementById('pil-snav');
+  if(!nav) return;
+  var links = nav.querySelectorAll('a[href^="#"]');
+  var sections = Array.from(links).map(function(a){
+    return document.querySelector(a.getAttribute('href'));
+  }).filter(Boolean);
+  function onScroll(){
+    var y = window.scrollY + 120;
+    var active = sections[0];
+    sections.forEach(function(s){ if(s.offsetTop <= y) active = s; });
+    links.forEach(function(a){
+      a.classList.toggle('active', a.getAttribute('href') === '#'+active.id);
+    });
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+})();
+</script>
 </body>
 </html>

@@ -6,6 +6,124 @@
 <title>Equal Justice & Policing — American Renewal Project</title>
 <link rel="stylesheet" href="../assets/css/style.css">
 <link rel="icon" type="image/svg+xml" href="../assets/img/logo.svg">
+<style>
+/* ── Pillar page styles ─────────────────────────────────────── */
+.pil-snav {
+  position: sticky; top: 63px; z-index: 150;
+  background: var(--navy); border-bottom: 2px solid rgba(255,255,255,.12);
+  overflow-x: auto; white-space: nowrap;
+}
+.pil-snav ul { display:flex; gap:0; list-style:none; margin:0; padding:0; }
+.pil-snav a {
+  display:block; padding:.55rem 1.1rem; font-family:'Oswald',sans-serif;
+  font-size:.78rem; letter-spacing:.06em; text-transform:uppercase;
+  color:rgba(255,255,255,.62); text-decoration:none; transition:color .15s;
+}
+.pil-snav a:hover, .pil-snav a.active { color:#fff; }
+.pil-snav a.active { border-bottom:2px solid #1e8449; }
+
+/* ── Section layouts ────────────────────────────────────────── */
+.pil-intro { display:grid; grid-template-columns:1fr 1fr; gap:2rem; }
+@media(max-width:700px){ .pil-intro { grid-template-columns:1fr; } }
+
+.pil-intro h2 { font-size:1.1rem; text-transform:uppercase; letter-spacing:.08em; margin-bottom:.6rem; }
+.pil-intro p, .pil-intro li { font-size:1rem; line-height:1.75; }
+
+.problem-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:1.25rem; margin-top:1rem; }
+.problem-card {
+  background:#fff; border-radius:6px; padding:1.2rem 1.4rem;
+  border-left:4px solid #1e8449;
+  box-shadow:0 1px 4px rgba(0,0,0,.07);
+}
+.problem-card h3 { font-size:1rem; margin:0 0 .4rem; color:var(--navy); }
+.problem-card p  { font-size:.92rem; line-height:1.65; margin:0; color:#333; }
+
+.reform-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:1rem; margin-top:1rem; }
+.reform-card {
+  background:var(--navy); color:#fff; border-radius:6px;
+  padding:1.1rem 1.3rem; border-top:3px solid #1e8449;
+}
+.reform-card h3 { font-size:.95rem; margin:0 0 .4rem; color:#1e8449; text-transform:uppercase; letter-spacing:.04em; }
+.reform-card p  { font-size:.88rem; line-height:1.6; margin:0; color:rgba(255,255,255,.8); }
+
+/* ── Policy rules ───────────────────────────────────────────── */
+.policy-family { margin-bottom:2.5rem; }
+.family-header {
+  display:flex; align-items:baseline; gap:.8rem; margin-bottom:1rem;
+  padding-bottom:.5rem; border-bottom:2px solid #1e8449;
+}
+.family-code {
+  font-family:'Oswald',sans-serif; font-size:1.1rem;
+  color:#1e8449; min-width:3rem;
+}
+.family-title { font-size:1rem; font-weight:600; color:var(--ink); }
+.family-count { margin-left:auto; font-size:.8rem; color:#888; white-space:nowrap; }
+
+.rule-grid {
+  display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:.75rem;
+}
+.rule-card {
+  border-radius:5px; padding:.9rem 1rem;
+  background:#fff; border:1px solid #e0d8c8;
+  font-size:.88rem; line-height:1.55;
+}
+.rule-card.status-included { border-left:4px solid #1e8449; }
+.rule-card.status-updated  { border-left:4px solid #2471a3; }
+.rule-card.status-partial  { border-left:4px solid #c9952a; }
+.rule-card.status-missing  { border-left:4px solid #ccc; opacity:.72; }
+
+.rule-header { display:flex; align-items:center; gap:.5rem; margin-bottom:.35rem; }
+.rule-id { font-size:.72rem; color:#888; letter-spacing:.03em; }
+.rule-badge {
+  font-size:.68rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em;
+  padding:.12em .45em; border-radius:3px;
+}
+.status-included .rule-badge { background:#d4edda; color:#155724; }
+.status-updated  .rule-badge { background:#cce5ff; color:#004085; }
+.status-partial  .rule-badge { background:#fff3cd; color:#856404; }
+.status-missing  .rule-badge { background:#f0f0f0; color:#666; }
+
+.rule-title { font-weight:600; margin:.2rem 0 .2rem; color:var(--ink); }
+.rule-stmt  { font-size:.85rem; color:#444; margin:.15rem 0 0; }
+.rule-notes { font-size:.8rem; color:#666; font-style:italic; margin:.25rem 0 0; }
+
+/* ── Research section ───────────────────────────────────────── */
+.research-body h3 { font-size:1.05rem; color:#1e8449; margin:1.5rem 0 .4rem; }
+.research-body p  { line-height:1.8; font-size:.97rem; }
+
+/* ── Related pillars ────────────────────────────────────────── */
+.related-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:.85rem; margin-top:1rem; }
+.related-card {
+  background:var(--navy); color:#fff; border-radius:6px; padding:1rem;
+  text-decoration:none; transition:opacity .15s;
+}
+.related-card:hover { opacity:.82; }
+.related-card strong { display:block; font-size:.95rem; margin-bottom:.3rem; }
+.related-card span   { font-size:.8rem; color:rgba(255,255,255,.65); }
+
+/* ── Summary stats bar ──────────────────────────────────────── */
+.stats-bar {
+  display:flex; flex-wrap:wrap; gap:1.5rem; margin:1.2rem 0;
+  padding:1rem 1.2rem; background:#fff; border-radius:6px;
+  border:1px solid #e0d8c8;
+}
+.stat-item { text-align:center; }
+.stat-num { display:block; font-family:'Oswald',sans-serif; font-size:2rem; color:#1e8449; }
+.stat-label { font-size:.78rem; text-transform:uppercase; letter-spacing:.06em; color:#888; }
+
+/* ── Design logic accordion ─────────────────────────────────── */
+details.design-logic { margin-top:1rem; }
+details.design-logic summary {
+  cursor:pointer; font-weight:700; padding:.6rem .8rem;
+  background:rgba(0,0,0,.06); border-radius:4px; user-select:none;
+}
+details.design-logic[open] summary { border-radius:4px 4px 0 0; }
+details.design-logic .design-body { padding:.8rem 1rem; background:#fff; border:1px solid #e0d8c8; border-top:none; border-radius:0 0 4px 4px; }
+details.design-logic .design-body p { font-size:.93rem; line-height:1.75; }
+details.design-logic .design-body ul { padding-left:1.3rem; }
+details.design-logic .design-body li { font-size:.93rem; line-height:1.65; margin-bottom:.3rem; }
+</style>
+<style>:root { --accent-color: #1e8449; }</style>
 </head>
 <body>
 <nav class="site-nav">
@@ -18,13 +136,12 @@
     <ul class="nav-links">
       <li><a href="../index.html">Home</a></li>
       <li><a href="../foundations.html">Foundations</a></li>
-      <li><a href="../pillars/index.html">Pillars</a></li>
+      <li><a href="index.html">Pillars</a></li>
       <li><a href="../compare/index.html">Compare</a></li>
     </ul>
   </div>
 </nav>
-
-<div class="page-hero compact" style="border-bottom: 4px solid #1e8449">
+<div class="page-hero compact" style="border-bottom:4px solid #1e8449">
   <div class="hero-eyebrow">
     <a href="../foundations.html#equal-justice" style="color:rgba(255,255,255,.6);text-decoration:none">
       Foundation III: Equal Justice
@@ -32,59 +149,1554 @@
   </div>
   <h1 class="hero-title" style="font-size:clamp(1.8rem,5vw,2.8rem)">Equal Justice & Policing</h1>
   <div class="hero-divider"><span>★ ★ ★</span></div>
-  <p class="hero-statement" style="font-size:1rem;max-width:620px;margin:0 auto">The law must apply equally. Policing must protect communities, not prey on them.</p>
+  <p class="hero-statement" style="font-size:1rem;max-width:680px;margin:0 auto">This pillar governs how state force, punishment, detention, policing, and legal accountability operate to protect public safety while applying the law fairly, consistently, and equally to all people.</p>
 </div>
-
+<nav class="pil-snav" id="pil-snav"><ul><li><a href="#pil-intro">Overview</a></li><li><a href="#pil-problem">The Problem</a></li><li><a href="#pil-reform">Reform Areas</a></li><li><a href="#pil-policy">Policy Rules</a></li><li><a href="#pil-research">Research</a></li><li><a href="#pil-related">Related</a></li></ul></nav>
+<section class="bg-parchment ruled" id="pil-intro">
+<div class="wrap">
+  <div class="stats-bar">
+  <div class="stat-item"><span class="stat-num">136</span><span class="stat-label">Total Rules</span></div>
+  <div class="stat-item"><span class="stat-num" style="color:#1e8449">0</span><span class="stat-label">Active</span></div>
+  <div class="stat-item"><span class="stat-num" style="color:#c9952a">0</span><span class="stat-label">Partial</span></div>
+  <div class="stat-item"><span class="stat-num" style="color:#888">136</span><span class="stat-label">Proposed</span></div>
+</div>
+  <div class="pil-intro">
+    <div>
+      <h2 style="color:#1e8449;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.06em">Purpose</h2>
+      <p>This pillar governs how state force, punishment, detention, policing, and legal accountability operate to protect public safety while applying the law fairly, consistently, and equally to all people.</p>
+    </div>
+    <div>
+      <h2 style="color:#1e8449;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.06em">Core Principle</h2>
+      <p>The power of the state to punish must be limited, accountable, humane, and free from systemic bias or exploitation. The justice system must protect public safety while guaranteeing due process, equal treatment, and fundamental human rights for all people.</p>
+    </div>
+  </div>
+</div>
+</section>
+<section class="bg-dark on-dark ruled" id="pil-problem">
+<div class="wrap" style="margin-bottom:0">
+  <h2 style="color:#1e8449">The Problem It Solves</h2>
+</div>
+<div class="wrap"><p>The American justice system suffers from deep structural failures that undermine trust, fairness, and legitimacy. Private prisons create profit incentives for incarceration. Cash bail criminalizes poverty. Mandatory minimum sentences impose rigid, disproportionate punishments. Qualified immunity shields officials from accountability. Racial disparities pervade enforcement, charging, sentencing, and incarceration. The death penalty and forced labor represent extreme state power that must be constrained. Excessive force, militarized policing, and over-policing target vulnerable communities. Junk science, biased evidence, and coerced confessions corrupt trials. Wrongful convictions persist when science is discredited and review is blocked. The system combines enormous power with minimal accountability, creating conditions for abuse, injustice, and systemic harm.</p></div>
+</section>
+<section class="bg-cream ruled" id="pil-reform">
+<div class="wrap" style="margin-bottom:0">
+  <h2 style="color:#1e8449">Key Reform Areas</h2>
+</div>
+<div class="wrap"><div class="reform-grid"><div class="reform-card"><h3>Demilitarize police forces and ban weapons of war</h3><p></p></div>
+</div></div>
+</section>
 <section class="bg-parchment ruled">
 <div class="wrap">
-  <h2>Why This Matters</h2>
-  <p style="font-size:1.05rem;line-height:1.8">The promise of equal justice before the law has never been fully delivered. Policing in America operates with different rules in different communities. Qualified immunity has made accountability for civil rights violations structurally impossible.</p>
+  <details class="design-logic">
+    <summary>Design Logic — How These Rules Work Together</summary>
+    <div class="design-body"><p>The 136 rules in this pillar are organized into 24 family codes spanning the full justice ecosystem. Rather than addressing isolated symptoms, they create structural safeguards across interconnected systems. Rules span prevention through reintegration: eliminating profit motives that corrupt incentives (private prisons, fines-as-revenue, civil forfeiture); ensuring fair process (competent defense, evidence integrity, language access, court accessibility); constraining excessive state power (ending qualified immunity, limiting solitary confinement, banning indefinite detention); reforming policing (demilitarization, separate crisis responders, community integration, accountability); fixing broken sentencing systems (ending mandatory minimums, establishing structured guidelines, reducing racial disparities); enabling correction when systems fail (post-conviction review, expungement, innocence mechanisms); and supporting reintegration (sealing records, reducing collateral consequences, providing support). The architecture acknowledges that justice failures are not random — they result from structural incentives, unchecked power, and systems designed to prioritize efficiency over fairness. Each family targets a distinct systemic vulnerability while connecting to the broader framework of accountability, transparency, and equal protection.</p></div>
+  </details>
 </div>
 </section>
-
-<section class="bg-dark on-dark ruled">
-<div class="wrap" style="display:grid;grid-template-columns:1fr 1fr;gap:2rem">
-  <div>
-    <h2 style="color:#1e8449">What It Demands</h2>
-    <ul style="list-style:disc;padding-left:1.2rem;color:rgba(255,255,255,.82)">
-        <li>Federal minimum standards for use of force, de-escalation requirements, and body camera policies</li>
-        <li>Civilian oversight boards with subpoena power, independent budget authority, and real disciplinary authority</li>
-        <li>End qualified immunity as a defense in civil rights cases</li>
-    </ul>
-  </div>
-  <div>
-    <h2 style="color:#1e8449">What It Rejects</h2>
-    <ul style="list-style:disc;padding-left:1.2rem;color:rgba(255,255,255,.82)">
-        <li>Qualified immunity as a doctrine — it has no basis in the statutory text of Section 1983</li>
-        <li>Policing models that treat certain communities as threats to be managed rather than citizens to be protected</li>
-        <li>Union contracts that make officer accountability functionally impossible</li>
-    </ul>
-  </div>
-</div>
-</section>
-
-<section class="bg-cream ruled">
+<section class="bg-cream ruled" id="pil-policy">
 <div class="wrap">
-  <h2>Key Policy Points</h2>
-  <ol style="padding-left:1.4rem;font-size:1rem;line-height:2">
-          <li>National use-of-force standards</li>
-          <li>Civilian oversight with real authority</li>
-          <li>End of qualified immunity</li>
-  </ol>
-  <div style="margin-top:2.5rem;display:flex;gap:1rem;flex-wrap:wrap">
-    <a href="../foundations.html#equal-justice" class="btn-primary" style="background:#1e8449">← Foundation III: Equal Justice</a>
-    <a href="index.html" class="btn-primary" style="background:var(--navy)">All Pillars</a>
+  <h2 style="color:#1e8449">Full Policy Platform</h2>
+  <p style="font-size:.95rem;color:#555;margin-bottom:1.5rem">
+    Every rule in this pillar, organized by policy area.
+    <strong style="color:#1e8449">Active</strong> rules are current platform commitments.
+    <strong style="color:#c9952a">Partial</strong> rules are in development.
+    <strong style="color:#888">Proposed</strong> rules are planned for future inclusion.
+  </p>
+  <div class="policy-family" id="fam-ai">
+  <div class="family-header">
+    <span class="family-code">AI</span>
+    <span class="family-title">AI in Justice Systems</span>
+    <span class="family-count">0/10 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-AI-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Ban AI sentencing determinations</p>
+  <p class="rule-stmt">AI systems may not be used to determine or recommend criminal sentencing outcomes including incarceration length or punitive measures</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-AI-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Ban AI recidivism predictions in sentencing</p>
+  <p class="rule-stmt">AI risk assessment tools predicting recidivism dangerousness or likelihood of reoffense may not be used in sentencing decisions</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-AI-003</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">AI for wrongful conviction identification</p>
+  <p class="rule-stmt">AI may be used to assist in identifying wrongful convictions procedural errors and case review opportunities to accelerate appeals and justice processes</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-AI-004</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">AI for bias identification under oversight</p>
+  <p class="rule-stmt">AI systems should be used to identify and mitigate bias in charging sentencing and judicial processes under strict oversight and transparency</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-AI-005</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">AI evidence transparency requirements</p>
+  <p class="rule-stmt">AI-generated evidence or analysis may not be used in court unless it is transparent auditable and subject to challenge by all parties</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-AI-006</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Right to examine AI systems</p>
+  <p class="rule-stmt">Defendants must have the right to examine challenge and cross-examine any AI system or output used in legal proceedings</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-AI-007</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Ban AI juror profiling</p>
+  <p class="rule-stmt">AI systems may not be used to profile rank or exclude jurors based on inferred characteristics behavioral patterns or demographic proxies</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-AI-008</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Ban AI prosecutorial automation</p>
+  <p class="rule-stmt">AI systems may not be used to recommend or automate prosecutorial decisions such as charging strategies plea deals or case prioritization without human accountability and oversight</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-AI-009</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Mandatory AI disclosure</p>
+  <p class="rule-stmt">All use of AI in legal proceedings must be disclosed to all parties including purpose limitations and methodology</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-AI-010</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">AI evidence validity standards</p>
+  <p class="rule-stmt">AI evidence must meet strict reliability and scientific validity standards equivalent to or exceeding existing evidentiary standards</p>
+  
+</div>
   </div>
 </div>
+<div class="policy-family" id="fam-bal">
+  <div class="family-header">
+    <span class="family-code">BAL</span>
+    <span class="family-title">Bail and Pretrial Justice</span>
+    <span class="family-count">0/4 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-BAL-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">End cash bail systems</p>
+  <p class="rule-stmt">End or sharply limit cash bail systems that criminalize poverty</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-BAL-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Limit pretrial detention</p>
+  <p class="rule-stmt">Pretrial detention must be limited to cases with clear individualized and reviewable necessity</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-BAL-003</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Ban AI bail risk scores</p>
+  <p class="rule-stmt">AI systems may not be used to assign bail or pretrial release risk scores</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-BAL-004</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Least restrictive pretrial conditions</p>
+  <p class="rule-stmt">Pretrial release decisions must favor the least restrictive conditions consistent with safety and court appearance</p>
+  
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-civ">
+  <div class="family-header">
+    <span class="family-code">CIV</span>
+    <span class="family-title">Civil Rights and Litigation</span>
+    <span class="family-count">0/4 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-CIV-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Meaningful civil court access</p>
+  <p class="rule-stmt">People must have meaningful access to civil courts for harms involving housing employment discrimination injury and consumer abuse</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-CIV-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Ban or limit forced arbitration</p>
+  <p class="rule-stmt">Forced arbitration clauses that strip people of meaningful legal recourse should be banned or strictly limited</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-CIV-003</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Preserve class actions</p>
+  <p class="rule-stmt">Class actions and collective remedies must remain available where systemic harms affect large groups of people</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-CIV-004</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Eliminate fee barriers to justice</p>
+  <p class="rule-stmt">Court fees filing costs and procedural burdens must not block access to justice for low-income people</p>
+  
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-con">
+  <div class="family-header">
+    <span class="family-code">CON</span>
+    <span class="family-title">Conditions of Confinement</span>
+    <span class="family-count">0/5 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-CON-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Retain human rights in custody</p>
+  <p class="rule-stmt">People in custody retain human rights including access to adequate healthcare sanitation nutrition and safety</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-CON-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Ban or limit solitary confinement</p>
+  <p class="rule-stmt">Solitary confinement must be banned or strictly limited with strong safeguards and independent review</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-CON-003</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Mental health treatment in custody</p>
+  <p class="rule-stmt">Mental health needs in custody must be treated medically and may not be punished as disciplinary problems</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-CON-004</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Disability access in detention</p>
+  <p class="rule-stmt">Disability access and accommodation must be guaranteed in all detention and correctional settings</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-CON-005</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Independent facility inspections</p>
+  <p class="rule-stmt">Independent inspections and public reporting are required for all detention and correctional facilities</p>
+  
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-crt">
+  <div class="family-header">
+    <span class="family-code">CRT</span>
+    <span class="family-title">Courts and Access to Justice</span>
+    <span class="family-count">0/4 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-CRT-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Design for intelligibility</p>
+  <p class="rule-stmt">Justice systems must be designed for intelligibility and access so people can understand proceedings obligations rights and deadlines without needing insider knowledge</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-CRT-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Accessible court participation</p>
+  <p class="rule-stmt">Courts must provide accessible notice scheduling and participation systems that do not punish people for disability poverty language barriers caregiving or lack of transportation</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-CRT-003</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Remote tools preserve due process</p>
+  <p class="rule-stmt">Remote participation tools may improve access but may not be used to reduce due process hearing quality or human access to justice</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-CRT-004</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Reduce procedural traps</p>
+  <p class="rule-stmt">Justice institutions must identify and reduce procedural traps that cause default judgments missed hearings or loss of rights for administrative rather than substantive reasons</p>
+  
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-def">
+  <div class="family-header">
+    <span class="family-code">DEF</span>
+    <span class="family-title">Defense Rights</span>
+    <span class="family-count">0/10 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-DEF-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Right to competent counsel</p>
+  <p class="rule-stmt">Every person facing serious criminal charges must have access to competent adequately funded legal counsel</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-DEF-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Public defense funding parity</p>
+  <p class="rule-stmt">Public defense systems must be funded at levels sufficient to ensure parity of process with prosecution</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-DEF-003</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Timely access to evidence</p>
+  <p class="rule-stmt">Defendants must have timely access to discovery evidence and expert resources needed for an effective defense</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-DEF-004</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Prevent procedural delay undermining defense</p>
+  <p class="rule-stmt">Courts must not permit procedural delay or administrative burden to undermine the right to a fair defense</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-DEF-005</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Right to challenge evidence validity</p>
+  <p class="rule-stmt">Defendants must have the right to challenge the scientific validity and technical reliability of evidence used against them</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-DEF-006</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Broad timely disclosure</p>
+  <p class="rule-stmt">Disclosure obligations must be broad continuing and timely and may not be narrowed through technicality delay or strategic withholding</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-DEF-007</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Preserve exculpatory evidence</p>
+  <p class="rule-stmt">Prosecutors and law enforcement must preserve potentially exculpatory evidence and may not avoid disclosure through negligence indifference or informal destruction practices</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-DEF-008</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Enforce disclosure failures</p>
+  <p class="rule-stmt">Failure to disclose material evidence should carry enforceable consequences including sanctions case review and relief where fairness was compromised</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-DEF-009</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Expert assistance access</p>
+  <p class="rule-stmt">Defendants must have meaningful access to expert assistance forensic review and investigative support where required for a fair defense</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-DEF-010</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Prevent resource imbalance advantage</p>
+  <p class="rule-stmt">Procedural rules must not be structured in ways that reward surprise overwhelm defense capacity or convert resource imbalance into unfair advantage</p>
+  
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-drg">
+  <div class="family-header">
+    <span class="family-code">DRG</span>
+    <span class="family-title">Drug Policy</span>
+    <span class="family-count">0/5 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-DRG-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">End war on drugs</p>
+  
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-DRG-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Decriminalize possession</p>
+  
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-DRG-003</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Redirect to treatment</p>
+  <p class="rule-stmt">Redirect funding to treatment</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-DRG-004</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Regulated substance frameworks</p>
+  
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-DRG-005</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">No overdose assistance penalty</p>
+  <p class="rule-stmt">No penalty for overdose assistance</p>
+  
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-evd">
+  <div class="family-header">
+    <span class="family-code">EVD</span>
+    <span class="family-title">Evidence Standards</span>
+    <span class="family-count">0/5 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-EVD-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Forensic scientific validity</p>
+  <p class="rule-stmt">Forensic methods used in court must meet strict scientific validity and reliability standards</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-EVD-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Exclude junk science</p>
+  <p class="rule-stmt">Junk science and unsupported forensic techniques must be excluded from court proceedings</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-EVD-003</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Chain-of-custody standards</p>
+  <p class="rule-stmt">Digital and physical evidence must maintain transparent documented chain-of-custody standards</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-EVD-004</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Identify synthetic evidence</p>
+  <p class="rule-stmt">Synthetic or AI-generated evidence must be clearly identified and independently verifiable before admissibility</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-EVD-005</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Review when science discredited</p>
+  <p class="rule-stmt">When foundational science behind a conviction is later discredited affected cases must be eligible for review and reopening</p>
+  
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-fff">
+  <div class="family-header">
+    <span class="family-code">FFF</span>
+    <span class="family-title">Fines, Fees, and Forfeitures</span>
+    <span class="family-count">0/6 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-FFF-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Ban revenue-extraction justice</p>
+  <p class="rule-stmt">Justice systems must not use fines fees and monetary penalties in ways that criminalize poverty or create coercive revenue extraction</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-FFF-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Assess ability to pay</p>
+  <p class="rule-stmt">Ability to pay must be assessed before imposing or enforcing fines fees restitution schedules or other monetary penalties</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-FFF-003</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Ban incarceration for inability to pay</p>
+  <p class="rule-stmt">People may not be incarcerated detained or otherwise deprived of liberty solely because of inability to pay fines or fees</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-FFF-004</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Limit compounding penalties</p>
+  <p class="rule-stmt">Late fees interest penalties and compounding charges in justice-related debts must be strictly limited or prohibited</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-FFF-005</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Accessible payment alternatives</p>
+  <p class="rule-stmt">Courts and agencies must provide accessible alternatives including waiver reduction community-based alternatives or income-based payment structures</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-FFF-006</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Ban justice revenue dependency</p>
+  <p class="rule-stmt">Justice institutions may not depend on fines fees or civil forfeiture as core operating revenue sources</p>
+  
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-imm">
+  <div class="family-header">
+    <span class="family-code">IMM</span>
+    <span class="family-title">Immigration Enforcement</span>
+    <span class="family-count">0/3 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-IMM-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Due process limits on immigration detention</p>
+  <p class="rule-stmt">Immigration detention must be subject to strict due process limits and may not become indefinite by default</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-IMM-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Immigration counsel access</p>
+  <p class="rule-stmt">People in immigration proceedings must have meaningful access to counsel interpretation and judicial review</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-IMM-003</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Ban coercive family separation</p>
+  <p class="rule-stmt">Family separation and coercive detention practices must be prohibited except under narrowly defined and reviewable conditions</p>
+  
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-juv">
+  <div class="family-header">
+    <span class="family-code">JUV</span>
+    <span class="family-title">Juvenile Justice</span>
+    <span class="family-count">0/4 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-JUV-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Prioritize rehabilitation for youth</p>
+  <p class="rule-stmt">Juvenile justice systems must prioritize rehabilitation education and support over punishment</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-JUV-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Limit adult sentencing for children</p>
+  <p class="rule-stmt">Children may not be subjected to adult sentencing standards except under extremely narrow conditions</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-JUV-003</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Automatic juvenile record sealing</p>
+  <p class="rule-stmt">Juvenile records should be sealed or expunged automatically in most cases to prevent lifelong harm</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-JUV-004</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Youth custody services</p>
+  <p class="rule-stmt">Youth in custody must retain access to education mental healthcare and developmentally appropriate services</p>
+  
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-law">
+  <div class="family-header">
+    <span class="family-code">LAW</span>
+    <span class="family-title">Law Enforcement Accountability</span>
+    <span class="family-count">0/4 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-LAW-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Abolish qualified immunity</p>
+  <p class="rule-stmt">Qualified immunity is abolished and may not be used to shield government officials including law enforcement from civil liability for violations of constitutional or legal rights</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-LAW-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Government official accountability</p>
+  <p class="rule-stmt">Government officials including law enforcement must be held personally and institutionally accountable for violations of clearly established or reasonably knowable rights</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-LAW-003</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Remove prior-case-law requirement</p>
+  <p class="rule-stmt">Legal standards for accountability must not require victims to identify nearly identical prior case law in order to seek relief for rights violations</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-LAW-004</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Indemnification limits</p>
+  <p class="rule-stmt">Governments may provide indemnification for officials acting in good faith but may not use indemnification to prevent accountability or conceal misconduct</p>
+  
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-lng">
+  <div class="family-header">
+    <span class="family-code">LNG</span>
+    <span class="family-title">Language Access</span>
+    <span class="family-count">0/5 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-LNG-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Interpretation at every stage</p>
+  <p class="rule-stmt">People involved in justice proceedings must have meaningful access to qualified interpretation and translation services at every critical stage</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-LNG-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Free language access</p>
+  <p class="rule-stmt">Interpreter and translation access must be provided without cost barriers to defendants witnesses victims and other necessary participants</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-LNG-003</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Language failures not harmless</p>
+  <p class="rule-stmt">Language access failures may not be treated as harmless error where they impair understanding participation defense or rights assertion</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-LNG-004</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Limit automated translation</p>
+  <p class="rule-stmt">Critical justice proceedings may not rely solely on automated translation systems where accuracy or rights could be materially affected</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-LNG-005</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Proactive language-access identification</p>
+  <p class="rule-stmt">Justice institutions must proactively identify language-access needs and may not place the burden entirely on affected individuals to navigate the system alone</p>
+  
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-ovr">
+  <div class="family-header">
+    <span class="family-code">OVR</span>
+    <span class="family-title">Overview and Data Transparency</span>
+    <span class="family-count">0/4 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-OVR-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Publish standardized justice data</p>
+  <p class="rule-stmt">Justice institutions must publish standardized data on charging sentencing detention plea bargaining and appeals outcomes</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-OVR-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Disaggregate disparity data</p>
+  <p class="rule-stmt">Justice data must be disaggregated to identify racial gender disability geographic and class disparities</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-OVR-003</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Independent oversight access</p>
+  <p class="rule-stmt">Independent oversight bodies must have access to justice-system data records and facilities necessary to investigate abuse or bias</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-OVR-004</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Require action on audit findings</p>
+  <p class="rule-stmt">Justice agencies must be required to act on audit findings regarding bias rights violations or unlawful practices</p>
+  
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-pol">
+  <div class="family-header">
+    <span class="family-code">POL</span>
+    <span class="family-title">Policing</span>
+    <span class="family-count">0/14 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-POL-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Demilitarize police</p>
+  
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-POL-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Community policing</p>
+  
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-POL-003</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Mental health support for police</p>
+  
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-POL-004</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Separate crisis responders</p>
+  
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-POL-005</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Ban racial profiling</p>
+  
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-POL-006</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Ban police automatic weapons</p>
+  
+  <p class="rule-notes">Cross-referenced by gun_policy pillar</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-POL-007</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Ban police weapons of war</p>
+  
+  <p class="rule-notes">Cross-referenced by gun_policy pillar; includes explosives, grenades, and armored vehicles with onboard weapons</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-POL-008</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">National Guard fallback</p>
+  <p class="rule-stmt">National Guard fallback for extreme cases</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-POL-009</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Mandatory community service</p>
+  
+  <p class="rule-notes">Require all local police to participate in community service in the communities they serve</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-POL-013</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Preserve and disclose misconduct records</p>
+  <p class="rule-stmt">Law enforcement misconduct records relevant to credibility honesty bias excessive force or constitutional violations must be preserved disclosed and made available where legally relevant</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-POL-014</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Disclose Brady and Giglio material</p>
+  <p class="rule-stmt">Prosecutors must disclose credibility-related misconduct records of law enforcement witnesses and may not suppress Brady or Giglio material</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-POL-015</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Consequences for officer dishonesty</p>
+  <p class="rule-stmt">Police officers with substantiated records of dishonesty evidence tampering bias or repeated rights violations must face enforceable consequences including limits on testimony and decertification where appropriate</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-POL-016</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Ban misconduct concealment</p>
+  <p class="rule-stmt">Law enforcement agencies may not use internal secrecy confidentiality agreements or record-destruction practices to conceal misconduct relevant to justice proceedings</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-POL-017</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Track misconduct across jurisdictions</p>
+  <p class="rule-stmt">Independent systems should track officer misconduct patterns decertification and credibility issues across jurisdictions to prevent silent rehiring and forum shopping</p>
+  
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-pro">
+  <div class="family-header">
+    <span class="family-code">PRO</span>
+    <span class="family-title">Prosecution</span>
+    <span class="family-count">0/5 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-PRO-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Ban coercive charging</p>
+  <p class="rule-stmt">Prosecutors may not use charging decisions to coerce plea deals through disproportionate threat of punishment</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-PRO-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Automatic exculpatory disclosure</p>
+  <p class="rule-stmt">Prosecutors must disclose exculpatory evidence fully promptly and automatically</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-PRO-003</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Ban retaliatory prosecution</p>
+  <p class="rule-stmt">Retaliatory or politically motivated prosecution is prohibited and subject to independent review</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-PRO-004</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Prosecutorial transparency and audit</p>
+  <p class="rule-stmt">Prosecutorial offices must be subject to transparency and audit standards for charging plea and dismissal patterns</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-PRO-005</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Ban AI prosecutorial automation</p>
+  <p class="rule-stmt">AI systems may not independently recommend charges plea terms or prosecutorial escalation without accountable human review</p>
+  
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-prp">
+  <div class="family-header">
+    <span class="family-code">PRP</span>
+    <span class="family-title">Property Rights and Civil Forfeiture</span>
+    <span class="family-count">0/6 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-PRP-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Ban or limit civil forfeiture</p>
+  <p class="rule-stmt">Civil forfeiture should be banned or strictly limited and may not be used to deprive people of property without strong due process protections</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-PRP-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Property deprivation standards</p>
+  <p class="rule-stmt">Property deprivation connected to justice systems must require clear evidentiary standards timely review and meaningful opportunity to contest</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-PRP-003</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Ban forfeiture as revenue</p>
+  <p class="rule-stmt">Justice agencies may not rely on forfeiture or seized assets as operating revenue or direct financial incentive</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-PRP-004</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Ban civil forfeiture without conviction</p>
+  <p class="rule-stmt">Civil asset forfeiture is prohibited and property may not be permanently seized without a criminal conviction and full due process</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-PRP-005</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Strict limits on temporary seizure</p>
+  <p class="rule-stmt">Temporary seizure of property prior to conviction must require strong evidentiary standards prompt judicial review and strict time limits</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-PRP-006</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Accessible seizure contest processes</p>
+  <p class="rule-stmt">Property owners must have meaningful accessible and timely processes to challenge any seizure without prohibitive cost or procedural barriers</p>
+  
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-rec">
+  <div class="family-header">
+    <span class="family-code">REC</span>
+    <span class="family-title">Records and Expungement</span>
+    <span class="family-count">0/6 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-REC-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Broad expungement access</p>
+  <p class="rule-stmt">People should have broad access to sealing expungement and record-clearing processes so past contact with the justice system does not create lifelong exclusion</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-REC-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Automatic expungement</p>
+  <p class="rule-stmt">Expungement and sealing should be automatic in many categories rather than dependent on expensive complex petition processes</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-REC-003</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Automatic juvenile sealing</p>
+  <p class="rule-stmt">Juvenile records should be sealed or expunged automatically in most cases absent extraordinary circumstances</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-REC-004</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Seal dismissed and acquitted charges</p>
+  <p class="rule-stmt">Dismissed charges acquittals and invalidated convictions should be removed or sealed promptly and without procedural barriers</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-REC-005</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Honor expungement in systems</p>
+  <p class="rule-stmt">Background-check systems and public records systems must honor sealing and expungement and may not recreate protected records through aggregation or inference</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-REC-006</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Accessible record correction</p>
+  <p class="rule-stmt">People must have accessible processes to correct errors in criminal-history records background reports and public databases</p>
+  
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-rei">
+  <div class="family-header">
+    <span class="family-code">REI</span>
+    <span class="family-title">Reintegration</span>
+    <span class="family-count">0/4 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-REI-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Reduce collateral consequences</p>
+  <p class="rule-stmt">People completing sentences should not face unnecessary lifelong collateral consequences that block housing employment education or civic participation</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-REI-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Limit collateral consequences</p>
+  <p class="rule-stmt">Collateral consequences must be reviewed limited and tied only to clearly justified safety needs rather than broad exclusion</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-REI-003</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Reentry support services</p>
+  <p class="rule-stmt">Reentry support should include access to identification housing healthcare mental healthcare education and employment assistance</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-REI-004</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Prioritize reintegration</p>
+  <p class="rule-stmt">Justice policy should prioritize reintegration and stability as public-safety goals rather than treating post-release hardship as acceptable collateral damage</p>
+  
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-rev">
+  <div class="family-header">
+    <span class="family-code">REV</span>
+    <span class="family-title">Post-Conviction Review</span>
+    <span class="family-count">0/7 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-REV-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Expand post-conviction review</p>
+  <p class="rule-stmt">Post-conviction review processes must be expanded and accessible in cases involving new evidence procedural error or unreliable science</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-REV-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Independent innocence review</p>
+  <p class="rule-stmt">Independent innocence review mechanisms should exist in every jurisdiction</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-REV-003</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Wrongful conviction triggers review</p>
+  <p class="rule-stmt">Wrongful-conviction indicators must trigger mandatory review rather than discretionary review alone</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-REV-004</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">AI for wrongful conviction patterns</p>
+  <p class="rule-stmt">AI may be used to identify patterns of wrongful conviction bias or procedural inconsistency under transparent oversight</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-REV-005</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">No artificial deadlines for relief</p>
+  <p class="rule-stmt">Post-conviction review should not be restricted by artificial deadlines where credible evidence of innocence legal error or scientific unreliability emerges later</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-REV-006</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Access to post-conviction resources</p>
+  <p class="rule-stmt">People seeking post-conviction relief must have meaningful access to counsel records forensic review and procedural guidance</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-REV-007</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Presumptive systemic review</p>
+  <p class="rule-stmt">Justice systems should create presumptive review pathways when systemic misconduct or discredited methods affect classes of convictions</p>
+  
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-rst">
+  <div class="family-header">
+    <span class="family-code">RST</span>
+    <span class="family-title">Restorative Justice</span>
+    <span class="family-count">0/5 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-RST-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Restorative justice pathways</p>
+  <p class="rule-stmt">Justice systems should include restorative justice pathways that center repair accountability and healing where appropriate and voluntary</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-RST-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Expand diversion programs</p>
+  <p class="rule-stmt">Diversion programs should be expanded to reduce unnecessary criminalization especially for low-level offenses youth and nonviolent conduct</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-RST-003</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Preserve due process in diversion</p>
+  <p class="rule-stmt">Restorative and diversion programs must not be coercive and must preserve due process rights and access to counsel</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-RST-004</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Equitable diversion access</p>
+  <p class="rule-stmt">Access to restorative justice and diversion should not depend on wealth race geography or prosecutorial favoritism</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-RST-005</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Successful completion benefits</p>
+  <p class="rule-stmt">Successful completion of diversion or restorative processes should support dismissal sealing or reduced collateral consequences where appropriate</p>
+  
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-sup">
+  <div class="family-header">
+    <span class="family-code">SUP</span>
+    <span class="family-title">Supervision (Probation and Parole)</span>
+    <span class="family-count">0/6 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-SUP-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Support reintegration not reincarceration</p>
+  <p class="rule-stmt">Probation and parole systems must be designed to support reintegration and public safety rather than act as pipelines back into incarceration</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-SUP-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Narrow tailored supervision conditions</p>
+  <p class="rule-stmt">Conditions of probation and parole must be narrowly tailored proportionate and limited to what is necessary for safety or lawful supervision</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-SUP-003</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Limit technical violation incarceration</p>
+  <p class="rule-stmt">Technical violations that do not involve new serious criminal conduct should not by default trigger incarceration</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-SUP-004</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Due process for revocation</p>
+  <p class="rule-stmt">Revocation of probation or parole must require meaningful due process individualized review and proportionality</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-SUP-005</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Prevent impossible conditions</p>
+  <p class="rule-stmt">Probation and parole systems must not impose impossible financial travel employment or reporting conditions that function as traps for failure</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-SUP-006</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Periodic supervision review</p>
+  <p class="rule-stmt">Supervision terms should be periodically reviewed and shortened where continued supervision is not justified by clear evidence</p>
+  
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-vic">
+  <div class="family-header">
+    <span class="family-code">VIC</span>
+    <span class="family-title">Victim Rights</span>
+    <span class="family-count">0/5 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-VIC-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Victim protection and participation</p>
+  <p class="rule-stmt">Victims of crime must have access to protection information support services and meaningful participation without undermining due process or fair trial rights</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-VIC-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Trauma-informed victim services</p>
+  <p class="rule-stmt">Victim-support systems should include trauma-informed services healthcare counseling housing support and legal navigation where appropriate</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-VIC-003</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Preserve evidentiary standards</p>
+  <p class="rule-stmt">Victims' rights frameworks may not be used to erode evidentiary standards confrontation rights or the presumption of innocence</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-VIC-004</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Justice not retribution alone</p>
+  <p class="rule-stmt">Victim participation must be structured to support justice and healing without converting prosecutors or courts into instruments of retribution alone</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-VIC-005</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Equitable victim support access</p>
+  <p class="rule-stmt">Access to victim-support services must be equitable and not depend on wealth geography race citizenship or media attention</p>
+  
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-wit">
+  <div class="family-header">
+    <span class="family-code">WIT</span>
+    <span class="family-title">Witness Protection</span>
+    <span class="family-count">0/5 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-WIT-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Protect witnesses from retaliation</p>
+  <p class="rule-stmt">Witnesses must be protected from intimidation retaliation coercion and violence through fair and accountable legal protections</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-WIT-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Proportionate witness protection</p>
+  <p class="rule-stmt">Witness-protection measures must be proportionate reviewable and structured to avoid becoming tools for coercion or secrecy abuse</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-WIT-003</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Disclose witness inducements</p>
+  <p class="rule-stmt">Courts and prosecutors must disclose material inducements benefits or pressures applied to witnesses so credibility can be fairly assessed</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-WIT-004</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Penalize witness intimidation</p>
+  <p class="rule-stmt">Witness intimidation by officials law enforcement litigants or private actors must be subject to strong penalties and independent review</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUS-WIT-005</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Trauma-informed witness support</p>
+  <p class="rule-stmt">Trauma-informed witness support should be available without compromising accuracy due process or adversarial fairness</p>
+  
+</div>
+  </div>
+</div>
+</div>
 </section>
-
+<section class="bg-dark on-dark ruled" id="pil-research">
+<div class="wrap">
+  <h2 style="color:#1e8449">Research & Context</h2>
+  <div class="research-body" style="color:rgba(255,255,255,.85)"><p>The American justice system operates at a scale and with a level of state power that demands extraordinary accountability and fairness. The United States has the highest incarceration rate in the world, with over 2 million people behind bars and millions more under some form of correctional supervision. This system is not neutral — it reflects and reinforces deep structural inequalities across race, class, and geography. Black Americans are incarcerated at five times the rate of white Americans. Sentencing disparities are well-documented across racial lines for identical offenses. Policing patterns concentrate enforcement in poor communities and communities of color, while white-collar crime in wealthy areas receives far less scrutiny. The system does not make us safer — it often makes us less safe by destabilizing families, communities, and livelihoods while failing to address root causes of harm.</p>
+<p>The profit motive has corrupted the justice system in multiple ways. Private prisons create direct financial incentives for incarceration, lobbying for harsher sentencing laws and opposing reforms that would reduce prison populations. Even without private prisons, public systems are distorted by revenue incentives: fines and fees fund court operations, civil forfeiture provides direct revenue to law enforcement agencies, and jurisdictions compete to extract resources from poor people through aggressive ticketing and fee structures. These systems function as poverty traps, where inability to pay leads to more fines, suspended licenses, arrest warrants, and incarceration, creating cascading harms that are impossible to escape. The result is a justice system that punishes poverty, extracts wealth from vulnerable people, and operates more like a revenue-collection apparatus than a system of accountability and public safety.</p>
+<p>Qualified immunity is one of the most pernicious doctrines in American law. It shields government officials, including police officers, from civil liability for constitutional violations unless the victim can point to a prior case with nearly identical facts. This creates an impossible catch-22: new violations are protected because there is no prior case, and that protection ensures there will never be a prior case. Officers can violate rights with impunity as long as they do so in a novel way. The doctrine is not rooted in the Constitution or statute — it was invented by the Supreme Court in 1967 and expanded in subsequent decisions. It is indefensible on both practical and moral grounds. It eliminates accountability, encourages abuse, denies victims any remedy, and undermines public trust in law enforcement. Abolishing qualified immunity is essential to restoring accountability and ensuring that rights violations carry real consequences.</p>
+<p>Policing in America has become increasingly militarized, with local police departments acquiring military-grade weapons, armored vehicles, and tactical equipment through federal programs like the 1033 program. This equipment is not just symbolic — it shapes how police see themselves and how they interact with communities. Military equipment leads to military tactics, which treat neighborhoods as war zones and residents as potential enemies. SWAT teams are deployed tens of thousands of times per year, often for routine warrant service. No-knock raids result in deaths of innocent people and officers. Armored vehicles roll through residential streets. Flashbang grenades are thrown into homes, sometimes into cribs with babies. This militarization does not make communities safer — it escalates violence, damages trust, and transforms police from community protectors into occupying forces. Demilitarization means banning weapons of war, limiting military-style equipment, and shifting training and culture away from warrior mentality toward service, de-escalation, and community integration.</p>
+<p>The mental health crisis in policing operates on two fronts. First, police officers face enormous stress, trauma, and mental health challenges, yet stigma and cultural barriers prevent many from seeking help. Officers who are struggling, burned out, or suffering from PTSD are more likely to use excessive force, make poor decisions, and harm themselves or others. Providing robust mental health support, regular screening, and reducing stigma is essential for officer well-being and public safety. Second, police are routinely called to respond to mental health crises despite lacking the training, tools, or appropriate role to do so. Encounters between armed police and people experiencing psychiatric crises frequently end in violence, incarceration, or death. The solution is to establish separate, specialized crisis response teams staffed by mental health professionals, social workers, and medically trained personnel who can respond to nonviolent emergencies without the presence of armed police. This protects both the person in crisis and the community while freeing police to focus on situations where their skills are appropriate.</p>
+<p>Community policing is not just a buzzword — it is a fundamentally different model of public safety. When police live in, engage with, and are accountable to the communities they serve, relationships change. Officers become known individuals rather than faceless enforcers. Trust can be built. Problems can be solved collaboratively rather than through coercion. The occupation-style model — where police commute in from distant suburbs to patrol neighborhoods they do not understand and communities they do not value — creates antagonism, fear, and mutual distrust. Requiring officers to perform community service in the neighborhoods they serve, encouraging them to live in those communities, and integrating policing into community life shifts the culture from enforcement to service.</p>
+<p>Sentencing reform addresses a fundamental contradiction in American criminal law. Mandatory minimum sentences impose rigid, one-size-fits-all punishments that ignore context, individual circumstances, and proportionality. They transfer power from judges to prosecutors, who use the threat of extreme mandatory sentences to coerce guilty pleas. They produce absurd and cruel outcomes, such as decades-long sentences for nonviolent drug offenses. At the same time, unconstrained judicial discretion leads to wildly inconsistent sentences for similar conduct, with disparities driven by the race of the defendant, the politics of the judge, and the resources of the defense. The solution is structured sentencing guidelines: defined ranges that allow judicial discretion within bounds, require written justification for deviations, and are subject to appellate review. This approach avoids both the rigidity of mandatory minimums and the arbitrariness of unconstrained discretion. It creates consistency, transparency, and proportionality while preserving the ability to account for individual circumstances.</p>
+<p>Racial disparities in sentencing are not incidental — they are systemic and well-documented. Black defendants receive longer sentences than white defendants for the same offenses, even controlling for prior criminal history and other relevant factors. Disparities exist at every stage: arrest, charging, bail, plea bargaining, conviction, sentencing, and parole. These disparities reflect implicit bias, explicit racism, and structural factors such as differential policing patterns, resource inequality in defense representation, and the lingering effects of facially discriminatory laws like the crack-versus-powder cocaine sentencing disparity. Addressing these disparities requires mandatory data collection disaggregated by race, gender, disability, and geography; independent audits with enforcement power; transparency in outcomes; and accountability for jurisdictions and actors who perpetuate unjustified disparities.</p>
+<p>The death penalty is the most extreme exercise of state power: the deliberate, premeditated killing of a person by the government. It is irreversible, disproportionately applied to poor people and people of color, prone to error (with over 185 exonerations from death row since 1973), and does not deter crime more effectively than life imprisonment. It is expensive, requiring decades of appeals and specialized legal proceedings. It is morally indefensible in a system that claims to value human dignity and rehabilitation. Many jurisdictions have abolished it entirely. For those that retain it, limiting it to the most extreme cases such as genocide, war crimes, or crimes against humanity ensures it is reserved for conduct that is universally recognized as beyond the pale, not applied capriciously to defendants who lack resources or are disfavored by the community.</p>
+<p>The Thirteenth Amendment to the U.S. Constitution abolished slavery and involuntary servitude "except as a punishment for crime whereof the party shall have been duly convicted." This exception has been exploited for over a century to maintain systems of forced labor in prisons. Incarcerated people are required to work for little or no pay, sometimes under threat of solitary confinement or loss of privileges. They produce goods, provide services, and generate billions of dollars in economic value while receiving cents per hour. This is not rehabilitation — it is exploitation. Eliminating the prisoner exception means ensuring that all prison labor is voluntary, fairly compensated at prevailing wages, and focused on skill-building and reintegration. It distinguishes between meaningful work programs that support rehabilitation and coercive labor that perpetuates the logic of enslavement.</p>
+<p>Indefinite detention, internment camps, and offshore incarceration represent some of the most extreme abuses of state power. Japanese internment during World War II imprisoned 120,000 people based on race and national origin without individualized suspicion or due process. Guantanamo Bay has held hundreds of detainees for decades without trial, often without charge, using the offshore location to evade constitutional accountability. These systems create legal black holes where rights disappear and abuse flourishes. Banning them means requiring individualized due process, judicial oversight, strict time limits, and constitutional protections that cannot be evaded through geography or creative labeling. It means rejecting the logic that emergency, fear, or convenience justifies suspending fundamental rights for entire groups of people.</p>
+<p>Drug policy in the United States has been a catastrophic failure. The war on drugs has incarcerated millions of people, disproportionately Black and Brown, for nonviolent possession offenses while failing to reduce drug use, addiction, or overdose deaths. It has militarized police, corrupted institutions, funded cartels, and destroyed communities. Meanwhile, evidence from jurisdictions that have decriminalized or legalized drugs shows reductions in overdose deaths, increases in treatment access, and no increase in problematic use. Ending the war on drugs means decriminalizing possession, treating addiction as a public health issue rather than a criminal one, redirecting resources from incarceration to treatment and harm reduction, establishing regulated frameworks where appropriate, and ensuring that people who seek help for overdoses or assist others in crisis face no criminal penalty. This is not soft on crime — it is evidence-based policy that prioritizes saving lives and rebuilding communities over punishment and incarceration.</p>
+<p>Bail reform addresses a core injustice: the criminalization of poverty. Cash bail systems detain people not because they are dangerous or likely to flee, but because they cannot afford to pay. Poor people sit in jail for months or years awaiting trial, losing jobs, housing, and custody of children, while wealthy people charged with identical or more serious offenses go free. This is not justice — it is wealth-based detention. Pretrial detention must be based on individualized, evidence-based assessments of flight risk or danger, not ability to pay. Decisions must favor the least restrictive conditions, be subject to judicial review, and avoid AI systems that replicate or amplify existing biases. The goal is to ensure that people are not punished before they are convicted and that wealth does not determine freedom.</p>
+<p>Restorative justice offers an alternative framework to the adversarial, punitive model that dominates American criminal law. It centers accountability, repair, and healing rather than punishment and exclusion. It brings together people who caused harm, people who experienced harm, and the community to identify needs, address harms, and determine how to move forward. It is not appropriate for all cases — participation must be voluntary, informed, and preserve due process rights — but where it is appropriate, it produces better outcomes: higher victim satisfaction, lower recidivism, reduced trauma, and stronger communities. Diversion programs expand this logic to reduce unnecessary criminalization, especially for low-level offenses, youth, and nonviolent conduct. Access to these programs must be equitable and not depend on wealth, race, geography, or prosecutorial favoritism.</p>
+<p>Post-conviction review is essential in a system that inevitably makes mistakes. Wrongful convictions result from false confessions, eyewitness misidentification, junk science, prosecutorial misconduct, inadequate defense, and systemic bias. When new evidence emerges, when science is discredited, or when procedural errors are discovered, there must be accessible, meaningful processes to review and correct convictions. Artificial deadlines, procedural barriers, and limited access to counsel prevent many innocent people from obtaining relief. Independent innocence review mechanisms, mandatory review when wrongful-conviction indicators are present, AI tools to identify patterns under transparent oversight, and presumptive review pathways when entire classes of convictions are tainted by discredited methods or systemic misconduct ensure that the system can correct its own failures rather than doubling down on injustice.</p>
+<p>Civil forfeiture is legalized theft. It allows law enforcement agencies to seize property — cash, cars, homes — based on suspicion of criminal activity, often without ever charging or convicting the owner. The burden is on the owner to prove innocence, and the procedural barriers to contesting seizure are prohibitive. Agencies then keep the seized assets, creating direct financial incentives to seize as much as possible. This corrupts policing, incentivizes targeting of poor and vulnerable people, and violates basic principles of due process and property rights. Banning civil forfeiture or imposing strict limits — requiring criminal conviction, strong evidentiary standards, prompt judicial review, accessible contest processes, and prohibiting agencies from retaining seized assets as operating revenue — eliminates the profit motive and restores constitutional protections.</p>
+<p>Expungement and record-clearing address the lifelong collateral consequences of justice-system contact. A criminal record creates barriers to employment, housing, education, professional licensing, public benefits, and civic participation. These barriers are often permanent, applying even to dismissed charges, acquittals, juvenile offenses, and convictions from decades ago. They perpetuate inequality, prevent reintegration, and undermine public safety by making it nearly impossible for people to rebuild stable lives. Broad access to sealing, expungement, and record-clearing processes — ideally automatic in many categories rather than dependent on expensive petition processes — ensures that past contact with the justice system does not create lifelong exclusion. Background-check systems must honor expungement, juvenile records must be sealed automatically, and people must have accessible processes to correct errors in records and databases.</p>
+<p>Evidence integrity is foundational to fair trials, yet it is routinely compromised. Junk science — bite-mark analysis, hair-fiber comparison, bullet lead analysis, arson investigation based on outdated myths — has been used for decades to convict innocent people, and prosecutors have resisted challenges even after the underlying methods were discredited. Forensic fraud, where examiners fabricate or misrepresent results, has led to thousands of wrongful convictions. Digital evidence is vulnerable to tampering, fabrication, and spoliation. Chain-of-custody failures compromise physical evidence. AI-generated evidence introduces new risks of fabrication and bias. Ensuring evidence integrity requires strict scientific validity and reliability standards, excluding junk science, maintaining transparent documented chain-of-custody, clearly identifying synthetic or AI-generated evidence, and providing defendants the right to challenge the scientific validity and technical reliability of evidence. When foundational science is discredited, affected cases must be eligible for review and reopening.</p>
+<p>Prosecutorial misconduct — suppressing exculpatory evidence, coercing witnesses, making false statements, engaging in discriminatory charging — is one of the leading causes of wrongful convictions, yet prosecutors are rarely held accountable. Qualified immunity protects them from civil liability, professional discipline is rare, and criminal prosecution is virtually nonexistent. Meanwhile, prosecutors wield enormous power: they decide who to charge, what charges to file, whether to offer a plea deal, and what sentence to recommend. This power is often abused to coerce guilty pleas through the threat of vastly disproportionate charges if a defendant exercises the right to trial. Accountability requires full, prompt, automatic disclosure of exculpatory evidence; bans on coercive overcharging; transparency and audit standards for charging, plea, and dismissal patterns; independent review for retaliatory or politically motivated prosecution; and real consequences including sanctions, disbarment, and criminal prosecution where warranted.</p>
+<p>AI in criminal justice presents both opportunities and dangers. AI systems are already being used to predict recidivism, recommend bail decisions, assist in charging and sentencing, analyze evidence, and identify suspects. These systems can replicate and amplify existing biases, lack transparency, resist adversarial challenge, and undermine human accountability. The framework for AI in justice must ban its use for high-stakes decisions like sentencing, bail, and prosecutorial charging unless there is human accountability and oversight; require transparency, auditability, and disclosure; preserve adversarial rights to challenge and cross-examine; and apply strict scientific validity standards. At the same time, AI can be used constructively to identify wrongful convictions, detect bias, accelerate case review, and support innocence work, provided it operates under strict oversight and does not replace human judgment.</p>
+<p>Language access is a fundamental justice issue. People who do not speak English fluently are routinely denied access to qualified interpreters, forced to rely on family members or automated translation systems, and penalized when they cannot understand proceedings, deadlines, or obligations. This denies due process, prevents effective participation, and leads to wrongful convictions and unjust outcomes. Meaningful language access requires providing qualified interpretation and translation services at every critical stage, without cost barriers, and treating language-access failures as serious errors rather than harmless technicalities. Automated translation systems may assist but may not replace human interpreters where accuracy or rights are at stake.</p>
+<p>Victim rights and support are essential components of a just system, but they must be structured carefully to avoid eroding due process, confrontation rights, and the presumption of innocence. Victims need access to protection, information, support services, trauma-informed care, and meaningful participation in proceedings. But victims' rights frameworks must not convert prosecutors into instruments of retribution, undermine evidentiary standards, or treat victim satisfaction as the sole measure of justice. Access to victim-support services must be equitable and not depend on wealth, geography, race, citizenship, or media attention.</p></div>
+</div>
+</section>
+<section class="bg-parchment ruled" id="pil-related">
+<div class="wrap" style="margin-bottom:0">
+  <h2 style="color:#1e8449">Related Pillars</h2>
+  <p style="font-size:.92rem;color:#666;margin-bottom:.5rem">These pillars intersect with and reinforce this one.</p>
+</div>
+<div class="wrap"><div class="related-grid"><a href="gun-policy-and-public-safety.html" class="related-card"><strong>Gun Policy and Public Safety</strong><span>Cross-references policing weapon bans (JUS-POL-006, JUS-POL-007)</span></a>
+<a href="voting-and-civil-rights.html" class="related-card"><strong>Voting and Civil Rights</strong><span>Restoration of voting rights after incarceration, protection from voter intimidation</span></a>
+<a href="executive-power-and-accountability.html" class="related-card"><strong>Executive Power and Accountability</strong><span>Limits on executive kill lists, disposition matrices, and due process violations</span></a>
+<a href="courts-and-judiciary.html" class="related-card"><strong>Courts and Judiciary</strong><span>Supreme Court and judicial accountability for upholding constitutional protections</span></a>
+<a href="healthcare-system.html" class="related-card"><strong>Healthcare System</strong><span>Mental health crisis response, treatment over criminalization for substance use</span></a>
+<a href="immigration-and-borders.html" class="related-card"><strong>Immigration and Borders</strong><span>Due process in immigration detention, limits on family separation</span></a>
+<a href="privacy-and-surveillance.html" class="related-card"><strong>Privacy and Surveillance</strong><span>Fourth Amendment protections, limits on warrantless surveillance and data collection</span></a>
+<a href="economic-justice.html" class="related-card"><strong>Economic Justice</strong><span>Addressing wealth-based detention, fines-as-revenue systems, and economic barriers to justice</span></a>
+</div></div>
+<div class="wrap" style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap">
+  <a href="../foundations.html#equal-justice" class="btn-primary" style="background:#1e8449">← Foundation III: Equal Justice</a>
+  <a href="index.html" class="btn-primary" style="background:var(--navy)">All Pillars</a>
+</div>
+</section>
 <footer class="site-footer">
   <div class="wrap">
     <span class="footer-brand">American Renewal Project</span>
     <ul class="footer-links">
       <li><a href="../index.html">Home</a></li>
       <li><a href="../foundations.html">Foundations</a></li>
-      <li><a href="../pillars/index.html">Pillars</a></li>
+      <li><a href="index.html">Pillars</a></li>
       <li><a href="../compare/index.html">Compare</a></li>
     </ul>
     <span class="footer-note">A Third Bill of Rights for the 21st Century. · <a href="../about-ai.html" style="color:inherit;opacity:.7">On the Use of AI</a></span>
@@ -92,5 +1704,25 @@
 </footer>
 <script src="../assets/js/data.js"></script>
 <script src="../assets/js/app.js"></script>
+<script>
+(function(){
+  var nav = document.getElementById('pil-snav');
+  if(!nav) return;
+  var links = nav.querySelectorAll('a[href^="#"]');
+  var sections = Array.from(links).map(function(a){
+    return document.querySelector(a.getAttribute('href'));
+  }).filter(Boolean);
+  function onScroll(){
+    var y = window.scrollY + 120;
+    var active = sections[0];
+    sections.forEach(function(s){ if(s.offsetTop <= y) active = s; });
+    links.forEach(function(a){
+      a.classList.toggle('active', a.getAttribute('href') === '#'+active.id);
+    });
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+})();
+</script>
 </body>
 </html>

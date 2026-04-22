@@ -6,6 +6,124 @@
 <title>Rights & Civil Liberties — American Renewal Project</title>
 <link rel="stylesheet" href="../assets/css/style.css">
 <link rel="icon" type="image/svg+xml" href="../assets/img/logo.svg">
+<style>
+/* ── Pillar page styles ─────────────────────────────────────── */
+.pil-snav {
+  position: sticky; top: 63px; z-index: 150;
+  background: var(--navy); border-bottom: 2px solid rgba(255,255,255,.12);
+  overflow-x: auto; white-space: nowrap;
+}
+.pil-snav ul { display:flex; gap:0; list-style:none; margin:0; padding:0; }
+.pil-snav a {
+  display:block; padding:.55rem 1.1rem; font-family:'Oswald',sans-serif;
+  font-size:.78rem; letter-spacing:.06em; text-transform:uppercase;
+  color:rgba(255,255,255,.62); text-decoration:none; transition:color .15s;
+}
+.pil-snav a:hover, .pil-snav a.active { color:#fff; }
+.pil-snav a.active { border-bottom:2px solid #1e8449; }
+
+/* ── Section layouts ────────────────────────────────────────── */
+.pil-intro { display:grid; grid-template-columns:1fr 1fr; gap:2rem; }
+@media(max-width:700px){ .pil-intro { grid-template-columns:1fr; } }
+
+.pil-intro h2 { font-size:1.1rem; text-transform:uppercase; letter-spacing:.08em; margin-bottom:.6rem; }
+.pil-intro p, .pil-intro li { font-size:1rem; line-height:1.75; }
+
+.problem-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:1.25rem; margin-top:1rem; }
+.problem-card {
+  background:#fff; border-radius:6px; padding:1.2rem 1.4rem;
+  border-left:4px solid #1e8449;
+  box-shadow:0 1px 4px rgba(0,0,0,.07);
+}
+.problem-card h3 { font-size:1rem; margin:0 0 .4rem; color:var(--navy); }
+.problem-card p  { font-size:.92rem; line-height:1.65; margin:0; color:#333; }
+
+.reform-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:1rem; margin-top:1rem; }
+.reform-card {
+  background:var(--navy); color:#fff; border-radius:6px;
+  padding:1.1rem 1.3rem; border-top:3px solid #1e8449;
+}
+.reform-card h3 { font-size:.95rem; margin:0 0 .4rem; color:#1e8449; text-transform:uppercase; letter-spacing:.04em; }
+.reform-card p  { font-size:.88rem; line-height:1.6; margin:0; color:rgba(255,255,255,.8); }
+
+/* ── Policy rules ───────────────────────────────────────────── */
+.policy-family { margin-bottom:2.5rem; }
+.family-header {
+  display:flex; align-items:baseline; gap:.8rem; margin-bottom:1rem;
+  padding-bottom:.5rem; border-bottom:2px solid #1e8449;
+}
+.family-code {
+  font-family:'Oswald',sans-serif; font-size:1.1rem;
+  color:#1e8449; min-width:3rem;
+}
+.family-title { font-size:1rem; font-weight:600; color:var(--ink); }
+.family-count { margin-left:auto; font-size:.8rem; color:#888; white-space:nowrap; }
+
+.rule-grid {
+  display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:.75rem;
+}
+.rule-card {
+  border-radius:5px; padding:.9rem 1rem;
+  background:#fff; border:1px solid #e0d8c8;
+  font-size:.88rem; line-height:1.55;
+}
+.rule-card.status-included { border-left:4px solid #1e8449; }
+.rule-card.status-updated  { border-left:4px solid #2471a3; }
+.rule-card.status-partial  { border-left:4px solid #c9952a; }
+.rule-card.status-missing  { border-left:4px solid #ccc; opacity:.72; }
+
+.rule-header { display:flex; align-items:center; gap:.5rem; margin-bottom:.35rem; }
+.rule-id { font-size:.72rem; color:#888; letter-spacing:.03em; }
+.rule-badge {
+  font-size:.68rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em;
+  padding:.12em .45em; border-radius:3px;
+}
+.status-included .rule-badge { background:#d4edda; color:#155724; }
+.status-updated  .rule-badge { background:#cce5ff; color:#004085; }
+.status-partial  .rule-badge { background:#fff3cd; color:#856404; }
+.status-missing  .rule-badge { background:#f0f0f0; color:#666; }
+
+.rule-title { font-weight:600; margin:.2rem 0 .2rem; color:var(--ink); }
+.rule-stmt  { font-size:.85rem; color:#444; margin:.15rem 0 0; }
+.rule-notes { font-size:.8rem; color:#666; font-style:italic; margin:.25rem 0 0; }
+
+/* ── Research section ───────────────────────────────────────── */
+.research-body h3 { font-size:1.05rem; color:#1e8449; margin:1.5rem 0 .4rem; }
+.research-body p  { line-height:1.8; font-size:.97rem; }
+
+/* ── Related pillars ────────────────────────────────────────── */
+.related-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:.85rem; margin-top:1rem; }
+.related-card {
+  background:var(--navy); color:#fff; border-radius:6px; padding:1rem;
+  text-decoration:none; transition:opacity .15s;
+}
+.related-card:hover { opacity:.82; }
+.related-card strong { display:block; font-size:.95rem; margin-bottom:.3rem; }
+.related-card span   { font-size:.8rem; color:rgba(255,255,255,.65); }
+
+/* ── Summary stats bar ──────────────────────────────────────── */
+.stats-bar {
+  display:flex; flex-wrap:wrap; gap:1.5rem; margin:1.2rem 0;
+  padding:1rem 1.2rem; background:#fff; border-radius:6px;
+  border:1px solid #e0d8c8;
+}
+.stat-item { text-align:center; }
+.stat-num { display:block; font-family:'Oswald',sans-serif; font-size:2rem; color:#1e8449; }
+.stat-label { font-size:.78rem; text-transform:uppercase; letter-spacing:.06em; color:#888; }
+
+/* ── Design logic accordion ─────────────────────────────────── */
+details.design-logic { margin-top:1rem; }
+details.design-logic summary {
+  cursor:pointer; font-weight:700; padding:.6rem .8rem;
+  background:rgba(0,0,0,.06); border-radius:4px; user-select:none;
+}
+details.design-logic[open] summary { border-radius:4px 4px 0 0; }
+details.design-logic .design-body { padding:.8rem 1rem; background:#fff; border:1px solid #e0d8c8; border-top:none; border-radius:0 0 4px 4px; }
+details.design-logic .design-body p { font-size:.93rem; line-height:1.75; }
+details.design-logic .design-body ul { padding-left:1.3rem; }
+details.design-logic .design-body li { font-size:.93rem; line-height:1.65; margin-bottom:.3rem; }
+</style>
+<style>:root { --accent-color: #1e8449; }</style>
 </head>
 <body>
 <nav class="site-nav">
@@ -18,13 +136,12 @@
     <ul class="nav-links">
       <li><a href="../index.html">Home</a></li>
       <li><a href="../foundations.html">Foundations</a></li>
-      <li><a href="../pillars/index.html">Pillars</a></li>
+      <li><a href="index.html">Pillars</a></li>
       <li><a href="../compare/index.html">Compare</a></li>
     </ul>
   </div>
 </nav>
-
-<div class="page-hero compact" style="border-bottom: 4px solid #1e8449">
+<div class="page-hero compact" style="border-bottom:4px solid #1e8449">
   <div class="hero-eyebrow">
     <a href="../foundations.html#equal-justice" style="color:rgba(255,255,255,.6);text-decoration:none">
       Foundation III: Equal Justice
@@ -32,59 +149,400 @@
   </div>
   <h1 class="hero-title" style="font-size:clamp(1.8rem,5vw,2.8rem)">Rights & Civil Liberties</h1>
   <div class="hero-divider"><span>★ ★ ★</span></div>
-  <p class="hero-statement" style="font-size:1rem;max-width:620px;margin:0 auto">Civil rights enforcement must match the scale and sophistication of modern discrimination.</p>
+  <p class="hero-statement" style="font-size:1rem;max-width:680px;margin:0 auto">This pillar exists to make rights explicit, modern, durable, and harder to roll back. It reduces ambiguity where ambiguity enables abuse, clarifies intent where bad-faith interpretation is likely, and provides both techn</p>
 </div>
-
+<nav class="pil-snav" id="pil-snav"><ul><li><a href="#pil-intro">Overview</a></li><li><a href="#pil-problem">The Problem</a></li><li><a href="#pil-reform">Reform Areas</a></li><li><a href="#pil-policy">Policy Rules</a></li><li><a href="#pil-research">Research</a></li><li><a href="#pil-related">Related</a></li></ul></nav>
+<section class="bg-parchment ruled" id="pil-intro">
+<div class="wrap">
+  <div class="stats-bar">
+  <div class="stat-item"><span class="stat-num">26</span><span class="stat-label">Total Rules</span></div>
+  <div class="stat-item"><span class="stat-num" style="color:#1e8449">20</span><span class="stat-label">Active</span></div>
+  <div class="stat-item"><span class="stat-num" style="color:#c9952a">0</span><span class="stat-label">Partial</span></div>
+  <div class="stat-item"><span class="stat-num" style="color:#888">6</span><span class="stat-label">Proposed</span></div>
+</div>
+  <div class="pil-intro">
+    <div>
+      <h2 style="color:#1e8449;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.06em">Purpose</h2>
+      <p>This pillar exists to make rights explicit, modern, durable, and harder to roll back. It reduces ambiguity where ambiguity enables abuse, clarifies intent where bad-faith interpretation is likely, and provides both technical legal protections and plain-language statements of purpose.</p>
+    </div>
+    <div>
+      <h2 style="color:#1e8449;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.06em">Core Principle</h2>
+      <p>Fundamental rights and civil liberties must be explicit, enforceable, broadly protective, materially meaningful, adaptable to future developments, and difficult for government to erode. Rights must be interpreted in favor of liberty, dignity, bodily autonomy, privacy, equal citizenship, and protection from arbitrary intrusion.</p>
+    </div>
+  </div>
+</div>
+</section>
+<section class="bg-dark on-dark ruled" id="pil-problem">
+<div class="wrap" style="margin-bottom:0">
+  <h2 style="color:#1e8449">The Problem It Solves</h2>
+</div>
+<div class="wrap"><p>Many essential protections are not stated plainly in the Constitution or are left to shifting judicial interpretation, which makes them easier to attack, narrow, or erase when political power changes hands. Existing constitutional language also leaves gaps around privacy, bodily autonomy, digital life, medical freedom, equality, state abuse, corporate power, and emerging technologies. The Ninth Amendment recognizes unenumerated rights but has been functionally symbolic rather than enforceable. Privacy rights are implied by the Fourth Amendment and penumbras but not explicit. Bodily autonomy protections are incomplete and vulnerable to ideological reversal. Equality protections do not explicitly cover sexual orientation, romantic orientation, gender identity, or other characteristics. Digital privacy, data collection, government surveillance, and tech-enabled manipulation are barely addressed by constitutional text written before these technologies existed. Social and economic rights like healthcare, housing, paid leave, and basic income are not recognized as rights at all. The result is a system where fundamental freedoms depend on judicial trends, political control, and good faith rather than clear, durable constitutional protections.</p></div>
+</section>
+<section class="bg-cream ruled" id="pil-reform">
+<div class="wrap" style="margin-bottom:0">
+  <h2 style="color:#1e8449">Key Reform Areas</h2>
+</div>
+<div class="wrap"><div class="reform-grid"><div class="reform-card"><h3>Strengthen and operationalize Ninth Amendment so unenumerated rights are enforceable</h3><p></p></div>
+</div></div>
+</section>
 <section class="bg-parchment ruled">
 <div class="wrap">
-  <h2>Why This Matters</h2>
-  <p style="font-size:1.05rem;line-height:1.8">Discrimination has not ended — it has evolved. Modern discrimination is algorithmic, structural, and deniable. Civil rights law written in the 1960s was not designed to address mortgage algorithms, hiring software, or social media targeting.</p>
+  <details class="design-logic">
+    <summary>Design Logic — How These Rules Work Together</summary>
+    <div class="design-body"><p>This pillar is structured to establish a foundational rights framework that strengthens and operationalizes the Ninth Amendment, requires rights provisions to include both technical legal language and plain-language statements of purpose and intent, requires interpretation in favor of liberty and dignity rather than narrow textualism, and mandates that new laws affecting fundamental rights disclose what rights are implicated, what government interest is asserted, and why the law is narrowly tailored. Rights are organized into coherent categories: privacy and data (general right to privacy, warrants for government data access, bans on warrantless bulk collection and government purchase of personal data, control over personally identifying information); bodily autonomy (abortion, contraception, gender-affirming care, ban on conversion therapy and non-consensual intersex surgeries, forced sterilization prohibitions); equality (expanded protections including sexual orientation and romantic orientation, anti-discrimination in law, enforcement, voting, employment, housing, education, healthcare); freedom of conscience (both freedom of religion and freedom from religion, with clear limits on religious excuses for abuse); due process (ban on indefinite detention, offshore incarceration, mass internment, kill lists without due process); social and economic rights (healthcare, housing, paid leave, basic income, livable wage, social insurance, labor rights); children's and parental rights (balanced protections for both); immigration protections (core due process and dignity for all persons in U.S. jurisdiction); environmental rights; emerging technology protections (ban on unreviewable AI decisions, right to explanation and human review, restrictions on biometric surveillance); and firearms regulation (explicit authority to regulate, private army prohibitions, training and safety requirements). The design incorporates enforcement mechanisms, remedies, rights-conflict resolution principles, and anti-backsliding protections.</p></div>
+  </details>
 </div>
 </section>
-
-<section class="bg-dark on-dark ruled">
-<div class="wrap" style="display:grid;grid-template-columns:1fr 1fr;gap:2rem">
-  <div>
-    <h2 style="color:#1e8449">What It Demands</h2>
-    <ul style="list-style:disc;padding-left:1.2rem;color:rgba(255,255,255,.82)">
-        <li>Restore and strengthen the Voting Rights Act with updated preclearance requirements</li>
-        <li>Federal non-discrimination protections for LGBTQ+ individuals in employment, housing, and public accommodations</li>
-        <li>Fund and staff the EEOC and DOJ Civil Rights Division to match the actual scale of discrimination</li>
-    </ul>
-  </div>
-  <div>
-    <h2 style="color:#1e8449">What It Rejects</h2>
-    <ul style="list-style:disc;padding-left:1.2rem;color:rgba(255,255,255,.82)">
-        <li>The fiction that the Civil Rights Act solved discrimination</li>
-        <li>Algorithmic discrimination as a loophole around anti-discrimination law</li>
-        <li>Civil rights enforcement as a political choice rather than a legal obligation</li>
-    </ul>
-  </div>
-</div>
-</section>
-
-<section class="bg-cream ruled">
+<section class="bg-cream ruled" id="pil-policy">
 <div class="wrap">
-  <h2>Key Policy Points</h2>
-  <ol style="padding-left:1.4rem;font-size:1rem;line-height:2">
-          <li>Strengthen the Voting Rights Act</li>
-          <li>LGBTQ+ non-discrimination protections</li>
-          <li>Disability rights enforcement</li>
-  </ol>
-  <div style="margin-top:2.5rem;display:flex;gap:1rem;flex-wrap:wrap">
-    <a href="../foundations.html#equal-justice" class="btn-primary" style="background:#1e8449">← Foundation III: Equal Justice</a>
-    <a href="index.html" class="btn-primary" style="background:var(--navy)">All Pillars</a>
+  <h2 style="color:#1e8449">Full Policy Platform</h2>
+  <p style="font-size:.95rem;color:#555;margin-bottom:1.5rem">
+    Every rule in this pillar, organized by policy area.
+    <strong style="color:#1e8449">Active</strong> rules are current platform commitments.
+    <strong style="color:#c9952a">Partial</strong> rules are in development.
+    <strong style="color:#888">Proposed</strong> rules are planned for future inclusion.
+  </p>
+  <div class="policy-family" id="fam-bod">
+  <div class="family-header">
+    <span class="family-code">BOD</span>
+    <span class="family-title">Bodily Autonomy</span>
+    <span class="family-count">6/8 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-included">
+  <div class="rule-header">
+    <code class="rule-id">RGT-BOD-001</code>
+    <span class="rule-badge">Included</span>
+  </div>
+  <p class="rule-title">Bodily autonomy</p>
+  
+  <p class="rule-notes">Explicitly protects bodily autonomy as a fundamental right, establishing that individuals have the right to make decisions about their own bodies, medical care, and personal physical integrity without government interference except in narrowly defined circumstances where another person's rights are directly implicated.</p>
+</div>
+<div class="rule-card status-included">
+  <div class="rule-header">
+    <code class="rule-id">RGT-BOD-002</code>
+    <span class="rule-badge">Included</span>
+  </div>
+  <p class="rule-title">Abortion rights</p>
+  
+  <p class="rule-notes">Protects the right to abortion as part of bodily autonomy, codifying protections similar to Roe v. Wade and ensuring access to abortion care is a federal constitutional right not subject to state-by-state elimination.</p>
+</div>
+<div class="rule-card status-included">
+  <div class="rule-header">
+    <code class="rule-id">RGT-BOD-003</code>
+    <span class="rule-badge">Included</span>
+  </div>
+  <p class="rule-title">Contraception rights</p>
+  
+  <p class="rule-notes">Protects the right to access and use contraception, ensuring that birth control cannot be restricted or banned by states or federal government and that access is protected as part of medical privacy and bodily autonomy.</p>
+</div>
+<div class="rule-card status-included">
+  <div class="rule-header">
+    <code class="rule-id">RGT-BOD-004</code>
+    <span class="rule-badge">Included</span>
+  </div>
+  <p class="rule-title">Gender affirming care</p>
+  
+  <p class="rule-notes">Protects the right to access gender-affirming medical care including hormone therapy, surgical interventions, and related treatments, ensuring that transgender and gender-nonconforming people can make their own medical decisions with their healthcare providers without government prohibition.</p>
+</div>
+<div class="rule-card status-included">
+  <div class="rule-header">
+    <code class="rule-id">RGT-BOD-005</code>
+    <span class="rule-badge">Included</span>
+  </div>
+  <p class="rule-title">Ban intersex surgeries</p>
+  
+  <p class="rule-notes">Bans medically unnecessary, non-consensual surgeries on intersex infants and children except narrowly defined emergency circumstances, protecting intersex individuals from irreversible procedures performed without their informed consent and addressing a documented history of harmful medical practices.</p>
+</div>
+<div class="rule-card status-included">
+  <div class="rule-header">
+    <code class="rule-id">RGT-BOD-006</code>
+    <span class="rule-badge">Included</span>
+  </div>
+  <p class="rule-title">Ban conversion therapy</p>
+  
+  <p class="rule-notes">Bans conversion therapy (attempts to change sexual orientation or gender identity through psychological or physical interventions), which is abusive, ineffective, and causes significant psychological harm, particularly to minors.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">RGT-BOD-008</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Forced sterilization is prohibited in all contexts including criminal justice immigration disability guardianship public benefits and medical systems</p>
+  
+  <p class="rule-notes">Comprehensive prohibition on forced sterilization addressing both historical abuses (eugenics-era forced sterilization) and ongoing coercive practices in various institutional contexts. Protects vulnerable populations including incarcerated people, immigrants, disabled people, those under guardianship, and public benefits recipients.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">RGT-BOD-009</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">No government institution court agency or private actor may require sterilization as a condition of status recognition confinement release treatment or legal compliance</p>
+  
+  <p class="rule-notes">Clarifies that sterilization cannot be used as a bargaining chip or requirement in any legal, administrative, or institutional process. Prevents coercive sterilization requirements in contexts like gender marker changes, criminal sentencing, immigration status, medical treatment access, or other situations where people might feel compelled to undergo sterilization to obtain rights or freedom.</p>
+</div>
   </div>
 </div>
+<div class="policy-family" id="fam-edu">
+  <div class="family-header">
+    <span class="family-code">EDU</span>
+    <span class="family-title">Education Rights</span>
+    <span class="family-count">0/1 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">RGT-EDU-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Right to education</p>
+  
+  <p class="rule-notes">Recognizes education as a fundamental right, ensuring all children have access to quality public education regardless of geography, wealth, or background. Part of broader framework ensuring children's rights to development, opportunity, and future participation in society.</p>
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-eqt">
+  <div class="family-header">
+    <span class="family-code">EQT</span>
+    <span class="family-title">Equality Protections</span>
+    <span class="family-count">4/4 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-included">
+  <div class="rule-header">
+    <code class="rule-id">RGT-EQT-001</code>
+    <span class="rule-badge">Included</span>
+  </div>
+  <p class="rule-title">Expanded equality protections</p>
+  
+  <p class="rule-notes">Explicitly guarantees equal rights and equal protection beyond current constitutional text, covering categories not currently enumerated and establishing a clear, enforceable framework for equality that is harder to narrow through judicial interpretation.</p>
+</div>
+<div class="rule-card status-included">
+  <div class="rule-header">
+    <code class="rule-id">RGT-EQT-002</code>
+    <span class="rule-badge">Included</span>
+  </div>
+  <p class="rule-title">Include sexual orientation</p>
+  
+  <p class="rule-notes">Explicitly includes sexual orientation as a protected characteristic in equal protection guarantees, ensuring LGBTQ+ individuals have the same constitutional protections as other groups and preventing discrimination based on who someone loves or is attracted to.</p>
+</div>
+<div class="rule-card status-included">
+  <div class="rule-header">
+    <code class="rule-id">RGT-EQT-003</code>
+    <span class="rule-badge">Included</span>
+  </div>
+  <p class="rule-title">Include romantic orientation</p>
+  
+  <p class="rule-notes">Explicitly includes romantic orientation as a protected characteristic, recognizing that romantic attraction and sexual attraction can differ and protecting aromantic and other individuals whose romantic orientation may differ from sexual orientation.</p>
+</div>
+<div class="rule-card status-included">
+  <div class="rule-header">
+    <code class="rule-id">RGT-EQT-004</code>
+    <span class="rule-badge">Included</span>
+  </div>
+  <p class="rule-title">Expandable protections</p>
+  
+  <p class="rule-notes">Clarifies that the list of protected characteristics is not exhaustive and can expand as understanding develops, allowing equal protection to cover future-recognized categories without requiring constitutional amendment for each addition. Treats equal protection as a floor that can be built upon, not a ceiling.</p>
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-idn">
+  <div class="family-header">
+    <span class="family-code">IDN</span>
+    <span class="family-title">Identity Rights</span>
+    <span class="family-count">0/3 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">RGT-IDN-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Sex and gender markers should be removed from passports and government-issued identification documents including state drivers licenses unless a compelling rights-protective need is clearly demonstrated</p>
+  
+  <p class="rule-notes">Addresses the fundamental question of whether government needs to track and display sex/gender markers on identification at all. Shifts the burden to government to prove why such markers are necessary rather than assuming they should exist. Reduces opportunities for discrimination and harassment of transgender, non-binary, and gender-nonconforming people.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">RGT-IDN-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">People must have an explicit right to update sex and gender markers on birth records passports identification documents and other legal records without abusive barriers</p>
+  
+  <p class="rule-notes">Where sex/gender markers do exist on documents, ensures people can update them to match their identity without facing abusive requirements (invasive medical procedures, court orders, expensive processes, or other barriers). Protects transgender and non-binary people's right to accurate identification.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">RGT-IDN-003</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">No one may be required to undergo sterilization surgery or other irreversible medical procedures in order to update legal identity records</p>
+  
+  <p class="rule-notes">Explicitly prohibits sterilization requirements for updating gender markers or legal identity documents, a practice that has been used in various jurisdictions to coerce sterilization as a condition of legal gender recognition. Protects bodily autonomy and identity rights simultaneously.</p>
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-prv">
+  <div class="family-header">
+    <span class="family-code">PRV</span>
+    <span class="family-title">Privacy Rights</span>
+    <span class="family-count">5/5 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-included">
+  <div class="rule-header">
+    <code class="rule-id">RGT-DET-001</code>
+    <span class="rule-badge">Included</span>
+  </div>
+  <p class="rule-title">Ban indefinite detention</p>
+  
+  <p class="rule-notes">Prohibits holding individuals in detention indefinitely without charge, trial, or time limit. Addresses due process violations in contexts including immigration detention, national security detention, and criminal justice. Requires that detention have defined legal limits and judicial review.</p>
+</div>
+<div class="rule-card status-included">
+  <div class="rule-header">
+    <code class="rule-id">RGT-DET-002</code>
+    <span class="rule-badge">Included</span>
+  </div>
+  <p class="rule-title">Ban offshore incarceration</p>
+  
+  <p class="rule-notes">Prohibits detention or imprisonment on foreign soil or in locations outside normal constitutional protections (e.g., Guantanamo Bay) designed to evade rights. Ensures all persons detained by U.S. government have access to constitutional protections regardless of physical location.</p>
+</div>
+<div class="rule-card status-included">
+  <div class="rule-header">
+    <code class="rule-id">RGT-PRV-001</code>
+    <span class="rule-badge">Included</span>
+  </div>
+  <p class="rule-title">Explicit right to privacy</p>
+  
+  <p class="rule-notes">Establishes an explicit general constitutional right to privacy, ending reliance on implied rights from penumbras of other amendments. Covers privacy in home and personal life, communications, location data, digital activity, medical and mental health records, family and intimate relationships, and personal associations.</p>
+</div>
+<div class="rule-card status-included">
+  <div class="rule-header">
+    <code class="rule-id">RGT-PRV-002</code>
+    <span class="rule-badge">Included</span>
+  </div>
+  <p class="rule-title">Medical privacy protections</p>
+  
+  <p class="rule-notes">Strong protections for medical and mental health privacy, ensuring that medical records, treatment information, and healthcare decisions are protected from government access without warrants and from disclosure without patient consent. Critical for protecting abortion access, mental health treatment, and sensitive medical care.</p>
+</div>
+<div class="rule-card status-included">
+  <div class="rule-header">
+    <code class="rule-id">RGT-PRV-003</code>
+    <span class="rule-badge">Included</span>
+  </div>
+  <p class="rule-title">Digital privacy protections</p>
+  
+  <p class="rule-notes">Protects privacy in digital contexts including communications, location tracking, online activity, and personal data. Requires warrants for government access to digital communications and location history. Bans warrantless bulk data collection and government purchase of personal data from brokers where government could not lawfully compel the same data directly.</p>
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-rel">
+  <div class="family-header">
+    <span class="family-code">REL</span>
+    <span class="family-title">Religious Freedom</span>
+    <span class="family-count">4/4 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-included">
+  <div class="rule-header">
+    <code class="rule-id">RGT-REL-001</code>
+    <span class="rule-badge">Included</span>
+  </div>
+  <p class="rule-title">Freedom of religion</p>
+  
+  <p class="rule-notes">Protects sincerely held religious beliefs, worship, and peaceful religious expression, ensuring individuals can practice their faith without government interference.</p>
+</div>
+<div class="rule-card status-included">
+  <div class="rule-header">
+    <code class="rule-id">RGT-REL-002</code>
+    <span class="rule-badge">Included</span>
+  </div>
+  <p class="rule-title">Freedom from religion</p>
+  
+  <p class="rule-notes">Explicitly protects freedom from religion, prohibiting compelled religious observance or participation and prohibiting state preference for religion over non-religion or one religion over another. Strengthens Establishment Clause protections.</p>
+</div>
+<div class="rule-card status-included">
+  <div class="rule-header">
+    <code class="rule-id">RGT-REL-003</code>
+    <span class="rule-badge">Included</span>
+  </div>
+  <p class="rule-title">Remove abuse protections for religious orgs</p>
+  
+  <p class="rule-notes">Clarifies that religion is not a valid excuse for abuse, forced labor, fraud, medical neglect, discrimination in protected contexts, deprivation of civil rights, or other rights violations. Makes clear distinctions between volunteers and forced labor. Removes inappropriate legal shields for abuses committed under religious cover while still protecting genuine religious exercise.</p>
+</div>
+<div class="rule-card status-included">
+  <div class="rule-header">
+    <code class="rule-id">RGT-REL-004</code>
+    <span class="rule-badge">Included</span>
+  </div>
+  <p class="rule-title">Remove tax exemptions for abusive orgs</p>
+  
+  <p class="rule-notes">Permits revocation or limitation of tax-exempt status for organizations that commit abuse, systematically violate rights, operate coercively, hoard wealth unlawfully, commit fraud, or exploit members. Requires transparency and accountability for tax-advantaged religious and ideological institutions that exercise substantial power.</p>
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-tec">
+  <div class="family-header">
+    <span class="family-code">TEC</span>
+    <span class="family-title">Technology Rights</span>
+    <span class="family-count">1/1 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-included">
+  <div class="rule-header">
+    <code class="rule-id">RGT-TEC-001</code>
+    <span class="rule-badge">Included</span>
+  </div>
+  <p class="rule-title">Ban government purchase of personal data</p>
+  
+  <p class="rule-notes">Prohibits government agencies from purchasing personal data from data brokers or other commercial sources where the government could not lawfully compel the same data directly through legal process. Closes massive loophole where agencies bypass Fourth Amendment protections by buying data on the open market instead of obtaining warrants. Essential for protecting privacy in the age of commercial surveillance.</p>
+</div>
+  </div>
+</div>
+</div>
 </section>
-
+<section class="bg-dark on-dark ruled" id="pil-research">
+<div class="wrap">
+  <h2 style="color:#1e8449">Research & Context</h2>
+  <div class="research-body" style="color:rgba(255,255,255,.85)"><p>The structural problem with American rights protections is that many essential freedoms are not explicit, which makes them vulnerable to ideological reinterpretation, political attack, or judicial reversal when court composition changes. The Ninth Amendment states that "the enumeration in the Constitution, of certain rights, shall not be construed to deny or disparage others retained by the people"—but in practice this has been largely symbolic because there is no enforcement mechanism and no clear framework for what those retained rights are. This pillar makes the Ninth Amendment operational by requiring that unenumerated rights be recognized and enforced, that rights provisions include both technical legal language and plain-language statements of purpose to prevent bad-faith interpretation, and that fundamental rights be interpreted in favor of liberty, dignity, autonomy, and protection from abuse rather than in favor of government power.</p>
+<p>Privacy is one of the clearest examples of a right that should be explicit but currently is not. The right to privacy is implied by the Fourth Amendment (protection against unreasonable searches and seizures), the Third Amendment (protection against quartering of soldiers), the Fifth Amendment (protection against self-incrimination), and what Supreme Court cases have called "penumbras" of other provisions—but there is no general right to privacy stated in the Constitution. That leaves privacy protections vulnerable to narrow interpretation and makes it harder to apply privacy principles to new technologies and contexts. This pillar establishes an explicit general right to privacy covering home and personal life, communications, location data, digital activity, medical and mental health records, family and intimate relationships, and personal associations. It requires warrants for government access to personal communications, content, location history, and sensitive personal records. It bans warrantless bulk data collection and mass surveillance, and critically, it bans government purchase of personal data from brokers where the government could not lawfully compel the same data directly—closing a massive loophole where agencies bypass Fourth Amendment protections by buying data on the open market.</p>
+<p>The pillar strongly regulates or bans the sale of personally identifying information without affirmative, informed consent, treating such information as controlled by the individual with rights to access, correction, deletion, portability, and notice. This is a fundamental shift from the current system where data is treated as a commodity that companies can harvest and sell. Protection extends to biometric data including facial recognition, gait tracking, voiceprints, and genetic data—technologies that did not exist when the Constitution was written but that now enable surveillance at scales that would have been unimaginable. The discussion also recognized the need to address workplace surveillance and coercive data practices as future additions, acknowledging that corporate power and employment relationships can create privacy violations that feel as coercive as government action.</p>
+<p>Bodily autonomy is another area where protections are incomplete and vulnerable. The pillar explicitly protects bodily autonomy as a fundamental right, covering abortion, contraception, miscarriage care, fertility treatment, sterilization by choice, and gender-affirming care. It bans medically unnecessary, non-consensual surgeries on intersex infants and children except narrowly defined emergency circumstances—a practice that continues despite causing significant harm. It bans conversion therapy, which is abusive and ineffective. It protects informed consent as a core medical principle and the right to refuse medical treatment, subject to narrow limits where another person's rights are directly implicated. Critically, the pillar includes explicit prohibitions on forced sterilization in all contexts including criminal justice, immigration, disability guardianship, public benefits, and medical systems, with a separate rule clarifying that no government institution, court, agency, or private actor may require sterilization as a condition of status recognition, confinement, release, treatment, or legal compliance. These provisions address both historical abuses (eugenics-era forced sterilization) and ongoing coercive practices.</p>
+<p>The pressure-test consideration here is that bodily autonomy language must be written carefully so it protects genuine medical freedom without being weaponized against all public-health rules. The solution is to specify that bodily autonomy is fundamental, but narrowly tailored, evidence-based public-health measures may still be permitted where necessary to prevent serious direct harm to others, with due process and sunset rules. This balances individual liberty against community safety without giving either absolute priority.</p>
+<p>Equality protections in the Constitution currently cover race, color, and national origin explicitly (Fourteenth Amendment), and sex discrimination (though that interpretation took decades to develop). The pillar explicitly guarantees equal rights regardless of race, color, ethnicity, national origin, sex, gender, sexual orientation, romantic orientation, disability, religion, age where relevant, and other analogous immutable or deeply rooted characteristics. It clarifies that the list is not exhaustive, allowing protections to expand as understanding develops. It prohibits discrimination in law, enforcement, voting, employment, housing, education, healthcare, public accommodations, family life, and access to government services. It bans discriminatory enforcement, selective prosecution, and racial profiling—practices that undermine equal protection even when laws themselves are neutral. It requires equal protection to function as a floor for expansion, not contraction, with anti-backsliding protections so established rights cannot be casually narrowed.</p>
+<p>Religious freedom and freedom from religion are both protected. The pillar protects sincerely held beliefs, worship, and peaceful religious expression while prohibiting compelled religious observance or participation and prohibiting state preference for religion over non-religion, or one religion over another. Critically, it clarifies that religion is not a valid excuse for abuse, forced labor, fraud, medical neglect, discrimination in protected contexts, deprivation of civil rights, or other rights violations. It permits revocation or limitation of tax-exempt status for organizations that commit abuse, systematically violate rights, operate coercively, hoard wealth unlawfully, commit fraud, or exploit members. This addresses a real problem where religious cover is used to shield abusive practices from accountability. The pillar makes clear distinctions between volunteers and forced labor and removes inappropriate legal shields for abuses committed under religious cover, while still protecting genuine religious exercise.</p>
+<p>Due process protections ban indefinite detention, foreign or offshore detention designed to evade rights, and mass internment or detention based on race, ethnicity, religion, nationality, political identity, or other group status—all practices that have occurred in American history and remain possible without explicit prohibitions. The pillar bans executive kill lists and disposition-matrix-type systems without full constitutional due process (with very narrow exceptions for war-law circumstances if any such exception is retained). It strictly constrains watchlists, blacklists, no-fly lists, and predictive-risk systems unless accompanied by notice, due process, appeal rights, and review. These systems currently operate with minimal transparency and limited recourse, creating a form of punishment without trial.</p>
+<p>Social and economic rights are treated as foundational rather than optional. The pillar recognizes healthcare as a right and protects access to medically necessary care without discrimination based on politics, ideology, identity, or geography, with universal baseline access nationwide. It recognizes housing as a right or at minimum protects the right to safe shelter and freedom from arbitrary displacement. It guarantees paid medical leave, paid parental leave, and paid family leave—protections that most peer democracies provide but the United States does not. Most ambitiously, the pillar guarantees a minimum economic floor sufficient for basic survival, dignity, and participation in society, with the user view that a guaranteed basic income is absolutely required. It requires that the income floor be regularly adjusted for inflation, tied to cost-of-living realities, and protected from arbitrary political erosion. It recognizes the right to earn a livable wage and requires minimum wage to automatically adjust for inflation and reflect real living costs. It requires government to maintain systems of social insurance, disability support, unemployment protection, old-age income support, and welfare services, and it removes arbitrary caps that make payroll-based social insurance less progressive, specifically calling out the Social Security wage cap.</p>
+<p>The rationale for treating economic security as a rights issue rather than just policy is that many rights depend not only on legal protection, but on whether people have the material ability to exercise them. Without economic security, healthcare, and housing, many freedoms exist only in theory. Privacy is weaker if you cannot afford shelter. Bodily autonomy is weaker if you cannot afford care. Free speech is weaker if you are one paycheck from homelessness. Economic security is the foundation that makes other rights real.</p>
+<p>Emerging technology protections address AI and automated systems. The pillar bans government use of AI or automated systems to make unreviewable decisions in policing, sentencing, benefits, healthcare, education, housing, employment, immigration, and credit-like public systems. It guarantees the right to explanation, human review, appeal, and correction of automated errors. It bans discriminatory algorithmic profiling and restricts high-risk biometric surveillance. It bans government circumvention of rights through private technology vendors and limits data brokers and government end-runs around constitutional protections through commercial data purchases. Discussion also flagged future work around coercive behavioral manipulation, addictive interface design, and children's digital protections—recognizing that tech platforms use psychological manipulation at scale in ways that undermine autonomy and mental health.</p>
+<p>Firearms regulation is addressed by reworking the Second Amendment or related constitutional text to explicitly affirm government authority to regulate firearms and weaponry, explicitly defining "well regulated militia," and clarifying that private armies, mercenary groups, and unaccountable armed formations are prohibited. This allows strong regulation of acquisition, carrying, training, storage, and militia activity. It requires background checks, safety training, de-escalation training, and narrowly tailored dangerousness-based mental health evaluations—but prohibits blanket firearm exclusion based solely on diagnosis, protecting disabled people's rights while still allowing risk-based restrictions. It bans private ownership of weapons of war, including automatic weapons and comparable civilian analogues intended to evade regulation. For militias that are permitted, it requires membership records, asset records, disclosure of chain of command, insurance, regular audits, and approved training and safety standards, with federal and state regulation and oversight. It allows and encourages lawful service roles such as disaster relief and search and rescue under clear accountability systems.</p>
+<p>Children's rights, parental rights, and family integrity are balanced. The pillar protects children's rights to bodily autonomy appropriate to age and capacity, safety from abuse and neglect, medically appropriate care, education, due process, and freedom from coercive institutional harm. It protects parental rights for all parents, not only ideologically preferred ones, while requiring balance between parental rights and children's independent rights and best interests. It prohibits the state from privileging one political, religious, or ideological parenting framework over others in ways that suppress lawful pluralism, and prevents abuse of "parental rights" as a pretext to deny children safety, education, healthcare, dignity, or equal protection. It protects family integrity including chosen family and diverse family structures where consistent with safety and law.</p>
+<p>Immigration and human rights protections guarantee core due process and dignity protections to all persons within U.S. jurisdiction, not only citizens. This protects against arbitrary detention, abuse, disappearance, family separation without due process, and coercive confinement. It requires humane treatment, access to counsel or legal process, and judicial review in immigration detention and removal systems. It prohibits use of immigration status as a pretext to nullify baseline human rights and bans group-based detention or punishment without individualized due process. The pillar distinguishes universal human rights from political rights tied specifically to citizenship—voting and holding office are citizenship rights, but due process, safety from torture, and family integrity are human rights.</p>
+<p>Environmental rights recognize a right to clean air, clean water, and a reasonably safe environment, requiring protection from severe environmental harms that foreseeably threaten health, safety, and long-term habitability. It protects communities from discriminatory environmental burdens, requires transparency around contamination and public-health risk, and treats environmental safety as a rights issue, not just a regulatory preference.</p>
+<p>Enforcement and remedies are designed to ensure rights are real. The pillar applies nationwide as a federal floor—states and localities may expand protections but may not reduce them below that floor. Any law burdening a fundamental right must satisfy the highest level of constitutional review, with government proving compelling interest, necessity, narrow tailoring, and least restrictive means. Rights-protective provisions must be interpreted using text, structure, stated purpose, context, and anti-abuse intent, with plain-language statements of intent treated as authoritative interpretive guidance. Congress has explicit power to enforce these guarantees through legislation. Courts must provide meaningful remedies including injunctive relief, damages, expedited judicial review, federal cause of action, and attorney's fees—the principle being that rights without remedies are inadequate. Private entities exercising public, quasi-public, monopolistic, or coercive power in defined contexts may be subject to tailored rights constraints, preventing corporate end-runs around constitutional protections. Retaliatory state action against individuals for exercising protected rights is banned.</p>
+<p>Rights-conflict resolution provides a framework for when rights conflict: maximize liberty and dignity, minimize coercion and harm, prioritize protection against irreversible harm, and apply heightened scrutiny where structural power imbalances exist. This is intended to resolve recurring tensions such as religious liberty versus anti-discrimination, parental rights versus children's rights, privacy versus public safety, speech versus coordinated deception, and gun rights versus community safety—without giving any single value absolute priority.</p>
+<p>The pressure-test lessons incorporated: avoid making the unenumerated-rights framework so vague that it becomes shapeless (hence the plain-language purpose statements and interpretive principles); distinguish strongly between protecting belief and allowing harmful conduct (religion protects worship but not abuse); ensure bodily autonomy language cannot be casually weaponized against all public-health rules without a strict harm framework (narrowly tailored, evidence-based measures permitted where necessary to prevent serious direct harm); positive rights like healthcare and housing require implementation obligations, not just declarations (hence the emphasis on universal baseline access and regular inflation adjustment); federal floor plus state expansion is the correct anti-patchwork model (prevents a race to the bottom); and corporate power and outsourced public functions must not become an end run around constitutional rights (hence the provision covering private entities exercising coercive power).</p>
+<p>This pillar represents the most comprehensive rights framework in the project, addressing both traditional civil liberties and modern challenges from technology, economic insecurity, and concentrated private power. It is designed to be durable, explicit, enforceable, and resistant to bad-faith interpretation or ideological erosion.</p></div>
+</div>
+</section>
+<section class="bg-parchment ruled" id="pil-related">
+<div class="wrap" style="margin-bottom:0">
+  <h2 style="color:#1e8449">Related Pillars</h2>
+  <p style="font-size:.92rem;color:#666;margin-bottom:.5rem">These pillars intersect with and reinforce this one.</p>
+</div>
+<div class="wrap"><p>This pillar connects to <strong>Elections and Representation</strong> (voting rights, equal protection, participation), <strong>Anti-Corruption</strong> (privacy protections against government data purchases, protection from information manipulation), <strong>Executive Power</strong> (limits on executive detention, kill lists, emergency powers), <strong>Judicial Reform</strong> (enforcement mechanisms, meaningful remedies, expedited review), <strong>Economic Security</strong> (healthcare, housing, basic income, livable wage), <strong>Healthcare</strong> (right to care, medical privacy, informed consent), <strong>Criminal Justice</strong> (due process, ban on indefinite detention, post-incarceration rights), <strong>Immigration</strong> (due process for all persons in U.S. jurisdiction), <strong>Environmental Protection</strong> (right to clean air and water), <strong>Technology and AI</strong> (digital privacy, algorithmic accountability, biometric surveillance), <strong>Education</strong> (right to education, children's rights), <strong>Labor Rights</strong> (organizing, collective bargaining, workplace protections), and <strong>Religious Freedom and Establishment Clause</strong> (freedom of and from religion, tax-exempt status accountability). This is the connective tissue pillar that ensures other structural reforms translate into lived freedom and dignity.</p></div>
+<div class="wrap" style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap">
+  <a href="../foundations.html#equal-justice" class="btn-primary" style="background:#1e8449">← Foundation III: Equal Justice</a>
+  <a href="index.html" class="btn-primary" style="background:var(--navy)">All Pillars</a>
+</div>
+</section>
 <footer class="site-footer">
   <div class="wrap">
     <span class="footer-brand">American Renewal Project</span>
     <ul class="footer-links">
       <li><a href="../index.html">Home</a></li>
       <li><a href="../foundations.html">Foundations</a></li>
-      <li><a href="../pillars/index.html">Pillars</a></li>
+      <li><a href="index.html">Pillars</a></li>
       <li><a href="../compare/index.html">Compare</a></li>
     </ul>
     <span class="footer-note">A Third Bill of Rights for the 21st Century. · <a href="../about-ai.html" style="color:inherit;opacity:.7">On the Use of AI</a></span>
@@ -92,5 +550,25 @@
 </footer>
 <script src="../assets/js/data.js"></script>
 <script src="../assets/js/app.js"></script>
+<script>
+(function(){
+  var nav = document.getElementById('pil-snav');
+  if(!nav) return;
+  var links = nav.querySelectorAll('a[href^="#"]');
+  var sections = Array.from(links).map(function(a){
+    return document.querySelector(a.getAttribute('href'));
+  }).filter(Boolean);
+  function onScroll(){
+    var y = window.scrollY + 120;
+    var active = sections[0];
+    sections.forEach(function(s){ if(s.offsetTop <= y) active = s; });
+    links.forEach(function(a){
+      a.classList.toggle('active', a.getAttribute('href') === '#'+active.id);
+    });
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+})();
+</script>
 </body>
 </html>

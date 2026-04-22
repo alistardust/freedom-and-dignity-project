@@ -6,6 +6,124 @@
 <title>Antitrust & Corporate Power — American Renewal Project</title>
 <link rel="stylesheet" href="../assets/css/style.css">
 <link rel="icon" type="image/svg+xml" href="../assets/img/logo.svg">
+<style>
+/* ── Pillar page styles ─────────────────────────────────────── */
+.pil-snav {
+  position: sticky; top: 63px; z-index: 150;
+  background: var(--navy); border-bottom: 2px solid rgba(255,255,255,.12);
+  overflow-x: auto; white-space: nowrap;
+}
+.pil-snav ul { display:flex; gap:0; list-style:none; margin:0; padding:0; }
+.pil-snav a {
+  display:block; padding:.55rem 1.1rem; font-family:'Oswald',sans-serif;
+  font-size:.78rem; letter-spacing:.06em; text-transform:uppercase;
+  color:rgba(255,255,255,.62); text-decoration:none; transition:color .15s;
+}
+.pil-snav a:hover, .pil-snav a.active { color:#fff; }
+.pil-snav a.active { border-bottom:2px solid #2471a3; }
+
+/* ── Section layouts ────────────────────────────────────────── */
+.pil-intro { display:grid; grid-template-columns:1fr 1fr; gap:2rem; }
+@media(max-width:700px){ .pil-intro { grid-template-columns:1fr; } }
+
+.pil-intro h2 { font-size:1.1rem; text-transform:uppercase; letter-spacing:.08em; margin-bottom:.6rem; }
+.pil-intro p, .pil-intro li { font-size:1rem; line-height:1.75; }
+
+.problem-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:1.25rem; margin-top:1rem; }
+.problem-card {
+  background:#fff; border-radius:6px; padding:1.2rem 1.4rem;
+  border-left:4px solid #2471a3;
+  box-shadow:0 1px 4px rgba(0,0,0,.07);
+}
+.problem-card h3 { font-size:1rem; margin:0 0 .4rem; color:var(--navy); }
+.problem-card p  { font-size:.92rem; line-height:1.65; margin:0; color:#333; }
+
+.reform-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:1rem; margin-top:1rem; }
+.reform-card {
+  background:var(--navy); color:#fff; border-radius:6px;
+  padding:1.1rem 1.3rem; border-top:3px solid #2471a3;
+}
+.reform-card h3 { font-size:.95rem; margin:0 0 .4rem; color:#2471a3; text-transform:uppercase; letter-spacing:.04em; }
+.reform-card p  { font-size:.88rem; line-height:1.6; margin:0; color:rgba(255,255,255,.8); }
+
+/* ── Policy rules ───────────────────────────────────────────── */
+.policy-family { margin-bottom:2.5rem; }
+.family-header {
+  display:flex; align-items:baseline; gap:.8rem; margin-bottom:1rem;
+  padding-bottom:.5rem; border-bottom:2px solid #2471a3;
+}
+.family-code {
+  font-family:'Oswald',sans-serif; font-size:1.1rem;
+  color:#2471a3; min-width:3rem;
+}
+.family-title { font-size:1rem; font-weight:600; color:var(--ink); }
+.family-count { margin-left:auto; font-size:.8rem; color:#888; white-space:nowrap; }
+
+.rule-grid {
+  display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:.75rem;
+}
+.rule-card {
+  border-radius:5px; padding:.9rem 1rem;
+  background:#fff; border:1px solid #e0d8c8;
+  font-size:.88rem; line-height:1.55;
+}
+.rule-card.status-included { border-left:4px solid #1e8449; }
+.rule-card.status-updated  { border-left:4px solid #2471a3; }
+.rule-card.status-partial  { border-left:4px solid #c9952a; }
+.rule-card.status-missing  { border-left:4px solid #ccc; opacity:.72; }
+
+.rule-header { display:flex; align-items:center; gap:.5rem; margin-bottom:.35rem; }
+.rule-id { font-size:.72rem; color:#888; letter-spacing:.03em; }
+.rule-badge {
+  font-size:.68rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em;
+  padding:.12em .45em; border-radius:3px;
+}
+.status-included .rule-badge { background:#d4edda; color:#155724; }
+.status-updated  .rule-badge { background:#cce5ff; color:#004085; }
+.status-partial  .rule-badge { background:#fff3cd; color:#856404; }
+.status-missing  .rule-badge { background:#f0f0f0; color:#666; }
+
+.rule-title { font-weight:600; margin:.2rem 0 .2rem; color:var(--ink); }
+.rule-stmt  { font-size:.85rem; color:#444; margin:.15rem 0 0; }
+.rule-notes { font-size:.8rem; color:#666; font-style:italic; margin:.25rem 0 0; }
+
+/* ── Research section ───────────────────────────────────────── */
+.research-body h3 { font-size:1.05rem; color:#2471a3; margin:1.5rem 0 .4rem; }
+.research-body p  { line-height:1.8; font-size:.97rem; }
+
+/* ── Related pillars ────────────────────────────────────────── */
+.related-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:.85rem; margin-top:1rem; }
+.related-card {
+  background:var(--navy); color:#fff; border-radius:6px; padding:1rem;
+  text-decoration:none; transition:opacity .15s;
+}
+.related-card:hover { opacity:.82; }
+.related-card strong { display:block; font-size:.95rem; margin-bottom:.3rem; }
+.related-card span   { font-size:.8rem; color:rgba(255,255,255,.65); }
+
+/* ── Summary stats bar ──────────────────────────────────────── */
+.stats-bar {
+  display:flex; flex-wrap:wrap; gap:1.5rem; margin:1.2rem 0;
+  padding:1rem 1.2rem; background:#fff; border-radius:6px;
+  border:1px solid #e0d8c8;
+}
+.stat-item { text-align:center; }
+.stat-num { display:block; font-family:'Oswald',sans-serif; font-size:2rem; color:#2471a3; }
+.stat-label { font-size:.78rem; text-transform:uppercase; letter-spacing:.06em; color:#888; }
+
+/* ── Design logic accordion ─────────────────────────────────── */
+details.design-logic { margin-top:1rem; }
+details.design-logic summary {
+  cursor:pointer; font-weight:700; padding:.6rem .8rem;
+  background:rgba(0,0,0,.06); border-radius:4px; user-select:none;
+}
+details.design-logic[open] summary { border-radius:4px 4px 0 0; }
+details.design-logic .design-body { padding:.8rem 1rem; background:#fff; border:1px solid #e0d8c8; border-top:none; border-radius:0 0 4px 4px; }
+details.design-logic .design-body p { font-size:.93rem; line-height:1.75; }
+details.design-logic .design-body ul { padding-left:1.3rem; }
+details.design-logic .design-body li { font-size:.93rem; line-height:1.65; margin-bottom:.3rem; }
+</style>
+<style>:root { --accent-color: #2471a3; }</style>
 </head>
 <body>
 <nav class="site-nav">
@@ -18,13 +136,12 @@
     <ul class="nav-links">
       <li><a href="../index.html">Home</a></li>
       <li><a href="../foundations.html">Foundations</a></li>
-      <li><a href="../pillars/index.html">Pillars</a></li>
+      <li><a href="index.html">Pillars</a></li>
       <li><a href="../compare/index.html">Compare</a></li>
     </ul>
   </div>
 </nav>
-
-<div class="page-hero compact" style="border-bottom: 4px solid #2471a3">
+<div class="page-hero compact" style="border-bottom:4px solid #2471a3">
   <div class="hero-eyebrow">
     <a href="../foundations.html#clean-democracy" style="color:rgba(255,255,255,.6);text-decoration:none">
       Foundation II: Clean Democracy
@@ -32,59 +149,175 @@
   </div>
   <h1 class="hero-title" style="font-size:clamp(1.8rem,5vw,2.8rem)">Antitrust & Corporate Power</h1>
   <div class="hero-divider"><span>★ ★ ★</span></div>
-  <p class="hero-statement" style="font-size:1rem;max-width:620px;margin:0 auto">Monopoly power corrupts markets and democracy alike. It must be broken up.</p>
+  <p class="hero-statement" style="font-size:1rem;max-width:680px;margin:0 auto">To prevent monopolistic control, restore competitive markets, limit corporate domination of essential services and supply chains, and ensure that no small group of corporations can control daily life, economic opportunit</p>
 </div>
+<nav class="pil-snav" id="pil-snav"><ul><li><a href="#pil-intro">Overview</a></li><li><a href="#pil-problem">The Problem</a></li><li><a href="#pil-reform">Reform Areas</a></li><li><a href="#pil-policy">Policy Rules</a></li><li><a href="#pil-research">Research</a></li><li><a href="#pil-related">Related</a></li></ul></nav>
+<section class="bg-parchment ruled" id="pil-intro">
+<div class="wrap">
+  <div class="stats-bar">
+  <div class="stat-item"><span class="stat-num">4</span><span class="stat-label">Total Rules</span></div>
+  <div class="stat-item"><span class="stat-num" style="color:#1e8449">1</span><span class="stat-label">Active</span></div>
+  <div class="stat-item"><span class="stat-num" style="color:#c9952a">1</span><span class="stat-label">Partial</span></div>
+  <div class="stat-item"><span class="stat-num" style="color:#888">2</span><span class="stat-label">Proposed</span></div>
+</div>
+  <div class="pil-intro">
+    <div>
+      <h2 style="color:#2471a3;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.06em">Purpose</h2>
+      <p>To prevent monopolistic control, restore competitive markets, limit corporate domination of essential services and supply chains, and ensure that no small group of corporations can control daily life, economic opportunity, or democratic governance.</p>
+    </div>
+    <div>
+      <h2 style="color:#2471a3;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.06em">Core Principle</h2>
+      <p>Market concentration threatens both economic fairness and democratic self-governance. When a handful of corporations control entire sectors—food distribution, technology platforms, media, healthcare, finance—they gain power to set prices, dictate terms, exclude competitors, degrade quality, and influence policy in their favor. This concentration must be actively prevented and reversed where it has already occurred.</p>
+    </div>
+  </div>
+</div>
+</section>
+<section class="bg-dark on-dark ruled" id="pil-problem">
+<div class="wrap" style="margin-bottom:0">
+  <h2 style="color:#2471a3">The Problem It Solves</h2>
+</div>
+<div class="wrap"><p style="font-size:1.05rem;line-height:1.8;margin-bottom:1.2rem">### Market Concentration and Economic Control
+A small number of corporations now control vast segments of the American economy. In agriculture and food service, a few distributors like Sysco control supply chains to the point where restaurants have no meaningful choice of suppliers and face prices set by oligopoly rather than competition. In technology, a handful of platforms control access to digital commerce, communication, and information. In healthcare, hospital systems and pharmaceutical companies consolidate into regional monopolies. In finance, megabanks control lending, investment, and payment systems.
 
+This concentration creates multiple harms. Consumers pay higher prices and receive lower quality as competition disappears. Small businesses cannot compete against integrated giants that control both supply and distribution. Workers face fewer employment options and reduced bargaining power as industries consolidate. Innovation slows because monopolists can buy or crush competitors rather than improving their own offerings.</p><div class="problem-grid"><div class="problem-card"><h3>Political Capture and Democratic Threat</h3><p>Concentrated corporate power translates directly into political influence. When a few corporations dominate an industry, they can lobby effectively, fund campaigns, threaten to move jobs or investment, and shape regulatory processes. Small competitors and public interest advocates cannot match their</p></div>
+<div class="problem-card"><h3>Quality Degradation and Planned Obsolescence</h3><p>Monopolistic markets remove the competitive pressure for quality and durability. Corporations optimize for short-term profit rather than long-term value. Products are designed to fail, become obsolete, or require costly replacement. Services degrade because customers have no alternative. Repair is m</p></div>
+</div></div>
+</section>
+<section class="bg-cream ruled" id="pil-reform">
+<div class="wrap" style="margin-bottom:0">
+  <h2 style="color:#2471a3">Key Reform Areas</h2>
+</div>
+<div class="wrap"><p style="margin-bottom:1rem">### Market Structure and Competition
+- Breakup criteria for monopolistic firms
+- Prohibition on vertical integration that eliminates competition
+- Limits on horizontal consolidation in concentrated markets
+- Merger review presumptions against further concentration
+- Prohibition on acquisitions by dominant platforms
+- Nondiscrimination requirements for platform access
+- Interoperability standards for essential digital services</p><div class="reform-grid"><div class="reform-card"><h3>Supply Chain and Distribution</h3><p>- Competition requirements in essential supply chains</p></div>
+<div class="reform-card"><h3>Corporate Political Power</h3><p>- Ban corporate political donations (COR-FIN-001)</p></div>
+<div class="reform-card"><h3>Quality and Durability</h3><p>- Right to repair requirements</p></div>
+</div></div>
+</section>
 <section class="bg-parchment ruled">
 <div class="wrap">
-  <h2>Why This Matters</h2>
-  <p style="font-size:1.05rem;line-height:1.8">The United States has not meaningfully enforced antitrust law for forty years. The result is an economy where a handful of companies control the food supply, healthcare delivery, media, banking, and technology — and the political system that might regulate them.</p>
+  <details class="design-logic">
+    <summary>Design Logic — How These Rules Work Together</summary>
+    <div class="design-body"><h3>Structural Separation and Breakup Authority</h3>
+<p>This pillar establishes criteria for identifying monopolistic or anticompetitive market structures and creates authority to break up or restructure dominant firms. Breakup authority targets vertical integration that allows companies to control both supply and distribution, horizontal consolidation that eliminates competition, and network effects that create insurmountable barriers to entry.</p>
+<p>The framework recognizes that some monopolies are natural (single infrastructure serving a region) while others are constructed (deliberate acquisition and exclusion strategies). Natural monopolies should be regulated as public utilities. Constructed monopolies should be dismantled.</p>
+<h3>Merger and Acquisition Limits</h3>
+<p>This pillar tightens merger review standards and creates presumptions against consolidation in already-concentrated markets. It shifts the burden: companies seeking to merge in concentrated industries must prove the merger will not harm competition, rather than regulators having to prove it will. It prohibits acquisitions by dominant platforms that eliminate potential competitors or extend market power into adjacent sectors.</p>
+<h3>Platform and Essential Service Regulation</h3>
+<p>For platforms and services that have become essential infrastructure (payment systems, e-commerce marketplaces, communication networks, logistics networks), this pillar establishes nondiscrimination requirements, interoperability standards, and prohibitions on self-preferencing. Dominant platforms cannot favor their own products, exclude competitors through technical means, or use access to the platform as leverage in adjacent markets.</p>
+<h3>Anti-Consolidation in Supply Chains</h3>
+<p>This pillar specifically addresses the problem documented in food service and other supply-dependent industries: a small number of distributors control access to goods, eliminate price competition, and create captive markets. It establishes competition requirements in essential supply chains, prohibits exclusivity agreements that lock out competitors, and requires transparent pricing.</p>
+<h3>Campaign Finance and Political Influence</h3>
+<p>This pillar includes the corporate political finance rules from the anti-corruption scope: bans on corporate political donations, elimination of Super PACs, limits on individual donations, and restrictions on political ad spending. These rules directly address the translation of economic power into political control.</p></div>
+  </details>
 </div>
 </section>
-
-<section class="bg-dark on-dark ruled">
-<div class="wrap" style="display:grid;grid-template-columns:1fr 1fr;gap:2rem">
-  <div>
-    <h2 style="color:#2471a3">What It Demands</h2>
-    <ul style="list-style:disc;padding-left:1.2rem;color:rgba(255,255,255,.82)">
-        <li>Restore the original intent of the Sherman Act: market dominance itself is the problem, not just provable consumer harm</li>
-        <li>Break up agricultural conglomerates controlling more than 25% of any food category</li>
-        <li>Apply antitrust law to labor markets: prosecute employer collusion to suppress wages</li>
-    </ul>
-  </div>
-  <div>
-    <h2 style="color:#2471a3">What It Rejects</h2>
-    <ul style="list-style:disc;padding-left:1.2rem;color:rgba(255,255,255,.82)">
-        <li>The consumer welfare standard as the sole test of antitrust harm</li>
-        <li>Mergers that eliminate competition in exchange for efficiency gains that never materialize</li>
-        <li>The idea that four companies controlling the food supply is compatible with a free market</li>
-    </ul>
-  </div>
-</div>
-</section>
-
-<section class="bg-cream ruled">
+<section class="bg-cream ruled" id="pil-policy">
 <div class="wrap">
-  <h2>Key Policy Points</h2>
-  <ol style="padding-left:1.4rem;font-size:1rem;line-height:2">
-          <li>Aggressive antitrust enforcement</li>
-          <li>Breaking up media monopolies</li>
-          <li>Labor market concentration rules</li>
-  </ol>
-  <div style="margin-top:2.5rem;display:flex;gap:1rem;flex-wrap:wrap">
-    <a href="../foundations.html#clean-democracy" class="btn-primary" style="background:#2471a3">← Foundation II: Clean Democracy</a>
-    <a href="index.html" class="btn-primary" style="background:var(--navy)">All Pillars</a>
+  <h2 style="color:#2471a3">Full Policy Platform</h2>
+  <p style="font-size:.95rem;color:#555;margin-bottom:1.5rem">
+    Every rule in this pillar, organized by policy area.
+    <strong style="color:#1e8449">Active</strong> rules are current platform commitments.
+    <strong style="color:#c9952a">Partial</strong> rules are in development.
+    <strong style="color:#888">Proposed</strong> rules are planned for future inclusion.
+  </p>
+  <div class="policy-family" id="fam-cor">
+  <div class="family-header">
+    <span class="family-code">COR</span>
+    <span class="family-title">FIN — Corporate Political Finance</span>
+    <span class="family-count">1/4 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-included">
+  <div class="rule-header">
+    <code class="rule-id">COR-FIN-001</code>
+    <span class="rule-badge">Included</span>
+  </div>
+  <p class="rule-title">Ban Corporate Political Donations</p>
+  <p class="rule-stmt">Ban corporate political donations.</p>
+  <p class="rule-notes">Prohibits corporations from making political donations to candidates, parties, or political organizations. Closes the channel through which concentrated economic power directly translates into political influence. Applies to all corporate entities regardless of size, industry, or structure. Does not restrict individual donations by corporate officers or employees acting in personal capacity.</p>
+</div>
+<div class="rule-card status-partial">
+  <div class="rule-header">
+    <code class="rule-id">COR-FIN-002</code>
+    <span class="rule-badge">Partial</span>
+  </div>
+  <p class="rule-title">Ban Super PACs</p>
+  <p class="rule-stmt">Ban Super PACs.</p>
+  <p class="rule-notes">Eliminates Super PACs and similar independent expenditure organizations that allow unlimited donations for political spending. Super PACs enable end-runs around campaign contribution limits and allow wealthy donors to dominate political messaging. Banning them restores some proportionality between money and political influence. Status marked PARTIAL suggests this rule has been discussed or drafted but not yet fully implemented in formal policy.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">COR-FIN-003</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Limit Individual Donations</p>
+  <p class="rule-stmt">Limit individual donations.</p>
+  <p class="rule-notes">Establishes reasonable limits on individual contributions to political campaigns, parties, and committees. Prevents wealthy individuals from using personal wealth to dominate political funding even when corporate and PAC donations are banned. Limits should be high enough to enable meaningful participation but low enough to prevent plutocratic control. Applies per election cycle with inflation adjustment.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">COR-FIN-004</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Limit Political Ad Spending</p>
+  <p class="rule-stmt">Limit political ad spending.</p>
+  <p class="rule-notes">Restricts total spending on political advertising to prevent wealthy interests from drowning out other voices through sheer volume of messaging. May include overall spending caps, limits on ad buys in specific media markets, or public financing alternatives. Requires careful constitutional design to survive First Amendment scrutiny while achieving the goal of preventing wealth-based domination of political discourse.</p>
+</div>
   </div>
 </div>
+<div class="policy-family" id="fam-med">
+  <div class="family-header">
+    <span class="family-code">MED</span>
+    <span class="family-title">PRS — Media and Press (Overlap with Pillar 10)</span>
+    <span class="family-count">0/0 active</span>
+  </div>
+  <div class="rule-grid">
+    
+  </div>
+</div>
+</div>
 </section>
-
+<section class="bg-dark on-dark ruled" id="pil-research">
+<div class="wrap">
+  <h2 style="color:#2471a3">Research & Context</h2>
+  <div class="research-body" style="color:rgba(255,255,255,.85)"><p>The American economy has undergone dramatic consolidation over the past four decades. Where antitrust enforcement once prevented mergers that would reduce competition, a shift in legal and economic doctrine beginning in the 1970s redefined antitrust around "consumer welfare" measured primarily by prices. This allowed consolidation as long as prices did not immediately rise—ignoring effects on quality, innovation, worker wages, supplier terms, and political power.</p>
+<p>The results are visible across sectors. Four companies control over 80% of U.S. beef processing. Three pharmacy benefit managers control 80% of prescriptions. Two companies dominate home improvement retail. In technology, Google controls search, Facebook controls social connection, Amazon controls e-commerce infrastructure, and Apple controls the smartphone platform. These are not the outcomes of superior competition—they are the results of acquisition strategies, network effects, and the deliberate construction of barriers to entry.</p>
+<p>Recent reporting on food service consolidation illustrates the problem. Sysco and a few other distributors control restaurant supply chains to the extent that independent restaurants cannot negotiate prices, cannot switch suppliers, and face effective captivity. The distributor sets the terms because there is no meaningful alternative. Similar dynamics exist in healthcare (hospital systems), agriculture (seed and chemical suppliers), and technology (app stores, cloud services).</p>
+<p>The brainstorm branch emphasizes that this pillar overlaps significantly with anti-corruption measures. Corporate campaign donations, Super PACs, and lobbying expenditures are the mechanisms through which economic power becomes political control. Breaking that translation requires both market structure reforms (antitrust) and political finance reforms (corruption pillar). The two work together: reduce economic concentration so fewer actors have massive resources, and block the channels through which those resources buy policy.</p>
+<p>The pillar must also address a political challenge: "antitrust" and "monopoly" can sound abstract or technical. The effective framing is concrete: why does your grocery cost so much? Why do you have only one internet provider? Why can't you get your phone repaired? Why do independent restaurants struggle while chains expand? The answers trace back to market concentration, and the solutions trace back to antitrust enforcement.</p>
+<p>The quality degradation problem deserves particular attention because it affects daily life in ways people immediately recognize. Products that break quickly, cannot be repaired, and must be replaced are not market failures—they are market features when monopolistic control removes the competitive incentive for quality. Right to repair laws, durability standards, and prohibitions on planned obsolescence are antitrust-adjacent tools that address the same underlying problem: concentrated power optimizes for extraction rather than value.</p>
+<p>The pillar is described as "partially embedded in anti-corruption pillar" because the COR-FIN rules (corporate campaign finance) address corporate power in the political sphere. This pillar extends that logic to the economic sphere: concentrated economic power is itself a problem, not just when it translates into political influence. Both must be addressed.</p></div>
+</div>
+</section>
+<section class="bg-parchment ruled" id="pil-related">
+<div class="wrap" style="margin-bottom:0">
+  <h2 style="color:#2471a3">Related Pillars</h2>
+  <p style="font-size:.92rem;color:#666;margin-bottom:.5rem">These pillars intersect with and reinforce this one.</p>
+</div>
+<div class="wrap"><div class="related-grid"><a href="pillar-3-anti-corruption-and-concentrated-power.html" class="related-card"><strong>Pillar 3: Anti-Corruption and Concentrated Power</strong><span>— Corporate campaign finance bans, lobbying restrictions, ethics rules</span></a>
+<a href="pillar-5-rights-civil-liberties-and-economic-security.html" class="related-card"><strong>Pillar 5: Rights, Civil Liberties, and Economic Security</strong><span>— Right to repair, consumer protections, economic opportunity</span></a>
+<a href="pillar-8-taxation-and-wealth.html" class="related-card"><strong>Pillar 8: Taxation and Wealth</strong><span>— Wealth concentration limits, progressive taxation, economic equality</span></a>
+<a href="pillar-10-information-and-media.html" class="related-card"><strong>Pillar 10: Information and Media</strong><span>— Media consolidation, platform accountability, information integrity</span></a>
+<a href="pillar-12-taxation-and-wealth.html" class="related-card"><strong>Pillar 12: Taxation and Wealth</strong><span>— Small business support, economic equity, anti-wealth hoarding measures</span></a>
+</div></div>
+<div class="wrap" style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap">
+  <a href="../foundations.html#clean-democracy" class="btn-primary" style="background:#2471a3">← Foundation II: Clean Democracy</a>
+  <a href="index.html" class="btn-primary" style="background:var(--navy)">All Pillars</a>
+</div>
+</section>
 <footer class="site-footer">
   <div class="wrap">
     <span class="footer-brand">American Renewal Project</span>
     <ul class="footer-links">
       <li><a href="../index.html">Home</a></li>
       <li><a href="../foundations.html">Foundations</a></li>
-      <li><a href="../pillars/index.html">Pillars</a></li>
+      <li><a href="index.html">Pillars</a></li>
       <li><a href="../compare/index.html">Compare</a></li>
     </ul>
     <span class="footer-note">A Third Bill of Rights for the 21st Century. · <a href="../about-ai.html" style="color:inherit;opacity:.7">On the Use of AI</a></span>
@@ -92,5 +325,25 @@
 </footer>
 <script src="../assets/js/data.js"></script>
 <script src="../assets/js/app.js"></script>
+<script>
+(function(){
+  var nav = document.getElementById('pil-snav');
+  if(!nav) return;
+  var links = nav.querySelectorAll('a[href^="#"]');
+  var sections = Array.from(links).map(function(a){
+    return document.querySelector(a.getAttribute('href'));
+  }).filter(Boolean);
+  function onScroll(){
+    var y = window.scrollY + 120;
+    var active = sections[0];
+    sections.forEach(function(s){ if(s.offsetTop <= y) active = s; });
+    links.forEach(function(a){
+      a.classList.toggle('active', a.getAttribute('href') === '#'+active.id);
+    });
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+})();
+</script>
 </body>
 </html>

@@ -6,6 +6,124 @@
 <title>Information & Media — American Renewal Project</title>
 <link rel="stylesheet" href="../assets/css/style.css">
 <link rel="icon" type="image/svg+xml" href="../assets/img/logo.svg">
+<style>
+/* ── Pillar page styles ─────────────────────────────────────── */
+.pil-snav {
+  position: sticky; top: 63px; z-index: 150;
+  background: var(--navy); border-bottom: 2px solid rgba(255,255,255,.12);
+  overflow-x: auto; white-space: nowrap;
+}
+.pil-snav ul { display:flex; gap:0; list-style:none; margin:0; padding:0; }
+.pil-snav a {
+  display:block; padding:.55rem 1.1rem; font-family:'Oswald',sans-serif;
+  font-size:.78rem; letter-spacing:.06em; text-transform:uppercase;
+  color:rgba(255,255,255,.62); text-decoration:none; transition:color .15s;
+}
+.pil-snav a:hover, .pil-snav a.active { color:#fff; }
+.pil-snav a.active { border-bottom:2px solid #2471a3; }
+
+/* ── Section layouts ────────────────────────────────────────── */
+.pil-intro { display:grid; grid-template-columns:1fr 1fr; gap:2rem; }
+@media(max-width:700px){ .pil-intro { grid-template-columns:1fr; } }
+
+.pil-intro h2 { font-size:1.1rem; text-transform:uppercase; letter-spacing:.08em; margin-bottom:.6rem; }
+.pil-intro p, .pil-intro li { font-size:1rem; line-height:1.75; }
+
+.problem-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:1.25rem; margin-top:1rem; }
+.problem-card {
+  background:#fff; border-radius:6px; padding:1.2rem 1.4rem;
+  border-left:4px solid #2471a3;
+  box-shadow:0 1px 4px rgba(0,0,0,.07);
+}
+.problem-card h3 { font-size:1rem; margin:0 0 .4rem; color:var(--navy); }
+.problem-card p  { font-size:.92rem; line-height:1.65; margin:0; color:#333; }
+
+.reform-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:1rem; margin-top:1rem; }
+.reform-card {
+  background:var(--navy); color:#fff; border-radius:6px;
+  padding:1.1rem 1.3rem; border-top:3px solid #2471a3;
+}
+.reform-card h3 { font-size:.95rem; margin:0 0 .4rem; color:#2471a3; text-transform:uppercase; letter-spacing:.04em; }
+.reform-card p  { font-size:.88rem; line-height:1.6; margin:0; color:rgba(255,255,255,.8); }
+
+/* ── Policy rules ───────────────────────────────────────────── */
+.policy-family { margin-bottom:2.5rem; }
+.family-header {
+  display:flex; align-items:baseline; gap:.8rem; margin-bottom:1rem;
+  padding-bottom:.5rem; border-bottom:2px solid #2471a3;
+}
+.family-code {
+  font-family:'Oswald',sans-serif; font-size:1.1rem;
+  color:#2471a3; min-width:3rem;
+}
+.family-title { font-size:1rem; font-weight:600; color:var(--ink); }
+.family-count { margin-left:auto; font-size:.8rem; color:#888; white-space:nowrap; }
+
+.rule-grid {
+  display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:.75rem;
+}
+.rule-card {
+  border-radius:5px; padding:.9rem 1rem;
+  background:#fff; border:1px solid #e0d8c8;
+  font-size:.88rem; line-height:1.55;
+}
+.rule-card.status-included { border-left:4px solid #1e8449; }
+.rule-card.status-updated  { border-left:4px solid #2471a3; }
+.rule-card.status-partial  { border-left:4px solid #c9952a; }
+.rule-card.status-missing  { border-left:4px solid #ccc; opacity:.72; }
+
+.rule-header { display:flex; align-items:center; gap:.5rem; margin-bottom:.35rem; }
+.rule-id { font-size:.72rem; color:#888; letter-spacing:.03em; }
+.rule-badge {
+  font-size:.68rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em;
+  padding:.12em .45em; border-radius:3px;
+}
+.status-included .rule-badge { background:#d4edda; color:#155724; }
+.status-updated  .rule-badge { background:#cce5ff; color:#004085; }
+.status-partial  .rule-badge { background:#fff3cd; color:#856404; }
+.status-missing  .rule-badge { background:#f0f0f0; color:#666; }
+
+.rule-title { font-weight:600; margin:.2rem 0 .2rem; color:var(--ink); }
+.rule-stmt  { font-size:.85rem; color:#444; margin:.15rem 0 0; }
+.rule-notes { font-size:.8rem; color:#666; font-style:italic; margin:.25rem 0 0; }
+
+/* ── Research section ───────────────────────────────────────── */
+.research-body h3 { font-size:1.05rem; color:#2471a3; margin:1.5rem 0 .4rem; }
+.research-body p  { line-height:1.8; font-size:.97rem; }
+
+/* ── Related pillars ────────────────────────────────────────── */
+.related-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:.85rem; margin-top:1rem; }
+.related-card {
+  background:var(--navy); color:#fff; border-radius:6px; padding:1rem;
+  text-decoration:none; transition:opacity .15s;
+}
+.related-card:hover { opacity:.82; }
+.related-card strong { display:block; font-size:.95rem; margin-bottom:.3rem; }
+.related-card span   { font-size:.8rem; color:rgba(255,255,255,.65); }
+
+/* ── Summary stats bar ──────────────────────────────────────── */
+.stats-bar {
+  display:flex; flex-wrap:wrap; gap:1.5rem; margin:1.2rem 0;
+  padding:1rem 1.2rem; background:#fff; border-radius:6px;
+  border:1px solid #e0d8c8;
+}
+.stat-item { text-align:center; }
+.stat-num { display:block; font-family:'Oswald',sans-serif; font-size:2rem; color:#2471a3; }
+.stat-label { font-size:.78rem; text-transform:uppercase; letter-spacing:.06em; color:#888; }
+
+/* ── Design logic accordion ─────────────────────────────────── */
+details.design-logic { margin-top:1rem; }
+details.design-logic summary {
+  cursor:pointer; font-weight:700; padding:.6rem .8rem;
+  background:rgba(0,0,0,.06); border-radius:4px; user-select:none;
+}
+details.design-logic[open] summary { border-radius:4px 4px 0 0; }
+details.design-logic .design-body { padding:.8rem 1rem; background:#fff; border:1px solid #e0d8c8; border-top:none; border-radius:0 0 4px 4px; }
+details.design-logic .design-body p { font-size:.93rem; line-height:1.75; }
+details.design-logic .design-body ul { padding-left:1.3rem; }
+details.design-logic .design-body li { font-size:.93rem; line-height:1.65; margin-bottom:.3rem; }
+</style>
+<style>:root { --accent-color: #2471a3; }</style>
 </head>
 <body>
 <nav class="site-nav">
@@ -18,13 +136,12 @@
     <ul class="nav-links">
       <li><a href="../index.html">Home</a></li>
       <li><a href="../foundations.html">Foundations</a></li>
-      <li><a href="../pillars/index.html">Pillars</a></li>
+      <li><a href="index.html">Pillars</a></li>
       <li><a href="../compare/index.html">Compare</a></li>
     </ul>
   </div>
 </nav>
-
-<div class="page-hero compact" style="border-bottom: 4px solid #2471a3">
+<div class="page-hero compact" style="border-bottom:4px solid #2471a3">
   <div class="hero-eyebrow">
     <a href="../foundations.html#clean-democracy" style="color:rgba(255,255,255,.6);text-decoration:none">
       Foundation II: Clean Democracy
@@ -32,59 +149,350 @@
   </div>
   <h1 class="hero-title" style="font-size:clamp(1.8rem,5vw,2.8rem)">Information & Media</h1>
   <div class="hero-divider"><span>★ ★ ★</span></div>
-  <p class="hero-statement" style="font-size:1rem;max-width:620px;margin:0 auto">A functioning democracy requires a free, diverse, and trustworthy press.</p>
+  <p class="hero-statement" style="font-size:1rem;max-width:680px;margin:0 auto">To protect the flow of truthful information from power to the public while preventing coordinated manipulation, foreign interference, and the weaponization of information systems against democratic self-governance. This </p>
 </div>
+<nav class="pil-snav" id="pil-snav"><ul><li><a href="#pil-intro">Overview</a></li><li><a href="#pil-problem">The Problem</a></li><li><a href="#pil-reform">Reform Areas</a></li><li><a href="#pil-policy">Policy Rules</a></li><li><a href="#pil-research">Research</a></li><li><a href="#pil-related">Related</a></li></ul></nav>
+<section class="bg-parchment ruled" id="pil-intro">
+<div class="wrap">
+  <div class="stats-bar">
+  <div class="stat-item"><span class="stat-num">20</span><span class="stat-label">Total Rules</span></div>
+  <div class="stat-item"><span class="stat-num" style="color:#1e8449">0</span><span class="stat-label">Active</span></div>
+  <div class="stat-item"><span class="stat-num" style="color:#c9952a">0</span><span class="stat-label">Partial</span></div>
+  <div class="stat-item"><span class="stat-num" style="color:#888">20</span><span class="stat-label">Proposed</span></div>
+</div>
+  <div class="pil-intro">
+    <div>
+      <h2 style="color:#2471a3;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.06em">Purpose</h2>
+      <p>To protect the flow of truthful information from power to the public while preventing coordinated manipulation, foreign interference, and the weaponization of information systems against democratic self-governance. This pillar also encompasses the physical infrastructure—broadband, energy grids, rail, and transportation—that forms the material foundation of modern society and information access.</p>
+    </div>
+    <div>
+      <h2 style="color:#2471a3;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.06em">Core Principle</h2>
+      <p>Free press and open information flow are essential to democracy, but they must be protected from systematic manipulation, foreign influence operations, and corporate or state weaponization. Similarly, public infrastructure must serve the common good, not private profit alone, and must be built to sustainable standards that protect future generations.</p>
+    </div>
+  </div>
+</div>
+</section>
+<section class="bg-dark on-dark ruled" id="pil-problem">
+<div class="wrap" style="margin-bottom:0">
+  <h2 style="color:#2471a3">The Problem It Solves</h2>
+</div>
+<div class="wrap"><p style="font-size:1.05rem;line-height:1.8;margin-bottom:1.2rem">### Press Freedom Under Threat
+Journalists face retaliation, surveillance, and legal harassment for reporting on matters of public interest. Source confidentiality is routinely compromised through government subpoenas and surveillance tools. National security classification systems are misused to conceal wrongdoing rather than protect legitimate secrets. Independent and digital journalists often lack the institutional protections afforded to legacy media organizations.
 
+The result is a chilling effect on investigative journalism precisely when democratic accountability depends on it most. Whistleblowers who expose corruption face prosecution while the corruption itself goes unpunished. Government can compel disclosure of sources, communications, and unpublished materials without meaningful judicial oversight. The modern press operates in a surveillance environment where digital communications can be intercepted, analyzed, and used against journalists and their sources.</p><div class="problem-grid"><div class="problem-card"><h3>Infrastructure Deficits and Climate Risk</h3><p>America's infrastructure is aging, inadequate, and built on fossil fuel dependency that threatens long-term sustainability. Public transportation remains inaccessible in much of the country, forcing car dependency that increases costs for working families. The electrical grid is vulnerable and not d</p></div>
+</div></div>
+</section>
+<section class="bg-cream ruled" id="pil-reform">
+<div class="wrap" style="margin-bottom:0">
+  <h2 style="color:#2471a3">Key Reform Areas</h2>
+</div>
+<div class="wrap"><p style="margin-bottom:1rem">### Press and Journalist Protections
+- Federal shield law protecting source confidentiality
+- Prohibition on retaliation, surveillance, or prosecution for public-interest reporting
+- Mandatory independent judicial review before compelled disclosure
+- Limits on use of subpoenas, warrants, or surveillance tools against journalists
+- Inclusion of independent and digital journalists in all protections
+- Transparency requirements when government targets journalists or news organizations
+- Prohibition on misuse of classification or national security systems to conceal wrongdoing</p><div class="reform-grid"><div class="reform-card"><h3>Sustainable Infrastructure Development</h3><p>- Carbon-neutral or carbon-negative requirements for all new infrastructure</p></div>
+</div></div>
+</section>
 <section class="bg-parchment ruled">
 <div class="wrap">
-  <h2>Why This Matters</h2>
-  <p style="font-size:1.05rem;line-height:1.8">Local news has collapsed. National media is consolidated into a few corporate hands. Social media algorithms amplify outrage and disinformation because engagement is profitable. The information environment required for democratic self-governance has been systematically destroyed.</p>
+  <details class="design-logic">
+    <summary>Design Logic — How These Rules Work Together</summary>
+    <div class="design-body"><h3>Press Freedom Architecture</h3>
+<p>This pillar establishes constitutional-level protections for journalists, sources, and the information flow between power and public. It operates on an activity-based definition of journalism (what you do, not who you are) to include independent and digital journalists. Protections include source confidentiality, limits on compelled disclosure, prohibitions on retaliation and surveillance, and mandatory judicial review before any government action targeting journalists or their communications.</p>
+<p>The framework prevents classification and national security systems from being used to conceal illegality or wrongdoing. It requires transparency when government actions target journalists. It protects whistleblowers who provide information to the press about corruption or misconduct.</p>
+<p>These protections are structural, not preferential. They exist because information flow from power to public is a system function necessary for democratic accountability. Without protected channels for revealing wrongdoing, corruption becomes self-concealing.</p>
+<h3>Infrastructure Mandate</h3>
+<p>This pillar requires infrastructure systems to be built or retrofitted to carbon-neutral or carbon-negative standards. It ends fossil fuel subsidies and mandates phaseout of oil and coal for energy production. It requires investment in high-speed rail, expanded public transportation, and transition to electric and hybrid vehicles with strict fuel efficiency standards during transition periods.</p>
+<p>Infrastructure planning must prioritize accessibility, affordability, and reliability. The framework treats infrastructure not as a profit center for private industry but as a public good that enables economic participation and quality of life.</p>
+<p>The carbon mandate recognizes that infrastructure built today will shape energy use and emissions for decades. Locking in fossil fuel dependency now would make climate goals unreachable later. Therefore, infrastructure investment must align with sustainability requirements from the outset.</p></div>
+  </details>
 </div>
 </section>
-
-<section class="bg-dark on-dark ruled">
-<div class="wrap" style="display:grid;grid-template-columns:1fr 1fr;gap:2rem">
-  <div>
-    <h2 style="color:#2471a3">What It Demands</h2>
-    <ul style="list-style:disc;padding-left:1.2rem;color:rgba(255,255,255,.82)">
-        <li>Federal tax credits for local news organizations structured as nonprofits or cooperatives</li>
-        <li>Mandatory algorithmic audits for platforms with more than 10 million users</li>
-        <li>Prohibit news outlet ownership by private equity firms and foreign-controlled entities</li>
-    </ul>
-  </div>
-  <div>
-    <h2 style="color:#2471a3">What It Rejects</h2>
-    <ul style="list-style:disc;padding-left:1.2rem;color:rgba(255,255,255,.82)">
-        <li>Platform self-regulation as sufficient response to disinformation</li>
-        <li>Media consolidation that leaves communities without local reporting</li>
-        <li>Algorithms optimized for engagement at the expense of accuracy and social cohesion</li>
-    </ul>
-  </div>
-</div>
-</section>
-
-<section class="bg-cream ruled">
+<section class="bg-cream ruled" id="pil-policy">
 <div class="wrap">
-  <h2>Key Policy Points</h2>
-  <ol style="padding-left:1.4rem;font-size:1rem;line-height:2">
-          <li>Local news funding</li>
-          <li>Platform transparency requirements</li>
-          <li>Algorithmic accountability</li>
-  </ol>
-  <div style="margin-top:2.5rem;display:flex;gap:1rem;flex-wrap:wrap">
-    <a href="../foundations.html#clean-democracy" class="btn-primary" style="background:#2471a3">← Foundation II: Clean Democracy</a>
-    <a href="index.html" class="btn-primary" style="background:var(--navy)">All Pillars</a>
+  <h2 style="color:#2471a3">Full Policy Platform</h2>
+  <p style="font-size:.95rem;color:#555;margin-bottom:1.5rem">
+    Every rule in this pillar, organized by policy area.
+    <strong style="color:#1e8449">Active</strong> rules are current platform commitments.
+    <strong style="color:#c9952a">Partial</strong> rules are in development.
+    <strong style="color:#888">Proposed</strong> rules are planned for future inclusion.
+  </p>
+  <div class="policy-family" id="fam-med">
+  <div class="family-header">
+    <span class="family-code">MED</span>
+    <span class="family-title">PRS — Press Freedom and Journalist Protection</span>
+    <span class="family-count">0/9 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">MED-PRS-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Protect Journalists</p>
+  <p class="rule-stmt">Protect journalists engaged in lawful newsgathering and reporting.</p>
+  <p class="rule-notes">Establishes constitutional-level protection for journalistic activity. Protection is activity-based (what you do) rather than identity-based (who you are), ensuring coverage of independent and digital journalists.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">MED-PRS-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Protect Sources</p>
+  <p class="rule-stmt">Protect confidential sources.</p>
+  <p class="rule-notes">Federal shield law protection. Journalists cannot be compelled to reveal sources except under narrowly defined, high-threshold judicial standards. Includes anonymous sources and whistleblowers who provide information to the press.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">MED-PRS-003</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Limit Compelled Disclosure</p>
+  <p class="rule-stmt">Limit compelled disclosure.</p>
+  <p class="rule-notes">Government may not compel disclosure of sources, unpublished materials, or journalistic communications except under strict judicial review with high evidentiary threshold. Requires showing that information is essential, unavailable through other means, and that disclosure serves a compelling government interest that outweighs press freedom.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">MED-PRS-004</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Ban Retaliation Against Journalists</p>
+  <p class="rule-stmt">Ban retaliation against journalists.</p>
+  <p class="rule-notes">Prohibits retaliation, prosecution, or adverse action against journalists for publishing information of public interest, except in clearly defined and constitutionally limited cases (e.g., direct incitement to imminent violence, genuine national security harm with judicial review). Prevents weaponization of legal system against the press.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">MED-PRS-005</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Prevent Misuse of Secrecy Laws</p>
+  <p class="rule-stmt">Prevent misuse of secrecy laws.</p>
+  <p class="rule-notes">Prohibits use of classification, national security designations, or secrecy systems to conceal wrongdoing, corruption, illegality, or abuse of power. Classification authority cannot be used to avoid accountability or prevent oversight. Requires that secrecy serve legitimate security purposes, not institutional self-protection.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">MED-PRS-006</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Judicial Review Before Disclosure</p>
+  <p class="rule-stmt">Judicial review before disclosure.</p>
+  <p class="rule-notes">Mandatory independent judicial review before any government action to compel disclosure of journalistic materials, communications, or sources. Review must be by a court independent of the investigating or prosecuting authority. Requires adversarial process with representation for press interests.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">MED-PRS-007</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Limit Surveillance of Journalists</p>
+  <p class="rule-stmt">Limit surveillance of journalists.</p>
+  <p class="rule-notes">Strict limits on use of surveillance tools, metadata collection, subpoenas, or warrants targeting journalists or their communications. Requires heightened judicial scrutiny, showing of compelling need, and exhaustion of alternative investigative methods. Prohibits backdoor access through third-party service providers without judicial oversight.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">MED-PRS-008</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Include Independent Journalists</p>
+  <p class="rule-stmt">Include independent journalists.</p>
+  <p class="rule-notes">Explicitly extends all press freedom protections to independent journalists, digital media creators, freelance reporters, and non-traditional news organizations. Closes the legacy-media loophole where protections apply only to established institutional press. Activity-based standard: if you engage in journalism, you receive journalism protections.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">MED-PRS-009</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Transparency on Targeting Journalists</p>
+  <p class="rule-stmt">Transparency on targeting journalists.</p>
+  <p class="rule-notes">Requires reporting and transparency when government actions target journalists, news organizations, or journalistic communications. Annual public reporting (with appropriate security redactions) on number and type of actions taken. Creates oversight mechanism and accountability for press-freedom impacts.</p>
+</div>
   </div>
 </div>
+<div class="policy-family" id="fam-inf">
+  <div class="family-header">
+    <span class="family-code">INF</span>
+    <span class="family-title">BLD — Infrastructure Construction Standards</span>
+    <span class="family-count">0/1 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">INF-BLD-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Carbon-Neutral Infrastructure</p>
+  <p class="rule-stmt">Require infrastructure systems and buildouts to be carbon neutral or carbon negative.</p>
+  <p class="rule-notes">All new infrastructure construction—transportation systems, buildings, grid expansions—must meet carbon-neutral or carbon-negative standards. Applies to federally funded projects and sets national standard for state and local infrastructure development. Recognizes that infrastructure built today determines emissions trajectory for decades.</p>
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-inf">
+  <div class="family-header">
+    <span class="family-code">INF</span>
+    <span class="family-title">ENR — Energy Policy and Transition</span>
+    <span class="family-count">0/2 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">INF-ENR-004</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">End Fossil Fuel Subsidies</p>
+  <p class="rule-stmt">End oil and coal subsidies.</p>
+  <p class="rule-notes">Phases out direct and indirect subsidies to oil and coal industries. Includes tax preferences, direct payments, below-market leases, and regulatory exemptions that artificially reduce fossil fuel costs. Redirects public investment toward renewable energy and energy transition support for affected workers and communities.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">INF-ENR-005</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Guarantee Fossil Fuel Phaseout</p>
+  <p class="rule-stmt">Guarantee phaseout of oil and coal for energy production.</p>
+  <p class="rule-notes">Establishes binding timeline for ending oil and coal use in energy production. Requires transition planning, worker retraining programs, and economic support for communities dependent on fossil fuel extraction. Phaseout schedule must align with climate science requirements and provide adequate time for just transition.</p>
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-inf">
+  <div class="family-header">
+    <span class="family-code">INF</span>
+    <span class="family-title">GRD — Power Grid Requirements</span>
+    <span class="family-count">0/1 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">INF-GRD-003</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Carbon-Neutral Power Grid</p>
+  <p class="rule-stmt">Require a carbon-neutral or carbon-negative power grid.</p>
+  <p class="rule-notes">National power grid must transition to carbon-neutral or carbon-negative operation. Requires investment in renewable energy generation, grid modernization, energy storage, and transmission infrastructure. Grid design must support distributed generation, resilience, and equitable access.</p>
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-inf">
+  <div class="family-header">
+    <span class="family-code">INF</span>
+    <span class="family-title">RAIL — Rail System Modernization</span>
+    <span class="family-count">0/2 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">INF-RAIL-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Modernize Rail System</p>
+  <p class="rule-stmt">Modernize the U.S. rail system.</p>
+  <p class="rule-notes">Investment in rail infrastructure to meet modern safety, speed, and reliability standards. Includes track upgrades, signaling systems, electrification, and station improvements. Addresses decades of deferred maintenance and underinvestment in passenger rail.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">INF-RAIL-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Expand High-Speed Rail</p>
+  <p class="rule-stmt">Expand high-speed rail.</p>
+  <p class="rule-notes">Development of high-speed rail corridors connecting major metropolitan areas. Provides competitive alternative to short-haul flights and car travel. Reduces transportation costs, carbon emissions, and travel times. Requires sustained federal investment and interstate coordination.</p>
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-inf">
+  <div class="family-header">
+    <span class="family-code">INF</span>
+    <span class="family-title">TRN — Transportation System Development</span>
+    <span class="family-count">0/5 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">INF-TRN-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Expand Public Transportation</p>
+  <p class="rule-stmt">Expand public transportation systems.</p>
+  <p class="rule-notes">Investment in public transit infrastructure—buses, light rail, subway systems, commuter rail. Prioritizes underserved communities and addresses transit deserts where car ownership is mandatory. Improves frequency, reliability, and coverage to make public transit a viable option for daily commuting and essential travel.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">INF-TRN-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Prioritize Accessible Public Transit</p>
+  <p class="rule-stmt">Prioritize reliable affordable and accessible public transportation in infrastructure planning.</p>
+  <p class="rule-notes">Infrastructure planning must center public transit access rather than treating it as secondary to car infrastructure. Considers accessibility for disabled users, affordability for low-income riders, reliability for work commutes, and geographic coverage. Shifts planning paradigm from car-first to transit-first design.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">INF-TRN-003</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Phase Out Gasoline-Only Vehicles</p>
+  <p class="rule-stmt">Phase out gasoline-only and internal-combustion-only passenger vehicles.</p>
+  <p class="rule-notes">Establishes timeline for ending sale of new gasoline-only and internal-combustion-only passenger vehicles. Requires transition to electric, plug-in hybrid, or other low-emission alternatives. Includes support for charging infrastructure, consumer incentives, and protections for used vehicle markets during transition.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">INF-TRN-004</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Require Hybrid Capability in Transition</p>
+  <p class="rule-stmt">Require at minimum plug-in hybrid capability during transition periods where full electrification is not yet feasible.</p>
+  <p class="rule-notes">During transition to full electrification, vehicles must at minimum offer plug-in hybrid capability. Recognizes that charging infrastructure, grid capacity, and battery technology may require phased transition. Plug-in hybrid requirement ensures emissions reduction while maintaining vehicle utility during infrastructure buildout.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">INF-TRN-005</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Strict Fuel Efficiency Standards</p>
+  <p class="rule-stmt">Establish extremely strict fuel-efficiency standards during transition away from internal combustion vehicles.</p>
+  <p class="rule-notes">For vehicles remaining in production during transition, fuel efficiency standards must be substantially stricter than current requirements. Reduces emissions impact during transition period. Standards must be based on available technology and tightened progressively as transition advances. Closes loopholes that allow continued production of inefficient vehicles.</p>
+</div>
+  </div>
+</div>
+</div>
 </section>
-
+<section class="bg-dark on-dark ruled" id="pil-research">
+<div class="wrap">
+  <h2 style="color:#2471a3">Research & Context</h2>
+  <div class="research-body" style="color:rgba(255,255,255,.85)"><p>The tension between press freedom and government secrecy has intensified in the digital age. Journalists' communications are now inherently surveilled unless actively encrypted. Metadata analysis allows tracking of source contacts even without content access. Digital subpoenas and cloud-stored communications make it easier for government to access journalistic materials without the journalist's knowledge. National security classification has expanded to cover not just military secrets but policy debates, legal interpretations, and evidence of misconduct.</p>
+<p>This surveillance environment creates what security researchers call a "chilling effect"—sources become unwilling to come forward, journalists self-censor, and the information necessary for democratic accountability never reaches the public. The expansion of national security secrecy has coincided with a contraction of investigative journalism capacity, particularly at the local level where much government corruption occurs.</p>
+<p>The project's brainstorm branch documents emphasize the difference between protecting press freedom and creating government "truth police." The approach deliberately avoids content-based regulation or government determination of what information is "true." Instead, it protects the structural channels through which information flows from insiders to public. This is a procedural protection, not a content judgment.</p>
+<p>The framework explicitly rejects the "limit protections for for-profit news media" framing because it invites attacks on press freedom. Instead, it strengthens transparency and anti-corruption rules that apply to all media entities—requiring disclosure of funding sources, conflicts of interest, and paid political content—without creating differential protection tiers that government could exploit.</p>
+<p>Infrastructure investment has become politically contentious, but the economic and climate cases are straightforward. The United States spends more per capita on car-dependent infrastructure than peer nations spend on public transit, while achieving worse outcomes in commute times, household transportation costs, and carbon emissions. Rail systems that would be considered obsolete in Europe or Asia remain the American standard.</p>
+<p>The fossil fuel subsidy regime—estimated at tens of billions annually—actively works against climate goals by making dirty energy artificially cheap. These subsidies were designed for an era when domestic energy production was considered a national security priority. That logic no longer holds in an era of climate emergency and renewable energy cost-competitiveness.</p>
+<p>The economic case for public infrastructure investment is well-established: it creates jobs, reduces household costs, enables labor mobility, and generates positive returns through increased economic activity. The climate case is equally clear: infrastructure built today will shape emissions for decades, and delaying the transition increases both costs and harms.</p>
+<p>The pillar treats press freedom and infrastructure together because both are essential to the material functioning of democracy and modern life. Information infrastructure (press freedom protections) and physical infrastructure (transportation, energy, connectivity) are not separate concerns—they are the dual foundations of an informed, mobile, economically functional democratic society.</p></div>
+</div>
+</section>
+<section class="bg-parchment ruled" id="pil-related">
+<div class="wrap" style="margin-bottom:0">
+  <h2 style="color:#2471a3">Related Pillars</h2>
+  <p style="font-size:.92rem;color:#666;margin-bottom:.5rem">These pillars intersect with and reinforce this one.</p>
+</div>
+<div class="wrap"><div class="related-grid"><a href="pillar-3-anti-corruption-and-concentrated-power.html" class="related-card"><strong>Pillar 3: Anti-Corruption and Concentrated Power</strong><span>— Whistleblower protections, transparency requirements, conflicts of interest disclosure</span></a>
+<a href="pillar-4-equal-justice-policing-and-accountability.html" class="related-card"><strong>Pillar 4: Equal Justice, Policing, and Accountability</strong><span>— Limits on surveillance, warrant requirements, prohibitions on political targeting</span></a>
+<a href="pillar-5-rights-civil-liberties-and-economic-security.html" class="related-card"><strong>Pillar 5: Rights, Civil Liberties, and Economic Security</strong><span>— Privacy rights, freedom of expression, right to information</span></a>
+<a href="pillar-6-courts-and-judicial-system.html" class="related-card"><strong>Pillar 6: Courts and Judicial System</strong><span>— Independent judicial review requirements, enforcement mechanisms</span></a>
+<a href="pillar-11-antitrust-and-corporate-power.html" class="related-card"><strong>Pillar 11: Antitrust and Corporate Power</strong><span>— Media consolidation limits, platform accountability (information side)</span></a>
+<a href="climate-and-environmental-justice.html" class="related-card"><strong>Climate and Environmental Justice</strong><span>— Carbon mandates, renewable energy transition, sustainability requirements</span></a>
+</div></div>
+<div class="wrap" style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap">
+  <a href="../foundations.html#clean-democracy" class="btn-primary" style="background:#2471a3">← Foundation II: Clean Democracy</a>
+  <a href="index.html" class="btn-primary" style="background:var(--navy)">All Pillars</a>
+</div>
+</section>
 <footer class="site-footer">
   <div class="wrap">
     <span class="footer-brand">American Renewal Project</span>
     <ul class="footer-links">
       <li><a href="../index.html">Home</a></li>
       <li><a href="../foundations.html">Foundations</a></li>
-      <li><a href="../pillars/index.html">Pillars</a></li>
+      <li><a href="index.html">Pillars</a></li>
       <li><a href="../compare/index.html">Compare</a></li>
     </ul>
     <span class="footer-note">A Third Bill of Rights for the 21st Century. · <a href="../about-ai.html" style="color:inherit;opacity:.7">On the Use of AI</a></span>
@@ -92,5 +500,25 @@
 </footer>
 <script src="../assets/js/data.js"></script>
 <script src="../assets/js/app.js"></script>
+<script>
+(function(){
+  var nav = document.getElementById('pil-snav');
+  if(!nav) return;
+  var links = nav.querySelectorAll('a[href^="#"]');
+  var sections = Array.from(links).map(function(a){
+    return document.querySelector(a.getAttribute('href'));
+  }).filter(Boolean);
+  function onScroll(){
+    var y = window.scrollY + 120;
+    var active = sections[0];
+    sections.forEach(function(s){ if(s.offsetTop <= y) active = s; });
+    links.forEach(function(a){
+      a.classList.toggle('active', a.getAttribute('href') === '#'+active.id);
+    });
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+})();
+</script>
 </body>
 </html>

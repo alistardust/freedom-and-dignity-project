@@ -6,6 +6,124 @@
 <title>Checks & Balances — American Renewal Project</title>
 <link rel="stylesheet" href="../assets/css/style.css">
 <link rel="icon" type="image/svg+xml" href="../assets/img/logo.svg">
+<style>
+/* ── Pillar page styles ─────────────────────────────────────── */
+.pil-snav {
+  position: sticky; top: 63px; z-index: 150;
+  background: var(--navy); border-bottom: 2px solid rgba(255,255,255,.12);
+  overflow-x: auto; white-space: nowrap;
+}
+.pil-snav ul { display:flex; gap:0; list-style:none; margin:0; padding:0; }
+.pil-snav a {
+  display:block; padding:.55rem 1.1rem; font-family:'Oswald',sans-serif;
+  font-size:.78rem; letter-spacing:.06em; text-transform:uppercase;
+  color:rgba(255,255,255,.62); text-decoration:none; transition:color .15s;
+}
+.pil-snav a:hover, .pil-snav a.active { color:#fff; }
+.pil-snav a.active { border-bottom:2px solid #bf0a30; }
+
+/* ── Section layouts ────────────────────────────────────────── */
+.pil-intro { display:grid; grid-template-columns:1fr 1fr; gap:2rem; }
+@media(max-width:700px){ .pil-intro { grid-template-columns:1fr; } }
+
+.pil-intro h2 { font-size:1.1rem; text-transform:uppercase; letter-spacing:.08em; margin-bottom:.6rem; }
+.pil-intro p, .pil-intro li { font-size:1rem; line-height:1.75; }
+
+.problem-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:1.25rem; margin-top:1rem; }
+.problem-card {
+  background:#fff; border-radius:6px; padding:1.2rem 1.4rem;
+  border-left:4px solid #bf0a30;
+  box-shadow:0 1px 4px rgba(0,0,0,.07);
+}
+.problem-card h3 { font-size:1rem; margin:0 0 .4rem; color:var(--navy); }
+.problem-card p  { font-size:.92rem; line-height:1.65; margin:0; color:#333; }
+
+.reform-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:1rem; margin-top:1rem; }
+.reform-card {
+  background:var(--navy); color:#fff; border-radius:6px;
+  padding:1.1rem 1.3rem; border-top:3px solid #bf0a30;
+}
+.reform-card h3 { font-size:.95rem; margin:0 0 .4rem; color:#bf0a30; text-transform:uppercase; letter-spacing:.04em; }
+.reform-card p  { font-size:.88rem; line-height:1.6; margin:0; color:rgba(255,255,255,.8); }
+
+/* ── Policy rules ───────────────────────────────────────────── */
+.policy-family { margin-bottom:2.5rem; }
+.family-header {
+  display:flex; align-items:baseline; gap:.8rem; margin-bottom:1rem;
+  padding-bottom:.5rem; border-bottom:2px solid #bf0a30;
+}
+.family-code {
+  font-family:'Oswald',sans-serif; font-size:1.1rem;
+  color:#bf0a30; min-width:3rem;
+}
+.family-title { font-size:1rem; font-weight:600; color:var(--ink); }
+.family-count { margin-left:auto; font-size:.8rem; color:#888; white-space:nowrap; }
+
+.rule-grid {
+  display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:.75rem;
+}
+.rule-card {
+  border-radius:5px; padding:.9rem 1rem;
+  background:#fff; border:1px solid #e0d8c8;
+  font-size:.88rem; line-height:1.55;
+}
+.rule-card.status-included { border-left:4px solid #1e8449; }
+.rule-card.status-updated  { border-left:4px solid #2471a3; }
+.rule-card.status-partial  { border-left:4px solid #c9952a; }
+.rule-card.status-missing  { border-left:4px solid #ccc; opacity:.72; }
+
+.rule-header { display:flex; align-items:center; gap:.5rem; margin-bottom:.35rem; }
+.rule-id { font-size:.72rem; color:#888; letter-spacing:.03em; }
+.rule-badge {
+  font-size:.68rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em;
+  padding:.12em .45em; border-radius:3px;
+}
+.status-included .rule-badge { background:#d4edda; color:#155724; }
+.status-updated  .rule-badge { background:#cce5ff; color:#004085; }
+.status-partial  .rule-badge { background:#fff3cd; color:#856404; }
+.status-missing  .rule-badge { background:#f0f0f0; color:#666; }
+
+.rule-title { font-weight:600; margin:.2rem 0 .2rem; color:var(--ink); }
+.rule-stmt  { font-size:.85rem; color:#444; margin:.15rem 0 0; }
+.rule-notes { font-size:.8rem; color:#666; font-style:italic; margin:.25rem 0 0; }
+
+/* ── Research section ───────────────────────────────────────── */
+.research-body h3 { font-size:1.05rem; color:#bf0a30; margin:1.5rem 0 .4rem; }
+.research-body p  { line-height:1.8; font-size:.97rem; }
+
+/* ── Related pillars ────────────────────────────────────────── */
+.related-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:.85rem; margin-top:1rem; }
+.related-card {
+  background:var(--navy); color:#fff; border-radius:6px; padding:1rem;
+  text-decoration:none; transition:opacity .15s;
+}
+.related-card:hover { opacity:.82; }
+.related-card strong { display:block; font-size:.95rem; margin-bottom:.3rem; }
+.related-card span   { font-size:.8rem; color:rgba(255,255,255,.65); }
+
+/* ── Summary stats bar ──────────────────────────────────────── */
+.stats-bar {
+  display:flex; flex-wrap:wrap; gap:1.5rem; margin:1.2rem 0;
+  padding:1rem 1.2rem; background:#fff; border-radius:6px;
+  border:1px solid #e0d8c8;
+}
+.stat-item { text-align:center; }
+.stat-num { display:block; font-family:'Oswald',sans-serif; font-size:2rem; color:#bf0a30; }
+.stat-label { font-size:.78rem; text-transform:uppercase; letter-spacing:.06em; color:#888; }
+
+/* ── Design logic accordion ─────────────────────────────────── */
+details.design-logic { margin-top:1rem; }
+details.design-logic summary {
+  cursor:pointer; font-weight:700; padding:.6rem .8rem;
+  background:rgba(0,0,0,.06); border-radius:4px; user-select:none;
+}
+details.design-logic[open] summary { border-radius:4px 4px 0 0; }
+details.design-logic .design-body { padding:.8rem 1rem; background:#fff; border:1px solid #e0d8c8; border-top:none; border-radius:0 0 4px 4px; }
+details.design-logic .design-body p { font-size:.93rem; line-height:1.75; }
+details.design-logic .design-body ul { padding-left:1.3rem; }
+details.design-logic .design-body li { font-size:.93rem; line-height:1.65; margin-bottom:.3rem; }
+</style>
+<style>:root { --accent-color: #bf0a30; }</style>
 </head>
 <body>
 <nav class="site-nav">
@@ -18,13 +136,12 @@
     <ul class="nav-links">
       <li><a href="../index.html">Home</a></li>
       <li><a href="../foundations.html">Foundations</a></li>
-      <li><a href="../pillars/index.html">Pillars</a></li>
+      <li><a href="index.html">Pillars</a></li>
       <li><a href="../compare/index.html">Compare</a></li>
     </ul>
   </div>
 </nav>
-
-<div class="page-hero compact" style="border-bottom: 4px solid #bf0a30">
+<div class="page-hero compact" style="border-bottom:4px solid #bf0a30">
   <div class="hero-eyebrow">
     <a href="../foundations.html#accountable-power" style="color:rgba(255,255,255,.6);text-decoration:none">
       Foundation I: Accountable Power
@@ -32,59 +149,693 @@
   </div>
   <h1 class="hero-title" style="font-size:clamp(1.8rem,5vw,2.8rem)">Checks & Balances</h1>
   <div class="hero-divider"><span>★ ★ ★</span></div>
-  <p class="hero-statement" style="font-size:1rem;max-width:620px;margin:0 auto">The system of institutional limits on power must be rebuilt to withstand authoritarian pressure.</p>
+  <p class="hero-statement" style="font-size:1rem;max-width:680px;margin:0 auto">To restore and strengthen separation of powers, create enforceable accountability mechanisms across all branches of government, establish independent oversight capacity, protect against institutional abuse and capture, e</p>
 </div>
-
+<nav class="pil-snav" id="pil-snav"><ul><li><a href="#pil-intro">Overview</a></li><li><a href="#pil-problem">The Problem</a></li><li><a href="#pil-reform">Reform Areas</a></li><li><a href="#pil-policy">Policy Rules</a></li><li><a href="#pil-research">Research</a></li><li><a href="#pil-related">Related</a></li></ul></nav>
+<section class="bg-parchment ruled" id="pil-intro">
+<div class="wrap">
+  <div class="stats-bar">
+  <div class="stat-item"><span class="stat-num">52</span><span class="stat-label">Total Rules</span></div>
+  <div class="stat-item"><span class="stat-num" style="color:#1e8449">29</span><span class="stat-label">Active</span></div>
+  <div class="stat-item"><span class="stat-num" style="color:#c9952a">0</span><span class="stat-label">Partial</span></div>
+  <div class="stat-item"><span class="stat-num" style="color:#888">23</span><span class="stat-label">Proposed</span></div>
+</div>
+  <div class="pil-intro">
+    <div>
+      <h2 style="color:#bf0a30;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.06em">Purpose</h2>
+      <p>To restore and strengthen separation of powers, create enforceable accountability mechanisms across all branches of government, establish independent oversight capacity, protect against institutional abuse and capture, ensure that AI and algorithmic systems in government serve fairness rather than creating new forms of discrimination, and maintain the constitutional balance between federal and state authority.</p>
+    </div>
+    <div>
+      <h2 style="color:#bf0a30;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.06em">Core Principle</h2>
+      <p>No branch of government, no official, and no institution should be able to operate without meaningful oversight, accountability, or consequences for abuse of power. Power concentrated without accountability inevitably leads to corruption and tyranny, regardless of which party or person holds it. The constitutional system must have structural safeguards that function even when one branch becomes hostile to democratic norms.</p>
+    </div>
+  </div>
+</div>
+</section>
+<section class="bg-dark on-dark ruled" id="pil-problem">
+<div class="wrap" style="margin-bottom:0">
+  <h2 style="color:#bf0a30">The Problem It Solves</h2>
+</div>
+<div class="wrap"><p style="font-size:1.05rem;line-height:1.8;margin-bottom:1.2rem">### Accountability Without Enforcement
+The Constitution establishes checks and balances in theory, but many lack enforcement mechanisms. Congress has oversight authority but limited tools when the executive refuses cooperation. Impeachment exists but requires supermajority conviction, allowing presidents to operate above the law if their party controls even 34 Senate seats. Ethics rules exist for judges but enforcement is largely left to the judges themselves. The result is a system where rules exist but cannot be enforced when power resists.</p><div class="problem-grid"><div class="problem-card"><h3>Executive Power Expansion</h3><p>Presidential power has expanded dramatically beyond constitutional design. Presidents claim authority to ignore congressional subpoenas, refuse to enforce laws they dislike, classify information to hide wrongdoing, surveil citizens without warrants, and direct prosecutions for political purposes. Ac</p></div>
+<div class="problem-card"><h3>Judicial Accountability Gap</h3><p>Federal judges serve for life with minimal accountability. Ethics rules are voluntary and enforcement is peer-based. Impeachment of judges is rare and requires the same supermajority as presidential impeachment. The result is judges who face no meaningful consequences for ethical violations, conflic</p></div>
+<div class="problem-card"><h3>AI and Algorithmic Bias in Government</h3><p>Governments increasingly use AI and algorithmic systems for decision-making: benefit determinations, fraud detection, risk assessment, resource allocation, case prioritization. These systems can accelerate approvals for "normal" cases while flagging "abnormal" cases for additional scrutiny or denial</p></div>
+<div class="problem-card"><h3>Federalism Imbalance</h3><p>The balance between federal and state authority has eroded in ways that create both too much and too little federal power. High-risk systems like elections remain vulnerable to state-level manipulation while federal government claims authority over areas better left to states. Geographic variation i</p></div>
+<div class="problem-card"><h3>Oversight Board Capture and Underfunding</h3><p>Oversight and ethics boards are routinely underfunded, captured by the institutions they oversee, or blocked from exercising authority. Funding must be approved by the bodies being overseen, creating incentive to starve oversight of resources. Members are appointed by officials who may resist accoun</p></div>
+</div></div>
+</section>
+<section class="bg-cream ruled" id="pil-reform">
+<div class="wrap" style="margin-bottom:0">
+  <h2 style="color:#bf0a30">Key Reform Areas</h2>
+</div>
+<div class="wrap"><p style="margin-bottom:1rem">### Branch and Institutional Oversight
+- Independent criminal and ethics oversight boards for each branch (OVR-BRN-001, OVR-BRN-002)
+- Federal independent oversight body with authority over federally elected officials (OVR-FED-001 through OVR-FED-004)
+- State oversight boards with elected members and guaranteed independence (OVR-STA-001 through OVR-STA-003)
+- Federal oversight jurisdiction over state officials and failed state boards (OVR-JUR-001, OVR-JUR-002)</p><div class="reform-grid"><div class="reform-card"><h3>Oversight Funding and Independence</h3><p>- Guaranteed adequate funding for oversight bodies (OVR-FND-001)</p></div>
+<div class="reform-card"><h3>AI and Algorithmic Fairness in Government</h3><p>- Prohibition on asymmetrical AI processes that favor approvals over denials (SYS-AI-001)</p></div>
+<div class="reform-card"><h3>Federalism and Geographic Equality</h3><p>- High-risk systems not fully centralized (SYS-FED-001)</p></div>
+<div class="reform-card"><h3>Foundational System Commitments</h3><p>- Framework is both policy and long-term strategy (SYS-FND-001)</p></div>
+<div class="reform-card"><h3>System Rule Integrity</h3><p>- System rules ensure completeness and alignment across pillars (SYS-RUL-001)</p></div>
+</div></div>
+</section>
 <section class="bg-parchment ruled">
 <div class="wrap">
-  <h2>Why This Matters</h2>
-  <p style="font-size:1.05rem;line-height:1.8">The American system of government was designed with the assumption that each branch would jealously guard its own power. That assumption has failed. Congress has ceded power to the executive for decades.</p>
+  <details class="design-logic">
+    <summary>Design Logic — How These Rules Work Together</summary>
+    <div class="design-body"><h3>Independent Oversight Architecture</h3>
+<p>This pillar establishes independent oversight boards for each branch of government and major constitutional body. These boards are independent from the bodies they oversee—separate funding, separate appointment processes, subpoena and investigative authority. They can investigate criminal conduct, ethics violations, abuse of office, and corruption. They report publicly and refer matters for prosecution when warranted.</p>
+<p>The framework includes a federal independent oversight body with authority to investigate any federally elected official and jurisdiction to investigate governors and high-level state officials. States must establish their own oversight boards with directly elected members and appointees from legislatures and governors. Federal oversight can step in when state boards fail to perform their duties.</p>
+<h3>Guaranteed Funding Mechanism</h3>
+<p>Oversight bodies receive guaranteed funding that cannot be used as a weapon to defang accountability. If funding is not passed, oversight bodies automatically receive a six-month extension at 110% of prior funding. This creates incentive to pass adequate funding rather than blocking budgets to cripple oversight. Funding must be separate from the departments being overseen and protected from political and external influence.</p>
+<h3>AI Fairness and Anti-Bias Requirements</h3>
+<p>This pillar establishes system-wide rules for AI in government decision-making:</p>
+<ul>
+<li>AI cannot create asymmetrical processes that accelerate approvals while increasing denial likelihood for cases lacking AI support</li>
+<li>Material decisions that harm, restrict, or deny rights must be made through independent human judgment and cannot rely on absence of AI recommendation</li>
+<li>All individuals receive equal and timely consideration regardless of AI prioritization or scoring</li>
+<li>AI systems must include mechanisms to detect and mitigate bias and must be explicitly used to improve fairness where possible</li>
+<li>Continuous auditing for bias and disparate impact with corrective action required</li>
+<li>Each policy domain defines domain-specific AI rules consistent with these overarching principles</li>
+</ul>
+<p>These rules prevent AI from becoming a discrimination engine in government processes. They ensure that algorithmic efficiency does not come at the cost of fairness and equality.</p>
+<h3>Federalism Balance and Geographic Equality</h3>
+<p>This pillar establishes that geography must not determine access to rights or care. National baselines must be uniform. States may not degrade federally guaranteed rights. Cross-state access must be guaranteed. When local care is unavailable, travel support is required.</p>
+<p>This addresses the geographic inequality problem: your constitutional rights should not depend on which state you happen to live in. Federal standards set a floor below which no state may fall. States can exceed federal standards but cannot undercut them. For high-risk systems like elections, administration remains state/local but federal standards prevent suppression and manipulation while avoiding full centralization that would create single points of failure.</p>
+<h3>Structural Safeguards and Foundational Commitments</h3>
+<p>This pillar includes the foundational system rules that define the overall project: restoring checks and balances, modernizing the Constitution, guaranteeing universal equal rights, addressing economic inequality structurally, making technology work for people, creating movement strategy that is accessible to everyone and not constrained by traditional left-right framing. These are meta-rules that structure the entire framework.</p></div>
+  </details>
 </div>
 </section>
-
-<section class="bg-dark on-dark ruled">
-<div class="wrap" style="display:grid;grid-template-columns:1fr 1fr;gap:2rem">
-  <div>
-    <h2 style="color:#bf0a30">What It Demands</h2>
-    <ul style="list-style:disc;padding-left:1.2rem;color:rgba(255,255,255,.82)">
-        <li>Strengthen inspector general independence and anti-removal protections</li>
-        <li>Enforce contempt of Congress through criminal prosecution, not just civil action</li>
-        <li>Restore legislative prerogatives ceded to the executive branch over the past 50 years</li>
-    </ul>
-  </div>
-  <div>
-    <h2 style="color:#bf0a30">What It Rejects</h2>
-    <ul style="list-style:disc;padding-left:1.2rem;color:rgba(255,255,255,.82)">
-        <li>Congressional abdication of war powers, spending authority, and oversight</li>
-        <li>Executive agencies that operate as political arms of the White House</li>
-        <li>Judicial deference to executive power as a default</li>
-    </ul>
-  </div>
-</div>
-</section>
-
-<section class="bg-cream ruled">
+<section class="bg-cream ruled" id="pil-policy">
 <div class="wrap">
-  <h2>Key Policy Points</h2>
-  <ol style="padding-left:1.4rem;font-size:1rem;line-height:2">
-          <li>Legislative independence from executive coercion</li>
-          <li>Inspector general protections</li>
-          <li>Contempt of Congress with real consequences</li>
-  </ol>
-  <div style="margin-top:2.5rem;display:flex;gap:1rem;flex-wrap:wrap">
-    <a href="../foundations.html#accountable-power" class="btn-primary" style="background:#bf0a30">← Foundation I: Accountable Power</a>
-    <a href="index.html" class="btn-primary" style="background:var(--navy)">All Pillars</a>
+  <h2 style="color:#bf0a30">Full Policy Platform</h2>
+  <p style="font-size:.95rem;color:#555;margin-bottom:1.5rem">
+    Every rule in this pillar, organized by policy area.
+    <strong style="color:#1e8449">Active</strong> rules are current platform commitments.
+    <strong style="color:#c9952a">Partial</strong> rules are in development.
+    <strong style="color:#888">Proposed</strong> rules are planned for future inclusion.
+  </p>
+  <div class="policy-family" id="fam-ovr">
+  <div class="family-header">
+    <span class="family-code">OVR</span>
+    <span class="family-title">BRN — Branch Oversight and Ethics</span>
+    <span class="family-count">0/2 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">OVR-BRN-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Independent Oversight Boards for Each Branch</p>
+  <p class="rule-stmt">Each branch of government and major constitutional body must establish an independent criminal and ethics oversight board.</p>
+  <p class="rule-notes">Creates structural requirement for independent oversight of each branch. Boards must have genuine independence—separate funding, appointment process that prevents capture, investigative authority, subpoena power, and public reporting requirements. Covers executive branch (including White House, Cabinet departments, agencies), legislative branch (both chambers of Congress), and judicial branch (federal judiciary including Supreme Court). Also applies to major constitutional bodies (such as Federal Reserve, independent agencies, commissions).</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">OVR-BRN-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Oversight Board Independence</p>
+  <p class="rule-stmt">Oversight boards must be independent from the bodies they oversee.</p>
+  <p class="rule-notes">Structural independence requirements include: funding separate from overseen body (see OVR-FND rules), appointment process involving multiple authorities (not solely controlled by overseen body), protection from removal except for cause with independent review, prohibition on members serving in overseen body or having financial interests in it, subpoena and investigative authority that cannot be blocked by overseen body, public reporting requirements that cannot be suppressed or edited by overseen body.</p>
+</div>
   </div>
 </div>
+<div class="policy-family" id="fam-ovr">
+  <div class="family-header">
+    <span class="family-code">OVR</span>
+    <span class="family-title">FED — Federal Oversight Authority</span>
+    <span class="family-count">0/4 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">OVR-FED-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Federal Independent Oversight Body</p>
+  <p class="rule-stmt">Establish a federal independent oversight and investigations body.</p>
+  <p class="rule-notes">Creates federal-level oversight entity with broad authority to investigate any federally elected official and jurisdiction over high-level federal officials and certain state officials (see OVR-JUR rules). This is in addition to branch-specific oversight boards—it provides cross-branch capacity and ensures no official is beyond accountability. Model could be based on inspector general concept but with stronger independence, broader jurisdiction, and constitutional rather than statutory authority.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">OVR-FED-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Authority Over Federally Elected Officials</p>
+  <p class="rule-stmt">Federal oversight body has authority to investigate any federally elected official.</p>
+  <p class="rule-notes">Jurisdiction includes President, Vice President, Cabinet members, Senators, Representatives, and federal judges. No official is exempt from investigation. This addresses the accountability gap where officials resist oversight by claiming political targeting or separation of powers. The oversight body is independent and empowered to investigate regardless of party, position, or political pressure.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">OVR-FED-003</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Oversight Body Composition and Elected Component</p>
+  <p class="rule-stmt">Federal oversight body includes one elected member and members appointed by each branch of government.</p>
+  <p class="rule-notes">Composition designed to prevent capture by any single branch or party. Includes: one member directly elected (national election or election by state legislatures), members appointed by executive branch, members appointed by legislative branch (House and Senate may have separate appointees or joint process), member(s) nominated by judicial branch or appointed through judicial process. Terms should be staggered and longer than typical political cycles to insulate from immediate political pressure.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">OVR-FED-004</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Subpoena and Deposition Powers</p>
+  <p class="rule-stmt">Federal oversight body has subpoena and deposition powers.</p>
+  <p class="rule-notes">Authority to compel testimony, documents, records, and other evidence. Subpoenas enforceable through federal courts. Failure to comply constitutes contempt with both civil and criminal penalties. Executive privilege and other claims can be litigated but do not automatically block oversight—burden is on officials to justify non-compliance in court.</p>
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-ovr">
+  <div class="family-header">
+    <span class="family-code">OVR</span>
+    <span class="family-title">FND — Oversight Funding and Resources</span>
+    <span class="family-count">0/5 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">OVR-FND-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Guaranteed Adequate Funding</p>
+  <p class="rule-stmt">Funding for oversight and investigation bodies must be guaranteed and adequate.</p>
+  <p class="rule-notes">Oversight bodies require sufficient resources to perform their functions effectively. Funding must be adequate for: staff salaries and benefits, investigative resources (forensic accountants, legal experts, technical specialists), facilities and technology, legal costs (litigation support when subpoenas are challenged), public reporting and communication. Adequacy determined by function and workload, not by political preference of appropriators.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">OVR-FND-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Automatic Extension if Funding Not Passed</p>
+  <p class="rule-stmt">If funding is not passed oversight bodies automatically receive a 6-month extension.</p>
+  <p class="rule-notes">If Congress fails to pass funding for oversight bodies by the required deadline, funding automatically extends for six months at the prior year's level plus 10% increase (see OVR-FND-003). This creates incentive structure: pass adequate funding or face automatic funding at higher level. Prevents shutdown of oversight as budget weapon. Extension can repeat if funding continues to be blocked—oversight bodies remain funded regardless of appropriations gridlock.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">OVR-FND-003</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Automatic Extension Includes 10% Increase</p>
+  <p class="rule-stmt">Automatic funding extension includes a 10 percent increase.</p>
+  <p class="rule-notes">The 10% increase serves multiple purposes: accounts for inflation and increased workload, creates stronger incentive to pass funding through normal process (accepting automatic funding means accepting increase), prevents strategy of deliberately blocking funding to freeze oversight at inadequate levels. Increase is cumulative if multiple extensions occur—repeatedly blocking funding results in progressively higher automatic funding.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">OVR-FND-004</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Funding Separate from Overseen Departments</p>
+  <p class="rule-stmt">Oversight funding must be separate from the departments they oversee.</p>
+  <p class="rule-notes">Oversight bodies cannot be funded through appropriations for the departments they oversee. Creates independent line items in budget process. Prevents departments from retaliating through budget process and prevents conflicts of interest where oversight might be softened to protect departmental funding.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">OVR-FND-005</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Protection from Political and External Influence</p>
+  <p class="rule-stmt">Oversight funding must be protected from political and external influence.</p>
+  <p class="rule-notes">Funding process and levels should be insulated from political retaliation for investigations. Specific protections include: multi-year appropriations or mandatory spending status (rather than annual discretionary appropriations), formula-based funding tied to objective metrics (workload, jurisdiction size, complexity), protection from line-item cuts targeting specific investigations or reports, transparency requirements for any proposed funding reductions (must justify and document reasoning publicly).</p>
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-ovr">
+  <div class="family-header">
+    <span class="family-code">OVR</span>
+    <span class="family-title">JUR — Oversight Jurisdiction</span>
+    <span class="family-count">0/2 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">OVR-JUR-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Jurisdiction Over State Officials</p>
+  <p class="rule-stmt">Federal oversight body may investigate governors and high-level state officials.</p>
+  <p class="rule-notes">Extends federal oversight jurisdiction to state governors, lieutenant governors, attorneys general, and other high-level state officials when conduct relates to federal matters, constitutional violations, or systematic failures of state oversight. This is not general federal supervision of states—it is targeted authority to investigate when state-level accountability mechanisms fail or when conduct affects federal interests.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">OVR-JUR-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Jurisdiction Over Failed State Oversight</p>
+  <p class="rule-stmt">Federal oversight body may investigate state oversight boards if they fail to perform duties.</p>
+  <p class="rule-notes">When state oversight boards fail to investigate misconduct, become captured by officials they oversee, or are blocked from functioning by state-level political interference, federal oversight can step in. This is backstop authority—federal oversight does not replace state oversight but ensures that accountability exists even when state mechanisms are compromised.</p>
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-ovr">
+  <div class="family-header">
+    <span class="family-code">OVR</span>
+    <span class="family-title">STA — State Oversight Requirements</span>
+    <span class="family-count">0/3 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">OVR-STA-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">State Oversight Boards Required</p>
+  <p class="rule-stmt">Each state must establish its own independent oversight board.</p>
+  <p class="rule-notes">Parallel to federal requirement for branch oversight (OVR-BRN-001), each state must establish independent oversight board with jurisdiction over state elected officials and high-level appointees. Board must have independence, investigative authority, subpoena power, and public reporting capacity. States have flexibility in exact structure but must meet minimum standards for independence and authority.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">OVR-STA-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Directly Elected Members</p>
+  <p class="rule-stmt">State oversight boards include directly elected members.</p>
+  <p class="rule-notes">Ensures democratic accountability and public voice in state oversight. At least some members must be directly elected by state voters. Elected members cannot be removed by state officials being overseen. Provides independence from appointment process that could be controlled by those subject to oversight.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">OVR-STA-003</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Appointed Members Balance</p>
+  <p class="rule-stmt">State oversight boards include members appointed by legislatures and governors.</p>
+  <p class="rule-notes">In addition to elected members (OVR-STA-002), boards include appointed members to ensure expertise and representation of different branches. Appointment process should involve: governor appointees, legislative appointees (potentially separate House and Senate appointments in bicameral states), potentially judicial appointments or appointments by independent commissions. Process prevents any single official or party from controlling appointments.</p>
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-sys">
+  <div class="family-header">
+    <span class="family-code">SYS</span>
+    <span class="family-title">AI — AI and Algorithmic Systems in Government</span>
+    <span class="family-count">0/7 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">SYS-AI-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Prohibition on Asymmetrical AI Processes</p>
+  <p class="rule-stmt">AI-assisted decision systems must not create asymmetrical processes that accelerate approvals while increasing delay scrutiny or denial likelihood for unapproved cases.</p>
+  <p class="rule-notes">Addresses the two-tier problem where AI creates fast track for "normal" cases and slow track with heightened scrutiny for "abnormal" cases. If AI is used to speed approvals, it cannot simultaneously be used to flag cases for denial without explicitly requiring that equal efficiency be applied to all cases. Everyone receives equal processing speed and scrutiny level regardless of AI scoring.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">SYS-AI-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Independent Human Judgment Required for Material Harm</p>
+  <p class="rule-stmt">Any decision that materially harms restricts or denies rights opportunities or access must be made through independent human judgment and may not rely on absence of AI support.</p>
+  <p class="rule-notes">Consequential decisions require genuine human review. "Independent judgment" means reviewer examines evidence, applies legal and policy standards, documents reasoning, and makes decision based on merits—not based on AI recommendation or absence thereof. Reviewer must have authority to override AI and cannot be penalized for doing so.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">SYS-AI-003</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Absence of AI Recommendation Not Evidence of Denial</p>
+  <p class="rule-stmt">Absence of AI recommendation or prioritization may not be used as evidence or implicit justification for denial restriction or adverse outcomes.</p>
+  <p class="rule-notes">Reinforces SYS-AI-002 by specifically prohibiting use of "no AI approval" as grounds for denial. If system does not auto-approve, human reviewer cannot use that fact to justify denial. The reviewer must evaluate case on merits. Lack of algorithmic approval is procedural artifact, not substantive evidence.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">SYS-AI-004</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Equal and Timely Consideration Regardless of AI Score</p>
+  <p class="rule-stmt">All individuals must receive equal and timely consideration in decision-making systems regardless of AI prioritization or scoring.</p>
+  <p class="rule-notes">Directly addresses queue-jumping and delay as discrimination. If AI prioritizes some cases for fast processing, all cases must receive comparably fast processing—or AI prioritization must be eliminated. Cannot create situation where algorithm-favored cases get decisions in days while others wait months.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">SYS-AI-005</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">AI Bias Detection and Mitigation</p>
+  <p class="rule-stmt">AI systems used in decision-making processes must include mechanisms to detect measure and mitigate bias and must be explicitly used to improve fairness where possible.</p>
+  <p class="rule-notes">Requires affirmative use of AI for fairness, not just efficiency. Systems must be designed with bias detection: demographic parity analysis, disparate impact testing, examination of proxy variables, evaluation of training data representativeness. Mitigation strategies must be implemented when bias is detected: retraining models, adjusting thresholds, removing biased features, manual review of high-disparity outcomes.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">SYS-AI-006</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Continuous Auditing for Bias and Disparate Impact</p>
+  <p class="rule-stmt">Decision-making systems using AI must be continuously audited for bias disparate impact and unfair outcomes with corrective action required.</p>
+  <p class="rule-notes">One-time fairness assessment is insufficient because systems drift, training data changes, and feedback loops develop. Continuous auditing means regular (at least annual, preferably more frequent) analysis of outcomes by protected characteristics. When disparate impact is detected, corrective action is mandatory—not optional or subject to cost-benefit balancing.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">SYS-AI-007</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Domain-Specific AI Rules</p>
+  <p class="rule-stmt">Each policy domain or pillar must define its own AI system rules consistent with these overarching principles and adapted to domain-specific risks.</p>
+  <p class="rule-notes">The SYS-AI rules establish general principles. Each domain (healthcare, criminal justice, benefits administration, immigration, education, employment, housing, etc.) must develop specific rules that implement these principles with attention to domain-specific harms and risks. - Healthcare: Rules for AI in diagnosis, treatment recommendations, coverage determinations, triage (covered in Pillar 9 and ECO-INS rules in Pillar 12) - Criminal justice: Rules for risk assessment, bail decisions, sentencing recommendations, parole determinations - Benefits: Rules for eligibility determination, fraud detection, case prioritization - Immigration: Rules for visa decisions, asylum adjudication, deportation proceedings - Education: Rules for admissions, student assessment, resource allocation - Employment: Rules for hiring algorithms, performance evaluation, termination decisions</p>
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-sys">
+  <div class="family-header">
+    <span class="family-code">SYS</span>
+    <span class="family-title">FED — Federalism and Federal-State Balance</span>
+    <span class="family-count">5/5 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-included">
+  <div class="rule-header">
+    <code class="rule-id">SYS-FED-001</code>
+    <span class="rule-badge">Included</span>
+  </div>
+  <p class="rule-title">High-Risk Systems Not Fully Centralized</p>
+  <p class="rule-stmt">High-risk systems must not be fully centralized.</p>
+  <p class="rule-notes">For systems where failure or capture would be catastrophic (elections, critical infrastructure oversight, judicial independence, rights protection), full federal centralization creates single point of failure. If that central authority is captured or corrupted, entire system fails at once. Distributed authority with federal standards provides resilience.</p>
+</div>
+<div class="rule-card status-included">
+  <div class="rule-header">
+    <code class="rule-id">SYS-FED-002</code>
+    <span class="rule-badge">Included</span>
+  </div>
+  <p class="rule-title">Elections Remain State/Local Administered</p>
+  <p class="rule-stmt">Elections remain state/local administered.</p>
+  <p class="rule-notes">Consistent with SYS-FED-001, elections continue to be run by state and local authorities rather than centralized federally. This prevents single point of failure and maintains multiple layers of accountability. However, federal standards apply (see SYS-FED-003) to prevent state-level suppression or manipulation.</p>
+</div>
+<div class="rule-card status-included">
+  <div class="rule-header">
+    <code class="rule-id">SYS-FED-003</code>
+    <span class="rule-badge">Included</span>
+  </div>
+  <p class="rule-title">Federal Standards for Elections</p>
+  <p class="rule-stmt">Federal sets standards but not direct control of elections.</p>
+  <p class="rule-notes">Complements SYS-FED-002 by establishing federal role: set minimum standards for ballot access, voter registration, vote counting, certification, transparency, and accessibility. Prevent state-level suppression through federal floor below which states cannot fall. But federal government does not directly run elections—states and localities implement federal standards.</p>
+</div>
+<div class="rule-card status-included">
+  <div class="rule-header">
+    <code class="rule-id">SYS-FED-004</code>
+    <span class="rule-badge">Included</span>
+  </div>
+  <p class="rule-title">Multiple Independent Oversight Layers Required</p>
+  <p class="rule-stmt">Multiple independent oversight layers required.</p>
+  <p class="rule-notes">No single oversight body should be sole check on power. Multiple independent oversight mechanisms—federal, state, judicial, legislative, independent commissions, civil society watchdogs—create redundant accountability. If one layer is captured or fails, others can detect and respond to abuse.</p>
+</div>
+<div class="rule-card status-included">
+  <div class="rule-header">
+    <code class="rule-id">SYS-FED-005</code>
+    <span class="rule-badge">Included</span>
+  </div>
+  <p class="rule-title">Safeguards Against Both State and Federal Abuse</p>
+  <p class="rule-stmt">Safeguards against both state and federal abuse.</p>
+  <p class="rule-notes">Federalism balance requires protection against abuse at both levels. States can suppress rights, discriminate, and manipulate processes—federal oversight and standards prevent this. Federal government can overreach, centralize inappropriately, or become captured—state autonomy, judicial review, and distributed administration prevent this.</p>
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-sys">
+  <div class="family-header">
+    <span class="family-code">SYS</span>
+    <span class="family-title">GEO — Geographic Equality</span>
+    <span class="family-count">5/5 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-included">
+  <div class="rule-header">
+    <code class="rule-id">SYS-GEO-001</code>
+    <span class="rule-badge">Included</span>
+  </div>
+  <p class="rule-title">Geography Must Not Determine Rights Access</p>
+  <p class="rule-stmt">Geography must not determine access to rights or care.</p>
+  <p class="rule-notes">Constitutional rights do not vary by state. You do not have different rights in Texas vs California vs New York. States cannot make federally guaranteed rights inaccessible through indirect means (closing facilities, criminalizing travel, restricting providers, defunding services). If state makes right inaccessible locally, cross-state access and travel support must be guaranteed.</p>
+</div>
+<div class="rule-card status-included">
+  <div class="rule-header">
+    <code class="rule-id">SYS-GEO-002</code>
+    <span class="rule-badge">Included</span>
+  </div>
+  <p class="rule-title">National Baseline Must Be Uniform</p>
+  <p class="rule-stmt">National baseline must be uniform.</p>
+  <p class="rule-notes">Federal constitutional and statutory protections establish a floor that applies uniformly across all states. States cannot fall below this baseline. Creates national standard for rights, healthcare access, economic protections, environmental standards, labor rights, education quality, and other fundamental guarantees.</p>
+</div>
+<div class="rule-card status-included">
+  <div class="rule-header">
+    <code class="rule-id">SYS-GEO-003</code>
+    <span class="rule-badge">Included</span>
+  </div>
+  <p class="rule-title">States May Not Degrade Federal Rights</p>
+  <p class="rule-stmt">States may not degrade federally guaranteed rights.</p>
+  <p class="rule-notes">Reinforces SYS-GEO-002 by explicitly prohibiting state degradation of federal rights. If federal law guarantees a right, state cannot eliminate, reduce, or make inaccessible that right. States cannot use police power, health and safety justifications, or moral arguments to override federal rights.</p>
+</div>
+<div class="rule-card status-included">
+  <div class="rule-header">
+    <code class="rule-id">SYS-GEO-004</code>
+    <span class="rule-badge">Included</span>
+  </div>
+  <p class="rule-title">Cross-State Access Guaranteed</p>
+  <p class="rule-stmt">Cross-state access must be guaranteed.</p>
+  <p class="rule-notes">If state makes federally guaranteed service unavailable, residents must be able to access service in other states without interference. States cannot criminalize travel for healthcare, prosecute residents for out-of-state care, impose civil liability on providers in other states, or use private enforcement schemes to circumvent this requirement.</p>
+</div>
+<div class="rule-card status-included">
+  <div class="rule-header">
+    <code class="rule-id">SYS-GEO-005</code>
+    <span class="rule-badge">Included</span>
+  </div>
+  <p class="rule-title">Travel Support When Local Care Unavailable</p>
+  <p class="rule-stmt">Travel support required when local care unavailable.</p>
+  <p class="rule-notes">If federally guaranteed healthcare or service is not locally accessible, government must provide travel support to enable access elsewhere. This can be federal funding, state funding, insurance coverage, or dedicated travel assistance programs. Ensures that geographic barriers and economic barriers do not combine to make rights theoretical rather than real.</p>
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-sys">
+  <div class="family-header">
+    <span class="family-code">SYS</span>
+    <span class="family-title">FND — Foundational System Principles</span>
+    <span class="family-count">18/18 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-included">
+  <div class="rule-header">
+    <code class="rule-id">SYS-FND-001</code>
+    <span class="rule-badge">Included</span>
+  </div>
+  <p class="rule-title">Platform as Policy and Strategy</p>
+  <p class="rule-stmt">Platform is both a policy framework and long-term strategy.</p>
+  <p class="rule-notes">This is not merely a list of policy proposals. It is comprehensive framework with communication strategy, coalition-building approach, movement logic, and long-term implementation pathway. Combines policy substance with political strategy for achieving adoption.</p>
+</div>
+<div class="rule-card status-included">
+  <div class="rule-header">
+    <code class="rule-id">SYS-FND-002</code>
+    <span class="rule-badge">Included</span>
+  </div>
+  <p class="rule-title">Restore Checks and Balances</p>
+  <p class="rule-stmt">Restore checks and balances.</p>
+  <p class="rule-notes">Core mission of the project. Constitutional system has degraded—executive overreach, judicial lifetime appointments without accountability, congressional abdication of oversight, lack of enforcement mechanisms. Project aims to restore structural balance through constitutional amendments, statutory reforms, and institutional redesign.</p>
+</div>
+<div class="rule-card status-included">
+  <div class="rule-header">
+    <code class="rule-id">SYS-FND-003</code>
+    <span class="rule-badge">Included</span>
+  </div>
+  <p class="rule-title">Modernize the Constitution</p>
+  <p class="rule-stmt">Modernize the Constitution.</p>
+  <p class="rule-notes">Constitution written for 18th century cannot address 21st century challenges without modernization. Technology, corporate power, digital privacy, AI, climate change, economic concentration, information manipulation—these require constitutional-level frameworks that do not currently exist. Modernization means adaptation to current reality while preserving foundational principles.</p>
+</div>
+<div class="rule-card status-included">
+  <div class="rule-header">
+    <code class="rule-id">SYS-FND-004</code>
+    <span class="rule-badge">Included</span>
+  </div>
+  <p class="rule-title">Guarantee Universal Equal Rights</p>
+  <p class="rule-stmt">Guarantee universal equal rights.</p>
+  <p class="rule-notes">Rights must be explicit, universal, and enforceable. No person should have different rights based on identity, geography, or wealth. Project includes comprehensive rights framework (Pillar 5) that makes explicit what current Constitution leaves implicit or fragmented.</p>
+</div>
+<div class="rule-card status-included">
+  <div class="rule-header">
+    <code class="rule-id">SYS-FND-005</code>
+    <span class="rule-badge">Included</span>
+  </div>
+  <p class="rule-title">Address Economic Inequality Structurally</p>
+  <p class="rule-stmt">Address economic inequality structurally.</p>
+  <p class="rule-notes">Economic inequality is not merely policy preference question—it is structural threat to democracy. Project addresses through progressive taxation (Pillar 12), antitrust enforcement (Pillar 11), labor rights, economic security guarantees, and constitutional limits on wealth concentration. Treats extreme inequality as incompatible with democratic equality.</p>
+</div>
+<div class="rule-card status-included">
+  <div class="rule-header">
+    <code class="rule-id">SYS-FND-006</code>
+    <span class="rule-badge">Included</span>
+  </div>
+  <p class="rule-title">Address Modern Systemic Issues</p>
+  <p class="rule-stmt">Address modern systemic issues not covered by current law.</p>
+  <p class="rule-notes">Current legal framework has gaps: AI and algorithmic decision-making, digital privacy and surveillance, platform power and information manipulation, climate change and intergenerational harm, automation and labor displacement, genetic privacy and biotechnology, mass data collection and analysis. Project creates frameworks for these modern challenges.</p>
+</div>
+<div class="rule-card status-included">
+  <div class="rule-header">
+    <code class="rule-id">SYS-FND-007</code>
+    <span class="rule-badge">Included</span>
+  </div>
+  <p class="rule-title">Make Technology Work for People</p>
+  <p class="rule-stmt">Make technology work for people.</p>
+  <p class="rule-notes">Technology should serve human flourishing, not extraction and control. AI should improve fairness, not encode bias. Platforms should enable communication, not manipulate behavior. Automation should reduce toil, not eliminate livelihoods. Data collection should serve individuals, not surveillance. Project establishes frameworks to ensure technology serves democratic and humanistic values.</p>
+</div>
+<div class="rule-card status-included">
+  <div class="rule-header">
+    <code class="rule-id">SYS-FND-008</code>
+    <span class="rule-badge">Included</span>
+  </div>
+  <p class="rule-title">Movement Not Left vs Right</p>
+  <p class="rule-stmt">Movement is not left vs right.</p>
+  <p class="rule-notes">Deliberately designed to transcend traditional political divisions. Framed as democracy vs oligarchy, fairness vs extraction, accountability vs impunity. Appeals to values shared across political spectrum: fairness, opportunity, accountability, dignity, freedom. Avoids positioning that would make project tribal or partisan.</p>
+</div>
+<div class="rule-card status-included">
+  <div class="rule-header">
+    <code class="rule-id">SYS-FND-009</code>
+    <span class="rule-badge">Included</span>
+  </div>
+  <p class="rule-title">Movement Accessible to Everyone</p>
+  <p class="rule-stmt">Movement accessible to everyone.</p>
+  <p class="rule-notes">Communication strategy emphasizes accessibility: clear language, concrete examples, relatable framing, multiple entry points. Not elite project or academic exercise. Designed so working-class voters, small business owners, community organizers, and everyday citizens can understand, support, and advocate for reforms.</p>
+</div>
+<div class="rule-card status-included">
+  <div class="rule-header">
+    <code class="rule-id">SYS-FND-010</code>
+    <span class="rule-badge">Included</span>
+  </div>
+  <p class="rule-title">Includes Communication and Coalition Strategy</p>
+  <p class="rule-stmt">Includes communication and coalition strategy.</p>
+  <p class="rule-notes">Policy alone is insufficient. Project includes: messaging frameworks, coalition-building strategy, media approach, grassroots organizing logic, candidate recruitment, advocacy campaign design. Treats political implementation as integral to policy development.</p>
+</div>
+<div class="rule-card status-included">
+  <div class="rule-header">
+    <code class="rule-id">SYS-FND-011</code>
+    <span class="rule-badge">Included</span>
+  </div>
+  <p class="rule-title">Not a Political Party</p>
+  <p class="rule-stmt">Not a political party.</p>
+  <p class="rule-notes">Project operates across parties and outside party structures. Goal is to influence policy and candidates across political spectrum rather than creating new party. Candidates from any party can adopt framework. Advocacy organizations can work with anyone supporting reforms. Avoids partisan capture.</p>
+</div>
+<div class="rule-card status-included">
+  <div class="rule-header">
+    <code class="rule-id">SYS-FND-012</code>
+    <span class="rule-badge">Included</span>
+  </div>
+  <p class="rule-title">Origin Tied to Post-Trump Instability Concerns</p>
+  <p class="rule-stmt">Origin tied to post-Trump instability concerns.</p>
+  <p class="rule-notes">Project originated from recognition that American institutions are more fragile than assumed. Trump presidency exposed weaknesses: norms without enforcement, oversight without teeth, accountability dependent on good faith. Post-Trump period requires structural reforms to prevent future institutional breakdown.</p>
+</div>
+<div class="rule-card status-included">
+  <div class="rule-header">
+    <code class="rule-id">SYS-FND-013</code>
+    <span class="rule-badge">Included</span>
+  </div>
+  <p class="rule-title">Address Ignored Working-Class Issues</p>
+  <p class="rule-stmt">Address ignored working-class issues.</p>
+  <p class="rule-notes">Economic insecurity, declining quality of life, rising costs, job loss to automation, healthcare unaffordability, housing crisis, debt burden, lack of economic opportunity—these affect working-class Americans across racial and geographic lines but are often ignored by political elites. Project centers these concerns.</p>
+</div>
+<div class="rule-card status-included">
+  <div class="rule-header">
+    <code class="rule-id">SYS-FND-014</code>
+    <span class="rule-badge">Included</span>
+  </div>
+  <p class="rule-title">Address Rising Costs and Declining Quality</p>
+  <p class="rule-stmt">Address rising costs and declining quality of life.</p>
+  <p class="rule-notes">Healthcare, housing, education, childcare, food costs rising faster than wages. Quality of products declining (planned obsolescence, disposability). Public services degrading. Infrastructure crumbling. Quality of life declining despite GDP growth. Project addresses through economic reforms, antitrust enforcement, quality standards, public investment.</p>
+</div>
+<div class="rule-card status-included">
+  <div class="rule-header">
+    <code class="rule-id">SYS-FND-015</code>
+    <span class="rule-badge">Included</span>
+  </div>
+  <p class="rule-title">Address Elite Detachment</p>
+  <p class="rule-stmt">Address elite detachment.</p>
+  <p class="rule-notes">Political, economic, and cultural elites operate in different reality than most Americans. They do not experience healthcare crisis, housing unaffordability, job insecurity, or declining public services in the same way. This detachment produces policy that serves elite interests while ignoring majority needs. Project explicitly centers lived experience of working Americans.</p>
+</div>
+<div class="rule-card status-included">
+  <div class="rule-header">
+    <code class="rule-id">SYS-FND-016</code>
+    <span class="rule-badge">Included</span>
+  </div>
+  <p class="rule-title">Address Wealth Concentration</p>
+  <p class="rule-stmt">Address wealth concentration.</p>
+  <p class="rule-notes">Extreme wealth concentration is structural threat to democracy. Billionaires with resources exceeding small nations can shape policy, fund movements, control media, avoid accountability. Project treats wealth concentration as constitutional-level problem requiring structural remedies (progressive taxation, wealth caps, anti-hoarding mechanisms, inheritance limits).</p>
+</div>
+<div class="rule-card status-included">
+  <div class="rule-header">
+    <code class="rule-id">SYS-FND-017</code>
+    <span class="rule-badge">Included</span>
+  </div>
+  <p class="rule-title">Address Declining Institutional Trust</p>
+  <p class="rule-stmt">Address declining institutional trust.</p>
+  <p class="rule-notes">Trust in government, media, courts, corporations, and other institutions has collapsed. This is both symptom and cause of dysfunction. Project addresses by creating accountability (so institutions earn trust), transparency (so people can verify), and responsiveness (so institutions serve public rather than elites).</p>
+</div>
+<div class="rule-card status-included">
+  <div class="rule-header">
+    <code class="rule-id">SYS-FND-018</code>
+    <span class="rule-badge">Included</span>
+  </div>
+  <p class="rule-title">Core Values: Truth, Equality, Freedom, Dignity</p>
+  <p class="rule-stmt">Core values include truth equality freedom dignity.</p>
+  <p class="rule-notes">Foundational values that guide all policy development: - <strong>Truth:</strong> Information systems must serve truth-seeking, not manipulation. Facts matter. Reality cannot be negotiated. - <strong>Equality:</strong> All people have equal moral worth and equal rights. No person is inherently superior or inferior to another. - <strong>Freedom:</strong> Individuals must have meaningful freedom—not just absence of government interference but positive capacity to make real choices. - <strong>Dignity:</strong> Systems must respect human dignity. People are not commodities, data points, or resources to be extracted.</p>
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-sys">
+  <div class="family-header">
+    <span class="family-code">SYS</span>
+    <span class="family-title">RUL — System Rule Integrity</span>
+    <span class="family-count">1/1 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-included">
+  <div class="rule-header">
+    <code class="rule-id">SYS-RUL-001</code>
+    <span class="rule-badge">Included</span>
+  </div>
+  <p class="rule-title">System Rules Ensure Completeness and Alignment</p>
+  <p class="rule-stmt">System rules ensure completeness and alignment.</p>
+  <p class="rule-notes">Meta-structural requirement that system rules across all pillars remain consistent, complete, and aligned. Prevents contradictions between pillars. Ensures new rules do not conflict with existing framework. Requires periodic review to identify gaps, contradictions, or misalignments.</p>
+</div>
+  </div>
+</div>
+</div>
 </section>
-
+<section class="bg-dark on-dark ruled" id="pil-research">
+<div class="wrap">
+  <h2 style="color:#bf0a30">Research & Context</h2>
+  <div class="research-body" style="color:rgba(255,255,255,.85)"><p>The expansion of executive power is well-documented and bipartisan. Presidents of both parties have claimed authority beyond constitutional text, invoked emergency powers broadly, used classification to avoid oversight, and resisted congressional subpoenas. The problem is structural: the presidency accumulates power over time because there is no forcing mechanism to give it back. Each crisis justifies expansion, but the expansion persists after the crisis ends.</p>
+<p>The brainstorm branch materials emphasize that impeachment reform is essential but insufficient. Even with improved impeachment mechanisms, the executive needs ongoing accountability between elections. The oversight board framework addresses this by creating bodies with real investigative authority and public reporting requirements. When misconduct occurs, it becomes visible and creates political pressure even if impeachment or prosecution is blocked.</p>
+<p>The guaranteed funding mechanism is crucial. Oversight boards that depend on the bodies they oversee for funding become captured or neutered. The automatic extension with 10% increase creates proper incentive: pass adequate funding or face higher automatic funding next period. This prevents the "starve oversight" strategy while avoiding full independence from appropriations process (which would raise separation of powers concerns).</p>
+<p>The AI fairness rules respond to documented problems in automated government decision-making. Benefit determination systems flag "suspicious" applications for human review, but the human review becomes perfunctory and denial rates for flagged applications are substantially higher than for unflagged applications. The system creates a two-tier process: fast approval for "normal" cases, slow denial for "abnormal" cases. Since algorithmic normality correlates with protected characteristics, the result is systematic discrimination.</p>
+<p>The solution is not to ban AI in government—efficiency gains are real and beneficial when systems are fair. The solution is to require that AI be used to improve fairness, not just efficiency. Bias detection and mitigation must be built in. Continuous auditing must occur. Domain-specific rules must account for domain-specific risks. And most importantly, absence of AI support cannot become evidence against a case or justification for denial. Everyone receives equal and timely consideration regardless of what the algorithm recommends.</p>
+<p>The federalism balance is delicate. Full federal control of high-risk systems (like elections) creates single points of failure that would be catastrophic if captured. But pure state control allows state-level suppression and manipulation. The solution is hybrid: state/local administration with federal standards, multiple oversight layers, and safeguards against both state suppression and federal manipulation. This maintains resilience (many points of control) while preventing abuse (federal floor, oversight, and intervention authority).</p>
+<p>Geographic equality is non-negotiable. You do not have different constitutional rights depending on which state you live in. States cannot degrade federal rights. If a state makes healthcare unavailable, cross-state access and travel support must be guaranteed. This applies to abortion, gender-affirming care, reproductive healthcare, and any other constitutionally protected service that states might try to restrict indirectly by making it locally inaccessible.</p>
+<p>The foundational system rules (SYS-FND series) capture the project's origin story and animating principles. This is a reconstruction framework born from concerns about post-Trump institutional fragility, working-class economic abandonment, rising costs, wealth concentration, elite detachment, and declining trust. It is deliberately designed to be accessible across traditional political divides—not "left vs right" but "democracy vs oligarchy," "fairness vs extraction," "accountability vs impunity." The framework includes not just policy but movement strategy, communication approach, and coalition-building logic.</p>
+<p>The rule integrity requirement (SYS-RUL-001) is meta-structural: it ensures that system rules across all pillars remain consistent, complete, and aligned. This prevents contradictions and gaps. It requires periodic review to ensure new rules do not conflict with existing framework.</p></div>
+</div>
+</section>
+<section class="bg-parchment ruled" id="pil-related">
+<div class="wrap" style="margin-bottom:0">
+  <h2 style="color:#bf0a30">Related Pillars</h2>
+  <p style="font-size:.92rem;color:#666;margin-bottom:.5rem">These pillars intersect with and reinforce this one.</p>
+</div>
+<div class="wrap"><div class="related-grid"><a href="pillar-1-executive-power-and-accountability.html" class="related-card"><strong>Pillar 1: Executive Power and Accountability</strong><span>— Limits on presidential authority, enforcement mechanisms, anti-abuse safeguards</span></a>
+<a href="pillar-2-elections-and-representation.html" class="related-card"><strong>Pillar 2: Elections and Representation</strong><span>— Federal standards for elections, state administration, oversight mechanisms</span></a>
+<a href="pillar-3-anti-corruption-and-concentrated-power.html" class="related-card"><strong>Pillar 3: Anti-Corruption and Concentrated Power</strong><span>— Ethics enforcement, oversight authority, transparency requirements</span></a>
+<a href="pillar-4-equal-justice-policing-and-accountability.html" class="related-card"><strong>Pillar 4: Equal Justice, Policing, and Accountability</strong><span>— Bias in decision-making, accountability for officials, fair process requirements</span></a>
+<a href="pillar-5-rights-civil-liberties-and-economic-security.html" class="related-card"><strong>Pillar 5: Rights, Civil Liberties, and Economic Security</strong><span>— Geographic equality in rights access, federal floor for rights</span></a>
+<a href="pillar-6-courts-and-judicial-system.html" class="related-card"><strong>Pillar 6: Courts and Judicial System</strong><span>— Judicial accountability, term limits, ethics enforcement</span></a>
+<a href="pillar-9-healthcare-system.html" class="related-card"><strong>Pillar 9: Healthcare System</strong><span>— AI in healthcare decisions, geographic access guarantees</span></a>
+<a href="pillar-12-taxation-and-wealth.html" class="related-card"><strong>Pillar 12: Taxation and Wealth</strong><span>— AI in insurance and economic decisions, bias mitigation</span></a>
+</div></div>
+<div class="wrap" style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap">
+  <a href="../foundations.html#accountable-power" class="btn-primary" style="background:#bf0a30">← Foundation I: Accountable Power</a>
+  <a href="index.html" class="btn-primary" style="background:var(--navy)">All Pillars</a>
+</div>
+</section>
 <footer class="site-footer">
   <div class="wrap">
     <span class="footer-brand">American Renewal Project</span>
     <ul class="footer-links">
       <li><a href="../index.html">Home</a></li>
       <li><a href="../foundations.html">Foundations</a></li>
-      <li><a href="../pillars/index.html">Pillars</a></li>
+      <li><a href="index.html">Pillars</a></li>
       <li><a href="../compare/index.html">Compare</a></li>
     </ul>
     <span class="footer-note">A Third Bill of Rights for the 21st Century. · <a href="../about-ai.html" style="color:inherit;opacity:.7">On the Use of AI</a></span>
@@ -92,5 +843,25 @@
 </footer>
 <script src="../assets/js/data.js"></script>
 <script src="../assets/js/app.js"></script>
+<script>
+(function(){
+  var nav = document.getElementById('pil-snav');
+  if(!nav) return;
+  var links = nav.querySelectorAll('a[href^="#"]');
+  var sections = Array.from(links).map(function(a){
+    return document.querySelector(a.getAttribute('href'));
+  }).filter(Boolean);
+  function onScroll(){
+    var y = window.scrollY + 120;
+    var active = sections[0];
+    sections.forEach(function(s){ if(s.offsetTop <= y) active = s; });
+    links.forEach(function(a){
+      a.classList.toggle('active', a.getAttribute('href') === '#'+active.id);
+    });
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+})();
+</script>
 </body>
 </html>

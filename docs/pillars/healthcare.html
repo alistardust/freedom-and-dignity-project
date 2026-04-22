@@ -6,6 +6,124 @@
 <title>Healthcare — American Renewal Project</title>
 <link rel="stylesheet" href="../assets/css/style.css">
 <link rel="icon" type="image/svg+xml" href="../assets/img/logo.svg">
+<style>
+/* ── Pillar page styles ─────────────────────────────────────── */
+.pil-snav {
+  position: sticky; top: 63px; z-index: 150;
+  background: var(--navy); border-bottom: 2px solid rgba(255,255,255,.12);
+  overflow-x: auto; white-space: nowrap;
+}
+.pil-snav ul { display:flex; gap:0; list-style:none; margin:0; padding:0; }
+.pil-snav a {
+  display:block; padding:.55rem 1.1rem; font-family:'Oswald',sans-serif;
+  font-size:.78rem; letter-spacing:.06em; text-transform:uppercase;
+  color:rgba(255,255,255,.62); text-decoration:none; transition:color .15s;
+}
+.pil-snav a:hover, .pil-snav a.active { color:#fff; }
+.pil-snav a.active { border-bottom:2px solid #c9952a; }
+
+/* ── Section layouts ────────────────────────────────────────── */
+.pil-intro { display:grid; grid-template-columns:1fr 1fr; gap:2rem; }
+@media(max-width:700px){ .pil-intro { grid-template-columns:1fr; } }
+
+.pil-intro h2 { font-size:1.1rem; text-transform:uppercase; letter-spacing:.08em; margin-bottom:.6rem; }
+.pil-intro p, .pil-intro li { font-size:1rem; line-height:1.75; }
+
+.problem-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:1.25rem; margin-top:1rem; }
+.problem-card {
+  background:#fff; border-radius:6px; padding:1.2rem 1.4rem;
+  border-left:4px solid #c9952a;
+  box-shadow:0 1px 4px rgba(0,0,0,.07);
+}
+.problem-card h3 { font-size:1rem; margin:0 0 .4rem; color:var(--navy); }
+.problem-card p  { font-size:.92rem; line-height:1.65; margin:0; color:#333; }
+
+.reform-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:1rem; margin-top:1rem; }
+.reform-card {
+  background:var(--navy); color:#fff; border-radius:6px;
+  padding:1.1rem 1.3rem; border-top:3px solid #c9952a;
+}
+.reform-card h3 { font-size:.95rem; margin:0 0 .4rem; color:#c9952a; text-transform:uppercase; letter-spacing:.04em; }
+.reform-card p  { font-size:.88rem; line-height:1.6; margin:0; color:rgba(255,255,255,.8); }
+
+/* ── Policy rules ───────────────────────────────────────────── */
+.policy-family { margin-bottom:2.5rem; }
+.family-header {
+  display:flex; align-items:baseline; gap:.8rem; margin-bottom:1rem;
+  padding-bottom:.5rem; border-bottom:2px solid #c9952a;
+}
+.family-code {
+  font-family:'Oswald',sans-serif; font-size:1.1rem;
+  color:#c9952a; min-width:3rem;
+}
+.family-title { font-size:1rem; font-weight:600; color:var(--ink); }
+.family-count { margin-left:auto; font-size:.8rem; color:#888; white-space:nowrap; }
+
+.rule-grid {
+  display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:.75rem;
+}
+.rule-card {
+  border-radius:5px; padding:.9rem 1rem;
+  background:#fff; border:1px solid #e0d8c8;
+  font-size:.88rem; line-height:1.55;
+}
+.rule-card.status-included { border-left:4px solid #1e8449; }
+.rule-card.status-updated  { border-left:4px solid #2471a3; }
+.rule-card.status-partial  { border-left:4px solid #c9952a; }
+.rule-card.status-missing  { border-left:4px solid #ccc; opacity:.72; }
+
+.rule-header { display:flex; align-items:center; gap:.5rem; margin-bottom:.35rem; }
+.rule-id { font-size:.72rem; color:#888; letter-spacing:.03em; }
+.rule-badge {
+  font-size:.68rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em;
+  padding:.12em .45em; border-radius:3px;
+}
+.status-included .rule-badge { background:#d4edda; color:#155724; }
+.status-updated  .rule-badge { background:#cce5ff; color:#004085; }
+.status-partial  .rule-badge { background:#fff3cd; color:#856404; }
+.status-missing  .rule-badge { background:#f0f0f0; color:#666; }
+
+.rule-title { font-weight:600; margin:.2rem 0 .2rem; color:var(--ink); }
+.rule-stmt  { font-size:.85rem; color:#444; margin:.15rem 0 0; }
+.rule-notes { font-size:.8rem; color:#666; font-style:italic; margin:.25rem 0 0; }
+
+/* ── Research section ───────────────────────────────────────── */
+.research-body h3 { font-size:1.05rem; color:#c9952a; margin:1.5rem 0 .4rem; }
+.research-body p  { line-height:1.8; font-size:.97rem; }
+
+/* ── Related pillars ────────────────────────────────────────── */
+.related-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:.85rem; margin-top:1rem; }
+.related-card {
+  background:var(--navy); color:#fff; border-radius:6px; padding:1rem;
+  text-decoration:none; transition:opacity .15s;
+}
+.related-card:hover { opacity:.82; }
+.related-card strong { display:block; font-size:.95rem; margin-bottom:.3rem; }
+.related-card span   { font-size:.8rem; color:rgba(255,255,255,.65); }
+
+/* ── Summary stats bar ──────────────────────────────────────── */
+.stats-bar {
+  display:flex; flex-wrap:wrap; gap:1.5rem; margin:1.2rem 0;
+  padding:1rem 1.2rem; background:#fff; border-radius:6px;
+  border:1px solid #e0d8c8;
+}
+.stat-item { text-align:center; }
+.stat-num { display:block; font-family:'Oswald',sans-serif; font-size:2rem; color:#c9952a; }
+.stat-label { font-size:.78rem; text-transform:uppercase; letter-spacing:.06em; color:#888; }
+
+/* ── Design logic accordion ─────────────────────────────────── */
+details.design-logic { margin-top:1rem; }
+details.design-logic summary {
+  cursor:pointer; font-weight:700; padding:.6rem .8rem;
+  background:rgba(0,0,0,.06); border-radius:4px; user-select:none;
+}
+details.design-logic[open] summary { border-radius:4px 4px 0 0; }
+details.design-logic .design-body { padding:.8rem 1rem; background:#fff; border:1px solid #e0d8c8; border-top:none; border-radius:0 0 4px 4px; }
+details.design-logic .design-body p { font-size:.93rem; line-height:1.75; }
+details.design-logic .design-body ul { padding-left:1.3rem; }
+details.design-logic .design-body li { font-size:.93rem; line-height:1.65; margin-bottom:.3rem; }
+</style>
+<style>:root { --accent-color: #c9952a; }</style>
 </head>
 <body>
 <nav class="site-nav">
@@ -18,13 +136,12 @@
     <ul class="nav-links">
       <li><a href="../index.html">Home</a></li>
       <li><a href="../foundations.html">Foundations</a></li>
-      <li><a href="../pillars/index.html">Pillars</a></li>
+      <li><a href="index.html">Pillars</a></li>
       <li><a href="../compare/index.html">Compare</a></li>
     </ul>
   </div>
 </nav>
-
-<div class="page-hero compact" style="border-bottom: 4px solid #c9952a">
+<div class="page-hero compact" style="border-bottom:4px solid #c9952a">
   <div class="hero-eyebrow">
     <a href="../foundations.html#freedom-to-thrive" style="color:rgba(255,255,255,.6);text-decoration:none">
       Foundation V: Freedom to Thrive
@@ -32,59 +149,2057 @@
   </div>
   <h1 class="hero-title" style="font-size:clamp(1.8rem,5vw,2.8rem)">Healthcare</h1>
   <div class="hero-divider"><span>★ ★ ★</span></div>
-  <p class="hero-statement" style="font-size:1rem;max-width:620px;margin:0 auto">Healthcare is a right. No one should go bankrupt, go without, or die because they couldn't afford care.</p>
+  <p class="hero-statement" style="font-size:1rem;max-width:680px;margin:0 auto">Define a comprehensive healthcare system that treats healthcare as a guaranteed right, not a privilege—ensuring universal access to medically necessary care while protecting patients from denial, delay, fragmentation, an</p>
 </div>
+<nav class="pil-snav" id="pil-snav"><ul><li><a href="#pil-intro">Overview</a></li><li><a href="#pil-problem">The Problem</a></li><li><a href="#pil-reform">Reform Areas</a></li><li><a href="#pil-policy">Policy Rules</a></li><li><a href="#pil-research">Research</a></li><li><a href="#pil-related">Related</a></li></ul></nav>
+<section class="bg-parchment ruled" id="pil-intro">
+<div class="wrap">
+  <div class="stats-bar">
+  <div class="stat-item"><span class="stat-num">184</span><span class="stat-label">Total Rules</span></div>
+  <div class="stat-item"><span class="stat-num" style="color:#1e8449">2</span><span class="stat-label">Active</span></div>
+  <div class="stat-item"><span class="stat-num" style="color:#c9952a">0</span><span class="stat-label">Partial</span></div>
+  <div class="stat-item"><span class="stat-num" style="color:#888">182</span><span class="stat-label">Proposed</span></div>
+</div>
+  <div class="pil-intro">
+    <div>
+      <h2 style="color:#c9952a;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.06em">Purpose</h2>
+      <p>Define a comprehensive healthcare system that treats healthcare as a guaranteed right, not a privilege—ensuring universal access to medically necessary care while protecting patients from denial, delay, fragmentation, and extractive insurance practices. This pillar establishes the structural, coverage, operational, and transition-state standards required to move toward single-payer universal healthcare while immediately improving care quality, access, and affordability.</p>
+    </div>
+    <div>
+      <h2 style="color:#c9952a;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.06em">Core Principle</h2>
+      <p><strong>Healthcare must be treated as a guaranteed right, not a privilege.</strong> Every person in the United States—citizen and long-term resident alike—must have access to comprehensive, medically necessary care without financial barriers, geographic restrictions, or administrative denials that undermine health outcomes. Coverage decisions must be grounded in evidence-based medicine, free from political interference, and designed to prioritize patient health over cost reduction or commercial interests.</p>
+    </div>
+  </div>
+</div>
+</section>
+<section class="bg-dark on-dark ruled" id="pil-problem">
+<div class="wrap" style="margin-bottom:0">
+  <h2 style="color:#c9952a">The Problem It Solves</h2>
+</div>
+<div class="wrap"><p>The U.S. healthcare system is broken by design. Millions lack coverage or face inadequate insurance that denies, delays, or restricts necessary care through labyrinthine prior authorization systems, narrow networks, high deductibles, and opaque denial processes. Insurance companies prioritize profit over patient outcomes, using automated systems and procedural traps to avoid payment. Mental healthcare is systematically under-covered despite legal parity requirements. Drug pricing is unregulated, leading to life-threatening shortages and unaffordable medications. Rural and underserved communities face severe access gaps. Reproductive healthcare, including abortion and contraception, is under constant political attack. Emergency care bankrupts families. The system is fragmented, inequitable, and dangerous.</p>
+<p>This pillar solves these problems by establishing:</p>
+<ul>
+<li><strong>Universal single-payer healthcare</strong> as the long-term structural goal</li>
+<li><strong>Immediate transition-state protections</strong> to prevent harm while universal care is implemented</li>
+<li><strong>Comprehensive coverage mandates</strong> that include mental health, reproductive care, chronic conditions, preventive care, and disability-related services</li>
+<li><strong>Strict limits on denials and delays</strong>, with transparency requirements, appeal processes, and penalties for repeated wrongful denials</li>
+<li><strong>AI governance</strong> to ensure that automated systems support—but never replace—qualified human clinical judgment, and cannot be used to deny medically necessary care</li>
+<li><strong>Drug pricing and supply chain protections</strong> to ensure reliable access to medications, including controlled substances for legitimate medical need</li>
+<li><strong>Network adequacy standards</strong> requiring nationwide access rather than narrow regional networks</li>
+<li><strong>Mental health parity</strong> that includes talk therapy, psychiatric care, crisis services, and emerging evidence-based treatments like psychedelic therapy</li>
+<li><strong>Telehealth expansion</strong> to reduce geographic barriers</li>
+<li><strong>Emergency care guarantees</strong> with no-cost access to ambulance services and follow-up care</li>
+<li><strong>Research funding</strong> for neglected conditions that lack commercial incentives</li>
+<li><strong>Rehabilitation and treatment standards</strong> to ban abusive practices and expand voluntary, evidence-based care</li>
+</ul></div>
+</section>
+<section class="bg-cream ruled" id="pil-reform">
+<div class="wrap" style="margin-bottom:0">
+  <h2 style="color:#c9952a">Key Reform Areas</h2>
+</div>
+<div class="wrap"><p style="margin-bottom:1rem">### Universal Coverage and Transition Protections
 
+The long-term goal is <strong>single-payer universal healthcare</strong> with a single plan for all, eliminating tiered coverage and insurance fragmentation (HLT-COV-001 through HLT-COV-003). Until this is achieved, <strong>transition-state protections</strong> require aggressive regulation of existing coverage systems to prevent denial, delay, and extractive practices (HLT-TRN-001, HLT-TRN-002). Transition reforms must improve care immediately without weakening or delaying the universal care goal.
+
+Coverage is extended to citizens and long-term residents, with residency requirements for elective care and exceptions for severe conditions (HLT-ACC-001 through HLT-ACC-003). This ensures universal access while managing system capacity during implementation.</p><div class="reform-grid"><div class="reform-card"><h3>Coverage Mandates and Denial Protections</h3><p>Coverage systems must include a <strong>broad mandatory floor of medically necessary care</strong> including preventive, acute, chronic, reproductive, mental, and disability-related care (HLT-COV-022). Coverage rules must be written in clear language and interpreted in favor of access where a</p></div>
+<div class="reform-card"><h3>Insurance Reform: Prior Authorization, Timelines, and Appeals</h3><p><strong>Prior authorization</strong> requirements must be strictly limited to categories with clear evidence of necessity and cannot be used indiscriminately across routine care (HLT-PAU-001). Prior authorization systems must be transparent, clinically justified, and easy to navigate (HLT-PAU</p></div>
+<div class="reform-card"><h3>Drug Pricing, Access, and Supply Chain</h3><p>Drug coverage systems must include broad access to medically necessary prescriptions and cannot use formularies as hidden denial systems (HLT-RX-001). Patients must have fast and meaningful exception pathways when formulary restrictions conflict with individualized medical need (</p></div>
+<div class="reform-card"><h3>Mental Health Parity and AI Safeguards</h3><p>Mental healthcare must be included (HLT-MHC-001) with full parity: coverage systems cannot impose narrower networks, harsher utilization controls, or lower practical access for mental healthcare than for physical healthcare (HLT-COV-030). Coverage must include talk therapy, psych</p></div>
+<div class="reform-card"><h3>Network Adequacy and Telehealth</h3><p>Health plans must maintain <strong>adequate networks</strong> for all covered services including specialty care, mental healthcare, emergency care, and chronic-condition management (HLT-NET-001). Health plan networks must function <strong>nationally</strong> rather than trapping people in narrow regional </p></div>
+<div class="reform-card"><h3>Emergency Care and Cost Protections</h3><p><strong>Emergency care</strong> must be free for all (HLT-EMS-001), including ambulance services and follow-up care (HLT-EMS-002). This eliminates one of the most common sources of catastrophic medical debt.</p></div>
+<div class="reform-card"><h3>Reproductive Healthcare</h3><p>Coverage systems must include comprehensive reproductive care—abortion, contraception, gender-affirming care, and protection against forced or non-consensual surgeries for intersex babies. Reproductive healthcare is explicitly included in the mandatory floor of medically necessar</p></div>
+<div class="reform-card"><h3>Research Priorities and Neglected Conditions</h3><p>Public healthcare and research policy must <strong>increase funding for neglected conditions, medications, and treatment gaps</strong> that lack commercial incentives but have significant public-health impact (HLT-RSR-001). Research priorities should include stigmatized or less commercially a</p></div>
+<div class="reform-card"><h3>Rehabilitation and Substance Use Treatment</h3><p>National rehabilitation standards must require evidence-based treatment (HLT-REB-002) and ban abusive rehab practices (HLT-REB-003). Rehabilitation systems must be transparent (HLT-REB-004), accessible (HLT-REB-005), and subject to oversight and audits (HLT-REB-006). Voluntary tr</p></div>
+<div class="reform-card"><h3>Transparency and Oversight</h3><p>Coverage entities must publicly report <strong>denial rates, appeal outcomes, prior authorization burden, network adequacy failures, and major access complaints</strong> in standardized formats (HLT-OVR-001). Healthcare oversight bodies must have authority to investigate systemic denial, dela</p></div>
+</div></div>
+</section>
 <section class="bg-parchment ruled">
 <div class="wrap">
-  <h2>Why This Matters</h2>
-  <p style="font-size:1.05rem;line-height:1.8">The United States spends more on healthcare than any other wealthy nation and achieves worse outcomes by almost every measure. The reason is not a mystery: we have organized healthcare as a profit-generating industry rather than a public good.</p>
+  <details class="design-logic">
+    <summary>Design Logic — How These Rules Work Together</summary>
+    <div class="design-body"><p>The healthcare pillar is structured around <strong>184 rules</strong> across <strong>20 family codes</strong>, organized to address every layer of the healthcare system—from high-level structural design to granular operational safeguards. This comprehensive framework reflects the reality that piecemeal reform is insufficient: meaningful healthcare justice requires addressing coverage mandates, denial processes, AI systems, drug access, mental health, network adequacy, cost-sharing, employer obligations, emergency services, appeals, transparency, research priorities, and transition-state protections simultaneously.</p>
+<h3>Family Structure</h3>
+<p>The 20 family codes group rules into logical reform areas:</p>
+<ul>
+<li><strong>OVR (Overview, 4 rules):</strong> Transparency, oversight, and enforcement mechanisms</li>
+<li><strong>COV (Coverage, 30 rules):</strong> Core coverage mandates, denial limits, pre-existing condition protections, and mandatory care floors</li>
+<li><strong>TRN (Transition, 2 rules):</strong> Immediate protections required during the transition to universal single-payer care</li>
+<li><strong>ACC (Access, 3 rules):</strong> Coverage eligibility for citizens and long-term residents</li>
+<li><strong>EMS (Emergency Services, 2 rules):</strong> Free emergency care including ambulance and follow-up</li>
+<li><strong>AI (AI in Healthcare, 32 rules):</strong> Comprehensive AI governance to ensure safety, accountability, and protection against automated denials</li>
+<li><strong>MHC (Mental Health Care, 47 rules):</strong> Mental health parity, AI protections, crisis services, and safeguards against misuse in coercive settings</li>
+<li><strong>NET (Network, 4 rules):</strong> Nationwide network adequacy and out-of-network protections</li>
+<li><strong>CST (Cost, 4 rules):</strong> Cost-sharing limits, deductible protections, and health spending tools</li>
+<li><strong>EMP (Employer, 4 rules):</strong> Employer coverage obligations, premium payment requirements, and small business supports</li>
+<li><strong>PAU (Patient Autonomy/Prior Authorization, 4 rules):</strong> Prior authorization limits, transparency, and continuity of care protections</li>
+<li><strong>APL (Appeals, 4 rules):</strong> Fast, independent appeal processes with penalties for wrongful denials</li>
+<li><strong>RX (Prescriptions, 11 rules):</strong> Medication access, formulary protections, controlled substance quotas, and step-therapy limits</li>
+<li><strong>PHR (Pharmacy, 3 rules):</strong> Generic drug quality, allergen bans, supply chain traceability</li>
+<li><strong>RSR (Research, 3 rules):</strong> Funding for neglected conditions and public health priorities</li>
+<li><strong>REB (Rehabilitation, 7 rules):</strong> National standards, evidence-based treatment, transparency, and bans on abusive practices</li>
+<li><strong>STD (Standards, 13 rules):</strong> Evidence-based coverage, maximum wait times, timeline requirements, and addiction treatment standards</li>
+<li><strong>SUP (Supplements, 4 rules):</strong> Supplement research, labeling, lab transparency, and quality standards</li>
+<li><strong>TEL (Telehealth, 2 rules):</strong> Telemedicine without regional restrictions</li>
+<li><strong>TRL (Trials/Legislation, 1 rule):</strong> Streamlined approvals and trials for new treatments</li>
+</ul>
+<h3>AI and Mental Health: A Deep Dive</h3>
+<p>Two of the largest family groups—<strong>AI (32 rules)</strong> and <strong>MHC (47 rules)</strong>—reflect the critical importance of protecting patients from emerging risks posed by automated systems and ensuring mental health parity.</p>
+<p><strong>AI in Healthcare</strong> is treated as a high-risk domain requiring strict regulation. The framework establishes that AI systems may support but never replace licensed medical professionals in diagnosis, treatment decisions, or patient care. Critically, <strong>AI may not be used to deny, restrict, or limit medically necessary care</strong>—any denial decision must be made directly and independently by a qualified human reviewer exercising independent clinical judgment. AI systems cannot serve as the primary basis for denials, and absence of AI approval cannot be used to justify denial. This prevents insurers from using "AI didn't flag it" as a procedural trap.</p>
+<p>AI systems must meet strong evidence standards for safety, efficacy, and bias before deployment, with continuous monitoring for errors and adverse outcomes. Patients have the right to receive care from human providers and must be informed when AI is used in their care, with opt-out rights where feasible. Healthcare data used by AI cannot be repurposed for advertising, profiling, or commercial exploitation. Training data must meet strict ethical and consent standards, with safeguards against re-identification. AI systems must fail safely and defer to human providers when uncertain.</p>
+<p><strong>Mental Health Care</strong> protections are even more extensive, recognizing the unique vulnerabilities and historical under-coverage of mental health services. Mental healthcare must be included on full parity with physical healthcare, covering talk therapy, psychiatric care, crisis services, and medically appropriate longer-term treatment. Insurers cannot impose narrower networks, harsher utilization controls, or lower practical access for mental health than for physical health.</p>
+<p>The mental health AI rules address the specific dangers of AI systems in psychiatric and emotional care contexts. AI may not replace licensed clinicians in diagnosis, crisis assessment, or involuntary treatment decisions. AI cannot serve as the sole decision-maker in suicide risk assessment or emergency mental health response. AI systems marketed for mental health support cannot deceptively present themselves as human therapists or cultivate emotional dependency. Special protections are required for minors, with outright bans on conversational AI for children under 8 years old and graduated age-based restrictions for older minors.</p>
+<p>Mental health AI data is treated as highly sensitive and cannot be sold, shared for advertising, or used by employers, insurers, schools, or landlords to deny opportunity. AI systems may not be used coercively in schools, workplaces, prisons, or public benefits systems without strict legal safeguards. Where mental health AI is deployed, it must include clear escalation pathways to human crisis resources and may not provide false reassurance or simulate certainty beyond validated capability.</p></div>
+  </details>
 </div>
 </section>
-
-<section class="bg-dark on-dark ruled">
-<div class="wrap" style="display:grid;grid-template-columns:1fr 1fr;gap:2rem">
-  <div>
-    <h2 style="color:#c9952a">What It Demands</h2>
-    <ul style="list-style:disc;padding-left:1.2rem;color:rgba(255,255,255,.82)">
-        <li>Universal healthcare coverage — no gaps, no networks, no prior authorizations for medically necessary care</li>
-        <li>Medicare drug price negotiation extended to all medications, with price caps aligned to peer nations</li>
-        <li>Full mental health and substance use parity: same coverage, same cost-sharing, same access as physical health</li>
-    </ul>
-  </div>
-  <div>
-    <h2 style="color:#c9952a">What It Rejects</h2>
-    <ul style="list-style:disc;padding-left:1.2rem;color:rgba(255,255,255,.82)">
-        <li>Medical bankruptcy as an acceptable outcome in a wealthy nation</li>
-        <li>Drug pricing that charges Americans three to ten times what other countries pay for the same medications</li>
-        <li>A mental health system so underfunded that most Americans cannot access care when they need it</li>
-    </ul>
-  </div>
-</div>
-</section>
-
-<section class="bg-cream ruled">
+<section class="bg-cream ruled" id="pil-policy">
 <div class="wrap">
-  <h2>Key Policy Points</h2>
-  <ol style="padding-left:1.4rem;font-size:1rem;line-height:2">
-          <li>Universal coverage</li>
-          <li>Drug price negotiation</li>
-          <li>Mental health parity</li>
-  </ol>
-  <div style="margin-top:2.5rem;display:flex;gap:1rem;flex-wrap:wrap">
-    <a href="../foundations.html#freedom-to-thrive" class="btn-primary" style="background:#c9952a">← Foundation V: Freedom to Thrive</a>
-    <a href="index.html" class="btn-primary" style="background:var(--navy)">All Pillars</a>
+  <h2 style="color:#c9952a">Full Policy Platform</h2>
+  <p style="font-size:.95rem;color:#555;margin-bottom:1.5rem">
+    Every rule in this pillar, organized by policy area.
+    <strong style="color:#1e8449">Active</strong> rules are current platform commitments.
+    <strong style="color:#c9952a">Partial</strong> rules are in development.
+    <strong style="color:#888">Proposed</strong> rules are planned for future inclusion.
+  </p>
+  <div class="policy-family" id="fam-acc">
+  <div class="family-header">
+    <span class="family-code">ACC</span>
+    <span class="family-title">Access and Eligibility</span>
+    <span class="family-count">0/3 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-ACC-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Coverage for citizens and long-term residents</p>
+  
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-ACC-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Residency requirement for elective care</p>
+  
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-ACC-003</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Exception for severe conditions</p>
+  
+  
+</div>
   </div>
 </div>
+<div class="policy-family" id="fam-ai">
+  <div class="family-header">
+    <span class="family-code">AI</span>
+    <span class="family-title">AI in Healthcare</span>
+    <span class="family-count">2/32 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-AI-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">High-risk AI classification</p>
+  <p class="rule-stmt">AI systems in healthcare must be treated as high-risk systems requiring strict standards for safety efficacy accountability and patient protection</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-AI-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">AI as support, not replacement</p>
+  <p class="rule-stmt">AI systems may support but not replace licensed medical professionals in diagnosis treatment decisions or patient care where such care is medically required</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-AI-003</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Clinical decision support limits</p>
+  <p class="rule-stmt">AI systems may be used for clinical decision support only where they assist rather than substitute for physician judgment</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-AI-004</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Evidence standards before deployment</p>
+  <p class="rule-stmt">AI systems must meet strong evidence standards for safety efficacy and bias before being used in clinical settings</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-AI-005</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Continuous monitoring requirement</p>
+  <p class="rule-stmt">Deployed healthcare AI systems must be continuously monitored for errors bias and adverse outcomes</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-AI-006</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">No independent diagnosis or prescription</p>
+  <p class="rule-stmt">AI systems may not independently diagnose or prescribe treatment without qualified human oversight and accountability</p>
+  
+</div>
+<div class="rule-card status-updated">
+  <div class="rule-header">
+    <code class="rule-id">HLT-AI-007</code>
+    <span class="rule-badge">Updated</span>
+  </div>
+  <p class="rule-title">AI may not deny care</p>
+  <p class="rule-stmt">AI systems may not be used to deny restrict or limit medically necessary care; any decision that would result in denial must be made directly and independently by a qualified human reviewer</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-AI-007A</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Independent clinical judgment required</p>
+  <p class="rule-stmt">Human reviewers must exercise independent clinical judgment and may not rely solely on AI-generated recommendations when making decisions that affect access to care</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-AI-007B</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">AI for approval only, not denial</p>
+  <p class="rule-stmt">AI systems may be used to assist or expedite approval of care but may not be used as the primary basis for denial restriction or reduction of care</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-AI-007C</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Prior human review for denials</p>
+  <p class="rule-stmt">Human review must occur prior to any denial decision and may not be deferred to post-decision appeal processes</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-AI-007D</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Absence of AI approval not grounds for denial</p>
+  <p class="rule-stmt">Absence of AI approval or recommendation may not be used as evidence justification or implicit basis for denial restriction or limitation of care</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-AI-007E</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Independent evaluation required for denials</p>
+  <p class="rule-stmt">All denial decisions must be based on independent clinical evaluation and evidence and may not rely on absence of AI support or AI-generated prioritization</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-AI-007F</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">No systemic bias from AI prioritization</p>
+  <p class="rule-stmt">AI systems used to assist approvals must not create systemic bias in review processes that increases likelihood of denial for cases not flagged or prioritized by AI</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-AI-007G</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Equal human consideration for non-AI-flagged cases</p>
+  <p class="rule-stmt">Case review systems must ensure that requests not prioritized or flagged by AI receive equal and timely human consideration</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-AI-008</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">No opaque triage decisions</p>
+  <p class="rule-stmt">AI systems may not make opaque triage or prioritization decisions that materially affect access to care without explainability and oversight</p>
+  
+</div>
+<div class="rule-card status-updated">
+  <div class="rule-header">
+    <code class="rule-id">HLT-AI-009</code>
+    <span class="rule-badge">Updated</span>
+  </div>
+  <p class="rule-title">AI may not prioritize cost over outcomes</p>
+  <p class="rule-stmt">Coverage decision-making entities must not use AI systems to prioritize cost reduction over patient health outcomes or to override licensed clinical judgment</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-AI-010</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Access to explanations and appeals</p>
+  <p class="rule-stmt">Patients and providers must have access to explanations and appeal processes for AI-influenced coverage decisions</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-AI-011</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Right to human care</p>
+  <p class="rule-stmt">Patients have the right to receive care from qualified human providers and may not be forced into AI-only care pathways</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-AI-012</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Informed consent and opt-out</p>
+  <p class="rule-stmt">Patients must be informed when AI systems are used in their care and must be able to opt out where feasible</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-AI-013</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Strict data protections</p>
+  <p class="rule-stmt">Healthcare data used by AI systems must be treated as highly sensitive with strict protections against misuse or unauthorized access</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-AI-014</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">No commercial data exploitation</p>
+  <p class="rule-stmt">Healthcare data may not be used for advertising profiling or unrelated commercial purposes</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-AI-015</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Training data ethical standards</p>
+  <p class="rule-stmt">Training data for healthcare AI must meet strict ethical legal and consent standards including safeguards against re-identification</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-AI-016</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Fail-safe design</p>
+  <p class="rule-stmt">Healthcare AI systems must fail safely and defer to human providers when uncertain or operating outside validated scope</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-AI-017</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">No unwarranted certainty</p>
+  <p class="rule-stmt">AI systems may not present outputs with unwarranted certainty in clinical contexts where uncertainty materially affects outcomes</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-AI-018</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Bias evaluation and mitigation</p>
+  <p class="rule-stmt">Healthcare AI systems must be evaluated and mitigated for bias across race gender socioeconomic status and other protected characteristics</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-AI-019</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">No disparity worsening</p>
+  <p class="rule-stmt">AI deployment must not worsen disparities in healthcare access or outcomes</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-AI-020</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">AI for research acceleration</p>
+  <p class="rule-stmt">AI may be used to accelerate medical research and drug development provided it meets safety transparency and ethical standards</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-AI-021</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Research funding for neglected conditions</p>
+  <p class="rule-stmt">Increase funding for research into under-studied conditions treatments and medications including diseases that are historically neglected or lack commercial incentives</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-AI-022</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Priority for underfunded diseases</p>
+  <p class="rule-stmt">Public funding priorities must include diseases and conditions that are prevalent but underfunded including sexually transmitted infections chronic conditions and non-commercial research areas</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-AI-023</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Science-based AI policy</p>
+  <p class="rule-stmt">Healthcare AI policy and approvals must be grounded in transparent evidence-based science and protected from political ideological or commercial distortion</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-AI-024</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Safe AI integration</p>
+  <p class="rule-stmt">AI systems must be integrated into healthcare systems in ways that preserve safety accountability and continuity of care</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-AI-025</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Interoperability with privacy protections</p>
+  <p class="rule-stmt">Healthcare AI systems should support interoperability and data portability without compromising privacy or security</p>
+  
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-apl">
+  <div class="family-header">
+    <span class="family-code">APL</span>
+    <span class="family-title">Appeals</span>
+    <span class="family-count">0/4 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-APL-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Fast, meaningful, independent appeals</p>
+  <p class="rule-stmt">Patients and providers must have access to fast meaningful and independent appeal processes for adverse coverage or service decisions</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-APL-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Urgent appeal timelines</p>
+  <p class="rule-stmt">Appeals involving urgent medically necessary treatment must be resolved on timelines that prevent avoidable deterioration injury or death</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-APL-003</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Independent external review</p>
+  <p class="rule-stmt">Independent external review must be available for contested denials and may not be controlled by the same entity that issued the denial</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-APL-004</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Pattern review and penalties</p>
+  <p class="rule-stmt">Successful appeals should trigger review of the underlying denial patterns and potential penalties for repeated wrongful denials</p>
+  
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-cov">
+  <div class="family-header">
+    <span class="family-code">COV</span>
+    <span class="family-title">Coverage</span>
+    <span class="family-count">0/30 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-COV-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Ban tiered healthcare coverage</p>
+  
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-COV-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Single plan for all</p>
+  
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-COV-003</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Single payer healthcare</p>
+  
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-COV-005</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Tighter denial limits</p>
+  <p class="rule-stmt">Establish tighter overall rules limiting denial of healthcare coverage or service</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-COV-006</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Overhaul insurance to reduce denials</p>
+  <p class="rule-stmt">Until universal healthcare is implemented overhaul health insurance to reduce denials delays and gaps in coverage</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-COV-007</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Faster coverage decision timelines</p>
+  <p class="rule-stmt">Require faster timelines for healthcare coverage decisions and prior authorization determinations</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-COV-008</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Expedited appeal processes</p>
+  <p class="rule-stmt">Require expedited appeal processes for denials of healthcare coverage or service</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-COV-009</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Increase required coverage</p>
+  <p class="rule-stmt">Increase required coverage of medicines procedures and medically necessary treatments</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-COV-010</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Protect pre-existing condition bans</p>
+  <p class="rule-stmt">Protect and strengthen bans on denial of coverage based on pre-existing conditions</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-COV-011</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Expand coverage for under-covered conditions</p>
+  <p class="rule-stmt">Expand required coverage for conditions that are often under-covered including obesity</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-COV-012</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Require mental healthcare coverage</p>
+  <p class="rule-stmt">Require coverage of mental healthcare including talk therapy</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-COV-013</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Psychedelic therapy coverage</p>
+  <p class="rule-stmt">Require coverage of psychedelic therapy where medically appropriate and supported by evidence and law</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-COV-014</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Nationwide in-network care</p>
+  <p class="rule-stmt">Require health plans to provide nationwide in-network care rather than only regional networks</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-COV-015</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Expand HSA-style tools</p>
+  <p class="rule-stmt">Expand HSA-style health spending cards or equivalent healthcare spending access tools to everyone rather than limiting them to high-deductible plans</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-COV-016</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Ban high-deductible-only plans</p>
+  <p class="rule-stmt">Ban employers from offering only high-deductible health insurance plans</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-COV-017</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Employers pay all premiums</p>
+  <p class="rule-stmt">Require employers to pay all health insurance premiums subject to defined exceptions carveouts and subsidies for small businesses</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-COV-018</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Fair coverage processes</p>
+  <p class="rule-stmt">Healthcare coverage or service may not be denied restricted or delayed except through fair transparent timely and medically grounded review processes</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-COV-019</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Clear standards for denials</p>
+  <p class="rule-stmt">Any adverse coverage decision must be based on clear medical standards and individualized review rather than blanket exclusions automated inference or procedural traps</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-COV-020</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Public reporting of denial rates</p>
+  <p class="rule-stmt">Denial rates delay patterns and reversal rates must be publicly reported and subject to oversight and enforcement</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-COV-021</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Penalties for repeated unjustified denials</p>
+  <p class="rule-stmt">Repeated unjustified denial or delay of medically necessary care must trigger penalties corrective action and possible loss of plan participation authority</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-COV-022</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Mandatory care floor</p>
+  <p class="rule-stmt">Coverage systems must include a broad mandatory floor of medically necessary care including preventive acute chronic reproductive mental and disability-related care</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-COV-023</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">No vague exclusions</p>
+  <p class="rule-stmt">Coverage exclusions may not be written so broadly or vaguely that they undermine the practical availability of necessary care</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-COV-024</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Clear language and pro-access interpretation</p>
+  <p class="rule-stmt">Coverage rules must be written in clear language and interpreted in favor of access where ambiguity exists in medically necessary care</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-COV-025</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Evidence-based coverage inclusion</p>
+  <p class="rule-stmt">Coverage systems must include medicines procedures therapies and diagnostics that are supported by evidence and medically appropriate for the individual patient</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-COV-026</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Permanent pre-existing condition protections</p>
+  <p class="rule-stmt">Protections against denial or exclusion based on pre-existing conditions must be permanent explicit and difficult to weaken or roll back</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-COV-027</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">No indirect pre-existing condition exclusion</p>
+  <p class="rule-stmt">Coverage systems must not use pre-existing-condition logic indirectly through pricing network design utilization controls or exclusionary administration</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-COV-028</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Expand historically under-covered conditions</p>
+  <p class="rule-stmt">Coverage requirements must be expanded for conditions that have historically been under-covered or stigmatized including obesity chronic pain sexually transmitted infections and other neglected areas</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-COV-029</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Mental health parity</p>
+  <p class="rule-stmt">Coverage systems must include mental healthcare on parity with physical healthcare including talk therapy psychiatric care crisis services and medically appropriate longer-term treatment</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-COV-030</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">No mental health access discrimination</p>
+  <p class="rule-stmt">Coverage systems may not impose narrower networks harsher utilization controls or lower practical access for mental healthcare than for physical healthcare</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-COV-031</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Emerging evidence-based therapies</p>
+  <p class="rule-stmt">Where evidence and law support it coverage systems should include therapies such as psychedelic-assisted treatment under appropriate medical supervision</p>
+  
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-cst">
+  <div class="family-header">
+    <span class="family-code">CST</span>
+    <span class="family-title">Cost and Cost-Sharing</span>
+    <span class="family-count">0/4 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-CST-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Cost-sharing must not block access</p>
+  <p class="rule-stmt">Deductibles copays and out-of-pocket cost structures must not make covered care practically inaccessible</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-CST-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Regulate cost-sharing for patient protection</p>
+  <p class="rule-stmt">Healthcare cost-sharing rules must be regulated to protect patients from financial shock delay of care and medically harmful underuse</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-CST-003</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Broad health spending tool access</p>
+  <p class="rule-stmt">Health spending cards or equivalent patient-directed tools should be available broadly rather than limited to high-deductible-plan structures</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-CST-004</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">No cost barriers for chronic/preventive care</p>
+  <p class="rule-stmt">Cost-sharing design may not be used to discourage care for chronic conditions disability-related needs or preventive treatment</p>
+  
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-emp">
+  <div class="family-header">
+    <span class="family-code">EMP</span>
+    <span class="family-title">Employer Obligations</span>
+    <span class="family-count">0/4 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-EMP-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">No high-deductible-only employer plans</p>
+  <p class="rule-stmt">Employers may not satisfy healthcare obligations by offering only high-deductible plans that shift unreasonable cost burden onto workers</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-EMP-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Employers pay full premiums</p>
+  <p class="rule-stmt">Employers should be required to pay the full premium cost of employee health coverage subject to clearly defined exceptions carveouts and small-business supports</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-EMP-003</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Small business supports</p>
+  <p class="rule-stmt">Small businesses should receive subsidies public supports or transition assistance to comply with healthcare coverage obligations without destabilization</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-EMP-004</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Prevent underinsurance disguised as coverage</p>
+  <p class="rule-stmt">Employer-based health coverage rules during the transition period must be structured to prevent underinsurance disguised as nominal coverage</p>
+  
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-ems">
+  <div class="family-header">
+    <span class="family-code">EMS</span>
+    <span class="family-title">Emergency Services</span>
+    <span class="family-count">0/2 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-EMS-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Emergency care free for all</p>
+  
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-EMS-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Emergency includes ambulance and follow-up</p>
+  
+  
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-mhc">
+  <div class="family-header">
+    <span class="family-code">MHC</span>
+    <span class="family-title">Mental Health Care</span>
+    <span class="family-count">0/47 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-MHC-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Mental healthcare must be included</p>
+  
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-MHC-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Mental health AI as high-risk</p>
+  <p class="rule-stmt">AI systems in mental health must be regulated as high-risk because they can affect safety autonomy privacy dignity and access to care</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-MHC-003</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">AI may not replace clinicians in high-risk determinations</p>
+  <p class="rule-stmt">AI systems may not replace licensed clinicians in diagnosis crisis assessment involuntary treatment decisions or other high-risk mental health determinations</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-MHC-004</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">No AI-only suicide/crisis decisions</p>
+  <p class="rule-stmt">AI systems may not serve as the sole decision-maker in suicide risk assessment crisis intervention or emergency mental health response</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-MHC-005</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Human accountability required</p>
+  <p class="rule-stmt">A clearly identifiable licensed human professional must remain accountable for all high-risk mental health decisions involving AI systems</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-MHC-006</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">AI as assistive tool only</p>
+  <p class="rule-stmt">AI may be used as an assistive tool in mental healthcare only where it supports rather than substitutes for qualified clinical judgment</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-MHC-007</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Evidence standards for mental health AI</p>
+  <p class="rule-stmt">AI systems used in mental health care must meet strong evidence standards for safety efficacy and bias before deployment</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-MHC-008</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Continuous monitoring for mental health AI</p>
+  <p class="rule-stmt">Mental health AI systems must be continuously monitored for harmful outcomes bias failure modes and adverse effects after deployment</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-MHC-009</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">No deceptive AI therapist presentation</p>
+  <p class="rule-stmt">AI systems marketed for mental health support may not deceptively present themselves as human therapists clinicians or trusted personal relationships</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-MHC-010</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">No emotional dependency cultivation</p>
+  <p class="rule-stmt">AI systems may not be designed to cultivate emotional dependency attachment or compulsive engagement in users seeking mental health support</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-MHC-011</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Clear AI disclosure</p>
+  <p class="rule-stmt">Any AI system offering mental health support must clearly disclose that it is not a human and must state its limits in plain language</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-MHC-012</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Special protections for minors</p>
+  <p class="rule-stmt">Special protections are required for minors using AI systems offering emotional support companionship or mental health-related interaction</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-MHC-013</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Escalation pathways to human care</p>
+  <p class="rule-stmt">Mental health AI systems must include clear escalation pathways to human crisis resources emergency services or licensed care when high-risk indicators are detected</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-MHC-014</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">No false reassurance</p>
+  <p class="rule-stmt">Mental health AI systems may not provide false reassurance or simulate certainty in crisis situations beyond validated capability</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-MHC-015</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Fail safely to human care</p>
+  <p class="rule-stmt">Where mental health AI systems are uncertain or out of scope they must fail safely and direct users to human care rather than improvising unsupported guidance</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-MHC-016</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Enhanced mental health data privacy</p>
+  <p class="rule-stmt">Data generated through AI mental health interactions must be treated as highly sensitive health data with enhanced privacy protections</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-MHC-017</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">No commercial mental health data exploitation</p>
+  <p class="rule-stmt">Mental health AI data may not be sold shared for advertising or used for unrelated profiling or commercial targeting</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-MHC-018</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">No discriminatory use of mental health data</p>
+  <p class="rule-stmt">Mental health data inferred or collected by AI systems may not be used by employers insurers schools or landlords to deny opportunity coverage or access</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-MHC-019</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Explicit informed consent</p>
+  <p class="rule-stmt">Consent for use of mental health AI systems and their data practices must be explicit informed revocable and presented without dark patterns</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-MHC-020</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Evidence required for efficacy claims</p>
+  <p class="rule-stmt">AI systems may not claim mental health efficacy diagnostic power or therapeutic value without scientifically supported evidence appropriate to those claims</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-MHC-021</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Independent evaluation required</p>
+  <p class="rule-stmt">Mental health AI systems must be subject to independent evaluation rather than relying solely on vendor claims or internal testing</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-MHC-022</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Disclose risks and failure modes</p>
+  <p class="rule-stmt">Material risks limitations and known failure modes of mental health AI systems must be publicly disclosed</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-MHC-023</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Right to human mental healthcare</p>
+  <p class="rule-stmt">People must retain a right to access human mental healthcare and may not be forced into AI-only mental health services because of cost convenience or availability policies</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-MHC-024</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Coercive AI deployment safeguards</p>
+  <p class="rule-stmt">AI mental health tools may not be imposed coercively in schools workplaces prisons detention settings or public benefits systems without strict legal safeguards</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-MHC-025</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">No behavioral conformity enforcement</p>
+  <p class="rule-stmt">AI systems may not be used to enforce behavioral conformity or ideological compliance under the guise of mental health support</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-MHC-026</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">School AI risk-scoring restrictions</p>
+  <p class="rule-stmt">Schools may not rely on opaque AI mental health or risk-scoring tools to label discipline or surveil students without strict legal and scientific safeguards</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-MHC-027</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Prison/detention AI restrictions</p>
+  <p class="rule-stmt">Jails prisons detention facilities and similar institutions may not use AI mental health tools to justify isolation restraint forced treatment or punishment without rigorous human review and legal safeguards</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-MHC-028</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Public benefits AI assessment limits</p>
+  <p class="rule-stmt">Public benefits or disability systems may not use opaque AI mental health assessments to deny support or override licensed clinical evaluations</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-MHC-029</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Insurers may not use AI to deny mental health care</p>
+  <p class="rule-stmt">AI systems may not be used by insurers or payers to deny delay or limit mental health care in ways that override licensed clinical judgment without transparent review and appeal</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-MHC-030</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">AI not substitute for licensed care</p>
+  <p class="rule-stmt">AI systems may not be used as a substitute for access to licensed mental health care where such care is medically appropriate</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-MHC-031</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Data retention limits and user control</p>
+  <p class="rule-stmt">Mental health AI systems must implement strict limits on data retention including user control over deletion and limits on persistent memory of sensitive interactions</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-MHC-032</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Training data consent standards</p>
+  <p class="rule-stmt">Training data for mental health AI systems must not include improperly obtained sensitive personal disclosures or confidential therapeutic data</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-MHC-033</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Clear capability limits</p>
+  <p class="rule-stmt">Mental health AI systems must clearly define their role capabilities and limitations and may not imply comprehensive understanding or human-like judgment</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-MHC-034</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">No manipulative behavior modification</p>
+  <p class="rule-stmt">AI systems may not use mental health interactions to manipulate behavior for productivity commercial or institutional objectives without explicit informed consent and safeguards</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-MHC-035</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">No surveillance integration</p>
+  <p class="rule-stmt">Mental health AI systems may not be integrated with surveillance law enforcement or intelligence systems to monitor or profile individuals</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-MHC-036</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Research ethical review standards</p>
+  <p class="rule-stmt">Use of AI mental health systems in experimental or research contexts requires informed consent and appropriate ethical review equivalent to human subjects research standards</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-MHC-037</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Fund independent AI mental health research</p>
+  <p class="rule-stmt">Fund independent research into the short-term and long-term effects of AI systems on mental health including impacts on children adolescents and vulnerable populations</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-MHC-038</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Ban conversational AI for young children</p>
+  <p class="rule-stmt">Ban use of AI systems designed for conversational emotional or behavioral interaction for children under a minimum age threshold such as 8 years old</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-MHC-039</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Graduated age-based AI restrictions</p>
+  <p class="rule-stmt">Establish graduated age-based restrictions for AI systems that simulate social emotional or advisory interaction with increasing safeguards for minors</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-MHC-040</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Minor-accessible AI data limits</p>
+  <p class="rule-stmt">AI systems accessible to minors must include strict limitations on data collection interaction patterns and behavioral influence mechanisms</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-MHC-041</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">No direct-to-consumer mental health AI treatment</p>
+  <p class="rule-stmt">AI systems may not be marketed or deployed as standalone mental health treatment tools directly to consumers outside of clinically supervised contexts</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-MHC-042</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Limited crisis support AI</p>
+  <p class="rule-stmt">Limited use of AI systems for crisis support may be permitted where they are designed solely to provide immediate assistance and escalation to human services such as suicide prevention resources</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-MHC-043</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Clinical data consent for training</p>
+  <p class="rule-stmt">Mental health data from licensed providers therapy sessions or clinical records may not be used for AI training without explicit informed consent from all parties involved</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-MHC-044</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Identifiable clinical data training prohibition</p>
+  <p class="rule-stmt">Use of identifiable clinical mental health data for AI training is prohibited unless strict ethical legal and consent standards are met</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-MHC-045</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Mental health interaction data storage limits</p>
+  <p class="rule-stmt">Mental health data generated through AI interactions may not be stored beyond what is strictly necessary without explicit informed consent and user control</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-MHC-046</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Robust de-identification for training data</p>
+  <p class="rule-stmt">All training data used in mental health AI systems must be de-identified using robust techniques with safeguards against re-identification and ongoing evaluation of anonymization effectiveness</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-MHC-047</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">No re-identification of anonymized data</p>
+  <p class="rule-stmt">AI systems must not be designed or used to re-identify individuals from anonymized mental health data</p>
+  
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-net">
+  <div class="family-header">
+    <span class="family-code">NET</span>
+    <span class="family-title">Network Adequacy</span>
+    <span class="family-count">0/4 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-NET-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Adequate networks for all services</p>
+  <p class="rule-stmt">Health plans must maintain adequate networks for all covered services including specialty care mental healthcare emergency care and chronic-condition management</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-NET-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">National networks required</p>
+  <p class="rule-stmt">Health plan networks must function nationally rather than trapping people in narrow regional structures that block continuity or mobility</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-NET-003</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Out-of-network coverage when network inadequate</p>
+  <p class="rule-stmt">If adequate in-network care is not available within reasonable time and distance standards out-of-network care must be covered at in-network cost to the patient</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-NET-004</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">No patient penalty for network failures</p>
+  <p class="rule-stmt">Patients may not be penalized for obtaining necessary care outside narrow networks when the plan fails to provide meaningful access</p>
+  
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-ovr">
+  <div class="family-header">
+    <span class="family-code">OVR</span>
+    <span class="family-title">Oversight and Transparency</span>
+    <span class="family-count">0/4 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-OVR-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Public reporting of coverage metrics</p>
+  <p class="rule-stmt">Coverage entities must publicly report denial rates appeal outcomes prior authorization burden network adequacy failures and major access complaints in standardized formats</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-OVR-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Oversight authority and enforcement</p>
+  <p class="rule-stmt">Healthcare oversight bodies must have authority to investigate systemic denial delay undercoverage or misleading plan design and impose meaningful penalties</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-OVR-003</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">No hiding behind proprietary claims</p>
+  <p class="rule-stmt">Coverage entities may not hide harmful practices behind proprietary standards trade secrecy or intentionally complex plan language</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-OVR-004</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Corrective action and suspension authority</p>
+  <p class="rule-stmt">Regulators must be empowered to require corrective action restitution or suspension of plan participation where repeated patient harm occurs</p>
+  
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-pau">
+  <div class="family-header">
+    <span class="family-code">PAU</span>
+    <span class="family-title">Patient Autonomy and Prior Authorization</span>
+    <span class="family-count">0/4 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-PAU-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Strict limits on prior authorization</p>
+  <p class="rule-stmt">Prior authorization requirements must be strictly limited to categories with clear evidence of necessity and may not be used indiscriminately across routine care</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-PAU-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Transparent prior authorization systems</p>
+  <p class="rule-stmt">Prior authorization systems must be transparent clinically justified and easy for providers and patients to navigate</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-PAU-003</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Reduce repeated prior authorization burden</p>
+  <p class="rule-stmt">Repeated approval of the same type of medically necessary treatment should reduce or eliminate future prior authorization burdens for similar care</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-PAU-004</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">No prior authorization disruption of continuity</p>
+  <p class="rule-stmt">Prior authorization may not be used to disrupt continuity of care for chronic or ongoing conditions without clear medical justification</p>
+  
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-phr">
+  <div class="family-header">
+    <span class="family-code">PHR</span>
+    <span class="family-title">Pharmacy and Drug Quality</span>
+    <span class="family-count">0/3 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-PHR-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Generic drug quality standards</p>
+  
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-PHR-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Ban unnecessary allergens</p>
+  
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-PHR-003</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Supply chain traceability</p>
+  
+  
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-reb">
+  <div class="family-header">
+    <span class="family-code">REB</span>
+    <span class="family-title">Rehabilitation and Treatment Standards</span>
+    <span class="family-count">0/7 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-REB-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">National rehab standards</p>
+  
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-REB-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Evidence-based rehab required</p>
+  
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-REB-003</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Ban abusive rehab practices</p>
+  
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-REB-004</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Rehab transparency</p>
+  
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-REB-005</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Accessible rehab treatment</p>
+  
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-REB-006</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Rehab oversight and audits</p>
+  
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-REB-007</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Expand voluntary treatment</p>
+  
+  
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-rsr">
+  <div class="family-header">
+    <span class="family-code">RSR</span>
+    <span class="family-title">Research Priorities</span>
+    <span class="family-count">0/3 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-RSR-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Increase funding for neglected conditions</p>
+  <p class="rule-stmt">Public healthcare and research policy must increase funding for neglected conditions medications and treatment gaps that lack commercial incentives but have significant public-health impact</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-RSR-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Priority for stigmatized conditions</p>
+  <p class="rule-stmt">Research priorities should include stigmatized or less commercially attractive conditions including sexually transmitted infections chronic conditions and under-studied medication needs</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-RSR-003</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Resist commercial research bias</p>
+  <p class="rule-stmt">Healthcare governance should not allow commercial buzz or market hype to determine research priority at the expense of real public-health need</p>
+  
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-rx">
+  <div class="family-header">
+    <span class="family-code">RX</span>
+    <span class="family-title">Prescription Access and Controlled Substances</span>
+    <span class="family-count">0/11 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-RX-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Broad prescription access required</p>
+  <p class="rule-stmt">Drug coverage systems must include broad access to medically necessary prescriptions and may not use formularies as hidden denial systems</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-RX-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Fast formulary exception pathways</p>
+  <p class="rule-stmt">Patients must have fast and meaningful exception pathways when formulary restrictions conflict with individualized medical need</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-RX-003</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">No harmful step-therapy loops</p>
+  <p class="rule-stmt">Coverage systems may not force repeated medication failure or step-therapy loops where doing so is medically harmful or unreasonable</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-RX-004</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Coverage for neglected condition medications</p>
+  <p class="rule-stmt">Coverage for medications should include neglected or underfunded conditions where evidence supports medical necessity and public health importance</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-RX-005</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Controlled substance quotas ensure access</p>
+  <p class="rule-stmt">Production quotas and regulatory limits on controlled medications must be set at levels that ensure reliable patient access to medically necessary treatment and may not create artificial shortages</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-RX-006</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">No artificial medication shortages</p>
+  <p class="rule-stmt">Regulatory systems may not restrict supply of approved medications in ways that prevent patients with valid prescriptions from obtaining treatment in a timely manner</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-RX-007</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Quotas based on real-world demand</p>
+  <p class="rule-stmt">Controlled substance quotas must be based on real-world medical demand prescribing data and public health needs rather than static limits or overly conservative projections</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-RX-008</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Rapid response to medication shortages</p>
+  <p class="rule-stmt">When shortages of controlled medications occur regulators must act rapidly to adjust quotas supply chains and distribution to restore access</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-RX-009</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">No geographic medication access restrictions</p>
+  <p class="rule-stmt">Patients must be able to access prescribed controlled medications without unreasonable geographic pharmacy or supply restrictions that vary by region</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-RX-010</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Balanced access expansion with safeguards</p>
+  <p class="rule-stmt">Expansion of access to controlled medications must be paired with evidence-based prescribing guidelines monitoring for misuse and safeguards against diversion without restricting legitimate care</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-RX-011</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">No patient-uncontrolled treatment disruption</p>
+  <p class="rule-stmt">Patients receiving ongoing treatment with controlled medications may not have care disrupted due to supply shortages quota limits or administrative barriers beyond their control</p>
+  
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-std">
+  <div class="family-header">
+    <span class="family-code">STD</span>
+    <span class="family-title">Standards and Timelines</span>
+    <span class="family-count">0/13 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-STD-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Coverage must be evidence-based</p>
+  
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-STD-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Protect from partisan interference</p>
+  
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-STD-003</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Minimum service levels</p>
+  
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-STD-004</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Maximum wait times</p>
+  
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-STD-005</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Strict maximum response timelines</p>
+  <p class="rule-stmt">Healthcare coverage decisions and prior authorization determinations must meet strict maximum response timelines</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-STD-006</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Accelerated urgent decision timelines</p>
+  <p class="rule-stmt">Urgent and emergency-related coverage determinations must be made on accelerated timelines sufficient to prevent medical harm</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-STD-007</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Presumptive approval if timelines missed</p>
+  <p class="rule-stmt">If a coverage decision is not made within required timelines the requested care should be presumptively approved unless narrowly defined exceptions apply</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-STD-008</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">No delay as denial strategy</p>
+  <p class="rule-stmt">Administrative delay may not be used as a strategy to avoid payment or discourage medically necessary care</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-STD-009</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Full transparency of evidence</p>
+  
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-STD-010</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Publish dissenting opinions</p>
+  
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-STD-011</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Independent audit systems</p>
+  
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-STD-012</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Treat addiction as medical condition</p>
+  
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-STD-013</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Harm reduction strategies</p>
+  
+  
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-sup">
+  <div class="family-header">
+    <span class="family-code">SUP</span>
+    <span class="family-title">Supplements</span>
+    <span class="family-count">0/4 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-SUP-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Supplement research funding</p>
+  
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-SUP-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Supplement labeling standards</p>
+  
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-SUP-003</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Supplement lab transparency</p>
+  
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-SUP-004</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Minimum supplement quality standards</p>
+  
+  
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-tel">
+  <div class="family-header">
+    <span class="family-code">TEL</span>
+    <span class="family-title">Telehealth</span>
+    <span class="family-count">0/2 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-TEL-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Telemedicine without regional restriction</p>
+  
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-TEL-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Telemedicine as access equalizer</p>
+  
+  
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-trl">
+  <div class="family-header">
+    <span class="family-code">TRL</span>
+    <span class="family-title">Trials and Legislation</span>
+    <span class="family-count">0/1 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-TRL-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Streamlined new treatment approvals</p>
+  <p class="rule-stmt">Approvals and trials for new treatments funded and streamlined</p>
+  
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-trn">
+  <div class="family-header">
+    <span class="family-code">TRN</span>
+    <span class="family-title">Transition State Protections</span>
+    <span class="family-count">0/2 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-TRN-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Regulate transition-state coverage systems</p>
+  <p class="rule-stmt">Until universal single-payer healthcare is implemented all healthcare coverage systems must be regulated to protect patients from denial delay fragmentation and extractive practices</p>
+  
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">HLT-TRN-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Immediate improvement without delay</p>
+  <p class="rule-stmt">Transition-state healthcare reform must be designed to improve care immediately without weakening or delaying the long-term goal of universal single-payer healthcare</p>
+  
+</div>
+  </div>
+</div>
+</div>
 </section>
-
+<section class="bg-dark on-dark ruled" id="pil-research">
+<div class="wrap">
+  <h2 style="color:#c9952a">Research & Context</h2>
+  <div class="research-body" style="color:rgba(255,255,255,.85)"><h3>The Case for Universal Single-Payer Healthcare</h3>
+<p>The United States is the only wealthy nation without universal healthcare, resulting in worse health outcomes, higher costs, and profound inequities. The current system is structured around insurance companies whose business model depends on denying care, minimizing payouts, and extracting maximum premiums while providing minimum coverage. This creates perverse incentives where profitability is inversely correlated with patient health.</p>
+<p>Single-payer universal healthcare—where the government acts as the sole insurer for all medically necessary care—eliminates these incentives. Administrative costs drop dramatically when billing complexity disappears. Bargaining power over drug prices and medical services increases. Universal coverage eliminates the phenomena of medical bankruptcy, coverage gaps during job transitions, and the terrifying calculus of whether one can afford necessary treatment. Countries with single-payer or universal multi-payer systems consistently outperform the U.S. on life expectancy, infant mortality, chronic disease management, and patient satisfaction while spending far less per capita.</p>
+<p>Critics argue that single-payer systems lead to long wait times, rationing, and reduced quality. This is empirically false. Wait times in countries like Canada, the UK, and Scandinavian nations are comparable to or better than U.S. wait times for non-emergency care, and emergency care is faster because everyone has guaranteed access. "Rationing" already exists in the U.S.—it's just rationed by ability to pay rather than by medical need. Quality concerns ignore that the U.S. ranks poorly on most objective health metrics despite spending twice as much per capita as comparable nations.</p>
+<p>The transition to single-payer is politically complex, requiring displacement of an entrenched insurance industry that employs hundreds of thousands and spends billions on lobbying. This pillar acknowledges that transition by establishing immediate protections—aggressive regulation of existing insurers to prevent harm—while building toward the structural goal of universal care. Transition-state reforms are not compromises; they are necessary steps that improve care now while creating the political and operational conditions for full implementation.</p>
+<h3>Insurance Reform: Addressing Denials, Delays, and Prior Authorization Abuse</h3>
+<p>Even before universal care is achieved, the existing insurance system can and must be reformed. Current practices are designed to maximize denials while maintaining plausible deniability. Prior authorization systems require providers to obtain insurer approval before performing medically necessary procedures, creating administrative burdens that delay care, waste physician time, and often result in denials based on cost rather than medical appropriateness. Studies show that prior authorization delays cancer treatments, cardiac interventions, and psychiatric care, leading to worse outcomes and preventable deaths.</p>
+<p>Denial rates vary wildly by insurer, with some plans denying 20-30% of claims initially, knowing that most patients and providers will not appeal. When appeals do occur, reversal rates are high—often 50% or more—demonstrating that initial denials were not medically justified. This is not a bug; it's the system working as designed. Every denied claim is money saved, and the burden of proof falls on the patient or provider to fight back.</p>
+<p>The rules in this pillar address these abuses directly. Prior authorization must be limited to categories with clear evidence of necessity (HLT-PAU-001). Timelines for coverage decisions must be strict, with presumptive approval if timelines are not met (HLT-STD-005, HLT-STD-007). Denial rates, delay patterns, and reversal rates must be publicly reported (HLT-COV-020). Repeated unjustified denial triggers penalties and potential loss of plan participation authority (HLT-COV-021). Independent external review ensures that denials are not simply rubber-stamped by the same entity that issued them (HLT-APL-003).</p>
+<h3>Drug Pricing, Controlled Substance Quotas, and Supply Chain Failures</h3>
+<p>Pharmaceutical pricing in the U.S. is unregulated, leading to life-threatening shortages and unaffordable medications. Drug companies charge Americans significantly more than patients in other countries for identical medications, exploiting the lack of price negotiation by Medicare and the fragmentation of the insurance market. Insulin, a century-old drug that costs a few dollars to produce, is sold for hundreds of dollars per vial, forcing diabetic patients to ration doses or forego treatment entirely.</p>
+<p>Beyond pricing, the regulatory system for controlled substances creates artificial shortages. The DEA sets annual production quotas for medications like Adderall, Ritalin, and opioid pain medications. These quotas are often set conservatively, failing to account for real-world medical demand. When shortages occur, patients with ADHD, chronic pain, or other conditions face treatment disruptions, with devastating consequences for employment, mental health, and quality of life.</p>
+<p>The rules in this pillar address these failures by requiring drug coverage systems to include broad access to medically necessary prescriptions (HLT-RX-001), prohibiting formularies as hidden denial systems, and ensuring fast exception pathways when formulary restrictions conflict with individualized medical need (HLT-RX-002). Critically, production quotas for controlled medications must be set at levels that ensure reliable patient access and may not create artificial shortages (HLT-RX-005). Controlled substance quotas must be based on real-world medical demand, prescribing data, and public health needs (HLT-RX-007). When shortages occur, regulators must act rapidly to restore access (HLT-RX-008).</p>
+<p>Step-therapy requirements—where insurers force patients to try cheaper medications first, even when a physician has already determined they are inappropriate—are prohibited where medically harmful (HLT-RX-003). Patients receiving ongoing treatment with controlled medications cannot have care disrupted due to supply shortages or administrative barriers beyond their control (HLT-RX-011).</p>
+<h3>Mental Health Parity: From Legal Promise to Practical Reality</h3>
+<p>The Mental Health Parity and Addiction Equity Act of 2008 required insurers to cover mental health and substance use treatment on par with physical health coverage. Fifteen years later, parity remains largely a legal fiction. Insurers systematically under-cover mental healthcare through narrower provider networks, harsher utilization controls, higher denial rates, and lower reimbursement rates that drive providers out of network.</p>
+<p>Patients seeking mental health treatment face months-long wait times, out-of-pocket costs for out-of-network providers (because in-network providers are unavailable), and arbitrary session limits. Insurers deny claims for "lack of medical necessity" using opaque criteria that override licensed clinical judgment. Crisis services are under-funded and under-available, leading to psychiatric emergencies being handled by police and emergency rooms rather than appropriate mental health facilities.</p>
+<p>The rules in this pillar enforce true parity by prohibiting insurers from imposing narrower networks, harsher utilization controls, or lower practical access for mental healthcare than for physical healthcare (HLT-COV-030). Coverage must include talk therapy, psychiatric care, crisis services, and medically appropriate longer-term treatment (HLT-COV-029). Where evidence and law support it, coverage should include emerging therapies such as psychedelic-assisted treatment under appropriate medical supervision (HLT-COV-031).</p>
+<p>Enforcement is critical. Public reporting of denial rates, network adequacy, and access complaints (HLT-OVR-001) creates accountability. Oversight bodies must have authority to investigate systemic failures and impose meaningful penalties (HLT-OVR-002). Repeated failures trigger corrective action, restitution, or suspension of plan participation (HLT-OVR-004).</p>
+<h3>AI in Healthcare: Opportunity and Existential Risk</h3>
+<p>AI systems are being deployed rapidly in healthcare settings, from diagnostic assistance tools to automated prior authorization systems. The potential benefits are real: AI can identify patterns in medical imaging that human radiologists miss, predict patient deterioration before clinical symptoms appear, and accelerate drug discovery. But the risks are profound, and current regulatory structures are inadequate.</p>
+<p>The most immediate danger is the use of AI to automate denials. Insurers are increasingly using AI systems to review prior authorization requests and flag cases for denial. These systems are often opaque, unvalidated, and biased. They prioritize cost reduction over patient outcomes. Critically, they allow insurers to claim that denials are "objective" and "data-driven" while concealing the fact that the AI was trained to maximize denials within plausible medical language.</p>
+<p>The rules in this pillar establish that <strong>AI may not be used to deny, restrict, or limit medically necessary care</strong> (HLT-AI-007). Any decision that would result in denial must be made directly and independently by a qualified human reviewer (HLT-AI-007). Human reviewers must exercise independent clinical judgment and may not rely solely on AI-generated recommendations when making decisions that affect access to care (HLT-AI-007A). AI systems may be used to assist or expedite approval of care but may not be used as the primary basis for denial, restriction, or reduction of care (HLT-AI-007B).</p>
+<p>Crucially, <strong>absence of AI approval or recommendation may not be used as evidence, justification, or implicit basis for denial, restriction, or limitation of care</strong> (HLT-AI-007D, HLT-AI-007E). This prevents insurers from using "the AI didn't flag this as appropriate" as a procedural trap to justify denial.</p>
+<p>Beyond denial systems, AI in clinical settings must meet strong evidence standards for safety, efficacy, and bias before deployment (HLT-AI-004). AI systems may support but not replace licensed medical professionals in diagnosis, treatment decisions, or patient care (HLT-AI-002). AI may not independently diagnose or prescribe treatment without qualified human oversight and accountability (HLT-AI-006). Patients have the right to receive care from human providers and may not be forced into AI-only care pathways (HLT-AI-011).</p>
+<p>Healthcare data used by AI systems must be treated as highly sensitive with strict protections against misuse or unauthorized access (HLT-AI-013). Healthcare data may not be used for advertising, profiling, or unrelated commercial purposes (HLT-AI-014). Training data must meet strict ethical, legal, and consent standards, including safeguards against re-identification (HLT-AI-015). AI systems must fail safely and defer to human providers when uncertain (HLT-AI-016).</p>
+<p>AI deployment must not worsen disparities in healthcare access or outcomes (HLT-AI-019). AI systems must be evaluated and mitigated for bias across race, gender, socioeconomic status, and other protected characteristics (HLT-AI-018). Healthcare AI policy and approvals must be grounded in transparent, evidence-based science and protected from political, ideological, or commercial distortion (HLT-AI-023).</p>
+<h3>AI in Mental Health: Unique Dangers and Necessary Safeguards</h3>
+<p>AI systems in mental health contexts present unique dangers that justify the extensive protections in this pillar. Unlike physical health AI, which operates on measurable physiological data, mental health AI operates on subjective, highly contextual emotional and behavioral data. The stakes include not just health outcomes but autonomy, dignity, privacy, and the risk of misuse in coercive settings.</p>
+<p>AI systems marketed for mental health support—chatbots, companion apps, mood trackers—are proliferating with minimal oversight. Many deceptively present themselves as human-like, cultivate emotional dependency, and collect highly sensitive data without adequate privacy protections. Users, especially minors, may disclose suicidal ideation, trauma, or other sensitive information to systems that are not equipped to respond appropriately and may share data with third parties.</p>
+<p>The rules in this pillar establish that AI systems in mental health must be regulated as high-risk (HLT-MHC-002). AI may not replace licensed clinicians in diagnosis, crisis assessment, involuntary treatment decisions, or other high-risk mental health determinations (HLT-MHC-003). AI may not serve as the sole decision-maker in suicide risk assessment, crisis intervention, or emergency mental health response (HLT-MHC-004). A clearly identifiable licensed human professional must remain accountable for all high-risk mental health decisions involving AI systems (HLT-MHC-005).</p>
+<p>AI systems marketed for mental health support may not deceptively present themselves as human therapists, clinicians, or trusted personal relationships (HLT-MHC-009). AI systems may not be designed to cultivate emotional dependency, attachment, or compulsive engagement in users seeking mental health support (HLT-MHC-010). Any AI system offering mental health support must clearly disclose that it is not a human and must state its limits in plain language (HLT-MHC-011).</p>
+<p>Special protections are required for minors (HLT-MHC-012). Conversational AI designed for emotional or behavioral interaction is banned for children under 8 years old (HLT-MHC-038). Graduated age-based restrictions apply to older minors (HLT-MHC-039), with strict limitations on data collection, interaction patterns, and behavioral influence mechanisms (HLT-MHC-040).</p>
+<p>Mental health AI systems must include clear escalation pathways to human crisis resources, emergency services, or licensed care when high-risk indicators are detected (HLT-MHC-013). AI systems may not provide false reassurance or simulate certainty in crisis situations beyond validated capability (HLT-MHC-014). Where uncertain or out of scope, AI systems must fail safely and direct users to human care rather than improvising unsupported guidance (HLT-MHC-015).</p>
+<p>Mental health AI data is treated as highly sensitive health data with enhanced privacy protections (HLT-MHC-016). Mental health AI data may not be sold, shared for advertising, or used for unrelated profiling or commercial targeting (HLT-MHC-017). Mental health data inferred or collected by AI systems may not be used by employers, insurers, schools, or landlords to deny opportunity, coverage, or access (HLT-MHC-018).</p>
+<p>AI systems may not be used coercively in schools, workplaces, prisons, detention facilities, or public benefits systems without strict legal safeguards (HLT-MHC-024, HLT-MHC-026, HLT-MHC-027, HLT-MHC-028). AI systems may not be used to enforce behavioral conformity or ideological compliance under the guise of mental health support (HLT-MHC-025). Schools may not rely on opaque AI mental health or risk-scoring tools to label, discipline, or surveil students (HLT-MHC-026). Jails, prisons, and detention facilities may not use AI mental health tools to justify isolation, restraint, forced treatment, or punishment without rigorous human review and legal safeguards (HLT-MHC-027).</p>
+<p>People retain the right to access human mental healthcare and may not be forced into AI-only mental health services because of cost, convenience, or availability policies (HLT-MHC-023, HLT-MHC-030). AI systems may not be used as a substitute for access to licensed mental health care where such care is medically appropriate (HLT-MHC-030).</p>
+<h3>Telehealth: Expanding Access and Reducing Geographic Barriers</h3>
+<p>Telehealth—medical consultations and services delivered remotely via video, phone, or digital platforms—has the potential to dramatically reduce geographic barriers to care. Rural communities, which face severe shortages of primary care physicians, specialists, and mental health providers, can access care without traveling hours to urban centers. Patients with mobility limitations, chronic conditions requiring frequent check-ins, or mental health needs can receive care more conveniently and consistently.</p>
+<p>The COVID-19 pandemic forced rapid expansion of telehealth, demonstrating its viability and patient acceptance. However, regulatory barriers remain. Many states restrict telehealth practice across state lines, requiring providers to be licensed in the state where the patient is located. This fragments care and limits provider availability. Insurance coverage for telehealth is inconsistent, with some plans covering only limited services or requiring in-person visits for initial consultations.</p>
+<p>The rules in this pillar require telemedicine to be available without regional restriction (HLT-TEL-001), eliminating state-based licensing barriers that prevent patients from accessing providers in other states. Telemedicine should serve as an access equalizer (HLT-TEL-002), particularly for rural and underserved communities. Coverage systems must include telehealth on parity with in-person care, without imposing arbitrary limitations or higher cost-sharing.</p>
+<h3>Emergency Services: Eliminating Medical Debt at the Point of Crisis</h3>
+<p>Emergency care is uniquely coercive—patients cannot shop around, negotiate prices, or decline care when facing life-threatening conditions. Yet emergency care is one of the most common sources of catastrophic medical debt. Ambulance rides cost thousands of dollars and are often out-of-network even when the patient's insurance covers the hospital. Emergency room visits result in surprise bills from out-of-network providers—anesthesiologists, radiologists, specialists—who happen to be working in an in-network hospital. Patients face bills for tens or hundreds of thousands of dollars for emergency surgeries, trauma care, or extended ICU stays.</p>
+<p>The rules in this pillar establish that <strong>emergency care must be free for all</strong> (HLT-EMS-001), including ambulance services and follow-up care (HLT-EMS-002). This eliminates medical debt at the point of crisis and ensures that no one delays calling an ambulance or going to the emergency room because they cannot afford it. Emergency care is funded through the universal healthcare system (long-term goal) or through dedicated public funding (transition state).</p>
+<h3>Reproductive Healthcare: Protecting Autonomy Against Political Interference</h3>
+<p>Reproductive healthcare—including abortion, contraception, gender-affirming care, and protection against forced surgeries for intersex babies—is under constant political attack. The overturning of Roe v. Wade in 2022 eliminated federal protection for abortion rights, leading to state-level bans that endanger lives, force patients to travel hundreds of miles for care, and criminalize providers. Contraception access is threatened by efforts to redefine emergency contraception and IUDs as "abortifacients." Gender-affirming care for transgender individuals faces bans and restrictions framed as "protecting children" but designed to eliminate access for adults as well.</p>
+<p>This pillar establishes that reproductive healthcare is part of the mandatory floor of medically necessary care (HLT-COV-022) and must be protected from political interference (HLT-STD-002). Coverage systems must include abortion, contraception, gender-affirming care, and other reproductive services. Coverage decisions must be evidence-based and may not be restricted by partisan ideology or state-level bans.</p>
+<p>Federal protection for reproductive healthcare is critical to prevent a patchwork of conflicting state laws that create profound inequities. The right to abortion, contraception, and gender-affirming care should not depend on which state one lives in or can afford to travel to. Universal healthcare structures provide the mechanism to ensure nationwide access regardless of state politics.</p>
+<h3>Research Funding: Addressing Neglected Conditions and Commercial Bias</h3>
+<p>Pharmaceutical and medical research is heavily biased toward commercially profitable conditions—cancer, cardiovascular disease, metabolic disorders—while neglecting conditions that are stigmatized, affect smaller populations, or lack wealthy patient advocacy groups. Sexually transmitted infections, despite being widespread and preventable, receive minimal research funding. Chronic pain, obesity, and addiction are under-researched relative to their public health impact. Rare diseases affecting small populations are often ignored because they lack market incentives for drug development.</p>
+<p>The rules in this pillar require public healthcare and research policy to increase funding for neglected conditions, medications, and treatment gaps that lack commercial incentives but have significant public-health impact (HLT-RSR-001). Research priorities should include stigmatized or less commercially attractive conditions (HLT-RSR-002). Healthcare governance must not allow commercial buzz or market hype to determine research priority at the expense of real public-health need (HLT-RSR-003).</p>
+<p>AI may be used to accelerate medical research and drug development, provided it meets safety, transparency, and ethical standards (HLT-AI-020). Funding should support research into under-studied conditions, treatments, and medications, including diseases that are historically neglected or lack commercial incentives (HLT-AI-021, HLT-AI-022).</p>
+<h3>Rehabilitation and Substance Use Treatment: Evidence-Based Care, Not Punishment</h3>
+<p>Substance use disorder is a medical condition, not a moral failing. Yet treatment systems are often punitive, coercive, and ineffective. Many rehabilitation facilities use outdated or abusive practices—forced labor, religious indoctrination, isolation, and pseudoscientific treatments—while claiming to provide evidence-based care. Patients are often court-ordered into these facilities with no choice or oversight. Insurance coverage for addiction treatment is minimal, forcing patients into low-quality or exploitative programs.</p>
+<p>The rules in this pillar establish national rehabilitation standards (HLT-REB-001) requiring evidence-based treatment (HLT-REB-002) and banning abusive practices (HLT-REB-003). Rehabilitation systems must be transparent (HLT-REB-004), accessible (HLT-REB-005), and subject to oversight and audits (HLT-REB-006). Voluntary treatment options should be expanded (HLT-REB-007).</p>
+<p>Addiction must be treated as a medical condition (HLT-STD-012), with harm reduction strategies integrated into care (HLT-STD-013). Harm reduction—including needle exchange programs, supervised consumption sites, and medication-assisted treatment—reduces overdose deaths, disease transmission, and social harms while maintaining dignity and autonomy for people who use drugs. These strategies are evidence-based and proven effective in countries that have implemented them.</p>
+<h3>Rural Healthcare: Addressing Access Gaps and Provider Shortages</h3>
+<p>Rural communities face severe healthcare access gaps. Rural hospitals are closing at alarming rates, forcing residents to travel hours for emergency care. Primary care physicians, specialists, and mental health providers are scarce. Obstetric care is often unavailable, leading to dangerous outcomes for pregnant patients. Pharmacy access is limited, making medication adherence difficult.</p>
+<p>The rules in this pillar address these gaps through multiple mechanisms: nationwide network adequacy requirements ensure that rural patients have access to care without unreasonable travel (HLT-NET-001, HLT-NET-002). Telehealth expansion allows rural patients to access specialists and mental health providers remotely (HLT-TEL-001, HLT-TEL-002). Out-of-network protections ensure that rural patients are not penalized when local in-network providers are unavailable (HLT-NET-003). Emergency care guarantees ensure that rural patients can access ambulance services and emergency rooms without cost barriers (HLT-EMS-001, HLT-EMS-002).</p>
+<p>Universal single-payer healthcare further addresses rural access by eliminating the fragmented insurance market that makes rural healthcare financially unviable. When all patients are covered under a single system, rural hospitals and providers have stable funding and can focus on care delivery rather than billing complexity and insurance negotiations.</p>
+<h3>Employer-Based Coverage: Transition-State Obligations and Long-Term Obsolescence</h3>
+<p>Under the current system, most Americans receive health insurance through their employers. This creates profound vulnerabilities: losing one's job means losing healthcare, often at the moment of greatest need. High-deductible plans shift costs onto workers while nominally providing coverage. Small businesses struggle to afford coverage, forcing them to offer inadequate plans or forgo coverage entirely.</p>
+<p>The rules in this pillar establish employer obligations during the transition period. Employers may not satisfy healthcare obligations by offering only high-deductible plans that shift unreasonable cost burden onto workers (HLT-EMP-001). Employers should be required to pay the full premium cost of employee health coverage, subject to clearly defined exceptions and small-business supports (HLT-EMP-002, HLT-EMP-003). Employer-based coverage rules must be structured to prevent underinsurance disguised as nominal coverage (HLT-EMP-004).</p>
+<p>These rules are transition-state protections. The long-term goal is to eliminate employer-based coverage entirely by moving to universal single-payer healthcare. Employer-based coverage is inefficient, inequitable, and ties healthcare to employment status in ways that reduce labor mobility, trap workers in bad jobs, and create coverage gaps during transitions. Universal healthcare severs this link, providing coverage to all regardless of employment status.</p>
+<h3>Transparency, Oversight, and Enforcement: Making Rights Real</h3>
+<p>Rights without enforcement are aspirations. The comprehensive protections in this pillar require robust transparency, oversight, and enforcement mechanisms to prevent insurers, providers, and AI vendors from finding loopholes or engaging in regulatory arbitrage.</p>
+<p>Coverage entities must publicly report denial rates, appeal outcomes, prior authorization burden, network adequacy failures, and major access complaints in standardized formats (HLT-OVR-001). This data must be accessible, comparable across plans, and regularly updated. Public reporting creates accountability and enables researchers, advocates, and regulators to identify patterns of harm.</p>
+<p>Healthcare oversight bodies must have authority to investigate systemic denial, delay, undercoverage, or misleading plan design and impose meaningful penalties (HLT-OVR-002). Oversight cannot be passive or complaint-driven; it must include proactive investigation, audits, and pattern analysis. Penalties must be severe enough to deter bad behavior—not mere cost-of-doing-business fines.</p>
+<p>Coverage entities cannot hide harmful practices behind proprietary standards, trade secrecy, or intentionally complex plan language (HLT-OVR-003). "Proprietary algorithms" and "trade secrets" are not valid justifications for denying transparency when patient health is at stake. Regulators must be empowered to require disclosure, independent audits, and corrective action regardless of commercial confidentiality claims.</p>
+<p>Regulators must be empowered to require corrective action, restitution, or suspension of plan participation where repeated patient harm occurs (HLT-OVR-004). Restitution means making patients whole—paying denied claims, compensating for delayed care, and covering costs incurred due to wrongful denials. Suspension of plan participation is the ultimate enforcement tool: insurers that repeatedly harm patients lose the privilege of participating in the healthcare system.</p>
+<p>Evidence-based coverage decisions require full transparency (HLT-STD-009), with published dissenting opinions (HLT-STD-010) and independent audit systems (HLT-STD-011). Coverage determinations—what is covered, what is denied, what requires prior authorization—must be based on transparent scientific evidence, not commercial interests or political ideology. Dissenting opinions provide accountability and signal when coverage decisions are contested. Independent audits ensure that evidence review is rigorous and free from conflicts of interest.</p></div>
+</div>
+</section>
+<section class="bg-parchment ruled" id="pil-related">
+<div class="wrap" style="margin-bottom:0">
+  <h2 style="color:#c9952a">Related Pillars</h2>
+  <p style="font-size:.92rem;color:#666;margin-bottom:.5rem">These pillars intersect with and reinforce this one.</p>
+</div>
+<div class="wrap"><div class="related-grid"><a href="pillar-1-rights-and-protections.html" class="related-card"><strong>Pillar 1 (Rights and Protections):</strong><span>Healthcare as a right, reproductive autonomy, bodily autonomy, protection from coercion</span></a>
+<a href="pillar-7-ai-regulation.html" class="related-card"><strong>Pillar 7 (AI Regulation):</strong><span>AI safety, accountability, transparency, and human oversight requirements applicable across domains including healthcare</span></a>
+<a href="pillar-10-labor-rights.html" class="related-card"><strong>Pillar 10 (Labor Rights):</strong><span>Employer healthcare obligations, worker protections, paid medical leave</span></a>
+<a href="pillar-3-taxation-and-economic-justice.html" class="related-card"><strong>Pillar 3 (Taxation and Economic Justice):</strong><span>Progressive taxation to fund universal healthcare, wealth redistribution</span></a>
+<a href="pillar-11-privacy-and-data-protection.html" class="related-card"><strong>Pillar 11 (Privacy and Data Protection):</strong><span>Healthcare data privacy, protections against misuse of sensitive medical information</span></a>
+<a href="pillar-12-antitrust-and-corporate-power.html" class="related-card"><strong>Pillar 12 (Antitrust and Corporate Power):</strong><span>Pharmaceutical pricing, insurance company consolidation, hospital monopolies</span></a>
+<a href="pillar-6-civil-rights-and-equal-protection.html" class="related-card"><strong>Pillar 6 (Civil Rights and Equal Protection):</strong><span>Healthcare equity, protection against discrimination in coverage and treatment</span></a>
+</div></div>
+<div class="wrap" style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap">
+  <a href="../foundations.html#freedom-to-thrive" class="btn-primary" style="background:#c9952a">← Foundation V: Freedom to Thrive</a>
+  <a href="index.html" class="btn-primary" style="background:var(--navy)">All Pillars</a>
+</div>
+</section>
 <footer class="site-footer">
   <div class="wrap">
     <span class="footer-brand">American Renewal Project</span>
     <ul class="footer-links">
       <li><a href="../index.html">Home</a></li>
       <li><a href="../foundations.html">Foundations</a></li>
-      <li><a href="../pillars/index.html">Pillars</a></li>
+      <li><a href="index.html">Pillars</a></li>
       <li><a href="../compare/index.html">Compare</a></li>
     </ul>
     <span class="footer-note">A Third Bill of Rights for the 21st Century. · <a href="../about-ai.html" style="color:inherit;opacity:.7">On the Use of AI</a></span>
@@ -92,5 +2207,25 @@
 </footer>
 <script src="../assets/js/data.js"></script>
 <script src="../assets/js/app.js"></script>
+<script>
+(function(){
+  var nav = document.getElementById('pil-snav');
+  if(!nav) return;
+  var links = nav.querySelectorAll('a[href^="#"]');
+  var sections = Array.from(links).map(function(a){
+    return document.querySelector(a.getAttribute('href'));
+  }).filter(Boolean);
+  function onScroll(){
+    var y = window.scrollY + 120;
+    var active = sections[0];
+    sections.forEach(function(s){ if(s.offsetTop <= y) active = s; });
+    links.forEach(function(a){
+      a.classList.toggle('active', a.getAttribute('href') === '#'+active.id);
+    });
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+})();
+</script>
 </body>
 </html>

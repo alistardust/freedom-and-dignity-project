@@ -6,6 +6,124 @@
 <title>Administrative State — American Renewal Project</title>
 <link rel="stylesheet" href="../assets/css/style.css">
 <link rel="icon" type="image/svg+xml" href="../assets/img/logo.svg">
+<style>
+/* ── Pillar page styles ─────────────────────────────────────── */
+.pil-snav {
+  position: sticky; top: 63px; z-index: 150;
+  background: var(--navy); border-bottom: 2px solid rgba(255,255,255,.12);
+  overflow-x: auto; white-space: nowrap;
+}
+.pil-snav ul { display:flex; gap:0; list-style:none; margin:0; padding:0; }
+.pil-snav a {
+  display:block; padding:.55rem 1.1rem; font-family:'Oswald',sans-serif;
+  font-size:.78rem; letter-spacing:.06em; text-transform:uppercase;
+  color:rgba(255,255,255,.62); text-decoration:none; transition:color .15s;
+}
+.pil-snav a:hover, .pil-snav a.active { color:#fff; }
+.pil-snav a.active { border-bottom:2px solid #bf0a30; }
+
+/* ── Section layouts ────────────────────────────────────────── */
+.pil-intro { display:grid; grid-template-columns:1fr 1fr; gap:2rem; }
+@media(max-width:700px){ .pil-intro { grid-template-columns:1fr; } }
+
+.pil-intro h2 { font-size:1.1rem; text-transform:uppercase; letter-spacing:.08em; margin-bottom:.6rem; }
+.pil-intro p, .pil-intro li { font-size:1rem; line-height:1.75; }
+
+.problem-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:1.25rem; margin-top:1rem; }
+.problem-card {
+  background:#fff; border-radius:6px; padding:1.2rem 1.4rem;
+  border-left:4px solid #bf0a30;
+  box-shadow:0 1px 4px rgba(0,0,0,.07);
+}
+.problem-card h3 { font-size:1rem; margin:0 0 .4rem; color:var(--navy); }
+.problem-card p  { font-size:.92rem; line-height:1.65; margin:0; color:#333; }
+
+.reform-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:1rem; margin-top:1rem; }
+.reform-card {
+  background:var(--navy); color:#fff; border-radius:6px;
+  padding:1.1rem 1.3rem; border-top:3px solid #bf0a30;
+}
+.reform-card h3 { font-size:.95rem; margin:0 0 .4rem; color:#bf0a30; text-transform:uppercase; letter-spacing:.04em; }
+.reform-card p  { font-size:.88rem; line-height:1.6; margin:0; color:rgba(255,255,255,.8); }
+
+/* ── Policy rules ───────────────────────────────────────────── */
+.policy-family { margin-bottom:2.5rem; }
+.family-header {
+  display:flex; align-items:baseline; gap:.8rem; margin-bottom:1rem;
+  padding-bottom:.5rem; border-bottom:2px solid #bf0a30;
+}
+.family-code {
+  font-family:'Oswald',sans-serif; font-size:1.1rem;
+  color:#bf0a30; min-width:3rem;
+}
+.family-title { font-size:1rem; font-weight:600; color:var(--ink); }
+.family-count { margin-left:auto; font-size:.8rem; color:#888; white-space:nowrap; }
+
+.rule-grid {
+  display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:.75rem;
+}
+.rule-card {
+  border-radius:5px; padding:.9rem 1rem;
+  background:#fff; border:1px solid #e0d8c8;
+  font-size:.88rem; line-height:1.55;
+}
+.rule-card.status-included { border-left:4px solid #1e8449; }
+.rule-card.status-updated  { border-left:4px solid #2471a3; }
+.rule-card.status-partial  { border-left:4px solid #c9952a; }
+.rule-card.status-missing  { border-left:4px solid #ccc; opacity:.72; }
+
+.rule-header { display:flex; align-items:center; gap:.5rem; margin-bottom:.35rem; }
+.rule-id { font-size:.72rem; color:#888; letter-spacing:.03em; }
+.rule-badge {
+  font-size:.68rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em;
+  padding:.12em .45em; border-radius:3px;
+}
+.status-included .rule-badge { background:#d4edda; color:#155724; }
+.status-updated  .rule-badge { background:#cce5ff; color:#004085; }
+.status-partial  .rule-badge { background:#fff3cd; color:#856404; }
+.status-missing  .rule-badge { background:#f0f0f0; color:#666; }
+
+.rule-title { font-weight:600; margin:.2rem 0 .2rem; color:var(--ink); }
+.rule-stmt  { font-size:.85rem; color:#444; margin:.15rem 0 0; }
+.rule-notes { font-size:.8rem; color:#666; font-style:italic; margin:.25rem 0 0; }
+
+/* ── Research section ───────────────────────────────────────── */
+.research-body h3 { font-size:1.05rem; color:#bf0a30; margin:1.5rem 0 .4rem; }
+.research-body p  { line-height:1.8; font-size:.97rem; }
+
+/* ── Related pillars ────────────────────────────────────────── */
+.related-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:.85rem; margin-top:1rem; }
+.related-card {
+  background:var(--navy); color:#fff; border-radius:6px; padding:1rem;
+  text-decoration:none; transition:opacity .15s;
+}
+.related-card:hover { opacity:.82; }
+.related-card strong { display:block; font-size:.95rem; margin-bottom:.3rem; }
+.related-card span   { font-size:.8rem; color:rgba(255,255,255,.65); }
+
+/* ── Summary stats bar ──────────────────────────────────────── */
+.stats-bar {
+  display:flex; flex-wrap:wrap; gap:1.5rem; margin:1.2rem 0;
+  padding:1rem 1.2rem; background:#fff; border-radius:6px;
+  border:1px solid #e0d8c8;
+}
+.stat-item { text-align:center; }
+.stat-num { display:block; font-family:'Oswald',sans-serif; font-size:2rem; color:#bf0a30; }
+.stat-label { font-size:.78rem; text-transform:uppercase; letter-spacing:.06em; color:#888; }
+
+/* ── Design logic accordion ─────────────────────────────────── */
+details.design-logic { margin-top:1rem; }
+details.design-logic summary {
+  cursor:pointer; font-weight:700; padding:.6rem .8rem;
+  background:rgba(0,0,0,.06); border-radius:4px; user-select:none;
+}
+details.design-logic[open] summary { border-radius:4px 4px 0 0; }
+details.design-logic .design-body { padding:.8rem 1rem; background:#fff; border:1px solid #e0d8c8; border-top:none; border-radius:0 0 4px 4px; }
+details.design-logic .design-body p { font-size:.93rem; line-height:1.75; }
+details.design-logic .design-body ul { padding-left:1.3rem; }
+details.design-logic .design-body li { font-size:.93rem; line-height:1.65; margin-bottom:.3rem; }
+</style>
+<style>:root { --accent-color: #bf0a30; }</style>
 </head>
 <body>
 <nav class="site-nav">
@@ -18,13 +136,12 @@
     <ul class="nav-links">
       <li><a href="../index.html">Home</a></li>
       <li><a href="../foundations.html">Foundations</a></li>
-      <li><a href="../pillars/index.html">Pillars</a></li>
+      <li><a href="index.html">Pillars</a></li>
       <li><a href="../compare/index.html">Compare</a></li>
     </ul>
   </div>
 </nav>
-
-<div class="page-hero compact" style="border-bottom: 4px solid #bf0a30">
+<div class="page-hero compact" style="border-bottom:4px solid #bf0a30">
   <div class="hero-eyebrow">
     <a href="../foundations.html#accountable-power" style="color:rgba(255,255,255,.6);text-decoration:none">
       Foundation I: Accountable Power
@@ -32,59 +149,165 @@
   </div>
   <h1 class="hero-title" style="font-size:clamp(1.8rem,5vw,2.8rem)">Administrative State</h1>
   <div class="hero-divider"><span>★ ★ ★</span></div>
-  <p class="hero-statement" style="font-size:1rem;max-width:620px;margin:0 auto">Federal agencies must serve the public, not the industries they are supposed to regulate.</p>
+  <p class="hero-statement" style="font-size:1rem;max-width:680px;margin:0 auto">Define the constitutional foundation, accountability mechanisms, and operational boundaries of federal administrative agencies to prevent both regulatory capture and executive overreach while preserving effective governa</p>
 </div>
-
+<nav class="pil-snav" id="pil-snav"><ul><li><a href="#pil-intro">Overview</a></li><li><a href="#pil-problem">The Problem</a></li><li><a href="#pil-reform">Reform Areas</a></li><li><a href="#pil-policy">Policy Rules</a></li><li><a href="#pil-research">Research</a></li><li><a href="#pil-related">Related</a></li></ul></nav>
+<section class="bg-parchment ruled" id="pil-intro">
+<div class="wrap">
+  <div class="stats-bar">
+  <div class="stat-item"><span class="stat-num">3</span><span class="stat-label">Total Rules</span></div>
+  <div class="stat-item"><span class="stat-num" style="color:#1e8449">0</span><span class="stat-label">Active</span></div>
+  <div class="stat-item"><span class="stat-num" style="color:#c9952a">0</span><span class="stat-label">Partial</span></div>
+  <div class="stat-item"><span class="stat-num" style="color:#888">3</span><span class="stat-label">Proposed</span></div>
+</div>
+  <div class="pil-intro">
+    <div>
+      <h2 style="color:#bf0a30;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.06em">Purpose</h2>
+      <p>Define the constitutional foundation, accountability mechanisms, and operational boundaries of federal administrative agencies to prevent both regulatory capture and executive overreach while preserving effective governance.</p>
+    </div>
+    <div>
+      <h2 style="color:#bf0a30;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.06em">Core Principle</h2>
+      <p>Administrative agencies must operate within clear constitutional limits, remain structurally insulated from industry capture, and maintain accountability to Congress and the public while exercising necessary delegated authority to implement federal law.</p>
+    </div>
+  </div>
+</div>
+</section>
+<section class="bg-dark on-dark ruled" id="pil-problem">
+<div class="wrap" style="margin-bottom:0">
+  <h2 style="color:#bf0a30">The Problem It Solves</h2>
+</div>
+<div class="wrap"><p>Modern governance requires specialized regulatory bodies to implement complex federal law across domains like communications (FCC), food and drug safety (FDA), environmental protection (EPA), and education policy (DOE). However, the administrative state faces three critical dangers:</p>
+<ol>
+<li><strong>Constitutional ambiguity</strong> — The Constitution does not explicitly authorize Congress to create agencies, leaving their legitimacy vulnerable to legal challenge and political manipulation. This creates instability where agencies can be arbitrarily dismantled or defunded regardless of their importance to public welfare.</li>
+</ol>
+<ol>
+<li><strong>Regulatory capture</strong> — Industries systematically dominate the agencies meant to regulate them through revolving-door employment, advisory board control, lobbying influence, and financial dependence. This transforms regulatory bodies into protectors of industry interests rather than public interests.</li>
+</ol>
+<ol>
+<li><strong>Judicial deference erosion</strong> — The overturning of Chevron deference has destabilized agency authority by empowering courts to substitute their own judgment for agency expertise on technical matters, creating inconsistent enforcement and enabling bad-faith litigation designed to paralyze regulatory action.</li>
+</ol>
+<p>Without structural reforms, agencies either become captured tools of corporate interests or are weakened into ineffectiveness, leaving critical public protections unenforced. The goal is not to expand or contract agency power arbitrarily, but to establish sustainable, accountable, and capture-resistant regulatory structures.</p></div>
+</section>
+<section class="bg-cream ruled" id="pil-reform">
+<div class="wrap" style="margin-bottom:0">
+  <h2 style="color:#bf0a30">Key Reform Areas</h2>
+</div>
+<div class="wrap"><div class="reform-grid"><div class="reform-card"><h3>Explicit congressional authority to create and empower agencies</h3><p></p></div>
+</div></div>
+</section>
 <section class="bg-parchment ruled">
 <div class="wrap">
-  <h2>Why This Matters</h2>
-  <p style="font-size:1.05rem;line-height:1.8">The regulatory apparatus exists to protect the public. When agency heads are drawn from the industries they regulate and return to those industries afterward, they are structurally unable to do that job.</p>
+  <details class="design-logic">
+    <summary>Design Logic — How These Rules Work Together</summary>
+    <div class="design-body"><p>This pillar addresses three structural weaknesses in how administrative agencies currently function:</p>
+<p><strong>Constitutional enshrinement</strong> — By explicitly granting Congress the power to create agencies and by constitutionally enshrining core departments (Labor, Education, Justice, Defense), we prevent arbitrary dismantlement based on ideology or corporate pressure. These departments serve foundational functions: Labor protects workers from exploitation, Education ensures baseline educational access and standards, Justice enforces the rule of law, and Defense provides national security. Making them constitutional prevents cycles where each administration attempts to abolish or defund critical protections.</p>
+<p><strong>Chevron restoration</strong> — Restoring Chevron deference means that courts defer to agency interpretations of ambiguous statutes within their domain of expertise, rather than substituting judicial judgment for technical regulatory decisions. This does not mean blind deference — agencies must still act within statutory bounds, follow administrative procedures, and avoid arbitrary or capricious decisions. But it prevents endless litigation designed to paralyze regulation by forcing agencies to relitigate technical determinations in every circuit. Chevron deference respects the institutional competence of expert agencies while preserving judicial review for genuine overreach.</p>
+<p><strong>Anti-capture design</strong> — Rules structure must prevent regulated industries from controlling agencies through financial influence, revolving-door hiring, or advisory board dominance. This requires conflict-of-interest rules, transparency in rulemaking processes, limits on industry representation in standard-setting bodies, and structural insulation of agency decision-making from short-term political or financial pressure.</p>
+<p>The system assumes that expertise matters but that expertise can be corrupted. It balances the need for technical regulatory capacity with robust accountability mechanisms to prevent agencies from becoming either captured or authoritarian.</p></div>
+  </details>
 </div>
 </section>
-
-<section class="bg-dark on-dark ruled">
-<div class="wrap" style="display:grid;grid-template-columns:1fr 1fr;gap:2rem">
-  <div>
-    <h2 style="color:#bf0a30">What It Demands</h2>
-    <ul style="list-style:disc;padding-left:1.2rem;color:rgba(255,255,255,.82)">
-        <li>Five-year cooling-off period for all senior agency officials before joining regulated industries</li>
-        <li>Whistleblower protections that apply to all federal employees, including contractors</li>
-        <li>Public comment requirements with mandatory agency response for all major rulemakings</li>
-    </ul>
-  </div>
-  <div>
-    <h2 style="color:#bf0a30">What It Rejects</h2>
-    <ul style="list-style:disc;padding-left:1.2rem;color:rgba(255,255,255,.82)">
-        <li>The revolving door as an accepted feature of government service</li>
-        <li>Political appointees using agency authority to benefit their future employers</li>
-        <li>Regulatory capture masquerading as deregulation</li>
-    </ul>
-  </div>
-</div>
-</section>
-
-<section class="bg-cream ruled">
+<section class="bg-cream ruled" id="pil-policy">
 <div class="wrap">
-  <h2>Key Policy Points</h2>
-  <ol style="padding-left:1.4rem;font-size:1rem;line-height:2">
-          <li>Revolving door restrictions</li>
-          <li>Agency independence from political interference</li>
-          <li>Rulemaking transparency and accountability</li>
-  </ol>
-  <div style="margin-top:2.5rem;display:flex;gap:1rem;flex-wrap:wrap">
-    <a href="../foundations.html#accountable-power" class="btn-primary" style="background:#bf0a30">← Foundation I: Accountable Power</a>
-    <a href="index.html" class="btn-primary" style="background:var(--navy)">All Pillars</a>
+  <h2 style="color:#bf0a30">Full Policy Platform</h2>
+  <p style="font-size:.95rem;color:#555;margin-bottom:1.5rem">
+    Every rule in this pillar, organized by policy area.
+    <strong style="color:#1e8449">Active</strong> rules are current platform commitments.
+    <strong style="color:#c9952a">Partial</strong> rules are in development.
+    <strong style="color:#888">Proposed</strong> rules are planned for future inclusion.
+  </p>
+  <div class="policy-family" id="fam-adm">
+  <div class="family-header">
+    <span class="family-code">ADM</span>
+    <span class="family-title">AGY — Congressional Authority to Create Agencies</span>
+    <span class="family-count">0/1 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">ADM-AGY-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Congress explicitly empowered to create agencies</p>
+  
+  <p class="rule-notes">This rule constitutionally clarifies that Congress has the power to establish administrative agencies like the FCC (Federal Communications Commission), FDA (Food and Drug Administration), EPA (Environmental Protection Agency), and Department of Education. Current constitutional ambiguity has allowed legal challenges arguing that agencies represent an unconstitutional "fourth branch" of government. By explicitly granting this authority, we prevent arbitrary legal attacks designed to dismantle regulatory capacity and create stable institutional foundations for modern governance. This does not grant unlimited power — agencies remain bound by statutory authority, administrative procedures, and judicial review. But it affirms that Congress can create specialized bodies to implement federal law rather than requiring impossibly detailed legislation that anticipates every technical determination.</p>
+</div>
   </div>
 </div>
+<div class="policy-family" id="fam-adm">
+  <div class="family-header">
+    <span class="family-code">ADM</span>
+    <span class="family-title">CHV — Chevron Deference</span>
+    <span class="family-count">0/1 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">ADM-CHV-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Restore Chevron deference</p>
+  
+  <p class="rule-notes">Chevron deference requires courts to defer to reasonable agency interpretations of ambiguous statutory language within their regulatory domain. The Supreme Court's 2024 decision overturning Chevron in <em>Loper Bright Enterprises v. Raimondo</em> empowered courts to substitute judicial judgment for agency expertise, destabilizing regulatory enforcement and enabling endless litigation designed to paralyze agencies. Restoring Chevron does not grant agencies unlimited power. They remain bound by statutory text, must follow administrative procedures, and are subject to judicial review for arbitrary or capricious actions. But it restores the principle that agencies — not courts — are the proper institutions to resolve technical ambiguities within their domain of expertise. Without Chevron, every technical determination becomes subject to judicial reinterpretation. Industry actors can forum-shop for friendly judges and relitigate settled regulatory standards across circuits, creating inconsistent enforcement and regulatory paralysis. Restoring Chevron stabilizes agency authority while preserving meaningful judicial review for genuine overreach. This rule is critical to preventing regulatory capture through litigation. Industries have discovered that they can use courts to block enforcement even when they cannot change the underlying statute, simply by forcing agencies to relitigate technical determinations in every circuit until they find a sympathetic judge. Chevron restores institutional competence as a guiding principle and prevents this weaponization of courts against public protections.</p>
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-adm">
+  <div class="family-header">
+    <span class="family-code">ADM</span>
+    <span class="family-title">CON — Constitutional Enshrinement of Core Departments</span>
+    <span class="family-count">0/1 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">ADM-CON-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Enshrine core federal departments in the Constitution</p>
+  <p class="rule-stmt">Enshrine core federal departments (Labor Education Justice Defense) in the Constitution</p>
+  <p class="rule-notes">This rule constitutionally protects the Department of Labor, Department of Education, Department of Justice, and Department of Defense from arbitrary elimination or defunding. These departments serve foundational functions that should not be subject to political cycles: - <strong>Department of Labor</strong> — Enforces worker protections including minimum wage, overtime rules, workplace safety standards, and anti-exploitation regulations. Without constitutional protection, administrations hostile to labor rights can simply defund enforcement, effectively nullifying worker protections. - <strong>Department of Education</strong> — Ensures baseline educational standards, protections against discrimination in education, and federal support for schools. Conservative movements have repeatedly called for abolishing this department, viewing federal education policy as overreach. Constitutional enshrinement prevents cycles where educational protections are dismantled based on ideology. - <strong>Department of Justice</strong> — Enforces the rule of law, including civil rights protections, antitrust enforcement, and prosecution of federal crimes. While less politically vulnerable than Labor or Education, constitutional protection prevents administrations from defunding enforcement of laws they oppose. - <strong>Department of Defense</strong> — Provides national security and military capacity. This is the least controversial inclusion but is included for completeness to prevent future arguments that defense can be privatized or arbitrarily restructured. Constitutional enshrinement does not mean these departments cannot be reformed, restructured, or held accountable. It means they cannot be arbitrarily abolished to eliminate the protections they enforce. Congress retains appropriations authority, oversight capacity, and the power to restructure operations — but the core mission and existence of these departments becomes constitutionally protected. This addresses a critical vulnerability where corporate or ideological interests can simply eliminate regulatory enforcement by defunding the agencies that implement it. By making these departments constitutional, we prevent cycles where worker protections, educational standards, and rule-of-law enforcement are dismantled every time a hostile administration takes power.</p>
+</div>
+  </div>
+</div>
+</div>
 </section>
-
+<section class="bg-dark on-dark ruled" id="pil-research">
+<div class="wrap">
+  <h2 style="color:#bf0a30">Research & Context</h2>
+  <div class="research-body" style="color:rgba(255,255,255,.85)"><p>The administrative state has been under sustained attack from multiple directions. Conservative legal movements have sought to dismantle Chevron deference and challenge the constitutional legitimacy of agency rulemaking, arguing that agencies represent an unconstitutional "fourth branch" of government. This approach is not merely about limiting government — it is about removing regulatory obstacles to corporate profit maximization by delegitimizing the institutional mechanisms through which public protections are enforced.</p>
+<p>The Chevron doctrine, established in <em>Chevron U.S.A., Inc. v. Natural Resources Defense Council, Inc.</em> (1984), held that courts should defer to reasonable agency interpretations of ambiguous statutory language within their regulatory domain. This doctrine was grounded in institutional competence — agencies possess specialized expertise, follow public rulemaking procedures, and are accountable to elected officials through executive oversight. When the Supreme Court overturned Chevron in <em>Loper Bright Enterprises v. Raimondo</em> (2024), it empowered courts to substitute their judgment for agency expertise, creating a flood of litigation designed to paralyze regulatory enforcement. Without Chevron, every technical determination becomes subject to judicial reinterpretation, allowing industry actors to forum-shop for friendly judges and relitigate settled regulatory standards across circuits. Restoring Chevron does not grant agencies unlimited power — they remain bound by statutory text, administrative procedures, and judicial review for genuine overreach. But it restores institutional competence as a guiding principle and prevents the weaponization of courts against regulatory enforcement.</p>
+<p>The push to enshrine core departments in the Constitution addresses a different vulnerability. While some agencies (like the FTC or FCC) can be created or restructured by Congress, core departments have become political targets. Conservative movements have repeatedly called for abolishing the Department of Education, viewing federal education standards as overreach. Similarly, the Department of Labor is targeted for elimination by those who oppose worker protections like minimum wage enforcement, overtime rules, and workplace safety standards. By constitutionally enshrining Labor, Education, Justice, and Defense, we prevent cycles where each administration attempts to defund or dismantle departments that enforce protections unpopular with their political coalition. This does not mean these departments cannot be reformed, restructured, or held accountable — it means they cannot be arbitrarily abolished to eliminate the protections they enforce.</p>
+<p>Regulatory capture is the systemic process by which industries dominate the agencies meant to regulate them. This occurs through multiple mechanisms: revolving-door employment where regulators move seamlessly between agency positions and high-paying industry jobs; advisory board dominance where industries control the committees that set standards and recommend enforcement priorities; lobbying expenditures that dwarf agency budgets and enable industries to outspend public-interest advocates in every rulemaking proceeding; and financial dependency where agencies rely on industry-funded research or industry cooperation for enforcement, creating incentives to avoid antagonizing regulated entities. Capture is not incidental — it is the systematic goal of industries that view regulation as a cost to be minimized. Effective anti-capture design requires structural insulation, not merely ethical guidelines. This means strict cooling-off periods for revolving-door employment, limits on industry representation in standard-setting bodies, transparency requirements for lobbying contacts and influence, and independent funding mechanisms that prevent agencies from becoming financially dependent on the industries they regulate.</p>
+<p>The balance this pillar seeks is between paralysis and capture. Without agencies, Congress would need to pass impossibly detailed legislation covering every technical determination — an unworkable model that would result in regulatory gaps and inability to respond to changing conditions. With captured agencies, regulations serve industry interests rather than public interests. With weak or delegitimized agencies, corporations operate without meaningful oversight. The goal is durable, expert, accountable regulatory capacity — agencies that have clear authority, institutional competence, structural insulation from capture, and democratic accountability through congressional oversight and public transparency.</p>
+<p>One critical question this raises is the relationship between agency independence and democratic accountability. Agencies must be insulated from short-term political pressure (preventing administrations from simply defunding enforcement of laws they dislike) while remaining accountable to elected officials (preventing unaccountable bureaucratic empire-building). This is addressed through statutory clarity (Congress defines mission and scope), procedural transparency (rulemaking must be public and follow administrative procedures), judicial review for genuine overreach (courts can still strike down arbitrary or ultra vires agency actions), and congressional oversight (including funding appropriations and investigative authority). The goal is not to make agencies invulnerable, but to make them resistant to capture while maintaining democratic control.</p>
+<p>Another critical consideration is the scope of agency discretion. Anti-delegation theories argue that Congress cannot delegate rulemaking authority to agencies because only Congress has legislative power. This is a selective reading of constitutional structure — Congress has always delegated implementation authority, and modern governance would be impossible without specialized regulatory bodies. The key is that delegation must be bounded — Congress must provide intelligible principles, clear statutory authority, and meaningful constraints. Agencies cannot simply invent powers Congress did not grant. But within their statutory mandate, they must have flexibility to respond to changing conditions, apply technical expertise, and enforce rules consistently. Restoring Chevron is part of this — it acknowledges that agencies, not courts, are the proper institutions to resolve technical ambiguities within their domain.</p>
+<p>Finally, this pillar connects to broader anti-corruption and institutional-accountability structures. Agencies are vulnerable to the same pathologies as legislative or executive bodies — they can become self-serving, unresponsive, or captured. Effective oversight requires independent inspectors general, whistleblower protections, public transparency, and enforcement mechanisms that hold agency officials accountable for malfeasance. The goal is not to create an untouchable bureaucracy, but to create regulatory capacity that is structurally insulated from the specific forms of corruption and capture that have historically weakened public protections.</p></div>
+</div>
+</section>
+<section class="bg-parchment ruled" id="pil-related">
+<div class="wrap" style="margin-bottom:0">
+  <h2 style="color:#bf0a30">Related Pillars</h2>
+  <p style="font-size:.92rem;color:#666;margin-bottom:.5rem">These pillars intersect with and reinforce this one.</p>
+</div>
+<div class="wrap"><div class="related-grid"><a href="anti-corruption-and-concentrated-power.html" class="related-card"><strong>Anti-Corruption and Concentrated Power</strong><span>— Addresses revolving-door employment, lobbying influence, and financial capture mechanisms that undermine agency indepe</span></a>
+<a href="checks-and-balances.html" class="related-card"><strong>Checks and Balances</strong><span>— Defines inter-branch oversight and accountability structures that prevent agency overreach while maintaining regulator</span></a>
+<a href="courts-and-judicial-system.html" class="related-card"><strong>Courts and Judicial System</strong><span>— Establishes the proper role of judicial review in agency actions, including Chevron deference and standards for striki</span></a>
+<a href="executive-power.html" class="related-card"><strong>Executive Power</strong><span>— Clarifies the relationship between executive authority and agency independence, preventing presidents from simply defu</span></a>
+<a href="technology-and-ai.html" class="related-card"><strong>Technology and AI</strong><span>— Many emerging regulatory challenges (AI safety, data privacy, algorithmic accountability) will require agency capacity</span></a>
+</div></div>
+<div class="wrap" style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap">
+  <a href="../foundations.html#accountable-power" class="btn-primary" style="background:#bf0a30">← Foundation I: Accountable Power</a>
+  <a href="index.html" class="btn-primary" style="background:var(--navy)">All Pillars</a>
+</div>
+</section>
 <footer class="site-footer">
   <div class="wrap">
     <span class="footer-brand">American Renewal Project</span>
     <ul class="footer-links">
       <li><a href="../index.html">Home</a></li>
       <li><a href="../foundations.html">Foundations</a></li>
-      <li><a href="../pillars/index.html">Pillars</a></li>
+      <li><a href="index.html">Pillars</a></li>
       <li><a href="../compare/index.html">Compare</a></li>
     </ul>
     <span class="footer-note">A Third Bill of Rights for the 21st Century. · <a href="../about-ai.html" style="color:inherit;opacity:.7">On the Use of AI</a></span>
@@ -92,5 +315,25 @@
 </footer>
 <script src="../assets/js/data.js"></script>
 <script src="../assets/js/app.js"></script>
+<script>
+(function(){
+  var nav = document.getElementById('pil-snav');
+  if(!nav) return;
+  var links = nav.querySelectorAll('a[href^="#"]');
+  var sections = Array.from(links).map(function(a){
+    return document.querySelector(a.getAttribute('href'));
+  }).filter(Boolean);
+  function onScroll(){
+    var y = window.scrollY + 120;
+    var active = sections[0];
+    sections.forEach(function(s){ if(s.offsetTop <= y) active = s; });
+    links.forEach(function(a){
+      a.classList.toggle('active', a.getAttribute('href') === '#'+active.id);
+    });
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+})();
+</script>
 </body>
 </html>
