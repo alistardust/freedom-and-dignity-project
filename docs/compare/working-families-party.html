@@ -30,6 +30,11 @@
     .cov-details > summary::before { content: "▶ "; font-size: .65rem; }
     .cov-details[open] > summary::before { content: "▼ "; }
     .cov-details > summary:hover { color: rgba(255,255,255,.8); }
+
+    .cmp-wrongs-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:1.1rem; margin-top:1rem; }
+    .wrong-card { background:rgba(255,255,255,.07); border-radius:6px; padding:1.2rem 1.4rem; border-left:4px solid #bf0a30; }
+    .wrong-card h3 { font-size:.95rem; color:#e8c060; text-transform:uppercase; letter-spacing:.05em; margin:0 0 .5rem; }
+    .wrong-card p { font-size:.9rem; line-height:1.65; color:rgba(255,255,255,.82); margin:0; }
   </style>
 </head>
 <body>
@@ -66,6 +71,7 @@
     <a href="#cmp-diff">Differences</a>
     <a href="#cmp-gaps">Coverage Gaps</a>
     <a href="#cmp-strengths">Strengths</a>
+    <a href="#cmp-wrongs">What They Get Wrong</a>
     <a href="#cmp-sources">Sources</a>
   </div>
 </nav>
@@ -196,6 +202,41 @@
   </div>
 </section>
 
+<section class="bg-dark on-dark ruled" id="cmp-wrongs">
+<div class="wrap">
+  <h2 style="color:#bf0a30">What They Get Wrong</h2>
+  <p class="section-intro" style="color:rgba(255,255,255,.75);max-width:720px;margin-bottom:1.5rem">
+    The Working Families Party is the most competent progressive electoral organization in America — and that competence is deployed primarily in service of a strategy that limits WFP's independence, geographic reach, and long-term leverage over the Democratic Party it depends on.
+  </p>
+  <div class="cmp-wrongs-grid">
+    <div class="wrong-card">
+      <h3>Fusion Strategy Failures</h3>
+      <p>The WFP's ballot-fusion model — cross-endorsing Democrats on a separate WFP ballot line to demonstrate progressive voter strength — only functions in eight states that permit ballot fusion (primarily New York, Connecticut, Vermont, and a few others). In the 42 states without fusion voting laws, the WFP has no distinctive electoral mechanism and functions as a standard endorsing organization. The strategy's leverage theory — that Democrats will moderate left to secure WFP ballot lines — has produced mixed results: WFP has endorsed Biden, Schumer, and numerous corporate Democrats with no binding policy conditions attached. An endorsement given without conditions enforced after the election is not leverage; it is a statement of political alignment.</p>
+    </div>
+    <div class="wrong-card">
+      <h3>Limited Scale &amp; Co-optation Risk</h3>
+      <p>The WFP operates in approximately 12 states. It has elected no independent federal candidates. Its organizational success is dependent on Democratic Party infrastructure, donor networks, and electoral outcomes — a structural dependency that limits its ability to credibly threaten Democratic incumbents. The pattern of endorsing incumbents who have not delivered on progressive priorities — then continuing to endorse them in subsequent cycles — mirrors the dynamic by which organized labor was absorbed into the New Democrat coalition in the 1990s without extracting structural policy commitments. Once the endorsement is given and the election is won, WFP's leverage collapses. No major Democratic incumbent has faced a serious WFP-backed primary challenger after failing to deliver on WFP-endorsed policy priorities.</p>
+    </div>
+    <div class="wrong-card">
+      <h3>Narrow Geography</h3>
+      <p>The WFP's organizational density is concentrated in New York, the Northeast, and a handful of urban areas. It has minimal presence in the South, Midwest, rural America, and the Sun Belt states where progressive infrastructure is most absent and most needed. A progressive strategy that is geographically confined to blue-state strongholds does not build the organizational muscle to win federal majorities or to shift the structural conditions of American politics — it builds the capacity to win primaries in districts that were already winnable. The communities with the highest density of working families — rural workers, Sunbelt warehouse and logistics workers, Southern Black Belt communities — are largely outside WFP's organizational footprint.</p>
+    </div>
+    <div class="wrong-card">
+      <h3>No Theory of Power Outside Electoralism</h3>
+      <p>The WFP's model is almost exclusively electoral: candidate recruitment, endorsement, voter mobilization, primary pressure. It has made limited investment in union organizing, mutual aid networks, community land trusts, tenant organizing, or other non-electoral power-building infrastructure. Electoral victories without corresponding changes in the balance of economic and institutional power are reversible — as the Obama era demonstrated, when progressive legislative wins coexisted with continued Wall Street dominance, a broken labor market, and a surveillance state that expanded under a progressive administration. Building durable structural power requires building power in workplaces, communities, and institutions — not only at the ballot box. WFP's organizational theory does not account for this dimension.</p>
+    </div>
+    <div class="wrong-card">
+      <h3>Surveillance &amp; Privacy Complicity Through Endorsed Candidates</h3>
+      <p>The WFP has endorsed Democratic candidates who voted for FISA Section 702 reauthorization and expansion — including the 2024 version that Biden signed and the EFF called "one of the most dramatic expansions of surveillance authority in recent memory." By fusing its ballot line with Democratic incumbents who vote to extend warrantless surveillance, expand data broker access to government agencies, and block comprehensive federal privacy legislation, the WFP becomes co-responsible for those outcomes. A party that claims to champion civil liberties and rights cannot endorse candidates without accounting for their actual surveillance voting record. The platform's rights framework is directly undermined by candidates the WFP has placed its name behind.</p>
+    </div>
+    <div class="wrong-card">
+      <h3>Reparations: Verbal Support, Structural Silence</h3>
+      <p>The WFP includes racial equity commitments in its platform and has endorsed Black progressive candidates. But the party has not made reparations — specifically H.R. 40 or any comparable commission — a litmus test for endorsement, a primary campaign issue, or a legislative priority in the states where it operates. The WFP endorsed Joe Biden in 2020 (via its New York ballot line) despite Biden's history of explicit opposition to busing and racial integration policy in the 1970s and his evasive position on reparations. Using progressive racial justice rhetoric while endorsing candidates who oppose or are indifferent to reparations is a form of the same structural cowardice the WFP criticizes in establishment Democrats.</p>
+    </div>
+  </div>
+</div>
+</section>
+
 <footer class="site-footer">
   <div class="wrap">
     <span class="footer-brand">American Renewal Project</span>
@@ -212,7 +253,7 @@
 <script>
 (function(){
   var links = document.querySelectorAll('.cmp-snav a');
-  var ids = ['cmp-overview','cmp-align','cmp-diff','cmp-gaps','cmp-strengths','cmp-sources'];
+  var ids = ['cmp-overview','cmp-align','cmp-diff','cmp-gaps','cmp-strengths','cmp-wrongs','cmp-sources'];
   var sections = ids.map(function(id){ return document.getElementById(id); });
   function update(){
     var idx = 0;

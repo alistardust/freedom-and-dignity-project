@@ -30,6 +30,11 @@
     .cov-details > summary::before { content: "▶ "; font-size: .65rem; }
     .cov-details[open] > summary::before { content: "▼ "; }
     .cov-details > summary:hover { color: rgba(255,255,255,.8); }
+
+    .cmp-wrongs-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:1.1rem; margin-top:1rem; }
+    .wrong-card { background:rgba(255,255,255,.07); border-radius:6px; padding:1.2rem 1.4rem; border-left:4px solid #bf0a30; }
+    .wrong-card h3 { font-size:.95rem; color:#e8c060; text-transform:uppercase; letter-spacing:.05em; margin:0 0 .5rem; }
+    .wrong-card p { font-size:.9rem; line-height:1.65; color:rgba(255,255,255,.82); margin:0; }
   </style>
 </head>
 <body>
@@ -66,6 +71,7 @@
     <a href="#cmp-diff">Differences</a>
     <a href="#cmp-gaps">Coverage Gaps</a>
     <a href="#cmp-strengths">Strengths</a>
+    <a href="#cmp-wrongs">What They Get Wrong</a>
     <a href="#cmp-sources">Sources</a>
   </div>
 </nav>
@@ -199,6 +205,49 @@
   </div>
 </section>
 
+<section class="bg-dark on-dark ruled" id="cmp-wrongs">
+<div class="wrap">
+  <h2 style="color:#bf0a30">What They Get Wrong</h2>
+  <p class="section-intro" style="color:rgba(255,255,255,.75);max-width:720px;margin-bottom:1.5rem">
+    Libertarianism's core premise — that freedom means the absence of government — collapses on contact with power asymmetry, market failure, and the historical record. "Leave it to the states" and "let markets solve it" are not neutral positions; they are prescriptions with documented outcomes.
+  </p>
+  <div class="cmp-wrongs-grid">
+    <div class="wrong-card">
+      <h3>Rights Erosion Through Inaction</h3>
+      <p>"Leave it to the states" is not a neutral procedural position — it is the argument that was used to defend slavery, Jim Crow, anti-sodomy laws, poll taxes, and segregated schools. Every major expansion of civil rights in U.S. history required federal preemption of state-level rights violations. <em>Dobbs v. Jackson</em> (2022) proved the predictive validity of this concern in real time: the moment federal constitutional protection was removed, states immediately banned abortion — in some cases without exceptions for rape, incest, or the life of the mother. Principled "states' rights" libertarianism in practice produces the worst human rights outcomes in the states where rights are most vulnerable. Freedom that depends on where you were born is not freedom.</p>
+    </div>
+    <div class="wrong-card">
+      <h3>Market Fundamentalism — The Failures Are Documented</h3>
+      <p>Enron (2001): deregulated energy markets in California produced deliberate market manipulation and a manufactured energy crisis — not efficient allocation. The 2008 financial crisis: deregulated mortgage securitization markets produced systemic fraud, a global financial collapse, and 8.7 million job losses in the U.S. alone. The opioid epidemic: Purdue Pharma's aggressive marketing of OxyContin — operating in a regulatory environment that trusted manufacturer safety representations — produced 500,000+ overdose deaths between 1999 and 2019 (CDC). East Palestine, Ohio (2023): voluntary compliance and self-regulation did not produce safe freight rail operations. "Voluntary contracts" between employers and workers ignore the fundamental power asymmetry that is the actual operating condition of most labor markets. None of these are edge cases; they are the predictable outcomes of removing institutional constraints from actors with concentrated economic power.</p>
+    </div>
+    <div class="wrong-card">
+      <h3>Social Contract Destruction</h3>
+      <p>Eliminating Medicare, Medicaid, Social Security, and public education — the explicit or near-explicit position of the Libertarian Party platform — would produce mass poverty among the elderly, disabled, and children within years of implementation. No country that has attempted pure market-based healthcare has achieved better health outcomes than regulated systems; the United States, which has the least regulated healthcare system among OECD nations, spends approximately 17% of GDP on health care and achieves worse life expectancy, higher infant mortality, and worse chronic disease outcomes than every peer nation (WHO, OECD Health Statistics). The libertarian answer to this evidence — "it would work better with even less regulation" — is unfalsifiable by design.</p>
+    </div>
+    <div class="wrong-card">
+      <h3>Selective Libertarianism</h3>
+      <p>The Libertarian Party has historically been far more active on economic deregulation than on the civil liberties violations disproportionately affecting people without economic power — particularly police brutality, mass incarceration, and civil asset forfeiture. Property rights have consistently been prioritized over civil rights in the party's intellectual tradition. The "taxation is theft" framework has no account of public goods (defense, infrastructure, public health), collective action problems, or how a stateless society prevents private actors from exercising the same coercive power the framework is supposed to prevent. The party's open-borders immigration rhetoric has frequently coexisted with anti-immigrant political posturing from candidates — revealing a gap between principled platform and electoral politics.</p>
+    </div>
+    <div class="wrong-card">
+      <h3>Mises Caucus Capture &amp; Entryism Risk</h3>
+      <p>The Libertarian Party's 2022 national convention was dominated by the Mises Caucus — a faction with documented connections to paleolibertarianism, alt-right adjacent figures, and the "liberty movement" wing of the American right. The Mises Caucus's takeover of LP state parties and the national apparatus has blurred the distinction between principled libertarianism and MAGA-adjacent populism. In 2024, the LP national convention nominated Robert F. Kennedy Jr. as a speaker — a figure associated with anti-vaccine activism, conspiracy theories, and political opportunism — and its presidential nominee received endorsement from figures across the far-right spectrum. As the party shifts toward this faction, it ceases to function as a coherent civil liberties alternative and begins to function as a spoiler vehicle for authoritarian populism.</p>
+    </div>
+    <div class="wrong-card">
+      <h3>Civil Rights Act Opposition — Property Rights Over Equal Access</h3>
+      <p>Prominent Libertarians including Ron Paul (LP presidential nominee 1988) and multiple Mises Caucus figures have explicitly opposed Title II of the Civil Rights Act of 1964 — the public accommodations provision that prohibits private businesses from discriminating based on race, religion, or national origin. The argument is property rights: a business owner's right to serve or exclude anyone they choose. This is not a peripheral Libertarian position — it is a logical consequence of their core framework, and it would re-legalize the segregated lunch counters, hotels, and transportation systems of Jim Crow. The platform's "Freedom to Thrive" foundation is explicitly incompatible with a framework in which private discrimination can legally deny Black Americans access to restaurants, banks, hotels, and medical care. Freedom that only applies when a private property owner consents to extend it is not freedom — it is conditional tolerance.</p>
+    </div>
+    <div class="wrong-card">
+      <h3>Freedom to Thrive Requires Collective Infrastructure</h3>
+      <p>The Libertarian platform opposes Medicare, Medicaid, Social Security, public housing, minimum wage, mandatory workplace safety standards, public education funding mandates, and most labor protections. The platform's conception of freedom is purely negative (freedom from government constraint) and ignores the documented reality that freedom without economic security is theoretical. A person who cannot afford insulin, cannot find housing, cannot access legal representation, or is trapped in a dangerous workplace is not meaningfully free — they are coerced by economic necessity into accepting conditions they would reject if they had alternatives. The ARP's "Freedom to Thrive" foundation is built on the explicit premise that you can't be free if you're sick, homeless, or in debt. Libertarian economic policy, applied consistently, would eliminate the public infrastructure that makes that kind of freedom possible — not for philosophical reasons, but for the benefit of those who already have capital.</p>
+    </div>
+    <div class="wrong-card">
+      <h3>Reparations: Principled Opposition on Wrong Grounds</h3>
+      <p>The Libertarian Party opposes reparations primarily on the grounds that no living person is responsible for historical slavery, and that collective liability imposed on current taxpayers for past government actions violates individual rights. This framing ignores that much of the harm was not merely historical: redlining was federal policy through the 1960s; discriminatory GI Bill administration denied Black veterans the wealth-building programs white veterans received; the wealth gap between Black and white American households today is a direct and measurable consequence of policies that continued decades after abolition. The Libertarian framework that opposes government reparations but also opposes the anti-discrimination and economic inclusion policies that might address structural inequality offers no mechanism for redress at all — and calls that "freedom."</p>
+    </div>
+  </div>
+</div>
+</section>
+
 <footer class="site-footer">
   <div class="wrap">
     <span class="footer-brand">American Renewal Project</span>
@@ -215,7 +264,7 @@
 <script>
 (function(){
   var links = document.querySelectorAll('.cmp-snav a');
-  var ids = ['cmp-overview','cmp-align','cmp-diff','cmp-gaps','cmp-strengths','cmp-sources'];
+  var ids = ['cmp-overview','cmp-align','cmp-diff','cmp-gaps','cmp-strengths','cmp-wrongs','cmp-sources'];
   var sections = ids.map(function(id){ return document.getElementById(id); });
   function update(){
     var idx = 0;

@@ -30,6 +30,11 @@
     .cov-details > summary::before { content: "▶ "; font-size: .65rem; }
     .cov-details[open] > summary::before { content: "▼ "; }
     .cov-details > summary:hover { color: rgba(255,255,255,.8); }
+
+    .cmp-wrongs-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:1.1rem; margin-top:1rem; }
+    .wrong-card { background:rgba(255,255,255,.07); border-radius:6px; padding:1.2rem 1.4rem; border-left:4px solid #bf0a30; }
+    .wrong-card h3 { font-size:.95rem; color:#e8c060; text-transform:uppercase; letter-spacing:.05em; margin:0 0 .5rem; }
+    .wrong-card p { font-size:.9rem; line-height:1.65; color:rgba(255,255,255,.82); margin:0; }
   </style>
 </head>
 <body>
@@ -66,6 +71,7 @@
     <a href="#cmp-diff">Differences</a>
     <a href="#cmp-gaps">Coverage Gaps</a>
     <a href="#cmp-strengths">Strengths</a>
+    <a href="#cmp-wrongs">What They Get Wrong</a>
     <a href="#cmp-sources">Sources</a>
   </div>
 </nav>
@@ -199,6 +205,45 @@
   </div>
 </section>
 
+<section class="bg-dark on-dark ruled" id="cmp-wrongs">
+<div class="wrap">
+  <h2 style="color:#bf0a30">What They Get Wrong</h2>
+  <p class="section-intro" style="color:rgba(255,255,255,.75);max-width:720px;margin-bottom:1.5rem">
+    The Democratic Party is not the party it claims to be. Decades of corporate capture, structural cowardice, and incremental politics-as-usual have produced a party that manages decline rather than reforms it — while routinely blocking the structural changes its own base demands.
+  </p>
+  <div class="cmp-wrongs-grid">
+    <div class="wrong-card">
+      <h3>Centrism &amp; Incrementalism</h3>
+      <p>The ACA expanded coverage but preserved private insurance as the structural center of American healthcare, leaving 25–30 million people uninsured (Census Bureau, 2023). The party had congressional supermajorities in 2009–2010 and declined to force a floor vote on Medicare for All or even a robust public option. On climate: the party had 50 years of scientific warning and delivered meaningful investment only once (IRA, 2022), under maximum political pressure. The pre-2010 Democratic record includes: the Defense of Marriage Act (1996, Clinton), the 1994 crime bill (mass incarceration expansion), and welfare reform (1996) — legislation that directly harmed millions before the party's rhetorical positions shifted left.</p>
+    </div>
+    <div class="wrong-card">
+      <h3>The Surveillance State</h3>
+      <p>The USA PATRIOT Act (2001) was passed with overwhelming Democratic support and reauthorized repeatedly. The Obama administration expanded the NSA's bulk domestic surveillance program — exposed by Edward Snowden in 2013 through ODNI documents showing collection of phone metadata on essentially all Americans under Section 215. The Obama administration conducted more drone strikes in its first year than the entire Bush presidency, with documented civilian casualties that the administration undercounted; the Bureau of Investigative Journalism documented at minimum 384 civilian deaths from drone strikes in Pakistan, Yemen, and Somalia through 2016. The deportation machinery expanded substantially under Obama, who deported approximately 3 million people — more than any prior administration — earning him the nickname "Deporter-in-Chief" among immigration advocates.</p>
+    </div>
+    <div class="wrong-card">
+      <h3>Corporate Capture</h3>
+      <p>TARP (2008) deployed $700 billion to bail out financial institutions without requiring homeowner relief, executive accountability, or structural reform of the institutions that caused the crisis. Not a single major Wall Street executive was prosecuted for the conduct underlying the 2008 financial collapse — a deliberate choice by the Obama Justice Department, documented in Jesse Eisinger's <em>The Chickenshit Club</em> (2017) and confirmed in subsequent reporting. The party's donor base is heavily concentrated in finance, technology, and professional services. Silicon Valley's capture of Democratic donor infrastructure has produced a party that talks about tech regulation while accepting tens of millions from the industry it purports to regulate. OpenSecrets data shows the financial sector and tech industry are consistently among the top Democratic Party donor industries.</p>
+    </div>
+    <div class="wrong-card">
+      <h3>Gerontocracy</h3>
+      <p>President Biden's 2024 reelection campaign collapse — driven by a cognitive fitness crisis that his senior staff managed and concealed from the public for months — was not an aberration. It was the culmination of a structural pattern: Nancy Pelosi remained House Speaker until 80; Dianne Feinstein served in the Senate until her death at 90, reportedly unable to perform Senate duties in her final months; Senate Minority Leader Chuck Schumer (73); Steny Hoyer; Jim Clyburn; the pattern runs throughout party leadership. The Democratic Party has no systematic succession planning, no fitness standards for federal office, and no institutional mechanism for generational renewal. The median age of House Democratic leadership has consistently exceeded the national median voter age by decades.</p>
+    </div>
+    <div class="wrong-card">
+      <h3>Structural Cowardice</h3>
+      <p>The party had the votes to codify <em>Roe v. Wade</em> into federal statute multiple times between 1973 and 2022 — and declined to act. When the Supreme Court overturned <em>Roe</em> in <em>Dobbs</em> (June 2022), Democratic leadership expressed shock at an outcome their own legal scholars had been predicting for years. The party declined to eliminate the filibuster to pass the John Lewis Voting Rights Advancement Act (2021) despite having the Senate majority. The public option for healthcare — a policy with consistent majority public support — was killed in Senate negotiations in 2009–2010 with no serious fight. On gun reform: Assault Weapons Ban expired in 2004 with minimal Democratic pushback; the Bipartisan Safer Communities Act (2022) was the first significant gun legislation in 30 years, and it is modest. Structural cowardice is not caution — it is a choice to protect incumbency over policy delivery.</p>
+    </div>
+    <div class="wrong-card">
+      <h3>Surveillance Complicity — Shared Ownership of the Security State</h3>
+      <p>The surveillance state is a bipartisan project. SOPA and PIPA — the 2011–2012 internet censorship and surveillance infrastructure bills — were introduced and backed by Democrats including Sen. Patrick Leahy (PIPA) and Rep. Lamar Smith, with Democratic co-sponsors in both chambers before mass public protest triggered Obama White House opposition and the bills' collapse. Most critically: President Biden signed the <em>Reforming Intelligence and Securing America Act</em> in April 2024, which reauthorized and expanded FISA Section 702 — a surveillance authority that allows bulk collection of communications incidentally sweeping up Americans without individual warrants. The Senate passed it 60–34 with heavy Democratic support. An amendment requiring a warrant to search Americans' data was defeated. The EFF called it "one of the most dramatic and terrifying expansions of surveillance authority in recent memory." Democrats who spent years criticizing the NSA's Snowden-revealed PRISM program voted to entrench and expand it. The party's stated commitment to privacy rights and the Fourth Amendment is in direct conflict with its voting record on surveillance.</p>
+    </div>
+    <div class="wrong-card">
+      <h3>Reparations: 35 Years of Performative Support</h3>
+      <p>H.R. 40 — a bill merely to establish a commission to <em>study</em> reparations for slavery — has been introduced in every congressional session since Rep. John Conyers first proposed it in 1989. Democrats controlled the House and Senate simultaneously in 2009–2010, 2021–2022, and for brief Senate windows before — and H.R. 40 never reached a floor vote. The Democratic Party's position on reparations has been to signal openness while ensuring nothing structurally advances. When Rep. Sheila Jackson Lee brought H.R. 40 to a House Judiciary Committee vote in 2021, it advanced on a party-line vote — and then died in the Senate with zero Democratic leadership effort to move it. The documented harm — slavery, Jim Crow, redlining, discriminatory application of the GI Bill and FHA — is uncontested history. Thirty-five years of introducing the same bill without passing it is not a commitment to addressing that harm. It is its management.</p>
+    </div>
+  </div>
+</div>
+</section>
+
 <footer class="site-footer">
   <div class="wrap">
     <span class="footer-brand">American Renewal Project</span>
@@ -215,7 +260,7 @@
 <script>
 (function(){
   var links = document.querySelectorAll('.cmp-snav a');
-  var ids = ['cmp-overview','cmp-align','cmp-diff','cmp-gaps','cmp-strengths','cmp-sources'];
+  var ids = ['cmp-overview','cmp-align','cmp-diff','cmp-gaps','cmp-strengths','cmp-wrongs','cmp-sources'];
   var sections = ids.map(function(id){ return document.getElementById(id); });
   function update(){
     var idx = 0;

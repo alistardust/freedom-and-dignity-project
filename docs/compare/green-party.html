@@ -30,6 +30,11 @@
     .cov-details > summary::before { content: "▶ "; font-size: .65rem; }
     .cov-details[open] > summary::before { content: "▼ "; }
     .cov-details > summary:hover { color: rgba(255,255,255,.8); }
+
+    .cmp-wrongs-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:1.1rem; margin-top:1rem; }
+    .wrong-card { background:rgba(255,255,255,.07); border-radius:6px; padding:1.2rem 1.4rem; border-left:4px solid #bf0a30; }
+    .wrong-card h3 { font-size:.95rem; color:#e8c060; text-transform:uppercase; letter-spacing:.05em; margin:0 0 .5rem; }
+    .wrong-card p { font-size:.9rem; line-height:1.65; color:rgba(255,255,255,.82); margin:0; }
   </style>
 </head>
 <body>
@@ -66,6 +71,7 @@
     <a href="#cmp-diff">Differences</a>
     <a href="#cmp-gaps">Coverage Gaps</a>
     <a href="#cmp-strengths">Strengths</a>
+    <a href="#cmp-wrongs">What They Get Wrong</a>
     <a href="#cmp-sources">Sources</a>
   </div>
 </nav>
@@ -202,6 +208,41 @@
   </div>
 </section>
 
+<section class="bg-dark on-dark ruled" id="cmp-wrongs">
+<div class="wrap">
+  <h2 style="color:#bf0a30">What They Get Wrong</h2>
+  <p class="section-intro" style="color:rgba(255,255,255,.75);max-width:720px;margin-bottom:1.5rem">
+    The Green Party has the most comprehensive environmental policy of any American party — and has used that position to cause specific, documented electoral harm while never building the organizational capacity that would make them a viable governing alternative.
+  </p>
+  <div class="cmp-wrongs-grid">
+    <div class="wrong-card">
+      <h3>The Spoiler Effect — Real, Documented Harm</h3>
+      <p>In Florida in 2000, Ralph Nader received 97,421 votes. George W. Bush carried the state — and thus the presidency — by 537 votes. The Iraq War, initiated by the Bush administration in 2003, resulted in approximately 4,500 U.S. military deaths and an estimated 200,000+ Iraqi civilian deaths (Iraq Body Count project; Lancet studies estimated higher figures). In 2016, Jill Stein received 51,463 votes in Wisconsin, 49,678 in Michigan, and 49,941 in Pennsylvania — all three states carried by Trump by margins under 11,000 votes each. Those three states determined the Electoral College outcome. This is not a theoretical or unfair critique. These are vote counts, margin of victory numbers, and documented policy consequences. Running spoiler campaigns in first-past-the-post systems without ranked-choice voting in place is a choice with real human costs.</p>
+    </div>
+    <div class="wrong-card">
+      <h3>Anti-Science Fringe Positions</h3>
+      <p>Jill Stein, the Green Party's 2012 and 2016 presidential nominee, made repeated statements casting doubt on vaccine safety that went significantly beyond scientific consensus — referring to "real questions" about whether the FDA and CDC were "trustworthy" on vaccines, and suggesting that public skepticism was "not unreasonable." This is not a nuanced position on regulatory capture; it is proximity to anti-vaccination rhetoric during a period when vaccine hesitancy was a documented public health threat. The Green Party's platform has historically included opposition to GMOs despite overwhelming scientific consensus (National Academies of Sciences, WHO, EFSA) that approved GMO crops are safe. Stein's 2016 campaign also cited concerns about Wi-Fi in schools contradicting WHO/ICNIRP safety assessments.</p>
+    </div>
+    <div class="wrong-card">
+      <h3>Strategic Malpractice</h3>
+      <p>The Green Party invests its national campaign resources disproportionately in presidential races — where they cannot win and where they cause maximum spoiler risk — rather than in local and state races where third parties can and do build durable electoral infrastructure. No consistent investment in school boards, city councils, state legislatures, or ballot initiative campaigns has produced a beachhead of actual Green governance anywhere in the United States. In 2016, Jill Stein attended a gala dinner in Moscow with Vladimir Putin and RT (Russia Today) leadership; Stein's campaign received RT-funded media coverage. While Stein was not found to have acted improperly, the association provided ammunition to critics and was strategically inexplicable for a party premised on opposing concentrated authoritarian power.</p>
+    </div>
+    <div class="wrong-card">
+      <h3>Policy Vagueness on Transition Costs</h3>
+      <p>The Green New Deal, as described in Green Party platforms, carries cost estimates ranging from $51 trillion to $93 trillion over ten years depending on the modeling assumptions (Friedman et al., Political Economy Research Institute; AEI critiques). The Green Party has not engaged seriously with grid reliability questions during a renewables transition — specifically the challenge of ensuring baseload power supply during the period before storage technology is sufficient to cover intermittency. There is no Green Party transition plan that addresses how the electrical grid remains stable as fossil generation is retired faster than storage capacity is built. The policy goal is right; the operational plan is absent.</p>
+    </div>
+    <div class="wrong-card">
+      <h3>Anti-Nuclear Position Contradicts Climate Goals</h3>
+      <p>The Green Party's blanket opposition to nuclear power is at direct odds with the scientific consensus on decarbonization. The IPCC's 2022 Mitigation report identifies nuclear as a low-carbon source with lifecycle emissions comparable to wind power and explicitly includes it in pathways to limit warming to 1.5°C. The International Energy Agency's Net Zero by 2050 scenario requires an approximately doubling of nuclear capacity. France generates roughly 70% of its electricity from nuclear with some of the lowest per-capita carbon emissions in Europe. The Green Party's platform would retire existing nuclear plants during a climate emergency — removing reliable low-carbon baseload generation before replacement capacity exists. Prominent environmentalists including Stewart Brand, Mark Lynas, and George Monbiot have publicly reversed their anti-nuclear positions after reviewing the evidence on climate costs. Letting ideology override scientific evidence on the most important issue the party claims to champion is not a minor inconsistency — it is a core failure of evidence-based policy.</p>
+    </div>
+    <div class="wrong-card">
+      <h3>Reparations: Stated Support, No Operational Plan</h3>
+      <p>The Green Party's platform nominally supports reparations, but without specificity, operational framework, or demonstrated legislative priority. Green Party presidential candidates have endorsed reparations as a concept in debates and media appearances, but the party has not advanced a detailed reparations policy proposal, engaged with the H.R. 40 commission framework, or used its platform to meaningfully pressure the Democratic Party on this issue during elections where Greens were on the ballot. Symbolic support for a policy without a mechanism for achieving it or pressure strategy for moving it is not meaningfully different from having no position.</p>
+    </div>
+  </div>
+</div>
+</section>
+
 <footer class="site-footer">
   <div class="wrap">
     <span class="footer-brand">American Renewal Project</span>
@@ -218,7 +259,7 @@
 <script>
 (function(){
   var links = document.querySelectorAll('.cmp-snav a');
-  var ids = ['cmp-overview','cmp-align','cmp-diff','cmp-gaps','cmp-strengths','cmp-sources'];
+  var ids = ['cmp-overview','cmp-align','cmp-diff','cmp-gaps','cmp-strengths','cmp-wrongs','cmp-sources'];
   var sections = ids.map(function(id){ return document.getElementById(id); });
   function update(){
     var idx = 0;
