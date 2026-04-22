@@ -160,6 +160,28 @@ details.design-logic .design-body li { font-size:.93rem; line-height:1.65; margi
   <div class="stat-item"><span class="stat-num" style="color:#c9952a">0</span><span class="stat-label">Partial</span></div>
   <div class="stat-item"><span class="stat-num" style="color:#888">13</span><span class="stat-label">Proposed</span></div>
 </div>
+<div class="completion-status" style="margin:1rem 0 1.5rem;padding:1rem 1.2rem;background:#fff;border-radius:6px;border:1px solid #e0d8c8;border-left:5px solid #c9952a">
+  <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap">
+    <div>
+      <span style="font-family:'Oswald',sans-serif;font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;color:#888">Development Status</span>
+      <div style="font-size:1.1rem;font-weight:700;color:#c9952a;margin-top:.15rem">🟡 In Progress</div>
+    </div>
+    <div style="flex:1;min-width:200px">
+      <div style="height:8px;background:#eee;border-radius:4px;overflow:hidden">
+        <div style="width:45%;height:100%;background:#c9952a;border-radius:4px"></div>
+      </div>
+      <div style="font-size:.8rem;color:#666;margin-top:.3rem">Core voting rights and redistricting sections developed; campaign finance and ranked-choice sections need more rule depth</div>
+    </div>
+  </div>
+  <div class="gap-callout" style="margin-top:.75rem;padding:.7rem 1rem;background:#fff8f0;border-radius:4px;border-left:3px solid #c9952a">
+    <strong style="color:#c9952a;font-size:.82rem">⚠ Content Gap:</strong>
+    <span style="font-size:.85rem;color:#555"> Campaign finance enforcement mechanisms and ranked-choice voting implementation details need expansion</span>
+  </div>
+  <div class="gap-callout" style="margin-top:.75rem;padding:.7rem 1rem;background:#fff8f0;border-radius:4px;border-left:3px solid #c9952a">
+    <strong style="color:#c9952a;font-size:.82rem">⚠ Content Gap:</strong>
+    <span style="font-size:.85rem;color:#555"> Direct democracy (referendum/recall) section present but needs structured rule IDs</span>
+  </div>
+</div>
   <div class="pil-intro">
     <div>
       <h2 style="color:#2471a3;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.06em">Purpose</h2>
@@ -176,7 +198,7 @@ details.design-logic .design-body li { font-size:.93rem; line-height:1.65; margi
 <div class="wrap" style="margin-bottom:0">
   <h2 style="color:#2471a3">The Problem It Solves</h2>
 </div>
-<div class="wrap"><p>American elections have serious structural weaknesses that distort representation and weaken public trust. Partisan gerrymandering allows politicians to choose their voters rather than the reverse, creating safe seats and uncompetitive elections that do not reflect true voter preferences. Voting access varies dramatically by state and locality, with some jurisdictions imposing unnecessary barriers—long lines, limited early voting, strict ID requirements without assistance, inadequate polling infrastructure—that disproportionately burden working people, students, elderly voters, and communities of color. Election security concerns are real but often weaponized: paper trails and auditable systems are not universal, while "security" rhetoric is sometimes used to justify suppression. Election administration is vulnerable to partisan interference, with recent cases of officials threatening to refuse certification or delay counts for political reasons. The Electoral College creates scenarios where the popular vote winner loses, and Senate malapportionment means that voters in different states have wildly different levels of influence. These structural problems undermine trust, distort outcomes, and make elections vulnerable to both suppression and sabotage.</p></div>
+<div class="wrap"><p>American elections have serious structural weaknesses that distort representation and weaken public trust. Partisan gerrymandering allows politicians to choose their voters rather than the reverse, creating safe seats and uncompetitive elections that do not reflect true voter preferences.<sup><a href="#fn2" id="ref2">[2]</a></sup> Voting access varies dramatically by state and locality, with some jurisdictions imposing unnecessary barriers—long lines, limited early voting, strict ID requirements without assistance, inadequate polling infrastructure—that disproportionately burden working people, students, elderly voters, and communities of color.<sup><a href="#fn1" id="ref1">[1]</a></sup> Election security concerns are real but often weaponized: paper trails and auditable systems are not universal, while "security" rhetoric is sometimes used to justify suppression. Election administration is vulnerable to partisan interference, with recent cases of officials threatening to refuse certification or delay counts for political reasons. The Electoral College creates scenarios where the popular vote winner loses, and Senate malapportionment means that voters in different states have wildly different levels of influence. Campaign finance rules allow massive influence by wealthy donors and corporations, skewing policy outcomes.<sup><a href="#fn3" id="ref3">[3]</a></sup> These structural problems undermine trust, distort outcomes, and make elections vulnerable to both suppression and sabotage.</p></div>
 </section>
 <section class="bg-cream ruled" id="pil-reform">
 <div class="wrap" style="margin-bottom:0">
@@ -184,6 +206,18 @@ details.design-logic .design-body li { font-size:.93rem; line-height:1.65; margi
 </div>
 <div class="wrap"><div class="reform-grid"><div class="reform-card"><h3>Establish an explicit constitutional right to vote with strong federal protections</h3><p></p></div>
 </div></div>
+<div class="wrap">
+<div class="cross-links-box" style="margin-top:1.5rem;padding:1rem 1.2rem;background:var(--navy);color:#fff;border-radius:6px;border-top:3px solid #c9952a">
+  <h3 style="font-family:'Oswald',sans-serif;font-size:.85rem;text-transform:uppercase;letter-spacing:.08em;color:#c9952a;margin:0 0 .7rem">Cross-Sectional Policy Areas</h3>
+  <div style="display:flex;flex-wrap:wrap;gap:.5rem">
+    <a href="anti-corruption.html" style="display:inline-block;padding:.3rem .75rem;background:rgba(255,255,255,.12);color:rgba(255,255,255,.85);border-radius:3px;font-size:.82rem;text-decoration:none">→ Anti-Corruption</a>
+    <a href="information-and-media.html" style="display:inline-block;padding:.3rem .75rem;background:rgba(255,255,255,.12);color:rgba(255,255,255,.85);border-radius:3px;font-size:.82rem;text-decoration:none">→ Information & Media</a>
+    <a href="legislative-reform.html" style="display:inline-block;padding:.3rem .75rem;background:rgba(255,255,255,.12);color:rgba(255,255,255,.85);border-radius:3px;font-size:.82rem;text-decoration:none">→ Legislative Reform</a>
+    <a href="technology-and-ai.html" style="display:inline-block;padding:.3rem .75rem;background:rgba(255,255,255,.12);color:rgba(255,255,255,.85);border-radius:3px;font-size:.82rem;text-decoration:none">→ Technology & AI</a>
+  </div>
+  <p style="font-size:.82rem;color:rgba(255,255,255,.6);margin:.7rem 0 0">Free and fair elections require anti-corruption guardrails, accurate information ecosystems, fair legislative structures, and protection from AI-driven manipulation.</p>
+</div>
+</div>
 </section>
 <section class="bg-parchment ruled">
 <div class="wrap">
@@ -512,6 +546,17 @@ details.design-logic .design-body li { font-size:.93rem; line-height:1.65; margi
     </div>
   </div>
   <p style="font-size:.85rem;color:rgba(255,255,255,.45);font-style:italic">Both mechanisms require constitutional amendments to establish at the federal level. The amendment process is itself among this platform's priorities. See also: <a href="../constitution.html#referendum-recall" style="color:rgba(255,255,255,.6)">Constitution page — Referendum &amp; Recall</a>.</p>
+</div>
+</section>
+
+<section class="bg-parchment ruled" id="pil-refs">
+<div class="wrap">
+  <h2>References</h2>
+  <ol class="footnotes" style="font-size:.87rem;line-height:1.75;padding-left:1.3rem">
+    <li id="fn1">Brennan Center for Justice. (2023). <em>Voting laws roundup: 2023</em>. https://www.brennancenter.org/our-work/research-reports/voting-laws-roundup-2023 <a href="#ref1" style="font-size:.8rem">↩</a></li>
+    <li id="fn2">Brennan Center for Justice. (2022). <em>Extreme maps</em>. https://www.brennancenter.org/our-work/research-reports/extreme-maps <a href="#ref2" style="font-size:.8rem">↩</a></li>
+    <li id="fn3">Federal Election Commission. (2024). <em>Campaign finance statistics</em>. https://www.fec.gov/data/ <a href="#ref3" style="font-size:.8rem">↩</a></li>
+  </ol>
 </div>
 </section>
 
