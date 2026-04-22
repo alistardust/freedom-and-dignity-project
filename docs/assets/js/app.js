@@ -28,9 +28,13 @@
 
   (function () {
     const page = location.pathname.split('/').pop() || 'index.html';
+    // Normalize: strip .html for comparison (serve redirects clean URLs, so
+    // /about-ai.html becomes /about-ai, making page = 'about-ai' not 'about-ai.html')
+    const pageName = page.replace(/\.html$/, '') || 'index';
     document.querySelectorAll('.nav-links a').forEach(a => {
       const href = a.getAttribute('href');
-      if (href === page || (page === '' && href === 'index.html') || (page === 'index.html' && href === 'index.html')) {
+      const hrefName = href ? href.replace(/\.html$/, '').replace(/^\.\.\//, '') : '';
+      if (hrefName === pageName || (pageName === 'index' && href === 'index.html')) {
         a.classList.add('active');
       }
     });
@@ -44,9 +48,9 @@
     const aiHref = base + 'about-ai.html';
     const missionHref = base + 'mission.html';
     const constitutionHref = base + 'constitution.html';
-    const isAiPage = page === 'about-ai.html';
-    const isMissionPage = page === 'mission.html';
-    const isConstitutionPage = page === 'constitution.html';
+    const isAiPage = pageName === 'about-ai';
+    const isMissionPage = pageName === 'mission';
+    const isConstitutionPage = pageName === 'constitution';
 
     if (navList && !navList.querySelector('a[href*="mission"]')) {
       const li = document.createElement('li');

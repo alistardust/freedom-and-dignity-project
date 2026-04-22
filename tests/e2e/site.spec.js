@@ -475,6 +475,12 @@ test.describe('Mission page', () => {
     await expect(link).toBeAttached();
   });
 
+  test('nav Mission link is marked active on mission page', async ({ page }) => {
+    // Injected links get class="active" from pageName detection in app.js
+    const link = page.locator('.nav-links a[href*="mission"].active');
+    await expect(link).toBeAttached();
+  });
+
   test('footer Mission link is present', async ({ page }) => {
     await expect(page.locator('.footer-links a[href*="mission"]')).toBeAttached();
   });
