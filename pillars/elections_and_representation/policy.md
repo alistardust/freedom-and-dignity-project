@@ -139,3 +139,20 @@
 **Status:** INCLUDED  
 **Statement:** Paid time off for voting  
 **Notes:** Employers must provide paid time off to vote, with protections extending to early voting if workers cannot take time on Election Day itself. Includes protection from retaliation for taking time to vote. Essential because national holiday alone does not solve the problem for people who must work on holidays.
+
+
+---
+
+## DIR — Direct Democracy: Referendum and Recall
+
+*These policies require constitutional amendments to establish at the federal level. They are among the most structurally significant reforms in this pillar.*
+
+### ELE-DIR-001 — National referendum mechanism
+**Status:** PROPOSED (Constitutional Amendment Required)
+**Statement:** Establish a binding national referendum process allowing citizens to petition for a direct vote on federal law or constitutional amendment proposals.
+**Notes:** Requirements: petition signed by 5% of eligible voters (approximately 13 million signatures) within 180 days, verified by the independent Election Commission. The referendum appears on the next general election ballot. Passes by simple majority with a minimum 50% voter turnout requirement. Scope covers any federal law currently in force or any constitutional amendment proposal. Explicitly excluded: declarations of war, appropriations bills, and treaties, to prevent weaponization of the mechanism. Mirrors direct democracy mechanisms in many established democracies. Requires a constitutional amendment to establish — that amendment is itself a priority of this platform.
+
+### ELE-DIR-002 — Federal recall mechanism
+**Status:** PROPOSED (Constitutional Amendment Required)
+**Statement:** Establish a constitutional recall mechanism for federal officials who have committed abuse of office, providing the electorate a direct removal tool between regular elections.
+**Notes:** For the President: petition by 10% of eligible voters nationally (approximately 26 million signatures) within 60 days, followed by a special recall election. For Senators and Representatives: petition by 10% of eligible voters in their state or district within 60 days, followed by a special election. The bar is high by design — this is not a tool for ordinary partisan disagreement. It requires a genuine, engaged supermajority of citizens. A recall attempt that fails cannot be repeated within the same term. Recall mechanisms already exist at the state level in most U.S. states; this extends the principle to federal office. Requires a constitutional amendment to establish.

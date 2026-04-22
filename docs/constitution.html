@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Constitution — American Renewal Project</title>
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" type="image/svg+xml" href="assets/img/logo.svg">
+<style>
+.const-hero { background: var(--navy); padding: 4rem 2rem 3rem; text-align: center; border-bottom: 4px solid var(--gold); }
+.const-hero-eyebrow { font-family: "Libre Franklin", sans-serif; font-size: .7rem; letter-spacing: .22em; text-transform: uppercase; color: rgba(255,255,255,.38); display: block; margin-bottom: 1rem; }
+.const-hero h1 { font-family: "Oswald", sans-serif; font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 700; text-transform: uppercase; letter-spacing: .04em; color: #fff; margin: 0 0 1.25rem; }
+.const-hero h1 span { color: var(--gold); }
+.const-hero-statement { font-family: "Playfair Display", serif; font-style: italic; font-size: clamp(1rem, 2vw, 1.3rem); color: rgba(255,255,255,.72); max-width: 640px; margin: 0 auto; line-height: 1.7; }
+.const-body { max-width: 760px; margin: 0 auto; padding: 3rem 1.5rem; }
+.const-body h2 { font-family: "Oswald", sans-serif; font-size: 1.3rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--navy); margin: 2.5rem 0 .75rem; border-left: 3px solid var(--gold); padding-left: .9rem; }
+.const-body h3 { font-family: "Oswald", sans-serif; font-size: 1.05rem; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: var(--navy); margin: 1.5rem 0 .5rem; }
+.const-body p { font-family: "Libre Franklin", sans-serif; font-size: 1rem; line-height: 1.85; color: var(--ink); margin: 0 0 1.2rem; }
+.const-body ul, .const-body ol { padding-left: 1.5rem; margin: 0 0 1.4rem; }
+.const-body li { font-family: "Libre Franklin", sans-serif; font-size: .97rem; line-height: 1.8; color: var(--ink); margin-bottom: .4rem; }
+.const-pullquote { border-left: 4px solid var(--gold); background: var(--parchment); padding: 1.2rem 1.5rem; margin: 2rem 0; }
+.const-pullquote p { font-family: "Playfair Display", serif; font-style: italic; font-size: 1.1rem; color: var(--navy); line-height: 1.7; margin: 0; }
+.const-vuln-list { display: flex; flex-direction: column; gap: .85rem; margin: 1rem 0 1.5rem; }
+.const-vuln { padding: 1rem 1.25rem; background: var(--parchment); border-left: 3px solid var(--red); }
+.const-vuln h4 { font-family: "Oswald", sans-serif; font-size: .9rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--red); margin: 0 0 .4rem; }
+.const-vuln p { font-family: "Libre Franklin", sans-serif; font-size: .92rem; line-height: 1.7; color: var(--ink); margin: 0; }
+.const-amend-list { display: flex; flex-direction: column; gap: .85rem; margin: 1rem 0 1.5rem; }
+.const-amend { padding: 1rem 1.25rem; background: var(--parchment); border-left: 3px solid var(--gold); }
+.const-amend h4 { font-family: "Oswald", sans-serif; font-size: .9rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--navy); margin: 0 0 .4rem; }
+.const-amend p { font-family: "Libre Franklin", sans-serif; font-size: .92rem; line-height: 1.7; color: var(--ink); margin: 0; }
+.const-reform-box { background: var(--navy); color: #fff; padding: 2rem; margin: 2rem 0; border-top: 4px solid var(--gold); }
+.const-reform-box h3 { font-family: "Oswald", sans-serif; font-size: 1.15rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--gold); margin: 0 0 1rem; }
+.const-reform-box h4 { font-family: "Oswald", sans-serif; font-size: .95rem; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: var(--gold); margin: 1.25rem 0 .5rem; opacity: .8; }
+.const-reform-box p, .const-reform-box li { font-family: "Libre Franklin", sans-serif; font-size: .93rem; line-height: 1.75; color: rgba(255,255,255,.85); margin: 0 0 .6rem; }
+.const-reform-box ul { padding-left: 1.3rem; margin: .5rem 0 1rem; }
+.const-reform-note { font-size: .82rem; color: rgba(255,255,255,.55); font-style: italic; margin-top: 1rem; }
+.const-strategy-list { counter-reset: strategy; display: flex; flex-direction: column; gap: 1rem; margin: 1rem 0 1.5rem; }
+.const-strategy-item { display: flex; gap: 1rem; align-items: flex-start; padding: 1rem 1.25rem; background: var(--parchment); border: 1px solid var(--rule); }
+.const-strategy-num { font-family: "Oswald", sans-serif; font-size: 1.3rem; font-weight: 700; color: var(--navy); opacity: .3; flex-shrink: 0; min-width: 1.5rem; }
+.const-strategy-item div { font-family: "Libre Franklin", sans-serif; font-size: .95rem; line-height: 1.75; color: var(--ink); }
+.const-strategy-item strong { color: var(--navy); }
+.page-refs { max-width: 760px; margin: 2rem auto; padding: 1.2rem 1.5rem; border-top: 1px solid var(--rule); }
+.refs-head { font-family: "Oswald", sans-serif; font-size: .75rem; letter-spacing: .12em; text-transform: uppercase; color: var(--mid); margin-bottom: .75rem; }
+.refs-list { padding-left: 1.2rem; }
+.refs-list li { font-size: .82rem; color: var(--mid); line-height: 1.7; margin-bottom: .5rem; }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">
+      <img src="assets/img/logo.svg" alt="American Renewal Project" width="36" height="36">
+      <span class="nav-wordmark">American Renewal<span>Project</span></span>
+    </a>
+    <button class="nav-hamburger" aria-label="Menu">☰</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="foundations.html">Foundations</a></li>
+      <li><a href="pillars/index.html">Pillars</a></li>
+      <li><a href="compare/index.html">Compare</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ── HERO ─────────────────────────────────────────────────────── -->
+<header class="const-hero">
+  <span class="const-hero-eyebrow">Constitutional Reform</span>
+  <h1>The <span>Constitution</span></h1>
+  <p class="const-hero-statement">We revere the Constitution. That is precisely why we believe it must be updated.</p>
+</header>
+
+<!-- ── BODY ─────────────────────────────────────────────────────── -->
+<div class="const-body">
+
+  <!-- Section 1 -->
+  <h2>A Remarkable Document</h2>
+
+  <p>The Constitution of the United States was written in 1787, ratified in 1788, and took effect in 1789.<sup><a href="#fn1" id="ref1">[1]</a></sup> It is one of the oldest operating constitutional frameworks in the world. The framers — Madison, Hamilton, Franklin, Washington, and the others — were not gods. They were practical men working under enormous pressure to build a functioning government for a collection of suspicious, quarreling states. They did not agree on everything. They made compromises, some of which were catastrophic. But they built something that lasted.</p>
+
+  <p>They also built in the capacity to change. Article V exists because the framers knew the document was imperfect and would need updating.<sup><a href="#fn2" id="ref2">[2]</a></sup> James Madison, the document's principal architect, wrote in Federalist No. 43 that "useful alterations will be suggested by experience."<sup><a href="#fn3" id="ref3">[3]</a></sup> The amendments prove them right: the Bill of Rights in 1791, abolishing slavery with the 13th Amendment, establishing equal protection with the 14th, extending voting rights with the 15th, women's suffrage with the 19th, lowering the voting age to 18 with the 26th. Twenty-seven amendments in total — proof that the system can improve itself.</p>
+
+  <div class="const-pullquote">
+    <p>"Useful alterations will be suggested by experience." — James Madison, Federalist No. 43<sup><a href="#fn3">[3]</a></sup></p>
+  </div>
+
+  <p>The founders did not want a static document. Neither do we.</p>
+
+  <!-- Section 2 -->
+  <h2>Where We Have Failed It</h2>
+
+  <p>The last constitutional amendment — the 27th, prohibiting mid-term congressional pay raises — was ratified in 1992.<sup><a href="#fn4" id="ref4">[4]</a></sup> Before that, the 26th (lowering the voting age) in 1971. In the more than fifty years since, the world has been transformed: the internet, artificial intelligence, social media, genomics, mass surveillance, global climate change, the rise of global oligarchy — and the Constitution has not been updated once.</p>
+
+  <p>This is not because the mechanism doesn't exist. Article V is still there. It is because political polarization has made the two-thirds plus three-fourths threshold functionally impossible to reach. In an era of near-perfect partisan sorting, achieving two-thirds majorities in both houses of Congress on any contested matter is not a realistic goal. The amendment process has been effectively taken offline by the very polarization the Constitution was meant to prevent.</p>
+
+  <p>We have not failed the Constitution. We have failed to use it.</p>
+
+  <!-- Section 3 -->
+  <h2>Vulnerabilities Exposed</h2>
+
+  <p>The last several years have demonstrated that our constitutional design has real, exploitable weaknesses. These are not partisan observations. They are structural ones:</p>
+
+  <div class="const-vuln-list">
+
+    <div class="const-vuln">
+      <h4>1. Presidential Self-Pardon</h4>
+      <p>The Constitution does not explicitly prohibit a president from pardoning themselves.<sup><a href="#fn5" id="ref5">[5]</a></sup> The question was never definitively resolved by the courts. A power designed as an act of mercy has no written guard against self-dealing at the highest level.</p>
+    </div>
+
+    <div class="const-vuln">
+      <h4>2. Unlimited Emergency Powers</h4>
+      <p>Congress has ceded enormous authority to the executive through statutes granting emergency powers with no sunset provision or mandatory congressional override mechanism. The result is an executive branch that can govern by emergency declaration indefinitely, with no constitutional check beyond whatever Congress chooses to assert — and often doesn't.</p>
+    </div>
+
+    <div class="const-vuln">
+      <h4>3. No Emoluments Clause Enforcement</h4>
+      <p>The Constitution prohibits federal officials from receiving foreign emoluments without congressional consent, but there is no private right of action, no criminal penalty, and no enforcement mechanism.<sup><a href="#fn6" id="ref6">[6]</a></sup> Courts have repeatedly declined to rule on the merits in recent cases. A constitutional prohibition without enforcement is a suggestion, not a rule.</p>
+    </div>
+
+    <div class="const-vuln">
+      <h4>4. Weaponized Judicial Appointments</h4>
+      <p>The Senate confirmation process has been transformed into a partisan instrument. There is no written constitutional rule against blocking nominees for a full year, or confirming replacements in the weeks before a presidential election. These are matters of convention — and conventions, as we have seen, can be abandoned without legal consequence whenever the political incentive to do so is strong enough.</p>
+    </div>
+
+    <div class="const-vuln">
+      <h4>5. The Electoral College Distortion</h4>
+      <p>The Electoral College was designed to give larger states proportional weight while protecting smaller ones. Winner-take-all allocation — not required by the Constitution but adopted by 48 states — has transformed it into a system where a small number of swing-state voters effectively choose the president, while tens of millions of voters in non-competitive states exercise little meaningful influence on the outcome.</p>
+    </div>
+
+    <div class="const-vuln">
+      <h4>6. The Non-Constitutional Filibuster</h4>
+      <p>The Senate filibuster is not in the Constitution.<sup><a href="#fn7" id="ref7">[7]</a></sup> It originated as an accidental procedural quirk in the early 19th century and evolved — through practice, not law — into a de facto supermajority requirement for ordinary legislation. No founding document envisioned it. No article or amendment authorizes it. It is a procedural rule masquerading as constitutional principle.</p>
+    </div>
+
+  </div>
+
+  <!-- Section 4 -->
+  <h2>What Needs Amending</h2>
+
+  <p>This is not a political wish list. It is a structural repair agenda. Each item below addresses a documented gap between what the Constitution intended and what it currently delivers:</p>
+
+  <div class="const-amend-list">
+
+    <div class="const-amend">
+      <h4>1. Make the Voting Right Explicit</h4>
+      <p>The Constitution does not affirmatively guarantee the right to vote. The 15th, 19th, 24th, and 26th Amendments restrict who can be denied the vote, but none establish it as a positive right. An explicit, affirmative right to vote would provide the constitutional foundation needed to prevent the current patchwork of state laws that suppress participation through ID requirements, registration obstacles, polling place closures, and voter-roll purges.</p>
+    </div>
+
+    <div class="const-amend">
+      <h4>2. Term Limits for Supreme Court Justices</h4>
+      <p>Life tenure made sense in 1789, when life expectancy was shorter and the Court had far less power over American life. Today, justices serve for three decades or more, transforming each confirmation into a high-stakes partisan battle over the ideological trajectory of the nation. Staggered 18-year terms — proposed by legal scholars across the political spectrum — would regularize appointments and reduce the winner-take-all dynamic of the current system.<sup><a href="#fn8" id="ref8">[8]</a></sup></p>
+    </div>
+
+    <div class="const-amend">
+      <h4>3. Explicit Limits on Presidential Pardon Power</h4>
+      <p>No self-pardon. No pardoning of co-conspirators in crimes that involved the presidency. The pardon power was designed as an instrument of mercy for individuals who have been punished enough — not as a shield for a president's own conduct in office. Constitutional language can draw this line clearly, as it has never been drawn before.</p>
+    </div>
+
+    <div class="const-amend">
+      <h4>4. Emoluments Clause Enforcement</h4>
+      <p>Establish a private right of action and criminal penalty for violations of the Emoluments Clause. A constitutional prohibition without an enforcement mechanism is not a provision — it is an aspiration. Courts should not have to decline jurisdiction on the merits because Congress failed to create a cause of action. This amendment closes that gap.</p>
+    </div>
+
+    <div class="const-amend">
+      <h4>5. Equal Rights Amendment</h4>
+      <p>Explicitly prohibit discrimination on the basis of sex and all immutable characteristics — race, color, national origin, religion, disability, sexual orientation, and gender identity. The ERA was passed by Congress in 1972 and reached its ratification threshold in 2020, but its validity remains in legal dispute.<sup><a href="#fn9" id="ref9">[9]</a></sup> It should be re-ratified with updated and inclusive language. Equality before the law is not a partisan position.</p>
+    </div>
+
+    <div class="const-amend">
+      <h4>6. Make the Amendment Process More Achievable</h4>
+      <p>A meta-amendment: replace the current two-thirds Congress plus three-fourths states threshold with 60% of Congress plus two-thirds of states, or a similar recalibrated supermajority. This remains deliberately difficult — it should not be easy to change the Constitution — but it should be achievable in a functioning democracy. The current threshold has become an effective veto by minority factions, not a guarantee of consensus.</p>
+    </div>
+
+  </div>
+
+  <!-- Section 5 — Referendum and Recall (Reform Box) -->
+  <h2>Referendum &amp; Recall — New Policy</h2>
+
+  <div class="const-reform-box">
+
+    <h3>The People Must Have a Voice Between Elections</h3>
+
+    <p>Elections happen every two, four, or six years. The problems they reveal — and the officials they fail to remove — do not wait. This platform proposes two structural reforms that go beyond the amendment agenda above. Both require constitutional amendments to establish at the federal level. Both are mechanisms that functioning democracies around the world have used successfully for generations.<sup><a href="#fn10" id="ref10">[10]</a></sup></p>
+
+    <h4>National Referendum</h4>
+
+    <p>The people should be able to petition for a binding national referendum on any federal law in force or any proposed constitutional amendment. The mechanism:</p>
+
+    <ul>
+      <li>A petition signed by <strong>5% of eligible voters</strong> (approximately 13 million signatures) within 180 days, verified by the independent Election Commission</li>
+      <li>The referendum appears on the ballot at the next general election</li>
+      <li>Passes by simple majority with a minimum <strong>50% voter turnout</strong> requirement — ensuring the result reflects genuine national engagement</li>
+      <li><strong>In scope:</strong> any federal law currently in force; any proposed constitutional amendment</li>
+      <li><strong>Out of scope:</strong> declarations of war, appropriations bills, and treaties — to prevent weaponization by well-funded factions</li>
+    </ul>
+
+    <p>Direct democracy mechanisms of this type exist in Switzerland, Germany, New Zealand, Ireland, and many other established democracies.<sup><a href="#fn10">[10]</a></sup> They are not experiments. They are proven tools.</p>
+
+    <h4>Recall of Federal Officials</h4>
+
+    <p>A constitutional amendment establishing a recall mechanism for federal officials who have committed abuse of office:</p>
+
+    <ul>
+      <li><strong>For the President:</strong> a petition by 10% of eligible voters nationally (approximately 26 million signatures) within 60 days, followed by a special recall election held within 90 days</li>
+      <li><strong>For Senators and Representatives:</strong> a petition by 10% of eligible voters in their state or district within 60 days, followed by a special election</li>
+      <li>The bar is high by design. This is not a tool for partisan disagreement. It requires a genuine, engaged supermajority of citizens willing to put their names on record.</li>
+      <li>A recall attempt that fails cannot be repeated within the same term of office</li>
+    </ul>
+
+    <h4>Why These Matter</h4>
+
+    <p>These two mechanisms give the people a direct democratic voice between elections — a check on officials who believe that a four- or six-year term is long enough to act without accountability. They are not radical ideas. Recall mechanisms exist at the state level in the majority of U.S. states, and referendum mechanisms exist at the state level in all 50.<sup><a href="#fn11" id="ref11">[11]</a></sup></p>
+
+    <p>Bringing them to the federal level requires the constitutional amendment process — which is itself among this platform's top priorities. These reforms are therefore connected to the broader amendment agenda: the path to direct democracy runs through the amendment process, and improving the amendment process makes direct democracy achievable.</p>
+
+    <p class="const-reform-note">Both proposals are presented as policy positions of this platform. They represent a political argument, not an existing legal right. Constitutional amendments are required. The debate about the precise thresholds, scope limitations, and enforcement mechanisms should be public, thorough, and democratic.</p>
+
+  </div>
+
+  <!-- Section 6 -->
+  <h2>The Amendment Strategy</h2>
+
+  <p>The path forward requires honesty about the difficulty. Constitutional amendments are hard. That is the point. But they are not impossible — 27 times they have not been impossible. A serious constitutional reform agenda requires a serious strategy:</p>
+
+  <div class="const-strategy-list">
+
+    <div class="const-strategy-item">
+      <span class="const-strategy-num">1</span>
+      <div><strong>Build public consensus first.</strong> Amendments follow public supermajorities; they do not lead them. The 26th Amendment (lowering the voting age) passed in 1971 in part because the public had already decided: if 18-year-olds could be drafted and sent to die in Vietnam, they could vote. The path to amendment begins with persuasion. Every section of this platform is part of that effort.</div>
+    </div>
+
+    <div class="const-strategy-item">
+      <span class="const-strategy-num">2</span>
+      <div><strong>Target "no-brainer" amendments first.</strong> Presidential pardon limits, explicit voting rights, emoluments enforcement. These are the reforms that should achieve the broadest non-partisan agreement — they correct obvious gaps that most Americans, regardless of party, recognize as problems. Pass them first. Build the institutional habit of amendment.</div>
+    </div>
+
+    <div class="const-strategy-item">
+      <span class="const-strategy-num">3</span>
+      <div><strong>Use Article V's convention option.</strong> A convention called by two-thirds of state legislatures — 34 states — bypasses Congress entirely.<sup><a href="#fn2">[2]</a></sup> This is a legitimate constitutional mechanism that has never been used at the federal level but exists for precisely the scenario where Congress will not act on issues where the public has moved. Convention calls have been active in multiple state legislatures. This option is real.</div>
+    </div>
+
+    <div class="const-strategy-item">
+      <span class="const-strategy-num">4</span>
+      <div><strong>Pair every constitutional goal with a statutory fallback.</strong> Where a constitutional amendment is the ideal, legislation is the immediate. Push both tracks simultaneously. Statutory protections can be enacted and enforced today; amendments can follow. The goal is not to wait for perfection while the problem persists.</div>
+    </div>
+
+    <div class="const-strategy-item">
+      <span class="const-strategy-num">5</span>
+      <div><strong>Make the amendment process itself the meta-amendment.</strong> The most important structural reform on this entire list is making the amendment process more achievable. If we can pass one amendment — making the threshold slightly less impossible — every other reform becomes easier. This is the flywheel of the whole enterprise.</div>
+    </div>
+
+  </div>
+
+  <!-- Section 7 -->
+  <h2>The Constitution Is Not Fragile</h2>
+
+  <p>The Constitution has survived a civil war, two world wars, a great depression, political assassinations, a president's resignation, an impeachment crisis, and more than two centuries of contested elections. It is not a fragile document. But it is not self-enforcing either. Every protection in it requires people who believe in it and institutions that uphold it. When those institutions are tested, the document alone cannot save them.</p>
+
+  <p>Constitutional reform is not a project for people who have given up on America. It is a project for people who believe America is worth the work of making it better. The founders left the document deliberately incomplete — they knew it was. They left the amendment process as their final instruction: keep going. Argue it out. Build consensus. Make it more perfect.</p>
+
+  <p>We believe in it. We are asking you to believe in it too — not as a finished artifact to be preserved behind glass, but as an unfinished project to be carried forward. The founders left us work to do. This platform is part of that work.</p>
+
+</div><!-- /.const-body -->
+
+<!-- ── REFERENCES ─────────────────────────────────────────────── -->
+<div class="page-refs" id="page-refs">
+  <p class="refs-head">References</p>
+  <ol class="refs-list">
+    <li id="fn1">National Archives. (n.d.). <em>The Constitution of the United States: A transcription</em>. U.S. National Archives and Records Administration. <a href="https://www.archives.gov/founding-docs/constitution" target="_blank" rel="noopener">https://www.archives.gov/founding-docs/constitution</a> <a href="#ref1">↩</a></li>
+    <li id="fn2">U.S. Const. art. V. <em>Mode of amendment</em>. Library of Congress. <a href="https://constitution.congress.gov/constitution/article-5/" target="_blank" rel="noopener">https://constitution.congress.gov/constitution/article-5/</a> <a href="#ref2">↩</a></li>
+    <li id="fn3">Madison, J. (1788, January 23). Federalist No. 43. In A. Hamilton, J. Madison, &amp; J. Jay, <em>The Federalist Papers</em>. The Avalon Project, Yale Law School. <a href="https://avalon.law.yale.edu/18th_century/fed43.asp" target="_blank" rel="noopener">https://avalon.law.yale.edu/18th_century/fed43.asp</a> <a href="#ref3">↩</a></li>
+    <li id="fn4">National Archives. (n.d.). <em>The 27th Amendment</em>. U.S. National Archives and Records Administration. <a href="https://www.archives.gov/federal-register/constitution" target="_blank" rel="noopener">https://www.archives.gov/federal-register/constitution</a> <a href="#ref4">↩</a></li>
+    <li id="fn5">U.S. Const. art. II, § 2, cl. 1 (Pardon Clause). The text grants the president power to "grant reprieves and pardons for offenses against the United States, except in cases of impeachment," but contains no explicit prohibition on self-pardon. <a href="#ref5">↩</a></li>
+    <li id="fn6">U.S. Const. art. I, § 9, cl. 8 (Emoluments Clause). The clause prohibits persons holding federal office from accepting any present, emolument, office, or title from a foreign state without congressional consent but establishes no enforcement mechanism or private right of action. <a href="#ref6">↩</a></li>
+    <li id="fn7">Wawro, G. J., &amp; Schickler, E. (2006). <em>Filibuster: Obstruction and lawmaking in the U.S. Senate</em>. Princeton University Press. The filibuster is not mentioned in the Constitution (U.S. Const. art. I); it originated from an inadvertent removal of the previous-question motion in 1806 and developed as a Senate procedural rule through practice. <a href="#ref7">↩</a></li>
+    <li id="fn8">Calabresi, S. G., &amp; Lindgren, J. (2006). Term limits for the Supreme Court: Life tenure reconsidered. <em>Harvard Journal of Law &amp; Public Policy</em>, <em>29</em>(3), 769–877. <a href="#ref8">↩</a></li>
+    <li id="fn9">Equal Rights Amendment, H.J. Res. 208, 92nd Cong. (1972) (passed by Congress March 22, 1972; extended ratification deadline expired 1982; Virginia became the 38th ratifying state in 2020; legal status contested). See also National Archives. (2022). <em>Equal Rights Amendment</em>. U.S. National Archives and Records Administration. <a href="https://www.archives.gov/women/era" target="_blank" rel="noopener">https://www.archives.gov/women/era</a> <a href="#ref9">↩</a></li>
+    <li id="fn10">International IDEA. (2008). <em>Direct democracy: The international IDEA handbook</em>. International Institute for Democracy and Electoral Assistance. <a href="https://www.idea.int/publications/catalogue/direct-democracy-international-idea-handbook" target="_blank" rel="noopener">https://www.idea.int/publications/catalogue/direct-democracy-international-idea-handbook</a> <a href="#ref10">↩</a></li>
+    <li id="fn11">National Conference of State Legislatures. (2019). <em>Recall of state officials</em>. NCSL. <a href="https://www.ncsl.org/elections-and-campaigns/recall-of-state-officials" target="_blank" rel="noopener">https://www.ncsl.org/elections-and-campaigns/recall-of-state-officials</a> <a href="#ref11">↩</a></li>
+  </ol>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span class="footer-brand">American Renewal Project</span>
+    <ul class="footer-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="foundations.html">Foundations</a></li>
+      <li><a href="pillars/index.html">Pillars</a></li>
+      <li><a href="compare/index.html">Compare</a></li>
+    </ul>
+    <span class="footer-note">A Third Bill of Rights for the 21st Century.</span>
+  </div>
+</footer>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
