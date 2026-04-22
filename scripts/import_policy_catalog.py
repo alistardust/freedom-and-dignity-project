@@ -236,7 +236,7 @@ MANUAL_RULE_SEEDS = {
     "ELE-IDA-005": {
         "scope_code": "ELE",
         "family_code": "IDA",
-        "statement": "States requiring voter ID must operate mobile ID-issuing units that regularly and proactively serve rural, elderly, disabled, low-income, and underserved communities, with publicly posted schedules at least 90 days in advance",
+        "statement": "Physical mobility must not be a barrier to obtaining voter ID; states requiring voter ID must provide ADA-compliant offices, home-visit ID services for voters who cannot travel, and fully functional mail and online application pathways that require no in-person trip",
         "status": "PROPOSED",
         "source_name": "branch_branch_political_project_main.txt",
         "line_number": 16604,
