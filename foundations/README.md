@@ -24,7 +24,7 @@ This project is organized in two layers.
 
 **Foundations** are the core values — the moral and political commitments that define what this project believes. They are written to be public-facing, accessible, and resonant. They explain *why* the work matters before getting into *what* must change.
 
-**Pillars** are the 17 specific policy domains where those values get translated into concrete rules, institutional design, and enforceable requirements. Each pillar belongs to one (or occasionally two) foundations.
+**Pillars** are the 22 specific policy domains where those values get translated into concrete rules, institutional design, and enforceable requirements. Each pillar belongs to one (or occasionally two) foundations.
 
 Reading the foundations first is the right way to understand the project. They are the "why." The pillars are the "how."
 
