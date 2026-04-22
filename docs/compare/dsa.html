@@ -18,6 +18,18 @@
     .on-dark .cov-pillar { color: rgba(255,255,255,.8); background: rgba(255,255,255,.03); }
     .on-dark .cov-gap { color: rgba(255,255,255,.65); }
     @media (max-width: 640px) { .cov-row { grid-template-columns: 1fr; } .cov-pillar, .cov-level, .cov-gap { border-right: none; border-bottom: 1px solid rgba(255,255,255,.08); } }
+    .cmp-snav { position: sticky; top: 63px; z-index: 150; background: var(--navy); border-bottom: 1px solid rgba(255,255,255,.12); overflow-x: auto; scrollbar-width: none; }
+    .cmp-snav::-webkit-scrollbar { display: none; }
+    .cmp-snav-inner { display: flex; min-width: max-content; }
+    .cmp-snav a { font-family: "Oswald",sans-serif; font-size: .68rem; font-weight: 600; text-transform: uppercase; letter-spacing: .12em; padding: .55rem 1rem; color: rgba(255,255,255,.55); white-space: nowrap; text-decoration: none; border-bottom: 2px solid transparent; transition: color .15s, border-color .15s; }
+    .cmp-snav a:hover { color: #fff; }
+    .cmp-snav a.active { color: var(--gold); border-bottom-color: var(--gold); }
+    @media (max-width: 540px) { .cmp-snav a { font-size: .62rem; padding: .5rem .7rem; } }
+    .cov-details > summary { cursor: pointer; font-family: 'Oswald', sans-serif; font-size: .78rem; font-weight: 600; text-transform: uppercase; letter-spacing: .1em; color: rgba(255,255,255,.5); padding: .6rem 0; margin-bottom: .5rem; list-style: none; }
+    .cov-details > summary::-webkit-details-marker { display: none; }
+    .cov-details > summary::before { content: "▶ "; font-size: .65rem; }
+    .cov-details[open] > summary::before { content: "▼ "; }
+    .cov-details > summary:hover { color: rgba(255,255,255,.8); }
   </style>
 </head>
 <body>
@@ -47,7 +59,18 @@
   </div>
 </div>
 
-<section class="bg-parchment">
+<nav class="cmp-snav" aria-label="Jump to section">
+  <div class="cmp-snav-inner">
+    <a href="#cmp-overview">Overview</a>
+    <a href="#cmp-align">Alignment</a>
+    <a href="#cmp-diff">Differences</a>
+    <a href="#cmp-gaps">Coverage Gaps</a>
+    <a href="#cmp-strengths">Strengths</a>
+    <a href="#cmp-sources">Sources</a>
+  </div>
+</nav>
+
+<section class="bg-parchment" id="cmp-overview">
   <div class="wrap">
     <p class="eyebrow">Overview</p>
     <h2>Platform at a Glance</h2>
@@ -65,7 +88,7 @@
   </div>
 </section>
 
-<section class="bg-cream">
+<section class="bg-cream" id="cmp-align">
   <div class="wrap">
     <p class="eyebrow">Points of Overlap</p>
     <h2>Where They Align with ARP</h2>
@@ -82,7 +105,7 @@
   </div>
 </section>
 
-<section class="bg-sky on-sky">
+<section class="bg-sky on-sky" id="cmp-diff">
   <div class="wrap">
     <p class="eyebrow">Key Differences</p>
     <h2>Where They Diverge</h2>
@@ -99,12 +122,14 @@
   </div>
 </section>
 
-<section class="bg-dark on-dark">
+<section class="bg-dark on-dark" id="cmp-gaps">
   <div class="wrap">
     <p class="eyebrow">Coverage Gaps</p>
     <h2>ARP Pillars This Party Doesn't Fully Address</h2>
     <p>The following ARP pillars receive limited, partial, or structurally different treatment in DSA's platform. These are not criticisms — they reflect different organizational priorities and scope.</p>
-    <div class="coverage-grid">
+    <details class="cov-details" open>
+      <summary class="cov-summary">Show coverage analysis</summary>
+      <div class="coverage-grid">
       <div class="cov-row">
         <div class="cov-pillar">Term Limits &amp; Fitness</div>
         <div class="cov-level cov-none">Not Addressed</div>
@@ -151,10 +176,11 @@
         <div class="cov-gap">DSA supports Green New Deal-style programs but has not developed a fully integrated environmental and agricultural pillar. Climate is addressed through an economic justice lens; ecological systems, agriculture policy, and land use are not comprehensively covered.</div>
       </div>
     </div>
+  </details>
   </div>
 </section>
 
-<section class="bg-parchment">
+<section class="bg-parchment" id="cmp-strengths">
   <div class="wrap">
     <p class="eyebrow">Genuine Strengths</p>
     <h2>What They Get Right</h2>
@@ -183,6 +209,20 @@
   </div>
 </footer>
 
+<script>
+(function(){
+  var links = document.querySelectorAll('.cmp-snav a');
+  var ids = ['cmp-overview','cmp-align','cmp-diff','cmp-gaps','cmp-strengths','cmp-sources'];
+  var sections = ids.map(function(id){ return document.getElementById(id); });
+  function update(){
+    var idx = 0;
+    sections.forEach(function(s,i){ if(s && s.getBoundingClientRect().top <= 110) idx = i; });
+    links.forEach(function(a,i){ a.classList.toggle('active', i===idx); });
+  }
+  window.addEventListener('scroll', update, {passive:true});
+  update();
+})();
+</script>
 <script src="../assets/js/data.js"></script>
 <script src="../assets/js/app.js"></script>
 </body>
