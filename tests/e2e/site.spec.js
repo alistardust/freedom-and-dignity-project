@@ -51,9 +51,20 @@ test.describe('Foundations page', () => {
     await expect(page).toHaveTitle(/Foundations/i);
   });
 
+  test('fullview grid shows all 5 foundations immediately', async ({ page }) => {
+    await expect(page.locator('.fo-fullview')).toBeVisible();
+    await expect(page.locator('a.fo-fv-card')).toHaveCount(5);
+  });
+
+  test('each foundation card links to its section', async ({ page }) => {
+    for (const id of ['accountable-power','clean-democracy','equal-justice','real-freedom','freedom-to-thrive']) {
+      await expect(page.locator(`a.fo-fv-card[href="#${id}"]`)).toBeVisible();
+    }
+  });
+
   test('renders all 5 foundation sections by id', async ({ page }) => {
     for (const id of ['accountable-power','clean-democracy','equal-justice','real-freedom','freedom-to-thrive']) {
-      await expect(page.locator(`#${id}`)).toBeVisible();
+      await expect(page.locator(`#${id}`)).toBeAttached();
     }
   });
 
@@ -86,15 +97,43 @@ test.describe('Pillars index', () => {
     await expect(page).toHaveTitle(/Pillars/i);
   });
 
-  test('shows all 5 foundation sections', async ({ page }) => {
+  test('fullview grid is visible immediately', async ({ page }) => {
+    await expect(page.locator('.pi-fullview')).toBeVisible();
+  });
+
+  test('shows all 5 foundation columns in fullview', async ({ page }) => {
+    await expect(page.locator('.pi-fv-col')).toHaveCount(5);
+  });
+
+  test('fullview contains all 17 pillar links (18 with shared rights pillar)', async ({ page }) => {
+    await expect(page.locator('a.pi-fv-pill')).toHaveCount(18);
+  });
+
+  test('each fullview pillar pill links to a .html page', async ({ page }) => {
+    const pills = await page.locator('a.pi-fv-pill').all();
+    for (const pill of pills) {
+      const href = await pill.getAttribute('href');
+      expect(href).toMatch(/\.html$/);
+    }
+  });
+
+  test('foundation headers link to foundations page', async ({ page }) => {
+    const foundations = await page.locator('a.pi-fv-foundation').all();
+    for (const f of foundations) {
+      const href = await f.getAttribute('href');
+      expect(href).toMatch(/foundations\.html#/);
+    }
+  });
+
+  test('shows all 5 foundation index sections below fullview', async ({ page }) => {
     await expect(page.locator('.pillar-index-section')).toHaveCount(5);
   });
 
-  test('shows all 17 pillar links', async ({ page }) => {
+  test('shows all 17 pillar index links', async ({ page }) => {
     await expect(page.locator('a.pillar-index-link')).toHaveCount(17);
   });
 
-  test('each pillar link points to a pillars/ page', async ({ page }) => {
+  test('each pillar index link points to a .html page', async ({ page }) => {
     const links = await page.locator('a.pillar-index-link').all();
     for (const link of links) {
       const href = await link.getAttribute('href');
