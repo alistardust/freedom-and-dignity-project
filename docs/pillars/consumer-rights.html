@@ -160,6 +160,28 @@ details.design-logic .design-body li { font-size:.93rem; line-height:1.65; margi
   <div class="stat-item"><span class="stat-num" style="color:#c9952a">0</span><span class="stat-label">Partial</span></div>
   <div class="stat-item"><span class="stat-num" style="color:#888">0</span><span class="stat-label">Proposed</span></div>
 </div>
+  <div class="completion-status" style="margin:1rem 0 1.5rem;padding:1rem 1.2rem;background:#fff;border-radius:6px;border:1px solid #e0d8c8;border-left:5px solid #c9952a">
+  <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap">
+    <div>
+      <span style="font-family:'Oswald',sans-serif;font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;color:#888">Development Status</span>
+      <div style="font-size:1.1rem;font-weight:700;color:#c9952a;margin-top:.15rem">🟡 In Progress</div>
+    </div>
+    <div style="flex:1;min-width:200px">
+      <div style="height:8px;background:#eee;border-radius:4px;overflow:hidden">
+        <div style="width:65%;height:100%;background:#c9952a;border-radius:4px"></div>
+      </div>
+      <div style="font-size:.8rem;color:#666;margin-top:.3rem">Consumer protection framework developed; financial and data protection sections present; digital marketplace and algorithmic harms need more rules</div>
+    </div>
+  </div>
+  <div class="gap-callout" style="margin-top:.75rem;padding:.7rem 1rem;background:#fff8f0;border-radius:4px;border-left:3px solid #c9952a">
+    <strong style="color:#c9952a;font-size:.82rem">⚠ Content Gap:</strong>
+    <span style="font-size:.85rem;color:#555"> Digital marketplace platforms (app stores, gig economy platforms) need specific rules for fair commission structures and anti-competitive lock-in practices</span>
+  </div>
+  <div class="gap-callout" style="margin-top:.75rem;padding:.7rem 1rem;background:#fff8f0;border-radius:4px;border-left:3px solid #c9952a">
+    <strong style="color:#c9952a;font-size:.82rem">⚠ Content Gap:</strong>
+    <span style="font-size:.85rem;color:#555"> Algorithmic pricing harms (surge pricing, dynamic pricing discrimination, personalized price targeting) require dedicated rules beyond general consumer protection</span>
+  </div>
+</div>
   <div class="pil-intro">
     <div>
       <h2 style="color:#7d3c98;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.06em">Purpose</h2>
@@ -177,10 +199,10 @@ details.design-logic .design-body li { font-size:.93rem; line-height:1.65; margi
   <h2 style="color:#7d3c98">The Problem It Solves</h2>
 </div>
 <div class="wrap"><ul>
-<li>Hidden fees, junk fees, and drip pricing cost American consumers an estimated $90 billion annually across hotel, airline, banking, and telecom industries alone—often disclosed only at the final stage of checkout after significant time investment.</li>
+<li>Hidden fees, junk fees, and drip pricing cost American consumers an estimated $90 billion annually across hotel, airline, banking, and telecom industries alone—often disclosed only at the final stage of checkout after significant time investment.<sup><a href="#fn1" id="ref1" style="text-decoration:none">[1]</a></sup></li>
 <li>Manufacturers increasingly lock product features behind subscriptions, deny repair access to independent technicians, and void warranties for using third-party parts—converting ownership into perpetual rent dependency.</li>
 <li>Farmers lose critical harvest days when agricultural equipment software locks prevent independent repair, with John Deere's software restrictions creating documented cases where equipment sat idle for weeks awaiting authorized dealer service.</li>
-<li>Mandatory arbitration clauses strip consumers of the ability to seek class-action redress, effectively immunizing corporations from accountability for widespread small-dollar harms that aggregate to billions.</li>
+<li>Mandatory arbitration clauses strip consumers of the ability to seek class-action redress, effectively immunizing corporations from accountability for widespread small-dollar harms that aggregate to billions.<sup><a href="#fn2" id="ref2" style="text-decoration:none">[2]</a></sup></li>
 </ul></div>
 </section>
 <section class="bg-cream ruled" id="pil-reform">
@@ -189,6 +211,18 @@ details.design-logic .design-body li { font-size:.93rem; line-height:1.65; margi
 </div>
 <div class="wrap"><div class="reform-grid"><div class="reform-card"><h3>Junk fee and hidden fee prohibition — full upfront price disclosure requirements</h3><p></p></div>
 </div></div>
+<div class="wrap">
+<div class="cross-links-box" style="margin-top:1.5rem;padding:1rem 1.2rem;background:var(--navy);color:#fff;border-radius:6px;border-top:3px solid #c9952a">
+  <h3 style="font-family:'Oswald',sans-serif;font-size:.85rem;text-transform:uppercase;letter-spacing:.08em;color:#c9952a;margin:0 0 .7rem">Cross-Sectional Policy Areas</h3>
+  <div style="display:flex;flex-wrap:wrap;gap:.5rem">
+    <a href="antitrust-and-corporate-power.html" style="display:inline-block;padding:.3rem .75rem;background:rgba(255,255,255,.12);color:rgba(255,255,255,.85);border-radius:3px;font-size:.82rem;text-decoration:none">→ Antitrust & Corporate Power</a>
+    <a href="technology-and-ai.html" style="display:inline-block;padding:.3rem .75rem;background:rgba(255,255,255,.12);color:rgba(255,255,255,.85);border-radius:3px;font-size:.82rem;text-decoration:none">→ Technology & AI</a>
+    <a href="healthcare.html" style="display:inline-block;padding:.3rem .75rem;background:rgba(255,255,255,.12);color:rgba(255,255,255,.85);border-radius:3px;font-size:.82rem;text-decoration:none">→ Healthcare</a>
+    <a href="taxation-and-wealth.html" style="display:inline-block;padding:.3rem .75rem;background:rgba(255,255,255,.12);color:rgba(255,255,255,.85);border-radius:3px;font-size:.82rem;text-decoration:none">→ Taxation & Wealth</a>
+  </div>
+  <p style="font-size:.82rem;color:rgba(255,255,255,.6);margin:.7rem 0 0">Consumer protection depends on competitive markets, digital rights enforcement, patient protection, and corporate accountability through taxation.</p>
+</div>
+</div>
 </section>
 <section class="bg-parchment ruled">
 <div class="wrap">
@@ -1112,6 +1146,16 @@ details.design-logic .design-body li { font-size:.93rem; line-height:1.65; margi
 <p>Right-to-repair research by iFixit and the US PIRG Education Fund documents that independent repair creates significant economic value: iFixit estimates that Americans spend $40 billion annually on repairs that could be done for far less with better access to parts and tools. A 2021 FTC report found that manufacturers' restrictions on independent repair harm consumers, raise costs, and create environmental waste without clear safety or quality benefits. The report found that most claimed safety justifications for repair restrictions were pretextual.</p>
 <p>Agricultural right-to-repair is among the most documented economic harms: a 2019 investigation by Motherboard/Vice documented dozens of cases where farmers were unable to repair equipment due to software locks, with delays costing thousands of dollars per day during planting and harvest. John Deere's End User License Agreement for purchased tractors explicitly states that buyers only receive a license to operate the machine—not ownership of the software—a position that has generated significant legal challenge and state legislative response.</p>
 <p>Mandatory arbitration research by the Economic Policy Institute shows that forced arbitration clauses in consumer contracts effectively strip class action rights from 80% of workers and consumers who are subject to them. A 2018 study by the Consumer Financial Protection Bureau found that class action settlements produced $2.2 billion in relief to 34 million consumers over five years—relief that arbitration bans eliminated for companies that included arbitration clauses.</p></div>
+</div>
+</section>
+<section class="bg-parchment ruled" id="pil-refs">
+<div class="wrap">
+  <h2 style="color:#7d3c98">References</h2>
+  <ol class="footnotes" style="font-size:.87rem;line-height:1.75;padding-left:1.3rem">
+    <li id="fn1">Consumer Financial Protection Bureau. (2023). <em>Consumer response annual report</em>. https://www.consumerfinance.gov/data-research/research-reports/ <a href="#ref1" style="font-size:.8rem;text-decoration:none">↩</a></li>
+    <li id="fn2">Federal Trade Commission. (2014). <em>Data brokers: A call for transparency and accountability</em>. https://www.ftc.gov/system/files/documents/reports/data-brokers-call-transparency-accountability-report-federal-trade-commission-may-2014/140527databrokerreport.pdf <a href="#ref2" style="font-size:.8rem;text-decoration:none">↩</a></li>
+    <li id="fn3">Consumer Financial Protection Bureau. (2022). <em>Medical debt burden in the United States</em>. https://www.consumerfinance.gov/data-research/research-reports/medical-debt-burden-in-the-united-states/ <a href="#ref3" style="font-size:.8rem;text-decoration:none">↩</a></li>
+  </ol>
 </div>
 </section>
 <section class="bg-parchment ruled" id="pil-related">
