@@ -178,10 +178,52 @@ details.design-logic .design-body li { font-size:.93rem; line-height:1.65; margi
   <p style="font-size:.97rem;color:#555;max-width:780px;margin-bottom:1.6rem">AI and digital technology touch every domain of public life. The rules in this pillar do not exist in isolation — they directly intersect with, reinforce, and constrain policy across the entire platform. Where AI operates in a domain, domain-specific rules apply <em>in addition to</em> the governance frameworks here.</p>
   <div class="problem-grid" style="grid-template-columns:repeat(auto-fill,minmax(280px,1fr))">
 
-    <div class="problem-card" style="border-left-color:#1e8449">
-      <h3 style="color:#1e8449">🌱 Environment &amp; Climate — 21 Rules</h3>
-      <p>AI infrastructure is one of the fastest-growing sources of carbon emissions, water consumption, and electronic waste globally. This pillar's 21 ENV rules require carbon neutrality, public energy and water disclosure, environmental impact assessments before construction, lifecycle responsibility for hardware, sourcing of rare earth materials under strict environmental standards, and prohibition on externalizing costs to communities. AI must also <em>support</em> climate modeling, grid modernization, and environmental monitoring. The environmental cost of AI is a first-class policy concern, not an afterthought.</p>
-      <p style="margin-top:.7rem"><a href="environment-and-agriculture.html" style="color:#1e8449;font-size:.88rem;font-weight:600">→ See Environment &amp; Agriculture Pillar</a></p>
+    <!-- Environment featured card spans full grid width -->
+    <div class="problem-card" style="grid-column:1/-1;border-left-color:#1e8449;background:#f5fdf6;border-left-width:6px">
+      <h3 style="color:#1e8449;font-size:1.05rem;margin-bottom:.5rem">🌍 Environment, Water &amp; Climate — 21 Rules <span style="font-size:.75rem;font-weight:400;color:#888;text-transform:uppercase;letter-spacing:.06em;margin-left:.5rem">Priority Cross-Sectional Area</span></h3>
+      <p style="font-size:.93rem;margin-bottom:1.1rem;color:#333">AI infrastructure is among the fastest-growing sources of industrial carbon emissions, freshwater consumption, and electronic waste on Earth. The environmental cost of AI is not peripheral — it is one of the defining environmental policy challenges of the coming decade. This pillar's 21 ENV rules establish binding obligations across three dimensions:</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem;margin-bottom:1rem">
+
+        <div style="background:#fff;padding:.9rem 1rem;border-radius:5px;border-top:3px solid #1e8449">
+          <h4 style="color:#1e8449;font-size:.88rem;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.05em;margin:0 0 .5rem">⚡ Carbon &amp; Energy</h4>
+          <ul style="font-size:.84rem;line-height:1.65;padding-left:1.1rem;margin:0;color:#333">
+            <li>Carbon neutrality or carbon-negative operations required over full lifecycle</li>
+            <li>Mandatory public disclosure of energy usage, sources, and emissions</li>
+            <li>Dedicated renewable or low-impact energy sourcing — not general grid extraction</li>
+            <li>Standardized, verifiable metrics — no greenwashing through selective offsets</li>
+            <li>Integration with national grid modernization and clean energy investment</li>
+          </ul>
+        </div>
+
+        <div style="background:#fff;padding:.9rem 1rem;border-radius:5px;border-top:3px solid #2471a3">
+          <h4 style="color:#2471a3;font-size:.88rem;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.05em;margin:0 0 .5rem">💧 Water — Existing Rules &amp; Critical Gaps</h4>
+          <ul style="font-size:.84rem;line-height:1.65;padding-left:1.1rem;margin:0;color:#333">
+            <li>Public disclosure of water usage, cooling consumption &amp; local impact <em>(TEC-ENV-005)</em></li>
+            <li><span style="color:#bf0a30;font-weight:600">Gap:</span> No absolute water consumption caps</li>
+            <li><span style="color:#bf0a30;font-weight:600">Gap:</span> No siting restrictions in water-stressed regions</li>
+            <li><span style="color:#bf0a30;font-weight:600">Gap:</span> No groundwater or aquifer protections</li>
+            <li><span style="color:#bf0a30;font-weight:600">Gap:</span> No water recycling or reclamation mandates</li>
+            <li><span style="color:#bf0a30;font-weight:600">Gap:</span> No drought contingency or operational curtailment rules</li>
+            <li><span style="color:#c9952a;font-weight:600">Proposed rules below:</span> TEC-ENV-022 through TEC-ENV-027</li>
+          </ul>
+        </div>
+
+        <div style="background:#fff;padding:.9rem 1rem;border-radius:5px;border-top:3px solid #c9952a">
+          <h4 style="color:#c9952a;font-size:.88rem;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.05em;margin:0 0 .5rem">♻️ E-Waste &amp; Materials</h4>
+          <ul style="font-size:.84rem;line-height:1.65;padding-left:1.1rem;margin:0;color:#333">
+            <li>Hardware durability, repairability, and reuse standards required</li>
+            <li>Responsible recycling and disposal programs mandated for operators</li>
+            <li>Rare earth &amp; critical mineral sourcing under strict environmental &amp; labor standards</li>
+            <li>Environmental costs may not be offloaded to developing regions</li>
+            <li>Environmental justice: no disproportionate burden on disadvantaged communities</li>
+            <li><span style="color:#bf0a30;font-weight:600">Gap:</span> No biodiversity or habitat impact assessments for siting</li>
+            <li><span style="color:#bf0a30;font-weight:600">Gap:</span> No conflict-mineral sourcing restrictions</li>
+          </ul>
+        </div>
+
+      </div>
+      <p style="font-size:.88rem;color:#444;margin:.3rem 0 .5rem">AI must also <em>actively support</em> climate efforts — climate modeling, environmental monitoring, grid optimization, renewable energy forecasting — all under transparent, accountable frameworks. Where AI is used to assist environmental enforcement or compliance, transparency and public accountability are non-negotiable.</p>
+      <p style="margin:0"><a href="environment-and-agriculture.html" style="color:#1e8449;font-size:.88rem;font-weight:600">→ See Environment &amp; Agriculture Pillar</a></p>
     </div>
 
     <div class="problem-card" style="border-left-color:#2471a3">
@@ -232,6 +274,44 @@ details.design-logic .design-body li { font-size:.93rem; line-height:1.65; margi
       <p style="margin-top:.7rem"><a href="immigration.html" style="color:#c9952a;font-size:.88rem;font-weight:600">→ See Immigration Pillar</a></p>
     </div>
 
+  </div>
+  <div style="margin-top:1.5rem;padding:1.1rem 1.3rem;background:#fff8e6;border-radius:6px;border-left:5px solid #c9952a">
+    <h3 style="font-family:'Oswald',sans-serif;font-size:.88rem;text-transform:uppercase;letter-spacing:.08em;color:#c9952a;margin:0 0 .6rem">⚠ Identified Policy Gaps: AI &amp; Environment</h3>
+    <p style="font-size:.87rem;color:#555;margin:0 0 .75rem">The following areas have been identified as requiring additional policy development. Proposed rules are marked below in the ENV family. Community and legislative input is invited on each.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:.75rem">
+      <div style="background:#fff;padding:.75rem;border-radius:4px;border-top:2px solid #2471a3">
+        <strong style="font-size:.85rem;color:#2471a3">Water Consumption Limits</strong>
+        <p style="font-size:.82rem;color:#555;margin:.3rem 0 0">No binding caps on data center water usage exist yet. Large facilities can consume millions of gallons daily for cooling. Rules TEC-ENV-022 through TEC-ENV-027 propose caps, water-stressed region restrictions, recycling mandates, and drought contingency requirements.</p>
+      </div>
+      <div style="background:#fff;padding:.75rem;border-radius:4px;border-top:2px solid #bf0a30">
+        <strong style="font-size:.85rem;color:#bf0a30">Water-Stressed Region Siting</strong>
+        <p style="font-size:.82rem;color:#555;margin:.3rem 0 0">Current rules do not restrict data center construction in drought-prone or water-scarce regions. AI companies are actively expanding into areas like Arizona, Nevada, and the Southwest U.S. where freshwater is already critically constrained.</p>
+      </div>
+      <div style="background:#fff;padding:.75rem;border-radius:4px;border-top:2px solid #c9952a">
+        <strong style="font-size:.85rem;color:#c9952a">Scope 3 Carbon Accounting</strong>
+        <p style="font-size:.82rem;color:#555;margin:.3rem 0 0">Current rules cover operational emissions but do not explicitly require Scope 3 accounting — supply chain emissions from chip manufacturing, hardware shipping, and data center construction. These can dwarf direct operational footprints.</p>
+      </div>
+      <div style="background:#fff;padding:.75rem;border-radius:4px;border-top:2px solid #1e8449">
+        <strong style="font-size:.85rem;color:#1e8449">Nuclear Energy &amp; AI Demand</strong>
+        <p style="font-size:.82rem;color:#555;margin:.3rem 0 0">Major AI companies are pursuing private nuclear power agreements to meet AI's explosive energy demand. No governance framework yet exists for private AI-driven nuclear procurement, public safety review, or grid impact assessment.</p>
+      </div>
+      <div style="background:#fff;padding:.75rem;border-radius:4px;border-top:2px solid #7d3c98">
+        <strong style="font-size:.85rem;color:#7d3c98">Algorithmic Efficiency Standards</strong>
+        <p style="font-size:.82rem;color:#555;margin:.3rem 0 0">No rules require software-level efficiency — training and inference optimization as an environmental obligation. Larger models are not always better; compute minimization should be a design requirement for high-consumption applications.</p>
+      </div>
+      <div style="background:#fff;padding:.75rem;border-radius:4px;border-top:2px solid #bf0a30">
+        <strong style="font-size:.85rem;color:#bf0a30">Thermal Pollution &amp; Heat Islands</strong>
+        <p style="font-size:.82rem;color:#555;margin:.3rem 0 0">Data center clusters generate significant waste heat, raising local temperatures, stressing urban cooling systems, and increasing residential energy use. No thermal pollution standards or heat island assessments exist for AI infrastructure.</p>
+      </div>
+      <div style="background:#fff;padding:.75rem;border-radius:4px;border-top:2px solid #2471a3">
+        <strong style="font-size:.85rem;color:#2471a3">Biodiversity &amp; Habitat</strong>
+        <p style="font-size:.82rem;color:#555;margin:.3rem 0 0">Large data center campuses can displace habitats, disrupt wildlife corridors, and increase light pollution. No biodiversity impact assessments are currently required for AI infrastructure siting decisions.</p>
+      </div>
+      <div style="background:#fff;padding:.75rem;border-radius:4px;border-top:2px solid #c9952a">
+        <strong style="font-size:.85rem;color:#c9952a">Just Transition for Affected Communities</strong>
+        <p style="font-size:.82rem;color:#555;margin:.3rem 0 0">Communities facing simultaneous automation-driven job displacement and climate disruption need coordinated policy response. No rules yet address the intersection of AI labor displacement and environmental just transition.</p>
+      </div>
+    </div>
   </div>
   <p style="margin-top:1.5rem;font-size:.9rem;color:#666;font-style:italic">This pillar's rules operate in addition to domain-specific rules in each pillar listed above. Where AI is present in a domain, both the domain pillar and these technology governance rules apply concurrently.</p>
 </div>
@@ -1169,8 +1249,67 @@ details.design-logic .design-body li { font-size:.93rem; line-height:1.65; margi
   </div>
   <p class="rule-title">Noise pollution standards</p>
   <p class="rule-stmt">Establish standards for noise pollution from AI data centers and other large data centers including monitoring mitigation and local community protections</p>
-  
 </div>
+
+<!-- Water-specific proposed rules — TEC-ENV-022 through TEC-ENV-027 -->
+<div style="margin:.6rem 0 .3rem;padding:.4rem .7rem;background:#e8f4ff;border-radius:4px;font-size:.8rem;color:#2471a3;font-weight:600">
+  💧 Water Policy — Proposed Additions (gap-filling rules)
+</div>
+
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">TEC-ENV-022</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Water consumption caps</p>
+  <p class="rule-stmt">Large-scale AI data centers must operate within binding water consumption limits based on regional availability and must report actual usage against permitted caps on a publicly accessible basis</p>
+</div>
+
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">TEC-ENV-023</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Water-stressed region restrictions</p>
+  <p class="rule-stmt">AI infrastructure requiring significant water cooling may not be sited in regions classified as water-stressed or drought-prone under federal or state water scarcity designations without demonstrated water-neutral mitigation plans and public review</p>
+</div>
+
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">TEC-ENV-024</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Groundwater and aquifer protection</p>
+  <p class="rule-stmt">AI data centers may not draw on groundwater or aquifer sources in ways that degrade water tables reduce flows to downstream users or damage ecosystems without full environmental review, public notice, and binding mitigation commitments</p>
+</div>
+
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">TEC-ENV-025</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Water recycling and reclamation</p>
+  <p class="rule-stmt">New large-scale AI data centers must implement water recycling, reclamation, or closed-loop cooling systems to the maximum extent technically feasible and must report recycling rates alongside gross consumption figures</p>
+</div>
+
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">TEC-ENV-026</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Drought contingency requirements</p>
+  <p class="rule-stmt">Operators of high-water-consumption AI infrastructure must maintain and publicly file drought contingency plans specifying operational curtailment thresholds during declared water emergencies, priority for municipal and agricultural water users, and timelines for transitioning to low-water or air-cooled alternatives</p>
+</div>
+
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">TEC-ENV-027</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Community water impact review</p>
+  <p class="rule-stmt">Before approving large data center water permits, regulators must conduct a community water impact review assessing effects on residential water access, municipal supply systems, agricultural users, and environmental flows, with mandatory public comment periods and binding mitigation requirements</p>
+</div>
+
   </div>
 </div>
 <div class="policy-family" id="fam-fin">
