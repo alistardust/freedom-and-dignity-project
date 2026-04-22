@@ -448,7 +448,28 @@ section { padding: 4.5rem 0; }
 .pillar-filter-btn:hover, .pillar-filter-btn.active {
   background: var(--red); border-color: var(--red); color: #fff;
 }
-.pillar-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px,1fr)); gap: 1.25rem; }
+/* ── Shared card grids ───────────────────────────────────────────────────────
+   All grids use min(100%, Xpx) so the minimum column width never exceeds the
+   container width, giving clean 1→2→3→4-col transitions as the viewport grows
+   rather than a single wide column with internal overflow on narrow screens.
+   ─────────────────────────────────────────────────────────────────────────── */
+.pillar-grid        { display:grid; grid-template-columns:repeat(auto-fill,minmax(min(100%,250px),1fr)); gap:1.25rem; }
+
+/* Pillar page sections */
+.problem-grid       { display:grid; grid-template-columns:repeat(auto-fill,minmax(min(100%,260px),1fr)); gap:1.25rem; margin-top:1rem; }
+.reform-grid        { display:grid; grid-template-columns:repeat(auto-fill,minmax(min(100%,220px),1fr)); gap:1rem;    margin-top:1rem; }
+.rule-grid          { display:grid; grid-template-columns:repeat(auto-fill,minmax(min(100%,240px),1fr)); gap:.75rem; }
+.related-grid       { display:grid; grid-template-columns:repeat(auto-fill,minmax(min(100%,180px),1fr)); gap:.85rem;  margin-top:1rem; }
+
+/* Compare pages */
+.cmp-wrongs-grid    { display:grid; grid-template-columns:repeat(auto-fill,minmax(min(100%,240px),1fr)); gap:1.1rem;  margin-top:1rem; }
+.compare-index-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(min(100%,220px),1fr)); gap:1.25rem; margin-top:2rem; }
+
+/* Other pages */
+.ai-models-grid       { display:grid; grid-template-columns:repeat(auto-fill,minmax(min(100%,185px),1fr)); gap:1rem;   margin:1.5rem 0 2rem; }
+.f-pillar-grid        { display:grid; grid-template-columns:repeat(auto-fill,minmax(min(100%,210px),1fr)); gap:.75rem; }
+.mission-pillars-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(min(100%,185px),1fr)); gap:1rem;   margin:1.5rem 0 2rem; }
+.clf-under-grid       { display:grid; grid-template-columns:repeat(auto-fill,minmax(min(100%,220px),1fr)); gap:.85rem; margin:1.5rem 0 2rem; }
 .pillar-card {
   background: var(--navy-mid);
   border-top: 4px solid var(--red);
