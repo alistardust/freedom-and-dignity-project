@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roadmap — American Renewal Project</title>
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" type="image/svg+xml" href="assets/img/logo.svg">
+<style>
+/* ── ROADMAP HERO ─────────────────────────────────────── */
+.roadmap-hero {
+  background: var(--navy);
+  padding: 4rem 2rem 3rem;
+  text-align: center;
+  border-bottom: 4px solid var(--gold);
+}
+.roadmap-hero-eyebrow {
+  font-family: "Libre Franklin", sans-serif;
+  font-size: .7rem;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.38);
+  display: block;
+  margin-bottom: 1rem;
+}
+.roadmap-hero h1 {
+  font-family: "Oswald", sans-serif;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  color: #fff;
+  margin: 0 0 1.25rem;
+}
+.roadmap-hero h1 span { color: var(--gold); }
+.roadmap-hero-statement {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: rgba(255,255,255,.72);
+  max-width: 640px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* ── ROADMAP BODY ─────────────────────────────────────── */
+.roadmap-body {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+.roadmap-intro {
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 1rem;
+  line-height: 1.85;
+  color: var(--ink);
+  max-width: 700px;
+  margin-bottom: 2.5rem;
+}
+
+/* ── TRACK CARDS ──────────────────────────────────────── */
+.roadmap-track {
+  background: #fff;
+  border: 1px solid var(--rule);
+  margin-bottom: 2rem;
+}
+.roadmap-track-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--navy);
+  border-bottom: 2px solid var(--gold);
+}
+.roadmap-track-num {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--gold);
+  opacity: .5;
+}
+.roadmap-track-title {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: #fff;
+  flex: 1;
+}
+.roadmap-badge {
+  font-family: "Oswald", sans-serif;
+  font-size: .65rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  padding: .25rem .65rem;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+.badge-inprogress { background: var(--gold); color: var(--navy); }
+.badge-notstarted { background: rgba(255,255,255,.15); color: rgba(255,255,255,.6); }
+.roadmap-track-body { padding: 1.25rem 1.5rem; }
+
+/* ── CHECKLIST ITEMS ──────────────────────────────────── */
+.roadmap-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+.roadmap-item {
+  display: flex;
+  gap: .85rem;
+  align-items: flex-start;
+  padding: .6rem .8rem;
+  border-radius: 3px;
+  font-family: "Libre Franklin", sans-serif;
+  font-size: .92rem;
+  line-height: 1.65;
+  color: var(--ink);
+}
+.roadmap-item.done     { background: rgba(30, 132, 73, .06); }
+.roadmap-item.done     .ri-icon { color: #1e8449; }
+.roadmap-item.pending  .ri-icon { color: var(--mid); }
+.roadmap-item.planned  .ri-icon { color: var(--gold); }
+.ri-icon {
+  flex-shrink: 0;
+  font-size: .9rem;
+  margin-top: .15rem;
+}
+
+/* ── PILLAR STATUS TABLE ──────────────────────────────── */
+.roadmap-pillar-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: .87rem;
+}
+.roadmap-pillar-table th {
+  font-family: "Oswald", sans-serif;
+  font-size: .72rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: .5rem .75rem;
+  background: var(--navy);
+  color: rgba(255,255,255,.7);
+  text-align: left;
+  border-bottom: 2px solid var(--gold);
+}
+.roadmap-pillar-table td {
+  padding: .45rem .75rem;
+  border-bottom: 1px solid var(--rule);
+  color: var(--ink);
+  vertical-align: top;
+}
+.roadmap-pillar-table tr:nth-child(even) td { background: var(--parchment); }
+.pillar-status-pill {
+  display: inline-block;
+  font-family: "Oswald", sans-serif;
+  font-size: .65rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  padding: .15rem .5rem;
+  border-radius: 2px;
+}
+.ps-high    { background: #d4edda; color: #155724; }
+.ps-medium  { background: #fff3cd; color: #856404; }
+.ps-low     { background: #f8d7da; color: #721c24; }
+.ps-db-only { background: #cce5ff; color: #004085; }
+
+/* ── TRACK SECTION LABEL ──────────────────────────────── */
+.roadmap-subsection-label {
+  font-family: "Oswald", sans-serif;
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--mid);
+  margin: 1.25rem 0 .6rem;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: .3rem;
+}
+.roadmap-subsection-label:first-child { margin-top: 0; }
+
+/* ── RESPONSIVE ───────────────────────────────────────── */
+@media (max-width: 640px) {
+  .roadmap-track-header { flex-wrap: wrap; gap: .6rem; }
+  .roadmap-pillar-table td,
+  .roadmap-pillar-table th { padding: .4rem .5rem; font-size: .8rem; }
+  .roadmap-track-body { padding: 1rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- ── NAV ────────────────────────────────────────────── -->
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">
+      <img src="assets/img/logo.svg" alt="American Renewal Project" width="36" height="36">
+      <span class="nav-wordmark">American Renewal<span>Project</span></span>
+    </a>
+    <button class="nav-hamburger" aria-label="Menu">☰</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="foundations.html">Foundations</a></li>
+      <li><a href="pillars/index.html">Pillars</a></li>
+      <li><a href="compare/index.html">Compare</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ── HERO ───────────────────────────────────────────── -->
+<header class="roadmap-hero">
+  <span class="roadmap-hero-eyebrow">American Renewal Project</span>
+  <h1>Project <span>Roadmap</span></h1>
+  <p class="roadmap-hero-statement">
+    Where we are, what comes next, and the work still ahead — across policy development,
+    organization, outreach, and technical infrastructure.
+  </p>
+</header>
+
+<!-- ── BODY ───────────────────────────────────────────── -->
+<main class="roadmap-body">
+
+  <p class="roadmap-intro">
+    The American Renewal Project is a living platform — built in the open, subject to revision,
+    and committed to intellectual honesty. This roadmap tracks six parallel work streams:
+    policy content, organizational formation, outreach, fundraising, branding, and technical
+    infrastructure. Statuses reflect the current state as of April 2026.
+  </p>
+
+  <!-- ── TRACK 1: POLICY DEVELOPMENT ────────────────── -->
+  <section class="roadmap-track" aria-labelledby="track1-title">
+    <div class="roadmap-track-header">
+      <span class="roadmap-track-num">01</span>
+      <span class="roadmap-track-title" id="track1-title">Policy Development</span>
+      <span class="roadmap-badge badge-inprogress">In Progress</span>
+    </div>
+    <div class="roadmap-track-body">
+
+      <p class="roadmap-subsection-label">Overall status</p>
+      <ul class="roadmap-items">
+        <li class="roadmap-item done">
+          <span class="ri-icon" aria-hidden="true">✓</span>
+          <span>22 policy pillar HTML pages published</span>
+        </li>
+        <li class="roadmap-item done">
+          <span class="ri-icon" aria-hidden="true">✓</span>
+          <span>Mission and Constitution pages complete</span>
+        </li>
+        <li class="roadmap-item done">
+          <span class="ri-icon" aria-hidden="true">✓</span>
+          <span>Referendum &amp; Recall policy added to Elections pillar</span>
+        </li>
+        <li class="roadmap-item done">
+          <span class="ri-icon" aria-hidden="true">✓</span>
+          <span>Compare pages for major parties published</span>
+        </li>
+        <li class="roadmap-item pending">
+          <span class="ri-icon" aria-hidden="true">○</span>
+          <span>5 new pillars (Education, Labor, Housing, Consumer Rights, Legislative Reform) — markdown complete; DB reimport pending (<code>scripts/import_policy_catalog.py</code>)</span>
+        </li>
+        <li class="roadmap-item pending">
+          <span class="ri-icon" aria-hidden="true">○</span>
+          <span>APA citations required across all policy pages — ongoing</span>
+        </li>
+        <li class="roadmap-item planned">
+          <span class="ri-icon" aria-hidden="true">◆</span>
+          <span>Adversarial gap audit — systematic review of all 22 pillars by external reviewers (planned)</span>
+        </li>
+        <li class="roadmap-item planned">
+          <span class="ri-icon" aria-hidden="true">◆</span>
+          <span>Constitutional amendment classification for all rules (planned)</span>
+        </li>
+      </ul>
+
+      <p class="roadmap-subsection-label">Pillar completion status</p>
+      <table class="roadmap-pillar-table" aria-label="Pillar completion status">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Pillar</th>
+            <th>Rules (DB)</th>
+            <th>Status</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Executive Power</td>
+            <td>13</td>
+            <td><span class="pillar-status-pill ps-medium">Medium</span></td>
+            <td>GOV in DB; EXE rules in markdown pending reimport</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Elections &amp; Representation</td>
+            <td>22</td>
+            <td><span class="pillar-status-pill ps-medium">Medium</span></td>
+            <td>Well-developed; referendum &amp; recall added</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Anti-Corruption</td>
+            <td>15</td>
+            <td><span class="pillar-status-pill ps-medium">Medium</span></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Equal Justice &amp; Policing</td>
+            <td>136</td>
+            <td><span class="pillar-status-pill ps-high">High</span></td>
+            <td>Very developed — JUS scope</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Rights &amp; Civil Liberties</td>
+            <td>26</td>
+            <td><span class="pillar-status-pill ps-medium">Medium</span></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>Courts &amp; Judicial System</td>
+            <td>8</td>
+            <td><span class="pillar-status-pill ps-low">Low</span></td>
+            <td>Needs expansion</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>Checks &amp; Balances</td>
+            <td>52</td>
+            <td><span class="pillar-status-pill ps-high">High</span></td>
+            <td>SYS + OVR scope codes</td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>Taxation &amp; Wealth</td>
+            <td>10</td>
+            <td><span class="pillar-status-pill ps-medium">Medium</span></td>
+            <td>ECO in DB; TAX rules in markdown pending reimport</td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td>Healthcare</td>
+            <td>184</td>
+            <td><span class="pillar-status-pill ps-high">High</span></td>
+            <td>Very developed — HLT scope</td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td>Antitrust &amp; Corporate Power</td>
+            <td>4+</td>
+            <td><span class="pillar-status-pill ps-low">Low</span></td>
+            <td>Cross-scope (COR-FIN, MED); needs expansion</td>
+          </tr>
+          <tr>
+            <td>11</td>
+            <td>Information &amp; Media</td>
+            <td>20</td>
+            <td><span class="pillar-status-pill ps-medium">Medium</span></td>
+            <td>MED + INF scope codes</td>
+          </tr>
+          <tr>
+            <td>12</td>
+            <td>Gun Policy</td>
+            <td>2+</td>
+            <td><span class="pillar-status-pill ps-low">Low</span></td>
+            <td>No GUN- scope yet; cross-scope JUS-POL rules only; needs expansion</td>
+          </tr>
+          <tr>
+            <td>13</td>
+            <td>Term Limits &amp; Fitness</td>
+            <td>8</td>
+            <td><span class="pillar-status-pill ps-low">Low</span></td>
+            <td>TRM scope</td>
+          </tr>
+          <tr>
+            <td>14</td>
+            <td>Administrative State</td>
+            <td>3</td>
+            <td><span class="pillar-status-pill ps-low">Low</span></td>
+            <td>ADM scope; needs expansion</td>
+          </tr>
+          <tr>
+            <td>15</td>
+            <td>Technology &amp; AI</td>
+            <td>361</td>
+            <td><span class="pillar-status-pill ps-high">High</span></td>
+            <td>Very developed — TEC scope; PAT rules in markdown pending reimport</td>
+          </tr>
+          <tr>
+            <td>16</td>
+            <td>Immigration</td>
+            <td>222</td>
+            <td><span class="pillar-status-pill ps-high">High</span></td>
+            <td>Very developed — IMM scope</td>
+          </tr>
+          <tr>
+            <td>17</td>
+            <td>Environment &amp; Agriculture</td>
+            <td>10</td>
+            <td><span class="pillar-status-pill ps-medium">Medium</span></td>
+            <td>ENV + AGR in DB; EWT pending reimport</td>
+          </tr>
+          <tr>
+            <td>18</td>
+            <td>Education</td>
+            <td>2</td>
+            <td><span class="pillar-status-pill ps-low">Low</span></td>
+            <td>DB pre-expansion; markdown has significantly more, pending reimport</td>
+          </tr>
+          <tr>
+            <td>19</td>
+            <td>Labor &amp; Workers' Rights</td>
+            <td>3</td>
+            <td><span class="pillar-status-pill ps-low">Low</span></td>
+            <td>DB pre-expansion; markdown has significantly more, pending reimport</td>
+          </tr>
+          <tr>
+            <td>20</td>
+            <td>Housing</td>
+            <td>0</td>
+            <td><span class="pillar-status-pill ps-db-only">DB Rebuild</span></td>
+            <td>Markdown content complete; DB reimport pending</td>
+          </tr>
+          <tr>
+            <td>21</td>
+            <td>Consumer Rights</td>
+            <td>0</td>
+            <td><span class="pillar-status-pill ps-db-only">DB Rebuild</span></td>
+            <td>Markdown content complete; DB reimport pending</td>
+          </tr>
+          <tr>
+            <td>22</td>
+            <td>Legislative Reform</td>
+            <td>0</td>
+            <td><span class="pillar-status-pill ps-db-only">DB Rebuild</span></td>
+            <td>Markdown content complete; DB reimport pending</td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="font-family:'Libre Franklin',sans-serif;font-size:.8rem;color:var(--mid);margin-top:.5rem;">
+        Status key:
+        <span class="pillar-status-pill ps-high" style="margin: 0 .25rem;">High</span> 50+ rules &nbsp;·&nbsp;
+        <span class="pillar-status-pill ps-medium" style="margin: 0 .25rem;">Medium</span> 10–49 rules &nbsp;·&nbsp;
+        <span class="pillar-status-pill ps-low" style="margin: 0 .25rem;">Low</span> &lt;10 rules &nbsp;·&nbsp;
+        <span class="pillar-status-pill ps-db-only" style="margin: 0 .25rem;">DB Rebuild</span> 0 in DB, markdown pending import
+      </p>
+    </div>
+  </section>
+
+  <!-- ── TRACK 2: ORGANIZATION ───────────────────────── -->
+  <section class="roadmap-track" aria-labelledby="track2-title">
+    <div class="roadmap-track-header">
+      <span class="roadmap-track-num">02</span>
+      <span class="roadmap-track-title" id="track2-title">Organization</span>
+      <span class="roadmap-badge badge-notstarted">Not Started</span>
+    </div>
+    <div class="roadmap-track-body">
+      <ul class="roadmap-items">
+        <li class="roadmap-item pending">
+          <span class="ri-icon" aria-hidden="true">○</span>
+          <span>Formal legal establishment — 501(c)(4) or similar nonprofit structure</span>
+        </li>
+        <li class="roadmap-item pending">
+          <span class="ri-icon" aria-hidden="true">○</span>
+          <span>Board structure and bylaws</span>
+        </li>
+        <li class="roadmap-item pending">
+          <span class="ri-icon" aria-hidden="true">○</span>
+          <span>Engage legal counsel</span>
+        </li>
+        <li class="roadmap-item pending">
+          <span class="ri-icon" aria-hidden="true">○</span>
+          <span>File for tax-exempt status</span>
+        </li>
+        <li class="roadmap-item pending">
+          <span class="ri-icon" aria-hidden="true">○</span>
+          <span>Establish fiscal sponsorship as interim structure if needed</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ── TRACK 3: OUTREACH & ADVOCACY ───────────────── -->
+  <section class="roadmap-track" aria-labelledby="track3-title">
+    <div class="roadmap-track-header">
+      <span class="roadmap-track-num">03</span>
+      <span class="roadmap-track-title" id="track3-title">Outreach &amp; Advocacy</span>
+      <span class="roadmap-badge badge-notstarted">Not Started</span>
+    </div>
+    <div class="roadmap-track-body">
+      <ul class="roadmap-items">
+        <li class="roadmap-item pending">
+          <span class="ri-icon" aria-hidden="true">○</span>
+          <span>Platform packaging: 1-pager, 5-pager, FAQ, video script, social media versions</span>
+        </li>
+        <li class="roadmap-item pending">
+          <span class="ri-icon" aria-hidden="true">○</span>
+          <span>Coalition building: identify and approach aligned organizations</span>
+        </li>
+        <li class="roadmap-item pending">
+          <span class="ri-icon" aria-hidden="true">○</span>
+          <span>Speaker and presentation strategy</span>
+        </li>
+        <li class="roadmap-item pending">
+          <span class="ri-icon" aria-hidden="true">○</span>
+          <span>Social media presence — handle registration and content calendar</span>
+        </li>
+        <li class="roadmap-item pending">
+          <span class="ri-icon" aria-hidden="true">○</span>
+          <span>Press kit</span>
+        </li>
+        <li class="roadmap-item pending">
+          <span class="ri-icon" aria-hidden="true">○</span>
+          <span>Petition drives — especially for referendum/recall constitutional amendment advocacy</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ── TRACK 4: FUNDRAISING ────────────────────────── -->
+  <section class="roadmap-track" aria-labelledby="track4-title">
+    <div class="roadmap-track-header">
+      <span class="roadmap-track-num">04</span>
+      <span class="roadmap-track-title" id="track4-title">Fundraising</span>
+      <span class="roadmap-badge badge-notstarted">Not Started</span>
+    </div>
+    <div class="roadmap-track-body">
+      <ul class="roadmap-items">
+        <li class="roadmap-item pending">
+          <span class="ri-icon" aria-hidden="true">○</span>
+          <span>Small-dollar online fundraising infrastructure — ActBlue or equivalent</span>
+        </li>
+        <li class="roadmap-item pending">
+          <span class="ri-icon" aria-hidden="true">○</span>
+          <span>Grant research — progressive foundations: NEO Philanthropy, Democracy Fund, and others</span>
+        </li>
+        <li class="roadmap-item pending">
+          <span class="ri-icon" aria-hidden="true">○</span>
+          <span>Major donor outreach strategy</span>
+        </li>
+        <li class="roadmap-item pending">
+          <span class="ri-icon" aria-hidden="true">○</span>
+          <span>Crowdfunding for specific projects</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ── TRACK 5: CONTENT & BRANDING ────────────────── -->
+  <section class="roadmap-track" aria-labelledby="track5-title">
+    <div class="roadmap-track-header">
+      <span class="roadmap-track-num">05</span>
+      <span class="roadmap-track-title" id="track5-title">Content &amp; Branding</span>
+      <span class="roadmap-badge badge-inprogress">In Progress</span>
+    </div>
+    <div class="roadmap-track-body">
+      <ul class="roadmap-items">
+        <li class="roadmap-item pending">
+          <span class="ri-icon" aria-hidden="true">○</span>
+          <span>Replace AI-generated branding assets with human-designed equivalents — logo, color system, typography</span>
+        </li>
+        <li class="roadmap-item pending">
+          <span class="ri-icon" aria-hidden="true">○</span>
+          <span>Human review and rewrite of all policy language — ongoing</span>
+        </li>
+        <li class="roadmap-item pending">
+          <span class="ri-icon" aria-hidden="true">○</span>
+          <span>Professional copyediting of all pages</span>
+        </li>
+        <li class="roadmap-item pending">
+          <span class="ri-icon" aria-hidden="true">○</span>
+          <span>Accessibility audit — WCAG 2.1 AA compliance</span>
+        </li>
+        <li class="roadmap-item planned">
+          <span class="ri-icon" aria-hidden="true">◆</span>
+          <span>Video explainer series (planned)</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ── TRACK 6: TECHNICAL ──────────────────────────── -->
+  <section class="roadmap-track" aria-labelledby="track6-title">
+    <div class="roadmap-track-header">
+      <span class="roadmap-track-num">06</span>
+      <span class="roadmap-track-title" id="track6-title">Technical</span>
+      <span class="roadmap-badge badge-inprogress">In Progress</span>
+    </div>
+    <div class="roadmap-track-body">
+      <ul class="roadmap-items">
+        <li class="roadmap-item done">
+          <span class="ri-icon" aria-hidden="true">✓</span>
+          <span>Version control and provenance tracking in place</span>
+        </li>
+        <li class="roadmap-item pending">
+          <span class="ri-icon" aria-hidden="true">○</span>
+          <span>Complete E2E test suite — Playwright + Vitest — ongoing</span>
+        </li>
+        <li class="roadmap-item pending">
+          <span class="ri-icon" aria-hidden="true">○</span>
+          <span>Regular adversarial review cycles</span>
+        </li>
+        <li class="roadmap-item pending">
+          <span class="ri-icon" aria-hidden="true">○</span>
+          <span>Regular policy catalog rebuilds from source (<code>scripts/import_policy_catalog.py</code>)</span>
+        </li>
+        <li class="roadmap-item pending">
+          <span class="ri-icon" aria-hidden="true">○</span>
+          <span>DB reimport for 5 new pillars — pending</span>
+        </li>
+        <li class="roadmap-item pending">
+          <span class="ri-icon" aria-hidden="true">○</span>
+          <span>Mobile/responsive QA — ongoing</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<!-- ── FOOTER ─────────────────────────────────────────── -->
+<footer class="site-footer">
+  <div class="wrap">
+    <span class="footer-brand">American Renewal Project</span>
+    <ul class="footer-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="foundations.html">Foundations</a></li>
+      <li><a href="pillars/index.html">Pillars</a></li>
+      <li><a href="compare/index.html">Compare</a></li>
+    </ul>
+    <span class="footer-note">A Third Bill of Rights for the 21st Century.</span>
+  </div>
+</footer>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
