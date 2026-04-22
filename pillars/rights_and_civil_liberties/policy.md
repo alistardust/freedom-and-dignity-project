@@ -159,3 +159,27 @@
 **Status:** INCLUDED  
 **Statement:** Ban government purchase of personal data  
 **Notes:** Prohibits government agencies from purchasing personal data from data brokers or other commercial sources where the government could not lawfully compel the same data directly through legal process. Closes massive loophole where agencies bypass Fourth Amendment protections by buying data on the open market instead of obtaining warrants. Essential for protecting privacy in the age of commercial surveillance.
+
+---
+
+## RPR — Reparations & Historical Accountability
+
+### RGT-RPR-001 — Acknowledge reparations obligation
+**Status:** INCLUDED
+**Statement:** The United States formally acknowledges an unresolved obligation to address the multigenerational economic and social harm caused by chattel slavery, the Black Codes, convict leasing, Jim Crow segregation, redlining, and racially discriminatory application of federal programs including the GI Bill and FHA mortgage programs.
+**Notes:** This rule establishes the principle without prescribing mechanism. The harm is documented, the obligation is recognized, and inaction is no longer treated as a neutral default. Implementation details are to be determined through a legitimate democratic and deliberative process.
+
+### RGT-RPR-002 — Commission to study and recommend redress
+**Status:** INCLUDED
+**Statement:** Congress must charter a commission with authority to study the harms of slavery and subsequent discrimination, assess existing government records, document economic and social impact, and develop recommendations for the form and scope of redress.
+**Notes:** Modeled on the H.R. 40 framework proposed since 1989. The commission must include historians, economists, legal scholars, affected communities, and policy experts. Its mandate must include both quantitative impact assessment and review of precedents from other nations and contexts (German reparations, Japanese-American internment redress). The commission's findings must result in a mandatory congressional response — not be filed and ignored.
+
+### RGT-RPR-003 — Redress must be substantive, not symbolic
+**Status:** INCLUDED
+**Statement:** Any reparations program must constitute genuine, substantive redress proportionate to documented harm — not purely symbolic acknowledgment. Mechanisms may include direct payments, community investment, education and housing access programs, or other structured interventions, but must be enacted through law, funded, and enforceable.
+**Notes:** The specific form is TBD pending the commission process. This rule ensures the platform cannot be satisfied by a resolution, an apology, or a historical marker alone. Redress must have material impact. The platform commits to the principle and the process, not a predetermined mechanism.
+
+### RGT-RPR-004 — No retaliation or penalty for reparations advocacy
+**Status:** INCLUDED
+**Statement:** Advocacy for reparations is protected political speech. No person may be denied public employment, benefits, housing, contracts, security clearances, or other public accommodations based on support for or engagement in reparations advocacy or research.
+**Notes:** Addresses documented patterns of retaliation and stigmatization of reparations advocates in public life, academia, and government. Ensures the deliberative process cannot be chilled by threat of professional or civil consequences.
