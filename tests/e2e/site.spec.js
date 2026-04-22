@@ -37,8 +37,8 @@ test.describe('Homepage', () => {
     await expect(page.locator('.demand-list li')).toHaveCount(10);
   });
 
-  test('nav has 8 links (4 static + Mission, Constitution, About Us, About AI injected by app.js)', async ({ page }) => {
-    await expect(page.locator('.nav-links a')).toHaveCount(8);
+  test('nav has 10 links (4 static + Mission, Constitution, Classification, Adversarial Review, About Us, About AI injected by app.js)', async ({ page }) => {
+    await expect(page.locator('.nav-links a')).toHaveCount(10);
   });
 
   test('name notice banner is present and dismissible', async ({ page }) => {
