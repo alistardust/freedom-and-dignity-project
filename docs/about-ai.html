@@ -45,6 +45,14 @@
 .ai-model-card.secondary { border-left: 3px solid var(--red); }
 .ai-model-card.available { border-left: 3px solid rgba(0,0,0,.15); opacity: .8; }
 
+/* ── COMPARE TABLE ───────────────────────────────────── */
+.ai-compare-table-wrap { overflow-x: auto; margin: 1.5rem 0 2rem; }
+.ai-compare-table { width: 100%; border-collapse: collapse; font-family: "Libre Franklin", sans-serif; font-size: .88rem; }
+.ai-compare-table th { background: var(--navy); color: var(--gold); font-family: "Oswald", sans-serif; font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; padding: .7rem 1rem; text-align: left; }
+.ai-compare-table td { padding: .65rem 1rem; border-bottom: 1px solid var(--rule); line-height: 1.5; color: var(--ink); vertical-align: top; }
+.ai-compare-table td:first-child { font-weight: 600; color: var(--navy); }
+.ai-compare-table tbody tr:nth-child(even) { background: var(--parchment); }
+
 /* ── SKILLS LIST ─────────────────────────────────────── */
 .ai-skills-list { list-style: none; padding: 0; margin: 1rem 0 2rem; display: flex; flex-direction: column; gap: .75rem; }
 .ai-skills-list li { display: flex; gap: 1rem; align-items: flex-start; padding: .9rem 1.1rem; background: var(--parchment); border: 1px solid var(--rule); font-family: "Libre Franklin", sans-serif; font-size: .92rem; line-height: 1.65; color: var(--ink); }
@@ -89,28 +97,73 @@
 </nav>
 
 <div class="ai-hero">
-  <span class="ai-hero-eyebrow">Transparency &amp; Method</span>
-  <h1>On the Use of <span>AI</span></h1>
-  <p class="ai-hero-statement">This project uses the tools of the powerful to dismantle the conditions that keep power unaccountable. That includes AI. Here is exactly how, and why.</p>
+  <span class="ai-hero-eyebrow">AI Policy &amp; Transparency</span>
+  <h1>AI Policy &amp; <span>Transparency</span></h1>
+  <p class="ai-hero-statement">We believe AI is one of the most consequential and least governed forces shaping American life. Our policy framework is built on that premise. Here is what we believe must change — and how we use these tools in building this platform.</p>
 </div>
 
 <div class="ai-body">
 
-  <h2>The Honest Answer</h2>
-  <p>Yes, AI was used to build this project. A lot of it. The policy catalog, the pillar documents, the structural analysis, the website — all of it developed with AI assistance. That is not a disclaimer buried in small print. It is part of the design.</p>
+  <h2>What We Believe About AI</h2>
+  <p>This platform treats artificial intelligence as a serious governance problem, not a technological inevitability to be celebrated. The same systems being deployed without adequate oversight in hiring, lending, healthcare, criminal justice, and political advertising are reshaping life outcomes for millions of Americans with no democratic accountability, no recourse for harm, and no requirement that they serve the public interest. That is the premise of our AI policy — not a future concern, but an active, documented crisis that demands a serious legislative response.</p>
 
-  <p>This is a project about democratic renewal, accountability, and structural reform. It would be dishonest to pretend it was built any other way than it was.</p>
+  <p>Algorithmic systems now mediate who gets hired, who qualifies for a mortgage, who receives what medical care, and who a court considers a flight risk. These decisions are made at scale, at speed, and with minimal transparency to the people most affected. The companies deploying them face no mandatory disclosure requirements, no pre-deployment safety assessments, and no liability framework comparable to what we impose on other industries with equivalent capacity for harm. That is a policy failure, not a technology problem — and one that existing parties have declined to address seriously.</p>
 
-  <div class="ai-pullquote">
-    <p>The ideas are human. The convictions are human. The political judgment is human. AI is the infrastructure that makes it possible for one person to build something at this scale.</p>
+  <h2>Our Policy Framework</h2>
+  <p>The American Renewal Project's <a href="pillars/technology-and-ai.html"><strong>Technology &amp; AI pillar</strong></a> is among the most comprehensive AI governance frameworks proposed by any American political platform. It encompasses more than 360 canonical policy rules across six primary areas: algorithmic accountability, surveillance limits, data ownership, public infrastructure, labor protections, and democratic control of AI deployment decisions.</p>
+
+  <p>Our framework requires mandatory algorithmic impact assessments, public bias audits, strong data ownership rights, limits on AI-enabled surveillance, prohibition of high-risk autonomous AI deployment without human review, and democratic control over where and how AI gets used. The table below shows where ARP stands relative to the current positions of the Republican and Democratic parties across key AI governance questions.</p>
+
+  <div class="ai-compare-table-wrap">
+    <table class="ai-compare-table">
+      <thead>
+        <tr>
+          <th>Area</th>
+          <th>ARP</th>
+          <th>Republicans</th>
+          <th>Democrats</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Algorithmic impact assessments</td>
+          <td>Mandatory, public, pre-deployment</td>
+          <td>None proposed</td>
+          <td>Voluntary guidelines only</td>
+        </tr>
+        <tr>
+          <td>AI in criminal justice</td>
+          <td>Prohibited for high-stakes decisions without human review</td>
+          <td>No position</td>
+          <td>Limited guidance</td>
+        </tr>
+        <tr>
+          <td>Facial recognition</td>
+          <td>Strict limits; prohibited in some contexts</td>
+          <td>No limits</td>
+          <td>Patchwork state-level support</td>
+        </tr>
+        <tr>
+          <td>Data ownership</td>
+          <td>Individuals own their data</td>
+          <td>Corporate ownership default</td>
+          <td>Partial protections proposed</td>
+        </tr>
+        <tr>
+          <td>AI labor displacement</td>
+          <td>Mandatory profit-sharing, retraining funds</td>
+          <td>"AI will create jobs"</td>
+          <td>Retraining programs (unfunded)</td>
+        </tr>
+        <tr>
+          <td>Internet &amp; AI infrastructure</td>
+          <td>Internet as public utility; public AI investment</td>
+          <td>Deregulation</td>
+          <td>Partial infrastructure bills</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
-
-  <h2>Why AI</h2>
-  <p>Writing a comprehensive structural reform platform — 22 policy pillars, 1,000+ canonical rules, constitutional analysis, party comparisons — is work that would normally require a staff, a think tank, years of institutional support, and significant money. Those resources are not available here. They are, by design, available to the people this project is criticizing.</p>
-
-  <p>AI changes that equation. Not because AI has good politics — it doesn't have any — but because it can hold context, surface contradictions, organize research, and draft at scale in a way that a single person working alone cannot.</p>
-
-  <p>There is something intentional about that. The same technology being used by corporate lobbyists to flood the regulatory process, by PR firms to manufacture consent, and by political operatives to micro-target voters — that technology can also be used to write a Third Bill of Rights. That is not a neutral observation. It is the point.</p>
 
   <h2>The Real Cost of AI</h2>
   <p>This transparency statement would be incomplete — and dishonest — if it only described how AI was used here without acknowledging what AI costs. The same technology we used to build this platform is causing documented harm at scale. We are not exempt from that accounting.</p>
@@ -125,7 +178,10 @@
     <p>There is no un-inventing AI. It is already embedded in hiring decisions, medical diagnosis, content moderation, financial services, criminal justice, and virtually every institution of modern life. The question is not whether AI exists. It is who controls it, how it is governed, and whose interests it actually serves.</p>
   </div>
 
-  <p>We use AI to build this project because it is the only tool that makes this scale of work possible without institutional resources. We do not pretend that use is without cost or contradiction. What we can do — what we are obligated to do — is be transparent about it, advocate for the policies needed to govern it, and use the product of that work to make the case for the accountability frameworks AI urgently needs. Our <a href="pillars/technology-and-ai.html"><strong>Technology &amp; AI pillar</strong></a> addresses these harms directly: mandatory algorithmic impact assessments, public bias audits, strong data ownership rights, limits on AI-enabled surveillance, prohibition of high-risk autonomous AI deployment without human oversight, and democratic control over decisions about where and how AI gets used. Using AI to build the platform that argues for governing AI is not hypocrisy. It is the commitment made visible.</p>
+  <h2>Why We Used It Anyway</h2>
+  <p>Writing a comprehensive structural reform platform — 22 policy pillars, 1,000+ canonical rules, constitutional analysis, party comparisons — requires institutional scale: staff, a think tank, significant funding, years of support. Those resources are not available here. They are, by design, available to the people this project is criticizing.</p>
+
+  <p>AI changes that equation. Not because AI has good politics — it doesn't have any — but because it can hold context, surface contradictions, organize research, and draft at scale in a way that a single person working alone cannot. The same technology being used by corporate lobbyists to flood the regulatory process, by PR firms to manufacture consent, and by political operatives to micro-target voters can also be used to build a serious reform platform. That is not a neutral observation. It is the point.</p>
 
   <h2>What AI Did</h2>
   <ul>
@@ -137,18 +193,15 @@
     <li>Pushed back when arguments were weak, vague, or inconsistent</li>
   </ul>
 
-  <h2>What AI Did Not Do</h2>
+  <h2>What AI Cannot Do and Did Not Do</h2>
+  <p>AI tools are powerful for scale and synthesis. They are not capable of political judgment, moral reasoning, or determining what a democratic society owes its citizens. Every position in this platform represents a human decision. The AI did not decide what rights you deserve.</p>
+
   <ul>
     <li><strong>AI did not determine the politics.</strong> What this project believes — that power must be accountable, that rights must be real, that freedom requires material security — those positions came from years of thinking, reading, and watching what happens when those things are absent.</li>
     <li><strong>AI did not decide what gets included.</strong> Every pillar, every rule, every line in this platform was reviewed, accepted, revised, or rejected by a human being. The catalog is a reconstruction from source conversations, not an AI-generated policy list.</li>
     <li><strong>AI did not set the standard for what "right" looks like.</strong> When the Republican comparison page credited them with "regulatory simplification," a human caught that and said: that's deregulation, not simplification. That distinction matters. AI missed it. A person didn't.</li>
   </ul>
 
-  <div class="ai-pullquote">
-    <p>The tools belong to whoever picks them up. The question is what you build.</p>
-  </div>
-
-  <h2>What This Means for the Work</h2>
   <p>AI-assisted work has real limitations. It can be confidently wrong. It can smooth over tensions that should stay sharp. It can produce something that sounds authoritative and misses the point. This project has made those mistakes and caught most of them. Some are probably still in the document.</p>
 
   <p>That is why the source material is preserved. The chat logs, the canonical IDs, the policy catalog — all of it is version-controlled and traceable. If something in this platform is wrong, you can go find where it came from and why. That is not an accident. Accountability without traceability is just theater.</p>
@@ -222,13 +275,9 @@
   </div>
 
   <h2>The Bigger Point</h2>
-  <p>There is a version of this transparency statement that is defensive — that treats AI use as something to apologize for. This is not that version.</p>
+  <p>This project uses AI. It also advocates for AI accountability, algorithmic transparency, and strong limits on surveillance capitalism — because the same technology that helps build this document is being used to undermine the democracy it is trying to defend. Both things are true, and neither cancels the other.</p>
 
-  <p>The people who built the systems this project critiques have staff, money, institutions, and decades of incumbency. They have always had better tools than the people they govern. The expectation that a reform platform should compete with one hand tied behind its back while those in power use every tool available is not a principled position. It is a way of keeping the field permanently tilted.</p>
-
-  <p>This project uses AI. It also advocates for AI accountability, algorithmic transparency, and strong limits on surveillance capitalism — because the same technology that helps build this document can be and is being used to undermine the democracy it is trying to defend. Both things are true at the same time, and neither cancels out the other.</p>
-
-  <p>Our obligation — given that AI cannot be un-invented — is to use it transparently, use it to build tools of accountability rather than tools of control, and to make the case for the governance frameworks that can reduce the harm it causes. That is not a sufficient response to the scale of the problem. But it is an honest one, and it is more than is being offered by the institutions that have the most to gain from AI remaining ungoverned. We document the harms above not to clear our conscience, but to be clear about what we are working against — and to make plain that the policies in our <a href="pillars/technology-and-ai.html"><strong>Technology &amp; AI pillar</strong></a> are not abstract positions. They are responses to real, documented damage that is happening now.</p>
+  <p>Our obligation is to use AI transparently, use it to build tools of accountability rather than tools of control, and to make the case for the governance frameworks that can reduce the harm it causes. That is not a sufficient response to the scale of the problem. But it is an honest one — and it is more than is being offered by the institutions that have the most to gain from AI remaining ungoverned. We document the harms above not to clear our conscience, but to be clear about what we are working against. The policies in our <a href="pillars/technology-and-ai.html"><strong>Technology &amp; AI pillar</strong></a> are not abstract positions. They are responses to real, documented damage happening now.</p>
 
   <div class="ai-note">
     <strong>Technical note:</strong> This project was developed using GitHub Copilot (powered by Claude) for research synthesis, document drafting, and website development. The policy catalog is stored in <code>data/policy_catalog.sqlite</code> and rebuilt from source transcripts via <code>scripts/import_policy_catalog.py</code>. All source material is preserved under <code>sources/</code>. The repository is public at <a href="https://github.com/alistardust/american-renewal-project">github.com/alistardust/american-renewal-project</a>.
