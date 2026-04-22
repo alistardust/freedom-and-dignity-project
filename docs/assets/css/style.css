@@ -67,6 +67,34 @@ section { padding: 4.5rem 0; }
 .on-gold .eyebrow, .on-dark .eyebrow { color: var(--gold-light); }
 .on-gold .eyebrow::after, .on-dark .eyebrow::after { background: var(--gold-light); }
 
+/* ── NAME NOTICE BANNER ───────────────────────────────── */
+.name-notice-banner {
+  background: #5a3500;
+  border-bottom: 2px solid var(--gold);
+  color: var(--cream);
+  font-family: 'Libre Franklin', Georgia, serif;
+  font-size: .84rem;
+  line-height: 1.55;
+}
+.name-notice-inner {
+  max-width: 1060px; margin: 0 auto;
+  padding: .65rem 2rem;
+  display: flex; align-items: flex-start; gap: .8rem;
+}
+.name-notice-icon { font-size: 1.1rem; flex-shrink: 0; line-height: 1.55; }
+.name-notice-text { flex: 1; }
+.name-notice-text a { color: var(--gold-light); text-decoration: underline; }
+.name-notice-dismiss {
+  background: none; border: none; cursor: pointer;
+  color: rgba(255,255,255,.5); font-size: 1.1rem; line-height: 1;
+  padding: .15rem .3rem; flex-shrink: 0;
+  transition: color .15s;
+}
+.name-notice-dismiss:hover { color: #fff; }
+@media (max-width: 600px) {
+  .name-notice-inner { padding: .65rem 1.25rem; gap: .5rem; }
+}
+
 /* ── NAV ──────────────────────────────────────────────── */
 .site-nav {
   position: sticky; top: 0; z-index: 200;

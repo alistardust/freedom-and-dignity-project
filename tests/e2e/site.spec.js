@@ -37,8 +37,20 @@ test.describe('Homepage', () => {
     await expect(page.locator('.demand-list li')).toHaveCount(10);
   });
 
-  test('nav has 5 links (4 static + About AI injected by app.js)', async ({ page }) => {
-    await expect(page.locator('.nav-links a')).toHaveCount(5);
+  test('nav has 7 links (4 static + Mission, Constitution, About AI injected by app.js)', async ({ page }) => {
+    await expect(page.locator('.nav-links a')).toHaveCount(7);
+  });
+
+  test('name notice banner is present and dismissible', async ({ page }) => {
+    // Banner should appear on fresh page load (no sessionStorage flag)
+    const banner = page.locator('.name-notice-banner');
+    await expect(banner).toBeAttached();
+    await expect(banner).toContainText('placeholder');
+    await expect(banner).toContainText('no affiliation');
+
+    // Dismiss button removes the banner
+    await page.locator('.name-notice-dismiss').click();
+    await expect(banner).not.toBeAttached();
   });
 });
 
@@ -295,6 +307,46 @@ test.describe('About AI page', () => {
   test('footer About AI link is present', async ({ page }) => {
     await expect(page.locator('.footer-links a[href*="about-ai"]')).toBeAttached();
   });
+
+  test('AI harms section is present', async ({ page }) => {
+    // The "Real Cost of AI" section must exist with all three harm categories
+    const body = await page.locator('.ai-body').textContent();
+    expect(body).toMatch(/Real Cost of AI/i);
+    expect(body).toMatch(/Economic disruption/i);
+    expect(body).toMatch(/Algorithmic harm/i);
+    expect(body).toMatch(/Environmental cost/i);
+  });
+
+  test('"no going back" pullquote is present', async ({ page }) => {
+    const pullquotes = page.locator('.ai-pullquote');
+    // Page has multiple pullquotes; one must reference un-inventing AI
+    const texts = await pullquotes.allTextContents();
+    expect(texts.some(t => /un-inventing|no longer whether/i.test(t))).toBe(true);
+  });
+
+  test('Technology & AI pillar link is present in harms section', async ({ page }) => {
+    const link = page.locator('.ai-body a[href*="technology-and-ai"]').first();
+    await expect(link).toBeAttached();
+  });
+
+  test('models section includes ChatGPT', async ({ page }) => {
+    const grid = await page.locator('.ai-models-grid').textContent();
+    expect(grid).toMatch(/ChatGPT/i);
+  });
+
+  test('completeness note about missed models is present', async ({ page }) => {
+    const note = await page.locator('.ai-note').first().textContent();
+    // The first .ai-note is the technical note; check the completeness note
+    const notes = await page.locator('.ai-note').allTextContents();
+    expect(notes.some(n => /completeness|not.*logged|earlier.*phase/i.test(n))).toBe(true);
+  });
+
+  test('references section has at least 6 citations', async ({ page }) => {
+    // 2 original + 6 new harms citations = 8 total
+    const refs = page.locator('.ai-footnotes p[id^="fn"]');
+    const count = await refs.count();
+    expect(count).toBeGreaterThanOrEqual(6);
+  });
 });
 
 // ── ABOUT AI ACCESSIBILITY (all pages) ───────────────────────────────────────
@@ -397,4 +449,190 @@ test.describe('Policy rules section renders content', () => {
     const count = await page.locator('#pil-policy .rule-card').count();
     expect(count).toBeGreaterThan(1);
   });
+});
+
+// ── MISSION PAGE ──────────────────────────────────────────────────────────────
+
+test.describe('Mission page', () => {
+  test.beforeEach(async ({ page }) => { await page.goto('/mission.html'); });
+
+  test('has correct page title', async ({ page }) => {
+    await expect(page).toHaveTitle(/Mission.*American Renewal/i);
+  });
+
+  test('renders hero heading', async ({ page }) => {
+    await expect(page.locator('.mission-hero h1')).toBeVisible();
+  });
+
+  test('hero contains "Mission" text', async ({ page }) => {
+    const text = await page.locator('.mission-hero h1').textContent();
+    expect(text).toMatch(/Mission/i);
+  });
+
+  test('nav Mission link is present', async ({ page }) => {
+    // Mission link is injected by app.js — test presence and correct href
+    const link = page.locator('.nav-links a[href*="mission"]');
+    await expect(link).toBeAttached();
+  });
+
+  test('footer Mission link is present', async ({ page }) => {
+    await expect(page.locator('.footer-links a[href*="mission"]')).toBeAttached();
+  });
+
+  test('footer Constitution link is present', async ({ page }) => {
+    await expect(page.locator('.footer-links a[href*="constitution"]')).toBeAttached();
+  });
+
+  test('renders 6 commitment cards', async ({ page }) => {
+    // 6 What It Does commitments
+    await expect(page.locator('.mission-commit')).toHaveCount(6);
+  });
+
+  test('nav has About AI link', async ({ page }) => {
+    await expect(page.locator('.nav-links a[href*="about-ai"]')).toBeAttached();
+  });
+
+  test('references section is present', async ({ page }) => {
+    await expect(page.locator('#page-refs')).toBeAttached();
+  });
+});
+
+// ── CONSTITUTION PAGE ─────────────────────────────────────────────────────────
+
+test.describe('Constitution page', () => {
+  test.beforeEach(async ({ page }) => { await page.goto('/constitution.html'); });
+
+  test('has correct page title', async ({ page }) => {
+    await expect(page).toHaveTitle(/Constitution.*American Renewal/i);
+  });
+
+  test('renders hero heading', async ({ page }) => {
+    await expect(page.locator('.const-hero h1')).toBeVisible();
+  });
+
+  test('hero contains "Constitution" text', async ({ page }) => {
+    const text = await page.locator('.const-hero h1').textContent();
+    expect(text).toMatch(/Constitution/i);
+  });
+
+  test('nav Constitution link is present', async ({ page }) => {
+    // Constitution link is injected by app.js — test presence and correct href
+    const link = page.locator('.nav-links a[href*="constitution"]');
+    await expect(link).toBeAttached();
+  });
+
+  test('footer Constitution link is present', async ({ page }) => {
+    await expect(page.locator('.footer-links a[href*="constitution"]')).toBeAttached();
+  });
+
+  test('referendum and recall section is present', async ({ page }) => {
+    await expect(page.locator('.const-reform-box')).toBeAttached();
+  });
+
+  test('referendum and recall section mentions National Referendum', async ({ page }) => {
+    const text = await page.locator('.const-reform-box').textContent();
+    expect(text).toMatch(/National Referendum/i);
+  });
+
+  test('recall section mentions Recall', async ({ page }) => {
+    const text = await page.locator('.const-reform-box').textContent();
+    expect(text).toMatch(/Recall/i);
+  });
+
+  test('references section is present', async ({ page }) => {
+    await expect(page.locator('#page-refs')).toBeAttached();
+  });
+
+  test('vulnerabilities list renders', async ({ page }) => {
+    await expect(page.locator('.const-vuln')).toHaveCount(6);
+  });
+
+  test('amendment list renders', async ({ page }) => {
+    await expect(page.locator('.const-amend')).toHaveCount(6);
+  });
+});
+
+// ── ROADMAP PAGE ──────────────────────────────────────────────────────────────
+
+test.describe('Roadmap page', () => {
+  test.beforeEach(async ({ page }) => { await page.goto('/roadmap.html'); });
+
+  test('has correct page title', async ({ page }) => {
+    await expect(page).toHaveTitle(/Roadmap.*American Renewal/i);
+  });
+
+  test('renders hero heading', async ({ page }) => {
+    await expect(page.locator('.roadmap-hero h1')).toBeVisible();
+  });
+
+  test('hero contains "Roadmap" text', async ({ page }) => {
+    const text = await page.locator('.roadmap-hero h1').textContent();
+    expect(text).toMatch(/Roadmap/i);
+  });
+
+  test('renders 6 roadmap tracks', async ({ page }) => {
+    // 6 tracks: Policy Dev, Organization, Outreach, Fundraising, Content & Branding, Technical
+    await expect(page.locator('.roadmap-track')).toHaveCount(6);
+  });
+
+  test('nav has Mission and Constitution links', async ({ page }) => {
+    await expect(page.locator('.nav-links a[href*="mission"]')).toBeAttached();
+    await expect(page.locator('.nav-links a[href*="constitution"]')).toBeAttached();
+  });
+});
+
+// ── ELECTIONS PILLAR — REFERENDUM AND RECALL ─────────────────────────────────
+
+test.describe('Elections pillar — Referendum and Recall section', () => {
+  test.beforeEach(async ({ page }) => { await page.goto('/pillars/elections-and-representation.html'); });
+
+  test('Referendum & Recall section exists', async ({ page }) => {
+    await expect(page.locator('#pil-direct-democracy')).toBeAttached();
+  });
+
+  test('Referendum & Recall section contains ELE-DIR-001', async ({ page }) => {
+    const text = await page.locator('#pil-direct-democracy').textContent();
+    expect(text).toMatch(/ELE-DIR-001/);
+  });
+
+  test('Referendum & Recall section contains ELE-DIR-002', async ({ page }) => {
+    const text = await page.locator('#pil-direct-democracy').textContent();
+    expect(text).toMatch(/ELE-DIR-002/);
+  });
+
+  test('snav contains Referendum & Recall link', async ({ page }) => {
+    await expect(page.locator('.pil-snav a[href="#pil-direct-democracy"]')).toBeAttached();
+  });
+});
+
+// ── MISSION/CONSTITUTION REACHABLE FROM ALL PAGE TYPES ───────────────────────
+
+test.describe('Mission and Constitution nav links from all page types', () => {
+  const pages = [
+    { url: '/',                               label: 'Homepage' },
+    { url: '/foundations.html',              label: 'Foundations' },
+    { url: '/pillars/index.html',            label: 'Pillars index' },
+    { url: '/pillars/healthcare.html',       label: 'Pillar page' },
+    { url: '/compare/index.html',            label: 'Compare index' },
+  ];
+
+  for (const { url, label } of pages) {
+    test(`${label} has Mission in nav`, async ({ page }) => {
+      await page.goto(url);
+      const link = page.locator('.nav-links a[href*="mission"]');
+      await expect(link).toBeAttached();
+      const href = await link.getAttribute('href');
+      await page.goto(href.startsWith('http') ? href : new URL(href, page.url()).toString());
+      await expect(page).toHaveTitle(/Mission.*American Renewal/i);
+    });
+
+    test(`${label} has Constitution in nav`, async ({ page }) => {
+      await page.goto(url);
+      const link = page.locator('.nav-links a[href*="constitution"]');
+      await expect(link).toBeAttached();
+      const href = await link.getAttribute('href');
+      await page.goto(href.startsWith('http') ? href : new URL(href, page.url()).toString());
+      await expect(page).toHaveTitle(/Constitution.*American Renewal/i);
+    });
+  }
 });

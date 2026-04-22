@@ -1,5 +1,13 @@
 # American Renewal Project
 
+> ⚠️ **Name Notice — Placeholder Name**
+>
+> It has come to our attention that the name "American Renewal Project" is already in use by an
+> existing organization with which this project has **no affiliation, connection, or shared ideology**.
+> The current name is a **placeholder** while a permanent name is selected. All references to
+> "American Renewal Project" in this repository, website, and documentation should be understood
+> as temporary. We apologize for any confusion.
+
 This repository is now organized around the architecture described in the branch chats: a document-first policy platform with pillar docs, a cross-domain system-rules layer, strategy materials, and a structured catalog of tracked policy items.
 
 ## Repository layout

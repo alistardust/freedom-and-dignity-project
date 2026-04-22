@@ -2,7 +2,30 @@
 (function () {
   'use strict';
 
-  /* ── NAV ACTIVE STATE + ABOUT AI LINK ────────────────── */
+  /* ── NAME NOTICE BANNER ───────────────────────────── */
+  (function () {
+    if (sessionStorage.getItem('name-notice-dismissed')) return;
+    const banner = document.createElement('div');
+    banner.className = 'name-notice-banner';
+    banner.innerHTML =
+      '<div class="name-notice-inner">' +
+        '<span class="name-notice-icon">⚠</span>' +
+        '<span class="name-notice-text"><strong>Name Notice:</strong> ' +
+        'It has come to our attention that the name \u201cAmerican Renewal Project\u201d is already in use by ' +
+        'an existing organization with which this project has no affiliation, connection, or shared ideology. ' +
+        'The current name of this project is a <strong>placeholder</strong> while a permanent name is selected. ' +
+        'We apologize for any confusion.</span>' +
+        '<button class="name-notice-dismiss" aria-label="Dismiss notice">\u00d7</button>' +
+      '</div>';
+    const nav = document.querySelector('.site-nav') || document.body.firstElementChild;
+    document.body.insertBefore(banner, nav);
+    banner.querySelector('.name-notice-dismiss').addEventListener('click', function () {
+      banner.remove();
+      sessionStorage.setItem('name-notice-dismissed', '1');
+    });
+  })();
+
+
   (function () {
     const page = location.pathname.split('/').pop() || 'index.html';
     document.querySelectorAll('.nav-links a').forEach(a => {
@@ -12,13 +35,30 @@
       }
     });
 
-    // Inject "About AI" link into the nav + footer (path-aware for subdirectories)
+    // Inject nav links (path-aware for subdirectories)
     const navList = document.querySelector('ul.nav-links');
     // Check for actual subdirectory pages (pillars/, compare/) not just path depth.
     // Depth-counting breaks on GitHub Pages because the repo base path adds a segment.
     const inSubdir = /\/(pillars|compare)\//.test(location.pathname);
-    const aiHref = inSubdir ? '../about-ai.html' : 'about-ai.html';
+    const base = inSubdir ? '../' : '';
+    const aiHref = base + 'about-ai.html';
+    const missionHref = base + 'mission.html';
+    const constitutionHref = base + 'constitution.html';
     const isAiPage = page === 'about-ai.html';
+    const isMissionPage = page === 'mission.html';
+    const isConstitutionPage = page === 'constitution.html';
+
+    if (navList && !navList.querySelector('a[href*="mission"]')) {
+      const li = document.createElement('li');
+      li.innerHTML = `<a href="${missionHref}"${isMissionPage ? ' class="active"' : ''}>Mission</a>`;
+      navList.appendChild(li);
+    }
+
+    if (navList && !navList.querySelector('a[href*="constitution"]')) {
+      const li = document.createElement('li');
+      li.innerHTML = `<a href="${constitutionHref}"${isConstitutionPage ? ' class="active"' : ''}>Constitution</a>`;
+      navList.appendChild(li);
+    }
 
     if (navList && !navList.querySelector('a[href*="about-ai"]')) {
       const li = document.createElement('li');
@@ -26,8 +66,18 @@
       navList.appendChild(li);
     }
 
-    // Inject "About AI" into footer-links so it appears in every page's footer nav
+    // Inject Mission, Constitution, and About AI into footer-links
     const footerLinks = document.querySelector('ul.footer-links');
+    if (footerLinks && !footerLinks.querySelector('a[href*="mission"]')) {
+      const fli = document.createElement('li');
+      fli.innerHTML = `<a href="${missionHref}">Mission</a>`;
+      footerLinks.appendChild(fli);
+    }
+    if (footerLinks && !footerLinks.querySelector('a[href*="constitution"]')) {
+      const fli = document.createElement('li');
+      fli.innerHTML = `<a href="${constitutionHref}">Constitution</a>`;
+      footerLinks.appendChild(fli);
+    }
     if (footerLinks && !footerLinks.querySelector('a[href*="about-ai"]')) {
       const fli = document.createElement('li');
       fli.innerHTML = `<a href="${aiHref}">About AI</a>`;
