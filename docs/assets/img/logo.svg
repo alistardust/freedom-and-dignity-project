@@ -73,6 +73,6 @@
   <!-- Bottom arc text: CCW circle from top, text appears at bottom readable -->
   <text font-family="'Oswald','Arial Narrow',sans-serif" font-size="9.5"
         font-weight="600" letter-spacing="4" fill="#c9952a">
-    <textPath href="#arc-text-path" startOffset="29%">AMERICAN RENEWAL PROJECT</textPath>
+    <textPath href="#arc-text-path" startOffset="22%">FREEDOM AND DIGNITY PROJECT</textPath>
   </text>
 </svg>
