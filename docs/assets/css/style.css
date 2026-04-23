@@ -440,6 +440,11 @@ section { padding: 4.5rem 0; }
 .fn-head { font-family: 'Oswald', sans-serif; font-size: .6rem; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; color: rgba(255,255,255,.2); margin-bottom: .75rem; grid-column: 1/-1; }
 .footnotes p { font-size: .7rem; color: rgba(255,255,255,.28); line-height: 1.5; margin-bottom: .3rem; }
 
+/* References sections on pillar pages use ol.footnotes inside bg-parchment —
+   override dark-background styles so they render readable on the light section */
+#pil-refs .footnotes { background: transparent; padding: 0; border-top: none; }
+#pil-refs .footnotes li { color: var(--navy); }
+
 /* ── PILLARS PAGE ─────────────────────────────────────── */
 .pillar-filters { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: 2.5rem; }
 .pillar-filter-btn {
@@ -465,6 +470,20 @@ section { padding: 4.5rem 0; }
 .reform-grid        { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:1rem;    margin-top:1rem; }
 .rule-grid          { display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:.75rem; }
 .related-grid       { display:grid; grid-template-columns:repeat(auto-fill,minmax(180px,1fr)); gap:.85rem;  margin-top:1rem; }
+.related-card {
+  display: block;
+  background: var(--cream);
+  border: 1px solid rgba(10,34,64,.12);
+  border-top: 3px solid var(--navy);
+  border-radius: 4px;
+  padding: .85rem 1rem;
+  text-decoration: none;
+  color: var(--navy);
+  transition: border-top-color .15s, box-shadow .15s;
+}
+.related-card:hover { border-top-color: var(--red); box-shadow: 0 3px 10px rgba(0,0,0,.1); }
+.related-card strong { display: block; font-size: .8rem; font-family: 'Oswald', sans-serif; letter-spacing: .04em; text-transform: uppercase; margin-bottom: .3rem; color: var(--navy); }
+.related-card span   { font-size: .8rem; color: rgba(10,34,64,.65); line-height: 1.45; }
 
 /* Compare pages */
 .cmp-wrongs-grid    { display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:1.1rem;  margin-top:1rem; }
