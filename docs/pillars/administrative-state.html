@@ -116,6 +116,13 @@ details.design-logic .design-body { padding:.8rem 1rem; background:#fff; border:
 details.design-logic .design-body p { font-size:.93rem; line-height:1.75; }
 details.design-logic .design-body ul { padding-left:1.3rem; }
 details.design-logic .design-body li { font-size:.93rem; line-height:1.65; margin-bottom:.3rem; }
+/* ── Pillar status indicator ──────────────────────── */
+.pillar-status { display:inline-flex; align-items:center; gap:.6rem; padding:.45rem .9rem; background:#fff; border:1px solid #e0d8c8; border-radius:4px; font-size:.82rem; margin:.5rem 0 1rem; }
+.status-label { color:#888; font-weight:600; text-transform:uppercase; letter-spacing:.05em; font-size:.75rem; }
+.status-value { font-weight:700; }
+.status-active { color:#1e8449; }
+.status-draft { color:#c9952a; }
+.status-proposed { color:#888; }
 </style>
 <style>:root { --accent-color: #bf0a30; }</style>
 </head>
@@ -148,11 +155,15 @@ details.design-logic .design-body li { font-size:.93rem; line-height:1.65; margi
 <nav class="pil-snav" id="pil-snav"><ul><li><a href="#pil-intro">Overview</a></li><li><a href="#pil-problem">The Problem</a></li><li><a href="#pil-reform">Reform Areas</a></li><li><a href="#pil-policy">Policy Positions</a></li><li><a href="#pil-research">Research</a></li><li><a href="#pil-related">Related</a></li></ul></nav>
 <section class="bg-parchment ruled" id="pil-intro">
 <div class="wrap">
+  <div class="pillar-status">
+    <span class="status-label">Coverage status:</span>
+    <span class="status-value status-draft">Draft — in progress, core rules active</span>
+  </div>
   <div class="stats-bar">
-  <div class="stat-item"><span class="stat-num">51</span><span class="stat-label">Total Positions</span></div>
+  <div class="stat-item"><span class="stat-num">57</span><span class="stat-label">Total Positions</span></div>
   <div class="stat-item"><span class="stat-num" style="color:#1e8449">43</span><span class="stat-label">Active</span></div>
   <div class="stat-item"><span class="stat-num" style="color:#c9952a">0</span><span class="stat-label">Partial</span></div>
-  <div class="stat-item"><span class="stat-num" style="color:#888">8</span><span class="stat-label">Proposed</span></div>
+  <div class="stat-item"><span class="stat-num" style="color:#888">14</span><span class="stat-label">Proposed</span></div>
 </div>
   <div class="completion-status" style="margin:1rem 0 1.5rem;padding:1rem 1.2rem;background:#fff;border-radius:6px;border:1px solid #e0d8c8;border-left:5px solid #c9952a">
   <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap">
@@ -741,12 +752,98 @@ details.design-logic .design-body li { font-size:.93rem; line-height:1.65; margi
   </div>
 </div>
 </div>
+
+<div class="policy-family" id="fam-adm-wbl">
+  <div class="family-header">
+    <span class="family-code">ADM</span>
+    <span class="family-title">WBL — Federal Employee Whistleblower Protections</span>
+    <span class="family-count">0/2 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">ADM-WBL-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Federal employees must be protected from retaliation for reporting illegal orders, scientific misconduct, or agency wrongdoing</p>
+  <p class="rule-stmt">Federal employees who report illegal orders, scientific misconduct, regulatory capture, unlawful political interference with enforcement decisions, or other agency wrongdoing through lawful disclosure channels must be protected from termination, demotion, reassignment, harassment, or any other form of retaliation, with independent enforcement through the Merit Systems Protection Board or equivalent body insulated from political pressure.</p>
+  <p class="rule-notes">Whistleblower protections for federal employees are a cornerstone of accountable government. Career civil servants are the most reliable source of information about illegal orders and agency wrongdoing — they have direct knowledge, ongoing relationships, and institutional memory that political appointees and outside observers lack. Effective whistleblower protection requires: a clear and accessible reporting process; independent adjudication insulated from the agency being reported; meaningful remedies including reinstatement and back pay; anti-retaliation protections that cover informal pressure, not only formal adverse actions; and protection of disclosures to Congress, inspectors general, and oversight bodies. Without these protections, the entire oversight ecosystem — inspectors general, congressional investigations, media accountability — is weakened because the primary witnesses cannot safely report what they know.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">ADM-WBL-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">The Merit Systems Protection Board and Office of Special Counsel must be adequately funded and structurally independent</p>
+  <p class="rule-stmt">The Merit Systems Protection Board (MSPB) and the Office of Special Counsel (OSC), which adjudicate federal employee whistleblower claims and investigate prohibited personnel practices, must be adequately funded, free from executive interference in individual case adjudication, and staffed to resolve complaints within defined timelines, with leadership removable only for cause.</p>
+  <p class="rule-notes">The effectiveness of federal whistleblower protections depends entirely on the institutions that enforce them. The MSPB has historically suffered from vacancies that leave the board unable to issue precedential decisions, creating backlogs of thousands of unresolved appeals. Political pressure on these bodies — through understaffing, budget cuts, or appointment of leaders hostile to employee rights — is a form of structural capture that undermines enforcement without requiring explicit rule changes. Leadership protections are essential: boards whose members can be removed at will by the executive branch they are meant to hold accountable cannot function independently. Adequate staffing with defined resolution timelines prevents backlogs from becoming a de facto denial of remedy.</p>
+</div>
+  </div>
+</div>
+
+<div class="policy-family" id="fam-adm-civ">
+  <div class="family-header">
+    <span class="family-code">ADM</span>
+    <span class="family-title">CIV — Civil Service Independence and Career Employee Protections</span>
+    <span class="family-count">0/2 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">ADM-CIV-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Career civil servants may not be reclassified as at-will employees to enable mass political dismissals</p>
+  <p class="rule-stmt">Career federal employees in competitive service positions may not be reclassified into at-will employment categories — whether through executive order, administrative action, or regulatory change — in a manner designed to remove civil service protections and enable dismissal based on political affiliation, policy disagreement, or perceived disloyalty rather than legitimate performance or conduct reasons.</p>
+  <p class="rule-notes">The career civil service exists to provide expertise, continuity, and accountability between administrations. Career employees implement law regardless of which party controls the White House, maintain institutional knowledge across transitions, and resist pressure to implement unlawful orders precisely because they have job security. Executive mechanisms to reclassify career employees as political appointees — specifically "Schedule F" and similar designations — are direct attacks on this independence. A Schedule F–type reclassification allows an administration to dismiss thousands of employees and replace them with political loyalists, effectively converting the career civil service into an extension of the ruling party rather than an independent administrative body. This is the administrative-state playbook for democratic backsliding. This rule makes such reclassification a prohibited personnel practice subject to judicial challenge, with a private right of action for affected employees.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">ADM-CIV-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Core civil service protections must be established by statute, not executive order, and may not be unilaterally removed by the executive</p>
+  <p class="rule-stmt">The competitive civil service system — including merit-based hiring and promotion, appeal rights against arbitrary dismissal, and protections against prohibited personnel practices — must be codified in statute with explicit congressional authorization required for any material reduction of those protections, so that civil service safeguards cannot be unilaterally removed by the same executive branch they constrain.</p>
+  <p class="rule-notes">Civil service protections that exist only by executive order are structurally vulnerable: any administration can undo them with a stroke of a pen. Congressional codification of the core merit system — and a statutory bar on executive reclassification schemes — is necessary to prevent cycles where civil service protections are dismantled by administrations hostile to independent government. This is not about making federal employees impossible to discipline or fire for legitimate reasons; performance management, reduction in force procedures, and disciplinary processes remain available. It is about ensuring that the structural separation between political appointees and career civil servants is durable and not subject to executive nullification.</p>
+</div>
+  </div>
+</div>
+
+<div class="policy-family" id="fam-adm-maj">
+  <div class="family-header">
+    <span class="family-code">ADM</span>
+    <span class="family-title">MAJ — Major Questions Doctrine and Congressional Delegation</span>
+    <span class="family-count">0/2 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">ADM-MAJ-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Congress must explicitly confirm agency authority for major regulatory actions through clear statutory language</p>
+  <p class="rule-stmt">Congress must affirmatively exercise its authority to confirm agency power for major regulatory actions — those with vast economic and political significance — through clear statutory language, so that agency authority does not depend solely on judicial interpretation of ambiguous statutes subject to invalidation under the major questions doctrine.</p>
+  <p class="rule-notes">The Supreme Court’s "major questions doctrine," articulated in <em>West Virginia v. EPA</em> (2022) and subsequent decisions, holds that Congress must speak clearly when granting agencies authority over questions of major economic or political significance. While this doctrine has legitimate anti-delegation concerns, in practice it has been weaponized by corporate interests to invalidate long-standing regulatory authority: the EPA’s authority to regulate power plant emissions, OSHA’s ability to require vaccination policies, and the FTC’s ability to issue trade regulation rules have all been challenged or struck down. The response is not to accept judicial neutering of agency authority — it is for Congress to exercise its legislative function clearly, explicitly delegating authority for major regulatory actions rather than leaving it to judicial interpretation of general statutory language. This rule requires Congress to act proactively and prevents the doctrine from becoming a backdoor mechanism for deregulation through judicial override.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">ADM-MAJ-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Courts may not use the major questions doctrine to strike down regulations consistent with an agency’s general statutory mandate absent clear textual prohibition</p>
+  <p class="rule-stmt">Federal courts may not invoke the major questions doctrine to invalidate agency regulations where the regulation is consistent with the agency’s general statutory mandate and the statute does not contain a clear textual prohibition on the specific regulatory action, and must instead apply the standard arbitrary-and-capricious and statutory-construction review applicable to all agency actions.</p>
+  <p class="rule-notes">The major questions doctrine, as currently applied, creates a perverse incentive: the more consequential a regulation in economic or political terms, the easier it becomes to strike down on the grounds that Congress did not speak with sufficient clarity. This inverts the logic of democratic governance — the most consequential regulatory actions should face rigorous scrutiny for arbitrary or capricious action, but should not be categorically invalidated simply because Congress used enabling language rather than explicit authorization for each specific rule. This rule does not immunize agencies from judicial review — arbitrary action, statutory excess, and failure to follow administrative procedure remain fully reviewable. It prevents courts from using the major questions doctrine as an extra-statutory deregulation tool in the absence of genuine statutory prohibition.</p>
+</div>
+  </div>
+</div>
+
+</div>
 </section>
 <section class="bg-dark on-dark ruled" id="pil-research">
 <div class="wrap">
   <h2 style="color:#bf0a30">Research & Context</h2>
   <div class="research-body" style="color:rgba(255,255,255,.85)"><p>The administrative state has been under sustained attack from multiple directions. Conservative legal movements have sought to dismantle Chevron deference and challenge the constitutional legitimacy of agency rulemaking, arguing that agencies represent an unconstitutional "fourth branch" of government. This approach is not merely about limiting government — it is about removing regulatory obstacles to corporate profit maximization by delegitimizing the institutional mechanisms through which public protections are enforced.</p>
-<p>The Chevron doctrine, established in <em>Chevron U.S.A., Inc. v. Natural Resources Defense Council, Inc.</em> (1984), held that courts should defer to reasonable agency interpretations of ambiguous statutory language within their regulatory domain. This doctrine was grounded in institutional competence — agencies possess specialized expertise, follow public rulemaking procedures, and are accountable to elected officials through executive oversight. When the Supreme Court overturned Chevron in <em>Loper Bright Enterprises v. Raimondo</em> (2024), it empowered courts to substitute their judgment for agency expertise, creating a flood of litigation designed to paralyze regulatory enforcement. Without Chevron, every technical determination becomes subject to judicial reinterpretation, allowing industry actors to forum-shop for friendly judges and relitigate settled regulatory standards across circuits. Restoring Chevron does not grant agencies unlimited power — they remain bound by statutory text, administrative procedures, and judicial review for genuine overreach. But it restores institutional competence as a guiding principle and prevents the weaponization of courts against regulatory enforcement.</p>
+<p>The Chevron doctrine, established in <em>Chevron U.S.A., Inc. v. Natural Resources Defense Council, Inc.</em> (1984),<sup><a href="#fn3" id="ref3">[3]</a></sup> held that courts should defer to reasonable agency interpretations of ambiguous statutory language within their regulatory domain. This doctrine was grounded in institutional competence — agencies possess specialized expertise, follow public rulemaking procedures, and are accountable to elected officials through executive oversight. When the Supreme Court overturned Chevron in <em>Loper Bright Enterprises v. Raimondo</em> (2024),<sup><a href="#fn4" id="ref4">[4]</a></sup> it empowered courts to substitute their judgment for agency expertise, creating a flood of litigation designed to paralyze regulatory enforcement. Without Chevron, every technical determination becomes subject to judicial reinterpretation, allowing industry actors to forum-shop for friendly judges and relitigate settled regulatory standards across circuits. Restoring Chevron does not grant agencies unlimited power — they remain bound by statutory text, administrative procedures, and judicial review for genuine overreach. But it restores institutional competence as a guiding principle and prevents the weaponization of courts against regulatory enforcement.</p>
 <p>The push to enshrine core departments in the Constitution addresses a different vulnerability. While some agencies (like the FTC or FCC) can be created or restructured by Congress, core departments have become political targets. Conservative movements have repeatedly called for abolishing the Department of Education, viewing federal education standards as overreach. Similarly, the Department of Labor is targeted for elimination by those who oppose worker protections like minimum wage enforcement, overtime rules, and workplace safety standards. By constitutionally enshrining Labor, Education, Justice, and Defense, we prevent cycles where each administration attempts to defund or dismantle departments that enforce protections unpopular with their political coalition. This does not mean these departments cannot be reformed, restructured, or held accountable — it means they cannot be arbitrarily abolished to eliminate the protections they enforce.</p>
 <p>Regulatory capture is the systemic process by which industries dominate the agencies meant to regulate them. This occurs through multiple mechanisms: revolving-door employment where regulators move seamlessly between agency positions and high-paying industry jobs; advisory board dominance where industries control the committees that set standards and recommend enforcement priorities; lobbying expenditures that dwarf agency budgets and enable industries to outspend public-interest advocates in every rulemaking proceeding; and financial dependency where agencies rely on industry-funded research or industry cooperation for enforcement, creating incentives to avoid antagonizing regulated entities. Capture is not incidental — it is the systematic goal of industries that view regulation as a cost to be minimized. Effective anti-capture design requires structural insulation, not merely ethical guidelines. This means strict cooling-off periods for revolving-door employment, limits on industry representation in standard-setting bodies, transparency requirements for lobbying contacts and influence, and independent funding mechanisms that prevent agencies from becoming financially dependent on the industries they regulate.</p>
 <p>The balance this pillar seeks is between paralysis and capture. Without agencies, Congress would need to pass impossibly detailed legislation covering every technical determination — an unworkable model that would result in regulatory gaps and inability to respond to changing conditions. With captured agencies, regulations serve industry interests rather than public interests. With weak or delegitimized agencies, corporations operate without meaningful oversight. The goal is durable, expert, accountable regulatory capacity — agencies that have clear authority, institutional competence, structural insulation from capture, and democratic accountability through congressional oversight and public transparency.</p>
@@ -761,6 +858,8 @@ details.design-logic .design-body li { font-size:.93rem; line-height:1.65; margi
   <ol class="footnotes" style="font-size:.87rem;line-height:1.75;padding-left:1.3rem">
     <li id="fn1">Carpenter, D., & Moss, D. A. (Eds.). (2013). <em>Preventing regulatory capture: Special interest influence and how to limit it</em>. Cambridge University Press. <a href="#ref1" style="font-size:.8rem">↩</a></li>
     <li id="fn2">Congressional Research Service. (2024). <em>The major questions doctrine</em> (Report No. LSB10982). https://crsreports.congress.gov/product/pdf/LSB/LSB10982 <a href="#ref2" style="font-size:.8rem">↩</a></li>
+    <li id="fn3"><em>Chevron U.S.A. Inc. v. Natural Resources Defense Council, Inc.</em>, 467 U.S. 837 (1984). https://supreme.justia.com/cases/federal/us/467/837/ <a href="#ref3" style="font-size:.8rem">↩</a></li>
+    <li id="fn4"><em>Loper Bright Enterprises v. Raimondo</em>, 603 U.S. 369 (2024). https://www.supremecourt.gov/opinions/23pdf/22-451_7m58.pdf <a href="#ref4" style="font-size:.8rem">↩</a></li>
   </ol>
 </div>
 </section>
