@@ -140,10 +140,10 @@ details.design-logic .design-body li { font-size:.93rem; line-height:1.65; margi
 <section class="bg-parchment ruled" id="pil-intro">
 <div class="wrap">
   <div class="stats-bar">
-  <div class="stat-item"><span class="stat-num">138</span><span class="stat-label">Total Positions</span></div>
+  <div class="stat-item"><span class="stat-num">153</span><span class="stat-label">Total Positions</span></div>
   <div class="stat-item"><span class="stat-num" style="color:#1e8449">119</span><span class="stat-label">Active</span></div>
   <div class="stat-item"><span class="stat-num" style="color:#c9952a">1</span><span class="stat-label">Partial</span></div>
-  <div class="stat-item"><span class="stat-num" style="color:#888">9</span><span class="stat-label">Proposed</span></div>
+  <div class="stat-item"><span class="stat-num" style="color:#888">24</span><span class="stat-label">Proposed</span></div>
 </div>
   <div class="completion-status" style="margin:1rem 0 1.5rem;padding:1rem 1.2rem;background:#fff;border-radius:6px;border:1px solid #e0d8c8;border-left:5px solid #1e8449">
   <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap">
@@ -261,7 +261,7 @@ details.design-logic .design-body li { font-size:.93rem; line-height:1.65; margi
   </div>
   <p class="rule-title">Automation Tax Revenue for Public Benefit</p>
   <p class="rule-stmt">Revenue from AI or automated-labor taxation should be used to support workers, public goods, and broad-based social benefit rather than private concentration alone.</p>
-  <p class="rule-notes">Directs automation tax revenue to public purposes aligned with addressing displacement effects. Specific uses may include: worker retraining and education programs, transition support for displaced workers, universal basic income or social dividend programs, infrastructure investment, research and development, healthcare and social services expansion. Prevents revenue from being captured by general budget where it might subsidize further concentration. Creates direct connection between productivity gains from automation and public benefit.</p>
+  <p class="rule-notes">Directs automation tax revenue to public purposes aligned with addressing displacement effects. Specific uses must include: worker retraining and education programs, transition support for displaced workers, universal basic income or guaranteed income floor programs (see ECO-GBI), and broad-based social benefit distribution. Revenue from automation taxation is explicitly designated as a funding source for the guaranteed income floor established in ECO-GBI-001 and for the social dividend described in ECO-GBI-003. Prevents revenue from being captured by the general budget where it might subsidize further concentration rather than addressing displacement. Creates a direct, legally enforceable connection between productivity gains from automation and the public benefit obligations those gains create. Cross-reference: ECO-AUT-001 (automation tax), ECO-AUT-003 (tax structure), ECO-GBI-001 through ECO-GBI-003.</p>
 </div>
 <div class="rule-card status-missing">
   <div class="rule-header">
@@ -451,6 +451,168 @@ details.design-logic .design-body li { font-size:.93rem; line-height:1.65; margi
   <p class="rule-title">Small Business Healthcare Coverage Support</p>
   <p class="rule-stmt">Provide subsidies carveouts or public support to help small businesses comply with healthcare coverage requirements.</p>
   <p class="rule-notes">Similar logic to ECO-LAB-004 for parental leave. If healthcare coverage is mandated (or strongly incentivized), small businesses need support to comply without being driven out by costs. Approaches include: subsidies for small business purchase of employee health coverage, public option or government-provided healthcare that reduces employer burden, graduated requirements where businesses below certain size have reduced obligations or receive offsetting support, carveouts that exempt very small businesses with alternative mechanisms to ensure workers still receive coverage.</p>
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-eco-ss">
+  <div class="family-header">
+    <span class="family-code">ECO</span>
+    <span class="family-title">SS — Social Security Reform</span>
+    <span class="family-count">0/5 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">ECO-SS-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Eliminate the Social Security Payroll Tax Wage Cap</p>
+  <p class="rule-stmt">All wages and self-employment income, with no upper limit, must be subject to Social Security payroll taxation; the wage cap — $176,100 in 2025 — is abolished.</p>
+  <p class="rule-notes">The Social Security wage cap makes the effective Social Security tax rate deeply regressive: it falls toward zero on income above the cap, so a worker earning $5 million pays the same nominal Social Security taxes as a worker earning $176,100. Eliminating the cap would substantially improve Social Security solvency — the 2024 SSA Trustees Report projects the combined OASDI trust fund reserves will be depleted by 2035, after which scheduled benefits would be payable at only 83% of projected levels.<sup><a href="#fn10" id="ref10">[10]</a></sup> The cap elimination is a statutory change (26 U.S.C. § 3111 and related provisions) and does not require constitutional amendment. Implementation note: benefit formula adjustments for high earners must be addressed separately — the platform does not automatically award proportionally higher benefits to high earners on newly taxed income above the historical cap; that is a separate statutory decision. CBO has analyzed options for modifying or eliminating the taxable maximum in its periodic Social Security policy options analyses.<sup><a href="#fn11" id="ref11">[11]</a></sup> Cross-reference: ECO-SS-002 (AI-tax supplement), ECO-SS-003 (minimum benefit expansion).</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">ECO-SS-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Supplement Social Security Funding with Automation Tax Revenue</p>
+  <p class="rule-stmt">Revenue from AI and automation displacement taxes (ECO-AUT-001 and ECO-AUT-002) must be directed in part to the Social Security trust funds to supplement payroll tax revenue as automation erodes the wage-based funding base.</p>
+  <p class="rule-notes">Social Security is currently funded almost entirely through payroll taxes on wages. As AI and automation reduce employment or suppress wage growth, the payroll tax base shrinks — a structurally unsound dependency for a system whose fiscal viability depends on labor income. Dedicating a portion of automation tax revenue to Social Security creates a direct link between automation-driven productivity gains and the social insurance obligations those gains create. This rule does not prescribe the exact allocation percentage — that is a statutory matter — but establishes the principle: when machines replace workers, the machines should contribute to the social insurance that displaced workers lose. Cross-reference: ECO-AUT-001 (automation tax), ECO-AUT-002 (automation tax revenue for public benefit), ECO-SS-001 (cap elimination), ECO-GBI-003 (automation as social dividend).</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">ECO-SS-003</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Substantially Increase the Social Security Minimum Benefit</p>
+  <p class="rule-stmt">The Special Minimum Primary Insurance Amount must be substantially increased so that full-career workers — those with 30 or more years in covered employment — never retire into poverty.</p>
+  <p class="rule-notes">The Social Security Special Minimum PIA was designed to provide adequate benefits to long-service, low-wage workers, but has been eroded by inflation since the 1970s because it is indexed to prices rather than wages. By the mid-2020s, relatively few workers receive benefits based on the Special Minimum PIA because it has fallen below the regular benefit formula for most beneficiaries. The result: a worker who spent 35 years in covered employment at low wages may retire with Social Security benefits below the federal poverty line. This is both an equity failure and a structural failure — a program that does not reliably prevent poverty for full-career low-wage workers has failed its core purpose. The platform commits to restoring and substantially increasing the minimum benefit to a genuine poverty-preventing floor, indexed to wages to prevent re-erosion. Cross-reference: ECO-SS-001 (cap elimination provides additional funding), RGT-POV-001 (poverty elimination as national goal).</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">ECO-SS-004</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Add Caregiver Credits to Social Security Benefit Calculation</p>
+  <p class="rule-stmt">Years spent in unpaid caregiving — raising children, caring for disabled or elderly family members — must be credited toward Social Security benefit calculation at a defined benefit rate, regardless of whether the caregiver earned wages in covered employment during those years.</p>
+  <p class="rule-notes">The Social Security benefit formula calculates benefits based on the 35 highest earning years of covered employment. Workers who take years out of the workforce for caregiving — disproportionately women — have earnings-record gaps that permanently reduce their Social Security benefits. A woman who spends five years caring for children or aging parents may retire with benefits thousands of dollars per year lower than a similarly situated worker who did not leave the workforce. Several peer nations have addressed this: Germany credits periods of child-rearing; Canada's CPP has provisions for low-earning caregiving years; the UK credits qualifying caregivers for National Insurance purposes. The National Academy of Social Insurance has published analysis of multiple caregiver credit design models.<sup><a href="#fn12" id="ref12">[12]</a></sup> Implementation considerations: eligible care period (child under 12; severely disabled adult); benefit amount credited (e.g., 50% of national average wage); maximum years eligible; integration with existing dropout-year provisions. This reform would meaningfully reduce the gender gap in Social Security benefits. Cross-reference: ECO-SS-001, ECO-SS-003.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">ECO-SS-005</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Study and Address Occupational Inequity in Retirement Age</p>
+  <p class="rule-stmt">The Social Security Administration must commission and publicly release a study of differential life expectancy and disability rates by occupation; Congress must use this evidence to evaluate whether a uniform full retirement age creates inequitable outcomes for workers in physically demanding occupations.</p>
+  <p class="rule-notes">The full retirement age for Social Security is 67 for workers born after 1960. Workers in physically demanding occupations — construction, agriculture, service work, cleaning and maintenance, logistics and warehousing — have significantly shorter life expectancy and higher rates of work-limiting disability than workers in cognitive or desk occupations. Requiring all workers to work until 67 to receive full benefits therefore systematically disadvantages manual workers: a construction worker and a software engineer nominally face the same retirement age, but the construction worker is more likely to be disabled, ill, or dead before reaching it. This platform commits to a research-first approach — mandate a rigorous study before prescribing specific policy changes — but names the equity concern directly: occupational differences in life expectancy are real and must be addressed. Possible responses include occupation-based flexible retirement ages, strengthened SSDI access for occupationally disabled workers, or early retirement options without penalty for verified occupational disability. Cross-reference: ECO-SS-001–ECO-SS-004, RGT-DIS-002 (SSDI reform), RGT-DIS-003 (SSDI earnings cliff).</p>
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-eco-gbi">
+  <div class="family-header">
+    <span class="family-code">ECO</span>
+    <span class="family-title">GBI — Guaranteed Basic Income</span>
+    <span class="family-count">0/5 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">ECO-GBI-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Guaranteed Income Floor for All Residents</p>
+  <p class="rule-stmt">The government must maintain a guaranteed income floor sufficient for basic survival, dignity, and participation in society; this floor must be set above bare subsistence and adjusted annually for inflation and cost-of-living.</p>
+  <p class="rule-notes">This rule makes the guaranteed income floor a policy commitment, not an aspiration. "Basic survival, dignity, and participation" is deliberately set above bare subsistence: it includes the ability to participate in civic and social life, not merely to avoid starvation. Annual adjustment prevents the erosion that has already rendered many existing benefit floors inadequate — TANF cash assistance, for example, has lost the majority of its real value since 1997 in most states. FDR's January 1944 State of the Union address proposed a Second Bill of Rights including "the right of every family to a decent home" and "the right to earn enough to provide adequate food and clothing and recreation" — this platform fulfills that vision in concrete policy terms. This rule is a direct policy commitment, not a goal for future study. Cross-reference: ECO-GBI-002 through ECO-GBI-005 (implementation details); ECO-CTC (child allowance); ECO-SS-003 (Social Security minimum benefit); RGT-POV-001 (poverty elimination goal).</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">ECO-GBI-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Universal Displacement-Triggered Income Support</p>
+  <p class="rule-stmt">As AI and automation displace workers at scale, displacement-triggered income support must be available universally, without means-testing conditions that create welfare cliffs or arbitrary cutoffs, and at levels adequate to maintain living standards during transition.</p>
+  <p class="rule-notes">Means-testing income support for displaced workers creates structural paradoxes: the workers most in need of support are often those with the least documentation, fewest advocates, and most complex economic situations. Arbitrary income cutoffs create benefit cliffs — ranges of income where earning a dollar more causes a loss of more than a dollar in benefits — that punish exactly the behavior the policy is supposed to encourage. Universal support is both simpler to administer and more equitable. Evidence: Finland's 2017–2018 basic income experiment found that unconditional income support increased well-being and sense of security, reduced anxiety and depression, and did not reduce employment among recipients — and may have improved it.<sup><a href="#fn14" id="ref14">[14]</a></sup> Cross-reference: ECO-GBI-005 (no welfare cliffs), ECO-AUT-001 and ECO-AUT-002 (automation tax revenue), ECO-GBI-004 (implementation pathway).</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">ECO-GBI-003</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Automation Gains Must Fund a Social Dividend</p>
+  <p class="rule-stmt">Revenue sources for the guaranteed income floor must include automation taxes, progressive wealth taxation, and other mechanisms that recapture productivity gains from capital-displacing technology and distribute them as a social dividend to the public.</p>
+  <p class="rule-notes">Productivity gains from AI and automation depend not only on capital investment but on publicly funded research, public infrastructure, educated labor, the rule of law, and the accumulated knowledge of human civilization. When those gains are captured entirely by capital owners, the public that made them possible receives nothing. This rule establishes that a portion of automation-derived productivity gains must be returned to the public. The Alaska Permanent Fund Dividend — a universal annual payment to all Alaska residents, funded by oil royalties, in 2023 approximately $1,312 per person — provides a working model of a resource-based social dividend distributed unconditionally to all residents regardless of income.<sup><a href="#fn13" id="ref13">[13]</a></sup> The automation social dividend extends that logic to technology-driven productivity gains at the national level. Cross-reference: ECO-AUT-001, ECO-AUT-002, ECO-AUT-003; TAX-WTH-* (wealth taxation as additional revenue).</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">ECO-GBI-004</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Phased Implementation: Strengthen Existing Programs Toward Universal Floor</p>
+  <p class="rule-stmt">The implementation pathway begins with expansion and strengthening of existing income support programs — EITC, CTC, SNAP, TANF — and moves toward a unified, unconditional, administratively simple income floor; the near-term goal is eliminating gaps in the existing safety net; the long-term goal is universal guaranteed income.</p>
+  <p class="rule-notes">A fully universal guaranteed income requires phased implementation; the immediate priority is repairing existing safety net gaps. This means: expanding the Earned Income Tax Credit to cover childless adults adequately; making the Child Tax Credit fully refundable and monthly (ECO-CTC); ensuring SNAP benefits reflect actual food costs; restoring TANF as a genuine cash assistance program rather than a block grant used for non-assistance purposes. Evidence from the Stockton SEED pilot (2019–2021) — where low-income residents received $500/month unconditionally for two years — showed improved employment outcomes, physical and mental health, and financial stability compared to the control group.<sup><a href="#fn15" id="ref15">[15]</a></sup> Evidence from the 2021 ARPA expansion of the CTC confirms that near-universal, monthly income support for families with children substantially reduces poverty during the period of payment and that poverty rebounds immediately when payments end — demonstrating that the income support is the active ingredient. Cross-reference: ECO-CTC (child allowance); ECO-GBI-001 through ECO-GBI-003; ECO-GBI-005 (no welfare cliffs).</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">ECO-GBI-005</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Prohibit Welfare Cliffs in All Means-Tested Programs</p>
+  <p class="rule-stmt">No means-testing condition may create a benefits cliff — a range of income in which earning more causes a net loss of total income due to benefit reduction — and all benefit phase-out schedules must be structured so that additional earned income always increases net total income.</p>
+  <p class="rule-notes">Benefits cliffs are among the most damaging structural failures of the American safety net. They arise when a benefit — housing assistance, Medicaid, childcare subsidies, SNAP, TANF — phases out abruptly at an income threshold, such that a worker who earns one dollar more loses far more than a dollar in benefits. The effective marginal tax rate at the cliff can exceed 100%, creating a powerful financial disincentive to increase earnings. Many low-income workers report declining available work hours or refusing promotions specifically to avoid triggering benefit loss. The solution is gradual phase-out schedules with taper rates below 100% — any additional dollar earned must produce a net income gain even as benefits decline. Because multiple program phase-outs interact, this rule requires cross-program coordination: the combined effect of simultaneous SNAP, housing, and childcare phase-outs must not create a composite cliff even if individual programs are each individually compliant. Cross-reference: ECO-GBI-001 through ECO-GBI-004; ECO-CTC-001 (child allowance design); RGT-DIS-003 (SSDI earnings cliff as a specific application of this principle).</p>
+</div>
+  </div>
+</div>
+<div class="policy-family" id="fam-eco-ctc">
+  <div class="family-header">
+    <span class="family-code">ECO</span>
+    <span class="family-title">CTC — Child Tax Credit / Child Allowance</span>
+    <span class="family-count">0/5 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">ECO-CTC-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Fully Refundable, Universal Child Tax Credit</p>
+  <p class="rule-stmt">The Child Tax Credit must be made fully refundable and universally available to all families with qualifying children regardless of earned income; no child may be excluded from the full credit value based on their parents' income level or tax liability.</p>
+  <p class="rule-notes">Under current law, the Child Tax Credit is partially refundable: families must have at least $2,500 in earned income, and refundability phases in at 15 cents per dollar above that threshold. This means the poorest families — those with no or minimal earned income — receive little or nothing, while higher-earning families receive the full credit. The exclusion is arbitrary: the children of the lowest-income families are the most likely to be in poverty, the most likely to benefit from additional income, and the most excluded from the credit. The 2021 American Rescue Plan temporarily made the CTC fully refundable and expanded it to $3,000–$3,600 per child annually. Columbia University's Center on Poverty and Social Policy found that child poverty fell from approximately 15% to under 12% during the months the expanded monthly CTC was in effect, and rebounded to over 17% immediately after expiration in January 2022.<sup><a href="#fn16" id="ref16">[16]</a></sup> Cross-reference: ECO-CTC-002 (monthly payments); ECO-CTC-003 (benefit level); ECO-GBI-001 (income floor); RGT-POV-001 (poverty elimination).</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">ECO-CTC-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Child Allowance Paid Monthly</p>
+  <p class="rule-stmt">The Child Tax Credit must be paid as a regular monthly benefit rather than a single annual lump sum; low-income families cannot smooth consumption from an annual payment, and child-rearing costs are monthly.</p>
+  <p class="rule-notes">An annual lump-sum tax credit does not match the timing of actual household expenses — rent, groceries, childcare, utilities — which are monthly obligations. Low-income families that receive an annual lump sum often use it to pay down debt accrued over the year, meaning they have already gone without what the money was intended to provide. Monthly payment converts the child allowance into a functioning income support tool that matches the actual timing of need. Evidence from the 2021 ARPA monthly CTC payments confirmed that food insufficiency among families with children dropped measurably during months when monthly payments were received. International precedent: Canada's Canada Child Benefit (implemented July 2016) provides a fully refundable, monthly, inflation-adjusted child allowance — as of 2023, approximately CAD $6,997 annually per child under 6 and CAD $5,903 per child 6–17, paid in monthly installments.<sup><a href="#fn17" id="ref17">[17]</a></sup> Cross-reference: ECO-CTC-001 (full refundability); ECO-CTC-003 (benefit level); ECO-GBI-005 (monthly payments avoid lump-sum-induced cash flow cliffs).</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">ECO-CTC-003</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Benefit Level Sufficient to Reduce Child Poverty; Indexed to Inflation</p>
+  <p class="rule-stmt">The child allowance benefit level must be set at a minimum equal to the 2021 ARPA expansion amounts — $3,600 per year per child under 6, $3,000 per year for children 6–17 — and must be indexed to inflation so the real value is not eroded over time.</p>
+  <p class="rule-notes">The 2021 ARPA expansion demonstrated that a child allowance at this level — approximately $250–$300/month per child — materially reduces child poverty when fully refundable and paid monthly. The goal is a child allowance that, combined with other income, means no child lives in poverty due to insufficient income support. Inflation indexing is required to prevent the passive erosion that has degraded TANF cash assistance, the Special Minimum PIA, and other benefit levels that were set in nominal terms and then allowed to erode in real terms. The specific amounts should be revisited and increased over time as economic conditions change; this rule establishes the floor, not the ceiling. International benchmark: Canada's Child Benefit provides a higher per-child benefit than the 2021 ARPA amounts and has been indexed since inception. Cross-reference: ECO-CTC-001 (full refundability); ECO-CTC-002 (monthly payment); ECO-GBI-001 (income floor).</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">ECO-CTC-004</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">No Tax Filing Barrier; Automatic Enrollment</p>
+  <p class="rule-stmt">No tax filing requirement may serve as a barrier to receiving the child allowance; automatic enrollment and simplified non-filer access must be available; undocumented parents with U.S. citizen or legal resident children may not be excluded from the child allowance for those qualifying children.</p>
+  <p class="rule-notes">The poorest families — those with no income, irregular income, or income below the filing threshold — do not file tax returns, and are therefore hardest to reach through a tax-based credit system. During the 2021 ARPA expansion, the IRS created a Non-Filer portal for non-filing families, but uptake was incomplete and excluded the very poorest families. Automatic enrollment — where the government proactively identifies eligible families and enrolls them rather than requiring them to navigate a claims process — is the correct approach. The families with the most to gain from the child allowance are often those with the least administrative capacity to claim it. The exclusion of undocumented parents for their U.S. citizen children is particularly inequitable: the U.S. citizen children are eligible persons regardless of parental immigration status; denying them support harms them. Cross-reference: ECO-CTC-001 through ECO-CTC-003; ECO-GBI-004 (administrative simplicity as goal).</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">ECO-CTC-005</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Child Allowance Through Age 17; Study Extension Through Age 21 for Students</p>
+  <p class="rule-stmt">The child allowance must cover all children through age 17 inclusive; the government must study the feasibility and impact of extending the benefit through age 21 for young people enrolled in post-secondary education or vocational training.</p>
+  <p class="rule-notes">The current CTC and 2021 ARPA expansion cover children through age 17. Many young people ages 18–21 are in post-secondary education or vocational training — situations of economic dependency — and their families face real costs associated with that dependency. The platform commits to studying extension through age 21 rather than mandating it, because: cost and distributional effects require analysis; interaction with the EITC for college-age dependents raises design questions; and whether extension should be conditioned on educational enrollment or unconditional is a legitimate policy question. International precedent: the UK Child Benefit covers through age 16, with extension through 19 if in qualifying education. Cross-reference: ECO-CTC-001 through ECO-CTC-004; ECO-GBI (income floor pathway — extension to young adults connects to broader GBI trajectory).</p>
 </div>
   </div>
 </div>
@@ -1673,6 +1835,14 @@ details.design-logic .design-body li { font-size:.93rem; line-height:1.65; margi
     <li id="fn7">U.S. Geological Survey. (2023). <em>Mineral commodity summaries 2023</em>. U.S. Department of the Interior. https://pubs.usgs.gov/periodicals/mcs2023/mcs2023.pdf <a href="#ref7" style="font-size:.8rem">↩</a></li>
     <li id="fn8">American Association for the Advancement of Science. (2024). <em>Federal R&amp;D budget dashboard</em>. https://www.aaas.org/programs/r-d-budget-and-policy/rd-budget-dashboard <a href="#ref8" style="font-size:.8rem">↩</a></li>
     <li id="fn9">U.S. Census Bureau. (2024). <em>U.S. international trade in goods and services</em> (FT-900). https://www.census.gov/foreign-trade/Press-Release/current_press_release/index.html <a href="#ref9" style="font-size:.8rem">↩</a></li>
+    <li id="fn10">Social Security Administration. (2024). <em>The 2024 Annual Report of the Board of Trustees of the Federal Old-Age and Survivors Insurance and Federal Disability Insurance Trust Funds</em>. https://www.ssa.gov/OACT/TR/2024/ <a href="#ref10" style="font-size:.8rem">↩</a></li>
+    <li id="fn11">Congressional Budget Office. (2022). <em>Social Security: Options to Modify the Payroll Tax</em>. Congressional Budget Office. https://www.cbo.gov/topics/social-security (Source: CBO has published multiple analyses of Social Security taxable maximum options — verify specific publication before release) <a href="#ref11" style="font-size:.8rem">↩</a></li>
+    <li id="fn12">National Academy of Social Insurance. (2019). <em>Fixing Social Security: Adequate and Sustainable</em>. National Academy of Social Insurance. https://www.nasi.org/research/social-security/ (URL to verify) <a href="#ref12" style="font-size:.8rem">↩</a></li>
+    <li id="fn13">Alaska Permanent Fund Corporation. (2024). <em>Alaska Permanent Fund Corporation annual report and dividend history</em>. https://apfc.org/ <a href="#ref13" style="font-size:.8rem">↩</a></li>
+    <li id="fn14">Kela — The Social Insurance Institution of Finland. (2020). <em>Basic income experiment 2017–2018: Final results</em>. https://www.kela.fi/basic-income-experiment-2017-2018 <a href="#ref14" style="font-size:.8rem">↩</a></li>
+    <li id="fn15">West, S., &amp; Castro Baker, A. (2021). <em>Stockton Economic Empowerment Demonstration: Preliminary analysis — One year of SEED</em>. Stockton Economic Empowerment Demonstration. https://www.stocktondemonstration.org/ <a href="#ref15" style="font-size:.8rem">↩</a></li>
+    <li id="fn16">Center on Poverty and Social Policy. (2022). <em>Monthly poverty rate increased to 14.4 percent in January 2022 following the end of the monthly Child Tax Credit</em>. Columbia University. https://www.povertycenter.columbia.edu/ <a href="#ref16" style="font-size:.8rem">↩</a></li>
+    <li id="fn17">Employment and Social Development Canada. (2023). <em>Canada Child Benefit: Overview and payment amounts</em>. Government of Canada. https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-child-benefit-overview.html <a href="#ref17" style="font-size:.8rem">↩</a></li>
   </ol>
 </div>
 </section>
