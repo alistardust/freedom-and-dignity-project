@@ -10,7 +10,10 @@
     "test": "npm run test:unit && npm run test:e2e",
     "test:unit": "vitest run tests/unit",
     "test:e2e": "playwright test",
-    "serve": "serve docs -p 5500 -n"
+    "serve": "serve docs -p 5500 -n",
+    "logs:export": "python3 scripts/export-chat-logs.py --project-only",
+    "logs:export:all": "python3 scripts/export-chat-logs.py",
+    "logs:sync": "echo 'Set your S3 bucket: aws s3 sync sources/chat-logs/copilot/ s3://YOUR-BUCKET/copilot-chat-logs/ --storage-class STANDARD_IA'"
   },
   "repository": {
     "type": "git",

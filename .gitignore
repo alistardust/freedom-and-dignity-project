@@ -5,3 +5,7 @@ __pycache__/
 node_modules/
 playwright-report/
 test-results/
+
+# Copilot chat logs — kept local and synced to S3, not committed to the public repo.
+# To commit them, remove this line. To sync to S3: npm run logs:sync
+sources/chat-logs/copilot/
