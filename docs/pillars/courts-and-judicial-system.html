@@ -149,10 +149,10 @@ details.design-logic .design-body li { font-size:.93rem; line-height:1.65; margi
 <section class="bg-parchment ruled" id="pil-intro">
 <div class="wrap">
   <div class="stats-bar">
-  <div class="stat-item"><span class="stat-num">8</span><span class="stat-label">Total Positions</span></div>
+  <div class="stat-item"><span class="stat-num">15</span><span class="stat-label">Total Positions</span></div>
   <div class="stat-item"><span class="stat-num" style="color:#1e8449">0</span><span class="stat-label">Active</span></div>
   <div class="stat-item"><span class="stat-num" style="color:#c9952a">0</span><span class="stat-label">Partial</span></div>
-  <div class="stat-item"><span class="stat-num" style="color:#888">8</span><span class="stat-label">Proposed</span></div>
+  <div class="stat-item"><span class="stat-num" style="color:#888">15</span><span class="stat-label">Proposed</span></div>
 </div>
 <div class="completion-status" style="margin:1rem 0 1.5rem;padding:1rem 1.2rem;background:#fff;border-radius:6px;border:1px solid #e0d8c8;border-left:5px solid #bf0a30">
   <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap">
@@ -170,6 +170,10 @@ details.design-logic .design-body li { font-size:.93rem; line-height:1.65; margi
   <div class="gap-callout" style="margin-top:.75rem;padding:.7rem 1rem;background:#fff8f0;border-radius:4px;border-left:3px solid #c9952a">
     <strong style="color:#c9952a;font-size:.82rem">⚠ Content Gap:</strong>
     <span style="font-size:.85rem;color:#555"> Only 8 policy rules across all reform areas — interpretive standards, venue reform, and oversight mechanisms need detailed policy implementation rules</span>
+  </div>
+  <div class="gap-callout" style="margin-top:.75rem;padding:.7rem 1rem;background:#fff8f0;border-radius:4px;border-left:3px solid #1e8449">
+    <strong style="color:#1e8449;font-size:.82rem">✓ Added:</strong>
+    <span style="font-size:.85rem;color:#555"> JUD-LGO family (7 rules): Congressional supermajority override, jurisdiction stripping, precedent supermajority, independent enforcement office, amicus disclosure, judiciary diversity, ALJ independence</span>
   </div>
   <div class="gap-callout" style="margin-top:.75rem;padding:.7rem 1rem;background:#fff8f0;border-radius:4px;border-left:3px solid #c9952a">
     <strong style="color:#c9952a;font-size:.82rem">⚠ Content Gap:</strong>
@@ -470,6 +474,78 @@ details.design-logic .design-body li { font-size:.93rem; line-height:1.65; margi
 </div>
   </div>
 </div>
+<div class="policy-family" id="fam-lgo">
+  <div class="family-header">
+    <span class="family-code">LGO</span>
+    <span class="family-title">Legislative and Democratic Checks on the Court</span>
+    <span class="family-count">0/7 active</span>
+  </div>
+  <div class="rule-grid">
+    <div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUD-LGO-001</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Congressional supermajority override of SCOTUS decisions invalidating federal statutes</p>
+  <p class="rule-stmt">Congress may reinstate a federal statute invalidated by the Supreme Court on constitutional grounds by passing it again with a two-thirds majority in both chambers within ten years of the decision; the override does not apply to rulings enforcing individual rights against the government.</p>
+  <p class="rule-notes">The counter-majoritarian problem — an unelected court of nine permanently striking down laws enacted by democratic majorities — is real and structural. Canada's Section 33 "notwithstanding clause" provides a working model of legislative override with democratic accountability: legislatures may override certain judicial rulings for renewable five-year periods. Constitutional scholar Mark Tushnet has documented how popular constitutionalism supports mechanisms for democratic correction of judicial veto.<sup><a href="#fn3" id="ref3">[3]</a></sup> The two-thirds threshold ensures genuine supermajoritarian consensus — not a partisan reversal — before democratic will prevails over judicial invalidation. The carve-out for rulings enforcing individual rights against the government prevents the override from becoming a tool to strip rights; it applies only when courts invalidate affirmative legislation addressing structural or economic questions. This models mechanisms in Canada, New Zealand, and the United Kingdom and addresses the structural problem of courts acting as an unreviewable veto on democratic legislation.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUD-LGO-002</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Jurisdiction stripping authority with procedural safeguards</p>
+  <p class="rule-stmt">Congress retains explicit authority under Article III to remove Supreme Court appellate jurisdiction over specific statutory subject matters, exercisable only by a two-thirds majority and subject to a mandatory ten-year sunset requiring affirmative renewal.</p>
+  <p class="rule-notes">Article III grants Congress the power to make exceptions to the Supreme Court's appellate jurisdiction. <em>Ex parte McCardle</em> (1869) confirmed this power during Reconstruction, when Congress stripped the Court's jurisdiction to prevent invalidation of Reconstruction laws protecting newly freed people; the Court dismissed the case for lack of jurisdiction, explicitly acknowledging Congress's authority.<sup><a href="#fn4" id="ref4">[4]</a></sup> JUD-LGO-002 affirms this constitutional tool while constraining its use: a two-thirds threshold prevents bare majorities from stripping jurisdiction opportunistically; the sunset clause ensures periodic democratic reaffirmation rather than permanent removal of review; and the rule does not apply to Congress's own structural or procedural legislation (which would create a conflict of interest). This is not a tool to harm minorities — it is a structural check available to democratic supermajorities to prevent judicial lock-in on contested structural questions where prolonged judicial veto undermines democratic self-governance.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUD-LGO-003</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Supermajority requirement to overturn Supreme Court precedent</p>
+  <p class="rule-stmt">The Supreme Court may not overturn an established precedent by fewer than six votes; a five-to-four decision is insufficient to overrule prior holdings.</p>
+  <p class="rule-notes">Stare decisis — respect for settled prior decisions — is the foundation of legal stability and the protection of reliance interests across all areas of law. The current Court has overturned established precedent at historically high rates with bare five-to-four majorities: <em>Dobbs v. Jackson Women's Health Organization</em> (overturning <em>Roe</em> and <em>Casey</em>), <em>Janus v. AFSCME</em> (overturning <em>Abood</em>), <em>Knick v. Township of Scott</em> (overturning <em>San Remo Hotel</em>), and others. A six-to-three minimum for overruling precedent raises the threshold for doctrinal reversal, requiring genuine judicial consensus rather than a single-appointment majority to eliminate settled law. This does not prevent the Court from narrowing, distinguishing, or developing doctrine through the normal case-by-case process — it prevents wholesale reversal of longstanding precedent by a bare majority constituted by a single strategic appointment. The comparative norm from peer constitutional democracies is that fundamental doctrinal reversals require broad judicial consensus, not bare majorities.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUD-LGO-004</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Independent enforcement office for judicial recusal and financial disclosure</p>
+  <p class="rule-stmt">An independent Office of Judicial Accountability must receive and review annual financial disclosures from all Article III judges, investigate recusal violations, and publish findings; self-enforcement of recusal decisions is prohibited for the Supreme Court.</p>
+  <p class="rule-notes">JUD-REC-001 and JUD-ETH-002 establish the standards; JUD-LGO-004 establishes the enforcement infrastructure those rules require. Investigative journalism by ProPublica documented undisclosed gifts, travel, and outside income in the hundreds of thousands of dollars for multiple current Supreme Court justices with no enforcement consequence. An independent accountability office — analogous to Inspectors General in the executive branch — would receive annual disclosures, investigate complaints, compel recusal in cases where unreported financial relationships exist, refer disclosure violations to the Judicial Conference or Congress, and publish findings publicly. Without an enforcement office, disclosure requirements and recusal standards are unenforced aspirations. The office must be structurally independent from the courts it oversees, with appointments that do not give any single political actor control.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUD-LGO-005</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Amicus curiae funding and coordination disclosure</p>
+  <p class="rule-stmt">Amicus curiae briefs filed before any federal court must disclose all funding sources, any coordination with a party whose position the brief supports, and membership in any repeat-filer network coordinating across multiple cases before the same court.</p>
+  <p class="rule-notes">The amicus curiae system has been systematically captured by well-funded advocacy networks that coordinate filings to simulate independent expert agreement where none exists. Empirical research on Supreme Court amicus practice has documented that a small number of repeat-filer organizations — many funded by overlapping donor networks — dominate the amicus docket, creating the appearance of broad independent endorsement for ideologically driven positions. Supreme Court Rule 37 requires disclosure of any party's counsel who authored an amicus brief, but does not require disclosure of funding from non-counsel sources or coordination with parties' legal teams. The transparency gap allows interested parties to amplify their legal arguments through nominally independent third-party filings without the court or public knowing the source. This rule extends disclosure requirements to all funding sources (not merely authoring counsel), any communication or coordination with the party being supported, and organizational membership in networks with coordinated docket strategies.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUD-LGO-006</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Federal judiciary demographic diversity requirements</p>
+  <p class="rule-stmt">Congress must establish a merit-based screening process for all Article III judicial nominations that actively evaluates demographic diversity as a component of judicial legitimacy; annual reports on the demographic composition of all federal courts disaggregated by circuit must be published.</p>
+  <p class="rule-notes">Federal courts interpret the rights of all Americans, but their composition has historically failed to reflect the population they serve. As of 2024, women and racial minorities remain significantly underrepresented at all levels of the federal judiciary relative to their share of the legal profession and the general population. Judicial diversity is not merely symbolic: empirical research has found that judicial panel composition affects outcomes in discrimination, civil rights, and employment cases, and that diverse panels produce reasoning that accounts for a wider range of lived experience. A merit-based screening process that affirmatively considers diversity alongside credentials, experience, and judicial temperament does not reduce quality — it expands the pool of qualified candidates and addresses structural barriers (geographic networks, law school ties, clerkship pipelines) that have historically excluded talented jurists from consideration. Annual public reporting creates accountability for progress without mandating specific quotas.</p>
+</div>
+<div class="rule-card status-missing">
+  <div class="rule-header">
+    <code class="rule-id">JUD-LGO-007</code>
+    <span class="rule-badge">Proposed</span>
+  </div>
+  <p class="rule-title">Administrative law judges — independence protections against politically motivated removal</p>
+  <p class="rule-stmt">Administrative law judges may not be removed except for good cause shown before an independent review body; executive branch agencies may not remove, reassign, or salary-reduce ALJs as a tool to influence adjudication outcomes; ALJ independence is a statutory right enforceable by judicial review.</p>
+  <p class="rule-notes">Administrative law judges decide millions of cases each year — Social Security disability claims, immigration hearings, securities enforcement proceedings, and agency benefits disputes. They exercise quasi-judicial authority and their impartiality is fundamental to fair administrative adjudication. The Supreme Court's decision in <em>SEC v. Jarkesy</em> (2024) disrupted ALJ structures, while executive orders have asserted authority to reclassify ALJs as at-will employees subject to presidential removal without cause. These converging pressures threaten to eliminate the independence of the administrative judiciary, making ALJ decisions responsive to political pressure from agency heads and the White House rather than law and evidence. JUD-LGO-007 establishes ALJ independence as a non-negotiable statutory floor: removal only for specific good cause adjudicated by an independent review body, and explicit prohibition on using removal, reassignment, or pay reduction to pressure adjudicative outcomes in pending or future cases.</p>
+</div>
+  </div>
+</div>
 </div>
 </section>
 <section class="bg-dark on-dark ruled" id="pil-research">
@@ -505,6 +581,10 @@ details.design-logic .design-body li { font-size:.93rem; line-height:1.65; margi
   <ol class="footnotes" style="font-size:.87rem;line-height:1.75;padding-left:1.3rem">
     <li id="fn1">Brennan Center for Justice. (2023). <em>Supreme Court ethics reform</em>. https://www.brennancenter.org/our-work/research-reports/supreme-court-ethics-reform <a href="#ref1" style="font-size:.8rem">↩</a></li>
     <li id="fn2">Jones, J. M. (2023, September 28). Approval of U.S. Supreme Court down to 40%, a new low. <em>Gallup</em>. https://news.gallup.com/poll/4732/supreme-court.aspx <a href="#ref2" style="font-size:.8rem">↩</a></li>
+    <li id="fn3">Tushnet, M. V. (1999). <em>Taking the Constitution away from the courts</em>. Princeton University Press. <a href="#ref3" style="font-size:.8rem">↩</a></li>
+    <li id="fn4"><em>Ex parte McCardle</em>, 74 U.S. (7 Wall.) 506 (1869). <a href="#ref4" style="font-size:.8rem">↩</a></li>
+    <li id="fn5">Calabresi, S. G., &amp; Lindgren, J. (2006). Term limits for the Supreme Court: Life tenure reconsidered. <em>Harvard Journal of Law &amp; Public Policy</em>, <em>29</em>(3), 769–877. <a href="#ref5" style="font-size:.8rem">↩</a></li>
+    <li id="fn6">Vladeck, S. I. (2023). <em>The Shadow Docket: How the Supreme Court uses stealth rulings to amass power and undermine the republic</em>. Basic Books. <a href="#ref6" style="font-size:.8rem">↩</a></li>
   </ol>
 </div>
 </section>
