@@ -5,110 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Education — Freedom and Dignity Project</title>
 <link rel="stylesheet" href="../assets/css/style.css">
-<link rel="icon" type="image/svg+xml" href="../assets/img/logo.svg">
-<style>
-/* ── Pillar page styles ─────────────────────────────────────── */
-.pil-snav {
-  position: sticky; top: 63px; z-index: 150;
-  background: var(--navy); border-bottom: 2px solid rgba(255,255,255,.12);
-  overflow-x: auto; white-space: nowrap;
-}
-.pil-snav ul { display:flex; gap:0; list-style:none; margin:0; padding:0; }
-.pil-snav a {
-  display:block; padding:.55rem 1.1rem; font-family:'Oswald',sans-serif;
-  font-size:.78rem; letter-spacing:.06em; text-transform:uppercase;
-  color:rgba(255,255,255,.62); text-decoration:none; transition:color .15s;
-}
-.pil-snav a:hover, .pil-snav a.active { color:#fff; }
-.pil-snav a.active { border-bottom:2px solid #c9952a; }
-
-/* ── Section layouts ────────────────────────────────────────── */
-.pil-intro { display:grid; grid-template-columns:1fr 1fr; gap:2rem; }
-@media(max-width:700px){ .pil-intro { grid-template-columns:1fr; } }
-
-.pil-intro h2 { font-size:1.1rem; text-transform:uppercase; letter-spacing:.08em; margin-bottom:.6rem; }
-.pil-intro p, .pil-intro li { font-size:1rem; line-height:1.75; }
-
-.problem-card {
-  background:#fff; border-radius:6px; padding:1.2rem 1.4rem;
-  border-left:4px solid #c9952a;
-  box-shadow:0 1px 4px rgba(0,0,0,.07);
-}
-.problem-card h3 { font-size:1rem; margin:0 0 .4rem; color:var(--navy); }
-.problem-card p  { font-size:.92rem; line-height:1.65; margin:0; color:#333; }
-
-.reform-card {
-  background:var(--navy); color:#fff; border-radius:6px;
-  padding:1.1rem 1.3rem; border-top:3px solid #c9952a;
-}
-.reform-card h3 { font-size:.95rem; margin:0 0 .4rem; color:#c9952a; text-transform:uppercase; letter-spacing:.04em; }
-.reform-card p  { font-size:.88rem; line-height:1.6; margin:0; color:rgba(255,255,255,.8); }
-
-/* ── Policy rules ───────────────────────────────────────────── */
-.policy-family { margin-bottom:2.5rem; }
-.family-header {
-  display:flex; align-items:baseline; gap:.8rem; margin-bottom:1rem;
-  padding-bottom:.5rem; border-bottom:2px solid #c9952a;
-}
-.family-code {
-  font-family:'Oswald',sans-serif; font-size:1.1rem;
-  color:#c9952a; min-width:3rem;
-}
-.family-title { font-size:1rem; font-weight:600; color:var(--ink); }
-.family-count { margin-left:auto; font-size:.8rem; color:#888; white-space:nowrap; }
-
-.rule-card {
-  border-radius:5px; padding:.9rem 1rem;
-  background:#fff; border:1px solid #e0d8c8;
-  font-size:.88rem; line-height:1.55;
-}
-.rule-card.status-included { border-left:4px solid #1e8449; }
-.rule-card.status-updated  { border-left:4px solid #2471a3; }
-.rule-card.status-partial  { border-left:4px solid #c9952a; }
-.rule-card.status-missing  { border-left:4px solid #ccc; opacity:.72; }
-
-.rule-header { display:flex; align-items:center; gap:.5rem; margin-bottom:.35rem; }
-.rule-id { font-size:.72rem; color:#888; letter-spacing:.03em; }
-.rule-badge {
-  font-size:.68rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em;
-  padding:.12em .45em; border-radius:3px;
-}
-.status-included .rule-badge { background:#d4edda; color:#155724; }
-.status-updated  .rule-badge { background:#cce5ff; color:#004085; }
-.status-partial  .rule-badge { background:#fff3cd; color:#856404; }
-.status-missing  .rule-badge { background:#f0f0f0; color:#666; }
-
-.rule-title { font-weight:600; margin:.2rem 0 .2rem; color:var(--ink); }
-.rule-stmt  { font-size:.85rem; color:#444; margin:.15rem 0 0; }
-.rule-notes { font-size:.8rem; color:#666; font-style:italic; margin:.25rem 0 0; }
-
-/* ── Research section ───────────────────────────────────────── */
-.research-body h3 { font-size:1.05rem; color:#c9952a; margin:1.5rem 0 .4rem; }
-.research-body p  { line-height:1.8; font-size:.97rem; }
-
-/* ── Summary stats bar ──────────────────────────────────────── */
-.stats-bar {
-  display:flex; flex-wrap:wrap; gap:1.5rem; margin:1.2rem 0;
-  padding:1rem 1.2rem; background:#fff; border-radius:6px;
-  border:1px solid #e0d8c8;
-}
-.stat-item { text-align:center; }
-.stat-num { display:block; font-family:'Oswald',sans-serif; font-size:2rem; color:#c9952a; }
-.stat-label { font-size:.78rem; text-transform:uppercase; letter-spacing:.06em; color:#888; }
-
-/* ── Design logic accordion ─────────────────────────────────── */
-details.design-logic { margin-top:1rem; }
-details.design-logic summary {
-  cursor:pointer; font-weight:700; padding:.6rem .8rem;
-  background:rgba(0,0,0,.06); border-radius:4px; user-select:none;
-}
-details.design-logic[open] summary { border-radius:4px 4px 0 0; }
-details.design-logic .design-body { padding:.8rem 1rem; background:#fff; border:1px solid #e0d8c8; border-top:none; border-radius:0 0 4px 4px; }
-details.design-logic .design-body p { font-size:.93rem; line-height:1.75; }
-details.design-logic .design-body ul { padding-left:1.3rem; }
-details.design-logic .design-body li { font-size:.93rem; line-height:1.65; margin-bottom:.3rem; }
-</style>
-<style>:root { --accent-color: #c9952a; }</style>
+<link rel="icon" type="image/svg+xml" href="../assets/img/logo.svg"><style>:root { --accent-color: #c9952a; }</style>
 </head>
 <body>
 <nav class="site-nav">
@@ -2316,9 +2213,9 @@ details.design-logic .design-body li { font-size:.93rem; line-height:1.65; margi
 <section class="bg-dark on-dark ruled" id="pil-research">
 <div class="wrap">
   <h2 style="color:#c9952a">Research & Context</h2>
-  <div class="research-body" style="color:rgba(255,255,255,.85)"><p>The United States spends more per pupil on average than most OECD countries, yet produces dramatically unequal outcomes correlated strongly with race and income. A 2019 EdBuild report found that non-white school districts receive $23 billion less in funding annually than predominantly white districts, despite serving similar numbers of students.<sup><a href="#ref3" id="fn3" style="color:#c9952a">[3]</a></sup> Property-tax-based school funding is the structural driver: districts with higher property values raise more revenue at lower rates, perpetuating advantages regardless of state aid formulas.</p>
-<p>Student debt has surpassed $1.7 trillion,<sup><a href="#ref1" id="fn1" style="color:#c9952a">[1]</a></sup> and federal reserve research shows that debt burdens delay homeownership, family formation, and wealth accumulation disproportionately for Black and Latino borrowers. The for-profit college sector accounts for 11% of enrollment but 44% of federal student loan defaults, according to the Senate HELP Committee's 2012 investigation.<sup><a href="#fn4" id="ref4" style="color:#c9952a">[4]</a></sup> Predatory institutions systematically overpromise economic returns, target vulnerable populations, and leave graduates with worthless credentials and crushing debt.</p>
-<p>American students consistently trail OECD peers in science literacy and civic knowledge. Studies by the National Assessment of Educational Progress (NAEP) show that fewer than a quarter of 8th graders score proficient in civics.<sup><a href="#ref2" id="fn2" style="color:#c9952a">[2]</a></sup> The erosion of science education standards—particularly in states that have introduced non-scientific frameworks into biology and earth science curricula—has documented negative effects on workforce preparation in science, technology, engineering, and medicine.</p>
+  <div class="research-body" style="color:rgba(255,255,255,.85)"><p>The United States spends more per pupil on average than most OECD countries, yet produces dramatically unequal outcomes correlated strongly with race and income. A 2019 EdBuild report found that non-white school districts receive $23 billion less in funding annually than predominantly white districts, despite serving similar numbers of students.<sup><a href="#fn3" id="ref3" style="color:#c9952a">[3]</a></sup> Property-tax-based school funding is the structural driver: districts with higher property values raise more revenue at lower rates, perpetuating advantages regardless of state aid formulas.</p>
+<p>Student debt has surpassed $1.7 trillion,<sup><a href="#fn1" id="ref1" style="color:#c9952a">[1]</a></sup> and federal reserve research shows that debt burdens delay homeownership, family formation, and wealth accumulation disproportionately for Black and Latino borrowers. The for-profit college sector accounts for 11% of enrollment but 44% of federal student loan defaults, according to the Senate HELP Committee's 2012 investigation.<sup><a href="#fn4" id="ref4" style="color:#c9952a">[4]</a></sup> Predatory institutions systematically overpromise economic returns, target vulnerable populations, and leave graduates with worthless credentials and crushing debt.</p>
+<p>American students consistently trail OECD peers in science literacy and civic knowledge. Studies by the National Assessment of Educational Progress (NAEP) show that fewer than a quarter of 8th graders score proficient in civics.<sup><a href="#fn2" id="ref2" style="color:#c9952a">[2]</a></sup> The erosion of science education standards—particularly in states that have introduced non-scientific frameworks into biology and earth science curricula—has documented negative effects on workforce preparation in science, technology, engineering, and medicine.</p>
 <p>Research on integration shows that socioeconomically diverse schools produce better outcomes for low-income students without harming higher-income peers.<sup><a href="#fn5" id="ref5" style="color:#c9952a">[5]</a></sup> The Century Foundation and The Educational Opportunity Project at Stanford (SEDA dataset) document that school district boundaries and attendance zones remain among the most powerful drivers of educational inequality in the country, with segregation by income and race often as stark as it was in the 1970s.</p>
 <p>Early childhood interventions have among the highest documented returns of any educational investment. Longitudinal studies show that high-quality pre-K programs produce lasting gains in educational attainment, health, and earnings while reducing incarceration rates — with the largest returns for children from low-income families.<sup><a href="#fn6" id="ref6" style="color:#c9952a">[6]</a></sup> Despite this evidence, the United States invests far less in early childhood care and education than peer nations, and access to quality childcare is distributed primarily by family income.</p></div>
 </div>
@@ -2345,7 +2242,7 @@ details.design-logic .design-body li { font-size:.93rem; line-height:1.65; margi
 <a href="healthcare.html" class="related-card"><strong>Healthcare</strong><span>— School-based mental health support and student wellbeing are deeply connected to health system coverage gaps.</span></a>
 <a href="equal-justice-and-policing.html" class="related-card"><strong>Equal Justice & Policing</strong><span>— School discipline disparities and the school-to-prison pipeline require coordinated reform across education and justic</span></a>
 <a href="consumer-rights.html" class="related-card"><strong>Consumer Rights</strong><span>— Predatory student lending and for-profit education fraud are consumer protection failures requiring coordinated enforc</span></a>
-<a href="anti-corruption-concentrated-power-anti-corruption-overview-md.html" class="related-card"><strong>Anti-Corruption & Concentrated Power</strong><span>— Industry capture of education policy and accreditation systems undermines both quality and accountability.</span></a>
+<a href="anti-corruption.html" class="related-card"><strong>Anti-Corruption & Concentrated Power</strong><span>— Industry capture of education policy and accreditation systems undermines both quality and accountability.</span></a>
 </div></div>
 <div class="wrap" style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap">
   <a href="../foundations.html#freedom-to-thrive" class="btn-primary" style="background:#c9952a">← Foundation V: Freedom to Thrive</a>
@@ -2365,26 +2262,5 @@ details.design-logic .design-body li { font-size:.93rem; line-height:1.65; margi
   </div>
 </footer>
 <script src="../assets/js/data.js"></script>
-<script src="../assets/js/app.js"></script>
-<script>
-(function(){
-  var nav = document.getElementById('pil-snav');
-  if(!nav) return;
-  var links = nav.querySelectorAll('a[href^="#"]');
-  var sections = Array.from(links).map(function(a){
-    return document.querySelector(a.getAttribute('href'));
-  }).filter(Boolean);
-  function onScroll(){
-    var y = window.scrollY + 120;
-    var active = sections[0];
-    sections.forEach(function(s){ if(s.offsetTop <= y) active = s; });
-    links.forEach(function(a){
-      a.classList.toggle('active', a.getAttribute('href') === '#'+active.id);
-    });
-  }
-  window.addEventListener('scroll', onScroll, {passive:true});
-  onScroll();
-})();
-</script>
-</body>
+<script src="../assets/js/app.js"></script></body>
 </html>

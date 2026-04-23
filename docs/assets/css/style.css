@@ -123,6 +123,29 @@ section { padding: 4.5rem 0; }
 }
 
 /* ── NAV ──────────────────────────────────────────────── */
+/* ── PRE-1.0 WIP BANNER ───────────────────────────────── */
+.wip-banner {
+  background: var(--gold);
+  color: var(--navy);
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  padding: .55rem 1.5rem;
+  line-height: 1.4;
+  position: relative;
+  z-index: 201;
+}
+.wip-banner a {
+  color: var(--navy);
+  text-decoration: underline;
+  opacity: .8;
+}
+.wip-banner a:hover { opacity: 1; }
+.wip-banner strong { font-weight: 700; }
+
 .site-nav {
   position: sticky; top: 0; z-index: 200;
   background: var(--navy);

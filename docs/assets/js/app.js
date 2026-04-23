@@ -28,7 +28,9 @@
     const constitutionHref = base + 'constitution.html';
     const classificationHref = base + 'classification.html';
     const getInvolvedHref = base + 'get-involved.html';
+    const roadmapHref    = base + 'roadmap.html';
     const isAiPage = pageName === 'about-ai';
+    const isRoadmapPage = pageName === 'roadmap';
     const isMissionPage = pageName === 'mission';
     const isConstitutionPage = pageName === 'constitution';
     const isAboutUsPage = pageName === 'about-us';
@@ -65,6 +67,12 @@
       navList.appendChild(li);
     }
 
+    if (navList && !navList.querySelector('a[href*="roadmap"]')) {
+      const li = document.createElement('li');
+      li.innerHTML = `<a href="${roadmapHref}"${isRoadmapPage ? ' class="active"' : ''}>Roadmap</a>`;
+      navList.appendChild(li);
+    }
+
     if (navList && !navList.querySelector('a[href*="about-ai"]')) {
       const li = document.createElement('li');
       li.innerHTML = `<a href="${aiHref}"${isAiPage ? ' class="active"' : ''}>About AI</a>`;
@@ -96,6 +104,11 @@
     if (footerLinks && !footerLinks.querySelector('a[href*="get-involved"]')) {
       const fli = document.createElement('li');
       fli.innerHTML = `<a href="${getInvolvedHref}">Get Involved</a>`;
+      footerLinks.appendChild(fli);
+    }
+    if (footerLinks && !footerLinks.querySelector('a[href*="roadmap"]')) {
+      const fli = document.createElement('li');
+      fli.innerHTML = `<a href="${roadmapHref}">Roadmap</a>`;
       footerLinks.appendChild(fli);
     }
     if (footerLinks && !footerLinks.querySelector('a[href*="about-ai"]')) {
@@ -231,4 +244,46 @@
     });
     document.head.insertAdjacentHTML('beforeend', '<style>.visible{opacity:1!important;transform:none!important}</style>');
   }
+
+  /* ── WIP / PRE-1.0 BANNER ───────────────────────────── */
+  (function () {
+    if (document.getElementById('wip-banner')) return;
+    const nav = document.querySelector('.site-nav');
+    if (!nav) return;
+    const _base = /\/(pillars|compare)\//.test(location.pathname) ? '../' : '';
+    const banner = document.createElement('div');
+    banner.id = 'wip-banner';
+    banner.className = 'wip-banner';
+    banner.innerHTML =
+      '<strong>Pre-1.0 — Work in Progress</strong> &nbsp;·&nbsp; ' +
+      'This platform is a living document, intentionally updated as policy develops. ' +
+      'We have not yet reached our 1.0 release — language, structure, and positions will evolve.' +
+      ' &nbsp;<a href="' + _base + 'roadmap.html">View Roadmap →</a>';
+    nav.insertAdjacentElement('afterend', banner);
+  })();
+
+  /* ── DYNAMIC COUNTS ─────────────────────────────────── */
+  // Fills [data-dynamic] elements from live ARP data and DOM.
+  // Usage: <span data-dynamic="pillar-count">23</span>  ← fallback shown if JS disabled
+  (function () {
+    if (!window.ARP) return;
+    const pillarCount     = ARP.pillars.length;
+    const foundationCount = ARP.foundations.length;
+    const ruleCount       = document.querySelectorAll('.rule-card').length;
+    const families        = new Set();
+    document.querySelectorAll('.rule-card[id]').forEach(card => {
+      const m = card.id.match(/^([A-Z]+-[A-Z]+)/);
+      if (m) families.add(m[1]);
+    });
+    const familyCount = families.size;
+    document.querySelectorAll('[data-dynamic]').forEach(el => {
+      switch (el.dataset.dynamic) {
+        case 'pillar-count':     el.textContent = pillarCount;                   break;
+        case 'foundation-count': el.textContent = foundationCount;               break;
+        case 'rule-count':       if (ruleCount)   el.textContent = ruleCount;    break;
+        case 'family-count':     if (familyCount) el.textContent = familyCount;  break;
+      }
+    });
+  })();
+
 })();

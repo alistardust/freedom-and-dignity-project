@@ -4,56 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Green Party vs. Freedom and Dignity — Freedom and Dignity Project</title>
-  <link rel="stylesheet" href="../assets/css/style.css">
-  <style>
-    .coverage-grid { border: 1px solid var(--rule); margin: 1.5rem 0; }
-    .cov-row { display: grid; grid-template-columns: 220px 160px 1fr; gap: 0; border-bottom: 1px solid var(--rule); }
-    .cov-row:last-child { border-bottom: none; }
-    .cov-pillar { font-family: 'Oswald', sans-serif; font-size: .85rem; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; padding: .8rem 1rem; background: rgba(255,255,255,.04); border-right: 1px solid var(--rule); color: var(--navy); }
-    .cov-level { font-family: 'Oswald', sans-serif; font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: .8rem .75rem; border-right: 1px solid var(--rule); display: flex; align-items: center; }
-    .cov-none { background: rgba(191,10,48,.08); color: #bf0a30; }
-    .cov-partial { background: rgba(201,149,42,.10); color: #8b6520; }
-    .cov-diff { background: rgba(26,79,114,.08); color: #1a4f72; }
-    .cov-gap { font-size: .85rem; line-height: 1.55; padding: .8rem 1rem; color: var(--ink); }
-    .on-dark .cov-pillar { color: rgba(255,255,255,.8); background: rgba(255,255,255,.03); }
-    .on-dark .cov-gap { color: rgba(255,255,255,.65); }
-    @media (max-width: 640px) { .cov-row { grid-template-columns: 1fr; } .cov-pillar, .cov-level, .cov-gap { border-right: none; border-bottom: 1px solid rgba(255,255,255,.08); } }
-    .cmp-snav { position: sticky; top: 63px; z-index: 150; background: var(--navy); border-bottom: 1px solid rgba(255,255,255,.12); overflow-x: auto; scrollbar-width: none; }
-    .cmp-snav::-webkit-scrollbar { display: none; }
-    .cmp-snav-inner { display: flex; min-width: max-content; }
-    .cmp-snav a { font-family: "Oswald",sans-serif; font-size: .68rem; font-weight: 600; text-transform: uppercase; letter-spacing: .12em; padding: .55rem 1rem; color: rgba(255,255,255,.55); white-space: nowrap; text-decoration: none; border-bottom: 2px solid transparent; transition: color .15s, border-color .15s; }
-    .cmp-snav a:hover { color: #fff; }
-    .cmp-snav a.active { color: var(--gold); border-bottom-color: var(--gold); }
-    @media (max-width: 540px) { .cmp-snav a { font-size: .62rem; padding: .5rem .7rem; } }
-    .cov-details > summary { cursor: pointer; font-family: 'Oswald', sans-serif; font-size: .78rem; font-weight: 600; text-transform: uppercase; letter-spacing: .1em; color: rgba(255,255,255,.5); padding: .6rem 0; margin-bottom: .5rem; list-style: none; }
-    .cov-details > summary::-webkit-details-marker { display: none; }
-    .cov-details > summary::before { content: "▶ "; font-size: .65rem; }
-    .cov-details[open] > summary::before { content: "▼ "; }
-    .cov-details > summary:hover { color: rgba(255,255,255,.8); }
-
-    .wrong-card { background:rgba(255,255,255,.07); border-radius:6px; padding:1.2rem 1.4rem; border-left:4px solid #bf0a30; }
-    .wrong-card h3 { font-size:.95rem; color:#e8c060; text-transform:uppercase; letter-spacing:.05em; margin:0 0 .5rem; }
-    .cmp-dl { margin: 1.5rem 0; }
-    .cmp-dl-row { display: grid; grid-template-columns: 220px 1fr; gap: 0 1.5rem; padding: .75rem 0; border-bottom: 1px solid var(--rule); align-items: start; }
-    .cmp-dl-row:last-child { border-bottom: none; }
-    .cmp-dl dt { font-family: 'Oswald', sans-serif; font-size: .85rem; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; color: var(--navy); padding-top: .05rem; }
-    .cmp-dl dd { font-size: .9rem; line-height: 1.6; color: var(--ink); margin: 0; }
-    .on-sky .cmp-dl dt { color: var(--navy); }
-    .on-dark .cmp-dl dt { color: var(--gold-light, var(--gold)); }
-    .on-dark .cmp-dl dd { color: rgba(255,255,255,.75); }
-    @media (max-width: 640px) { .cmp-dl-row { grid-template-columns: 1fr; gap: .25rem; } }
-    .focus-tags { display: flex; flex-wrap: wrap; gap: .5rem; margin: 1.25rem 0 0; list-style: none; padding: 0; }
-    .focus-tags li { font-family: 'Oswald', sans-serif; font-size: .72rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; background: var(--navy); color: var(--gold); padding: .3rem .8rem; border: 1px solid rgba(201,149,42,.3); }
-    .cmp-scorecard { padding: 1.25rem 0; border-bottom: 1px solid rgba(255,255,255,.1); }
-    .cmp-scorecard .wrap { display: flex; gap: 0; }
-    .cmp-score { flex: 1; text-align: center; padding: .75rem 1rem; border-right: 1px solid rgba(255,255,255,.1); }
-    .cmp-score:last-child { border-right: none; }
-    .cmp-score-n { font-family: 'Oswald', sans-serif; font-size: 2.2rem; font-weight: 700; color: var(--gold); line-height: 1; }
-    .cmp-score-label { font-family: 'Oswald', sans-serif; font-size: .62rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: rgba(255,255,255,.5); margin-top: .3rem; }
-    @media (max-width: 640px) { .cmp-scorecard .wrap { flex-wrap: wrap; } .cmp-score { flex: 1 1 50%; border-bottom: 1px solid rgba(255,255,255,.1); } }
-    @media (min-width: 1024px) { section { padding: 2.5rem 0; } }
-  </style>
-</head>
+  <link rel="stylesheet" href="../assets/css/style.css"></head>
 <body>
 
 <nav class="site-nav">
@@ -359,7 +310,7 @@
       <li><a href="../pillars/index.html">Pillars</a></li>
       <li><a href="index.html">Perspectives</a></li>
     </ul>
-    <span class="footer-note">A framework for democratic renewal. · <a href="../about-ai.html" style="color:inherit;opacity:.7">On the Use of AI</a></span>
+    <span class="footer-note">A Third Bill of Rights for the 21st Century. · <a href="../about-ai.html" style="color:inherit;opacity:.7">On the Use of AI</a></span>
   </div>
 </footer>
 
