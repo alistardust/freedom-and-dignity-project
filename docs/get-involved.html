@@ -239,6 +239,87 @@
   position: absolute; left: 0;
 }
 
+/* ── WHAT IS GIT CALLOUT ───────────────────────────────── */
+.what-is-git {
+  background: var(--navy);
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0 2rem;
+  border-left: 4px solid var(--gold);
+}
+.what-is-git-title {
+  font-family: "Oswald", sans-serif;
+  font-size: .82rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .1em;
+  color: var(--gold); margin-bottom: .6rem;
+}
+.what-is-git p {
+  font-family: "Libre Franklin", sans-serif;
+  font-size: .92rem; line-height: 1.72;
+  color: rgba(255,255,255,.78); margin: 0 0 .7rem;
+}
+.what-is-git p:last-child { margin-bottom: 0; }
+
+/* ── LOCAL PREREQS ─────────────────────────────────────── */
+.local-prereqs {
+  display: flex; flex-direction: column; gap: .85rem;
+  margin: 1rem 0 1.75rem;
+}
+.prereq-item {
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-left: 4px solid var(--navy);
+  padding: .9rem 1.1rem;
+}
+.prereq-name {
+  font-family: "Oswald", sans-serif;
+  font-size: .85rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .07em;
+  color: var(--navy); margin-bottom: .3rem;
+}
+.prereq-body {
+  font-family: "Libre Franklin", sans-serif;
+  font-size: .9rem; line-height: 1.65; color: var(--ink);
+}
+.prereq-body a, .gi-body a { color: var(--red); }
+code {
+  background: rgba(0,0,0,.07); border: 1px solid var(--rule);
+  padding: .1em .4em; border-radius: 3px;
+  font-size: .87em; font-family: "Courier New", monospace;
+}
+.on-sky code, .on-dark code {
+  background: rgba(255,255,255,.15); border-color: rgba(255,255,255,.2); color: #fff;
+}
+
+/* ── AI POLICY CALLOUT ─────────────────────────────────── */
+.ai-policy-callout {
+  background: #fffaec;
+  border: 1px solid #e5ce7a;
+  border-left: 4px solid var(--gold);
+  padding: 1.25rem 1.5rem;
+  margin: 2rem 0 0;
+}
+.ai-policy-title {
+  font-family: "Oswald", sans-serif;
+  font-size: .82rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .1em;
+  color: var(--navy); margin-bottom: .6rem;
+}
+.ai-policy-callout p {
+  font-family: "Libre Franklin", sans-serif;
+  font-size: .9rem; line-height: 1.72; color: var(--ink); margin: 0 0 .7rem;
+}
+.ai-policy-callout p:last-child { margin-bottom: 0; }
+.ai-policy-callout strong { color: var(--navy); }
+
+/* ── SECTION SUBHEADINGS ───────────────────────────────── */
+.gi-body h3 {
+  font-family: "Oswald", sans-serif;
+  font-size: 1rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .07em;
+  color: var(--navy); margin: 2rem 0 .6rem;
+}
+.on-sky .gi-body h3 { color: #fff; }
+
 /* ── CTA CLOSE ─────────────────────────────────────────── */
 .gi-cta {
   background: linear-gradient(175deg, #1a4060 0%, var(--navy) 45%, #0a1a2e 100%);
@@ -546,6 +627,12 @@
 
   <p>The project lives on GitHub. You do not need to be a developer to contribute — opening an Issue (a bug report, a question, a piece of feedback) requires no coding at all. But if you want to contribute content or code directly, here is how the process works.</p>
 
+  <div class="what-is-git">
+    <div class="what-is-git-title">What is Git, and why do we use it?</div>
+    <p>Git is a tool that tracks changes to files over time. Think of it like "Track Changes" in a word processor — but for an entire project. Every change is recorded, labeled with a message explaining what changed and why, and can be reversed if something goes wrong. It also lets multiple people work on the same project without overwriting each other's work.</p>
+    <p>GitHub is a website that hosts projects that use Git. It is where this project lives publicly. You do not need to install Git or know anything technical to read the project, open an issue, or leave feedback. You only need it if you want to download the project to your computer and make changes directly.</p>
+  </div>
+
   <div class="git-shortcut">
     <p><strong>The easiest contribution path — no coding required:</strong> Go to the <a href="https://github.com/alistardust/freedom-and-dignity-project/issues" target="_blank" rel="noopener">Issues page</a> and open a new issue. Write what you found, what you think, or what you want to flag. That's it. That is a real contribution and it is read.</p>
   </div>
@@ -579,6 +666,13 @@
       <div class="git-step-content">
         <div class="git-step-label">Open a pull request</div>
         <div class="git-step-body">A pull request is a formal proposal to merge your changes into the main project. GitHub walks you through this once your changes are committed to your fork. Include a clear description of what you changed and why. Policy changes should cite the source material — either from the project's chat logs or from external primary sources.</div>
+      </div>
+    </div>
+    <div class="git-step">
+      <span class="git-step-num">5</span>
+      <div class="git-step-content">
+        <div class="git-step-label">What happens after you submit</div>
+        <div class="git-step-body">A project maintainer will review your pull request — reading your changes, checking sources, and possibly asking questions or suggesting edits. This is normal and not a rejection; it is the process working as intended. <strong>All changes go through human review before they are accepted into the project.</strong> If your contribution was drafted with AI assistance, note that in the PR description so the reviewer knows to look closely at sources. Once approved, your changes are merged and go live on the site.</div>
       </div>
     </div>
   </div>
@@ -627,10 +721,177 @@
     </div>
   </div>
 
+  <div class="ai-policy-callout">
+    <div class="ai-policy-title">On AI-Generated Contributions</div>
+    <p>Using AI tools — like GitHub Copilot, ChatGPT, or similar assistants — to help draft or research contributions is <strong>allowed</strong>. It is also <strong>not required</strong>. Many of the most valuable contributions to this project need no AI tooling at all: policy review, writing, organizing, legal work, and testing can all be done entirely by you.</p>
+    <p>The rule is simple: <strong>all AI-generated content must be reviewed by a human before it is submitted.</strong> AI tools can and do produce plausible-sounding but incorrect information — fabricated citations, wrong dates, misattributed quotes, subtly wrong statistics. Every factual claim in a pull request must be independently verified against a real, accessible source. "The AI said so" is not a citation.</p>
+    <p>If you used AI assistance, note it in the PR description. This is not a mark against you — it helps reviewers know where to focus their attention.</p>
+  </div>
+
 </div>
 </section>
 
-<!-- SECTION 6 — CTA CLOSE (bg-dark) -->
+<!-- LOCAL ENVIRONMENT SETUP -->
+<section class="bg-cream">
+<div class="gi-body">
+
+  <h2>Setting Up a Local Environment</h2>
+
+  <p>If you want to run the site on your own computer — to preview your edits in a browser, run the automated tests, or work on the code — this section walks you through that setup.</p>
+
+  <p><strong>If this section feels technical and intimidating, skip it entirely.</strong> You can contribute policy feedback, write research, test the site from GitHub Pages, or open issues without any of this. This section exists for people who want to work on the code or run tests locally.</p>
+
+  <h3>What you will need</h3>
+
+  <div class="local-prereqs">
+    <div class="prereq-item">
+      <div class="prereq-name">Git</div>
+      <div class="prereq-body">
+        The version control tool — the thing that tracks changes.<br>
+        <strong>Mac:</strong> Open your terminal and run <code>xcode-select --install</code>. Git is included.<br>
+        <strong>Windows:</strong> Download and install <a href="https://gitforwindows.org/" target="_blank" rel="noopener">Git for Windows</a>.<br>
+        <strong>Linux:</strong> Run <code>sudo apt install git</code> (Debian/Ubuntu) or <code>sudo dnf install git</code> (Fedora).<br>
+        <strong>No terminal?</strong> <a href="https://desktop.github.com/" target="_blank" rel="noopener">GitHub Desktop</a> is a free visual app that handles Git without any command line.
+      </div>
+    </div>
+    <div class="prereq-item">
+      <div class="prereq-name">Node.js (version 18 or newer)</div>
+      <div class="prereq-body">
+        Node.js is what runs the test tools. <a href="https://nodejs.org/en/download" target="_blank" rel="noopener">Download it at nodejs.org</a> — choose the version labeled <strong>LTS</strong> (long-term support). The installer also installs <code>npm</code>, which you will use to install project dependencies. You only need to do this once.
+      </div>
+    </div>
+    <div class="prereq-item">
+      <div class="prereq-name">A code editor (recommended, not required)</div>
+      <div class="prereq-body">
+        <a href="https://code.visualstudio.com/" target="_blank" rel="noopener">Visual Studio Code</a> is free, works on all platforms, and is what most contributors use. For simple HTML edits — fixing a sentence, adding a citation — any text editor will do, including Notepad.
+      </div>
+    </div>
+  </div>
+
+  <h3>Step by step: getting the project running locally</h3>
+
+  <div class="git-steps">
+    <div class="git-step">
+      <span class="git-step-num">1</span>
+      <div class="git-step-content">
+        <div class="git-step-label">Fork and clone the repository</div>
+        <div class="git-step-body">First, fork the project on GitHub (see the Contributing section above). Then download your fork. In a terminal:<br><br>
+          <code>git clone https://github.com/YOUR-USERNAME/freedom-and-dignity-project.git</code><br><br>
+          Replace <code>YOUR-USERNAME</code> with your GitHub username. This creates a folder on your computer with all the project files in it.
+        </div>
+      </div>
+    </div>
+    <div class="git-step">
+      <span class="git-step-num">2</span>
+      <div class="git-step-content">
+        <div class="git-step-label">Install dependencies</div>
+        <div class="git-step-body">Navigate into the project folder: <code>cd freedom-and-dignity-project</code><br><br>
+          Then install the project's tools: <code>npm install</code><br><br>
+          This downloads Vitest (unit tests) and Playwright (browser tests). It only needs to be done once.
+        </div>
+      </div>
+    </div>
+    <div class="git-step">
+      <span class="git-step-num">3</span>
+      <div class="git-step-content">
+        <div class="git-step-label">Preview the site in your browser</div>
+        <div class="git-step-body">Start a local web server: <code>npm run serve</code><br><br>
+          Then open <strong>http://localhost:5500</strong> in your browser. You will see the project running on your machine. Refresh the page after saving any HTML or CSS file to see your changes. Press <code>Ctrl+C</code> in the terminal to stop the server.
+        </div>
+      </div>
+    </div>
+    <div class="git-step">
+      <span class="git-step-num">4</span>
+      <div class="git-step-content">
+        <div class="git-step-label">Run the unit tests</div>
+        <div class="git-step-body">Before submitting any pull request, run: <code>npm run test:unit</code><br><br>
+          This runs 40 fast automated checks verifying the data structures are consistent. All tests should pass. If any fail, read the error message, find what changed, and fix it before submitting.
+        </div>
+      </div>
+    </div>
+    <div class="git-step">
+      <span class="git-step-num">5</span>
+      <div class="git-step-content">
+        <div class="git-step-label">Run the end-to-end tests (after HTML, CSS, or JS changes)</div>
+        <div class="git-step-body">If you changed any HTML, CSS, or JavaScript, also run: <code>npm run test:e2e</code><br><br>
+          This launches a headless Firefox browser and walks through the site automatically, checking that pages load correctly, links work, and key elements are present. If a test fails, the message will point you to the exact page and element causing the problem.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p>If you get stuck at any step, open a GitHub Issue describing what you tried and what happened. Getting setup friction down is important to us, and your report helps the next person.</p>
+
+</div>
+</section>
+
+<!-- USING AI TOOLS -->
+<section class="bg-sky on-sky">
+<div class="gi-body">
+
+  <h2>Using AI Tools — Optional</h2>
+
+  <p>AI tools like <a href="https://github.com/features/copilot" target="_blank" rel="noopener">GitHub Copilot</a> can be useful for navigating a large codebase, drafting policy language, or researching policy areas. <strong>They are entirely optional.</strong> Policy review, writing, organizing, legal work, and testing can all be done without any AI tools. Do not feel pressure to use them.</p>
+
+  <ul class="rule-example-list" style="margin-bottom: 2rem;">
+    <li>
+      <span class="rule-id" style="min-width: 9.5rem;">Human review required</span>
+      <span class="rule-text">All AI-generated content must be reviewed by a human before it is submitted. AI output is a draft — a starting point — not a finished contribution.</span>
+    </li>
+    <li>
+      <span class="rule-id" style="min-width: 9.5rem;">Verify every source</span>
+      <span class="rule-text">AI tools frequently generate plausible-looking citations that do not exist, or that exist but do not say what is claimed. Open every URL. Read the source. Confirm it supports the claim before including it.</span>
+    </li>
+    <li>
+      <span class="rule-id" style="min-width: 9.5rem;">Disclose AI use</span>
+      <span class="rule-text">If your pull request was drafted with significant AI assistance, note it in the PR description. It helps reviewers know where to focus their scrutiny. It is not a penalty.</span>
+    </li>
+    <li>
+      <span class="rule-id" style="min-width: 9.5rem;">AI ≠ authority</span>
+      <span class="rule-text">AI tools can misstate platform positions, conflate policy concepts, and produce confident-sounding errors. The canonical positions for this project live in the pillar pages and source chat logs — not in what the AI believes them to be.</span>
+    </li>
+  </ul>
+
+  <h2>Setting Up GitHub Copilot</h2>
+
+  <p>If you want to use Copilot when working on this project, here is how to do it usefully. This is optional.</p>
+
+  <div class="git-steps" style="margin-bottom: 2rem;">
+    <div class="git-step" style="border-top-color: rgba(255,255,255,.3);">
+      <span class="git-step-num">1</span>
+      <div class="git-step-content">
+        <div class="git-step-label">Get access to Copilot</div>
+        <div class="git-step-body">GitHub Copilot is available in VS Code, JetBrains IDEs, Neovim, and the browser. It requires a GitHub account and has a free tier. <a href="https://docs.github.com/en/copilot/getting-started-with-github-copilot" target="_blank" rel="noopener">GitHub's full setup guide is here.</a> The Copilot Chat extension is especially useful for asking questions about an unfamiliar codebase.</div>
+      </div>
+    </div>
+    <div class="git-step" style="border-top-color: rgba(255,255,255,.3);">
+      <span class="git-step-num">2</span>
+      <div class="git-step-content">
+        <div class="git-step-label">This project's instructions are already set up</div>
+        <div class="git-step-body">The repository includes <code>.github/copilot-instructions.md</code>, which gives Copilot context about the project's conventions, values, and rules. When you clone the repo and open it in VS Code, Copilot uses these instructions automatically. No configuration needed.</div>
+      </div>
+    </div>
+    <div class="git-step" style="border-top-color: rgba(255,255,255,.3);">
+      <span class="git-step-num">3</span>
+      <div class="git-step-content">
+        <div class="git-step-label">Writing good instructions for your own projects</div>
+        <div class="git-step-body">For your own repositories, create <code>.github/copilot-instructions.md</code>. Write it in plain language: what the project is, conventions to follow, what to avoid. The more specific you are, the more useful Copilot becomes. <a href="https://docs.github.com/en/copilot/customizing-copilot/adding-repository-custom-instructions-for-github-copilot" target="_blank" rel="noopener">GitHub's documentation on custom instructions explains the full format.</a></div>
+      </div>
+    </div>
+    <div class="git-step" style="border-top-color: rgba(255,255,255,.3);">
+      <span class="git-step-num">4</span>
+      <div class="git-step-content">
+        <div class="git-step-label">Copilot as an autonomous agent</div>
+        <div class="git-step-body">Copilot can be assigned tasks in GitHub Issues and pull requests, where it researches, writes, and commits code on its own. It works best on well-defined, bounded tasks (writing a test, fixing a specific bug, expanding a section). For judgment-heavy work — deciding on policy positions, evaluating sources, structural decisions — human judgment is required. <a href="https://docs.github.com/en/copilot/using-github-copilot/using-copilot-coding-agent" target="_blank" rel="noopener">The Copilot agent documentation explains setup and expectations.</a> The same human-review rule applies to everything it produces.</div>
+      </div>
+    </div>
+  </div>
+
+  <p style="opacity: .72; font-size: .9rem;">Practical tip: AI is most useful on this project for navigating the HTML structure, understanding ID schemas, and drafting first versions of policy language. It is least reliable for citation research — always verify sources yourself, regardless of how confident the AI sounds.</p>
+
+</div>
+</section>
+
 <div class="gi-cta">
   <div class="gi-cta-eyebrow">This only works if you're in it</div>
   <div class="gi-cta-headline">The Work Is <span>Now</span></div>
