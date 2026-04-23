@@ -27,13 +27,11 @@
     const missionHref = base + 'mission.html';
     const constitutionHref = base + 'constitution.html';
     const classificationHref = base + 'classification.html';
-    const adversarialHref = base + 'adversarial-review.html';
     const isAiPage = pageName === 'about-ai';
     const isMissionPage = pageName === 'mission';
     const isConstitutionPage = pageName === 'constitution';
     const isAboutUsPage = pageName === 'about-us';
     const isClassificationPage = pageName === 'classification';
-    const isAdversarialPage = pageName === 'adversarial-review';
 
     if (navList && !navList.querySelector('a[href*="mission"]')) {
       const li = document.createElement('li');
@@ -80,11 +78,6 @@
     if (footerLinks && !footerLinks.querySelector('a[href*="classification"]')) {
       const fli = document.createElement('li');
       fli.innerHTML = `<a href="${classificationHref}">Classification</a>`;
-      footerLinks.appendChild(fli);
-    }
-    if (footerLinks && !footerLinks.querySelector('a[href*="adversarial-review"]')) {
-      const fli = document.createElement('li');
-      fli.innerHTML = `<a href="${adversarialHref}">Adversarial Review</a>`;
       footerLinks.appendChild(fli);
     }
     if (footerLinks && !footerLinks.querySelector('a[href*="about-us"]')) {
