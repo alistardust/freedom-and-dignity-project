@@ -795,9 +795,9 @@ test.describe('Letter from the Founder page', () => {
     expect(body).toMatch(/Dalton/i);
   });
 
-  test('all 17 footnote anchors are present', async ({ page }) => {
-    // fn1 through fn17 — in-text citation anchors
-    for (let i = 1; i <= 17; i++) {
+  test('all 18 footnote anchors are present', async ({ page }) => {
+    // fn1 through fn18 — in-text citation anchors
+    for (let i = 1; i <= 18; i++) {
       await expect(page.locator(`#ref${i}`)).toBeAttached();
     }
   });
