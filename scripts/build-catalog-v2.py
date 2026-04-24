@@ -26,7 +26,7 @@ from bs4 import BeautifulSoup
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 HTML_DIR = REPO_ROOT / "docs" / "pillars"
-SOURCE_DB = REPO_ROOT / "data" / "policy_catalog.sqlite"
+SOURCE_DB = REPO_ROOT / "data" / "policy_catalog_v2.sqlite"
 
 # Old 3-char domain → new 4-char domain code
 DOMAIN_MAP: dict[str, str] = {
@@ -258,7 +258,7 @@ def parse_html_cards(
                 continue
             old_id = code_el.get_text(strip=True)
 
-            if not re.match(r"^[A-Z]{3}-[A-Z0-9]+-[0-9]{3}[A-Z]?$", old_id):
+            if not re.match(r"^[A-Z]{3,4}-[A-Z0-9]+-[0-9]{3,4}[A-Z]?$", old_id):
                 print(f"[WARN] Unparseable rule-id '{old_id}' in {html_file.name}", file=sys.stderr)
                 continue
 
@@ -318,32 +318,33 @@ def _get_section_name(card_tag: BeautifulSoup) -> str:
 
 def parse_db_items(source_db: Path) -> dict[str, PositionRecord]:
     """
-    Read policy_items from the v1 SQLite database.
+    Read positions from the v2 SQLite database.
 
-    Returns a dict keyed by rule_id.
+    Returns a dict keyed by position id (v2 format: XXXX-XXXX-0000).
     """
     records: dict[str, PositionRecord] = {}
     con = sqlite3.connect(source_db)
     con.row_factory = sqlite3.Row
 
-    for row in con.execute("SELECT rule_id, canonical_statement, status FROM policy_items ORDER BY rule_id"):
-        old_id: str = row["rule_id"]
-        statement: str = row["canonical_statement"]
-        status: str = row["status"]
-
-        # Derive short_title: first sentence up to 120 chars
-        short = statement.split(".")[0].strip()[:120]
-
-        records[old_id] = PositionRecord(
-            old_id=old_id,
-            short_title=short,
-            full_statement=statement,
-            source="db",
-            html_files=[],
-            section_names={},
-            display_orders={},
-            original_status=status,
-        )
+    # The v2 DB may not exist yet on first run — fall back gracefully.
+    try:
+        for row in con.execute(
+            "SELECT id, short_title, full_statement, status FROM positions ORDER BY id"
+        ):
+            pos_id: str = row["id"]
+            records[pos_id] = PositionRecord(
+                old_id=pos_id,
+                short_title=row["short_title"] or "",
+                full_statement=row["full_statement"] or "",
+                source="db",
+                html_files=[],
+                section_names={},
+                display_orders={},
+                original_status=row["status"],
+            )
+    except sqlite3.OperationalError:
+        # First run — no v2 DB exists yet; source entirely from HTML
+        pass
 
     con.close()
     return records
@@ -454,6 +455,13 @@ def assign_new_ids(
             continue
 
         old_dom, old_sub, old_seq_raw = parts
+
+        # Pass v2-format IDs through unchanged — they are already in the target format
+        # and do not need domain/subdomain mapping. Sequence is preserved as-is.
+        if re.match(r"^[A-Z]{4}$", old_dom) and re.match(r"^[A-Z]{4}$", old_sub) and re.match(r"^\d{4}$", old_seq_raw):
+            old_to_new[old_id] = old_id
+            sub_origins[(old_dom, old_sub)].add(old_sub)
+            continue
 
         # Strip trailing letter from sequence (e.g. "007A" → "007" + "A")
         seq_match = re.match(r"^(\d{3})([A-Z]?)$", old_seq_raw)
