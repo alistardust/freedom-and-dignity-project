@@ -25,7 +25,7 @@ except ImportError:
     raise SystemExit("BeautifulSoup4 is required: pip install beautifulsoup4")
 
 REPO_ROOT = Path(__file__).parent.parent
-DB_PATH = REPO_ROOT / "data" / "policy_catalog.sqlite"
+DB_PATH = REPO_ROOT / "data" / "policy_catalog_v2.sqlite"
 PILLARS_HTML_DIR = REPO_ROOT / "docs" / "pillars"
 PILLARS_MD_DIR = REPO_ROOT / "pillars"
 REPORT_PATH = REPO_ROOT / "data" / "reconciliation-report.md"
@@ -64,8 +64,8 @@ def extract_html_cards() -> list[dict]:
             # Canonical ID: code element is authoritative; div id is a fragment anchor
             canonical_id = rule_id_code or div_id
 
-            # ID validity check: must match SCOPE-FAM-NNN pattern
-            valid_id_pattern = re.compile(r"^[A-Z]{2,5}-[A-Z]{2,5}-\d{3}$")
+            # ID validity check: v2 format XXXX-XXXX-0000
+            valid_id_pattern = re.compile(r"^[A-Z]{4}-[A-Z]{4}-\d{4}$")
             id_is_valid = bool(canonical_id and valid_id_pattern.match(canonical_id))
 
             cards.append(
@@ -93,12 +93,20 @@ def extract_html_cards() -> list[dict]:
 
 
 def extract_db_items() -> dict[str, dict]:
-    """Extract all policy_items from DB, keyed by rule_id."""
+    """Extract all positions from v2 DB, keyed by id."""
     conn = sqlite3.connect(DB_PATH)
     conn.row_factory = sqlite3.Row
     items = {
-        row["rule_id"]: dict(row)
-        for row in conn.execute("SELECT * FROM policy_items ORDER BY rule_id")
+        row["id"]: {
+            "rule_id": row["id"],
+            "canonical_statement": row["short_title"],
+            "full_statement": row["full_statement"],
+            "status": row["status"],
+            "domain": row["domain"],
+        }
+        for row in conn.execute(
+            "SELECT id, short_title, full_statement, status, domain FROM positions ORDER BY id"
+        )
     }
     conn.close()
     return items
@@ -109,7 +117,7 @@ def extract_db_items() -> dict[str, dict]:
 
 def extract_markdown_ids() -> dict[str, list[str]]:
     """Find policy IDs mentioned in pillars/ markdown files."""
-    id_pattern = re.compile(r"\b([A-Z]{2,5}-[A-Z]{2,5}-\d{3})\b")
+    id_pattern = re.compile(r"\b([A-Z]{4}-[A-Z]{4}-\d{4})\b")
     md_ids: dict[str, list[str]] = {}
 
     for md_file in sorted(PILLARS_MD_DIR.rglob("*.md")):
