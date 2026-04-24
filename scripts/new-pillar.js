@@ -126,7 +126,7 @@ const html = `<!DOCTYPE html>
       <div class="design-body">
         <p><!-- TODO: design logic explanation --></p>
         <h3>Family Structure</h3>
-        <p>The <span data-dynamic="family-count">0</span> family codes group rules into logical reform areas:</p>
+        <p>The <span data-dynamic="family-count">0</span> family codes group positions into logical reform areas:</p>
         <ul>
           <!-- TODO: list family codes and their purposes -->
         </ul>
@@ -187,7 +187,7 @@ const html = `<!DOCTYPE html>
     <p class="eyebrow">Policy Positions</p>
     <h2>${title}: Policy Framework</h2>
     <p style="margin-bottom:2rem">
-      <span data-dynamic="rule-count">0</span> rules across
+      <span data-dynamic="policy-count">0</span> positions across
       <span data-dynamic="family-count">0</span> family codes.
     </p>
 
@@ -196,10 +196,10 @@ const html = `<!DOCTYPE html>
       <div class="family-header">
         <span class="family-code">${prefix}-XXX</span>
         <span class="family-title"><!-- Family Title --></span>
-        <span class="family-count">0 rules</span>
+        <span class="family-count">0 positions</span>
       </div>
 
-      <div class="rule-card status-proposed" id="${prefix}-XXX-001">
+      <div class="policy-card status-proposed" id="${prefix}-XXX-001">
         <div class="rule-header">
           <span class="rule-id">${prefix}-XXX-001</span>
           <span class="rule-badge">Proposed</span>

@@ -84,12 +84,12 @@ docs/
 
 ### CSS
 - `style.css` — all shared styles (no inline CSS in HTML except `--accent-color` per pillar)
-- `--accent-color` CSS variable used throughout for per-pillar theming of rule cards, nav pills, research headings
+- `--accent-color` CSS variable used throughout for per-pillar theming of policy cards, nav pills, research headings
 
 ### Dynamic values
 - `[data-dynamic="pillar-count"]` — filled from `ARP.pillars.length`
 - `[data-dynamic="foundation-count"]` — filled from `ARP.foundations.length`
-- `[data-dynamic="rule-count"]` — counts `.rule-card` elements on current page
+- `[data-dynamic="policy-count"]` — counts `.policy-card` elements on current page
 - `[data-dynamic="family-count"]` — counts unique family prefixes on current page
 
 ## Catalog state (data/policy_catalog.sqlite)
@@ -98,7 +98,7 @@ The DB was last rebuilt from chat logs in July 2025. It is **pre-expansion** —
 
 ### Pre-expansion totals
 - 101 `policy_items` (legacy numeric checkpoint items)
-- 1,095 `rule_items` (structured IDs, 20 scope codes)
+- 1,095 `policy_items` (structured IDs, 20 scope codes)
 - 138 `record_links`
 - 888 `prose_rule_mentions`
 
@@ -107,7 +107,7 @@ The DB was last rebuilt from chat logs in July 2025. It is **pre-expansion** —
 ## Known issues for human review
 
 - **Orphan footnotes** — several pillar pages have footnotes defined in the reference list but never cited inline. Pages: `immigration.html` (fn1, fn3), `technology-and-ai.html` (fn1–fn3), `consumer-rights.html` (fn3), `courts-and-judicial-system.html` (fn5–fn6), `elections-and-representation.html` (fn4–fn7), `environment-and-agriculture.html` (fn3), `gun-policy.html` (fn4–fn5), `legislative-reform.html` (fn4), `term-limits-and-fitness.html` (fn3–fn4). These may represent content that was removed without updating the reference list, or inline citations that were accidentally omitted.
-- **Rule ID audit** — a systematic scan of all `.rule-card` IDs for duplicates or format violations has not been done. Spot checks pass; a full audit is warranted before v1.0.
+- **Rule ID audit** — a systematic scan of all `.policy-card` IDs for duplicates or format violations has not been done. Spot checks pass; a full audit is warranted before v1.0.
 - **Foreign policy in related pillars** — `foreign-policy.html` is not yet referenced in "Related Pillars" sections of other pillar pages.
 - **Compare page narratives** — the strengths/weaknesses narrative sections in compare pages do not yet discuss the foreign policy pillar.
 - **Science/Technology/Space** — pending `science-space` agent; once complete, register in `data.js`, add to pillars index, update E2E counts.

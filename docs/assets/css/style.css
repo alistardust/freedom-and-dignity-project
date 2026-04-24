@@ -679,15 +679,15 @@ section { padding: 4.5rem 0; }
 .family-title { font-size: 1rem; font-weight: 600; color: var(--ink); }
 .family-count { margin-left: auto; font-size: .8rem; color: #888; white-space: nowrap; }
 
-.rule-card {
+.policy-card {
   border-radius: 5px; padding: .9rem 1rem;
   background: #fff; border: 1px solid #e0d8c8;
   font-size: .88rem; line-height: 1.55;
 }
-.rule-card.status-included { border-left: 4px solid #1e8449; }
-.rule-card.status-updated  { border-left: 4px solid #2471a3; }
-.rule-card.status-partial  { border-left: 4px solid #c9952a; }
-.rule-card.status-missing  { border-left: 4px solid #ccc; opacity: .72; }
+.policy-card.status-included { border-left: 4px solid #1e8449; }
+.policy-card.status-updated  { border-left: 4px solid #2471a3; }
+.policy-card.status-partial  { border-left: 4px solid #c9952a; }
+.policy-card.status-missing  { border-left: 4px solid #ccc; opacity: .72; }
 
 .rule-header  { display: flex; align-items: center; gap: .5rem; margin-bottom: .35rem; }
 .rule-id      { font-size: .72rem; color: #888; letter-spacing: .03em; }
@@ -993,7 +993,7 @@ details.design-logic .design-body li { font-size: .93rem; line-height: 1.65; mar
     page-break-before: always;
   }
 
-  .rule-card {
+  .policy-card {
     page-break-inside: avoid;
   }
 

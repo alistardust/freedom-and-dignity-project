@@ -306,9 +306,9 @@
     if (!window.ARP) return;
     const pillarCount     = ARP.pillars.length;
     const foundationCount = ARP.foundations.length;
-    const ruleCount       = document.querySelectorAll('.rule-card').length;
+    const ruleCount       = document.querySelectorAll('.policy-card').length;
     const families        = new Set();
-    document.querySelectorAll('.rule-card[id]').forEach(card => {
+    document.querySelectorAll('.policy-card[id]').forEach(card => {
       const m = card.id.match(/^([A-Z]+-[A-Z]+)/);
       if (m) families.add(m[1]);
     });
@@ -317,7 +317,7 @@
       switch (el.dataset.dynamic) {
         case 'pillar-count':     el.textContent = pillarCount;                   break;
         case 'foundation-count': el.textContent = foundationCount;               break;
-        case 'rule-count':       if (ruleCount)   el.textContent = ruleCount;    break;
+        case 'policy-count':       if (ruleCount)   el.textContent = ruleCount;    break;
         case 'family-count':     if (familyCount) el.textContent = familyCount;  break;
       }
     });

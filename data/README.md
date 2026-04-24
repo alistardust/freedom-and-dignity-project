@@ -13,7 +13,7 @@ The initial structured catalog is stored in SQLite so it can support both editor
 
 - source files and file hashes
 - canonical policy items with numeric IDs
-- canonical rule records with prefixed IDs
+- canonical policy position records with prefixed IDs
 - per-source occurrences so duplicates and conflicts stay traceable
 
 ## Current schema
@@ -21,14 +21,14 @@ The initial structured catalog is stored in SQLite so it can support both editor
 - `source_files`
 - `policy_items`
 - `policy_item_occurrences`
-- `rule_items`
+- `policy_items`  (structured ID records, formerly `rule_items`)
 - `rule_occurrences`
 - `record_links`
 - `record_link_occurrences`
 - `prose_rule_mentions`
 - `catalog_entries` view for unified browsing
 - `deduped_catalog_entries` view for the canonical structured corpus after legacy-item conversion
-- `unresolved_prose_rule_mentions` view for identified IDs that appear only in context/prose and are not yet canonical rule rows
+- `unresolved_prose_rule_mentions` view for identified IDs that appear only in context/prose and are not yet canonical policy position rows
 
 ## Current import behavior
 

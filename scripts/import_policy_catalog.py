@@ -3074,7 +3074,7 @@ def create_schema(conn: sqlite3.Connection) -> None:
             source_priority INTEGER NOT NULL
         );
 
-        CREATE TABLE IF NOT EXISTS policy_items (
+        CREATE TABLE IF NOT EXISTS legacy_policy_items (
             item_id INTEGER PRIMARY KEY,
             canonical_statement TEXT NOT NULL,
             status TEXT NOT NULL,
@@ -3088,7 +3088,7 @@ def create_schema(conn: sqlite3.Connection) -> None:
 
         CREATE TABLE IF NOT EXISTS policy_item_occurrences (
             id INTEGER PRIMARY KEY,
-            item_id INTEGER NOT NULL REFERENCES policy_items(item_id) ON DELETE CASCADE,
+            item_id INTEGER NOT NULL REFERENCES legacy_policy_items(item_id) ON DELETE CASCADE,
             source_id INTEGER NOT NULL REFERENCES source_files(id) ON DELETE CASCADE,
             line_number INTEGER NOT NULL,
             statement TEXT NOT NULL,
@@ -3099,7 +3099,7 @@ def create_schema(conn: sqlite3.Connection) -> None:
             UNIQUE(item_id, source_id, line_number, raw_line)
         );
 
-        CREATE TABLE IF NOT EXISTS rule_items (
+        CREATE TABLE IF NOT EXISTS policy_items (
             rule_id TEXT PRIMARY KEY,
             scope_code TEXT NOT NULL,
             family_code TEXT NOT NULL,
@@ -3113,7 +3113,7 @@ def create_schema(conn: sqlite3.Connection) -> None:
 
         CREATE TABLE IF NOT EXISTS rule_occurrences (
             id INTEGER PRIMARY KEY,
-            rule_id TEXT NOT NULL REFERENCES rule_items(rule_id) ON DELETE CASCADE,
+            rule_id TEXT NOT NULL REFERENCES policy_items(rule_id) ON DELETE CASCADE,
             source_id INTEGER NOT NULL REFERENCES source_files(id) ON DELETE CASCADE,
             line_number INTEGER NOT NULL,
             scope_code TEXT NOT NULL,
@@ -3191,7 +3191,7 @@ def create_schema(conn: sqlite3.Connection) -> None:
             notes,
             occurrence_count,
             source_count
-        FROM policy_items
+        FROM legacy_policy_items
         UNION ALL
         SELECT
             'rule_item' AS record_type,
@@ -3204,7 +3204,7 @@ def create_schema(conn: sqlite3.Connection) -> None:
             NULL AS notes,
             occurrence_count,
             source_count
-        FROM rule_items;
+        FROM policy_items;
 
         DROP VIEW IF EXISTS deduped_catalog_entries;
         CREATE VIEW deduped_catalog_entries AS
@@ -3244,15 +3244,15 @@ def create_schema(conn: sqlite3.Connection) -> None:
         JOIN source_files sf ON sf.id = prm.source_id
         WHERE NOT EXISTS (
             SELECT 1
-            FROM rule_items ri
+            FROM policy_items ri
             WHERE ri.rule_id = prm.rule_id
         );
 
-        CREATE INDEX IF NOT EXISTS idx_policy_items_status ON policy_items(status);
-        CREATE INDEX IF NOT EXISTS idx_policy_items_target ON policy_items(target);
+        CREATE INDEX IF NOT EXISTS idx_legacy_policy_items_status ON legacy_policy_items(status);
+        CREATE INDEX IF NOT EXISTS idx_legacy_policy_items_target ON legacy_policy_items(target);
         CREATE INDEX IF NOT EXISTS idx_policy_occurrences_source ON policy_item_occurrences(source_id, item_id);
-        CREATE INDEX IF NOT EXISTS idx_rule_items_scope_family ON rule_items(scope_code, family_code);
-        CREATE INDEX IF NOT EXISTS idx_rule_items_status ON rule_items(status);
+        CREATE INDEX IF NOT EXISTS idx_policy_items_scope_family ON policy_items(scope_code, family_code);
+        CREATE INDEX IF NOT EXISTS idx_policy_items_status_2 ON policy_items(status);
         CREATE INDEX IF NOT EXISTS idx_rule_occurrences_source ON rule_occurrences(source_id, rule_id);
         CREATE INDEX IF NOT EXISTS idx_record_links_source ON record_links(source_record_type, source_record_id);
         CREATE INDEX IF NOT EXISTS idx_record_links_target ON record_links(target_record_type, target_record_id);
@@ -3269,9 +3269,9 @@ def reset_import_tables(conn: sqlite3.Connection) -> None:
         DELETE FROM record_link_occurrences;
         DELETE FROM record_links;
         DELETE FROM rule_occurrences;
-        DELETE FROM rule_items;
-        DELETE FROM policy_item_occurrences;
         DELETE FROM policy_items;
+        DELETE FROM policy_item_occurrences;
+        DELETE FROM legacy_policy_items;
         DELETE FROM source_files;
         """
     )
@@ -3320,7 +3320,7 @@ def choose_record_link_canonical(
     )[0]
 
 
-def import_policy_items(
+def import_legacy_policy_items(
     conn: sqlite3.Connection,
     source_ids: dict[str, int],
     source_priority: dict[str, int],
@@ -3334,7 +3334,7 @@ def import_policy_items(
         canonical = choose_policy_canonical(item_occurrences, source_priority)
         conn.execute(
             """
-            INSERT INTO policy_items (
+            INSERT INTO legacy_policy_items (
                 item_id,
                 canonical_statement,
                 status,
@@ -3389,7 +3389,7 @@ def import_policy_items(
         )
 
 
-def import_rule_items(
+def import_policy_items(
     conn: sqlite3.Connection,
     source_ids: dict[str, int],
     source_priority: dict[str, int],
@@ -3403,7 +3403,7 @@ def import_rule_items(
         canonical = choose_rule_canonical(rule_occurrences, source_priority)
         conn.execute(
             """
-            INSERT INTO rule_items (
+            INSERT INTO policy_items (
                 rule_id,
                 scope_code,
                 family_code,
@@ -3588,14 +3588,14 @@ def insert_manual_rule_seeds(
     conn: sqlite3.Connection, sources: dict[str, SourceFile], source_ids: dict[str, int]
 ) -> None:
     for rule_id, seed in MANUAL_RULE_SEEDS.items():
-        exists = conn.execute("SELECT 1 FROM rule_items WHERE rule_id = ?", (rule_id,)).fetchone()
+        exists = conn.execute("SELECT 1 FROM policy_items WHERE rule_id = ?", (rule_id,)).fetchone()
         if exists:
             continue
         source = sources[seed["source_name"]]
         raw_line = get_line_from_source(source, seed["line_number"])
         conn.execute(
             """
-            INSERT INTO rule_items (
+            INSERT INTO policy_items (
                 rule_id,
                 scope_code,
                 family_code,
@@ -3676,7 +3676,7 @@ def apply_manual_policy_item_links(conn: sqlite3.Connection) -> None:
                 p.canonical_line_number,
                 p.status,
                 COALESCE(pio.raw_line, '')
-            FROM policy_items p
+            FROM legacy_policy_items p
             LEFT JOIN policy_item_occurrences pio
               ON pio.item_id = p.item_id
              AND pio.source_id = p.canonical_source_id
@@ -3688,7 +3688,7 @@ def apply_manual_policy_item_links(conn: sqlite3.Connection) -> None:
         rule_row = conn.execute(
             """
             SELECT canonical_statement, status
-            FROM rule_items
+            FROM policy_items
             WHERE rule_id = ?
             """,
             (target_rule_id,),
@@ -3787,17 +3787,17 @@ def main() -> None:
         create_schema(conn)
         reset_import_tables(conn)
         source_ids = insert_source_files(conn, repo_root, sources)
-        import_policy_items(conn, source_ids, all_source_priority, all_policy_occurrences)
-        import_rule_items(conn, source_ids, all_source_priority, all_rule_occurrences)
+        import_legacy_policy_items(conn, source_ids, all_source_priority, all_policy_occurrences)
+        import_policy_items(conn, source_ids, all_source_priority, all_rule_occurrences)
         insert_manual_rule_seeds(conn, source_lookup, source_ids)
         import_record_links(conn, source_ids, all_source_priority, all_record_link_occurrences)
         apply_manual_policy_item_links(conn)
         import_prose_rule_mentions(conn, source_ids, all_prose_rule_mentions)
         conn.commit()
 
-        policy_count = conn.execute("SELECT COUNT(*) FROM policy_items").fetchone()[0]
+        policy_count = conn.execute("SELECT COUNT(*) FROM legacy_policy_items").fetchone()[0]
         policy_occurrence_count = conn.execute("SELECT COUNT(*) FROM policy_item_occurrences").fetchone()[0]
-        rule_count = conn.execute("SELECT COUNT(*) FROM rule_items").fetchone()[0]
+        rule_count = conn.execute("SELECT COUNT(*) FROM policy_items").fetchone()[0]
         rule_occurrence_count = conn.execute("SELECT COUNT(*) FROM rule_occurrences").fetchone()[0]
         record_link_count = conn.execute("SELECT COUNT(*) FROM record_links").fetchone()[0]
         record_link_occurrence_count = conn.execute("SELECT COUNT(*) FROM record_link_occurrences").fetchone()[0]

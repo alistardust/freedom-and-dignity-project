@@ -191,7 +191,7 @@ FDR's 1944 Second Bill of Rights proposed eight guarantees. Assessment against t
 
 ## Underdeveloped Pillars
 
-By DB rule count, these pillars are critically thin:
+By DB position count, these pillars are critically thin:
 
 | Pillar | Scope Code(s) | DB Rules | Status |
 |--------|---------------|----------|--------|

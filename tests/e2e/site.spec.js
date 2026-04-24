@@ -449,13 +449,13 @@ test.describe('Policy rules section renders content', () => {
     await page.locator('#pil-policy').scrollIntoViewIfNeeded();
     // Wait for IntersectionObserver to fire and .visible class to be applied
     await expect(page.locator('#pil-policy')).toHaveClass(/visible/, { timeout: 3000 });
-    await expect(page.locator('#pil-policy .rule-card').first()).toBeAttached();
+    await expect(page.locator('#pil-policy .policy-card').first()).toBeAttached();
   });
 
   test('policy section has more than one rule card', async ({ page }) => {
     await page.goto(`/pillars/${pillarWithRules}.html`);
     await page.locator('#pil-policy').scrollIntoViewIfNeeded();
-    const count = await page.locator('#pil-policy .rule-card').count();
+    const count = await page.locator('#pil-policy .policy-card').count();
     expect(count).toBeGreaterThan(1);
   });
 });

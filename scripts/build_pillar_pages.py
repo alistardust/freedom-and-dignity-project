@@ -275,7 +275,7 @@ def rule_card(rule):
     notes_html = f'<p class="rule-notes">{md_inline(rule["notes"])}</p>' if rule['notes'] else ''
     stmt = rule['statement'] or ''
     return f'''\
-<div class="rule-card {cls}">
+<div class="policy-card {cls}">
   <div class="rule-header">
     <code class="rule-id">{rule["id"]}</code>
     <span class="rule-badge">{label}</span>
@@ -391,15 +391,15 @@ PILLAR_CSS = '''\
 .rule-grid {
   display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:.75rem;
 }
-.rule-card {
+.policy-card {
   border-radius:5px; padding:.9rem 1rem;
   background:#fff; border:1px solid #e0d8c8;
   font-size:.88rem; line-height:1.55;
 }
-.rule-card.status-included { border-left:4px solid #1e8449; }
-.rule-card.status-updated  { border-left:4px solid #2471a3; }
-.rule-card.status-partial  { border-left:4px solid #c9952a; }
-.rule-card.status-missing  { border-left:4px solid #ccc; opacity:.72; }
+.policy-card.status-included { border-left:4px solid #1e8449; }
+.policy-card.status-updated  { border-left:4px solid #2471a3; }
+.policy-card.status-partial  { border-left:4px solid #c9952a; }
+.policy-card.status-missing  { border-left:4px solid #ccc; opacity:.72; }
 
 .rule-header { display:flex; align-items:center; gap:.5rem; margin-bottom:.35rem; }
 .rule-id { font-size:.72rem; color:#888; letter-spacing:.03em; }
