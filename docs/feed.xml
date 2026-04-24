@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <id>https://alistardust.github.io/freedom-and-dignity-project/</id>
+  <title>Freedom and Dignity Project</title>
+  <subtitle>A Third Bill of Rights for the 21st century</subtitle>
+  <updated>2026-04-23T00:00:00Z</updated>
+  <author>
+    <name>Freedom and Dignity Project</name>
+  </author>
+  <link rel="alternate" type="text/html" href="https://alistardust.github.io/freedom-and-dignity-project/"/>
+  <link rel="self" type="application/atom+xml" href="https://alistardust.github.io/freedom-and-dignity-project/feed.xml"/>
+
+  <entry>
+    <id>https://alistardust.github.io/freedom-and-dignity-project/</id>
+    <title>Freedom and Dignity Project — A Third Bill of Rights</title>
+    <updated>2026-04-23T00:00:00Z</updated>
+    <summary>A comprehensive structural reform platform organized around five foundations and 24 policy pillars — a Third Bill of Rights for the 21st century.</summary>
+    <link rel="alternate" href="https://alistardust.github.io/freedom-and-dignity-project/"/>
+  </entry>
+
+  <entry>
+    <id>https://alistardust.github.io/freedom-and-dignity-project/letter-from-the-founder.html</id>
+    <title>A Letter from the Founder</title>
+    <updated>2026-04-23T00:00:00Z</updated>
+    <summary>A personal letter on why this platform exists, what drives it forward, and what the Freedom and Dignity Project can become for America.</summary>
+    <link rel="alternate" href="https://alistardust.github.io/freedom-and-dignity-project/letter-from-the-founder.html"/>
+  </entry>
+
+  <entry>
+    <id>https://alistardust.github.io/freedom-and-dignity-project/foundations.html#accountable-power</id>
+    <title>Foundation I: Accountable Power</title>
+    <updated>2026-04-23T00:00:00Z</updated>
+    <summary>Seven pillars addressing executive power, elections, anti-corruption, checks and balances, courts, term limits, administrative state, and legislative reform.</summary>
+    <link rel="alternate" href="https://alistardust.github.io/freedom-and-dignity-project/foundations.html"/>
+  </entry>
+
+  <entry>
+    <id>https://alistardust.github.io/freedom-and-dignity-project/foundations.html#we-the-people</id>
+    <title>Foundation II: We the People</title>
+    <updated>2026-04-23T00:00:00Z</updated>
+    <summary>Two pillars addressing antitrust and corporate power, and the integrity of information and media systems that democracy depends on.</summary>
+    <link rel="alternate" href="https://alistardust.github.io/freedom-and-dignity-project/foundations.html"/>
+  </entry>
+
+  <entry>
+    <id>https://alistardust.github.io/freedom-and-dignity-project/foundations.html#equal-justice</id>
+    <title>Foundation III: Equal Justice</title>
+    <updated>2026-04-23T00:00:00Z</updated>
+    <summary>Four pillars ensuring equal justice and policing, humane immigration, robust civil liberties, and a foreign policy grounded in human rights.</summary>
+    <link rel="alternate" href="https://alistardust.github.io/freedom-and-dignity-project/foundations.html"/>
+  </entry>
+
+  <entry>
+    <id>https://alistardust.github.io/freedom-and-dignity-project/foundations.html#real-freedom</id>
+    <title>Foundation IV: Real Freedom</title>
+    <updated>2026-04-23T00:00:00Z</updated>
+    <summary>Three pillars covering gun policy, technology and AI governance, and consumer rights — because freedom requires protection from both state and private power.</summary>
+    <link rel="alternate" href="https://alistardust.github.io/freedom-and-dignity-project/foundations.html"/>
+  </entry>
+
+  <entry>
+    <id>https://alistardust.github.io/freedom-and-dignity-project/foundations.html#freedom-to-thrive</id>
+    <title>Foundation V: Freedom to Thrive</title>
+    <updated>2026-04-23T00:00:00Z</updated>
+    <summary>Eight pillars covering healthcare, taxation, environment, infrastructure, education, labor rights, housing, and science — the material conditions of a free life.</summary>
+    <link rel="alternate" href="https://alistardust.github.io/freedom-and-dignity-project/foundations.html"/>
+  </entry>
+
+</feed>

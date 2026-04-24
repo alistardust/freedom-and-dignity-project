@@ -925,3 +925,91 @@ details.design-logic .design-body li { font-size: .93rem; line-height: 1.65; mar
   .pi-fv-pillars { flex-direction: row; flex-wrap: wrap; gap: .25rem; }
   .pi-fv-pill { font-size: .7rem; }
 }
+
+/* ============================================================
+   PRINT STYLESHEET
+   ============================================================ */
+@media print {
+  /* Hide navigation and UI chrome */
+  .site-nav,
+  .wip-banner,
+  .name-notice-banner,
+  .nav-hamburger,
+  #back-to-top,
+  .wip-banner-dismiss,
+  .name-notice-dismiss,
+  .site-footer {
+    display: none !important;
+  }
+
+  /* Base typography */
+  body {
+    color: #000;
+    background: #fff;
+    font-size: 11pt;
+    line-height: 1.5;
+  }
+
+  h1 { font-size: 22pt; }
+  h2 { font-size: 17pt; }
+  h3 { font-size: 14pt; }
+  h4 { font-size: 12pt; }
+
+  /* Hero sections — strip gradients, use plain white */
+  .page-hero,
+  .roadmap-hero,
+  .lf-hero,
+  .gi-hero,
+  .adv-hero,
+  .about-hero,
+  .ai-hero,
+  .mission-hero,
+  .const-hero,
+  .fo-hero,
+  .clf-hero,
+  .pillar-hero,
+  .compare-hero,
+  .pil-hero {
+    background: #fff !important;
+    color: #000 !important;
+    padding: 1em 0;
+  }
+
+  /* Show URLs after external links */
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    word-break: break-all;
+  }
+
+  /* Remove box shadows */
+  * {
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  /* Page breaks */
+  .roadmap-track {
+    page-break-before: always;
+  }
+
+  .rule-card {
+    page-break-inside: avoid;
+  }
+
+  /* Status pills and badges — plain bordered style */
+  .pillar-status-pill,
+  .roadmap-badge,
+  .pil-fv-pill,
+  .scope-tag {
+    border: 1px solid #666;
+    background: #fff !important;
+    color: #000 !important;
+  }
+
+  /* Ensure readable links */
+  a {
+    color: #000;
+    text-decoration: underline;
+  }
+}
