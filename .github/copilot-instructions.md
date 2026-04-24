@@ -2,35 +2,53 @@
 
 ## Project context
 
-This repository is reconstructing a document-first political/platform project from branch chat logs plus older markdown files. The policy corpus is centered on:
+This repository is an active U.S. policy platform in development. It is organized around 25 policy pillars grouped into 5 foundations. The live site is at https://alistardust.github.io/freedom-and-dignity-project/.
+
+The policy corpus is primarily maintained in:
+
+- `docs/pillars/*.html` — live policy card HTML (2,935 `.policy-card` elements)
+- `data/policy_catalog.sqlite` — structured policy position catalog (1,554 entries, pre-reconciliation)
+- `pillars/` — narrative prose markdown (overview and policy sections per pillar)
+
+The following files are historical source material, retained for provenance, and still referenced during catalog rebuilds:
 
 - `sources/branch_branch_political_project_main.txt`
 - `sources/branch_political_project_brainstorm.txt`
-- `data/policy_catalog.sqlite`
 
-The markdown under `pillars/` is useful, but may be outdated relative to the logs and database.
-
-Read `overview/current-state.md` before making structural changes.
+The markdown under `pillars/` may lag behind the site HTML. Read `overview/current-state.md` before making structural changes.
 
 ## Source of truth
 
-Use this order when deciding what is current:
+### Phase 1 — Current (pre-reconciliation)
 
-1. formal structured IDs in the main/brainstorm chat logs
-2. later contextual summary blocks in those chats when earlier mappings conflict
-3. `data/policy_catalog.sqlite`
-4. legacy pillar markdown
+The site HTML and the DB have both been edited since last reconciliation. Neither auto-overrides the other.
+
+- **Site HTML** (`docs/pillars/*.html`, 2,935 policy cards) — the most recently edited content
+- **DB** (`data/policy_catalog.sqlite`, 1,554 `policy_items`) — structured catalog; some entries not yet on site; some site cards not yet in DB
+- **Divergences are flagged for human review.** Do not auto-resolve them.
+- `MISSING` in the DB does not reliably mean the position is absent from the site.
+
+**During Phase 1:** HTML edits are valid. Any new positions added to HTML must be backfilled into the DB in the same commit.
+
+### Phase 2 — Post-reconciliation (target)
+
+Once the reconciliation audit is complete:
+
+- `data/policy_catalog.sqlite` is the **canonical source of truth** for all policy positions
+- `pillars/*/overview.md` and `pillars/*/policy.md` are the source for narrative prose
+- `docs/pillars/*.html` is **generated output** — do not hand-edit policy cards
+- New positions are authored in the DB first, then the site is regenerated at build time
 
 Do **not** assume the current pillar files are complete.
 
 ## Working with IDs and the catalog
 
-- The old numeric checkpoint items live in `policy_items`.
-- The structured ID system lives in `rule_items`.
+- The old numeric checkpoint items live in `legacy_policy_items`.
+- The structured policy position records live in `policy_items` (prefixed IDs, e.g., `HLT-COV-003`).
 - Legacy-to-structured conversions live in `record_links`.
 - Prose/context-only IDs live in `prose_rule_mentions`.
 - Use `deduped_catalog_entries` when you want the canonical structured corpus without the legacy numeric duplicates.
-- Use `unresolved_prose_rule_mentions` when auditing IDs that were mentioned in context but not promoted into the canonical rule corpus.
+- Use `unresolved_prose_rule_mentions` when auditing IDs that were mentioned in context but not promoted into the canonical position corpus.
 
 If chat-log sources change, rebuild the catalog with:
 
@@ -51,8 +69,24 @@ Do not hand-edit `data/policy_catalog.sqlite`.
 
 - Prefer updating import logic and source-backed docs over manual data patching.
 - Preserve provenance. If you convert or reconcile IDs, keep the relationship visible through the database rather than deleting history.
-- When updating policy content, search both main and brainstorm logs first, then update the relevant pillar or overview docs.
-- Keep changes surgical: this repo is a reconstruction project, so context and traceability matter as much as the final wording.
+- When updating policy content, check the current site HTML first, then the DB, then the source logs.
+- Keep changes surgical: context and traceability matter as much as the final wording.
+
+---
+
+## Documentation maintenance
+
+Any commit that changes the following **must** update the relevant repo documentation in the same commit:
+
+- Pillar count or structure → update `overview/current-state.md` pillar registry + `README.md`
+- Policy card count or schema → update `data/README.md` + `overview/current-state.md`
+- DB schema changes → update `data/README.md` + `system_rules.md` counts
+- New architectural decisions → update `.github/copilot-instructions.md` + `overview/current-state.md`
+- New scripts or tooling → update `README.md` "Scripts" section
+
+"Repo documentation" means: `README.md`, `system_rules.md`, `overview/*.md`, `data/README.md`, `.github/copilot-instructions.md`.  
+"Docs" (without "repo") means the website in the `docs/` directory.  
+Never confuse the two.
 
 ---
 
@@ -295,7 +329,7 @@ The single most important frontend rule: **never duplicate structural code acros
 Any number or count derived from `data.js` must be rendered dynamically, not hard-coded.
 
 - Use `<span data-dynamic="pillar-count">23</span>` — the fallback is displayed when JS is disabled; `app.js` fills the live value.
-- Use `data-dynamic="rule-count"` and `data-dynamic="family-count"` in pillar design sections — these are auto-computed from `.rule-card` elements on the page.
+- Use `data-dynamic="policy-count"` and `data-dynamic="family-count"` in pillar design sections — these are auto-computed from `.policy-card` elements on the page.
 - Use `data-dynamic="foundation-count"` for any reference to the number of foundations.
 - **Never write "we have X pillars" with a literal number.** It will go stale.
 
@@ -344,3 +378,33 @@ These scripts produce a correctly structured, minimal HTML scaffold. Add content
 - **No `id` conflicts** — pillar section IDs (`#pil-intro`, `#pil-policy`, etc.) are standard across all pillar pages; do not introduce new IDs that collide with this scheme.
 - **Accessibility** — all interactive elements need `aria-label` or visible label text; images need meaningful `alt` text.
 - **Citations** — every factual claim, statistic, or externally sourced assertion in policy HTML must have an APA 7th edition footnote. See the Citation standards section of copilot-instructions.md.
+
+---
+
+## Build architecture
+
+### Current state (Phase 1)
+
+The site is hand-authored HTML. Policy position cards in `docs/pillars/*.html` are the most recently edited content. The DB (`data/policy_catalog.sqlite`) was built from source log parsing and has not been fully reconciled with the HTML.
+
+**Until reconciliation is complete:**
+
+- HTML edits are valid; backfill any new positions into the DB in the same commit
+- Do not treat DB status fields as authoritative (many `MISSING` entries are actually on the site)
+- Run `scripts/tag-policy-cards.py` after any HTML structural changes to normalize IDs
+
+### Target state (Phase 2, post-reconciliation)
+
+- `data/policy_catalog.sqlite` is the single source of truth for all policy positions
+- `pillars/*/overview.md` and `pillars/*/policy.md` are the source for narrative prose
+- `docs/pillars/*.html` is generated output — do not hand-edit policy cards
+- A build script (`scripts/generate-site.py`, TBD) will render HTML from DB + markdown
+- CSS lives in `docs/assets/css/style.css` — single source, applied consistently site-wide
+- Any content change must be made in the source (DB or markdown), then the site regenerated
+
+### Consistency rules (apply now and in Phase 2)
+
+- All styles: `docs/assets/css/style.css` only. No inline styles except `--accent-color` per pillar.
+- All sitewide JS: `docs/assets/js/app.js` only. No inline scripts in HTML.
+- All policy positions: must have a SCOPE-FAM-NNN ID. Untagged cards are not canonical.
+- All factual claims on the site: must have an APA 7th edition footnote.

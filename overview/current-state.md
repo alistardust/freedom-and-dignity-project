@@ -1,20 +1,34 @@
 # Current State
 
-_Last updated: April 2026_
+_Last updated: July 2025_
 
-## Source-of-truth order
+## Source-of-truth order (phased model)
 
-1. Formal structured IDs in `sources/branch_political_project_brainstorm.txt` and `sources/branch_branch_political_project_main.txt` (primary sources)
-2. Later contextual summary blocks in those chats when earlier mappings conflict
-3. `data/policy_catalog.sqlite`
-4. Pillar HTML under `docs/pillars/` (live site source — this is the current canonical policy text)
-5. Pillar markdown under `pillars/` (legacy research source; may be outdated relative to site HTML)
+### Phase 1 — Current (pre-reconciliation)
+
+The site HTML and the DB have both been edited since last reconciliation. A full 3-way audit is in progress. Until it completes, use the following hierarchy:
+
+1. Site HTML (`docs/pillars/*.html`) — 2,935 policy cards; most recently edited content
+2. `data/policy_catalog.sqlite` — 1,554 `policy_items`; some entries not yet on site; some site cards not yet in DB
+3. `pillars/` narrative markdown — prose source; may be behind the site HTML
+4. Historical source logs (`sources/branch_*`) — reference only; used in initial catalog build
+
+**Divergences between HTML and DB are flagged for human review.** Neither source auto-overrides the other. `MISSING` in the DB does not reliably mean the position is absent from the site.
+
+### Phase 2 — Post-reconciliation (target)
+
+Once the reconciliation audit is complete:
+
+1. `data/policy_catalog.sqlite` — canonical source of truth for all policy positions
+2. `pillars/*/overview.md` and `pillars/*/policy.md` — source for narrative prose
+3. `docs/pillars/*.html` — generated output; do not hand-edit policy cards
+4. Historical source logs — reference only
 
 ## Site structure (live)
 
-The site (`docs/`) serves the published platform at https://alistardust.github.io/american-renewal-project/.
+The site (`docs/`) serves the published platform at https://alistardust.github.io/freedom-and-dignity-project/.
 
-**Current pillar count: 24** across 5 foundations. All live at `docs/pillars/<slug>.html`.
+**Current pillar count: 25** across 5 foundations. All live at `docs/pillars/<slug>.html`.
 
 Each pillar page uses:
 - `<style>:root { --accent-color: #...; }</style>` — per-pillar accent color only
@@ -50,10 +64,10 @@ Each pillar page uses:
 | 22 | `labor_and_workers_rights` | Labor & Workers' Rights | Freedom to Thrive (V) | LAB |
 | 23 | `housing` | Housing | Freedom to Thrive (V) | HOU |
 | 24 | `legislative_reform` | Legislative Reform | Accountable Power (I) | LEG |
+| 25 | `science_technology_space` | Science, Technology & Space | Real Freedom (IV) | STS |
 
 **Pillars in progress / stub stage:**
-- `foreign_policy` (FPL) — 50 rules, 9 families, added April 2026. Compare page coverage rows added; narrative "strengths/weaknesses" sections not yet expanded.
-- Science, Technology & Space (STS) — in development; agent in progress.
+- `science_technology_space` (STS) — live page; content in development.
 
 ## Site page inventory
 
@@ -70,7 +84,7 @@ docs/
   roadmap.html            — Project roadmap (tracks, pillar status)
   adversarial-review.html — Adversarial policy review
   pillars/index.html      — Full pillar index (fullview grid)
-  pillars/*.html          — 24 pillar pages
+  pillars/*.html          — 25 pillar pages
   compare/index.html      — Party comparison index
   compare/*.html          — 6 party comparison pages (DSA, Green, Libertarian, Democrat, Republican, Working Families)
 ```
@@ -94,27 +108,29 @@ docs/
 
 ## Catalog state (data/policy_catalog.sqlite)
 
-The DB was last rebuilt from chat logs in July 2025. It is **pre-expansion** — it does not reflect rules added to the site HTML after that point.
+The DB was last rebuilt from source logs in 2025. It is **pre-reconciliation** — it does not fully reflect policy cards added to the site HTML after that point, and some DB entries are not yet on the site.
 
-### Pre-expansion totals
-- 101 `policy_items` (legacy numeric checkpoint items)
-- 1,095 `policy_items` (structured IDs, 20 scope codes)
-- 138 `record_links`
-- 888 `prose_rule_mentions`
+### Current totals (pre-reconciliation)
 
-**Note:** Significant new rules added after July 2025 (HLT-COV, HLT-RTT, FPL-*, STS-* pending) are in site HTML but not yet in the DB. Rebuild with `scripts/import_policy_catalog.py` once the chat logs are updated to include these additions.
+- 1,554 `policy_items` (structured positions with prefixed IDs)
+- `legacy_policy_items` (old numeric checkpoint items, preserved for provenance)
+- 36 `record_links`
+- 629 `prose_rule_mentions`
+
+**Important:** DB status fields (`MISSING`, `INCLUDED`, etc.) reflect the state at last catalog build and have not been reconciled against the current site HTML. A `MISSING` entry may already be present on the site under a policy card. Do not treat DB status as authoritative until after the reconciliation audit. Rebuild the catalog with `scripts/import_policy_catalog.py` once source logs and HTML are reconciled.
 
 ## Known issues for human review
 
-- **Orphan footnotes** — several pillar pages have footnotes defined in the reference list but never cited inline. Pages: `immigration.html` (fn1, fn3), `technology-and-ai.html` (fn1–fn3), `consumer-rights.html` (fn3), `courts-and-judicial-system.html` (fn5–fn6), `elections-and-representation.html` (fn4–fn7), `environment-and-agriculture.html` (fn3), `gun-policy.html` (fn4–fn5), `legislative-reform.html` (fn4), `term-limits-and-fitness.html` (fn3–fn4). These may represent content that was removed without updating the reference list, or inline citations that were accidentally omitted.
-- **Rule ID audit** — a systematic scan of all `.policy-card` IDs for duplicates or format violations has not been done. Spot checks pass; a full audit is warranted before v1.0.
+- **Reconciliation audit** — HTML (2,935 policy cards) and DB (1,554 policy_items) have diverged. A full 3-way reconciliation (HTML ↔ DB ↔ source logs) is the primary open infrastructure item. Until complete, treat both sources as valid and flag divergences for human review.
+- **Policy card ID audit** — a systematic scan of all `.policy-card` IDs for duplicates or format violations has not been done. Spot checks pass; a full audit is warranted before v1.0.
+- **Orphan footnotes** — several pillar pages have footnotes defined in the reference list but never cited inline. Pages: `immigration.html` (fn1, fn3), `technology-and-ai.html` (fn1–fn3), `consumer-rights.html` (fn3), `courts-and-judicial-system.html` (fn5–fn6), `elections-and-representation.html` (fn4–fn7), `environment-and-agriculture.html` (fn3), `gun-policy.html` (fn4–fn5), `legislative-reform.html` (fn4), `term-limits-and-fitness.html` (fn3–fn4). These may represent content removed without updating the reference list, or inline citations accidentally omitted.
 - **Foreign policy in related pillars** — `foreign-policy.html` is not yet referenced in "Related Pillars" sections of other pillar pages.
 - **Compare page narratives** — the strengths/weaknesses narrative sections in compare pages do not yet discuss the foreign policy pillar.
-- **Science/Technology/Space** — pending `science-space` agent; once complete, register in `data.js`, add to pillars index, update E2E counts.
+- **Science/Technology/Space content** — `science-technology-space.html` is live but content is in development.
 
 ## Test suite
 
-- **Unit (Vitest):** `npm run test:unit` — 41 tests, all passing
+- **Unit (Vitest):** `npm run test:unit` — 42 tests, all passing
 - **E2E (Playwright/Firefox):** `npm run test:e2e` — 222 tests, all passing
 - `PILLAR_COUNT` constant in both test files — update when adding pillars
 
