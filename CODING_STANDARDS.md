@@ -604,39 +604,59 @@ const userId = element.dataset.userId;  // reads data-user-id
 
 ### 3.7 Accessibility (WCAG 2.1 AA — Non-Negotiable) [[9]](https://www.w3.org/WAI/WCAG21/quickref/)
 
-These are **requirements**, not suggestions:
+Accessibility operates on two equal dimensions: **disability access** and **content democratization**. Neither is optional. Neither justifies weakening policy positions or shifting them toward the political center.
+
+#### Disability accessibility
+
+These are requirements. Treat violations the same as security failures.
 
 | Requirement | Rule |
 |---|---|
-| Color contrast | Text ≥ 4.5:1 ratio; large text ≥ 3:1 |
-| Images | All `<img>` have meaningful `alt` text; decorative images get `alt=""` |
-| Keyboard | All functionality operable via keyboard; visible focus indicator always present |
-| Forms | Every input has a label; error messages identify the field and explain the problem |
-| Language | `<html lang="en">` (or appropriate) on every page |
-| Skip navigation | `<a href="#main-content" class="sr-only focusable">Skip to content</a>` as first element |
-| ARIA | Use native HTML elements before ARIA. When using ARIA, use it correctly; incorrect ARIA is worse than no ARIA. |
-| Motion | Respect `prefers-reduced-motion` for animations |
+| Structure | `<html lang="en">` on every page. Single `<h1>` per page. Headings descend without skipping levels. |
+| Skip link | `<a href="#main-content" class="skip-link sr-only focusable">Skip to main content</a>` as first body element (injected by `app.js`). First main section must have `id="main-content"`. |
+| Images | All `<img>` have meaningful `alt` text. Decorative images get `alt=""`. Icons conveying meaning need `aria-label` or adjacent label text. |
+| Color contrast | Normal text ≥ 4.5:1. Large text (≥18pt / 14pt bold) ≥ 3:1. UI components ≥ 3:1. |
+| Color alone | Never use color as the only way information is conveyed — always pair with text, icon, or pattern. |
+| Keyboard | All functionality operable via keyboard. Tab order must be logical. |
+| Focus | Focus indicator always visible. Never suppress `outline` without an equally visible replacement. Use `:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }`. |
+| Interactive names | Every link, button, and control has a descriptive accessible name via visible text, `aria-label`, or `aria-labelledby`. Never `title` alone. |
+| ARIA | Use native HTML before ARIA. Incorrect ARIA is worse than no ARIA. `aria-expanded` + `aria-controls` required on custom accordions. |
+| Motion | Every animation/transition must have a `@media (prefers-reduced-motion: reduce)` override. The global override in `style.css` covers this — do not add `!important` transitions that escape it. |
+| Forms | Every input has a `<label>`. `placeholder` is not a label. Error messages name the field and explain what is wrong. |
+| Video/audio | Captions and text transcripts required. No autoplay. |
+| Zoom | All content readable and operable at 200% browser zoom without horizontal scrolling. No fixed pixel heights that clip text. |
+| Semantics | Use `<nav>`, `<main>`, `<section>`, `<article>`, `<footer>`, `<button>`. ARIA only when native semantics are insufficient. |
+
+**Required CSS utilities (defined once in `style.css`):**
 
 ```css
-/* Required: visible focus indicator */
-:focus-visible {
-  outline: 2px solid var(--color-action);
-  outline-offset: 3px;
-}
-
-/* Required: screen-reader-only utility */
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+.sr-only.focusable:focus, .sr-only.focusable:focus-visible {
+  position: static; width: auto; height: auto; margin: 0;
+  overflow: visible; clip: auto; white-space: normal; }
+:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+:focus:not(:focus-visible) { outline: none; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important; } }
 ```
+
+#### Content accessibility (democratization)
+
+- **Every policy position card must have both `rule-plain` and `rule-stmt`:**
+  - `rule-plain` (`<p class="rule-plain">`) — 1–3 sentences in plain language (~8th grade). What does this position do and why does it matter? No jargon. Any person regardless of education must understand it.
+  - `rule-stmt` (`<p class="rule-stmt">`) — Full technical/legal statement. Precise language, specific thresholds, enforcement mechanisms, regulatory detail.
+  - `rule-plain` appears immediately after `<p class="rule-title">`, before `<p class="rule-stmt">`.
+  - `rule-plain` is **not** a summary of `rule-stmt`. It is an independent, accessible explanation. Backfill for existing cards is deferred post-migration.
+- **Plain-language pillar summaries**: every pillar and policy family needs a 1–2 sentence plain-language summary alongside technical content.
+- **Jargon**: define legal or technical terms on first use with tooltip, glossary link, or parenthetical.
+- **Titles**: policy card titles must be understandable without domain expertise. No insider language.
+- **Inclusive language**: gender-neutral throughout ("persons" not "men", singular they/them). Write as if a persuadable, politically independent person is reading for the first time.
+- **Contribution pathways**: Get Involved page always lists all active channels (GitHub, Discord, non-technical workflow). CONTRIBUTING.md written for someone who has never used GitHub.
 
 ---
 

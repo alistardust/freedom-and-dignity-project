@@ -464,10 +464,105 @@ These scripts produce a correctly structured, minimal HTML scaffold. Add content
 - **No inline event handlers** — use `addEventListener` in JS files.
 - **No `!important` except the `.visible` animation override** in `app.js`.
 - **No `id` conflicts** — pillar section IDs (`#pil-intro`, `#pil-policy`, etc.) are standard across all pillar pages; do not introduce new IDs that collide with this scheme.
-- **Accessibility** — all interactive elements need `aria-label` or visible label text; images need meaningful `alt` text.
 - **Citations** — every factual claim, statistic, or externally sourced assertion in policy HTML must have an APA 7th edition footnote. See the Citation standards section of copilot-instructions.md.
 
 ---
+
+## Accessibility — Non-Negotiable
+
+Accessibility operates on two equal dimensions: **disability access** and **content democratization**. Neither overrides the other, and neither justifies weakening the project's policy positions or directness.
+
+---
+
+### Disability accessibility (WCAG 2.1 AA)
+
+These are requirements. Violations are treated the same as security failures — fix before merging.
+
+**Structure and semantics**
+- Every page must have `<html lang="en">`.
+- Every page must have a single `<h1>`; heading levels descend without skipping (`h1 → h2 → h3`, never `h1 → h3`).
+- Use semantic HTML first: `<nav>`, `<main>`, `<section>`, `<article>`, `<footer>`, `<button>`, `<label>`. ARIA is for when native semantics are insufficient — incorrect ARIA is worse than no ARIA.
+- Every page must begin with a skip link (injected by `app.js`): `<a href="#main-content" class="skip-link sr-only focusable">Skip to main content</a>`. The first main content section must have `id="main-content"`.
+
+**Images and media**
+- All `<img>` must have meaningful `alt` text. Decorative images get `alt=""`.
+- Informational icons must have an `aria-label` or visible adjacent label — never convey meaning through icon alone.
+- Video and audio content requires captions and a text transcript.
+
+**Color and contrast**
+- Normal text: ≥ 4.5:1 contrast ratio against its background.
+- Large text (≥ 18pt / 14pt bold): ≥ 3:1.
+- UI components (buttons, inputs, focus indicators): ≥ 3:1.
+- Color must never be the **only** way information is conveyed — always pair with text, pattern, or icon.
+
+**Keyboard and interaction**
+- All functionality must be operable via keyboard alone (Tab, Shift+Tab, Enter, Space, Escape, arrow keys).
+- Focus indicator must always be visible — never use `outline: none` or `outline: 0` without replacing it with an equally visible alternative. The site uses `:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }`.
+- Interactive elements (links, buttons, controls) must have a descriptive accessible name: visible label text, `aria-label`, or `aria-labelledby`. Never use `title` attribute alone.
+- Collapsible sections: use `<details>/<summary>` (accessible by default) or `aria-expanded` + `aria-controls` on custom accordions.
+- Modal dialogs must trap focus and return focus to the trigger on close.
+
+**Motion and animation**
+- Every CSS animation and transition must be wrapped in or have an override under `@media (prefers-reduced-motion: reduce)` that stops or reduces motion to near-zero. The global override in `style.css` handles this — do not add `!important` transitions that escape it.
+- Never auto-play video or audio. User must initiate.
+
+**Forms**
+- Every `<input>`, `<select>`, and `<textarea>` must have an associated `<label>` (via `for`/`id` or wrapping). `placeholder` alone is not a label.
+- Error messages must identify the field and explain specifically what is wrong. Never use color alone to signal an error.
+
+**Required CSS utilities (defined in `style.css` — do not redefine elsewhere)**
+```css
+/* Screen-reader-only — visually hidden, accessible to assistive tech */
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+
+/* Visible when focused */
+.sr-only.focusable:focus, .sr-only.focusable:focus-visible {
+  position: static; width: auto; height: auto;
+  margin: 0; overflow: visible; clip: auto; white-space: normal; }
+
+/* Focus indicator */
+:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important; } }
+```
+
+---
+
+### Content accessibility (democratization)
+
+Content accessibility means the site's policy content and contribution pathways are usable by people of varying educational backgrounds, technical expertise, and lived experience. It does **not** mean weakening positions, moderating language, or shifting policy toward the political center.
+
+**Plain language**
+- Every policy pillar and every major policy family must have a 1–2 sentence plain-language summary at approximately an 8th-grade reading level. This appears **alongside** the full technical position — not instead of it.
+- **Every individual policy position (card) must have both a `rule-plain` field and a `rule-stmt` field:**
+  - `rule-plain` — 1–3 sentences in plain language (~8th grade). What does this position do, and why does it matter? No jargon. Any person, regardless of education or background, must be able to read this and understand what the position says.
+  - `rule-stmt` — The full technical/legal policy statement. This is where precise legal language, specific thresholds, enforcement mechanisms, and regulatory detail live.
+  - Both fields are required on every card. `rule-plain` is not a summary of `rule-stmt` — it is an independent, accessible explanation written for a general audience. When they conflict, escalate for review; do not silently resolve.
+  - In HTML: `<p class="rule-plain">` appears immediately after `<p class="rule-title">`, before `<p class="rule-stmt">`.
+  - In the DB: `plain_language TEXT` column on the `positions` table — **to be added post-migration**. A null value is a data gap, not acceptable for canonical positions.
+- Legal or technical jargon must be defined on first use with a tooltip, glossary link, or parenthetical.
+- Policy card titles must be understandable without prior domain knowledge.
+- Do not use weasel words or insider language in titles. "Big Tech Platforms Must Not Use Dark Patterns to Manipulate Users" is accessible; "Platform Interface Regulation Under Market Power Conditions" is not.
+
+**Language and inclusion**
+- Use gender-neutral language throughout: "persons" not "men"; singular "they/them"; avoid gendered role titles unless quoting a named law.
+- Do not write in a voice that implies the reader is already politically aligned. Write as if a persuadable, politically independent person is reading for the first time.
+
+**Contribution pathways**
+- The Get Involved page must always prominently list all active contribution channels: GitHub (technical), Discord (community), and any active non-technical workflow (Google Docs, Notion, etc.).
+- CONTRIBUTING.md and issue templates must be written for someone who has never used GitHub. Do not assume technical knowledge.
+- Every policy proposal must have a clear path for non-technical review — the two-reviewer requirement applies regardless of whether the reviewer uses GitHub directly.
+
+**Zoom and responsive layout**
+- All content must be readable and fully operable at 200% browser zoom without horizontal scrolling.
+- No fixed pixel heights that clip text when font size increases. Use `min-height` or `auto` height where needed.
+
+
 
 ## Build architecture
 

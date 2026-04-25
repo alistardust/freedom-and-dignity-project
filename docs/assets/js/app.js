@@ -131,6 +131,28 @@
     }
   })();
 
+  /* ── SKIP LINK ───────────────────────────────────── */
+  (function () {
+    const skip = document.createElement('a');
+    skip.href = '#main-content';
+    skip.className = 'skip-link sr-only focusable';
+    skip.textContent = 'Skip to main content';
+    document.body.insertAdjacentElement('afterbegin', skip);
+
+    // Wire the skip target to the first <section> after the nav
+    const firstSection = document.querySelector('section, [role="main"]');
+    if (firstSection && !firstSection.id) {
+      firstSection.id = 'main-content';
+    } else if (firstSection && firstSection.id !== 'main-content') {
+      firstSection.setAttribute('tabindex', '-1');
+      const anchor = document.createElement('span');
+      anchor.id = 'main-content';
+      anchor.setAttribute('tabindex', '-1');
+      anchor.setAttribute('aria-hidden', 'true');
+      firstSection.insertAdjacentElement('beforebegin', anchor);
+    }
+  })();
+
   /* ── HAMBURGER ────────────────────────────────────── */
   const burger = document.querySelector('.nav-hamburger');
   const navList = document.querySelector('.nav-links');
