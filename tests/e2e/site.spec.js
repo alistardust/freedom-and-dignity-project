@@ -9,7 +9,6 @@ const { test, expect } = require('@playwright/test');
 // Update PILLAR_COUNT when adding pillars to data.js.
 // All count assertions below derive from this constant.
 const PILLAR_COUNT = 25; // pillars in data.js
-const PILLAR_PILL_COUNT = PILLAR_COUNT + 1; // +1 for the shared rights card in fullview
 
 // ── HOMEPAGE ─────────────────────────────────────────────────────────────────
 
@@ -115,49 +114,38 @@ test.describe('Pillars index', () => {
     await expect(page).toHaveTitle(/Pillars/i);
   });
 
-  test('fullview grid is visible immediately', async ({ page }) => {
+  test('fullview header is visible immediately', async ({ page }) => {
     await expect(page.locator('.pi-fullview')).toBeVisible();
   });
 
-  test('shows all 5 foundation columns in fullview', async ({ page }) => {
-    await expect(page.locator('.pi-fv-col')).toHaveCount(5);
+  test('shows all 5 foundation accordions', async ({ page }) => {
+    await expect(page.locator('.pil-foundation-accordion')).toHaveCount(5);
   });
 
-  test(`fullview contains all ${PILLAR_COUNT} pillar links (${PILLAR_PILL_COUNT} with shared rights pillar)`, async ({ page }) => {
-    // PILLAR_COUNT pillars + 1 shared rights card = PILLAR_PILL_COUNT
-    await expect(page.locator('a.pi-fv-pill')).toHaveCount(PILLAR_PILL_COUNT);
-  });
-
-  test('each fullview pillar pill links to a .html page', async ({ page }) => {
-    const pills = await page.locator('a.pi-fv-pill').all();
-    for (const pill of pills) {
-      const href = await pill.getAttribute('href');
-      expect(href).toMatch(/\.html$/);
+  test('all 5 foundation accordions start collapsed by default', async ({ page }) => {
+    const accordions = await page.locator('.pil-foundation-accordion').all();
+    for (const accordion of accordions) {
+      expect(await accordion.getAttribute('open')).toBeNull();
     }
   });
 
-  test('foundation headers link to foundations page', async ({ page }) => {
-    const foundations = await page.locator('a.pi-fv-foundation').all();
-    for (const f of foundations) {
-      const href = await f.getAttribute('href');
-      expect(href).toMatch(/foundations\.html#/);
-    }
+  test(`accordion grid contains all ${PILLAR_COUNT} pillar links`, async ({ page }) => {
+    await expect(page.locator('a.pil-pillar-link')).toHaveCount(PILLAR_COUNT);
   });
 
-  test('shows all 5 foundation index sections below fullview', async ({ page }) => {
-    await expect(page.locator('.pillar-index-section')).toHaveCount(5);
-  });
-
-  test(`shows all ${PILLAR_COUNT} pillar index links`, async ({ page }) => {
-    await expect(page.locator('a.pillar-index-link')).toHaveCount(PILLAR_COUNT);
-  });
-
-  test('each pillar index link points to a .html page', async ({ page }) => {
-    const links = await page.locator('a.pillar-index-link').all();
+  test('each pillar link points to a .html page', async ({ page }) => {
+    const links = await page.locator('a.pil-pillar-link').all();
     for (const link of links) {
       const href = await link.getAttribute('href');
       expect(href).toMatch(/\.html$/);
     }
+  });
+
+  test('clicking a foundation bar opens it and reveals pillar cards', async ({ page }) => {
+    const first = page.locator('.pil-foundation-accordion').first();
+    await first.locator('summary').click();
+    await expect(first).toHaveAttribute('open', '');
+    await expect(first.locator('.pil-pillar-card').first()).toBeVisible();
   });
 });
 
@@ -276,7 +264,7 @@ test.describe('Navigation', () => {
   test('pillars index → pillar page', async ({ page }) => {
     await page.goto('/pillars/index.html');
     // Verify the first link points to a .html file (href integrity)
-    const href = await page.locator('a.pillar-index-link').first().getAttribute('href');
+    const href = await page.locator('a.pil-pillar-link').first().getAttribute('href');
     expect(href).toMatch(/\.html$/);
     // Navigate directly to confirm that target page is valid
     await page.goto(`/pillars/${href}`);

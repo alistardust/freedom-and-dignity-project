@@ -430,4 +430,26 @@
     });
   }
 
+  /* ── PILLARS INDEX ACCORDION ANIMATION ─────────────── */
+  (function () {
+    if (!document.querySelector('.pil-foundation-accordion')) return;
+    document.querySelectorAll('.pil-foundation-accordion').forEach(function (details) {
+      details.addEventListener('click', function (e) {
+        if (!e.target.closest('summary')) return;
+        e.preventDefault();
+        if (details.open) {
+          const grid = details.querySelector('.pil-pillar-grid');
+          if (!grid) { details.removeAttribute('open'); return; }
+          grid.classList.add('pil-grid-closing');
+          grid.addEventListener('animationend', function () {
+            grid.classList.remove('pil-grid-closing');
+            details.removeAttribute('open');
+          }, { once: true });
+        } else {
+          details.setAttribute('open', '');
+        }
+      });
+    });
+  })();
+
 })();
