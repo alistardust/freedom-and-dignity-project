@@ -26,6 +26,7 @@ CREATE TABLE IF NOT EXISTS positions (
   seq             INTEGER NOT NULL CHECK(seq BETWEEN 1 AND 9999),
   short_title     TEXT NOT NULL CHECK(length(short_title) <= 120),
   full_statement  TEXT NOT NULL,
+  plain_language  TEXT,            -- plain-language summary (~8th grade); NULL = data gap
   is_cross_domain INTEGER NOT NULL DEFAULT 0,
   status          TEXT NOT NULL DEFAULT 'CANONICAL' CHECK(status IN ('CANONICAL','PROPOSED','DEPRECATED','REVIEW')),
   created_at      TEXT NOT NULL DEFAULT (datetime('now')),

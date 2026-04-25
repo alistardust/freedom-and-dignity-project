@@ -200,6 +200,7 @@ class PositionRecord(NamedTuple):
     section_names: dict[str, str]    # html_file_stem → section_name
     display_orders: dict[str, int]   # html_file_stem → display_order
     original_status: str
+    plain_language: str | None = None  # Phase 2: <p class="rule-plain">; NULL = data gap
 
 
 # ---------------------------------------------------------------------------
@@ -265,6 +266,11 @@ def parse_html_cards(
             title_el = card.find(["p", "h3"], class_="rule-title")
             title = title_el.get_text(strip=True) if title_el else ""
 
+            plain_el = card.find("p", class_="rule-plain")
+            plain_language: str | None = plain_el.get_text(strip=True) if plain_el else None
+            if plain_language == "":
+                plain_language = None
+
             # Determine section name from nearest ancestor section/family
             section_name = _get_section_name(card)
 
@@ -281,6 +287,7 @@ def parse_html_cards(
                     section_names={**rec.section_names, file_stem: section_name},
                     display_orders={**rec.display_orders, file_stem: display_order},
                     original_status=rec.original_status,
+                    plain_language=rec.plain_language or plain_language,
                 )
                 records[old_id] = updated
             else:
@@ -293,6 +300,7 @@ def parse_html_cards(
                     section_names={file_stem: section_name},
                     display_orders={file_stem: display_order},
                     original_status="CANONICAL",
+                    plain_language=plain_language,
                 )
 
     return records
@@ -328,20 +336,41 @@ def parse_db_items(source_db: Path) -> dict[str, PositionRecord]:
 
     # The v2 DB may not exist yet on first run — fall back gracefully.
     try:
-        for row in con.execute(
-            "SELECT id, short_title, full_statement, status FROM positions ORDER BY id"
-        ):
-            pos_id: str = row["id"]
-            records[pos_id] = PositionRecord(
-                old_id=pos_id,
-                short_title=row["short_title"] or "",
-                full_statement=row["full_statement"] or "",
-                source="db",
-                html_files=[],
-                section_names={},
-                display_orders={},
-                original_status=row["status"],
-            )
+        try:
+            rows = con.execute(
+                "SELECT id, short_title, full_statement, plain_language, status FROM positions ORDER BY id"
+            ).fetchall()
+            for row in rows:
+                pos_id: str = row["id"]
+                records[pos_id] = PositionRecord(
+                    old_id=pos_id,
+                    short_title=row["short_title"] or "",
+                    full_statement=row["full_statement"] or "",
+                    source="db",
+                    html_files=[],
+                    section_names={},
+                    display_orders={},
+                    original_status=row["status"],
+                    plain_language=row["plain_language"],
+                )
+        except sqlite3.OperationalError:
+            # plain_language column not yet in DB — fall back without it
+            rows = con.execute(
+                "SELECT id, short_title, full_statement, status FROM positions ORDER BY id"
+            ).fetchall()
+            for row in rows:
+                pos_id = row["id"]
+                records[pos_id] = PositionRecord(
+                    old_id=pos_id,
+                    short_title=row["short_title"] or "",
+                    full_statement=row["full_statement"] or "",
+                    source="db",
+                    html_files=[],
+                    section_names={},
+                    display_orders={},
+                    original_status=row["status"],
+                    plain_language=None,
+                )
     except sqlite3.OperationalError:
         # First run — no v2 DB exists yet; source entirely from HTML
         pass
@@ -372,6 +401,8 @@ def merge_sources(
         if in_html and in_db:
             h = html_records[old_id]
             d = db_records[old_id]
+            # DB plain_language wins if present; fall back to HTML
+            plain = d.plain_language or h.plain_language
             merged[old_id] = PositionRecord(
                 old_id=old_id,
                 short_title=d.short_title or h.short_title,
@@ -381,6 +412,7 @@ def merge_sources(
                 section_names=h.section_names,
                 display_orders=h.display_orders,
                 original_status=d.original_status,
+                plain_language=plain,
             )
         elif in_html:
             merged[old_id] = html_records[old_id]
@@ -607,9 +639,11 @@ def populate_db(
         try:
             con.execute(
                 """INSERT INTO positions
-                   (id, domain, subdomain, seq, short_title, full_statement, is_cross_domain, status)
-                   VALUES (?,?,?,?,?,?,?,?)""",
-                (new_id, new_dom, new_sub, seq, short_title, full_statement, is_xd, status),
+                   (id, domain, subdomain, seq, short_title, full_statement,
+                    plain_language, is_cross_domain, status)
+                   VALUES (?,?,?,?,?,?,?,?,?)""",
+                (new_id, new_dom, new_sub, seq, short_title, full_statement,
+                 rec.plain_language, is_xd, status),
             )
             counts["positions"] += 1
         except sqlite3.IntegrityError as exc:
