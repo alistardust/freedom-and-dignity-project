@@ -66,14 +66,14 @@ section { padding: 4.5rem 0; }
   .wrap-wide { max-width: 1400px; }
   .page-hero { padding: 3rem 2rem 3.5rem; }
   .hero-logo-wrap { margin-bottom: 1.5rem; }
-  .hero-logo-wrap img { width: 120px; height: 120px; }
+  .hero-logo-wrap img { width: 72px; height: 72px; }
   section { padding: 3.5rem 0; }
 }
 @media (min-width: 2000px) {
   .wrap      { max-width: 1300px; }
   .wrap-wide { max-width: 1700px; }
   .page-hero { padding: 2.5rem 2rem 3rem; }
-  .hero-logo-wrap img { width: 110px; height: 110px; }
+  .hero-logo-wrap img { width: 64px; height: 64px; }
   section { padding: 3rem 0; }
 }
 @media (min-width: 2560px) {
@@ -225,7 +225,7 @@ section { padding: 4.5rem 0; }
 /* ── HERO (shared) ────────────────────────────────────── */
 .page-hero {
   background: var(--navy);
-  padding: 5rem 2rem 5.5rem;
+  padding: 3rem 2rem 3.5rem;
   text-align: center;
   position: relative; overflow: hidden;
 }
@@ -242,13 +242,13 @@ section { padding: 4.5rem 0; }
     radial-gradient(ellipse at 50% 0%,   rgba(201,149,42,.12) 0%, transparent 55%),
     radial-gradient(ellipse at 50% 100%, rgba(191,10,48,.10)  0%, transparent 60%);
 }
-.hero-logo-wrap { margin-bottom: 2.25rem; display: inline-block; position: relative; z-index: 1; }
-.hero-logo-wrap img { width: 148px; height: 148px; }
+.hero-logo-wrap { margin-bottom: 1rem; display: inline-block; position: relative; z-index: 1; }
+.hero-logo-wrap img { width: 80px; height: 80px; }
 .hero-eyebrow {
   font-family: 'Oswald', sans-serif;
   font-size: .68rem; font-weight: 500;
   letter-spacing: .3em; text-transform: uppercase;
-  color: var(--gold-light); margin-bottom: 1.4rem;
+  color: var(--gold-light); margin-bottom: .9rem;
   position: relative; z-index: 1;
 }
 .hero-title {
@@ -264,7 +264,7 @@ section { padding: 4.5rem 0; }
   font-size: clamp(1.1rem, 2.8vw, 1.5rem);
   font-style: italic; font-weight: 400;
   color: rgba(255,255,255,.72);
-  max-width: 36rem; margin: 1.8rem auto 0;
+  max-width: 36rem; margin: 1.1rem auto 0;
   line-height: 1.6; position: relative; z-index: 1;
 }
 .hero-statement.strong {
@@ -274,7 +274,7 @@ section { padding: 4.5rem 0; }
 }
 .hero-divider {
   display: flex; align-items: center; justify-content: center; gap: .8rem;
-  margin: 1.8rem auto; position: relative; z-index: 1;
+  margin: 1.2rem auto; position: relative; z-index: 1;
 }
 .hero-divider::before, .hero-divider::after {
   content: ''; display: block; width: 4rem; height: 1px; background: rgba(255,255,255,.2);
@@ -285,15 +285,15 @@ section { padding: 4.5rem 0; }
 .hero-mission {
   font-size: clamp(.95rem, 1.8vw, 1.08rem);
   max-width: 620px;
-  margin: 1.5rem auto 1rem;
+  margin: .9rem auto .6rem;
   line-height: 1.75;
   color: rgba(255,255,255,.82);
   position: relative; z-index: 1;
 }
 .hero-declaration {
   max-width: 560px;
-  margin: 0 auto 1.8rem;
-  padding: 1.1rem 1.4rem 1.1rem 1.6rem;
+  margin: 0 auto 1.1rem;
+  padding: .9rem 1.2rem .9rem 1.4rem;
   border-left: 3px solid var(--gold);
   background: rgba(255,255,255,.06);
   border-radius: 0 4px 4px 0;
@@ -314,7 +314,30 @@ section { padding: 4.5rem 0; }
   letter-spacing: .02em;
 }
 
-/* ── PULLQUOTE ────────────────────────────────────────── */
+/* ── HERO HOOK (scroll invitation) ───────────────────── */
+.hero-hook {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(1.15rem, 2.6vw, 1.45rem);
+  font-style: italic;
+  color: rgba(255,255,255,.6);
+  margin: 1.5rem auto 0;
+  position: relative; z-index: 1;
+  letter-spacing: .01em;
+}
+.hero-hook-scroll {
+  display: block;
+  margin-top: .6rem;
+  font-style: normal;
+  font-size: .95rem;
+  color: rgba(255,255,255,.25);
+  animation: hook-bob 2s ease-in-out infinite;
+}
+@keyframes hook-bob {
+  0%, 100% { transform: translateY(0); opacity: .25; }
+  50%       { transform: translateY(5px); opacity: .5; }
+}
+
+
 .pullquote {
   margin: 2.5rem 0; padding: 1.4rem 1.5rem;
   border-left: 5px solid var(--gold);
@@ -634,48 +657,87 @@ section { padding: 4.5rem 0; }
 .btn-primary { display: inline-block; font-family: 'Oswald', sans-serif; font-size: .85rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--cream); background: var(--red); padding: .7em 1.8em; text-decoration: none; transition: background .18s, color .18s; }
 .btn-primary:hover { background: var(--red-deep); }
 
-/* ── CTA PIN (FDR-style campaign button) ─────────────── */
-.hero-cta-group {
-  display: flex; flex-direction: column; align-items: center;
-  gap: 1.25rem; margin-top: 2.5rem; position: relative; z-index: 1;
-}
+/* ── CTA PIN (campaign button — pinned to the side of the hero) ─── */
 .cta-pin {
+  /* Absolute position: float to the upper-right of the hero */
+  position: absolute;
+  top: clamp(2.5rem, 9%, 6rem);
+  right: clamp(1.25rem, 5vw, 5.5rem);
+
   display: flex; align-items: center; justify-content: center;
   width: 140px; height: 140px; border-radius: 50%;
-  background: var(--red);
-  box-shadow: 0 6px 24px rgba(0,0,0,.4), 0 0 0 5px rgba(255,255,255,.15), inset 0 1px 0 rgba(255,255,255,.2);
+
+  /* Navy outer ring, parchment border edge */
+  background: var(--navy);
+  border: 6px solid var(--parchment);
+
+  /* Angled drop shadow — looks raised off the fabric */
+  box-shadow:
+    4px 12px 30px rgba(0,0,0,.55),
+    0 0 0 3px rgba(201,149,42,.45),
+    inset 0 2px 0 rgba(255,255,255,.15);
+
+  /* The tilt — as if someone pinned it casually */
+  transform: rotate(-10deg);
+
   text-decoration: none;
-  transition: transform .2s, box-shadow .2s;
-  flex-shrink: 0;
+  transition: transform .25s cubic-bezier(.34,1.56,.64,1), box-shadow .2s;
+  z-index: 10;
 }
+
+/* The clasp — tiny gold circle at the top of the pin */
+.cta-pin::before {
+  content: '';
+  position: absolute;
+  top: -9px; left: 50%;
+  transform: translateX(-50%);
+  width: 11px; height: 11px;
+  background: var(--gold);
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0,0,0,.5);
+}
+
 .cta-pin:hover {
-  transform: scale(1.07);
-  box-shadow: 0 12px 36px rgba(0,0,0,.5), 0 0 0 5px rgba(255,255,255,.25), inset 0 1px 0 rgba(255,255,255,.2);
+  transform: rotate(-6deg) scale(1.07);
+  box-shadow:
+    6px 18px 40px rgba(0,0,0,.6),
+    0 0 0 3px rgba(201,149,42,.7),
+    inset 0 2px 0 rgba(255,255,255,.15);
 }
+
 .cta-pin-inner {
   display: flex; flex-direction: column; align-items: center; justify-content: center;
-  width: 112px; height: 112px; border-radius: 50%;
-  background: var(--cream);
+  width: 114px; height: 114px; border-radius: 50%;
+  background: radial-gradient(ellipse at 38% 35%, #f8f0d6, var(--parchment));
+  border: 2px solid rgba(10,34,64,.3);
   text-align: center; padding: .75rem;
-  border: 2px solid rgba(191,10,48,.18);
 }
+
 .cta-pin-primary {
   display: block;
   font-family: 'Oswald', sans-serif; font-size: .95rem; font-weight: 700;
   text-transform: uppercase; letter-spacing: .07em;
   color: var(--navy); line-height: 1.1; margin-bottom: .3rem;
 }
+
 .cta-pin-secondary {
   display: block;
   font-family: 'Playfair Display', Georgia, serif;
   font-size: .7rem; font-style: italic;
   color: var(--red); line-height: 1.3;
 }
+
+@media (max-width: 900px) {
+  .cta-pin { width: 110px; height: 110px; right: 1rem; }
+  .cta-pin-inner { width: 88px; height: 88px; }
+}
+
 @media (max-width: 640px) {
-  .cta-pin { width: 110px; height: 110px; }
-  .cta-pin-inner { width: 86px; height: 86px; }
-  .cta-pin-primary { font-size: .82rem; }
-  .cta-pin-secondary { font-size: .62rem; }
+  .cta-pin { width: 84px; height: 84px; right: .5rem; top: 1.25rem; border-width: 4px; }
+  .cta-pin-inner { width: 67px; height: 67px; padding: .4rem; }
+  .cta-pin-primary { font-size: .72rem; }
+  .cta-pin-secondary { font-size: .58rem; }
+  .cta-pin::before { width: 8px; height: 8px; top: -6px; }
 }
 .btn-outline { display: inline-block; font-family: 'Oswald', sans-serif; font-size: .85rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; padding: .7em 1.8em; text-decoration: none; transition: background .18s, color .18s, border-color .18s; color: #fff; border: 2px solid rgba(255,255,255,.5); }
 .btn-outline:hover { background: rgba(255,255,255,.12); border-color: #fff; color: #fff; }
