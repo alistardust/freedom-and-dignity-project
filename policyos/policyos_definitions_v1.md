@@ -256,22 +256,191 @@ durability floor of Value 11 (Durability Against Capture and Neglect).
 
 ---
 
-## Terms reserved for future definition
+### DEFN-PINT-0001 — Public interest
 
-The following terms appear in PolicyOS documents and are expected to need
-formal definitions. They are listed here to reserve their IDs and flag them
-for the next definition cycle.
+**"Public interest"** is not identical to the preferences of the current
+majority. Public interest means the conditions required for all persons to
+live with dignity, exercise real liberty, and participate meaningfully in
+democratic life — including persons whose interests are routinely subordinated
+by majority preference, market outcomes, or institutional inertia.
 
-| ID | Term | Where it appears |
-|---|---|---|
-| `DEFN-PINT-0001` | Public interest | REGD principles, Value 5 |
-| `DEFN-DLEG-0001` | Democratic legitimacy | FEDR/KERN principles |
-| `DEFN-RCRS-0001` | Meaningful recourse | Values 2, 10; KERN principles |
-| `DEFN-BURD-0001` | Undue burden | Value 2, access standards |
-| `DEFN-DOMN-0001` | Domination | Value 3, KERN principles |
-| `DEFN-SFGD-0001` | Real safeguard vs. gatekeeping | REGD principles |
-| `DEFN-PROX-0001` | Proximate cause (policy) | HARM operationalization |
-| `DEFN-ENFC-0001` | Meaningful enforcement | Values 10, 11 |
+A claim of public interest is not self-validating. To satisfy this definition,
+a public interest claim must:
+
+1. identify the population whose conditions it is meant to improve or protect;
+2. be assessable against actual outcomes, not merely stated intentions;
+3. be distinguishable from the private interests of the actors making the claim.
+
+Appeals to "the public interest" that would systematically exclude, deprioritize,
+or subordinate the interests of identifiable populations — particularly historically
+marginalized populations — are not public interest claims within this framework.
+They are majority-interest claims requiring independent justification.
+
+---
+
+### DEFN-DLEG-0001 — Democratic legitimacy
+
+**"Democratic legitimacy"** is the property of a decision, rule, or institution
+whose authority derives from and remains genuinely answerable to the people it
+governs.
+
+Democratic legitimacy is not satisfied by:
+
+- formal electoral connection alone, where that connection is attenuated,
+  distorted, or inaccessible to affected populations
+- technical expertise without accountability to the governed
+- historical tradition that has not been meaningfully reaffirmed by current
+  democratic process
+- market outcomes presented as neutral or voluntary
+
+Democratic legitimacy requires that the people subject to a decision have had
+meaningful opportunities to participate in or contest it, that the decision
+reflects something other than the capture of decision-making by narrow interests,
+and that the decision-maker remains subject to genuine accountability.
+
+Rules or institutions that cannot survive democratic scrutiny by the populations
+most affected by them do not hold democratic legitimacy regardless of their
+procedural origins.
+
+---
+
+### DEFN-RCRS-0001 — Meaningful recourse
+
+**"Meaningful recourse"** is the practical ability of an affected person to
+challenge a decision, harm, or denial and obtain a genuine remedy.
+
+Recourse is not meaningful when:
+
+- the cost of accessing it — in money, time, documentation, expertise, or
+  psychological burden — is designed or systematically operates to deter
+  or exhaust legitimate claims before they are heard on the merits;
+- the process produces review without remedy, or acknowledgment without
+  correction;
+- the decision-maker reviewing the challenge has a structural interest in
+  the original decision being upheld;
+- delay functions as effective denial.
+
+This definition is consistent with `DEFN-ACCT-0001` (Meaningful accountability).
+Accountability systems that do not provide meaningful recourse to affected persons
+fail both definitions simultaneously.
+
+---
+
+### DEFN-BURD-0001 — Undue burden
+
+**"Undue burden"** is a condition, requirement, cost, or procedural obstacle
+that in practice prevents a significant number of persons with a legal right,
+entitlement, or protected interest from exercising it — regardless of whether
+formal access exists on paper.
+
+A burden is undue if it functions as a de facto denial for identifiable
+populations, even if technically available to all. The relevant test is not
+whether a burden is theoretically survivable by the most-resourced potential
+claimants, but whether it systematically forecloses access for persons who
+are the intended beneficiaries of the right or entitlement at issue.
+
+Burdens that disproportionately fall on persons who are poor, disabled,
+unrepresented, non-English-speaking, or in institutional care require
+heightened scrutiny under this definition, because those populations are
+most likely to hold unmet needs and least likely to be able to overcome
+procedural obstacles independently.
+
+---
+
+### DEFN-DOMN-0001 — Domination
+
+**"Domination"** is a relationship in which one party holds sufficient power
+over another to constrain their choices, impose costs on them, or determine
+the material conditions of their life in ways the subordinate party cannot
+effectively resist or exit.
+
+Domination does not require overt coercion. A relationship is dominatory
+when the weaker party must comply not because they have genuinely consented
+but because real alternatives are absent or have been rendered prohibitively
+costly. Economic domination — including employer domination of workers,
+landlord domination of tenants, creditor domination of debtors — is covered
+by this definition.
+
+Domination is related to but distinguishable from coercion (see `DEFN-COER-0001`)
+and concentrated power (see `DEFN-CPOW-0001`). Concentrated power is a
+structural condition; domination is a relational one. A domination relationship
+can exist between individual actors; concentrated power typically describes
+a systemic state.
+
+---
+
+### DEFN-SFGD-0001 — Real safeguard vs. gatekeeping
+
+A **"real safeguard"** is a protective mechanism that materially reduces harm
+and preserves genuine access for persons with legitimate claims, assessed by
+what it actually produces — not what it claims to do.
+
+**"Gatekeeping"** is a mechanism that uses the form of a safeguard to restrict,
+delay, or deny access in ways that primarily serve the interests of the
+gatekeeper or the party being nominally regulated rather than the stated
+protective purpose.
+
+The distinction matters because bad-faith actors routinely convert safeguards
+into gatekeeping. PolicyOS tests for this by asking:
+
+1. **Who bears the burden?** If the mechanism's burdens fall primarily on
+   persons seeking protection — not on the actors creating the risk — it is
+   presumptively gatekeeping.
+2. **Who benefits from delay or denial?** If the primary beneficiary of
+   non-resolution is the powerful party rather than the person the mechanism
+   claims to protect, it is presumptively gatekeeping.
+3. **Does the mechanism actually reduce the harm it claims to address?**
+   If outcomes show that the mechanism produces denial at scale without
+   material reduction in the targeted harm, it is gatekeeping regardless
+   of its formal designation.
+
+See also `DEFN-GFTH-0001` (Good faith / bad faith).
+
+---
+
+### DEFN-PROX-0001 — Proximate cause (policy)
+
+In policy analysis, **"proximate cause"** means a policy choice was a materially
+contributing factor in a harm that would not have occurred — or would have been
+significantly reduced in frequency or severity — in the absence of that policy.
+
+This definition uses a looser standard than strict legal proximate cause. A
+policy that foreseeably creates conditions under which harm is systematically
+produced is a proximate cause even if:
+
+- the actual harm was inflicted by a third party;
+- the policy did not intend the harm;
+- the harm could theoretically have been prevented by intervening action.
+
+The test is foreseeability and material contribution, not intent or direct
+physical causation. Policies that systematically expose identifiable populations
+to predictable harms — through design, omission, or enforcement failure —
+are proximate causes of those harms for purposes of PolicyOS review and
+platform accountability standards.
+
+---
+
+### DEFN-ENFC-0001 — Meaningful enforcement
+
+**"Meaningful enforcement"** requires all of the following:
+
+1. **Authority**: an actor with genuine legal power to enforce the rule.
+2. **Will**: an actor with demonstrated institutional commitment to use that
+   power, assessed by past conduct rather than stated intent.
+3. **Information**: access to accurate, timely information about violations
+   that does not depend entirely on self-reporting by the regulated actor.
+4. **Consequence**: penalties or remedies that materially affect violator
+   behavior — not merely symbolic or easily priced into routine conduct.
+5. **Access**: a process that does not systematically deter, exhaust, or
+   suppress legitimate complaints before they reach substantive review.
+
+Enforcement that is systematically selective, under-resourced, capture-prone,
+or designed to produce nominal compliance without behavioral change fails this
+definition.
+
+This definition is related to `DEFN-ACCT-0001` (Meaningful accountability)
+and `DEFN-RCRS-0001` (Meaningful recourse). Accountability without meaningful
+enforcement is symbolic. Recourse without meaningful enforcement is theater.
 
 ---
 

@@ -54,6 +54,15 @@ Terms directly operative in this document:
 - **Deprivation** — `DEFN-DEPR-0001`
 - **Meaningful accountability** — `DEFN-ACCT-0001`
 - **Capture** — `DEFN-CAPT-0001`
+- **Concentrated power** — `DEFN-CPOW-0001`
+- **Good faith / bad faith** — `DEFN-GFTH-0001`
+- **Domination** — `DEFN-DOMN-0001`
+- **Public interest** — `DEFN-PINT-0001`
+- **Democratic legitimacy** — `DEFN-DLEG-0001`
+- **Meaningful recourse** — `DEFN-RCRS-0001`
+- **Undue burden** — `DEFN-BURD-0001`
+- **Real safeguard vs. gatekeeping** — `DEFN-SFGD-0001`
+- **Meaningful enforcement** — `DEFN-ENFC-0001`
 
 ## The values
 
