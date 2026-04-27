@@ -207,6 +207,23 @@
 
   <p>These safeguards are documented in the project's <a href="https://github.com/alistardust/freedom-and-dignity-project/blob/main/.github/copilot-instructions.md">Copilot Instructions</a> — the standing rules that govern how AI is used to build and maintain this platform. They are public, reviewable, and updated as the project evolves.</p>
 
+  <h2>AI as Scaffold, Not Foundation</h2>
+  <p><strong>AI got this project off the ground. That is not where it stays.</strong></p>
+
+  <p>Using AI to bootstrap this platform was a deliberate choice made under real constraints. One person could not have organized <span data-dynamic="pillar-count">25</span> policy pillars, thousands of canonical positions, a structured policy catalog, and a full website without it. The alternative was not a better platform — the alternative was no platform at all.</p>
+
+  <p>But scaffolding is not the same as structure. The goal was never to publish an AI-generated political document and call it finished. The goal is a human-authored platform — one where real contributors have read, challenged, improved, and rewritten everything that matters. AI produced the first draft. Human judgment replaces it.</p>
+
+  <p><strong>What that means in practice:</strong></p>
+  <ul>
+    <li>Every section of this platform is subject to human review, revision, and replacement. AI-generated prose is a starting point, not a final product.</li>
+    <li>As the contributor community grows, AI-generated content will be progressively replaced with human-authored text — pillar by pillar, section by section.</li>
+    <li>Policy positions will be reviewed, debated, and refined by contributors who bring domain expertise, lived experience, and political judgment that no AI system has.</li>
+    <li>AI use will be actively reduced over time. The long-term role for AI in this project — if it has one at all — is limited to background tasks: research synthesis, data organization, citation checking, and structural analysis. Not drafting policy. Not making arguments. Not doing politics.</li>
+  </ul>
+
+  <p>This platform was built by AI assistance to make human authorship possible at scale. The AI's job is to close the resource gap that would otherwise make this work impossible for anyone without institutional backing. Everything AI produced is a starting draft, pending replacement by the people this project is actually for.</p>
+
   <div class="ai-footnotes" id="ai-page-refs">
     <p class="fn-head">References</p>
     <p id="fn-nist">[1] National Institute of Standards and Technology. (2023). <em>Artificial Intelligence Risk Management Framework (AI RMF 1.0)</em>. U.S. Department of Commerce. <a href="https://www.nist.gov/itl/ai-risk-management-framework">https://www.nist.gov/itl/ai-risk-management-framework</a></p>
@@ -231,7 +248,7 @@
   </div>
 
   <h2>Models and Tools Used</h2>
-  <p>This project was built primarily using <strong>GitHub Copilot CLI</strong> as the AI development interface, routing interactions through GitHub's Copilot infrastructure. Earlier phases of the project also used <strong>ChatGPT</strong> (OpenAI's web interface at chat.openai.com) and <strong>GitHub Copilot</strong> in its editor and web forms before the CLI-centered workflow was established. The following AI models were used at different stages of the work:</p>
+  <p>This project was built primarily using <strong>GitHub Copilot CLI</strong> as the AI development interface, routing interactions through GitHub's Copilot infrastructure. A parallel <strong>GitHub Copilot Codex CLI</strong> workflow was added later, used for PolicyOS system-rules research and cross-model verification. Earlier phases of the project also used <strong>ChatGPT</strong> (OpenAI's web interface at chat.openai.com) and <strong>GitHub Copilot</strong> in its editor and web forms before the CLI-centered workflow was established. The following AI models were used at different stages of the work:</p>
 
   <div class="ai-note" style="margin-bottom:1.25rem">
     <strong>A note on completeness:</strong> The model tracking below reflects best-effort documentation. Earlier ChatGPT and Copilot web interactions were not always logged with specific model versions. Some model interactions — particularly during early project development — may not be fully captured here. This list is as complete as available records allow; it will be updated as the project continues.
@@ -256,17 +273,17 @@
     <div class="ai-model-card secondary">
       <div class="amc-vendor">OpenAI</div>
       <div class="amc-name">GPT-4.1</div>
-      <div class="amc-role">Available for cross-model validation and tasks where a second model perspective improves accuracy or catches blind spots.</div>
+      <div class="amc-role">Cross-model validation and tasks where a second model perspective improves accuracy or catches blind spots.</div>
     </div>
-    <div class="ai-model-card available">
+    <div class="ai-model-card secondary">
       <div class="amc-vendor">OpenAI</div>
-      <div class="amc-name">GPT-5 / GPT-5.4</div>
-      <div class="amc-role">Available for adversarial cross-checks and tasks where model diversity reduces the risk of systematic errors or shared hallucinations.</div>
+      <div class="amc-name">GPT-5.4</div>
+      <div class="amc-role">Adversarial cross-checks, high-stakes policy review, and tasks where model diversity reduces the risk of systematic errors or shared hallucinations. Actively used via GitHub Copilot CLI.</div>
     </div>
-    <div class="ai-model-card available">
+    <div class="ai-model-card secondary">
       <div class="amc-vendor">OpenAI</div>
       <div class="amc-name">GPT-5.3-Codex / GPT-5.2-Codex</div>
-      <div class="amc-role">Available for code-focused analysis, technical audits, and cross-model verification of website and data pipeline logic.</div>
+      <div class="amc-role">PolicyOS system-rules research, code-focused analysis, technical audits, and cross-model verification. Used via GitHub Copilot Codex CLI running in parallel with the primary Copilot CLI workflow.</div>
     </div>
     <div class="ai-model-card available">
       <div class="amc-vendor">OpenAI — Web Interface</div>

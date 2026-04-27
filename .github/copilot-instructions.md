@@ -86,6 +86,29 @@ Do not hand-edit `data/policy_catalog_v2.sqlite`.
 
 ---
 
+## PolicyOS
+
+PolicyOS is the cross-platform system-rules layer being developed in parallel with the pillar policy content. All PolicyOS research and drafts live in:
+
+```
+data/pillar_reports/by_mapping/policyos_research/
+```
+
+The current hierarchy (as of April 2026):
+
+1. **Platform values** — `policyos_platform_values_v1.md` — the moral/political anchor for all rules. Uses a `floor + duty` model (what policy must not violate vs. what it must actively secure). **Locked.**
+2. **System principles** — `policyos_1_0_rules_proposal.md` — cross-platform design rules (KERN/GEOG/FEDR/REGD/ENFA/AIGV families). Under review.
+3. **Authoring OS** — `policyos_authoring_os_v1.md` — how policy must be written, tested, scoped, enforced, and maintained (NORM/AUTH/TEST/ENFC/PLAC/MAINT families). Under review.
+
+For the most current status and next steps, read the handoff file: `policyos_research/copilot_handoff_2026-04-26.md`.
+
+PolicyOS rules use the ID prefix `PLOS-` and `PAOS-`. Do not conflate them with pillar policy positions (`XXXX-XXXX-0000`).
+
+Do not canonicalize PolicyOS rules into `system_rules.md` or the DB until the structural review is complete and approved.
+
+---
+
+
 ## Documentation maintenance
 
 Any commit that changes the following **must** update the relevant repo documentation in the same commit:
