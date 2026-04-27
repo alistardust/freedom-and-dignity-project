@@ -20,7 +20,7 @@ The structured policy catalog is stored in SQLite so it can support both editori
 
 ### v2 ID format
 
-Policy position IDs follow the pattern `XXXX-XXXX-0000` (regex: `^[A-Z]{4}-[A-Z]{4}-[0-9]{4}$`), e.g. `HLTH-COVR-0001`. See `overview/policy-id-schema.md` for the full specification.
+Policy position IDs follow the pattern `XXXX-XXXX-0000` (regex: `^[A-Z]{4}-[A-Z]{4}-[0-9]{4}$`), e.g. `HLTH-COVR-0001`. See `data/policy-id-schema.md` for the full specification.
 
 ### Tables
 
@@ -64,14 +64,13 @@ Provenance for every position is preserved in `legacy_id_map`: each row records 
 
 ## Research reports (`data/pillar_reports/`)
 
-This directory contains:
+This directory contains per-pillar policy audit reports, scope analysis CSVs,
+and reconciliation reports. It does not contain PolicyOS documents — those live
+in `policyos/` at the repo root.
 
-- `by_mapping/` — per-pillar policy audit reports, scope analysis, and the PolicyOS research directory
-  - `by_mapping/policyos_research/` — PolicyOS system-rules research (values layer, principles layer, authoring OS, handoff files)
 - `citation-audit.md` — full citation audit across all 25 pillar HTML files
 - `migration-report.md` — HTML ↔ DB reconciliation report (most recent build)
 - `human_report.md` — human-readable reconciliation summary
-
 
 The structured policy catalog is stored in SQLite so it can support both editorial work now and a website-backed data model later.
 
@@ -93,7 +92,7 @@ The structured policy catalog is stored in SQLite so it can support both editori
 
 ### v2 ID format
 
-Policy position IDs follow the pattern `XXXX-XXXX-0000` (regex: `^[A-Z]{4}-[A-Z]{4}-[0-9]{4}$`), e.g. `HLTH-COVR-0001`. See `overview/policy-id-schema.md` for the full specification.
+Policy position IDs follow the pattern `XXXX-XXXX-0000` (regex: `^[A-Z]{4}-[A-Z]{4}-[0-9]{4}$`), e.g. `HLTH-COVR-0001`. See `data/policy-id-schema.md` for the full specification.
 
 ### Tables
 

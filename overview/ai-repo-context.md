@@ -10,7 +10,7 @@ Instruction files should stay short and stable. Put durable behavioral rules in:
 
 Put changing repository context in normal repo documentation like this file.
 
-Changes to Copilot-specific instruction files should be routed through `overview/copilot-instructions-reconciliation-request.md` rather than edited directly in this workflow.
+Changes to Copilot-specific instruction files should be made directly in `.github/copilot-instructions.md` and `~/.copilot/copilot-instructions.md`, keeping both in sync.
 
 ## Current project shape
 

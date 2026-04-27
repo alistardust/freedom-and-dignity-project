@@ -91,7 +91,7 @@ Do not hand-edit `data/policy_catalog_v2.sqlite`.
 PolicyOS is the cross-platform system-rules layer being developed in parallel with the pillar policy content. All PolicyOS research and drafts live in:
 
 ```
-data/pillar_reports/by_mapping/policyos_research/
+policyos/
 ```
 
 The current hierarchy (as of April 2026):
@@ -100,7 +100,7 @@ The current hierarchy (as of April 2026):
 2. **System principles** — `policyos_1_0_rules_proposal.md` — cross-platform design rules (KERN/GEOG/FEDR/REGD/ENFA/AIGV families). Under review.
 3. **Authoring OS** — `policyos_authoring_os_v1.md` — how policy must be written, tested, scoped, enforced, and maintained (NORM/AUTH/TEST/ENFC/PLAC/MAINT families). Under review.
 
-For the most current status and next steps, read the handoff file: `policyos_research/copilot_handoff_2026-04-26.md`.
+For the most current status and next steps, read the handoff file: `policyos/copilot_handoff_2026-04-26.md`.
 
 PolicyOS rules use the ID prefix `PLOS-` and `PAOS-`. Do not conflate them with pillar policy positions (`XXXX-XXXX-0000`).
 

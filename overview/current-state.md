@@ -120,11 +120,11 @@ To rebuild: `python3 scripts/build-catalog-v2.py`
 
 System-rules layer in development. Three-layer hierarchy:
 
-1. **Platform values** — `data/pillar_reports/by_mapping/policyos_research/policyos_platform_values_v1.md`
-2. **System principles** — `data/pillar_reports/by_mapping/policyos_research/policyos_1_0_rules_proposal.md`
-3. **Authoring OS** — `data/pillar_reports/by_mapping/policyos_research/policyos_authoring_os_v1.md`
+1. **Platform values** — `policyos/policyos_platform_values_v1.md`
+2. **System principles** — `policyos/policyos_1_0_rules_proposal.md`
+3. **Authoring OS** — `policyos/policyos_authoring_os_v1.md`
 
-See the handoff file and README in `data/pillar_reports/by_mapping/policyos_research/` for current status.
+See the handoff file and README in `policyos/` for current status.
 
 ## Known open items
 
