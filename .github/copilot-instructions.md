@@ -2,20 +2,26 @@
 
 ## Project context
 
-This repository is an active U.S. policy platform in development. It is organized around 25 policy pillars grouped into 5 foundations. The live site is at https://alistardust.github.io/freedom-and-dignity-project/.
+This repository is an active U.S. policy platform in development. The live site is at https://alistardust.github.io/freedom-and-dignity-project/.
+
+For current pillar counts, foundation structure, and corpus inventory, read `overview/current-state.md` before making structural changes. Do not hardcode counts from this file — verify them from the repository.
 
 The policy corpus is primarily maintained in:
 
-- `docs/pillars/*.html` — live policy card HTML (2,935 `.policy-card` elements)
-- `data/policy_catalog_v2.sqlite` — structured policy position catalog (2,783 positions, v2 ID format)
+- `docs/pillars/*.html` — live policy card HTML
+- `data/policy_catalog_v2.sqlite` — structured policy position catalog (v2 ID format)
 - `pillars/` — narrative prose markdown (overview and policy sections per pillar)
 
-The following files are historical source material, retained for provenance, and still referenced during catalog rebuilds:
+The following files are historical source material, retained for provenance and still referenced during catalog rebuilds:
 
 - `sources/branch_branch_political_project_main.txt`
 - `sources/branch_political_project_brainstorm.txt`
 
-The markdown under `pillars/` may lag behind the site HTML. Read `overview/current-state.md` before making structural changes.
+The markdown under `pillars/` may lag behind the site HTML.
+
+For shared repository context, provenance notes, and maintenance expectations, also read `overview/ai-repo-context.md`.
+
+---
 
 ## Source of truth
 
@@ -23,8 +29,8 @@ The markdown under `pillars/` may lag behind the site HTML. Read `overview/curre
 
 The site HTML and the DB have both been edited since last reconciliation. Neither auto-overrides the other.
 
-- **Site HTML** (`docs/pillars/*.html`, 2,935 policy cards) — the most recently edited content
-- **DB** (`data/policy_catalog_v2.sqlite`, 2,783 `positions`) — structured catalog; some entries not yet on site; some site cards not yet in DB
+- **Site HTML** (`docs/pillars/*.html`) — the most recently edited content
+- **DB** (`data/policy_catalog_v2.sqlite`) — structured catalog; some entries not yet on site; some site cards not yet in DB
 - **Divergences are flagged for human review.** Do not auto-resolve them.
 - `MISSING` in the DB does not reliably mean the position is absent from the site.
 
@@ -40,6 +46,8 @@ Once the reconciliation audit is complete:
 - New positions are authored in the DB first, then the site is regenerated at build time
 
 Do **not** assume the current pillar files are complete.
+
+---
 
 ## Working with IDs and the catalog
 
@@ -58,12 +66,16 @@ scripts/build-catalog-v2.py
 
 Do not hand-edit `data/policy_catalog_v2.sqlite`.
 
+---
+
 ## Known context-sensitive edge cases
 
 - Some migration-map rows in the chats are stale relative to later canonical IDs.
 - Some IDs appear only as future placeholders or optional variants and should not be promoted automatically.
 - Some structured IDs were identified only in prose and had to be seeded into the catalog from context (`TAXN-TAXS-0001`, `ADMN-CHVS-0001`, `ADMN-AGYS-0001`, `HLTH-TRLS-0001`).
 - Some unresolved prose-only IDs may represent future work rather than canon; check the surrounding chat context before formalizing them.
+
+---
 
 ## Editing guidance
 
@@ -80,13 +92,12 @@ Any commit that changes the following **must** update the relevant repo document
 
 - Pillar count or structure → update `overview/current-state.md` pillar registry + `README.md`
 - Policy card count or schema → update `data/README.md` + `overview/current-state.md`
-- DB schema changes → update `data/README.md` + `system_rules.md` counts
+- DB schema changes → update `data/README.md` + `system_rules.md`
 - New architectural decisions → update `.github/copilot-instructions.md` + `overview/current-state.md`
 - New scripts or tooling → update `README.md` "Scripts" section
 
-"Repo documentation" means: `README.md`, `system_rules.md`, `overview/*.md`, `data/README.md`, `.github/copilot-instructions.md`.  
-"Docs" (without "repo") means the website in the `docs/` directory.  
-Never confuse the two.
+"Repo documentation" means: `README.md`, `system_rules.md`, `overview/*.md`, `data/README.md`, `.github/copilot-instructions.md`.
+"Docs" (without "repo") means the website in the `docs/` directory. Never confuse the two.
 
 ---
 
@@ -94,48 +105,7 @@ Never confuse the two.
 
 This project holds itself to the standard of a published policy document. Every factual claim, statistic, poll result, legal reference, and externally sourced assertion **must be cited**.
 
-### Inline format
-
-Use Wikipedia-style numbered annotations inline in HTML and Markdown:
-
-```
-Universal healthcare is associated with better population outcomes.[1]
-```
-
-The `[1]` links to (or corresponds to) the numbered entry in the References section at the bottom of the page or document. In HTML, render as:
-
-```html
-<sup><a href="#fn1" id="ref1">[1]</a></sup>
-```
-
-### Reference list format (APA 7th edition)
-
-All reference lists use **APA 7th edition**. Key formats:
-
-**News article:**
-```
-Author, A. A. (Year, Month Day). Title of article. *Publication Name*. https://url
-```
-
-**Government report / agency publication:**
-```
-Agency Name. (Year). *Title of report* (Report No. if applicable). https://url
-```
-
-**Academic journal article:**
-```
-Author, A. A., & Author, B. B. (Year). Title of article. *Journal Name*, *Volume*(Issue), pages. https://doi.org/xxxxx
-```
-
-**Webpage with no author:**
-```
-Title of page. (Year, Month Day). *Organization Name*. https://url
-```
-
-**Federal statute (public domain):**
-```
-Name of Act, Pub. L. No. XXX-XX, § X, XX Stat. XXX (Year). https://url
-```
+Use Wikipedia-style numbered inline annotations (e.g., `[1]`) and APA 7th edition reference lists. For HTML/Markdown formatting details and APA format examples, see `CODING_STANDARDS.md`.
 
 ### What must be cited
 
@@ -164,94 +134,56 @@ Prefer sources in this order:
 
 ## Copyright and plagiarism safeguards
 
-This project is committed to originality, proper attribution, and full compliance with copyright law. These rules are non-negotiable.
-
-### Core rules
-
-**Never reproduce substantial verbatim text from copyrighted sources.** Quote sparingly — one or two sentences at most — and only when the exact wording matters. Always paraphrase and synthesize; always cite.
-
-**Facts and statistics are not copyrightable.** The number itself (e.g., "the top 1% hold 30% of U.S. wealth") is a fact and can be stated freely with a citation to the source. The original presentation, analysis, and commentary by the author *is* copyrightable.
-
-**Federal government works are in the public domain** (17 U.S.C. § 105). This includes federal statutes, federal regulations, federal court opinions, and documents produced by federal agencies in their official capacity. These may be quoted at length, but must still be cited.
-
-**State government works** vary. Most state laws are public domain but confirm before reproducing at length.
-
-**The "heart of the work" test:** Even a short quote can infringe if it captures the essential value of the original work (e.g., quoting the key finding of a paywalled study). When in doubt, paraphrase and cite.
-
-### Plagiarism safeguards
-
-- **Attribute every idea, framing, or argument that originated outside this project.** If a formulation was inspired by a source, cite it — even if the words are your own.
-- **AI-synthesized text must be treated as a draft, not a final source.** AI can reproduce or closely paraphrase copyrighted material from its training data without flagging it. All AI output that incorporates external facts, quotes, or research must be reviewed and re-sourced from primary or original references.
-- **Do not cite a source you have not verified.** AI frequently hallucinates citations — plausible-sounding but nonexistent articles, wrong authors, wrong dates, wrong page numbers, wrong URLs. Every citation added to this project must be verified: the source exists, the URL resolves, and it actually says what the citation claims it says.
-- **Paraphrase actively.** Restating an idea in your own structure and words, then citing the source, is always preferred over quoting.
-
-### Fair use: when in doubt, don't
-
-Fair use in U.S. law (17 U.S.C. § 107) is assessed on four factors: purpose, nature of the work, amount used, and market effect. There is no safe word count. For this project:
-- Political and policy commentary is a recognized fair use purpose.
-- Brief quotation with attribution and analysis is lower risk than long reproduction.
-- Using facts from a source (not its exact expression) is not infringement.
-- When any doubt exists: paraphrase, add your own analysis, and cite.
+Core rules:
+- Do not reproduce substantial verbatim text from copyrighted sources. Quote sparingly and only when the exact wording materially matters.
+- Facts and statistics are not copyrightable — the number is free to use with a citation; the original expression is not.
+- Federal government works (statutes, regulations, court opinions, agency reports) are in the public domain and may be quoted more freely, but must still be cited.
+- AI-synthesized text must be treated as unverified draft material. All AI output incorporating external facts or research must be re-sourced against primary or original references before publication.
+- Do not cite a source you have not verified. Confirm the source exists, the URL resolves, and it actually supports the claim.
+- Attribute every idea, framing, or argument that originated outside this project.
+- Prefer paraphrase, synthesis, and citation over quotation.
+- When in doubt: paraphrase, add original analysis, and cite.
 
 ---
 
 ## Quality and accuracy safeguards
 
-This project is a public policy document. Errors damage credibility and, more importantly, mislead readers on matters of democratic governance. Quality is not optional.
+This project is a public policy document. Accuracy, verification, and intellectual honesty are mandatory.
 
 ### Before publishing any factual claim
 
-1. **Verify the source exists.** Open the URL. Confirm the publication, date, and author match what is cited.
-2. **Verify the claim is accurate.** Read the source. Confirm it actually supports the statement being made — not just something adjacent or vaguely related.
-3. **Check the date.** Data goes stale. A 2018 study may be superseded by 2024 research. Prefer the most recent data; note the date in the citation.
+1. **Verify the source exists.** Confirm the publication, date, and author match what is cited.
+2. **Verify the claim is accurate.** Confirm the source actually supports the statement — not just something adjacent.
+3. **Check the date.** Data goes stale. Prefer the most recent data; note the date in the citation.
 4. **Check for context.** A statistic can be technically accurate and misleading. Ensure the framing reflects what the source actually demonstrates.
 
 ### Adversarial review requirement
 
-Before finalizing any section that makes empirical claims, apply an **adversarial review**: actively try to disprove or find exceptions to the claims being made. If a counterargument or contradicting data exists:
+Before finalizing any section that makes empirical claims, actively try to disprove or find exceptions to the claims. If counterevidence or contradicting data exists:
 - Acknowledge it honestly.
 - Either explain why it does not change the conclusion, or revise the conclusion.
-- Do not suppress contradicting evidence.
+- Do not suppress contradicting evidence. This is non-negotiable.
 
-This is non-negotiable. Intellectual honesty is a core value of this platform.
-
-### AI hallucination safeguards
-
-AI language models can:
-- Generate plausible-sounding but fabricated citations
-- Misattribute quotes to real people
-- Confuse similar statistics from different years or sources
-- Present outdated data as current
-- Produce confident-sounding claims that are simply wrong
-
-**Every AI-generated factual claim in this project must be independently verified against a real, accessible source before it is published.** If a source cannot be found to support a claim, the claim must be removed or reframed as the project's own position (which does not require a citation).
+Treat AI-generated factual material as unverified draft text until checked against real, accessible sources. If a source cannot be verified, remove the claim or reframe it as the project's own position.
 
 ### Language integrity
 
 - Do not present the project's own policy positions as if they are established facts.
 - Do not use weasel words ("many experts agree," "studies show") without citing specific experts and specific studies.
-- Do not use emotional language in the research/sources sections; reserve advocacy framing for the mission and pillar narrative sections.
+- Do not use emotional language in research/sources sections; reserve advocacy framing for mission and pillar narrative sections.
 - Always distinguish between "this is what the research shows" and "this is what we believe should be done."
 
 ---
 
 ## Testing standards
 
-### Stack
+Current test entry points:
 - **Unit tests:** Vitest — `tests/unit/data.test.js` — run with `npm run test:unit`
 - **E2E tests:** Playwright (Firefox only) — `tests/e2e/site.spec.js` — run with `npm run test:e2e`
-- Always run `npm run test:unit` before committing. Run `npm run test:e2e` after any HTML/JS/CSS change.
 
-### What to test
-Every code change must be accompanied by tests that verify the **behavior changed**, not just the implementation.
+Always run `npm run test:unit` before committing. Run `npm run test:e2e` after any HTML/JS/CSS change.
 
-**Always test:**
-- Any new HTML page or section: title, key headings, critical elements present and visible
-- Any new JS feature injected by `app.js`: element exists in DOM, correct href, correct behavior
-- Any navigation path: link exists, href is correct, navigating to it loads the expected page
-- Any count-sensitive assertion (pillars, nav links, cards): update the count when structure changes — stale counts are bugs
-- Any fix for a visual bug: write a test that would have caught the bug (e.g., section has `.visible` class after scroll)
-- Any link that could 404: navigate to the href and assert the page loads correctly
+Every code change must be accompanied by tests that verify the **behavior changed**, not just the implementation. Test behavior, not incidental implementation details. Update stale count-based assertions when structure changes.
 
 **Do not:**
 - Test CSS styles or visual appearance directly (fragile, wrong layer)
@@ -259,6 +191,7 @@ Every code change must be accompanied by tests that verify the **behavior change
 - Write tests that only check element existence when behavior is what matters
 
 ### GitHub Pages path handling
+
 The site runs on GitHub Pages at `/freedom-and-dignity-project/`. Path logic in `app.js` must account for the repo base path being a path segment. Use named subdir checks (`/\/(pillars|compare)\//.test(location.pathname)`) rather than segment counting, which breaks at the root level.
 
 ### Test patterns to follow
@@ -299,116 +232,21 @@ const text = await page.locator('.hero-statement').textContent();
 expect(text).not.toMatch(/^["""]/);
 ```
 
-### Keeping tests current
-- When you add a new pillar, update `SAMPLE_PILLARS` in `site.spec.js` and update any count assertions.
-- When you add a new nav item, update nav count assertions across all describe blocks.
-- When you add a new page, add a describe block covering: title, key heading, nav visible, footer visible.
-- When you fix a rendering or path bug, add a regression test that would have caught it.
-- Run the full test suite after every change. A passing test suite is a prerequisite for committing.
-
-### Running tests
 ```bash
 npm run test:unit          # Vitest — fast, run always
 npm run test:e2e           # Playwright — full site, run after HTML/JS/CSS changes
 npm run test:e2e -- --headed  # Run with browser visible for debugging
 ```
----
-
-## General coding standards
-
-The full coding standards document lives at `CODING_STANDARDS.md` in the repo root. It is the authoritative reference. The rules below are the non-negotiable subset enforced in every commit.
-
-### Naming — the first and most important rule
-
-Variable, function, and class names must describe **what the thing is**, not what content it relates to or what project it belongs to.
-
-| ✓ Good | ✗ Bad | Why |
-|---|---|---|
-| `const siteData = {...}` | `const ARP = {...}` | `ARP` is a project acronym, not a description |
-| `user_count` | `n` | Single letters reveal nothing |
-| `is_active` | `flag` | Vague; a flag for what? |
-| `get_user()` | `doThing()` | Functions are verb phrases |
-| `MAX_RETRIES` | `3` | No magic numbers |
-| `PaymentProcessor` | `Processor` | Noun phrases, as specific as possible |
-
-**Never:**
-- Single-letter names except `i`/`j` loop counters
-- Shadow built-ins (`list`, `id`, `type`, `input`, `filter`)
-- Invent new abbreviations — only well-known ones (`id`, `url`, `db`)
-- Negative booleans (`is_not_valid`) — use `is_invalid` or flip the logic
-
-### Error handling
-
-- **Fail fast and loudly.** A crash immediately is better than silent data corruption.
-- **Never swallow exceptions silently.** A bare `except: pass` or `catch (e) {}` is almost always a bug. If you must suppress, log and document *why*.
-- **Always chain exceptions** in Python: `raise AppError("context") from original_error`. Bare re-raise loses context.
-- Handle errors at the layer that can meaningfully respond — don't catch what you can't handle.
-
-### Security — absolute blockers (CI failures)
-
-These are never acceptable under any circumstances:
-
-- ❌ `eval()`, `exec()`, or equivalent with any external/user input
-- ❌ `subprocess(..., shell=True)` with any variable content — always pass argument lists
-- ❌ SQL built by string concatenation — always use parameterized queries
-- ❌ `pickle.loads()` / `pickle.load()` on any external data — it is arbitrary code execution
-- ❌ `yaml.load()` — always `yaml.safe_load()`
-- ❌ Hardcoded API keys, passwords, tokens, or credentials anywhere in source
-- ❌ Secrets in `.env` files committed to the repo (`.env` in `.gitignore`; `.env.example` with placeholders is allowed)
-- ❌ PII, passwords, or tokens logged at any log level
-- ❌ `random` module for security purposes — use `secrets` (Python) or `crypto.randomBytes` (Node)
-- ❌ MD5 or SHA-1 for any security purpose — use SHA-256+
-- ❌ `innerHTML` with any unsanitized content in JavaScript
-
-### Logging
-
-- Use structured logging (JSON/key-value). Do not build log strings with f-strings in production code.
-- **Never log** passwords, tokens, secrets, or PII at any level.
-- Log levels have strict meaning: `DEBUG` (development only), `INFO` (normal ops), `WARNING` (unexpected but handled), `ERROR` (request failed), `CRITICAL` (service impaired).
-- Every log line in a request context must include a correlation/request ID.
-
-### Functions and design
-
-- One function does one thing. If you can't see the whole function at once (target ≤40 lines), it's likely doing too much.
-- Max 3–4 arguments; group related args into a config/data object beyond that.
-- Prefer pure functions (same input → same output, no external mutation) where possible.
-- Command–Query Separation: a function either returns a value OR changes state. Functions that do both are the hardest to reason about. Violations must be documented.
-
-### Architecture
-
-- Business logic never lives in API handlers or DB queries — it lives in a service/domain layer.
-- DB queries never live in business logic — use a repository pattern.
-- Import direction flows inward only: presentation → service → domain → infrastructure. Inner layers must not import outer layers.
-- Fail-secure defaults: new features/endpoints default to off/denied, not on/public.
-- YAGNI: don't build abstractions for requirements you don't have yet. Add generality when the second case arrives.
-
-### Python-specific
-
-- Formatter: **Black** (line-length=88). Non-negotiable. Run in pre-commit and CI.
-- Linter: **Ruff** with `E/W/F/I/N/B/C4/UP/S/ANN/D` rulesets. Run in pre-commit and CI.
-- Type checking: **mypy --strict**. All public functions/methods/class attributes must have type annotations.
-- Testing: **pytest**. Test names must be sentences: `test_create_user_with_duplicate_email_raises_conflict_error`.
-- Dependency management: **uv**. Pin versions in lockfiles. Run `pip-audit` in CI.
-- Use `secrets` module for any cryptographic randomness. Use `pathlib.Path`, not `os.path`. Use f-strings, not `%`-formatting or `.format()`.
-- See `CODING_STANDARDS.md` §2 for the full Python reference.
-
-### Git
-
-- Commit messages follow **Conventional Commits** format: `<type>[scope]: <description>` (imperative mood, ≤72 chars)
-- Types: `feat`, `fix`, `docs`, `refactor`, `test`, `chore`, `perf`, `ci`, `revert`
-- Every commit must be atomic (one logical change) and must pass tests independently.
-- Never force-push to `main` or shared branches.
-- PRs target ≤400 lines changed. Larger PRs must be split.
 
 ---
 
-## Frontend architecture & professional coding standards
+## Frontend architecture
 
 ### The DRY rule — no copy-pasted structure
 
 The single most important frontend rule: **never duplicate structural code across files.**
 
-- **CSS** — All styles live in `docs/assets/css/style.css`. Never add `<style>` blocks to individual HTML pages. The only permitted inline style in a pillar page is the single-line accent color: `<style>:root { --accent-color: #...; }</style>`. Everything else belongs in the shared stylesheet under a named section comment.
+- **CSS** — All styles live in `docs/assets/css/style.css`. Never add `<style>` blocks to individual HTML pages. The only permitted inline style in a pillar page is the single-line accent color: `<style>:root { --accent-color: #...; }</style>`. Everything else belongs in the shared stylesheet.
 - **JavaScript** — All sitewide logic lives in `docs/assets/js/app.js`. Use feature detection (`if (document.getElementById('pil-snav'))`) to scope page-specific behavior. Do not add `<script>` blocks to individual HTML pages except for page-specific inline data (rare and must be justified).
 - **HTML structure** — Nav, footer, WIP banner, and injected nav links are all generated by `app.js`. Do not hard-code these in new pages beyond the minimal shell required for `app.js` to attach to.
 
@@ -417,7 +255,7 @@ The single most important frontend rule: **never duplicate structural code acros
 Any number or count derived from `data.js` must be rendered dynamically, not hard-coded.
 
 - Use `<span data-dynamic="pillar-count">23</span>` — the fallback is displayed when JS is disabled; `app.js` fills the live value.
-- Use `data-dynamic="policy-count"` and `data-dynamic="family-count"` in pillar design sections — these are auto-computed from `.policy-card` elements on the page.
+- Use `data-dynamic="policy-count"` and `data-dynamic="family-count"` in pillar design sections.
 - Use `data-dynamic="foundation-count"` for any reference to the number of foundations.
 - **Never write "we have X pillars" with a literal number.** It will go stale.
 
@@ -433,7 +271,7 @@ node scripts/new-pillar.js --id my-pillar --title "My Pillar" --foundation freed
 node scripts/new-compare.js --id my-party --party "Party Name" --color "#336699" --tagline "One-sentence description of this platform."
 ```
 
-These scripts produce a correctly structured, minimal HTML scaffold. Add content inside the generated placeholders. The new-pillar script also prints the exact `data.js` update and test count changes required.
+The new-pillar script also prints the exact `data.js` update and test count changes required.
 
 ### Adding a new pillar — complete checklist
 
@@ -458,21 +296,11 @@ These scripts produce a correctly structured, minimal HTML scaffold. Add content
 | `--ink` | Body text |
 | `--rule` | Border / divider color |
 
-### Code quality rules
-
-- **No magic numbers** — any count, ID, or value that appears in more than one place must be a variable, CSS custom property, or `data-dynamic` span.
-- **No inline event handlers** — use `addEventListener` in JS files.
-- **No `!important` except the `.visible` animation override** in `app.js`.
-- **No `id` conflicts** — pillar section IDs (`#pil-intro`, `#pil-policy`, etc.) are standard across all pillar pages; do not introduce new IDs that collide with this scheme.
-- **Citations** — every factual claim, statistic, or externally sourced assertion in policy HTML must have an APA 7th edition footnote. See the Citation standards section of copilot-instructions.md.
-
 ---
 
 ## Accessibility — Non-Negotiable
 
 Accessibility operates on two equal dimensions: **disability access** and **content democratization**. Neither overrides the other, and neither justifies weakening the project's policy positions or directness.
-
----
 
 ### Disability accessibility (WCAG 2.1 AA)
 
@@ -497,81 +325,58 @@ These are requirements. Violations are treated the same as security failures —
 
 **Keyboard and interaction**
 - All functionality must be operable via keyboard alone (Tab, Shift+Tab, Enter, Space, Escape, arrow keys).
-- Focus indicator must always be visible — never use `outline: none` or `outline: 0` without replacing it with an equally visible alternative. The site uses `:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }`.
-- Interactive elements (links, buttons, controls) must have a descriptive accessible name: visible label text, `aria-label`, or `aria-labelledby`. Never use `title` attribute alone.
+- Focus indicator must always be visible — never use `outline: none` or `outline: 0` without replacing it with an equally visible alternative.
+- Interactive elements must have a descriptive accessible name: visible label text, `aria-label`, or `aria-labelledby`. Never use `title` attribute alone.
 - Collapsible sections: use `<details>/<summary>` (accessible by default) or `aria-expanded` + `aria-controls` on custom accordions.
 - Modal dialogs must trap focus and return focus to the trigger on close.
 
 **Motion and animation**
-- Every CSS animation and transition must be wrapped in or have an override under `@media (prefers-reduced-motion: reduce)` that stops or reduces motion to near-zero. The global override in `style.css` handles this — do not add `!important` transitions that escape it.
-- Never auto-play video or audio. User must initiate.
+- Every CSS animation and transition must have an override under `@media (prefers-reduced-motion: reduce)`. The global override in `style.css` handles this — do not add `!important` transitions that escape it.
+- Never auto-play video or audio.
 
 **Forms**
-- Every `<input>`, `<select>`, and `<textarea>` must have an associated `<label>` (via `for`/`id` or wrapping). `placeholder` alone is not a label.
-- Error messages must identify the field and explain specifically what is wrong. Never use color alone to signal an error.
+- Every `<input>`, `<select>`, and `<textarea>` must have an associated `<label>`. `placeholder` alone is not a label.
+- Error messages must identify the field and explain what is wrong. Never use color alone to signal an error.
 
-**Required CSS utilities (defined in `style.css` — do not redefine elsewhere)**
-```css
-/* Screen-reader-only — visually hidden, accessible to assistive tech */
-.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
-  overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
-
-/* Visible when focused */
-.sr-only.focusable:focus, .sr-only.focusable:focus-visible {
-  position: static; width: auto; height: auto;
-  margin: 0; overflow: visible; clip: auto; white-space: normal; }
-
-/* Focus indicator */
-:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
-
-/* Reduced motion */
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration: 0.01ms !important;
-    transition-duration: 0.01ms !important; } }
-```
-
----
+Required CSS utilities (`.sr-only`, `.focusable`, `:focus-visible`, `prefers-reduced-motion`) are defined in `docs/assets/css/style.css` — do not redefine elsewhere. See `CODING_STANDARDS.md` for the canonical definitions.
 
 ### Content accessibility (democratization)
 
-Content accessibility means the site's policy content and contribution pathways are usable by people of varying educational backgrounds, technical expertise, and lived experience. It does **not** mean weakening positions, moderating language, or shifting policy toward the political center.
+Content accessibility means the site's policy content is usable by people of varying educational backgrounds. It does **not** mean weakening positions or shifting policy toward the center.
 
-**Plain language**
-- Every policy pillar and every major policy family must have a 1–2 sentence plain-language summary at approximately an 8th-grade reading level. This appears **alongside** the full technical position — not instead of it.
+**Plain language and the two-field requirement**
+- Every policy pillar and major policy family must have a 1–2 sentence plain-language summary (~8th-grade reading level) appearing alongside the full technical position.
 - **Every individual policy position (card) must have both a `rule-plain` field and a `rule-stmt` field:**
-  - `rule-plain` — 1–3 sentences in plain language (~8th grade). What does this position do, and why does it matter? No jargon. Any person, regardless of education or background, must be able to read this and understand what the position says.
-  - `rule-stmt` — The full technical/legal policy statement. This is where precise legal language, specific thresholds, enforcement mechanisms, and regulatory detail live.
-  - Both fields are required on every card. `rule-plain` is not a summary of `rule-stmt` — it is an independent, accessible explanation written for a general audience. When they conflict, escalate for review; do not silently resolve.
+  - `rule-plain` — 1–3 sentences in plain language (~8th grade). What does this position do, and why does it matter? No jargon.
+  - `rule-stmt` — The full technical/legal policy statement with precise language, thresholds, enforcement mechanisms, and regulatory detail.
+  - Both fields are required. `rule-plain` is not a summary of `rule-stmt` — it is an independent, accessible explanation. When they conflict, escalate for review; do not silently resolve.
   - In HTML: `<p class="rule-plain">` appears immediately after `<p class="rule-title">`, before `<p class="rule-stmt">`.
-  - In the DB: `plain_language TEXT` column on the `positions` table — **to be added post-migration**. A null value is a data gap, not acceptable for canonical positions.
+  - In the DB: `plain_language TEXT` column on the `positions` table — to be added post-migration.
 - Legal or technical jargon must be defined on first use with a tooltip, glossary link, or parenthetical.
 - Policy card titles must be understandable without prior domain knowledge.
-- Do not use weasel words or insider language in titles. "Big Tech Platforms Must Not Use Dark Patterns to Manipulate Users" is accessible; "Platform Interface Regulation Under Market Power Conditions" is not.
 
 **Language and inclusion**
 - Use gender-neutral language throughout: "persons" not "men"; singular "they/them"; avoid gendered role titles unless quoting a named law.
-- Do not write in a voice that implies the reader is already politically aligned. Write as if a persuadable, politically independent person is reading for the first time.
+- Do not write in a voice that implies the reader is already politically aligned.
 
 **Contribution pathways**
-- The Get Involved page must always prominently list all active contribution channels: GitHub (technical), Discord (community), and any active non-technical workflow (Google Docs, Notion, etc.).
-- CONTRIBUTING.md and issue templates must be written for someone who has never used GitHub. Do not assume technical knowledge.
-- Every policy proposal must have a clear path for non-technical review — the two-reviewer requirement applies regardless of whether the reviewer uses GitHub directly.
+- The Get Involved page must always prominently list all active contribution channels: GitHub (technical), Discord (community), and any active non-technical workflow.
+- CONTRIBUTING.md and issue templates must be written for someone who has never used GitHub.
+- Every policy proposal must have a clear path for non-technical review.
 
 **Zoom and responsive layout**
 - All content must be readable and fully operable at 200% browser zoom without horizontal scrolling.
 - No fixed pixel heights that clip text when font size increases. Use `min-height` or `auto` height where needed.
 
-
+---
 
 ## Build architecture
 
 ### Current state (Phase 1)
 
-The site is hand-authored HTML. Policy position cards in `docs/pillars/*.html` are the most recently edited content. The DB (`data/policy_catalog_v2.sqlite`) was built from the v1 catalog and all tagged HTML cards and has not been fully reconciled with the current HTML.
+The site is hand-authored HTML. Policy position cards in `docs/pillars/*.html` are the most recently edited content. The DB was built from the v1 catalog and all tagged HTML cards and has not been fully reconciled with the current HTML.
 
-**Until reconciliation is complete:**
-
+Until reconciliation is complete:
 - HTML edits are valid; backfill any new positions into the DB in the same commit
 - Run `scripts/tag-policy-cards.py` after any HTML structural changes to normalize IDs
 
@@ -581,7 +386,6 @@ The site is hand-authored HTML. Policy position cards in `docs/pillars/*.html` a
 - `pillars/*/overview.md` and `pillars/*/policy.md` are the source for narrative prose
 - `docs/pillars/*.html` is generated output — do not hand-edit policy cards
 - A build script (`scripts/generate-site.py`, TBD) will render HTML from DB + markdown
-- CSS lives in `docs/assets/css/style.css` — single source, applied consistently site-wide
 - Any content change must be made in the source (DB or markdown), then the site regenerated
 
 ### Consistency rules (apply now and in Phase 2)
@@ -590,3 +394,43 @@ The site is hand-authored HTML. Policy position cards in `docs/pillars/*.html` a
 - All sitewide JS: `docs/assets/js/app.js` only. No inline scripts in HTML.
 - All policy positions: must have a `XXXX-XXXX-0000` ID. Untagged cards are not canonical.
 - All factual claims on the site: must have an APA 7th edition footnote.
+
+---
+
+## General coding standards
+
+See `CODING_STANDARDS.md` for the full reference. See the global Copilot instructions (`~/.copilot/copilot-instructions.md`) for the universal subset covering naming, error handling, logging, security, function design, architecture, testing, git, Python, and JavaScript.
+
+---
+
+## Explicit Approval
+
+When a task requires user approval, the agent must ask directly and wait for an unambiguous affirmative confirmation before acting.
+
+Valid approval includes clear affirmative confirmations such as:
+- `Yes`
+- `Approve`
+- `Approved`
+- `Affirmative`
+- `Confirmed`
+
+The following do not count as approval:
+- `Go ahead`
+- `Go ahead and do this`
+- `Proceed`
+- `Sounds good`
+- implied intent
+- contextual inference
+- language that could reasonably be interpreted in more than one way
+
+If approval is required and has not been given, the agent may prepare work, explain the next step, or show a proposed patch, but must not apply the change.
+
+Review and approval requests must be presented one at a time.
+
+When proposing edits for approval:
+- Show only one approval request before waiting for a reply.
+- Each approval request must contain one complete logical change set.
+- Do not split a coherent edit into smaller fragments solely to reduce size.
+- Do not combine unrelated edits into one approval request.
+- If a file contains multiple unrelated edits, present them as separate approval requests.
+- Prefer smaller diffs when possible, but preserve logical completeness.
