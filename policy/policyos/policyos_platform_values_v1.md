@@ -14,8 +14,21 @@ This document uses an explicit `floor + duty` model.
 
 That means each value does two jobs at once:
 
-- `Floor`: the minimum that rules may not violate, erode, or fall beneath
-- `Duty`: the positive obligation that rules must actively secure, build, preserve, or advance
+- `Floor`: a negative prohibition — what government and policy must not do.
+  The floor protects against erosion, violation, and deprivation of the right.
+  In practice: "The government shall not infringe, restrict, or deny..."
+
+- `Duty`: a positive obligation — what government and policy must actively do.
+  The duty requires guaranteeing, securing, and building toward the right.
+  In practice: "The government shall ensure, guarantee, or actively secure..."
+
+Together they allow specificity without prescribing a single implementation.
+The floor sets the hard limit. The duty sets the affirmative requirement.
+How the duty is met is a question of policy design, not values.
+
+These are not a sliding scale. The floor is not a "minimum acceptable step"
+and the duty is not an "aspiration." Both are requirements. The floor is what
+policy may never fall beneath. The duty is what policy must affirmatively build.
 
 PolicyOS should therefore be read not only as a system for preventing bad
 policy, but as a system for requiring policy to affirmatively realize the
