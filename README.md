@@ -6,202 +6,48 @@
 > platform name is selected. It is **not a final name**. All references to it in this repository,
 > website, and documentation are temporary and will be updated once a name is confirmed.
 
-This repository contains the source code, policy content, and tooling for an active U.S. political platform in development. The platform is organized around 25 policy pillars grouped into 5 foundations. The live site is published at https://alistardust.github.io/freedom-and-dignity-project/.
+An active U.S. political platform in development, organized around 25 policy pillars and 5 foundations. The live site is at **https://alistardust.github.io/freedom-and-dignity-project/**.
 
-## Repository layout
+## What's in this repository
 
 ```text
-/
-├── docs/               Website source — served by GitHub Pages
-│   ├── assets/         Shared CSS (style.css), JS (app.js, data.js), and images
-│   ├── pillars/        25 pillar HTML pages
-│   └── compare/        Party comparison pages
-├── pillars/            Narrative markdown source (per-pillar overview and policy prose)
-├── foundations/        Foundation values and framing docs (5 foundations)
-├── overview/           Project framing, current state, roadmap, and high-level context
-├── sources/            Historical chat log transcripts (used in initial catalog build)
-├── data/               Policy catalog (SQLite), pillar research reports, citation audit
-│   └── pillar_reports/ Research reports, audits, PolicyOS research
-├── scripts/            Import, generation, and maintenance scripts
-├── tests/              Unit tests (Vitest) and E2E tests (Playwright/Firefox)
-├── research/           Internal research files — gitignored, not committed
-├── AGENTS.md           Codex CLI instruction file
-└── system_rules.md     Cross-domain system rule architecture summary
+docs/               Website — served by GitHub Pages
+  assets/           Shared CSS, JS, and images
+  pillars/          25 pillar HTML pages
+  compare/          Party comparison pages
+pillars/            Narrative markdown source (per-pillar prose, pre-generation)
+foundations/        Foundation values and framing documents
+overview/           Project framing, current state, roadmap, and AI context
+data/               Policy catalog (SQLite), research reports, citation audit
+  pillar_reports/   Per-pillar audits, PolicyOS research
+sources/            Historical source transcripts (provenance only)
+scripts/            Import, generation, and maintenance scripts
+tests/              Unit tests (Vitest) and E2E tests (Playwright/Firefox)
+AGENTS.md           Codex CLI instruction file
+system_rules.md     Cross-domain system rule architecture
 ```
 
 ## Current state
 
-- **Live site:** https://alistardust.github.io/freedom-and-dignity-project/
 - **Pillars:** 25 active pillar pages across 5 foundations
 - **Policy positions:** 3,810 canonical positions in `data/policy_catalog_v2.sqlite`
-- **Plain language:** All positions have `rule-plain` descriptions (backfill complete)
-- **Reconciliation:** HTML ↔ DB gap = 0 (Phase 1 reconciliation complete)
-- **PolicyOS:** System-rules layer in development — see `data/pillar_reports/by_mapping/policyos_research/`
+- **Plain language:** All positions have plain-language summaries
+- **Citations:** Inline APA citations across all pillar pages
 
-## Source of truth (phased model)
-
-### Phase 1 — Current (pre-canonicalization)
-
-Reconciliation between HTML and DB is complete (gap = 0). The DB is the structured catalog; HTML is the rendered site. Both are valid; keep them in sync.
-
-- Site HTML (`docs/pillars/*.html`) — rendered policy cards; most recently edited
-- DB (`data/policy_catalog_v2.sqlite`) — 3,810 positions in v2 ID format
-- **Any new position added to HTML must be backfilled into the DB in the same commit.**
-
-### Phase 2 — Post-canonicalization (target)
-
-Once PolicyOS and the generation pipeline are complete:
-
-- `data/policy_catalog_v2.sqlite` is the **canonical source of truth** for all policy positions
-- `pillars/*/overview.md` and `pillars/*/policy.md` are the source for narrative prose
-- `docs/pillars/*.html` is **generated output** — do not hand-edit policy cards
-- New positions are authored in the DB first, then the site is regenerated at build time
-
-## Catalog
-
-The active catalog is `data/policy_catalog_v2.sqlite`. See `data/README.md` for full schema documentation.
-
-Key tables:
-
-- `positions` — 3,810 canonical policy positions (v2 ID format: `XXXX-XXXX-0000`)
-- `domains` — one per policy pillar (4-char domain code)
-- `subdomains` — policy families within a domain
-- `position_pillar_appearances` — maps positions to pillar pages
-- `legacy_id_map` — v1-to-v2 ID mappings (provenance)
-
-## Rebuilding the catalog
-
-```bash
-python3 scripts/build-catalog-v2.py --output data/policy_catalog_v2.sqlite --report data/migration-report.md
-```
-
-The builder is idempotent. Do not hand-edit the DB; make source changes and rebuild.
-
-See `data/README.md` for schema details and `overview/current-state.md` for the current audit state.
-
-## Build architecture
-
-### Current (Phase 1)
-
-Policy card HTML in `docs/pillars/*.html` is hand-authored. `docs/assets/js/data.js` is the registry for foundations and pillars. `docs/assets/js/app.js` injects nav, footer, WIP banner, and dynamic counts at runtime.
-
-A generation script (`scripts/generate-pillar-cards.py`) can render DB-only positions into existing pillar HTML.
-
-### Target (Phase 2)
-
-A full build pipeline will render `docs/pillars/*.html` from `data/policy_catalog_v2.sqlite` + pillar narrative markdown. Until that pipeline is complete, HTML edits must be backfilled into the DB in the same commit.
-
-## PolicyOS
-
-The PolicyOS layer defines cross-platform design rules, values, and authoring standards that govern how policy is written across all pillars. Research and drafts live in `data/pillar_reports/by_mapping/policyos_research/`. See the handoff file and README there for current status.
-
-## Documentation maintenance
-
-Any commit that changes the following **must** update the relevant repo documentation in the same commit:
-
-- Pillar count or structure → update `overview/current-state.md` pillar registry + `README.md`
-- Policy card count or schema → update `data/README.md` + `overview/current-state.md`
-- DB schema changes → update `data/README.md` + `system_rules.md` counts
-- New architectural decisions → update `.github/copilot-instructions.md` + `AGENTS.md` + `overview/current-state.md`
-- New scripts or tooling → update `README.md` "Scripts" section
-
-"Repo documentation" = `README.md`, `system_rules.md`, `overview/*.md`, `data/README.md`, `.github/copilot-instructions.md`, `AGENTS.md`.  
-"Docs" (without qualifier) = the website in `docs/`. Never confuse the two.
+For detailed status, see [`overview/current-state.md`](overview/current-state.md).
 
 ## Contributing
 
-See `docs/get-involved.html` on the live site for contribution guidelines. All policy additions must follow the citation and quality standards in `.github/copilot-instructions.md`. New policy positions require a `XXXX-XXXX-0000` structured ID before they are considered canonical.
+The best place to start is the **[Get Involved](https://alistardust.github.io/freedom-and-dignity-project/get-involved.html)** page on the live site.
 
+For technical contributors:
+- Policy content lives in `docs/pillars/*.html` — each pillar page has a structured set of policy cards with `XXXX-XXXX-0000` IDs
+- All factual claims require APA 7th edition citations — see `CODING_STANDARDS.md`
+- All policy additions must follow the standards in `.github/copilot-instructions.md`
+- Run `npm run test:unit` before committing; run `npm run test:e2e` after any HTML/JS/CSS change
 
-## Current state
+For non-technical contributors, the Get Involved page has a link to the project Discord where policy review and rewriting work is coordinated.
 
-- **Live site:** https://alistardust.github.io/freedom-and-dignity-project/
-- **Pillars:** 25 active pillar pages across 5 foundations
-- **Policy position cards:** 2,935 `.policy-card` elements across all pillar pages
-- **Catalog:** `data/policy_catalog.sqlite` — 1,554 `policy_items`, 629 `prose_rule_mentions`, 36 `record_links` (pre-reconciliation; see below)
+## AI use
 
-## Source of truth (phased model)
-
-### Phase 1 — Current (pre-reconciliation)
-
-HTML and the DB both contain valid content, but they have diverged:
-
-- The site HTML (`docs/pillars/*.html`) has 2,935 policy cards, including positions added after the last DB rebuild.
-- The DB (`data/policy_catalog.sqlite`) has 1,554 policy items, some of which are not yet reflected on the site.
-- **A full 3-way reconciliation audit is required before either is treated as exclusively authoritative.**
-- Divergences are flagged for human review. Neither source blindly overrides the other.
-
-**During Phase 1:** HTML edits are valid. Any new positions added to HTML must be backfilled into the DB in the same commit. Do not treat DB status fields as definitive — `MISSING` in the DB does not mean the position is absent from the site.
-
-### Phase 2 — Post-reconciliation (target)
-
-Once reconciliation is complete:
-
-- `data/policy_catalog.sqlite` is the **canonical source of truth** for all policy positions.
-- `pillars/*/overview.md` and `pillars/*/policy.md` are the source for narrative prose.
-- `docs/pillars/*.html` is **generated output** — do not hand-edit policy cards.
-- New positions are authored in the DB first, then the site is regenerated at build time.
-
-## Catalog
-
-The catalog is stored in `data/policy_catalog.sqlite`. See `data/README.md` for full schema documentation.
-
-Key tables:
-
-- `policy_items` — structured policy positions with prefixed IDs (e.g., `HLT-COV-003`)
-- `legacy_policy_items` — old numeric checkpoint items (preserved for provenance, not primary)
-- `record_links` — legacy-to-structured ID conversions (36 entries)
-- `prose_rule_mentions` — IDs mentioned in prose/context but not yet promoted to canonical records (629 entries)
-
-Useful views:
-
-- `deduped_catalog_entries` — canonical corpus without legacy numeric duplicates
-- `unresolved_prose_rule_mentions` — IDs mentioned in context but not yet formalized
-
-Historical reference sources (used in initial catalog build, retained for provenance):
-
-- `sources/branch_branch_political_project_main.txt`
-- `sources/branch_political_project_brainstorm.txt`
-
-## Rebuilding the catalog
-
-```bash
-scripts/import_policy_catalog.py
-```
-
-The importer:
-
-- preserves all source occurrences
-- picks canonical records deterministically, preferring the main branch and later occurrences within a source when the same ID appears more than once
-- seeds named structured IDs that were identified in the source logs but never formalized as pipe-delimited rows
-- converts legacy numeric checkpoint items to structured IDs through `record_links`
-- preserves prose-only ID mentions in a separate table so provisional or superseded IDs are not lost
-
-See `data/README.md` for schema details and `overview/current-state.md` for the current audit state.
-
-## Build architecture
-
-### Current (Phase 1)
-
-Policy card HTML in `docs/pillars/*.html` is hand-authored. `docs/assets/js/data.js` is the registry for foundations and pillars. `docs/assets/js/app.js` injects nav, footer, WIP banner, and dynamic counts at runtime.
-
-### Target (Phase 2)
-
-A build pipeline (`scripts/generate-site.py`, TBD) will render `docs/pillars/*.html` from `data/policy_catalog.sqlite` + pillar narrative markdown. Until that pipeline exists, HTML edits must be backfilled into the DB in the same commit.
-
-## Documentation maintenance
-
-Any commit that changes the following **must** update the relevant repo documentation in the same commit:
-
-- Pillar count or structure → update `overview/current-state.md` pillar registry + `README.md`
-- Policy card count or schema → update `data/README.md` + `overview/current-state.md`
-- DB schema changes → update `data/README.md` + `system_rules.md` counts
-- New architectural decisions → update `.github/copilot-instructions.md` + `overview/current-state.md`
-- New scripts or tooling → update `README.md` "Scripts" section
-
-"Repo documentation" = `README.md`, `system_rules.md`, `overview/*.md`, `data/README.md`, `.github/copilot-instructions.md`.  
-"Docs" (without qualifier) = the website in `docs/`. Never confuse the two.
-
-## Contributing
-
-See `docs/get-involved.html` on the live site for contribution guidelines. All policy additions must follow the citation and quality standards in `.github/copilot-instructions.md`. New policy positions require a SCOPE-FAM-NNN structured ID before they are considered canonical.
+This platform was built with significant AI assistance to make institutional-scale work possible without institutional resources. Everything AI produced is a starting draft — the long-term goal is human review, rewriting, and progressive replacement of AI-generated content. See the [AI transparency page](https://alistardust.github.io/freedom-and-dignity-project/about-ai.html) for the full account.
