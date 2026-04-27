@@ -37,61 +37,23 @@ neglect.
 
 ## Definitions
 
-### Person
+Key terms used in this document are defined in
+`policyos_definitions_v1.md`. That document is the canonical source for all
+PolicyOS term definitions and carries pre-assigned IDs for future
+machine-readable referencing.
 
-For the purposes of PolicyOS and all documents that derive from it, **"person"**
-means a living human being.
+Terms directly operative in this document:
 
-This definition is intentional and explicit. "Person" in this platform does not
-extend to corporations, associations, or other legal entities created by law; to
-AI systems, automated decision systems, or other non-human agents; or to
-abstractions such as markets, states, or institutions.
-
-Rights, protections, duties, and dignitary claims described in this document
-attach to living human beings. When this platform speaks of protecting "persons,"
-it means human beings — not legal constructs or entities granted legal personality
-by statute or judicial decision.
-
-This definition does not depend on citizenship, legal immigration status,
-documentation, residence, or administrative classification. A person is a person
-regardless of what any authority says about their legal status.
-
-Personhood under this platform attaches at birth. Fetuses, embryos, and the
-unborn are not "persons" within this framework. Policies that would assign
-personhood to the unborn in ways that constrain or override the bodily autonomy,
-rights, or decision-making authority of living persons are inconsistent with this
-platform's values — particularly Value 3 (Real Liberty).
-
-### Fully human
-
-To be treated as **"fully human"** means to be recognized as possessing inherent
-dignity that is:
-
-- **Non-contingent**: not earned, not conditional on behavior, status, wealth,
-  productivity, or social standing.
-- **Non-revocable**: not forfeit through conviction, administrative
-  categorization, incapacity, or institutional designation.
-- **Irreducible**: not reducible to economic utility, labor capacity, data value,
-  risk score, or instrumental use.
-
-Being "fully human" in this platform's terms means at minimum:
-
-- being recognized as a subject — a person with interior experience, capacity
-  for suffering and flourishing, relational ties, and stakes in the future
-- being entitled to humane treatment regardless of institutional context, not
-  only despite it
-- being entitled to recognition as a holder of rights, not merely as a recipient
-  of managed services or a risk to be contained
-
-This standard is explicitly designed to include people who have historically been
-subjected to partial or conditional humanity by law, institution, or social
-practice: people who are incarcerated; people experiencing homelessness; people
-with disabilities, psychiatric conditions, or cognitive differences; undocumented
-people; people receiving public assistance; people in institutional care; and
-others whose claim to full humanity has been treated as contingent or qualified.
-
-No policy that relies on the implicit treatment of any of these groups as less
-than fully human satisfies the floor of Value 1.
+- **Person** — `DEFN-PERS-0001`: a living human being; personhood attaches at
+  birth; not contingent on legal status; does not extend to corporations, AI
+  systems, or the unborn.
+- **Fully human** — `DEFN-FHUM-0001`: non-contingent, non-revocable, irreducible
+  dignity; explicitly includes historically dehumanized groups.
+- **Harm** — `DEFN-HARM-0001`
+- **Coercion** — `DEFN-COER-0001`
+- **Deprivation** — `DEFN-DEPR-0001`
+- **Meaningful accountability** — `DEFN-ACCT-0001`
+- **Capture** — `DEFN-CAPT-0001`
 
 ## The values
 
