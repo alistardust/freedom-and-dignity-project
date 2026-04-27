@@ -23,7 +23,7 @@ Until reconciliation is complete:
 When auditing or editing policy content, use this general order:
 1. `.github/current-state.md`
 2. `docs/pillars/`
-3. `data/policy_catalog_v2.sqlite`
+3. `policy/catalog/policy_catalog_v2.sqlite`
 4. `policy/foundations/pillars/`
 
 Shared repository context belongs in `.github/ai-repo-context.md`. Do not duplicate volatile repo facts, counts, or inventories in this instruction file. When shared repository context changes, update `.github/ai-repo-context.md` in the same change.
@@ -31,11 +31,11 @@ Shared repository context belongs in `.github/ai-repo-context.md`. Do not duplic
 ## Working with IDs and the catalog
 
 - Policy position IDs use the v2 format: `XXXX-XXXX-0000` (regex: `^[A-Z]{4}-[A-Z]{4}-[0-9]{4}$`), e.g. `HLTH-COVR-0001`.
-- The canonical active position records live in the `positions` table in `data/policy_catalog_v2.sqlite`.
+- The canonical active position records live in the `positions` table in `policy/catalog/policy_catalog_v2.sqlite`.
 - Domain codes (4 chars) and subdomain codes (4 chars) are defined in the `domains` and `subdomains` tables.
 - Cross-pillar appearances are tracked in `position_pillar_appearances` rather than separate position records.
 - v1-to-v2 ID mappings live in `legacy_id_map` (`old_id` → `new_id`, with `source` = `db`/`html`/`both`).
-- `data/policy_catalog.sqlite` is historical. Use it for provenance, audit, and reconstruction tasks, but do not treat it as the canonical current source of active policy positions.
+- `policy/catalog/policy_catalog_v2.sqlite` is historical. Use it for provenance, audit, and reconstruction tasks, but do not treat it as the canonical current source of active policy positions.
 
 To rebuild the v2 catalog from source data:
 
@@ -43,7 +43,7 @@ To rebuild the v2 catalog from source data:
 scripts/build-catalog-v2.py
 ```
 
-Do not hand-edit `data/policy_catalog_v2.sqlite` unless the task is explicitly about an approved manual repair.
+Do not hand-edit `policy/catalog/policy_catalog_v2.sqlite` unless the task is explicitly about an approved manual repair.
 
 ## Known context-sensitive edge cases
 
@@ -95,10 +95,10 @@ This includes, when applicable:
 - `.github/current-state.md`
 - `.github/ai-repo-context.md`
 - `system_rules.md`
-- `data/README.md`
+- `policy/catalog/README.md`
 - other affected repo documentation
 
-"Repo documentation" means repository documentation files such as `README.md`, `.github/current-state.md`, `.github/ai-repo-context.md`, `system_rules.md`, `data/README.md`, and related project documentation files.
+"Repo documentation" means repository documentation files such as `README.md`, `.github/current-state.md`, `.github/ai-repo-context.md`, `system_rules.md`, `policy/catalog/README.md`, and related project documentation files.
 
 "Docs" without "repo" means the website content in the `docs/` directory.
 

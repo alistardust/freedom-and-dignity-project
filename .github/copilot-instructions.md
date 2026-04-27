@@ -9,7 +9,7 @@ For current pillar counts, foundation structure, and corpus inventory, read `.gi
 The policy corpus is primarily maintained in:
 
 - `docs/pillars/*.html` — live policy card HTML
-- `data/policy_catalog_v2.sqlite` — structured policy position catalog (v2 ID format)
+- `policy/catalog/policy_catalog_v2.sqlite` — structured policy position catalog (v2 ID format)
 - `policy/foundations/pillars/` — narrative prose markdown (overview and policy sections per pillar)
 
 The markdown under `policy/foundations/pillars/` may lag behind the site HTML.
@@ -25,7 +25,7 @@ For shared repository context, provenance notes, and maintenance expectations, a
 The site HTML and the DB have both been edited since last reconciliation. Neither auto-overrides the other.
 
 - **Site HTML** (`docs/pillars/*.html`) — the most recently edited content
-- **DB** (`data/policy_catalog_v2.sqlite`) — structured catalog; some entries not yet on site; some site cards not yet in DB
+- **DB** (`policy/catalog/policy_catalog_v2.sqlite`) — structured catalog; some entries not yet on site; some site cards not yet in DB
 - **Divergences are flagged for human review.** Do not auto-resolve them.
 - `MISSING` in the DB does not reliably mean the position is absent from the site.
 
@@ -35,7 +35,7 @@ The site HTML and the DB have both been edited since last reconciliation. Neithe
 
 Once the reconciliation audit is complete:
 
-- `data/policy_catalog_v2.sqlite` is the **canonical source of truth** for all policy positions
+- `policy/catalog/policy_catalog_v2.sqlite` is the **canonical source of truth** for all policy positions
 - `policy/foundations/pillars/*/overview.md` and `policy/foundations/pillars/*/policy.md` are the source for narrative prose
 - `docs/pillars/*.html` is **generated output** — do not hand-edit policy cards
 
@@ -46,11 +46,11 @@ Do **not** assume the current pillar files are complete.
 ## Working with IDs and the catalog
 
 - Policy position IDs use the v2 format: `XXXX-XXXX-0000` (regex: `^[A-Z]{4}-[A-Z]{4}-[0-9]{4}$`), e.g. `HLTH-COVR-0001`.
-- The canonical position records live in the `positions` table in `data/policy_catalog_v2.sqlite`.
+- The canonical position records live in the `positions` table in `policy/catalog/policy_catalog_v2.sqlite`.
 - Domain codes (4 chars) and subdomain codes (4 chars) are defined in the `domains` and `subdomains` tables.
 - Cross-pillar appearances are tracked in `position_pillar_appearances` — not in a separate position record.
 - v1-to-v2 ID mappings live in `legacy_id_map` (`old_id` → `new_id`, with `source` = `db`/`html`/`both`).
-- The old v1 DB (`data/policy_catalog.sqlite`) is retained for provenance only — do not query it for current data.
+- The old v1 DB (`policy/catalog/policy_catalog_v2.sqlite`) is retained for provenance only — do not query it for current data.
 
 To rebuild the v2 catalog from source data:
 
@@ -58,7 +58,7 @@ To rebuild the v2 catalog from source data:
 scripts/build-catalog-v2.py
 ```
 
-Do not hand-edit `data/policy_catalog_v2.sqlite`.
+Do not hand-edit `policy/catalog/policy_catalog_v2.sqlite`.
 
 ---
 
@@ -108,12 +108,12 @@ Do not canonicalize PolicyOS rules into `system_rules.md` or the DB until the st
 Any commit that changes the following **must** update the relevant repo documentation in the same commit:
 
 - Pillar count or structure → update `.github/current-state.md` pillar registry + `README.md`
-- Policy card count or schema → update `data/README.md` + `.github/current-state.md`
-- DB schema changes → update `data/README.md` + `system_rules.md`
+- Policy card count or schema → update `policy/catalog/README.md` + `.github/current-state.md`
+- DB schema changes → update `policy/catalog/README.md` + `system_rules.md`
 - New architectural decisions → update `.github/copilot-instructions.md` + `.github/current-state.md`
 - New scripts or tooling → update `README.md` "Scripts" section
 
-"Repo documentation" means: `README.md`, `system_rules.md`, `.github/current-state.md`, `.github/ai-repo-context.md`, `data/README.md`, `.github/copilot-instructions.md`.
+"Repo documentation" means: `README.md`, `system_rules.md`, `.github/current-state.md`, `.github/ai-repo-context.md`, `policy/catalog/README.md`, `.github/copilot-instructions.md`.
 "Docs" (without "repo") means the website in the `docs/` directory. Never confuse the two.
 
 ---
@@ -399,7 +399,7 @@ Until reconciliation is complete:
 
 ### Target state (Phase 2, post-reconciliation)
 
-- `data/policy_catalog_v2.sqlite` is the single source of truth for all policy positions
+- `policy/catalog/policy_catalog_v2.sqlite` is the single source of truth for all policy positions
 - `policy/foundations/pillars/*/overview.md` and `policy/foundations/pillars/*/policy.md` are the source for narrative prose
 - `docs/pillars/*.html` is generated output — do not hand-edit policy cards
 - A build script (`scripts/generate-site.py`, TBD) will render HTML from DB + markdown

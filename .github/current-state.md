@@ -9,7 +9,7 @@ _Last updated: April 2026_
 Reconciliation between HTML and DB is complete (HTML→DB gap = 0, DB→HTML gap = 0 as of April 2026). Both are valid sources; keep them in sync.
 
 1. Site HTML (`docs/pillars/*.html`) — rendered policy cards; most recently edited content
-2. `data/policy_catalog_v2.sqlite` — 3,810 positions in v2 ID format; canonical structured catalog
+2. `policy/catalog/policy_catalog_v2.sqlite` — 3,810 positions in v2 ID format; canonical structured catalog
 3. `policy/foundations/pillars/` narrative markdown — prose source; may lag behind site HTML
 
 **Any new position added to HTML must be backfilled into the DB in the same commit.**
@@ -18,7 +18,7 @@ Reconciliation between HTML and DB is complete (HTML→DB gap = 0, DB→HTML gap
 
 Once PolicyOS and the generation pipeline are complete:
 
-1. `data/policy_catalog_v2.sqlite` — canonical source of truth for all policy positions
+1. `policy/catalog/policy_catalog_v2.sqlite` — canonical source of truth for all policy positions
 2. `policy/foundations/pillars/*/overview.md` and `policy/foundations/pillars/*/policy.md` — source for narrative prose
 3. `docs/pillars/*.html` — generated output; do not hand-edit policy cards
 
@@ -101,7 +101,7 @@ docs/
 - `[data-dynamic="policy-count"]` — counts `.policy-card` elements on current page
 - `[data-dynamic="family-count"]` — counts unique family prefixes on current page
 
-## Catalog state (`data/policy_catalog_v2.sqlite`)
+## Catalog state (`policy/catalog/policy_catalog_v2.sqlite`)
 
 Rebuilt April 2026. Reconciliation gap = 0 (HTML and DB in sync).
 
@@ -214,7 +214,7 @@ docs/
 - `[data-dynamic="policy-count"]` — counts `.policy-card` elements on current page
 - `[data-dynamic="family-count"]` — counts unique family prefixes on current page
 
-## Catalog state (data/policy_catalog.sqlite)
+## Catalog state (policy/catalog/policy_catalog_v2.sqlite)
 
 The DB was last rebuilt from source logs in 2025. It is **pre-reconciliation** — it does not fully reflect policy cards added to the site HTML after that point, and some DB entries are not yet on the site.
 
@@ -245,4 +245,4 @@ The DB was last rebuilt from source logs in 2025. It is **pre-reconciliation** �
 ## Scaffolding tools
 
 - `scripts/new-pillar.js` — generate a new pillar HTML page from CLI args
-- `scripts/import_policy_catalog.py` — rebuild `data/policy_catalog.sqlite` from chat logs
+- `scripts/import_policy_catalog.py` — rebuild `policy/catalog/policy_catalog_v2.sqlite` from chat logs

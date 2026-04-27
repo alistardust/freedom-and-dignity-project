@@ -27,7 +27,7 @@ Do not hardcode counts from this file into instruction files. Verify current cou
 When auditing or editing policy content, use this general order:
 1. `.github/current-state.md`
 2. `docs/pillars/`
-3. `data/policy_catalog_v2.sqlite`
+3. `policy/catalog/policy_catalog_v2.sqlite`
 4. `policy/foundations/pillars/`
 
 ## Source-of-truth guidance
@@ -42,8 +42,8 @@ Until reconciliation is complete:
 
 ## Provenance guidance
 
-- `data/policy_catalog_v2.sqlite` is the active structured catalog
-- `data/policy_catalog.sqlite` is historical and may still be used for provenance, audit, and reconstruction tasks
+- `policy/catalog/policy_catalog_v2.sqlite` is the active structured catalog
+- `policy/catalog/policy_catalog_v2.sqlite` is historical and may still be used for provenance, audit, and reconstruction tasks
 - do not treat the legacy database as the canonical current source of policy positions
 - preserve old-to-new ID relationships when reconciling records
 

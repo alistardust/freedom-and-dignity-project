@@ -6,7 +6,7 @@ This directory contains non-canonical research outputs for refactoring the legac
 Files:
 
 - `policyos_legacy_system_rules.csv` — snapshot of the current canonical legacy
-  `SYS-*` rules as exported from `data/policy_catalog.sqlite`
+  `SYS-*` rules as exported from `policy/catalog/policy_catalog_v2.sqlite`
 - `policyos_proposed_rules.csv` — proposed PolicyOS kernel and overlay rules,
   categorized into explicit `SYS` families so scope stays coherent
 - `policyos_proposed_rules_v2.csv` — second-pass proposed canonical rules using

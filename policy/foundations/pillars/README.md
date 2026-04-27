@@ -17,7 +17,7 @@ During Phase 1 (pre-reconciliation), `docs/pillars/*.html` is the most
 recently edited content and takes precedence over these markdown files where
 they diverge.
 
-During Phase 2 (post-reconciliation), `data/policy_catalog_v2.sqlite` will
+During Phase 2 (post-reconciliation), `policy/catalog/policy_catalog_v2.sqlite` will
 be the canonical source for policy positions, and these markdown files will
 be the source for narrative prose. The HTML will be generated output.
 

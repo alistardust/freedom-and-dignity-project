@@ -16,13 +16,12 @@ docs/               Website — served by GitHub Pages
   pillars/          25 pillar HTML pages
   compare/          Party comparison pages
 policy/             All policy content
+  catalog/          Policy catalog (SQLite), schema, ID docs, citation audit
   foundations/      Foundation values, framing, and platform-statement
     pillars/        Narrative markdown source (per-pillar prose, pre-generation)
   policyos/         PolicyOS system rules layer
   proposals/        Proposed foundational documents
     rights/         New Bill of Rights, Workers' Rights, Declaration of Indigenous Rights
-data/               Policy catalog (SQLite), research reports, citation audit
-  pillar_reports/   Per-pillar audits, PolicyOS research
 scripts/            Import, generation, and maintenance scripts
 tests/              Unit tests (Vitest) and E2E tests (Playwright/Firefox)
 AGENTS.md           Codex CLI instruction file
@@ -32,7 +31,7 @@ system_rules.md     Cross-domain system rule architecture
 ## Current state
 
 - **Pillars:** 25 active pillar pages across 5 foundations
-- **Policy positions:** 3,810 canonical positions in `data/policy_catalog_v2.sqlite`
+- **Policy positions:** 3,810 canonical positions in `policy/catalog/policy_catalog_v2.sqlite`
 - **Plain language:** All positions have plain-language summaries
 - **Citations:** Inline APA citations across all pillar pages
 

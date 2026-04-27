@@ -335,7 +335,7 @@ The migration was performed during the Phase 1 → Phase 2 transition of the Fre
 
 ### Idempotency
 
-`scripts/build-catalog-v2.py` is idempotent: re-running it drops and recreates `data/policy_catalog_v2.sqlite`. The output DB is generated, not hand-edited. All content changes must be made to the source data (`policy_catalog.sqlite` or the pillar HTML), then the v2 DB regenerated.
+`scripts/build-catalog-v2.py` is idempotent: re-running it drops and recreates `policy/catalog/policy_catalog_v2.sqlite`. The output DB is generated, not hand-edited. All content changes must be made to the source data (`policy_catalog.sqlite` or the pillar HTML), then the v2 DB regenerated.
 
 ### Lookup during transition
 

@@ -12,14 +12,14 @@ Key design goals
 - Maintain provenance: every canonical rule must be traceable to source artifacts (chat logs, imports, and explicit approvals).
 
 Authoritative sources and counts
-- Canonical DB: data/policy_catalog_v2.sqlite
+- Canonical DB: policy/catalog/policy_catalog_v2.sqlite
 - Current counts (snapshot): positions=2,783; domains=26; subdomains=506; legacy_id_map=2,783
 - Human reports: data/human_report.md, data/full_db_dump.json
 - Per-pillar exports and mapping: data/pillar_reports/by_mapping/
 
 Source-of-truth model (phased)
-- Phase 1 (current, pre-reconciliation): The site HTML (docs/pillars/*.html, 2,935 policy cards) and the DB (data/policy_catalog_v2.sqlite, 2,783 positions) have both been edited since last reconciliation. Neither blindly overrides the other. Divergences are flagged for human review. A full reconciliation audit is in progress.
-- Phase 2 (post-reconciliation): data/policy_catalog_v2.sqlite becomes the single canonical source of truth. Site HTML is generated output. All new positions are authored in the DB first.
+- Phase 1 (current, pre-reconciliation): The site HTML (docs/pillars/*.html, 2,935 policy cards) and the DB (policy/catalog/policy_catalog_v2.sqlite, 2,783 positions) have both been edited since last reconciliation. Neither blindly overrides the other. Divergences are flagged for human review. A full reconciliation audit is in progress.
+- Phase 2 (post-reconciliation): policy/catalog/policy_catalog_v2.sqlite becomes the single canonical source of truth. Site HTML is generated output. All new positions are authored in the DB first.
 
 How system rules are used
 - As constraints during rule import and deduplication: importer uses these concepts to prefer canonical phrasings and avoid contradictory rule sets.

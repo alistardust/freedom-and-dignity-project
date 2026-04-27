@@ -2,7 +2,7 @@
 """Backfill plain_language text for all 177 CNSR policy positions.
 
 Updates both:
-  - data/policy_catalog_v2.sqlite (plain_language column)
+  - policy/catalog/policy_catalog_v2.sqlite (plain_language column)
   - docs/pillars/consumer-rights.html (rule-plain paragraph)
 """
 

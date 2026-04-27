@@ -8,7 +8,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).parent.parent
 HTML_PATH = ROOT / "docs/pillars/technology-and-ai.html"
-DB_PATH = ROOT / "data/policy_catalog_v2.sqlite"
+DB_PATH = ROOT / "policy/catalog/policy_catalog_v2.sqlite"
 
 
 def get_all_tech_plain() -> list[tuple[str, str]]:

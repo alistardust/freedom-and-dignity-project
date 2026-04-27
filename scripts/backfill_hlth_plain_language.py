@@ -8,7 +8,7 @@ from pathlib import Path
 
 REPO = Path(__file__).parent.parent
 HTML_FILE = REPO / "docs/pillars/healthcare.html"
-DB_FILE = REPO / "data/policy_catalog_v2.sqlite"
+DB_FILE = REPO / "policy/catalog/policy_catalog_v2.sqlite"
 
 # fmt: off
 PLAIN_LANGUAGE: dict[str, str] = {
@@ -514,7 +514,7 @@ def update_html(updates: dict[str, str]) -> None:
 
 def git_commit(message: str) -> None:
     subprocess.run(
-        ["git", "add", "docs/pillars/healthcare.html", "data/policy_catalog_v2.sqlite"],
+        ["git", "add", "docs/pillars/healthcare.html", "policy/catalog/policy_catalog_v2.sqlite"],
         cwd=REPO,
         check=True,
     )

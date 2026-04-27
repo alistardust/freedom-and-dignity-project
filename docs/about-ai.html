@@ -244,7 +244,7 @@
   <p>Our obligation is to use AI transparently, use it to build tools of accountability rather than tools of control, and to make the case for the governance frameworks that can reduce the harm it causes. That is not a sufficient response to the scale of the problem. But it is an honest one — and it is more than is being offered by the institutions that have the most to gain from AI remaining ungoverned. We document the harms above not to clear our conscience, but to be clear about what we are working against. The policies in our <a href="pillars/technology-and-ai.html"><strong>Technology &amp; AI pillar</strong></a> are not abstract positions. They are responses to real, documented damage happening now.</p>
 
   <div class="ai-note">
-    <strong>Technical note:</strong> This project was developed using GitHub Copilot CLI and Codex CLI for research synthesis, document drafting, policy cataloging, and website development. The policy catalog is stored in <code>data/policy_catalog_v2.sqlite</code> — a structured SQLite database of <span data-dynamic="policy-count">3810</span> canonical policy positions, rebuilt from source transcripts via <code>scripts/build-catalog-v2.py</code>. All source material and session logs are preserved under <code>sources/</code>. The repository is public at <a href="https://github.com/alistardust/freedom-and-dignity-project">github.com/alistardust/freedom-and-dignity-project</a>.
+    <strong>Technical note:</strong> This project was developed using GitHub Copilot CLI and Codex CLI for research synthesis, document drafting, policy cataloging, and website development. The policy catalog is stored in <code>policy/catalog/policy_catalog_v2.sqlite</code> — a structured SQLite database of <span data-dynamic="policy-count">3810</span> canonical policy positions, rebuilt from source transcripts via <code>scripts/build-catalog-v2.py</code>. The repository is public at <a href="https://github.com/alistardust/freedom-and-dignity-project">github.com/alistardust/freedom-and-dignity-project</a>.
   </div>
 
   <h2>Models and Tools Used</h2>
@@ -343,33 +343,30 @@
     <div class="ai-instr-body">
 
       <h3>Project Context</h3>
-      <p>This repository is reconstructing a document-first political/platform project from branch chat logs plus older markdown files. The policy corpus is centered on the local source transcripts and <code>data/policy_catalog.sqlite</code>. The markdown under <code>pillars/</code> is useful, but may be outdated relative to the logs and database. Read <code>overview/current-state.md</code> before making structural changes.</p>
+      <p>This repository is an active U.S. policy platform organized around 25 pillars and 5 foundations. All policy content lives under <code>policy/</code>. The canonical policy catalog is <code>policy/catalog/policy_catalog_v2.sqlite</code> — 3,810 positions in v2 ID format, all with plain-language summaries. Read <code>.github/current-state.md</code> before making structural changes.</p>
 
       <h3>Source of Truth</h3>
       <ol>
-        <li>Formal structured IDs in the main/brainstorm chat logs</li>
-        <li>Later contextual summary blocks in those chats when earlier mappings conflict</li>
-        <li><code>data/policy_catalog.sqlite</code></li>
-        <li>Legacy pillar markdown</li>
+        <li><code>docs/pillars/*.html</code> — rendered policy cards; most recently edited content</li>
+        <li><code>policy/catalog/policy_catalog_v2.sqlite</code> — structured catalog; canonical for IDs and plain language</li>
+        <li><code>policy/foundations/pillars/</code> — narrative prose markdown; may lag behind site HTML</li>
       </ol>
-      <p>Do <strong>not</strong> assume the current pillar files are complete.</p>
+      <p>Both HTML and DB are kept in sync. Any new position added to HTML must be backfilled to the DB in the same commit.</p>
 
       <h3>Working with IDs and the Catalog</h3>
       <ul>
-        <li>Old numeric checkpoint items live in <code>policy_items</code></li>
-        <li>Structured ID system lives in <code>policy_items</code></li>
-        <li>Legacy-to-structured conversions live in <code>record_links</code></li>
-        <li>Prose/context-only IDs live in <code>prose_rule_mentions</code></li>
-        <li>Use <code>deduped_catalog_entries</code> for the canonical corpus without legacy duplicates</li>
-        <li>Use <code>unresolved_prose_rule_mentions</code> when auditing IDs mentioned in context but not promoted to canon</li>
+        <li>Policy position IDs use the v2 format: <code>XXXX-XXXX-0000</code> (e.g. <code>HLTH-COVR-0001</code>)</li>
+        <li>Canonical positions live in the <code>positions</code> table</li>
+        <li>Domain/subdomain codes live in <code>domains</code> and <code>subdomains</code> tables</li>
+        <li>v1-to-v2 mappings live in <code>legacy_id_map</code> for provenance</li>
+        <li>Rebuild the catalog with <code>scripts/build-catalog-v2.py</code>. Do not hand-edit the SQLite database.</li>
       </ul>
-      <p>Rebuild the catalog from source with <code>scripts/import_policy_catalog.py</code>. Do not hand-edit the SQLite database.</p>
 
       <h3>Editing Guidance</h3>
       <ul>
         <li>Prefer updating import logic and source-backed docs over manual data patching</li>
         <li>Preserve provenance — keep ID relationships visible through the database, not deleted</li>
-        <li>When updating policy content, search both main and brainstorm logs first</li>
+        <li>When updating policy content, check site HTML first, then the DB, then the pillar markdown</li>
         <li>Keep changes surgical: context and traceability matter as much as final wording</li>
       </ul>
 
