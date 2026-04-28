@@ -11,3 +11,6 @@ test-results/
 sources/chat-logs/copilot/
 policy/research/
 sources/
+
+# Build artifacts
+tmp/

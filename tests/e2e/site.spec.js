@@ -19,10 +19,10 @@ test.describe('Homepage', () => {
     await expect(page).toHaveTitle(/Freedom and Dignity/i);
   });
 
-  test('displays the core quote without quotation marks', async ({ page }) => {
-    await expect(page.locator('text=You can\'t be free if you\'re sick, homeless, or in debt').first()).toBeVisible();
-    const content = await page.locator('.hero-statement.strong').textContent();
-    expect(content).not.toMatch(/^[""\u201C]/);
+  test('displays hero mission statement', async ({ page }) => {
+    const statement = await page.locator('.hero-mission').textContent();
+    expect(statement).toBeTruthy();
+    expect(statement.trim().length).toBeGreaterThan(20);
   });
 
   test('renders the FDR block with his quote', async ({ page }) => {
@@ -30,16 +30,18 @@ test.describe('Homepage', () => {
     await expect(page.locator('text=Necessitous men are not free men')).toBeVisible();
   });
 
-  test('renders all 8 FDR rights', async ({ page }) => {
-    await expect(page.locator('.fdr-rights li')).toHaveCount(8);
+  test('renders the PolicyOS 3-layer cards', async ({ page }) => {
+    // The approach section shows 3 PolicyOS layer cards
+    await expect(page.locator('.policyos-layers .layer-card')).toHaveCount(3);
   });
 
   test('renders all 5 foundation cards', async ({ page }) => {
     await expect(page.locator('.foundations-grid .f-card')).toHaveCount(5);
   });
 
-  test('renders the 10 demands list', async ({ page }) => {
-    await expect(page.locator('.demand-list li')).toHaveCount(10);
+  test('renders all 4 Get Involved entry cards', async ({ page }) => {
+    // 4 entry cards: Explore, Review, Build, Community
+    await expect(page.locator('.entry-grid .entry-card')).toHaveCount(4);
   });
 
   test('nav has 7 links (6 static + About AI injected by app.js)', async ({ page }) => {
@@ -207,13 +209,29 @@ test.describe('Compare index', () => {
   test.beforeEach(async ({ page }) => { await page.goto('/compare/index.html'); });
 
   test('has correct page title', async ({ page }) => {
-    await expect(page).toHaveTitle(/Comparison|Compare|Perspectives|Why This Project/i);
+    await expect(page).toHaveTitle(/Why This Project Differs/i);
   });
 
   test('shows all 6 parties', async ({ page }) => {
     for (const name of ['Democratic Party','Republican Party','Libertarian','Democratic Socialists','Working Families','Green Party']) {
       await expect(page.locator(`text=${name}`).first()).toBeVisible();
     }
+  });
+
+  test('frames the section as Why This Project Differs', async ({ page }) => {
+    await expect(page.locator('h1.hero-title')).toHaveText(/Why This Project Differs/i);
+    await expect(page.locator('.hero-statement')).toContainText('distinct structural logic');
+  });
+
+  test('compare cards use the new read label', async ({ page }) => {
+    await expect(page.locator('.cmp-card')).toHaveCount(6);
+    await expect(page.locator('.cmp-card-link')).toHaveCount(6);
+    await expect(page.locator('.cmp-card-link').first()).toHaveText(/Read Why We Differ/i);
+  });
+
+  test('has quick reference and next-step sections', async ({ page }) => {
+    await expect(page.locator('#cmp-table')).toBeVisible();
+    await expect(page.locator('.compare-next-card')).toHaveCount(3);
   });
 });
 
@@ -243,6 +261,16 @@ for (const { file, name } of PARTY_PAGES) {
       const body = await page.locator('body').textContent();
       expect(body.toLowerCase()).not.toContain('coalition likelihood');
       expect(body.toLowerCase()).not.toContain('coalition score');
+    });
+
+    test('section nav uses the rewritten labels', async ({ page }) => {
+      await expect(page.locator('.cmp-snav')).toContainText('What This Page Clarifies');
+      await expect(page.locator('.cmp-snav')).toContainText('Why This Project Differs');
+    });
+
+    test('has sources and next-step sections', async ({ page }) => {
+      await expect(page.locator('#cmp-sources')).toBeVisible();
+      await expect(page.locator('.compare-next-card')).toHaveCount(3);
     });
   });
 }
