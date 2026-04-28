@@ -51,7 +51,7 @@
   <p><strong>The field's own founders are sounding the alarm.</strong> Geoffrey Hinton, who shared the 2024 Nobel Prize in Physics for his foundational work in neural networks, resigned from Google specifically to speak freely about the dangers of unregulated AI.<sup><a href="#fn-hinton" id="ref-hinton">[9]</a></sup> Yoshua Bengio, one of the field's most-cited researchers, has called for international AI governance frameworks comparable to those applied to nuclear and biological weapons.<sup><a href="#fn-bengio" id="ref-bengio">[10]</a></sup> When the people most responsible for building these systems warn that they are outpacing our capacity to govern them, that is the premise our policy is built on.</p>
 
   <h2>Our Policy Framework</h2>
-  <p>The Freedom and Dignity Project's <a href="pillars/technology-and-ai.html"><strong>Technology &amp; AI pillar</strong></a> is among the most comprehensive AI governance frameworks proposed by any American political platform. It encompasses more than 470 canonical policy positions across six primary areas: algorithmic accountability, surveillance limits, data ownership, public infrastructure, labor protections, and democratic control of AI deployment decisions.</p>
+  <p>The Freedom and Dignity Project's <a href="pillars/technology-and-ai.html"><strong>Technology &amp; AI pillar</strong></a> is a major part of the platform's governance framework. It covers algorithmic accountability, surveillance limits, data ownership, public infrastructure, labor protections, and democratic control over AI deployment decisions. The exact number of positions in that pillar can change as the catalog is revised, expanded, and reconciled.</p>
 
   <p>Our framework requires mandatory algorithmic impact assessments, public bias audits, strong data ownership rights, limits on AI-enabled surveillance, prohibition of high-risk autonomous AI deployment without human review, and democratic control over where and how AI gets used. The table below shows where this platform stands relative to the current positions of the Republican and Democratic parties across key AI governance questions.</p>
 
@@ -122,7 +122,7 @@
   </div>
 
   <h2>Why We Used It Anyway</h2>
-  <p>Writing a comprehensive structural reform platform — <span data-dynamic="pillar-count">23</span> policy pillars, 2,900+ canonical policy positions, constitutional analysis, party comparisons — requires institutional scale: staff, a think tank, significant funding, years of support. Those resources are not available here. They are, by design, available to the people this project is criticizing. Well-funded campaigns have policy shops. Corporations have legal teams and lobbyists. This project has a laptop and a stack of research. AI tools let a single person do the research synthesis work that would otherwise require a full staff — and that asymmetry is the point. Democratizing access to analytical capability is precisely the kind of structural correction this platform advocates for.</p>
+  <p>Writing a comprehensive structural reform platform — <span data-dynamic="pillar-count">25</span> policy pillars, thousands of canonical policy positions, constitutional analysis, and party comparisons — requires institutional scale: staff, a think tank, significant funding, years of support. Those resources are not available here. They are, by design, available to the people this project is criticizing. Well-funded campaigns have policy shops. Corporations have legal teams and lobbyists. This project has a laptop and a stack of research. AI tools let a single person do the research synthesis work that would otherwise require a full staff — and that asymmetry is the point. Democratizing access to analytical capability is precisely the kind of structural correction this platform advocates for.</p>
 
   <p>There is something else worth saying plainly: the same technology companies whose practices we are proposing to regulate built these tools. We are using them to write the policies that would hold those companies accountable. We do not find that ironic. We find it necessary.</p>
 
@@ -132,7 +132,7 @@
   <ul>
     <li>Organized and cross-referenced hundreds of hours of source conversations into a structured policy catalog</li>
     <li>Drafted, reviewed, and refined pillar documents against canonical source material</li>
-    <li>Identified gaps, contradictions, and incomplete arguments across <span data-dynamic="pillar-count">23</span> policy areas</li>
+    <li>Identified gaps, contradictions, and incomplete arguments across <span data-dynamic="pillar-count">25</span> policy pillars</li>
     <li>Compared this platform's framework against existing party platforms</li>
     <li>Built and maintained this website</li>
     <li>Pushed back when arguments were weak, vague, or inconsistent</li>
@@ -205,7 +205,7 @@
     </div>
   </div>
 
-  <p>These safeguards are documented in the project's <a href="https://github.com/alistardust/freedom-and-dignity-project/blob/main/.github/copilot-instructions.md">Copilot Instructions</a> — the standing rules that govern how AI is used to build and maintain this platform. They are public, reviewable, and updated as the project evolves.</p>
+  <p>These safeguards are documented in the project's repository instruction files, including <a href="https://github.com/alistardust/freedom-and-dignity-project/blob/main/AGENTS.md">AGENTS.md</a> and <a href="https://github.com/alistardust/freedom-and-dignity-project/blob/main/.github/copilot-instructions.md">.github/copilot-instructions.md</a>. They are public, reviewable, and updated as the project evolves.</p>
 
   <h2>AI as Scaffold, Not Foundation</h2>
   <p><strong>AI got this project off the ground. That is not where it stays.</strong></p>
@@ -244,11 +244,11 @@
   <p>Our obligation is to use AI transparently, use it to build tools of accountability rather than tools of control, and to make the case for the governance frameworks that can reduce the harm it causes. That is not a sufficient response to the scale of the problem. But it is an honest one — and it is more than is being offered by the institutions that have the most to gain from AI remaining ungoverned. We document the harms above not to clear our conscience, but to be clear about what we are working against. The policies in our <a href="pillars/technology-and-ai.html"><strong>Technology &amp; AI pillar</strong></a> are not abstract positions. They are responses to real, documented damage happening now.</p>
 
   <div class="ai-note">
-    <strong>Technical note:</strong> This project was developed using GitHub Copilot CLI and Codex CLI for research synthesis, document drafting, policy cataloging, and website development. The policy catalog is stored in <code>policy/catalog/policy_catalog_v2.sqlite</code> — a structured SQLite database of <span data-dynamic="policy-count">3810</span> canonical policy positions, rebuilt from source transcripts via <code>scripts/build-catalog-v2.py</code>. The repository is public at <a href="https://github.com/alistardust/freedom-and-dignity-project">github.com/alistardust/freedom-and-dignity-project</a>.
+    <strong>Technical note:</strong> This project has been developed through AI-assisted CLI workflows for research synthesis, document drafting, policy cataloging, and website development, with human review governing what is kept, revised, or rejected. The policy catalog is stored in <code>policy/catalog/policy_catalog_v2.sqlite</code> — a structured SQLite database of <span data-dynamic="policy-count">3989</span> canonical policy positions, rebuilt from source material via <code>scripts/build-catalog-v2.py</code>. The repository is public at <a href="https://github.com/alistardust/freedom-and-dignity-project">github.com/alistardust/freedom-and-dignity-project</a>.
   </div>
 
   <h2>Models and Tools Used</h2>
-  <p>This project was built primarily using <strong>GitHub Copilot CLI</strong> as the AI development interface, routing interactions through GitHub's Copilot infrastructure. A parallel <strong>GitHub Copilot Codex CLI</strong> workflow was added later, used for PolicyOS system-rules research and cross-model verification. Earlier phases of the project also used <strong>ChatGPT</strong> (OpenAI's web interface at chat.openai.com) and <strong>GitHub Copilot</strong> in its editor and web forms before the CLI-centered workflow was established. The following AI models were used at different stages of the work:</p>
+  <p>This project has used multiple AI interfaces at different stages, including CLI-based coding and research workflows, earlier web-based chat interfaces, and cross-model review passes. Anthropic models are preferred when a choice is available, with OpenAI models used as an additional check, for coding-specific workflows, and for model-diversity validation. The following list reflects the models and model families documented in the project's current workflow notes:</p>
 
   <div class="ai-note" style="margin-bottom:1.25rem">
     <strong>A note on completeness:</strong> The model tracking below reflects best-effort documentation. Earlier ChatGPT and Copilot web interactions were not always logged with specific model versions. Some model interactions — particularly during early project development — may not be fully captured here. This list is as complete as available records allow; it will be updated as the project continues.
@@ -295,7 +295,7 @@
   <p>The use of multiple models from two independent AI companies — Anthropic and OpenAI — is itself a safeguard. No single AI system is treated as authoritative. Where conclusions matter, cross-model verification reduces the risk of systematic errors inherited from any one model's training.</p>
 
   <h2>Skills and Agent Capabilities</h2>
-  <p>The Copilot CLI used to build this project supports specialized <em>skills</em> — purpose-built agents that run in separate context windows — and parallel sub-agent architectures. The following capabilities were used or are available:</p>
+  <p>The AI-assisted workflows used to build this project support specialized <em>skills</em>, scoped helper agents, and parallel research or coding tasks. The following capabilities were used or are available within those workflows:</p>
 
   <ul class="ai-skills-list">
     <li>
@@ -309,14 +309,14 @@
       <span class="ai-skill-tag">agent</span>
       <div>
         <strong>explore</strong>
-        Fast parallel research agent (Claude Haiku). Used for codebase investigation, file searches, and multi-threaded research tasks — running multiple independent searches simultaneously.
+        Fast parallel research agent. Used for codebase investigation, file searches, and multi-threaded research tasks running in parallel.
       </div>
     </li>
     <li>
       <span class="ai-skill-tag">agent</span>
       <div>
         <strong>general-purpose</strong>
-        Full-capability background agent (Claude Sonnet). Used for complex multi-step tasks — building pillar pages, running consistency audits, constructing comparison content — in a separate context to keep the main session clean.
+        Full-capability background agent. Used for complex multi-step tasks such as building pages, running consistency audits, and constructing comparison content in a separate context.
       </div>
     </li>
     <li>
@@ -336,7 +336,7 @@
   </ul>
 
   <h2>Governing Instructions: Repository Level</h2>
-  <p>The following instructions are stored in <code><a href="https://github.com/alistardust/freedom-and-dignity-project/blob/main/.github/copilot-instructions.md">.github/copilot-instructions.md</a></code> and applied automatically to every AI interaction with this repository. They define how the AI must behave when working on this project — what to prioritize, how to handle sources, citation requirements, copyright rules, quality gates, and testing standards.</p>
+  <p>The following instructions are stored in <code><a href="https://github.com/alistardust/freedom-and-dignity-project/blob/main/.github/copilot-instructions.md">.github/copilot-instructions.md</a></code> and related repository instruction files, and they apply automatically to AI interactions with this repository. They define how the AI must behave when working on this project: what to prioritize, how to handle sources, citation requirements, copyright rules, quality gates, and testing standards.</p>
 
   <details class="ai-instr-panel" open>
     <summary>Repository Copilot Instructions — <code>.github/copilot-instructions.md</code></summary>

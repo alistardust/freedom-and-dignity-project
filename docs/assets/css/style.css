@@ -1315,6 +1315,7 @@ details.design-logic .design-body li { font-size: .93rem; line-height: 1.65; mar
 .roadmap-track-title { font-family: "Oswald", sans-serif; font-size: 1.1rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: #fff; flex: 1; }
 .roadmap-badge { font-family: "Oswald", sans-serif; font-size: .65rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; padding: .25rem .65rem; border-radius: 2px; flex-shrink: 0; }
 .badge-inprogress { background: var(--gold); color: var(--navy); }
+.badge-planned { background: rgba(255,255,255,.22); color: rgba(255,255,255,.88); }
 .badge-notstarted { background: rgba(255,255,255,.15); color: rgba(255,255,255,.6); }
 .badge-deferred { background: #4a3060; color: rgba(255,255,255,.75); }
 .roadmap-track-body { padding: 1.25rem 1.5rem; }

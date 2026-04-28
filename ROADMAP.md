@@ -1,214 +1,477 @@
 # Freedom and Dignity Project — Roadmap
 
-*Last updated: 2026-04-27. Keep this file current as milestones shift.*
+*Last updated: 2026-04-27. Keep this file current as priorities and milestones shift.*
 
 ---
 
 ## Current state
 
 - **25 policy pillars** across 5 foundations
-- **3,810+ canonical positions** in `policy/catalog/policy_catalog_v2.sqlite` (source of truth)
-- **PolicyOS** drafted and canonicalized: values locked (Layer 1), system rules under review (Layer 2), authoring OS under review (Layer 3)
-- **Site** live at <https://alistardust.github.io/freedom-and-dignity-project/> — static HTML on GitHub Pages
-- **PolicyOS pillar audit** complete (2026-04-27): inheritance declarations and whistleblower coverage added across all 25 pillars; critical gap remediation in progress
+- **3,989 canonical positions** in `policy/catalog/policy_catalog_v2.sqlite` (source of truth)
+- **PolicyOS** drafted and locked at the document level:
+  - Layer 1: platform values
+  - Layer 2: system principles
+  - Layer 3: authoring OS
+  - governance document
+- **Site** live at <https://alistardust.github.io/freedom-and-dignity-project/> on GitHub Pages
+- **PolicyOS pillar audit** complete (2026-04-27); full gap remediation complete (P1–P4, +179 positions, +44 subdomains)
+
+This project does not need more top-level concepts right now. It needs stronger **information architecture** so the site feels like a guided path into a system rather than a collection of important documents.
 
 ---
 
-## Release milestones
+## Strategic direction
 
-```
-Milestone 1: PolicyOS 1.0 + Site Prototype   ← current
-Milestone 2: Full site launch                ← after prototype feedback
-Milestone 3: Infrastructure                  ← plan now, execute after or parallel with M2
-```
+The site should follow a clear narrative:
 
-**Milestone 1 ships as a single coordinated release:** PolicyOS 1.0 finalized and published on site + a ground-up prototype of the redesigned site. These ship together because PolicyOS is a featured part of the new site.
-
----
-
-## Milestone 1 — PolicyOS 1.0 + Site Prototype
-
-### PolicyOS work (in progress)
-
-- [x] Layer 1: Platform values (`policyos_platform_values_v1.md`) — locked
-- [x] Layer 2: System principles (`policyos_1_0_rules_proposal.md`) — locked
-- [x] Layer 3: Authoring OS (`policyos_authoring_os_v1.md`) — locked
-- [x] Governance document (`policyos_governance_v1.md`) — locked
-- [x] Full pillar audit against PolicyOS — complete (2026-04-27)
-- [x] P1: Inheritance declarations + whistleblower coverage — complete
-- [ ] P2: Critical gap remediation (CORT, SCIS, TERM, INFR, LEGL) — in progress
-- [ ] P3: High-gap pillar reinforcement (CHKS, ELEC, FPOL, GUNS, HOUS, MDIA, RGHT)
-- [ ] P4: Systemic overlay gap remediation (AIGV, THRV, ENFA sweeps)
-- [ ] PolicyOS highlight page on site
-
-### Site prototype — what ships
-
-**Ground-up redesign:**
-- `index.html` — tour entry point, values-first, re-anchored to New Bill of Rights
-- `mission.html` — moral imperative framing, historical lineage, aspirational language
-- `foundations.html` — each foundation with long-term vision + near-term entry points
-- `get-involved.html` — culmination of the tour; the ask must feel earned
-- `roadmap.html` — updated to reflect current phases
-- `constitution.html`
-- `classification.html`
-- `adversarial-review.html`
-
-**New pages:**
-- The New Bill of Rights (name TBD — see blocking decisions below)
-- PolicyOS 1.0 page
-
-**Layout/tone updates only (no ground-up rewrite):**
-- `about-ai.html`
-- `about-us.html`
-- `letter-from-the-founder.html`
-
-**Deferred to Milestone 2:**
-- Pillar page structural redesign (content stays; template/tour-flow update is a separate pass)
-- `compare/` pages
-- Search
-- Infrastructure changes
-
-### Blocking decisions
-
-1. **Bill of Rights name** — must be decided before Phase 2 content writing begins. Candidates:
-   - *A New Bill of Rights* — clean, historically neutral
-   - *The People's Bill of Rights* — populist, strong
-   - *The Freedom and Dignity Bill of Rights* — ties to project identity
-
-   The three foundational rights documents (regardless of name):
-   | Document | Scope |
-   |---|---|
-   | The New Bill of Rights | 10 amendments: civil, political, personal, environmental, material rights |
-   | The New Bill of Workers' Rights | Fair wages, organizing, safe conditions, family leave, economic security |
-   | The Declaration of Indigenous Rights | Sovereignty, treaty fulfillment, land rights, cultural survival, territorial self-determination |
-
----
-
-## Milestone 1 — Design principles for the site prototype
-
-### The site is a tour
-
-Every page answers: *why does this matter?* and *what's next?* No page should feel like a dead end.
-
-Proposed tour order:
-```
-index (who we are, why we exist)
-  → mission (the case for change)
-  → foundations (the five pillars of the vision)
-  → [pillar pages] (the actual policy)
-  → classification / PolicyOS (how it's built)
-  → roadmap (what comes next)
-  → about-us / letter-from-the-founder (the people)
-  → get-involved (the ask)
+```text
+Vision → Problem → Approach → Invitation
 ```
 
-Each page needs a clear "next" CTA that feels earned, not forced.
+That sequence should shape the entire visitor experience.
 
-### Tone and inspirational framing
+The core shift is from:
 
-The site should channel:
-- **Civil rights movement** — urgency, moral clarity, collective action, the sense that history is watching
-- **FDR** — freedom without material security is not real freedom; economic rights as human rights
-- **Obama 2008** — hope, possibility, optimism; politics as something that can make people's lives better
-- **TR** — fighting concentrated power; government exists to serve people, not the other way around
-- **JFK** — aspiration, the long game, service as something inspiring
-- **Lincoln** — the moral weight of being on the right side of history
+> a collection of important ideas
 
-**What this is NOT:** heavy, bureaucratic, technocratic, exhausting. The gravity should make people want to act, not give up.
+to:
 
-The tone guide:
-- Lead with what is *possible*, not what is broken
-- Make the vision feel achievable and worth being part of
-- Frame participation as meaningful, not performative
-- The platform is a moral imperative framed as an invitation, not a lecture
-- Big scope = respect for the problems, not hubris
+> a guided path into a system
 
-### Faith and values framing
+This means:
 
-The platform's values — dignity, equality, care for the vulnerable, stewardship of the earth, accountability, fairness — are consistent with the core teachings of Christianity, Judaism, Islam, Buddhism, and secular humanism. This framing is not a religious appeal — it is a recognition that the moral foundations of the platform are shared across traditions. The site should feel welcoming to people of faith without requiring faith.
-
-### "Not all or nothing" — aspirational + incremental
-
-The platform holds two things at once:
-1. **Big and aspirational** — a genuine long-term vision; the size signals seriousness
-2. **Incremental and fallback-aware** — every major position should have an ideal goal *and* a realistic first step
-
-The tone: "Here is the picture of what life could look like. Here is where we start."
+- pages must be **directive**, not just descriptive
+- every page must create a natural **next step**
+- **PolicyOS** must move from a side topic to a **centerpiece**
+- depth must be layered so visitors understand the system before they meet the full documents
 
 ---
 
-## Milestone 2 — Full site launch
+## Information architecture goals
 
-After prototype feedback. Includes:
-- Full pillar page structural redesign (template/tour-flow update)
-- `compare/` pages redesigned
-- New Bill of Rights page (full floor+duty treatment for all 10 amendments)
-- Search (SQLite WASM client-side, no server required)
-- Mailing list integration (Buttondown recommended — simple, privacy-respecting)
-- Social media launch (Twitter/X, Bluesky, Instagram; content calendar needed separately)
+### 1. Build a guided path
 
----
+A new visitor should be able to understand, in under 30 seconds:
 
-## Milestone 3 — Infrastructure
+> This is a project to redesign governance using a structured system, and I can help with X.
 
-Plan now, execute after or in parallel with Milestone 2.
+If a visitor cannot say that quickly, the site is not doing its job.
 
-### Hosting
+### 2. Center the differentiator
 
-GitHub Pages is appropriate for now but not the long-term home (no server-side logic, no auth, tied to GitHub account).
+PolicyOS is the project's clearest distinctive contribution. It should not read like an appendix or a side page. It should explain:
 
-Options under evaluation:
-- **Netlify / Vercel** — static hosting + serverless functions; easy migration; good for search + light auth; free tiers generous
-- **Self-hosted VPS** (DigitalOcean, Hetzner) — full control; requires devops; good for the internal review platform
-- **Hybrid** — public site on Netlify/Vercel, internal tool on VPS
+- what the system is
+- why policy needs structure
+- how the structure works
+- why this approach is different from ordinary platforms
 
-Decision not needed until Milestone 2 content work is done.
+### 3. Reduce depth at the top layer
 
-### Policy database search
+The site should not ask visitors to process full frameworks before they know what they are looking at.
 
-Full-text search across the policy catalog from the site. Preferred path for Milestone 2: **SQLite WASM** — load the DB in-browser; no server needed; works on static hosting. Upgrade to serverless function if performance is insufficient.
+Each major section should use a layered reading model:
 
-### Internal review platform
+- 2 to 3 sentence summary
+- optional expanded detail
+- link to the full underlying document
 
-A browser-based tool for human reviewers that does not require GitHub:
-- Role model: **Owner** (final authority) → **Maintainers** (can approve) → **Contributors** (can propose + comment) → **Readers** (approved content only)
-- Per-position review threads: comments, suggested edits, flags, status states
-- Structured consensus signal (not a vote — owner is tiebreaker; tool surfaces agreement/disagreement)
-- Most complex Phase 3 item — design the data model and governance rules first, then choose the tech
+### 4. Make contribution feel real
 
-### Social media
+The project must read as an open collaborative effort, not a finished artifact owned by someone else.
 
-Accounts needed: Twitter/X, Bluesky, Instagram, YouTube. Possibly TikTok, Threads. Needs a content calendar, not just account creation. Natural content formats: "imagine" cards, one-sentence pillar stories, PolicyOS explainers, Bill of Rights as shareable format.
+The invitation should be concrete:
+
+- research
+- writing
+- review
+- structure and systems work
 
 ---
 
-## The New Bill of Rights — structure (finalized)
+## Target site structure
 
-10 amendments — a deliberate parallel to the original Bill of Rights.
+Top navigation should stay simple:
+
+```text
+Home
+Problem
+Approach
+Proposals
+Get Involved
+Roadmap
+```
+
+These are the **core path** pages, not the entire site map.
+
+Supporting pages should remain available outside the primary narrative path:
+
+- Letter from the Founder
+- About Us
+- AI Disclosure
+- Comparison pages
+
+### Home
+
+Purpose:
+
+- orient
+- inspire
+- reduce confusion
+- move people forward
+
+Recommended structure:
+
+```text
+Hero
+The Problem
+The Approach
+What We're Building
+How to Help
+Call to Action
+```
+
+Primary job of the homepage:
+
+- establish the vision
+- explain the stakes
+- point directly to the approach
+
+### Problem
+
+Purpose:
+
+- create credibility
+- define the failure clearly
+- build shared understanding without ranting
+
+Core themes:
+
+- amendment process failure
+- impeachment dysfunction
+- elite capture
+- ambiguity exploitation
+- institutional incentives that no longer protect the public
+
+This page should answer:
+
+> What is broken, and why is ordinary politics not fixing it?
+
+### Approach
+
+This is the centerpiece of the site.
+
+Purpose:
+
+- explain the solution
+- introduce PolicyOS
+- show how structure turns values into durable governance
+
+Core sections:
+
+```text
+What is PolicyOS?
+Why policy needs structure
+Core principles
+How it works
+Why this is different
+```
+
+This page should answer:
+
+> Okay, so what is your solution?
+
+### Proposals
+
+Purpose:
+
+- show the outputs of the system
+- organize the major rights and reform documents
+- make the proposals feel connected rather than random
+
+Core proposal families:
+
+- New Bill of Rights
+- Workers' Rights
+- Indigenous Rights
+- governance and institutional reforms
+
+This section should present proposals as:
+
+> outputs of a coherent system
+
+not isolated documents.
+
+### Get Involved
+
+Purpose:
+
+- convert interest into contribution
+- give people a clear entry point
+
+Entry paths should be explicit:
+
+- Research: investigate issues and source claims
+- Writing: draft or refine proposals
+- Review: critique language, evidence, and tradeoffs
+- Structure: help organize PolicyOS and system logic
+
+This page should feel actionable, not vague.
+
+### Roadmap
+
+Purpose:
+
+- give internal clarity
+- create external confidence
+- show that the work is moving through visible stages
+
+This page should tell a story through phases and milestones rather than read like a flat backlog.
+
+### Supporting pages
+
+These pages should stay, but they should function as contextual support rather than compete with the main visitor path:
+
+- **Letter from the Founder**: personal voice, motivation, and political origin story
+- **About Us**: who is building this and what kind of project it is
+- **AI Disclosure**: transparency, safeguards, and limits on how AI is used in the work
+- **Comparison pages**: show how this platform differs from other parties, ideologies, or governing approaches after the visitor already understands the project's own framework
+
+### Comparison pages
+
+The comparison pages should remain, but they should be reframed.
+
+They should not read as the site's main organizing logic or as a substitute for explaining the project on its own terms first.
+
+Their role should be:
+
+- contextualize the project for visitors who already understand the core approach
+- clarify distinctions without turning the site into a reactive anti-other-party experience
+- compare systems, tradeoffs, and governing assumptions rather than just scorekeeping
+
+The sequencing should be:
+
+- first explain **what this project is**
+- then explain **how it differs from existing parties or frameworks**
+
+---
+
+## Core design rules
+
+Every page should answer:
+
+> What should I do next?
+
+Examples:
+
+- Home → Explore the approach
+- Approach → See the proposals
+- Proposals → Help improve this work
+- Get Involved → Join the collaboration space
+
+Additional rules:
+
+- do not add more top-level pages unless the structure truly requires them
+- do not expose raw GitHub workflow as the primary user experience
+- do not front-load full technical depth
+- do use simple visual structure to clarify the path:
+
+```text
+Problem → PolicyOS → Proposals → Contribution
+```
+
+---
+
+## Phase roadmap
+
+### Phase 1 — Foundations and framing
+
+Goal:
+
+- establish a legible narrative architecture for the public site
+
+Deliverables:
+
+- rewrite homepage around **Vision → Problem → Approach → Invitation**
+- define the new primary navigation
+- reframe existing pages around page purpose and next-step flow
+- translate the current roadmap from task list into visible phases and milestones
+- make the site explicitly collaborative in tone and structure
+
+Success criteria:
+
+- a new visitor can quickly explain what the project is
+- the homepage naturally funnels readers toward the approach page
+- no major page feels like a dead end
+
+### Phase 2 — PolicyOS as centerpiece
+
+Goal:
+
+- make PolicyOS the clearest differentiator on the site
+
+Deliverables:
+
+- publish a dedicated **Approach / PolicyOS** page
+- explain PolicyOS in plain language before linking to full documents
+- show how values, system rules, and authoring rules connect
+- connect PolicyOS directly to proposals and governance reforms
+
+Success criteria:
+
+- visitors can understand why PolicyOS exists
+- visitors can see how it turns values into structured policy
+- PolicyOS reads as the engine of the platform, not a side document
+
+### Phase 3 — Proposals as system outputs
+
+Goal:
+
+- reorganize proposal content so it reads as a coherent body of work
+
+Deliverables:
+
+- create a clean proposals hub
+- group major rights and reform documents into a clear structure
+- present summaries first, then deeper links
+- maintain traceability to the underlying full documents
+
+Candidate centerpiece outputs:
+
+- The New Bill of Rights
+- The New Bill of Workers' Rights
+- The Declaration of Indigenous Rights
+- future governance reform packages
+
+Success criteria:
+
+- proposal pages feel connected to the approach
+- visitors can tell how each proposal fits into the broader system
+- comparison pages are updated to contextualize the platform after its own framework is understood
+
+### Phase 4 — Contribution and public growth
+
+Goal:
+
+- make the project joinable
+
+Deliverables:
+
+- strengthen `get-involved.html` around concrete entry points
+- clarify contributor pathways for research, writing, review, and structure
+- add collaboration calls to action throughout the site
+- prepare for external growth channels after the site narrative is coherent
+
+Success criteria:
+
+- interested visitors know how to help
+- contribution options feel specific and achievable
+- the site signals an active collaborative effort
+
+### Phase 5 — Infrastructure and scale
+
+Goal:
+
+- support search, review, and long-term collaboration without breaking the public-facing architecture
+
+Deliverables under evaluation:
+
+- search over the policy catalog
+- hosting migration if GitHub Pages becomes limiting
+- internal review platform for non-GitHub contributors
+- supporting channels such as mailing list and social media once the site architecture is stable
+
+Success criteria:
+
+- infrastructure supports the system without becoming the system
+- operational tooling stays subordinate to the public narrative and contribution flow
+
+---
+
+## Milestone mapping
+
+```text
+Milestone 1: Information architecture reset + PolicyOS framing
+Milestone 2: Public-facing approach and proposals structure
+Milestone 3: Contribution funnel + infrastructure support
+```
+
+### Milestone 1 — current focus
+
+- restructure the public site around the new narrative flow
+- center PolicyOS in the public explanation
+- convert the roadmap into a phase-based story
+- continue PolicyOS gap remediation in parallel
+
+### Milestone 2
+
+- ship the dedicated approach page
+- ship the proposals structure
+- align major pages with layered reading
+- update page-to-page calls to action
+
+### Milestone 3
+
+- add search and collaboration support
+- evaluate hosting and review tooling
+- support broader public participation once the site is legible and joinable
+
+---
+
+## PolicyOS implementation track
+
+The PolicyOS document set is drafted and locked at the document level. The remaining work is integration, explanation, and enforcement across the site and pillar system.
+
+### Completed
+
+- [x] Layer 1: platform values locked
+- [x] Layer 2: system principles locked
+- [x] Layer 3: authoring OS locked
+- [x] governance document locked
+- [x] full pillar audit against PolicyOS complete
+- [x] inheritance declarations and whistleblower coverage added across pillars
+
+### Completed (2026-04-27)
+
+- [x] P2: critical gap remediation — courts, science, term limits, infrastructure, legislative reform (+28 positions)
+- [x] P3: high-gap pillar reinforcement — CHKS, ELEC, FPOL, GUNS, HOUS, MDIA, RGHT (+51 positions)
+- [x] P4: systemic overlay sweeps — AIGV across LABR/ENVR, THRV funding mechanisms, perverse incentive review (+40 positions)
+
+### Next
+
+- [ ] public-facing PolicyOS explanation page (Approach page)
+- [ ] stronger links from PolicyOS to proposal outputs
+- [ ] update `docs/assets/js/data.js` to reflect all 25 pillars and current position count
+
+---
+
+## The New Bill of Rights track
+
+This remains a major proposal output and should be presented as part of the broader system.
+
+### Open naming decision
+
+One naming decision remains before final public framing:
+
+- *A New Bill of Rights*
+- *The People's Bill of Rights*
+- *The Freedom and Dignity Bill of Rights*
+
+### Core structure
+
+The proposal remains structured as 10 amendments in deliberate parallel with the original Bill of Rights:
 
 | # | Amendment | One-line |
 |---|---|---|
-| 1 | Right to Vote | Your voice in who governs you is sacred — and may not be denied, suppressed, or made practically impossible. |
+| 1 | Right to Vote | Your voice in who governs you is sacred and may not be denied, suppressed, or made practically impossible. |
 | 2 | Right to Self-Governance | You have the right to shape the institutions and systems that shape your life. |
-| 3 | Right to Organize | You have the right to join together — with coworkers, neighbors, or fellow citizens — to demand better. |
-| 4 | Right to Bodily Autonomy | Your body is yours — including your reproductive choices, your medical decisions, and your right to age and die with dignity. |
-| 5 | Right to Privacy | Your personal life, your data, and your communications belong to you — not to corporations or government agencies. |
-| 6 | Right to Indigenous Sovereignty | The nations that were here first have rights that predate this government — and this government has obligations it has not kept. |
-| 7 | Right to a Healthy Environment | Clean air, clean water, healthy waterways and ecosystems, and a stable climate are not luxuries — they are the shared conditions of life. |
+| 3 | Right to Organize | You have the right to join together with coworkers, neighbors, or fellow citizens to demand better. |
+| 4 | Right to Bodily Autonomy | Your body is yours, including your reproductive choices, your medical decisions, and your right to age and die with dignity. |
+| 5 | Right to Privacy | Your personal life, your data, and your communications belong to you, not to corporations or government agencies. |
+| 6 | Right to Indigenous Sovereignty | The nations that were here first have rights that predate this government, and this government has obligations it has not kept. |
+| 7 | Right to a Healthy Environment | Clean air, clean water, healthy waterways and ecosystems, and a stable climate are shared conditions of life. |
 | 8 | Right to Equal Justice | The law applies equally to everyone, and every person has the right to participate fully in public life. |
 | 9 | Right to Cultural Identity | Every person has the right to their language, their faith, their heritage, and their cultural life. |
-| 10 | Right to Basic Necessities | Healthcare, housing, food, a living income, education, childcare, elder care, economic security, and rest are not privileges — they are the floor of a free society. |
+| 10 | Right to Basic Necessities | Healthcare, housing, food, a living income, education, childcare, elder care, economic security, and rest are the floor of a free society. |
 
-### Sub-rights (confirmed)
-
-**Amendment 4 — Bodily Autonomy:** reproductive rights (contraception, abortion), gender-affirming care, end-of-life decisions, freedom from physical coercion
-
-**Amendment 5 — Privacy:** Freedom from Surveillance · Digital Privacy · Medical Privacy · Financial Privacy · Search and Seizure Limits
-
-**Amendment 7 — Healthy Environment:** Clean Air · Clean Water (all waterways) · Climate Stability
-
-**Amendment 8 — Equal Justice:** Equal Protection · Due Process · Full Participation · Accessibility · Family Integrity · Right to Form a Family
-
-**Amendment 9 — Cultural Identity:** Religious Freedom · Linguistic Identity · Cultural Participation · Artistic Expression · Cultural Heritage · Native Hawaiian and Pacific Islander cultural rights
-
-**Amendment 10 — Basic Necessities:** Healthcare · Housing · Food · Living Income · Clean Water (shared with A7) · Education · Childcare · Elder Care · Economic Security · Rest
+This proposal should be introduced on the site as one visible output of the system, not as a standalone object without context.
