@@ -40,6 +40,8 @@
     const isGetInvolvedPage = pageName === 'get-involved';
     const approachHref = base + 'approach.html';
     const isApproachPage = pageName === 'approach';
+    const foundationsHref = base + 'foundations.html';
+    const pillarsHref = base + 'pillars/index.html';
 
     if (navList && !navList.querySelector('a[href*="mission"]')) {
       const li = document.createElement('li');
@@ -73,6 +75,16 @@
 
     // Inject links into footer-links
     const footerLinks = document.querySelector('ul.footer-links');
+    if (footerLinks && !footerLinks.querySelector('a[href*="foundations"]')) {
+      const fli = document.createElement('li');
+      fli.innerHTML = `<a href="${foundationsHref}">Proposals</a>`;
+      footerLinks.appendChild(fli);
+    }
+    if (footerLinks && !footerLinks.querySelector('a[href*="pillars/index"]')) {
+      const fli = document.createElement('li');
+      fli.innerHTML = `<a href="${pillarsHref}">All Pillars</a>`;
+      footerLinks.appendChild(fli);
+    }
     if (footerLinks && !footerLinks.querySelector('a[href*="mission"]')) {
       const fli = document.createElement('li');
       fli.innerHTML = `<a href="${missionHref}">Problem</a>`;
