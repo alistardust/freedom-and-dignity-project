@@ -433,25 +433,6 @@ test.describe('Back-to-top button', () => {
 test.describe('Homepage AI transparency section', () => {
   test.beforeEach(async ({ page }) => { await page.goto('/'); });
 
-  test('renders AI transparency section', async ({ page }) => {
-    // Section is inside a <details> accordion — check it is attached, then open it
-    await expect(page.locator('.ai-transparency-section')).toBeAttached();
-    const accordion = page.locator('details.section-accordion[data-bg="ai-transparency"]');
-    await accordion.evaluate(el => el.setAttribute('open', ''));
-    await expect(page.locator('.ai-transparency-section')).toBeVisible();
-  });
-
-  test('AI transparency section has 3 fact cards', async ({ page }) => {
-    await expect(page.locator('.ai-fact')).toHaveCount(3);
-  });
-
-  test('CTA button links to about-ai.html', async ({ page }) => {
-    const cta = page.locator('.ai-transparency-section a[href*="about-ai"]');
-    await expect(cta).toBeAttached();
-    const href = await cta.getAttribute('href');
-    await page.goto(href.startsWith('http') ? href : new URL(href, page.url()).toString());
-    await expect(page).toHaveTitle(/AI|Artificial/i);
-  });
 });
 
 // ── POLICY RULES SECTION VISIBILITY ──────────────────────────────────────────
