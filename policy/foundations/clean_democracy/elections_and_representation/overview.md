@@ -59,3 +59,38 @@ The pressure-test lessons are clear: election rules must prevent administrative 
 
 ## Related Pillars
 This pillar connects directly to **Anti-Corruption** (campaign finance reform, dark money, AI manipulation), **Rights and Civil Liberties** (voting as a constitutional right, equal protection), **Executive Power** (preventing executive interference in elections), **Judicial Reform** (fast-track judicial review for election disputes, enforcement of constitutional eligibility), and **Citizenship and Immigration** (birthright citizenship protections). The representation reforms connect to **Congressional Reform** (gerrymandering affects legislative composition). The ballot initiative provisions connect to **Direct Democracy** mechanisms across the framework.
+
+---
+
+## PolicyOS Inheritance Declaration
+
+*Compliance document per PAOS-TEST-0003. Established: 2026-04-27. Next review: per MAINT-0006.*
+
+**Domain:** ELEC
+**Audit status (2026-04-27):** High gaps
+
+### Applicable overlays
+
+KERN (universal — all 27 rules) applies to this pillar without exception.
+
+| Overlay | Scope |
+|---|---|
+| KERN | Universal — all 27 rules; no domain-specific exclusions |
+| ENFA | Enforcement architecture — actors, triggers, failure consequences |
+| GEOG | Geographic equity — rural access, regional disparities |
+| FEDR | Federal-state structure — jurisdiction, preemption, interstate |
+| DEMO | Democratic accountability — elections, representation, self-governance |
+| AIGV | AI governance — algorithmic systems, automated decision-making |
+| PRIV | Privacy — data rights, surveillance limits, information control |
+
+### Key compliance notes
+
+- KERN-0027 (whistleblower): Absent — no protections for election workers or campaign staff who report voter suppression or election fraud. P1-B gap.
+- AIGV overlay: Present but thin — AI in election administration and disinformation partially addressed; autonomous campaign targeting systems absent.
+- ENFA overlay: Enforcement for voter suppression and election fraud underspecified — actor, trigger, and failure consequences incomplete.
+- KERN-0014 (access not defeated by burden): Voter ID, registration barriers, polling place access partially addressed; mail voting and accessibility gaps.
+
+### Cross-pillar interactions
+
+- Closely coupled to CRPT (anti-corruption) for campaign finance enforcement and MDIA (information and media) for election disinformation.
+- DEMO overlay shared with CHKS, EXEC, LEGL — democratic accountability mechanisms should be architecturally consistent.

@@ -80,3 +80,38 @@ This pillar connects to multiple other policy domains: infrastructure (transport
 - **Public Health** — Air and water quality impacts on health outcomes, environmental justice and health disparities
 - **Rights and Civil Liberties** — Environmental justice, right to clean air and water, protection of future generations
 - **Economic Security** — Regenerative agriculture transitions, worker protections, education access
+
+---
+
+## PolicyOS Inheritance Declaration
+
+*Compliance document per PAOS-TEST-0003. Established: 2026-04-27. Next review: per MAINT-0006.*
+
+**Domain:** ENVR
+**Audit status (2026-04-27):** Needs work
+
+### Applicable overlays
+
+KERN (universal — all 27 rules) applies to this pillar without exception.
+
+| Overlay | Scope |
+|---|---|
+| KERN | Universal — all 27 rules; no domain-specific exclusions |
+| ENFA | Enforcement architecture — actors, triggers, failure consequences |
+| ECOL | Ecological habitability — environment, climate, public health |
+| FEDR | Federal-state structure — jurisdiction, preemption, interstate |
+| REGD | Regulatory design — capture prevention, independence, revolving door |
+| ECON | Economic justice — market power, wealth distribution, labor |
+| GEOG | Geographic equity — rural access, regional disparities |
+
+### Key compliance notes
+
+- KERN-0027 (whistleblower): Absent — no protections for environmental law reporters or agency scientists who expose regulatory violations. P1-B gap.
+- ECOL overlay: Strong — ecological habitability (Value 8) is the pillar's core; climate, pollution, species protection, and ecosystem health addressed.
+- KERN-0015 (foreseeable abuse design): Agricultural subsidy capture, regulatory capture of EPA partially addressed; fossil fuel industry abuse pathways underspecified.
+- ECON overlay: Agricultural economic justice (FARM, FOOD subdomains) present; but environmental cost externalization design constraints absent.
+
+### Cross-pillar interactions
+
+- ECOL overlay shared with HLTH (pollution and health outcomes), HOUS (environmental justice in housing siting), INFR (clean infrastructure), IMMG (climate migration). Ecological positions must be consistent across all ECOL-bearing pillars.
+- ADMN pillar's ecological duty gap (agencies failing environmental protection) connects directly to ENVR enforcement architecture.

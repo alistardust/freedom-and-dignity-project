@@ -63,3 +63,38 @@ Finally, this pillar connects to broader anti-corruption and institutional-accou
 - **Courts and Judicial System** — Establishes the proper role of judicial review in agency actions, including Chevron deference and standards for striking down arbitrary or capricious rulemaking
 - **Executive Power** — Clarifies the relationship between executive authority and agency independence, preventing presidents from simply defunding enforcement of laws they oppose
 - **Technology and AI** — Many emerging regulatory challenges (AI safety, data privacy, algorithmic accountability) will require agency capacity and technical expertise
+
+---
+
+## PolicyOS Inheritance Declaration
+
+*Compliance document per PAOS-TEST-0003. Established: 2026-04-27. Next review: per MAINT-0006.*
+
+**Domain:** ADMN
+**Audit status (2026-04-27):** Adequate
+
+### Applicable overlays
+
+KERN (universal — all 27 rules) applies to this pillar without exception.
+
+| Overlay | Scope |
+|---|---|
+| KERN | Universal — all 27 rules; no domain-specific exclusions |
+| ENFA | Enforcement architecture — actors, triggers, failure consequences |
+| FEDR | Federal-state structure — jurisdiction, preemption, interstate |
+| REGD | Regulatory design — capture prevention, independence, revolving door |
+| AIGV | AI governance — algorithmic systems, automated decision-making |
+| PRIV | Privacy — data rights, surveillance limits, information control |
+
+### Key compliance notes
+
+- KERN-0027 (whistleblower): Covered — WBLS-0001/0002/0003 address federal employees and contractors. One of the few pillars with explicit WBLS subdomain.
+- KERN-0002/0004/0005 (accountability, unchecked power, attributable authority): Strong coverage via CIVL, OVRG, CAPS, INDS, TRAN subdomains.
+- AIGV overlay: Partial — AI in agency adjudication underspecified; AINL subdomain present but scope unclear.
+- PRIV overlay: Partial — data collection practices across administrative agencies not addressed as a structural design constraint.
+- Ecological duty gap: No position on what happens when agencies responsible for environmental protection structurally fail that duty (Value 8 absent).
+
+### Cross-pillar interactions
+
+- Shares enforcement architecture patterns with EXEC (executive power) and CHKS (checks and balances); agency-specific enforcement circuits should be consistent.
+- SCIS subdomain addresses scientific integrity; see also SCIS pillar (science, technology, and space) for research-specific positions.

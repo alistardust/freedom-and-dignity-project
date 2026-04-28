@@ -50,3 +50,36 @@ The pressure-test lessons that must be incorporated: "independent" spending is e
 
 ## Related Pillars
 This pillar connects directly to **Elections and Representation** (campaign finance reform protects voting fairness), **Executive Power** (preventing self-dealing and emoluments violations), **Judicial Reform** (ensuring courts are not captured by moneyed interests), and **Rights and Civil Liberties** (protecting against government use of purchased data and information manipulation). The anti-monopoly provisions connect to **Economic Security** (concentration of corporate power affects affordability and wages). The foreign influence safeguards connect to **National Security** (protecting democratic integrity from external manipulation). Media transparency and AI disclosure connect to **Information Integrity** efforts across the framework.
+
+---
+
+## PolicyOS Inheritance Declaration
+
+*Compliance document per PAOS-TEST-0003. Established: 2026-04-27. Next review: per MAINT-0006.*
+
+**Domain:** CRPT
+**Audit status (2026-04-27):** Needs work
+
+### Applicable overlays
+
+KERN (universal — all 27 rules) applies to this pillar without exception.
+
+| Overlay | Scope |
+|---|---|
+| KERN | Universal — all 27 rules; no domain-specific exclusions |
+| ENFA | Enforcement architecture — actors, triggers, failure consequences |
+| REGD | Regulatory design — capture prevention, independence, revolving door |
+| DEMO | Democratic accountability — elections, representation, self-governance |
+| PRIV | Privacy — data rights, surveillance limits, information control |
+
+### Key compliance notes
+
+- KERN-0027 (whistleblower): Strong — WBLS subdomain with 3 positions including qui tam expansion, universal private right of action, and federal anti-SLAPP statute.
+- KERN-0015 (foreseeable abuse design): Revolving door (RVDS), disclosure (DSCS), financial conflicts (FCFL) addressed. Dark money and foreign influence pathways present.
+- ENFA overlay: Independent enforcement architecture underspecified — positions define prohibitions but enforcement actors weak.
+- DEMO overlay: Electoral corruption and campaign finance positions present; structural corruption of democratic institutions addressed.
+
+### Cross-pillar interactions
+
+- CRPT whistleblower framework (WBLS-0001/0002/0003) is a platform-level standard that other pillars should inherit for their domain-specific WBLS positions.
+- Overlaps with ELEC (elections) on campaign finance; positions should be consistent and non-duplicative.

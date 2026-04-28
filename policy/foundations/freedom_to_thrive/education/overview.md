@@ -54,3 +54,39 @@ Research on integration shows that socioeconomically diverse schools produce bet
 - **[Equal Justice & Policing](../equal_justice_and_policing/overview.md)** — School discipline disparities and the school-to-prison pipeline require coordinated reform across education and justice systems.
 - **[Consumer Rights](../consumer_rights/overview.md)** — Predatory student lending and for-profit education fraud are consumer protection failures requiring coordinated enforcement.
 - **[Anti-Corruption & Concentrated Power](../anti_corruption/overview.md)** — Industry capture of education policy and accreditation systems undermines both quality and accountability.
+
+---
+
+## PolicyOS Inheritance Declaration
+
+*Compliance document per PAOS-TEST-0003. Established: 2026-04-27. Next review: per MAINT-0006.*
+
+**Domain:** EDUC
+**Audit status (2026-04-27):** Needs work
+
+### Applicable overlays
+
+KERN (universal — all 27 rules) applies to this pillar without exception.
+
+| Overlay | Scope |
+|---|---|
+| KERN | Universal — all 27 rules; no domain-specific exclusions |
+| ENFA | Enforcement architecture — actors, triggers, failure consequences |
+| GEOG | Geographic equity — rural access, regional disparities |
+| FEDR | Federal-state structure — jurisdiction, preemption, interstate |
+| THRV | Affirmative duty — material necessities, funding mechanisms |
+| PRIV | Privacy — data rights, surveillance limits, information control |
+| DEMO | Democratic accountability — elections, representation, self-governance |
+| AIGV | AI governance — algorithmic systems, automated decision-making |
+
+### Key compliance notes
+
+- KERN-0027 (whistleblower): Absent — no protections for teachers, staff, students, or parents who report civil rights violations or educational fraud. P1-B gap.
+- THRV overlay: Broad coverage of education as a material right; funding equity and access positions strong.
+- AIGV overlay: Present — AI in education addressed; but algorithmic grading, surveillance of students, and predictive tracking underspecified.
+- KERN-0014 (access not defeated by burden): Geographic access and cost barriers addressed; disability access in education underspecified.
+
+### Cross-pillar interactions
+
+- THRV overlay shared with HLTH, HOUS, LABR, INFR — education as a material necessity should be framed consistently with other THRV pillars.
+- PRIV overlay: Student data privacy connects to TECH (technology and AI) positions on data collection; TECH positions may govern EdTech contexts.

@@ -62,3 +62,34 @@ The pressure-test lessons that inform this pillar include: incumbency advantage 
 - **Congressional Power**: Authority over its own membership; expulsion and discipline procedures; qualification requirements
 - **Government Ethics and Accountability**: Financial disclosure requirements for candidates; transparency standards; conflict of interest rules
 - **Democratic Institutions**: Ballot access; special election procedures; representation continuity during vacancies
+
+---
+
+## PolicyOS Inheritance Declaration
+
+*Compliance document per PAOS-TEST-0003. Established: 2026-04-27. Next review: per MAINT-0006.*
+
+**Domain:** TERM
+**Audit status (2026-04-27):** Critical gaps
+
+### Applicable overlays
+
+KERN (universal — all 27 rules) applies to this pillar without exception.
+
+| Overlay | Scope |
+|---|---|
+| KERN | Universal — all 27 rules; no domain-specific exclusions |
+| ENFA | Enforcement architecture — actors, triggers, failure consequences |
+| DEMO | Democratic accountability — elections, representation, self-governance |
+
+### Key compliance notes
+
+- KERN-0027 (whistleblower): Absent — no protections for staff or officials who expose term limit violations, disclosure circumvention, or fitness assessment manipulation. P1-B gap.
+- ENFA overlay: Absent — no enforcement actor specified for any of the disclosure, term limit, or fitness requirements. This is the pillar's single most critical structural gap.
+- KERN-0013 (challenge/appeal): FITS-0003 (fitness assessment manipulation protection) present; but voter or candidate challenge rights for fitness assessments absent.
+- Value tension: Age-based fitness requirements and equal-standing implications (NORM-0008) not surfaced — this tension requires explicit acknowledgment.
+
+### Cross-pillar interactions
+
+- DEMO overlay shared with ELEC, CHKS, LEGL, EXEC — democratic accountability mechanisms across the accountable_power foundation must be architecturally consistent.
+- CRPT (anti-corruption) covers disclosure and revolving door; TERM and CRPT positions on disclosure requirements should be non-duplicative.

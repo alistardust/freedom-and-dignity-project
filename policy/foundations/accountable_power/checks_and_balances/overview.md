@@ -143,3 +143,35 @@ The rule integrity requirement (SYS-RUL-001) is meta-structural: it ensures that
 - **Pillar 6: Courts and Judicial System** — Judicial accountability, term limits, ethics enforcement
 - **Pillar 9: Healthcare System** — AI in healthcare decisions, geographic access guarantees
 - **Pillar 12: Taxation and Wealth** — AI in insurance and economic decisions, bias mitigation
+
+---
+
+## PolicyOS Inheritance Declaration
+
+*Compliance document per PAOS-TEST-0003. Established: 2026-04-27. Next review: per MAINT-0006.*
+
+**Domain:** CHKS
+**Audit status (2026-04-27):** High gaps
+
+### Applicable overlays
+
+KERN (universal — all 27 rules) applies to this pillar without exception.
+
+| Overlay | Scope |
+|---|---|
+| KERN | Universal — all 27 rules; no domain-specific exclusions |
+| FEDR | Federal-state structure — jurisdiction, preemption, interstate |
+| DEMO | Democratic accountability — elections, representation, self-governance |
+| AIGV | AI governance — algorithmic systems, automated decision-making |
+
+### Key compliance notes
+
+- KERN-0027 (whistleblower): Absent — no protection for officials or staff who report violations of constitutional checks.
+- ENFA overlay: Absent — enforcement architecture for checks and balances violations not defined. This is the pillar's deepest gap: who enforces structural accountability?
+- AIGV overlay: AINL subdomain (7 positions) present and strong for AI governance structural requirements.
+- KERN-0013 (challenge/appeal): ACCS-0001 present; but challenge rights for emergency power declarations and executive branch violations — underspecified.
+
+### Cross-pillar interactions
+
+- Strongly coupled to EXEC (executive power) and LEGL (legislative reform) — enforcement architecture decisions here affect both.
+- FEDR overlay links to ADMN for federalism design consistency.

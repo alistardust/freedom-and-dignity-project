@@ -54,3 +54,37 @@ Mandatory arbitration research by the Economic Policy Institute shows that force
 - **[Antitrust & Corporate Power](../antitrust_and_corporate_power/overview.md)** — Repair monopolies, subscription lock-in, and market foreclosure are antitrust issues requiring coordinated enforcement.
 - **[Labor & Workers' Rights](../labor_and_workers_rights/overview.md)** — Independent repair technicians are workers whose economic viability depends on right-to-repair access.
 - **[Environment & Agriculture](../environment_and_agriculture/overview.md)** — Right-to-repair and product lifecycle standards reduce waste and are core to sustainable production policy.
+
+---
+
+## PolicyOS Inheritance Declaration
+
+*Compliance document per PAOS-TEST-0003. Established: 2026-04-27. Next review: per MAINT-0006.*
+
+**Domain:** CNSR
+**Audit status (2026-04-27):** Needs work
+
+### Applicable overlays
+
+KERN (universal — all 27 rules) applies to this pillar without exception.
+
+| Overlay | Scope |
+|---|---|
+| KERN | Universal — all 27 rules; no domain-specific exclusions |
+| ENFA | Enforcement architecture — actors, triggers, failure consequences |
+| REGD | Regulatory design — capture prevention, independence, revolving door |
+| ECON | Economic justice — market power, wealth distribution, labor |
+| PRIV | Privacy — data rights, surveillance limits, information control |
+| GEOG | Geographic equity — rural access, regional disparities |
+
+### Key compliance notes
+
+- KERN-0027 (whistleblower): Absent — no protection for consumer fraud reporters or employees who expose deceptive practices. P1-B gap.
+- PRIV overlay: Thin — consumer data privacy beyond basic notice-and-consent not addressed as a structural design constraint.
+- GEOG overlay: Geographic access disparities in consumer protection (rural, low-income communities) underaddressed.
+- ENFA overlay: CFPB and FTC enforcement referenced; but failure consequences for regulatory capture of these bodies absent.
+
+### Cross-pillar interactions
+
+- Overlaps with TECH (technology and AI) on data privacy and algorithmic consumer harm — TECH positions may govern digital consumer contexts.
+- ECON overlay connects to ANTR (antitrust) — monopolistic pricing as consumer harm should be consistent across pillars.

@@ -52,3 +52,35 @@ Congressional dysfunction and gridlock impose documented costs. The 2011 and 202
 - **[Elections & Representation](../elections_and_representation/overview.md)** — Senate representation reform and House expansion are inseparable from electoral reform for proportional democracy.
 - **[Anti-Corruption & Concentrated Power](../anti_corruption/overview.md)** — Legislative capture by concentrated interests is enabled by the same structural failures that produce gridlock and minority rule.
 - **[Administrative State](../administrative_state/overview.md)** — Congress's failure to legislate has driven executive and regulatory overreach; restoring legislative function reduces reliance on executive action.
+
+---
+
+## PolicyOS Inheritance Declaration
+
+*Compliance document per PAOS-TEST-0003. Established: 2026-04-27. Next review: per MAINT-0006.*
+
+**Domain:** LEGL
+**Audit status (2026-04-27):** Critical gaps
+
+### Applicable overlays
+
+KERN (universal — all 27 rules) applies to this pillar without exception.
+
+| Overlay | Scope |
+|---|---|
+| KERN | Universal — all 27 rules; no domain-specific exclusions |
+| ENFA | Enforcement architecture — actors, triggers, failure consequences |
+| DEMO | Democratic accountability — elections, representation, self-governance |
+| FEDR | Federal-state structure — jurisdiction, preemption, interstate |
+
+### Key compliance notes
+
+- KERN-0027 (whistleblower): Absent — no protections for congressional staff or officials who report violations of legislative ethics or constitutional duties.
+- ENFA overlay: Critical gap — ethics enforcement relies entirely on Congress self-enforcement; no independent enforcement actor specified anywhere in the pillar.
+- KERN-0004 (unchecked power): Term limits and gerrymandering positions address structural power; but filibuster abuse and legislative gridlock as unchecked power pathways absent.
+- FEDR overlay: Federalism design in legislative context (federal vs. state legislative preemption) underspecified.
+
+### Cross-pillar interactions
+
+- CHKS (checks and balances) and EXEC (executive power) are closely coupled — legislative reform positions must form a coherent constitutional architecture.
+- CRPT (anti-corruption) covers congressional corruption and revolving door; LEGL and CRPT positions should be non-duplicative.

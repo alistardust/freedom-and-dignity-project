@@ -187,3 +187,40 @@ The 361 rules in this pillar reflect a comprehensive effort to ensure that artif
 - **Environment and Agriculture** — Environmental impact rules for AI infrastructure align with climate policy; ensure technology does not externalize environmental costs.
 
 - **Checks and Balances** — Congressional authorization requirements for military AI, sunset provisions, and oversight structures align with separation of powers and democratic accountability.
+
+---
+
+## PolicyOS Inheritance Declaration
+
+*Compliance document per PAOS-TEST-0003. Established: 2026-04-27. Next review: per MAINT-0006.*
+
+**Domain:** TECH
+**Audit status (2026-04-27):** Adequate
+
+### Applicable overlays
+
+KERN (universal — all 27 rules) applies to this pillar without exception.
+
+| Overlay | Scope |
+|---|---|
+| KERN | Universal — all 27 rules; no domain-specific exclusions |
+| ENFA | Enforcement architecture — actors, triggers, failure consequences |
+| REGD | Regulatory design — capture prevention, independence, revolving door |
+| ECON | Economic justice — market power, wealth distribution, labor |
+| PRIV | Privacy — data rights, surveillance limits, information control |
+| AIGV | AI governance — algorithmic systems, automated decision-making |
+| DEMO | Democratic accountability — elections, representation, self-governance |
+| FEDR | Federal-state structure — jurisdiction, preemption, interstate |
+| GEOG | Geographic equity — rural access, regional disparities |
+
+### Key compliance notes
+
+- AIGV overlay: Core overlay — 499 positions including AIGV-0001/0003/0004/0010/0012 explicitly stated for AI-specific risks even where universal KERN rules also apply.
+- PRIV overlay: Strong — data privacy, surveillance architecture, and digital rights comprehensively addressed.
+- KERN-0027 (whistleblower): Coverage through CRPT pillar qui tam provisions; tech-specific whistleblower protections (algorithm harm reporters, AI safety disclosures) may warrant explicit WBLS positions.
+- ECON overlay: Platform market power, algorithmic pricing, and tech concentration addressed.
+
+### Cross-pillar interactions
+
+- TECH AIGV positions are explicitly inherited by HLTH, JUST, ADMN, ELEC, HOUS, LABR, ENVR, FPOL, LEGL, SCIS for domain-specific AI governance.
+- PRIV overlay positions govern digital privacy across all domains — TECH is the primary authority; other pillars inherit.

@@ -90,3 +90,37 @@ The platform recognizes reparations for slavery and systemic racial discriminati
 
 ## Related Pillars
 This pillar connects to **Elections and Representation** (voting rights, equal protection, participation), **Anti-Corruption** (privacy protections against government data purchases, protection from information manipulation), **Executive Power** (limits on executive detention, kill lists, emergency powers), **Judicial Reform** (enforcement mechanisms, meaningful remedies, expedited review), **Economic Security** (healthcare, housing, basic income, livable wage), **Healthcare** (right to care, medical privacy, informed consent), **Criminal Justice** (due process, ban on indefinite detention, post-incarceration rights), **Immigration** (due process for all persons in U.S. jurisdiction), **Environmental Protection** (right to clean air and water), **Technology and AI** (digital privacy, algorithmic accountability, biometric surveillance), **Education** (right to education, children's rights), **Labor Rights** (organizing, collective bargaining, workplace protections), and **Religious Freedom and Establishment Clause** (freedom of and from religion, tax-exempt status accountability). This is the connective tissue pillar that ensures other structural reforms translate into lived freedom and dignity.
+
+---
+
+## PolicyOS Inheritance Declaration
+
+*Compliance document per PAOS-TEST-0003. Established: 2026-04-27. Next review: per MAINT-0006.*
+
+**Domain:** RGHT
+**Audit status (2026-04-27):** High gaps
+
+### Applicable overlays
+
+KERN (universal — all 27 rules) applies to this pillar without exception.
+
+| Overlay | Scope |
+|---|---|
+| KERN | Universal — all 27 rules; no domain-specific exclusions |
+| ENFA | Enforcement architecture — actors, triggers, failure consequences |
+| PRIV | Privacy — data rights, surveillance limits, information control |
+| DEMO | Democratic accountability — elections, representation, self-governance |
+| ECON | Economic justice — market power, wealth distribution, labor |
+| GEOG | Geographic equity — rural access, regional disparities |
+
+### Key compliance notes
+
+- KERN-0027 (whistleblower): Absent — no protections for civil rights defenders or attorneys who report constitutional rights deprivations. P1-B gap.
+- PRIV overlay: Strong — surveillance, digital privacy, and Fourth Amendment protections addressed.
+- ENFA overlay: Enforcement architecture for civil rights violations underspecified — DOJ Civil Rights Division and private right of action present but failure consequences thin.
+- KERN-0014 (access not defeated by burden): Geographic and economic access barriers to civil rights enforcement partially addressed.
+
+### Cross-pillar interactions
+
+- Shared pillar — primary home is equal_justice foundation; also appears under real_freedom foundation. Positions here are inherited by both foundations.
+- JUST (equal justice and policing) inherits RGHT enforcement architecture for policing contexts. IMMG inherits RGHT due process positions.

@@ -74,3 +74,37 @@ Finally, this pillar must address the symbolic and political dimensions of gun p
 - **Anti-Corruption and Concentrated Power** — Gun industry lobbying has systematically blocked safety regulations; anti-corruption frameworks address this influence
 - **Public Safety and Democratic Order** — Militias and armed groups connect to broader questions about private violence and state authority
 - **Courts and Judicial System** — Judicial interpretation of Second Amendment and standards for reviewing gun regulations
+
+---
+
+## PolicyOS Inheritance Declaration
+
+*Compliance document per PAOS-TEST-0003. Established: 2026-04-27. Next review: per MAINT-0006.*
+
+**Domain:** GUNS
+**Audit status (2026-04-27):** High gaps
+
+### Applicable overlays
+
+KERN (universal — all 27 rules) applies to this pillar without exception.
+
+| Overlay | Scope |
+|---|---|
+| KERN | Universal — all 27 rules; no domain-specific exclusions |
+| ENFA | Enforcement architecture — actors, triggers, failure consequences |
+| GEOG | Geographic equity — rural access, regional disparities |
+| FEDR | Federal-state structure — jurisdiction, preemption, interstate |
+| REGD | Regulatory design — capture prevention, independence, revolving door |
+| PRIV | Privacy — data rights, surveillance limits, information control |
+
+### Key compliance notes
+
+- KERN-0027 (whistleblower): Absent — no protections for persons who report illegal gun trafficking, straw purchases, or unlicensed dealing. P1-B gap.
+- ENFA overlay: Enforcement architecture incomplete — background check enforcement actors and failure consequences underspecified; ATF authority gaps not addressed.
+- KERN-0015 (foreseeable abuse design): Straw purchase loopholes and ghost gun pathways partially addressed; illegal modification supply chains absent.
+- GEOG overlay: State preemption of local gun laws addressed; but rural-urban enforcement capacity disparities absent.
+
+### Cross-pillar interactions
+
+- RGHT (rights and civil liberties) governs Second Amendment rights framing; GUNS governs the regulatory architecture. These must be consistent.
+- JUST (equal justice and policing) addresses gun violence in policing contexts; cross-pillar consistency required on use-of-force and community safety.

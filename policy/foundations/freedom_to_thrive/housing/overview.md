@@ -54,3 +54,41 @@ Community land trusts and shared-equity models have demonstrated sustained affor
 - **[Environment & Agriculture](../environment_and_agriculture/overview.md)** — Building standards, energy efficiency, and sustainable construction reduce both environmental impact and long-term housing costs.
 - **[Equal Justice & Policing](../equal_justice_and_policing/overview.md)** — Housing discrimination, segregation, and criminalization of homelessness are equal justice issues requiring parallel reform.
 - **[Antitrust & Corporate Power](../antitrust_and_corporate_power/overview.md)** — Corporate consolidation of housing markets is an antitrust and market concentration issue as much as a housing policy issue.
+
+---
+
+## PolicyOS Inheritance Declaration
+
+*Compliance document per PAOS-TEST-0003. Established: 2026-04-27. Next review: per MAINT-0006.*
+
+**Domain:** HOUS
+**Audit status (2026-04-27):** High gaps
+
+### Applicable overlays
+
+KERN (universal — all 27 rules) applies to this pillar without exception.
+
+| Overlay | Scope |
+|---|---|
+| KERN | Universal — all 27 rules; no domain-specific exclusions |
+| ENFA | Enforcement architecture — actors, triggers, failure consequences |
+| GEOG | Geographic equity — rural access, regional disparities |
+| FEDR | Federal-state structure — jurisdiction, preemption, interstate |
+| THRV | Affirmative duty — material necessities, funding mechanisms |
+| ECON | Economic justice — market power, wealth distribution, labor |
+| ECOL | Ecological habitability — environment, climate, public health |
+| PRIV | Privacy — data rights, surveillance limits, information control |
+| REGD | Regulatory design — capture prevention, independence, revolving door |
+| AIGV | AI governance — algorithmic systems, automated decision-making |
+
+### Key compliance notes
+
+- KERN-0027 (whistleblower): Absent — no protections for reporters of housing discrimination, predatory lending, or building safety concealment. P1-B gap.
+- AIGV overlay: Present but thin — algorithmic housing discrimination (automated denial, rental pricing algorithms) partially addressed.
+- THRV overlay: Present — housing as material necessity strong; but funding mechanisms for affordable housing construction underspecified.
+- KERN-0015 (foreseeable abuse design): Eviction abuse paths and landlord retaliation addressed; zoning capture and NIMBYism as an abuse path absent.
+
+### Cross-pillar interactions
+
+- ECOL overlay connects to ENVR (environmental justice in housing siting, pollution proximity) and INFR (infrastructure access for housing).
+- JUST (equal justice) shares housing discrimination enforcement; RGHT shares fair housing as a civil rights issue.

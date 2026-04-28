@@ -207,3 +207,39 @@ Victim rights and support are essential components of a just system, but they mu
 - **Immigration and Borders**: Due process in immigration detention, limits on family separation
 - **Privacy and Surveillance**: Fourth Amendment protections, limits on warrantless surveillance and data collection
 - **Economic Justice**: Addressing wealth-based detention, fines-as-revenue systems, and economic barriers to justice
+
+---
+
+## PolicyOS Inheritance Declaration
+
+*Compliance document per PAOS-TEST-0003. Established: 2026-04-27. Next review: per MAINT-0006.*
+
+**Domain:** JUST
+**Audit status (2026-04-27):** Adequate
+
+### Applicable overlays
+
+KERN (universal — all 27 rules) applies to this pillar without exception.
+
+| Overlay | Scope |
+|---|---|
+| KERN | Universal — all 27 rules; no domain-specific exclusions |
+| ENFA | Enforcement architecture — actors, triggers, failure consequences |
+| GEOG | Geographic equity — rural access, regional disparities |
+| FEDR | Federal-state structure — jurisdiction, preemption, interstate |
+| PRIV | Privacy — data rights, surveillance limits, information control |
+| AIGV | AI governance — algorithmic systems, automated decision-making |
+| ECON | Economic justice — market power, wealth distribution, labor |
+| DEMO | Democratic accountability — elections, representation, self-governance |
+
+### Key compliance notes
+
+- KERN-0027 (whistleblower): Covered — WHTS subdomain addresses whistleblower protections and incentives; STNG-0001 includes officer whistleblower protection for quota pressure reporting.
+- AIGV overlay: Present — AI in policing, predictive policing, facial recognition, and algorithmic sentencing addressed.
+- KERN-0013 (challenge/appeal): Strong — due process, appeal rights, and civilian oversight mechanisms present.
+- ECON overlay: Economic justice in policing (fines, fees, civil asset forfeiture) addressed.
+
+### Cross-pillar interactions
+
+- Rights and Civil Liberties (RGHT) is a co-primary pillar for individual rights in policing contexts — RGHT inherits JUST enforcement architecture.
+- IMMG shares enforcement abuse contexts; HOUS shares housing discrimination enforcement — positions should be read together.

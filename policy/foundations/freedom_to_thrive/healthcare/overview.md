@@ -311,3 +311,41 @@ Evidence-based coverage decisions require full transparency (HLT-STD-009), with 
 - **Pillar 11 (Privacy and Data Protection):** Healthcare data privacy, protections against misuse of sensitive medical information
 - **Pillar 12 (Antitrust and Corporate Power):** Pharmaceutical pricing, insurance company consolidation, hospital monopolies
 - **Pillar 6 (Civil Rights and Equal Protection):** Healthcare equity, protection against discrimination in coverage and treatment
+
+---
+
+## PolicyOS Inheritance Declaration
+
+*Compliance document per PAOS-TEST-0003. Established: 2026-04-27. Next review: per MAINT-0006.*
+
+**Domain:** HLTH
+**Audit status (2026-04-27):** Adequate
+
+### Applicable overlays
+
+KERN (universal — all 27 rules) applies to this pillar without exception.
+
+| Overlay | Scope |
+|---|---|
+| KERN | Universal — all 27 rules; no domain-specific exclusions |
+| ENFA | Enforcement architecture — actors, triggers, failure consequences |
+| GEOG | Geographic equity — rural access, regional disparities |
+| FEDR | Federal-state structure — jurisdiction, preemption, interstate |
+| THRV | Affirmative duty — material necessities, funding mechanisms |
+| AIGV | AI governance — algorithmic systems, automated decision-making |
+| ECOL | Ecological habitability — environment, climate, public health |
+| ECON | Economic justice — market power, wealth distribution, labor |
+| PRIV | Privacy — data rights, surveillance limits, information control |
+| REGD | Regulatory design — capture prevention, independence, revolving door |
+
+### Key compliance notes
+
+- KERN-0027 (whistleblower): Thin — SCIS subdomain has one position on scientific whistleblowers; broader healthcare fraud and patient safety reporting absent.
+- THRV overlay: Strong — healthcare as material necessity (Value 6) is the pillar's core; universal coverage, affordability, and access addressed.
+- AIGV overlay: Present — AI diagnostics, algorithmic care rationing, and predictive health risk scoring addressed.
+- ECOL overlay: Present — environmental health, pollution impacts, and climate health outcomes addressed.
+
+### Cross-pillar interactions
+
+- THRV overlay shared with EDUC, HOUS, LABR, INFR — healthcare as material necessity should be framed consistently with other THRV pillars.
+- PRIV overlay connects to TECH (patient data, health surveillance) and RGHT (medical privacy as a civil liberty).

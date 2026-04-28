@@ -54,3 +54,38 @@ Research on sectoral bargaining—the model used in Germany, Denmark, and much o
 - **[Consumer Rights](../consumer_rights/overview.md)** — Wage theft and misclassification are forms of economic exploitation that consumer and labor protections must address in coordination.
 - **[Antitrust & Corporate Power](../antitrust_and_corporate_power/overview.md)** — Concentrated corporate power in labor markets (monopsony) suppresses wages and makes collective bargaining more necessary and harder to achieve.
 - **[Technology & AI](../technology_and_ai/overview.md)** — Algorithmic management, surveillance systems, and AI-driven hiring and scheduling require coordinated labor and tech governance.
+
+---
+
+## PolicyOS Inheritance Declaration
+
+*Compliance document per PAOS-TEST-0003. Established: 2026-04-27. Next review: per MAINT-0006.*
+
+**Domain:** LABR
+**Audit status (2026-04-27):** Needs work
+
+### Applicable overlays
+
+KERN (universal — all 27 rules) applies to this pillar without exception.
+
+| Overlay | Scope |
+|---|---|
+| KERN | Universal — all 27 rules; no domain-specific exclusions |
+| ENFA | Enforcement architecture — actors, triggers, failure consequences |
+| ECON | Economic justice — market power, wealth distribution, labor |
+| THRV | Affirmative duty — material necessities, funding mechanisms |
+| PRIV | Privacy — data rights, surveillance limits, information control |
+| GEOG | Geographic equity — rural access, regional disparities |
+| AIGV | AI governance — algorithmic systems, automated decision-making |
+
+### Key compliance notes
+
+- KERN-0027 (whistleblower): Absent — no protections for workers who report safety violations, wage theft, or anti-organizing retaliation. P1-B gap.
+- AIGV overlay: Partial — AI in hiring, algorithmic scheduling, and worker surveillance addressed; automated workforce reduction and AI wage-setting absent.
+- THRV overlay: Strong — fair wages, safe conditions, and economic security as material necessities addressed.
+- ENFA overlay: NLRB and DOL enforcement referenced; failure consequences for regulatory capture of labor enforcement bodies underspecified.
+
+### Cross-pillar interactions
+
+- THRV overlay shared with HLTH, EDUC, HOUS, INFR — labor rights as material security must be framed consistently.
+- ECON overlay connects to TAXN (wealth and inequality) and ANTR (corporate power) — labor market concentration positions should be consistent.

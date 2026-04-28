@@ -101,3 +101,37 @@ The Georgist land value taxation concept appears in source materials as part of 
 - **Pillar 11: Antitrust and Corporate Power** — Market concentration limits, monopoly rent taxation, corporate structure
 - **Pillar 13: Checks and Balances** — AI in government oversight, system-level rules on decision-making fairness
 - **Climate and Environmental Justice** — Industrial policy alignment with climate goals, carbon taxation, transition support
+
+---
+
+## PolicyOS Inheritance Declaration
+
+*Compliance document per PAOS-TEST-0003. Established: 2026-04-27. Next review: per MAINT-0006.*
+
+**Domain:** TAXN
+**Audit status (2026-04-27):** Needs work
+
+### Applicable overlays
+
+KERN (universal — all 27 rules) applies to this pillar without exception.
+
+| Overlay | Scope |
+|---|---|
+| KERN | Universal — all 27 rules; no domain-specific exclusions |
+| ENFA | Enforcement architecture — actors, triggers, failure consequences |
+| REGD | Regulatory design — capture prevention, independence, revolving door |
+| ECON | Economic justice — market power, wealth distribution, labor |
+| PRIV | Privacy — data rights, surveillance limits, information control |
+| FEDR | Federal-state structure — jurisdiction, preemption, interstate |
+
+### Key compliance notes
+
+- KERN-0027 (whistleblower): Absent — no protections for tax fraud reporters or employees who expose illegal tax evasion. P1-B gap.
+- ECON overlay: Strong — wealth concentration, tax avoidance, and wealth taxes addressed.
+- KERN-0015 (foreseeable abuse design): Tax shelter abuse paths and offshore evasion partially addressed; valuation fraud and charitable foundation abuse as tax avoidance mechanisms absent.
+- ENFA overlay: IRS enforcement capacity and independence partially addressed; failure consequences for IRS budget capture absent.
+
+### Cross-pillar interactions
+
+- ECON overlay connects to LABR (wage taxation fairness), ANTR (corporate tax avoidance as market power), and HOUS (housing wealth taxation).
+- PRIV overlay: Tax return privacy connects to RGHT and TECH data privacy positions.

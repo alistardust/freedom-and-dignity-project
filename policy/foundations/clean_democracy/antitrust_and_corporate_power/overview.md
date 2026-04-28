@@ -92,3 +92,37 @@ The pillar is described as "partially embedded in anti-corruption pillar" becaus
 - **Pillar 8: Taxation and Wealth** — Wealth concentration limits, progressive taxation, economic equality
 - **Pillar 10: Information and Media** — Media consolidation, platform accountability, information integrity
 - **Pillar 12: Taxation and Wealth** — Small business support, economic equity, anti-wealth hoarding measures
+
+---
+
+## PolicyOS Inheritance Declaration
+
+*Compliance document per PAOS-TEST-0003. Established: 2026-04-27. Next review: per MAINT-0006.*
+
+**Domain:** ANTR
+**Audit status (2026-04-27):** Needs work
+
+### Applicable overlays
+
+KERN (universal — all 27 rules) applies to this pillar without exception.
+
+| Overlay | Scope |
+|---|---|
+| KERN | Universal — all 27 rules; no domain-specific exclusions |
+| ENFA | Enforcement architecture — actors, triggers, failure consequences |
+| REGD | Regulatory design — capture prevention, independence, revolving door |
+| ECON | Economic justice — market power, wealth distribution, labor |
+| PRIV | Privacy — data rights, surveillance limits, information control |
+| AIGV | AI governance — algorithmic systems, automated decision-making |
+
+### Key compliance notes
+
+- KERN-0027 (whistleblower): Absent — employees who report anticompetitive practices have no platform-level protection. P1-B gap.
+- KERN-0015 (foreseeable abuse design): Some abuse path analysis present in CAPS and ENFC; revolving door addressed. Algorithmic market manipulation abuse paths absent.
+- AIGV overlay: ALGO and ALGP subdomains address algorithmic collusion and market manipulation. Partial — AI in merger review and enforcement not addressed.
+- ENFA overlay: ENFC and ENFL subdomains present but enforcement actors for new AI-driven market offenses underspecified.
+
+### Cross-pillar interactions
+
+- Closely coupled to MDIA (information and media) — platform concentration positions appear in both; ANTR-MDIA cross-domain positions may apply.
+- ECON overlay shared with TAXN, LABR, CNSR — market power positions should be consistent across these pillars.

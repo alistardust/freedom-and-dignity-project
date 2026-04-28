@@ -83,3 +83,38 @@ The pillar treats press freedom and infrastructure together because both are ess
 - **Pillar 6: Courts and Judicial System** — Independent judicial review requirements, enforcement mechanisms
 - **Pillar 11: Antitrust and Corporate Power** — Media consolidation limits, platform accountability (information side)
 - **Climate and Environmental Justice** — Carbon mandates, renewable energy transition, sustainability requirements
+
+---
+
+## PolicyOS Inheritance Declaration
+
+*Compliance document per PAOS-TEST-0003. Established: 2026-04-27. Next review: per MAINT-0006.*
+
+**Domain:** MDIA
+**Audit status (2026-04-27):** High gaps
+
+### Applicable overlays
+
+KERN (universal — all 27 rules) applies to this pillar without exception.
+
+| Overlay | Scope |
+|---|---|
+| KERN | Universal — all 27 rules; no domain-specific exclusions |
+| ENFA | Enforcement architecture — actors, triggers, failure consequences |
+| REGD | Regulatory design — capture prevention, independence, revolving door |
+| DEMO | Democratic accountability — elections, representation, self-governance |
+| PRIV | Privacy — data rights, surveillance limits, information control |
+| AIGV | AI governance — algorithmic systems, automated decision-making |
+| ECON | Economic justice — market power, wealth distribution, labor |
+
+### Key compliance notes
+
+- KERN-0027 (whistleblower): Absent — no protections for journalists, platform employees, or government communications staff who expose disinformation or media law violations. P1-B gap.
+- AIGV overlay: Present — AI-generated disinformation, algorithmic amplification, and AI in editorial decisions addressed.
+- ECON overlay: Media consolidation and platform market power addressed via ANTR cross-domain positions; but platform economic coercion of journalists absent.
+- KERN-0015 (foreseeable abuse design): Foreign disinformation and state-sponsored interference partially addressed; domestic political capture of media infrastructure absent.
+
+### Cross-pillar interactions
+
+- ANTR (antitrust) governs media consolidation — MDIA and ANTR positions on platform power must be consistent.
+- ELEC (elections) shares election disinformation contexts; cross-pillar consistency required.

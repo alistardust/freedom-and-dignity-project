@@ -78,3 +78,37 @@ The pressure-test lessons informing this pillar include: lifetime appointment pl
 - **Rights and Civil Liberties**: Courts as protectors of rights versus courts as tools for dismantling rights; interpretation of rights provisions; balance between text and purpose
 - **Government Ethics and Accountability**: Judicial ethics standards; conflicts of interest; financial disclosure; enforcement of ethical conduct
 - **Democratic Institutions**: Courts' role in protecting versus undermining democratic processes; election law interpretation; access to courts versus judge shopping
+
+---
+
+## PolicyOS Inheritance Declaration
+
+*Compliance document per PAOS-TEST-0003. Established: 2026-04-27. Next review: per MAINT-0006.*
+
+**Domain:** CORT
+**Audit status (2026-04-27):** Critical gaps
+
+### Applicable overlays
+
+KERN (universal — all 27 rules) applies to this pillar without exception.
+
+| Overlay | Scope |
+|---|---|
+| KERN | Universal — all 27 rules; no domain-specific exclusions |
+| ENFA | Enforcement architecture — actors, triggers, failure consequences |
+| REGD | Regulatory design — capture prevention, independence, revolving door |
+| FEDR | Federal-state structure — jurisdiction, preemption, interstate |
+| DEMO | Democratic accountability — elections, representation, self-governance |
+| PRIV | Privacy — data rights, surveillance limits, information control |
+
+### Key compliance notes
+
+- Access to justice: Critical gap — no positions on civil legal aid, right to counsel in civil proceedings, or structural barriers to court access.
+- KERN-0027 (whistleblower): Implicitly covered by CRPT pillar (qui tam, universal whistleblower); court-specific reporter protection absent.
+- KERN-0014 (access not defeated by burden): Court filing fees, mandatory arbitration clauses, and standing doctrine barriers to access unaddressed.
+- ENFA overlay: Judicial ethics enforcement relies on Congress self-enforcement — structural independence of judicial conduct oversight not addressed.
+
+### Cross-pillar interactions
+
+- Access-to-justice gap is partly addressed by JUST (equal justice and policing) and RGHT (rights and civil liberties) — cross-pillar inheritance needed.
+- FEDR overlay: federal vs. state court jurisdiction design should be consistent with CHKS and EXEC positions on federal power.

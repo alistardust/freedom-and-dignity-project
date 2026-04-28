@@ -77,3 +77,37 @@ The pressure-test lessons that shaped this pillar include: avoid relying on good
 - **Government Ethics and Accountability**: Independent oversight bodies; corruption enforcement; conflicts of interest; transparency requirements; whistleblower protections
 - **Rights and Civil Liberties**: Protection against executive surveillance; limits on domestic use of force; due process in national security contexts
 - **Democratic Institutions**: Records preservation for democratic accountability; protection of civil service; separation of official duties from political activity
+
+---
+
+## PolicyOS Inheritance Declaration
+
+*Compliance document per PAOS-TEST-0003. Established: 2026-04-27. Next review: per MAINT-0006.*
+
+**Domain:** EXEC
+**Audit status (2026-04-27):** Needs work
+
+### Applicable overlays
+
+KERN (universal — all 27 rules) applies to this pillar without exception.
+
+| Overlay | Scope |
+|---|---|
+| KERN | Universal — all 27 rules; no domain-specific exclusions |
+| ENFA | Enforcement architecture — actors, triggers, failure consequences |
+| FEDR | Federal-state structure — jurisdiction, preemption, interstate |
+| DEMO | Democratic accountability — elections, representation, self-governance |
+| PRIV | Privacy — data rights, surveillance limits, information control |
+| AIGV | AI governance — algorithmic systems, automated decision-making |
+
+### Key compliance notes
+
+- KERN-0027 (whistleblower): Absent — no explicit protections for executive branch employees or officials who report unconstitutional or illegal executive action.
+- AIGV overlay: AI in executive decision-making, AI-enabled surveillance by executive agencies, and AI in military/national security contexts underaddressed.
+- KERN-0004 (unchecked power): Emergency powers, executive privilege, and pardon power abuse partially addressed; self-dealing and personal enrichment constraints thin.
+- ENFA overlay: Enforcement actors for executive overreach underspecified — Congress and courts referenced but institutional failure scenarios absent.
+
+### Cross-pillar interactions
+
+- Strongly coupled to CHKS (checks and balances) and LEGL (legislative reform) — executive power constraints must form a coherent constitutional architecture.
+- ADMN pillar addresses agency-level accountability; EXEC addresses the principal. These should be read together.

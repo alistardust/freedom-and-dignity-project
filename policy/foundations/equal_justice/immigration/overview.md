@@ -337,3 +337,38 @@ Investment in integration and stability support would produce substantial benefi
 **Technology & AI Governance**: Use of AI and algorithmic systems in immigration enforcement, adjudication, surveillance, and risk assessment must be governed by technology accountability standards.
 
 **Administrative State Reform**: Immigration administrative dysfunction reflects broader problems of agency capacity, backlog, procedural complexity, and transparency that require systemic administrative reform.
+
+---
+
+## PolicyOS Inheritance Declaration
+
+*Compliance document per PAOS-TEST-0003. Established: 2026-04-27. Next review: per MAINT-0006.*
+
+**Domain:** IMMG
+**Audit status (2026-04-27):** Needs work
+
+### Applicable overlays
+
+KERN (universal — all 27 rules) applies to this pillar without exception.
+
+| Overlay | Scope |
+|---|---|
+| KERN | Universal — all 27 rules; no domain-specific exclusions |
+| ENFA | Enforcement architecture — actors, triggers, failure consequences |
+| GEOG | Geographic equity — rural access, regional disparities |
+| FEDR | Federal-state structure — jurisdiction, preemption, interstate |
+| THRV | Affirmative duty — material necessities, funding mechanisms |
+| PRIV | Privacy — data rights, surveillance limits, information control |
+| ECOL | Ecological habitability — environment, climate, public health |
+
+### Key compliance notes
+
+- KERN-0027 (whistleblower): Absent — no protections for immigration detainees or advocates who report detention abuse or due process violations. P1-B gap.
+- KERN-0014 (access not defeated by burden): Legal representation access, language access, and geographic detention location as access barriers partially addressed.
+- ECOL overlay: Climate migration and climate refugee protections present — climate displacement as a rights trigger.
+- THRV overlay: Present — immigration as a human dignity and material security issue; but asylum seeker basic needs guarantees thin.
+
+### Cross-pillar interactions
+
+- JUST (equal justice and policing) and IMMG share enforcement abuse contexts — immigration enforcement civil rights positions must be consistent.
+- RGHT (rights and civil liberties) governs due process protections that apply to immigration proceedings; cross-pillar inheritance required.
