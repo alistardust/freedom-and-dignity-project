@@ -25,7 +25,7 @@
     const aboutUsHref = base + 'about-us.html';
     const aiHref = base + 'about-ai.html';
     const missionHref = base + 'mission.html';
-    const constitutionHref = base + 'constitution.html';
+    const rightsHref = base + 'rights.html';
     const classificationHref = base + 'classification.html';
     const getInvolvedHref = base + 'get-involved.html';
     const roadmapHref    = base + 'roadmap.html';
@@ -34,13 +34,16 @@
     const isLetterPage = pageName === 'letter-from-the-founder';
     const isRoadmapPage = pageName === 'roadmap';
     const isMissionPage = pageName === 'mission';
-    const isConstitutionPage = pageName === 'constitution';
+    const isRightsPage = pageName === 'rights';
     const isAboutUsPage = pageName === 'about-us';
     const isClassificationPage = pageName === 'classification';
     const isGetInvolvedPage = pageName === 'get-involved';
     const approachHref = base + 'approach.html';
     const isApproachPage = pageName === 'approach';
-    const foundationsHref = base + 'foundations.html';
+    const proposalsHref = base + 'proposals.html';
+    const isProposalsPage = pageName === 'proposals';
+    const platformHref = base + 'platform.html';
+    const isPlatformPage = pageName === 'platform';
     const pillarsHref = base + 'pillars/index.html';
 
     if (navList && !navList.querySelector('a[href*="mission"]')) {
@@ -52,6 +55,12 @@
     if (navList && !navList.querySelector('a[href*="approach"]')) {
       const li = document.createElement('li');
       li.innerHTML = `<a href="${approachHref}"${isApproachPage ? ' class="active"' : ''}>Approach</a>`;
+      navList.appendChild(li);
+    }
+
+    if (navList && !navList.querySelector('a[href*="proposals"]')) {
+      const li = document.createElement('li');
+      li.innerHTML = `<a href="${proposalsHref}"${isProposalsPage ? ' class="active"' : ''}>Proposals</a>`;
       navList.appendChild(li);
     }
 
@@ -75,9 +84,19 @@
 
     // Inject links into footer-links
     const footerLinks = document.querySelector('ul.footer-links');
-    if (footerLinks && !footerLinks.querySelector('a[href*="foundations"]')) {
+    if (footerLinks && !footerLinks.querySelector('a[href*="platform"]')) {
       const fli = document.createElement('li');
-      fli.innerHTML = `<a href="${foundationsHref}">Proposals</a>`;
+      fli.innerHTML = `<a href="${platformHref}">Platform</a>`;
+      footerLinks.appendChild(fli);
+    }
+    if (footerLinks && !footerLinks.querySelector('a[href*="rights"]')) {
+      const fli = document.createElement('li');
+      fli.innerHTML = `<a href="${rightsHref}">Rights</a>`;
+      footerLinks.appendChild(fli);
+    }
+    if (footerLinks && !footerLinks.querySelector('a[href*="proposals"]')) {
+      const fli = document.createElement('li');
+      fli.innerHTML = `<a href="${proposalsHref}">Proposals</a>`;
       footerLinks.appendChild(fli);
     }
     if (footerLinks && !footerLinks.querySelector('a[href*="pillars/index"]')) {
@@ -95,9 +114,9 @@
       fli.innerHTML = `<a href="${approachHref}">Approach</a>`;
       footerLinks.appendChild(fli);
     }
-    if (footerLinks && !footerLinks.querySelector('a[href*="constitution"]')) {
+    if (footerLinks && !footerLinks.querySelector('a[href*="rights"]')) {
       const fli = document.createElement('li');
-      fli.innerHTML = `<a href="${constitutionHref}">New Bill of Rights</a>`;
+      fli.innerHTML = `<a href="${rightsHref}">Rights</a>`;
       footerLinks.appendChild(fli);
     }
     if (footerLinks && !footerLinks.querySelector('a[href*="get-involved"]')) {

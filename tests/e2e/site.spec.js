@@ -62,52 +62,6 @@ test.describe('Homepage', () => {
   });
 });
 
-// ── FOUNDATIONS PAGE ──────────────────────────────────────────────────────────
-
-test.describe('Foundations page', () => {
-  test.beforeEach(async ({ page }) => { await page.goto('/foundations.html'); });
-
-  test('has correct page title', async ({ page }) => {
-    await expect(page).toHaveTitle(/Foundations/i);
-  });
-
-  test('fullview grid shows all 5 foundations immediately', async ({ page }) => {
-    await expect(page.locator('.fo-fullview')).toBeVisible();
-    await expect(page.locator('a.fo-fv-card')).toHaveCount(5);
-  });
-
-  test('each foundation card links to its section', async ({ page }) => {
-    for (const id of ['accountable-power','clean-democracy','equal-justice','real-freedom','freedom-to-thrive']) {
-      await expect(page.locator(`a.fo-fv-card[href="#${id}"]`)).toBeVisible();
-    }
-  });
-
-  test('renders all 5 foundation sections by id', async ({ page }) => {
-    for (const id of ['accountable-power','clean-democracy','equal-justice','real-freedom','freedom-to-thrive']) {
-      await expect(page.locator(`#${id}`)).toBeAttached();
-    }
-  });
-
-  test('pillar cards are links to pillar pages', async ({ page }) => {
-    const firstCard = page.locator('a.f-pillar-card').first();
-    await expect(firstCard).toBeVisible();
-    await expect(firstCard).toHaveAttribute('href', /pillars\//);
-  });
-
-  test('has architecture intro explaining foundations and pillars', async ({ page }) => {
-    await expect(page.locator('.arch-intro')).toBeVisible();
-    await expect(page.locator('text=What Is a Foundation').first()).toBeVisible();
-  });
-
-  test(`has ${PILLAR_COUNT} total pillar cards across all foundations`, async ({ page }) => {
-    await expect(page.locator('a.f-pillar-card')).toHaveCount(PILLAR_COUNT);
-  });
-
-  test('has 10 demand/reject blocks across 5 foundations', async ({ page }) => {
-    await expect(page.locator('.f-block')).toHaveCount(10);
-  });
-});
-
 // ── PILLARS INDEX ─────────────────────────────────────────────────────────────
 
 test.describe('Pillars index', () => {
@@ -197,8 +151,8 @@ for (const { slug, title } of SAMPLE_PILLARS) {
       await expect(page.locator('#pil-policy')).toBeVisible();
     });
 
-    test('has back link to foundations', async ({ page }) => {
-      await expect(page.locator('a[href*="foundations.html"]').first()).toBeVisible();
+    test('has back link to platform', async ({ page }) => {
+      await expect(page.locator('a[href*="platform.html"]').first()).toBeVisible();
     });
   });
 }
@@ -278,14 +232,14 @@ for (const { file, name } of PARTY_PAGES) {
 // ── NAVIGATION ────────────────────────────────────────────────────────────────
 
 test.describe('Navigation', () => {
-  test('home → foundations', async ({ page }) => {
+  test('home → proposals', async ({ page }) => {
     await page.goto('/');
-    await page.click('a[href="foundations.html"]');
-    await expect(page).toHaveURL(/foundations/);
+    await page.click('a[href="proposals.html"]');
+    await expect(page).toHaveURL(/proposals/);
   });
 
-  test('foundations → pillars index', async ({ page }) => {
-    await page.goto('/foundations.html');
+  test('platform → pillars index', async ({ page }) => {
+    await page.goto('/platform.html');
     await page.click('a[href="pillars/index.html"]');
     await expect(page).toHaveURL(/pillars/);
   });
@@ -300,10 +254,10 @@ test.describe('Navigation', () => {
     await expect(page.locator('.site-nav')).toBeVisible();
   });
 
-  test('pillar page → back to foundations', async ({ page }) => {
+  test('pillar page → back to platform', async ({ page }) => {
     await page.goto('/pillars/healthcare.html');
-    await page.locator('a[href*="foundations.html"]').first().click();
-    await expect(page).toHaveURL(/foundations/);
+    await page.locator('a[href*="platform.html"]').first().click();
+    await expect(page).toHaveURL(/platform/);
   });
 
   test('pillars index → compare', async ({ page }) => {
@@ -380,7 +334,7 @@ test.describe('About AI page', () => {
 test.describe('About AI link reachable from all page types', () => {
   const pages = [
     { url: '/',                          label: 'Homepage' },
-    { url: '/foundations.html',          label: 'Foundations' },
+    { url: '/proposals.html',          label: 'Proposals' },
     { url: '/pillars/index.html',        label: 'Pillars index' },
     { url: '/pillars/healthcare.html',   label: 'Pillar page' },
     { url: '/compare/index.html',        label: 'Compare index' },
@@ -496,8 +450,8 @@ test.describe('Mission page', () => {
     await expect(page.locator('.footer-links a[href*="mission"]')).toBeAttached();
   });
 
-  test('footer Constitution link is present', async ({ page }) => {
-    await expect(page.locator('.footer-links a[href*="constitution"]')).toBeAttached();
+  test('footer Rights link is present', async ({ page }) => {
+    await expect(page.locator('.footer-links a[href*="rights"]')).toBeAttached();
   });
 
   test('renders 6 commitment cards', async ({ page }) => {
@@ -514,39 +468,91 @@ test.describe('Mission page', () => {
   });
 });
 
-// ── CONSTITUTION PAGE (NEW BILL OF RIGHTS) ───────────────────────────────────
+// ── PROPOSALS PAGE ───────────────────────────────────────────────────────────
 
-test.describe('Constitution page', () => {
-  test.beforeEach(async ({ page }) => { await page.goto('/constitution.html'); });
+test.describe('Proposals page', () => {
+  test.beforeEach(async ({ page }) => { await page.goto('/proposals.html'); });
 
   test('has correct page title', async ({ page }) => {
-    await expect(page).toHaveTitle(/Rights|Constitution.*Freedom and Dignity/i);
+    await expect(page).toHaveTitle(/Proposals.*Freedom and Dignity/i);
   });
 
-  test('renders hero heading', async ({ page }) => {
-    await expect(page.locator('.page-hero-standard h1')).toBeVisible();
+  test('renders 3 PolicyOS layer cards', async ({ page }) => {
+    await expect(page.locator('.policyos-layers .layer-card')).toHaveCount(3);
   });
 
-  test('hero contains "Rights" text', async ({ page }) => {
-    const text = await page.locator('.page-hero-standard h1').textContent();
-    expect(text).toMatch(/Rights/i);
+  test('renders 5 foundation cards', async ({ page }) => {
+    await expect(page.locator('.proposals-foundation-card')).toHaveCount(5);
   });
 
-  test('footer Constitution link is present', async ({ page }) => {
-    await expect(page.locator('.footer-links a[href*="constitution"]')).toBeAttached();
+  test('renders 3 rights framework cards', async ({ page }) => {
+    await expect(page.locator('.rights-cards-grid .rights-card')).toHaveCount(3);
   });
 
-  test('FDR block is present', async ({ page }) => {
-    await expect(page.locator('.fdr-block')).toBeAttached();
+  test('proposals link is active in nav', async ({ page }) => {
+    await expect(page.locator('.nav-links a.active[href*="proposals"]')).toBeAttached();
+  });
+});
+
+// ── RIGHTS PAGE ───────────────────────────────────────────────────────────────
+
+test.describe('Rights page', () => {
+  test.beforeEach(async ({ page }) => { await page.goto('/rights.html'); });
+
+  test('has correct page title', async ({ page }) => {
+    await expect(page).toHaveTitle(/Rights.*Freedom and Dignity/i);
   });
 
-  test('rights sections render', async ({ page }) => {
-    // 5 rights groups: Economic, Civil/Political, Digital/Privacy, Environmental, Bodily
-    await expect(page.locator('.rights-section')).toHaveCount(5);
+  test('renders New Bill of Rights section', async ({ page }) => {
+    await expect(page.locator('#new-bill-of-rights')).toBeAttached();
   });
 
-  test('references section is present', async ({ page }) => {
-    await expect(page.locator('.footnotes-block')).toBeAttached();
+  test('renders Workers Rights section', async ({ page }) => {
+    await expect(page.locator('#workers-rights')).toBeAttached();
+  });
+
+  test('renders Indigenous Rights section', async ({ page }) => {
+    await expect(page.locator('#indigenous-rights')).toBeAttached();
+  });
+
+  test('rights-item entries are present', async ({ page }) => {
+    const count = await page.locator('.rights-item').count();
+    expect(count).toBeGreaterThan(10);
+  });
+
+  test('footer Rights link is present', async ({ page }) => {
+    await expect(page.locator('.footer-links a[href*="rights"]')).toBeAttached();
+  });
+});
+
+// ── PLATFORM PAGE ─────────────────────────────────────────────────────────────
+
+test.describe('Platform page', () => {
+  test.beforeEach(async ({ page }) => { await page.goto('/platform.html'); });
+
+  test('has correct page title', async ({ page }) => {
+    await expect(page).toHaveTitle(/Platform.*Freedom and Dignity/i);
+  });
+
+  test('renders all 5 foundation sections', async ({ page }) => {
+    for (const id of ['accountable-power','clean-democracy','equal-justice','real-freedom','freedom-to-thrive']) {
+      await expect(page.locator(`#${id}`)).toBeAttached();
+    }
+  });
+
+  test('pillar cards are links to pillar pages', async ({ page }) => {
+    const firstCard = page.locator('a.f-pillar-card').first();
+    await expect(firstCard).toBeVisible();
+    await expect(firstCard).toHaveAttribute('href', /pillars\//);
+  });
+
+  test(`has ${PILLAR_COUNT} total pillar cards across all foundations`, async ({ page }) => {
+    // PILLAR_COUNT + 1 because rights_and_civil_liberties is a cross-pillar card appearing in both Foundation III and IV
+    await expect(page.locator('a.f-pillar-card')).toHaveCount(PILLAR_COUNT + 1);
+  });
+
+  test('footer Platform link is present', async ({ page }) => {
+    await expect(page.locator('.footer-links a[href*="platform"]')).toBeAttached();
   });
 });
 
@@ -608,7 +614,7 @@ test.describe('Elections pillar — Referendum and Recall section', () => {
 test.describe('Mission nav link from all page types', () => {
   const pages = [
     { url: '/',                               label: 'Homepage' },
-    { url: '/foundations.html',              label: 'Foundations' },
+    { url: '/proposals.html',              label: 'Proposals' },
     { url: '/pillars/index.html',            label: 'Pillars index' },
     { url: '/pillars/healthcare.html',       label: 'Pillar page' },
     { url: '/compare/index.html',            label: 'Compare index' },
