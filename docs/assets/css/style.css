@@ -1600,6 +1600,17 @@ details.design-logic .design-body li { font-size: .93rem; line-height: 1.65; mar
 .roadmap-future-block ul { margin: 0; padding-left: 1.25rem; }
 .roadmap-future-block li { font-size: .9rem; line-height: 1.65; color: var(--ink); margin-bottom: .35rem; }
 
+.notice {
+  padding: 1rem 1.25rem;
+  border-radius: 4px;
+  margin: 0 0 2rem;
+}
+.notice-soft {
+  background: #f0f4f8;
+  border-left: 3px solid var(--navy, #1a2a4a);
+  color: var(--ink, #1a1a1a);
+}
+
 /* ═══════════════════════════════════════════════════════════════
    PILLARS INDEX PAGE
    ═══════════════════════════════════════════════════════════════ */
@@ -2674,6 +2685,27 @@ summary.pil-foundation-bar::-webkit-details-marker { display: none; }
   color: var(--red);
   font-weight: 600;
   margin-top: .5rem;
+}
+/* When .entry-card-cta is combined with a button class, the button's own
+   color and background rules must win. The specificity of .entry-card-cta's
+   color: var(--red) would otherwise override them. */
+.entry-card-cta.btn-primary,
+.entry-card-cta.btn-primary:visited {
+  color: var(--cream);
+}
+.entry-card-cta.btn-primary:hover,
+.entry-card-cta.btn-primary:focus {
+  color: var(--cream);
+}
+.entry-card-cta.btn-outline {
+  color: var(--navy);
+  border-color: var(--navy);
+}
+.entry-card-cta.btn-outline:hover,
+.entry-card-cta.btn-outline:focus {
+  background: var(--navy);
+  color: var(--cream);
+  border-color: var(--navy);
 }
 
 /* Rights category sections — constitution.html */
