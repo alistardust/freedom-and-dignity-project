@@ -238,10 +238,10 @@ test.describe('Navigation', () => {
     await expect(page).toHaveURL(/proposals/);
   });
 
-  test('platform → pillars index', async ({ page }) => {
+  test('platform → proposals page', async ({ page }) => {
     await page.goto('/platform.html');
-    await page.click('a[href="pillars/index.html"]');
-    await expect(page).toHaveURL(/pillars/);
+    await page.click('.nav-links a[href*="proposals"]');
+    await expect(page).toHaveURL(/proposals/);
   });
 
   test('pillars index → pillar page', async ({ page }) => {
@@ -454,9 +454,9 @@ test.describe('Mission page', () => {
     await expect(page.locator('.footer-links a[href*="rights"]')).toBeAttached();
   });
 
-  test('renders 6 commitment cards', async ({ page }) => {
-    // 6 What It Does commitments
-    await expect(page.locator('.mission-commit')).toHaveCount(6);
+  test('renders 5 foundation cards', async ({ page }) => {
+    // Six Commitments replaced with Five Structural Foundations (fo-fv-grid)
+    await expect(page.locator('.fo-fv-grid .fo-fv-card')).toHaveCount(5);
   });
 
   test('nav has About AI link', async ({ page }) => {
