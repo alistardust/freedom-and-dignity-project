@@ -99,7 +99,25 @@ We care for the worker. We care for the person served. Always both.
 
 ---
 
+## Theory of Change
+
+We cannot fix healthcare, labor, housing, or any specific policy area without first fixing the systems that produce bad policy. The structural problems come first.
+
+The sequencing:
+
+1. **Fix the amendment process** — make structural change achievable at all
+2. **Reform impeachment and removal** — make accountability real, not performative
+3. **Reform the judiciary** — restore independence and function
+4. **End corruption and lobbying** — remove the capture mechanism that blocks everything else
+5. **Elect and pressure officials** at state and federal levels who will push these reforms through
+
+This is a long game. That is not a reason not to start. The best time to have built this infrastructure was twenty years ago. The second best time is now.
+
+---
+
 ## Theory of Participation
+
+This project was built in part because the current forms of resistance — protests, outrage cycles, social media — are not producing structural change. A Saturday march is valuable. Showing up matters. But if everyone goes home Sunday and back to work Monday with no sustained organizing, no clear demands, and no follow-through, then the march was catharsis, not change. We are trying to build the infrastructure for something that lasts.
 
 There is no single right way to be part of this movement.
 
