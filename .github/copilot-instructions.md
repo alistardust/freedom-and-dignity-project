@@ -99,19 +99,17 @@ Policy that skips this step is not eligible for adoption per PAOS-AUTH-0010. Thi
 
 ## Mandatory adversarial review for all policy work (PAOS-TEST-0008)
 
-**Adversarial review is required for all policy writing, expansion, and rewriting** — not only for brand-new rules. This means actively searching for:
+**Adversarial review is required for all policy writing, expansion, and rewriting.** The review must explicitly and separately address three named categories — **gaps, edge cases, and loopholes** — as distinct checks, not collapsed into a general note:
 
-- **Gaps** — what the rule fails to cover, who it fails to protect, what scenarios fall outside its scope
-- **Edge cases** — boundary conditions, unusual fact patterns, or populations the rule treats inconsistently
-- **Loopholes** — paths by which the regulated actor can satisfy the letter of the rule while defeating its purpose
-- **Unintended consequences** — perverse incentives, burden-shifting, or foreseeable second-order harms
-- **Abuse paths** — how a bad-faith actor (government, institution, employer, or individual) could exploit the rule
+- **Gaps** — what the rule fails to cover; who it fails to protect; which scenarios fall outside its scope; which harms go unremedied
+- **Edge cases** — boundary conditions, unusual fact patterns, and populations the rule treats inconsistently or leaves in an indeterminate state
+- **Loopholes** — paths by which a regulated actor can satisfy the letter of the rule while defeating its purpose, including definitional workarounds, jurisdictional escape routes, and structural evasion
+
+These three must be reviewed and documented separately. In addition, the review must also address: unintended consequences, foreseeable abuse paths, perverse incentives, and burden-shifting.
 
 This applies to: new rules, additions to existing families, rewrites, scope expansions, and any change that substantively alters a right, duty, prohibition, or access condition.
 
-**The review must be documented.** If no issues are found, document that the review was conducted and explain why. A finding that produces no changes is still a required finding, not evidence that the step was skipped.
-
-Per PAOS-TEST-0008, changes that skip this step are not eligible for adoption.
+**The review must be documented with findings for each of the three named categories.** A finding of "no issues" is valid only if it explains why. Skipping or collapsing the named categories is not compliant with PAOS-TEST-0008.
 
 ---
 
