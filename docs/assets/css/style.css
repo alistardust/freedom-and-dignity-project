@@ -3407,3 +3407,23 @@ body:has(.site-tree.st-open) .st-overlay { display: block; }
   margin-bottom: 2rem;
 }
 .gi-dev-cta { margin-top: 2rem; }
+
+/* ── PROBLEM PAGE ── */
+/* Eyebrow modifier: mid-tone on light backgrounds */
+.eyebrow-mid { color: var(--mid); }
+.eyebrow-mid::after { background: var(--mid); }
+
+/* Data callout arch-item */
+.arch-item-data { margin: 2rem 0; }
+.arch-item-data-p { margin: 0; }
+
+/* Capture section (dark bg) — constrained intro and closing paragraphs */
+.prob-section-lead { max-width: 640px; margin-bottom: 2rem; }
+.prob-section-foot { margin-top: 1.5rem; }
+
+/* FDR section link */
+.prob-fdr-link { margin-top: 1.5rem; }
+
+/* Foundations section */
+.prob-foundations-intro { max-width: 640px; margin-bottom: 2.25rem; }
+.prob-foundations-cta { margin-top: 2.25rem; }

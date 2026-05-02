@@ -485,6 +485,27 @@ test.describe('Problem page', () => {
   });
 });
 
+// ── THE PROBLEM PAGE (Task 9) ─────────────────────────────────────────────────
+
+test.describe('The Problem page', () => {
+  test.beforeEach(async ({ page }) => { await page.goto('/problem.html'); });
+
+  test('has correct page title', async ({ page }) => {
+    await expect(page).toHaveTitle(/The Problem/i);
+  });
+
+  test('hero statement leads with human recognition, not policy framing', async ({ page }) => {
+    const statement = await page.locator('.hero-statement').textContent();
+    // Should contain a validating line, not start with a policy claim
+    expect(statement).toBeTruthy();
+    expect(statement.trim().length).toBeGreaterThan(30);
+  });
+
+  test('links forward to plan.html or join.html', async ({ page }) => {
+    await expect(page.locator('a[href*="plan.html"], a[href*="join.html"]').first()).toBeAttached();
+  });
+});
+
 // ── PROPOSALS PAGE ───────────────────────────────────────────────────────────
 
 test.describe('Proposals page', () => {
