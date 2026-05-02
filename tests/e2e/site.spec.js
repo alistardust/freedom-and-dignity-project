@@ -423,7 +423,7 @@ test.describe('Policy rules section renders content', () => {
 // ── MISSION PAGE ──────────────────────────────────────────────────────────────
 
 test.describe('Mission page', () => {
-  test.beforeEach(async ({ page }) => { await page.goto('/mission.html'); });
+  test.beforeEach(async ({ page }) => { await page.goto('/problem.html'); });
 
   test('has correct page title', async ({ page }) => {
     await expect(page).toHaveTitle(/Problem|Mission.*Freedom and Dignity/i);
@@ -646,7 +646,7 @@ test.describe('Mission nav link from all page types', () => {
 // ── GET INVOLVED PAGE ─────────────────────────────────────────────────────────
 
 test.describe('Get Involved page', () => {
-  test.beforeEach(async ({ page }) => { await page.goto('/get-involved.html'); });
+  test.beforeEach(async ({ page }) => { await page.goto('/join.html'); });
 
   test('has correct page title', async ({ page }) => {
     await expect(page).toHaveTitle(/Get Involved.*Freedom and Dignity/i);

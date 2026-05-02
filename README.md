@@ -39,7 +39,7 @@ For detailed status, see [`.github/current-state.md`](.github/current-state.md).
 
 ## Contributing
 
-The best place to start is the **[Get Involved](https://alistardust.github.io/freedom-and-dignity-project/get-involved.html)** page on the live site.
+The best place to start is the **[Get Involved](https://alistardust.github.io/freedom-and-dignity-project/join.html)** page on the live site.
 
 For technical contributors:
 - Policy content lives in `docs/pillars/*.html` — each pillar page has a structured set of policy cards with `XXXX-XXXX-0000` IDs

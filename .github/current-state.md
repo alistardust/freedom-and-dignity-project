@@ -70,12 +70,12 @@ Each pillar page uses:
 docs/
   index.html              — Homepage (foundations + pillar cards)
   foundations.html        — 5-foundation deep dive
-  mission.html            — Platform mission statement
+  problem.html            — Platform mission statement
   constitution.html       — Framework & governing principles
   classification.html     — Rule ID system explanation
   about-ai.html           — AI use transparency page
   about-us.html           — About the project
-  get-involved.html       — Contribution guidelines
+  join.html       — Contribution guidelines
   roadmap.html            — Project roadmap (tracks, pillar status)
   adversarial-review.html — Adversarial policy review
   pillars/index.html      — Full pillar index (fullview grid)
@@ -184,12 +184,12 @@ Each pillar page uses:
 docs/
   index.html              — Homepage (foundations + pillar cards)
   foundations.html        — 5-foundation deep dive
-  mission.html            — Platform mission statement
+  problem.html            — Platform mission statement
   constitution.html       — Framework & governing principles
   classification.html     — Rule ID system explanation
   about-ai.html           — AI use transparency page
   about-us.html           — About the project
-  get-involved.html       — Contribution guidelines
+  join.html       — Contribution guidelines
   roadmap.html            — Project roadmap (tracks, pillar status)
   adversarial-review.html — Adversarial policy review
   pillars/index.html      — Full pillar index (fullview grid)
