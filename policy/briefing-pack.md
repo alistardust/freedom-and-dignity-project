@@ -16,11 +16,11 @@ We stand in the tradition of structural populism: concentrated power — whether
 
 | Foundation | Pillars |
 |---|---|
-| **I. Accountable Power** | Executive Power, Checks & Balances, Courts & Judicial System, Elections & Representation, Anti-Corruption, Term Limits & Fitness, Administrative State, Legislative Reform |
-| **II. We the People** | Antitrust & Corporate Power, Information & Media |
+| **I. Accountable Power** | Executive Power, Checks & Balances, Term Limits & Fitness, Courts & Judicial System, Administrative State, Legislative Reform |
+| **II. Clean Democracy** | Elections & Representation, Anti-Corruption, Antitrust & Corporate Power, Information & Media |
 | **III. Equal Justice** | Equal Justice & Policing, Immigration, Rights & Civil Liberties, Foreign Policy |
-| **IV. Real Freedom** | Gun Policy, Technology & AI, Consumer Rights, Science Technology & Space |
-| **V. Freedom to Thrive** | Healthcare, Taxation & Wealth, Environment & Agriculture, Infrastructure & Public Goods, Education, Labor & Workers' Rights, Housing |
+| **IV. Real Freedom** | Gun Policy, Technology & AI, Consumer Rights |
+| **V. Freedom to Thrive** | Healthcare, Taxation & Wealth, Environment & Agriculture, Infrastructure & Public Goods, Education, Labor & Workers' Rights, Housing, Science, Technology & Space |
 
 ---
 
@@ -144,12 +144,12 @@ PolicyOS is a cross-cutting rule architecture that all policy must comply with. 
 
 ## Current state of the platform
 
-- 25 live pillar pages — all policy cards complete as of May 2026
-- 2,773 policy positions fully defined across all pillars
-- Research documents produced (not on site — internal working documents):
-  - Adversarial review of the U.S. Constitution (incl. *Trump v. United States* 2024 immunity ruling)
-  - Adversarial review of the project's proposed New Bill of Rights (15 issues identified — some critical)
-  - Comprehensive Senate reform research (malapportionment data, filibuster history, reform proposals)
+- 26 live pillar pages — all policy cards complete as of May 2026
+- 3,993 policy positions in the catalog
+- Research documents (internal working documents, not on site):
+  - `policy/research/new-bill-of-rights-adversarial-review.md`
+  - `policy/research/senate-reform-research.md`
+  - `policy/research/us-constitution-adversarial-review.md`
 
 ---
 

@@ -59,6 +59,16 @@ For technical contributors:
 - All policy additions must follow the standards in `.github/copilot-instructions.md`
 - Run `npm run test:unit` before committing; run `npm run test:e2e` after any HTML/JS/CSS change
 
+**Scripts:**
+
+| Command | What it does |
+|---|---|
+| `npm run test:unit` | Vitest unit tests — run before every commit |
+| `npm run test:e2e` | Playwright E2E tests — run after HTML/JS/CSS changes |
+| `npm run serve` | Serve `docs/` locally at port 5500 |
+| `npm run briefing-pack` | Regenerate `policy/briefing-pack.md` dynamic sections manually |
+| `python3 scripts/update-briefing-pack.py` | Same as above — also runs automatically via pre-commit hook |
+
 For non-technical contributors, the Get Involved page has a link to the project Discord where policy review and rewriting work is coordinated.
 
 ## AI use
