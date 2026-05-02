@@ -365,7 +365,7 @@ Goal:
 
 Deliverables:
 
-- strengthen `get-involved.html` around concrete entry points
+- strengthen `join.html` around concrete entry points
 - clarify contributor pathways for research, writing, review, and structure
 - add collaboration calls to action throughout the site
 - prepare for external growth channels after the site narrative is coherent
