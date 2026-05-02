@@ -3332,3 +3332,64 @@ body:has(.site-tree.st-open) .st-overlay { display: block; }
 @media (prefers-reduced-motion: reduce) {
   .site-tree, .st-children, .st-chevron { transition: none; }
 }
+
+/* ── PLAN PAGE ──────────────────────────────────────────────────────── */
+
+/* Eyebrow label with muted mid colour */
+.plan-eyebrow { color: var(--mid); }
+
+/* Lead paragraph beneath section heading */
+.plan-section-lead {
+  max-width: 640px;
+  margin-bottom: 2rem;
+  color: var(--mid);
+}
+
+/* Paragraph that wraps a CTA button */
+.plan-cta-p { margin-top: 2rem; }
+
+/* arch-intro grid with tighter gap */
+.plan-arch-grid { gap: 1.5rem; }
+
+/* Lead paragraph in the dark "Your Part" section */
+.plan-dark-lead {
+  color: rgba(255, 255, 255, .75);
+  max-width: 640px;
+  margin-bottom: 2.25rem;
+}
+
+/* Role card tile in the dark section */
+.plan-role-card {
+  background: rgba(255, 255, 255, .06);
+  border-radius: 6px;
+  padding: 1.25rem 1.5rem;
+}
+
+/* Role card label (gold accent) */
+.plan-role-label { color: var(--gold); }
+
+/* Role card body text */
+.plan-role-text { color: rgba(255, 255, 255, .8); }
+
+/* Pull-quote in dark section */
+.plan-pullquote {
+  color: #fff;
+  border-color: var(--gold);
+  margin-top: 2.5rem;
+}
+
+/* CTA section wrap layout */
+.plan-cta-wrap {
+  padding: 3rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Footer AI-disclosure link */
+.plan-footer-ai-link {
+  color: inherit;
+  opacity: .7;
+}
