@@ -25,19 +25,6 @@ test.describe('Homepage', () => {
     expect(statement.trim().length).toBeGreaterThan(20);
   });
 
-  test.skip('renders the FDR block with his quote', async () => {
-    // TODO(alice): re-add when homepage Section 2 is written — Task 11
-  });
-  test.skip('renders the PolicyOS 3-layer cards', async () => {
-    // TODO(alice): re-add when homepage Section 3 is written — Task 11
-  });
-  test.skip('renders all 5 foundation cards', async () => {
-    // TODO(alice): re-add when homepage Section 3 is written — Task 11
-  });
-  test.skip('renders all 4 Get Involved entry cards', async () => {
-    // TODO(alice): re-add when homepage Section 5 is written — Task 11
-  });
-
   test('nav has 5 links (Home, The Problem, The Plan, The Platform, Join the Movement)', async ({ page }) => {
     // 5 hardcoded items — app.js no longer injects into nav-links
     await expect(page.locator('.nav-links a')).toHaveCount(5);
@@ -71,6 +58,52 @@ test.describe('Homepage', () => {
     await expect(banner).toContainText('no affiliation');
 
     // Dismiss button removes the banner
+    await page.locator('.name-notice-dismiss').click();
+    await expect(banner).not.toBeAttached();
+  });
+});
+
+// ── HOMEPAGE — REDESIGNED ─────────────────────────────────────────────────────
+
+test.describe('Homepage — redesigned', () => {
+  test.beforeEach(async ({ page }) => { await page.goto('/'); });
+
+  test('has correct page title', async ({ page }) => {
+    await expect(page).toHaveTitle(/Freedom and Dignity/i);
+  });
+
+  test('hero section has a movement-first headline', async ({ page }) => {
+    const h1 = await page.locator('h1').first().textContent();
+    expect(h1).toBeTruthy();
+    expect(h1.length).toBeGreaterThan(5);
+  });
+
+  test('hero primary CTA links to join.html', async ({ page }) => {
+    await expect(page.locator('.hero-ctas .btn-primary[href*="join.html"]')).toBeAttached();
+  });
+
+  test('has validation section', async ({ page }) => {
+    await expect(page.locator('#home-validation, [id*="validation"]').first()).toBeAttached();
+  });
+
+  test('has champion issues section with 5 cards', async ({ page }) => {
+    await expect(page.locator('#home-champion-issues, [id*="champion"]').first()).toBeAttached();
+    // 5 champion issue cards
+    await expect(page.locator('.champion-card, [class*="champion-card"]')).toHaveCount(5);
+  });
+
+  test('champion cards link to plan.html and to pillar pages', async ({ page }) => {
+    const planLinks = await page.locator('.champion-card a[href*="plan.html"]').count();
+    expect(planLinks).toBeGreaterThanOrEqual(1);
+  });
+
+  test('has join the movement section', async ({ page }) => {
+    await expect(page.locator('#home-join, [id*="join"]').first()).toBeAttached();
+  });
+
+  test('name notice banner is present and dismissible', async ({ page }) => {
+    const banner = page.locator('.name-notice-banner');
+    await expect(banner).toBeAttached();
     await page.locator('.name-notice-dismiss').click();
     await expect(banner).not.toBeAttached();
   });
