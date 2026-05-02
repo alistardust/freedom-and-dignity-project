@@ -33,7 +33,7 @@
     const isAiPage = pageName === 'about-ai';
     const isLetterPage = pageName === 'letter-from-the-founder';
     const isRoadmapPage = pageName === 'roadmap';
-    const isMissionPage = pageName === 'mission';
+    const isMissionPage = pageName === 'problem';
     const isRightsPage = pageName === 'rights';
     const isAboutUsPage = pageName === 'about-us';
     const isClassificationPage = pageName === 'classification';
@@ -44,7 +44,7 @@
     const isPolicyLibraryPage = pageName === 'policy-library';
     const platformHref = base + 'platform.html';
     const isPlatformPage = pageName === 'platform';
-    if (navList && !navList.querySelector('a[href*="mission"]')) {
+    if (navList && !navList.querySelector('a[href*="problem"]')) {
       const li = document.createElement('li');
       li.innerHTML = `<a href="${missionHref}"${isMissionPage ? ' class="active"' : ''}>Problem</a>`;
       navList.appendChild(li);
@@ -97,7 +97,7 @@
       fli.innerHTML = `<a href="${policyLibraryHref}">Policy Library</a>`;
       footerLinks.appendChild(fli);
     }
-    if (footerLinks && !footerLinks.querySelector('a[href*="mission"]')) {
+    if (footerLinks && !footerLinks.querySelector('a[href*="problem"]')) {
       const fli = document.createElement('li');
       fli.innerHTML = `<a href="${missionHref}">Problem</a>`;
       footerLinks.appendChild(fli);
