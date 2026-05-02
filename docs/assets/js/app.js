@@ -24,7 +24,7 @@
     const base = inSubdir ? '../' : '';
     const aboutUsHref = base + 'about-us.html';
     const aiHref = base + 'about-ai.html';
-    const missionHref = base + 'mission.html';
+    const missionHref = base + 'problem.html';
     const rightsHref = base + 'rights.html';
     const classificationHref = base + 'classification.html';
     const getInvolvedHref = base + 'get-involved.html';

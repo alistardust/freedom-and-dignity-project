@@ -423,7 +423,7 @@ test.describe('Policy rules section renders content', () => {
 // ── MISSION PAGE ──────────────────────────────────────────────────────────────
 
 test.describe('Mission page', () => {
-  test.beforeEach(async ({ page }) => { await page.goto('/mission.html'); });
+  test.beforeEach(async ({ page }) => { await page.goto('/problem.html'); });
 
   test('has correct page title', async ({ page }) => {
     await expect(page).toHaveTitle(/Problem|Mission.*Freedom and Dignity/i);
