@@ -31,11 +31,21 @@ system_rules.md     Cross-domain system rule architecture
 ## Current state
 
 - **Pillars:** 25 active pillar pages across 5 foundations
-- **Policy positions:** 3,810 canonical positions in `policy/catalog/policy_catalog_v2.sqlite`
+- **Policy positions:** 3,810 canonical positions in `policy/catalog/policy_catalog_v2.sqlite`; 2,773 positions fully defined on the live site (all `status-included`)
 - **Plain language:** All positions have plain-language summaries
 - **Citations:** Inline APA citations across all pillar pages
+- **Policy card audit:** Complete as of May 2026 — zero `status-missing` cards remain across all 25 pillars
 
 For detailed status, see [`.github/current-state.md`](.github/current-state.md).
+
+## Research
+
+Foundational research documents live in `policy/research/`:
+
+- `us-constitution-adversarial-review.md` — structural failures, loopholes, and exploitation vectors in the U.S. Constitution (incl. *Trump v. United States*, 2024)
+- `new-bill-of-rights-adversarial-review.md` — per-amendment adversarial analysis of the project's proposed New Bill of Rights
+- `senate-reform-research.md` — malapportionment data, filibuster history, reform proposals, and comparative democracy analysis
+- `pillars/` — per-pillar background research used to draft policy cards
 
 ## Contributing
 
