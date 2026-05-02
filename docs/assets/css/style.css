@@ -2928,9 +2928,110 @@ summary.pil-foundation-bar::-webkit-details-marker { display: none; }
 .hero-ctas {
   display: flex;
   flex-wrap: wrap;
-  gap: .75rem;
+  gap: 1.5rem;
   justify-content: center;
+  align-items: center;
   margin-top: 1.75rem;
+}
+
+/* Campaign pin — "Get Involved" hero button */
+.btn-pin {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 148px;
+  height: 148px;
+  border-radius: 50%;
+  overflow: hidden;
+  text-decoration: none;
+  /* Tilt like a real pinned button */
+  transform: rotate(-7deg);
+  transition: transform .3s ease, box-shadow .3s ease;
+  /* Metallic rim: bright silver face → mid-tone → outer dark ring */
+  border: 8px solid #c6c6c6;
+  box-shadow:
+    0 0 0 1px #888,
+    0 0 0 2px #e2e2e2,
+    0 8px 24px rgba(0,0,0,.6),
+    inset 0 2px 0 rgba(255,255,255,.45),
+    inset 0 -1px 0 rgba(0,0,0,.2);
+}
+/* Horizontal red / cream / navy bands — the classic pin face */
+.btn-pin::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    #bf0a30 0%,   #bf0a30 30%,
+    #faf6ef 30%,  #faf6ef 68%,
+    #1a2a4a 68%,  #1a2a4a 100%
+  );
+}
+/* Mylar gloss — the bright oval sheen on the upper-left */
+.btn-pin::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at 36% 28%,
+    rgba(255,255,255,.38) 0%,
+    rgba(255,255,255,.1)  35%,
+    transparent 62%
+  );
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 2;
+}
+.btn-pin:hover,
+.btn-pin:focus-visible {
+  transform: rotate(-2deg) scale(1.07);
+  box-shadow:
+    0 0 0 1px #888,
+    0 0 0 2px #e2e2e2,
+    0 12px 32px rgba(0,0,0,.7),
+    inset 0 2px 0 rgba(255,255,255,.45),
+    inset 0 -1px 0 rgba(0,0,0,.2);
+  color: inherit;
+  text-decoration: none;
+}
+.btn-pin-top,
+.btn-pin-main,
+.btn-pin-btm {
+  position: relative;
+  z-index: 1;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  line-height: 1;
+  text-align: center;
+}
+.btn-pin-top {
+  color: #fff;
+  font-size: .5rem;
+  font-weight: 500;
+  letter-spacing: .16em;
+  margin-bottom: .2rem;
+}
+.btn-pin-main {
+  color: #1a2a4a;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  line-height: 1.15;
+}
+.btn-pin-btm {
+  color: #faf6ef;
+  font-size: .45rem;
+  font-weight: 500;
+  letter-spacing: .18em;
+  margin-top: .25rem;
+}
+@media (prefers-reduced-motion: reduce) {
+  .btn-pin,
+  .btn-pin:hover { transform: rotate(-7deg); transition: none; }
 }
 
 /* ── PROPOSALS / RIGHTS / PLATFORM ─── */
