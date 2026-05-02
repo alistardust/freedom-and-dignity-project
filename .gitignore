@@ -9,7 +9,9 @@ test-results/
 # Copilot chat logs — kept local and synced to S3, not committed to the public repo.
 # To commit them, remove this line. To sync to S3: npm run logs:sync
 sources/chat-logs/copilot/
-policy/research/
+# Raw research working files — exclude subdirectories and non-adversarial-review files.
+# Formal policy research documents (adversarial reviews etc.) ARE committed.
+policy/research/pillars/
 sources/
 
 # Build artifacts
