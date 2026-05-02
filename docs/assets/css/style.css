@@ -3415,7 +3415,6 @@ body:has(.site-tree.st-open) .st-overlay { display: block; }
 
 /* Data callout arch-item */
 .arch-item-data { margin: 2rem 0; }
-.arch-item-data-p { margin: 0; }
 
 /* Capture section (dark bg) — constrained intro and closing paragraphs */
 .prob-section-lead { max-width: 640px; margin-bottom: 2rem; }

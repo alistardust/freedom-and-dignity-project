@@ -496,9 +496,7 @@ test.describe('The Problem page', () => {
 
   test('hero statement leads with human recognition, not policy framing', async ({ page }) => {
     const statement = await page.locator('.hero-statement').textContent();
-    // Should contain a validating line, not start with a policy claim
-    expect(statement).toBeTruthy();
-    expect(statement.trim().length).toBeGreaterThan(30);
+    expect(statement).toMatch(/felt it before/i);
   });
 
   test('links forward to plan.html or join.html', async ({ page }) => {
