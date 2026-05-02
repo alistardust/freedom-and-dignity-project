@@ -88,21 +88,31 @@ Do not canonicalize PolicyOS rules into `system_rules.md` or the DB until the st
 
 ## Documentation maintenance
 
-Any change that affects repository behavior, workflow, build steps, architecture, testing expectations, documentation, or user-facing functionality must update the relevant documentation in the same change.
+**A commit is not complete until repo documentation is updated. This is a hard requirement, not a suggestion.**
 
-This includes, when applicable:
-- `README.md`
-- `.github/current-state.md`
-- `.github/ai-repo-context.md`
-- `system_rules.md`
-- `policy/catalog/README.md`
-- other affected repo documentation
+Before writing any commit message, ask: *does this change affect anything in the list below?* If yes, update the docs **in the same commit** — not a follow-up, not later.
+
+| Change | Update these files |
+|---|---|
+| Pillar count or structure | `README.md` + `.github/current-state.md` pillar registry |
+| Policy card count, status, or bulk completion | `README.md` Current state section + `.github/current-state.md` Known open items |
+| New research files added | `README.md` Research section + `.github/current-state.md` Research documents |
+| DB schema changes | `policy/catalog/README.md` + `system_rules.md` |
+| New architectural decisions | `.github/copilot-instructions.md` + `.github/current-state.md` |
+| New scripts or tooling | `README.md` (Scripts section) |
+| Known issues resolved | `.github/current-state.md` Known issues/open items |
+| Any other repo behavior or state change | Whichever of the files below is affected |
 
 "Repo documentation" means repository documentation files such as `README.md`, `.github/current-state.md`, `.github/ai-repo-context.md`, `system_rules.md`, `policy/catalog/README.md`, and related project documentation files.
 
 "Docs" without "repo" means the website content in the `docs/` directory.
 
 Do not update instruction files solely because repo facts or counts changed. Update instruction files when agent-behavior guidance changes.
+
+**Commit checklist — run mentally before every `git commit`:**
+1. What did I change?
+2. Does any row in the table above apply?
+3. If yes — are those doc files already staged? If not, update them now and add them to the same commit.
 
 ---
 
