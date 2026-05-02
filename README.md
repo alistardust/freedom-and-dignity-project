@@ -16,12 +16,14 @@ docs/               Website — served by GitHub Pages
   pillars/          25 pillar HTML pages
   compare/          Party comparison pages
 policy/             All policy content
+  briefing-pack.md  Condensed project context for AI brainstorming sessions
   catalog/          Policy catalog (SQLite), schema, ID docs, citation audit
   foundations/      Foundation values, framing, and platform-statement
     pillars/        Narrative markdown source (per-pillar prose, pre-generation)
   policyos/         PolicyOS system rules layer
   proposals/        Proposed foundational documents
     rights/         New Bill of Rights, Workers' Rights, Declaration of Indigenous Rights
+  research/         Background research documents (constitutional review, senate reform, per-pillar)
 scripts/            Import, generation, and maintenance scripts
 tests/              Unit tests (Vitest) and E2E tests (Playwright/Firefox)
 AGENTS.md           Codex CLI instruction file
