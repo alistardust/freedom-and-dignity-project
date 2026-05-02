@@ -815,6 +815,28 @@ test.describe('About Us page', () => {
   });
 });
 
+// ── ABOUT PAGE (movement-first rewrite) ───────────────────────────────────────
+
+test.describe('About page', () => {
+  test.beforeEach(async ({ page }) => { await page.goto('/about-us.html'); });
+
+  test('has correct page title', async ({ page }) => {
+    await expect(page).toHaveTitle(/About/i);
+  });
+
+  test('leads with movement identity, not founder bio', async ({ page }) => {
+    // First h2 should be about the movement, not "The Founder"
+    const firstH2 = await page.locator('h2').first().textContent();
+    expect(firstH2.toLowerCase()).not.toContain('founder');
+    expect(firstH2.toLowerCase()).not.toContain('alice');
+  });
+
+  test('includes founder section for transparency', async ({ page }) => {
+    // Founder info must exist — but later in the page
+    await expect(page.locator('text=Alice').first()).toBeAttached();
+  });
+});
+
 // ── LETTER FROM THE FOUNDER PAGE ──────────────────────────────────────────────
 
 test.describe('Letter from the Founder page', () => {
@@ -920,5 +942,19 @@ test.describe('The Plan page', () => {
 
   test('has a CTA to join.html', async ({ page }) => {
     await expect(page.locator('a[href*="join.html"]').first()).toBeAttached();
+  });
+});
+
+// ── POLICY LIBRARY PAGE ────────────────────────────────────────────────────────
+
+test.describe('Policy Library page (proposals.html)', () => {
+  test.beforeEach(async ({ page }) => { await page.goto('/proposals.html'); });
+
+  test('has updated title Policy Library', async ({ page }) => {
+    await expect(page).toHaveTitle(/Policy Library/i);
+  });
+
+  test('h1 says The Policy Library', async ({ page }) => {
+    await expect(page.locator('h1').first()).toContainText(/Policy Library/i);
   });
 });
