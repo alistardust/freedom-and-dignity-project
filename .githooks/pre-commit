@@ -1,0 +1,5 @@
+#!/bin/sh
+# Regenerate the AI brainstorming briefing pack before every commit.
+# Keeps dynamic sections (dates, counts, pillar table, research files) current.
+python3 scripts/update-briefing-pack.py
+git add policy/briefing-pack.md

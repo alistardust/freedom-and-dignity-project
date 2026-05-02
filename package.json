@@ -14,7 +14,8 @@
     "logs:export": "python3 scripts/export-chat-logs.py --project-only",
     "logs:export:all": "python3 scripts/export-chat-logs.py",
     "logs:sync": "echo 'Set your S3 bucket: aws s3 sync sources/chat-logs/copilot/ s3://YOUR-BUCKET/copilot-chat-logs/ --storage-class STANDARD_IA'",
-    "briefing-pack": "python3 scripts/update-briefing-pack.py"
+    "briefing-pack": "python3 scripts/update-briefing-pack.py",
+    "prepare": "git config core.hooksPath .githooks"
   },
   "repository": {
     "type": "git",

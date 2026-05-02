@@ -69,6 +69,8 @@ For technical contributors:
 | `npm run briefing-pack` | Regenerate `policy/briefing-pack.md` dynamic sections manually |
 | `python3 scripts/update-briefing-pack.py` | Same as above — also runs automatically via pre-commit hook |
 
+Git hooks are stored in `.githooks/` (tracked) and activated by the `prepare` npm script. Running `npm install` once after cloning is enough to set them up.
+
 For non-technical contributors, the Get Involved page has a link to the project Discord where policy review and rewriting work is coordinated.
 
 ## AI use
