@@ -53,7 +53,7 @@
     <a href="problem.html" class="btn-outline">The Problem</a>
     <a href="approach.html" class="btn-outline">Our Approach</a>
     <a href="get-involved.html" class="btn-pin" aria-label="Get Involved">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" width="140" height="140" aria-hidden="true" focusable="false" overflow="visible">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" width="160" height="160" aria-hidden="true" focusable="false" overflow="visible">
         <defs>
           <filter id="pin-shadow" x="-20%" y="-15%" width="140%" height="145%">
             <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000" flood-opacity="0.55"/>
@@ -79,29 +79,29 @@
           <circle cx="110" cy="110" r="99" fill="url(#pin-rim)"/>
           <!-- Rim inner edge shadow -->
           <circle cx="110" cy="110" r="91" fill="none" stroke="rgba(0,0,0,0.22)" stroke-width="2.5"/>
-          <!-- Red band (top 26%) -->
+          <!-- Red band (top 26%): y=19..66 visible inside circle -->
           <rect x="0"   y="0"   width="220" height="66"  fill="#bf0a30" clip-path="url(#pin-face)"/>
-          <!-- Parchment band (middle 48%) -->
+          <!-- Parchment band (middle 48%): y=66..154 -->
           <rect x="0"   y="66"  width="220" height="88"  fill="#faf6ef" clip-path="url(#pin-face)"/>
-          <!-- Navy band (bottom 26%) -->
+          <!-- Navy band (bottom 26%): y=154..201 visible inside circle -->
           <rect x="0"   y="154" width="220" height="220" fill="#1a2a4a" clip-path="url(#pin-face)"/>
           <!-- Mylar gloss -->
           <circle cx="110" cy="110" r="91" fill="url(#pin-gloss)"/>
-          <!-- Top band: JOIN US -->
+          <!-- Top band text: center of visible red ≈ y=42 -->
           <text x="110" y="42" text-anchor="middle" dominant-baseline="middle"
                 font-family="'Oswald','Arial Narrow',sans-serif"
-                font-size="9" font-weight="500" fill="#fff" letter-spacing="2.2">&#9733; JOIN US &#9733;</text>
-          <!-- Center: GET INVOLVED -->
-          <text x="110" y="97" text-anchor="middle" dominant-baseline="middle"
+                font-size="15" font-weight="500" fill="#fff" letter-spacing="3">&#9733; JOIN US &#9733;</text>
+          <!-- Center text: GET / INVOLVED in parchment band -->
+          <text x="110" y="95" text-anchor="middle" dominant-baseline="middle"
                 font-family="'Oswald','Arial Narrow',sans-serif"
-                font-size="23" font-weight="700" fill="#1a2a4a" letter-spacing="1.8">GET</text>
-          <text x="110" y="122" text-anchor="middle" dominant-baseline="middle"
+                font-size="29" font-weight="700" fill="#1a2a4a" letter-spacing="2">GET</text>
+          <text x="110" y="128" text-anchor="middle" dominant-baseline="middle"
                 font-family="'Oswald','Arial Narrow',sans-serif"
-                font-size="23" font-weight="700" fill="#1a2a4a" letter-spacing="1.8">INVOLVED</text>
-          <!-- Bottom band: NEW NEW DEAL -->
-          <text x="110" y="171" text-anchor="middle" dominant-baseline="middle"
+                font-size="29" font-weight="700" fill="#1a2a4a" letter-spacing="2">INVOLVED</text>
+          <!-- Bottom band text: center of visible navy ≈ y=177 -->
+          <text x="110" y="177" text-anchor="middle" dominant-baseline="middle"
                 font-family="'Oswald','Arial Narrow',sans-serif"
-                font-size="8.5" font-weight="500" fill="#faf6ef" letter-spacing="2">NEW NEW DEAL</text>
+                font-size="13" font-weight="500" fill="#faf6ef" letter-spacing="2.5">NEW NEW DEAL</text>
         </g>
       </svg>
     </a>
