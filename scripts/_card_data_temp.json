@@ -1,0 +1,1546 @@
+{
+  "TECH-AGES-0001": {
+    "title": "Prohibit mandatory identity-based age verification",
+    "stmt": "Prohibit mandatory identity-based age verification systems that require government ID biometric data or persistent tracking to access lawful content"
+  },
+  "TECH-AGES-0002": {
+    "title": "No centralized databases",
+    "stmt": "Age verification systems must not create centralized databases of identity or browsing activity"
+  },
+  "TECH-AGES-0003": {
+    "title": "Allow privacy-preserving alternatives",
+    "stmt": "Allow age assurance mechanisms that preserve privacy such as local device verification zero-knowledge proofs or non-identifying credential systems"
+  },
+  "TECH-AGES-0004": {
+    "title": "Data minimization and deletion",
+    "stmt": "Any permitted age verification system must minimize data collection and prohibit retention beyond immediate verification"
+  },
+  "TECH-AGES-0005": {
+    "title": "Narrow scope requirements",
+    "stmt": "Age verification requirements must be narrowly scoped to specific high-risk content categories and may not be expanded to general internet access"
+  },
+  "TECH-AGES-0006": {
+    "title": "Ban surveillance proxy use",
+    "stmt": "Governments and private entities may not use age verification systems as a proxy for surveillance censorship or behavior tracking"
+  },
+  "TECH-AINL-0001": {
+    "title": "High-risk AI requires review",
+    "stmt": "High-risk AI systems must be subject to heightened governance review before deployment"
+  },
+  "TECH-AINL-0002": {
+    "title": "No automation without accountability",
+    "stmt": "AI systems that affect rights liberty healthcare education employment benefits policing or housing must not operate without meaningful human accountability"
+  },
+  "TECH-AINL-0003": {
+    "title": "Rights to notice and review",
+    "stmt": "No fully automated decisions in critical domains without a right to notice explanation appeal and human review"
+  },
+  "TECH-AINL-0004": {
+    "title": "Transparency and auditability",
+    "stmt": "AI systems used in public-sector decision-making must be documented transparent and independently auditable"
+  },
+  "TECH-AINL-0005": {
+    "title": "Liability for harms",
+    "stmt": "Operators and deployers of AI systems must retain legal liability for harms caused by those systems"
+  },
+  "TECH-AINL-0006": {
+    "title": "Testing for bias and safety",
+    "stmt": "AI systems must be tested for bias safety reliability and misuse risks before and after deployment"
+  },
+  "TECH-AINL-0007": {
+    "title": "Documentation disclosure",
+    "stmt": "Covered AI systems must maintain model cards documentation or equivalent public-facing disclosures appropriate to risk level"
+  },
+  "TECH-AINL-0008": {
+    "title": "No secret law",
+    "stmt": "Secret law or undisclosed AI decision systems must not be used to determine rights obligations or access to public services"
+  },
+  "TECH-ALGO-0001": {
+    "title": "Disclosure of algorithmic influence",
+    "stmt": "People must be told when AI or algorithmic systems materially influence ranking eligibility triage moderation or access decisions"
+  },
+  "TECH-ALGO-0002": {
+    "title": "Right to contest decisions",
+    "stmt": "People must have the right to contest materially harmful algorithmic decisions"
+  },
+  "TECH-ALGO-0003": {
+    "title": "Non-algorithmic alternatives",
+    "stmt": "Users must have access to non-algorithmic or less personalized alternatives where practical"
+  },
+  "TECH-ALGO-0004": {
+    "title": "Ban manipulative optimization",
+    "stmt": "Ban manipulative algorithmic optimization that targets psychological vulnerabilities for profit or political influence"
+  },
+  "TECH-ALGO-0005": {
+    "title": "Disclose ranking objectives",
+    "stmt": "Platforms must disclose core ranking and recommendation objectives in understandable terms"
+  },
+  "TECH-ALGO-0006": {
+    "title": "Protected researcher access",
+    "stmt": "Independent researchers must have protected access to platform data needed to study algorithmic harms subject to privacy safeguards"
+  },
+  "TECH-AUDT-0001": {
+    "title": "Independent auditing requirement",
+    "stmt": "Covered AI systems must support independent auditing for safety bias reliability and misuse"
+  },
+  "TECH-AUDT-0002": {
+    "title": "Meaningful redress for harms",
+    "stmt": "Affected individuals must have access to meaningful explanation and redress when harmed by AI-assisted decisions"
+  },
+  "TECH-AUDT-0003": {
+    "title": "Forensic logging",
+    "stmt": "Organizations deploying high-risk AI must keep logs sufficient for forensic review investigation and appeals"
+  },
+  "TECH-AUDT-0004": {
+    "title": "Public AI registry",
+    "stmt": "Government use of AI must be cataloged in a public registry except for narrowly defined classified exceptions subject to independent oversight"
+  },
+  "TECH-AUDT-0005": {
+    "title": "Oversight of classified systems",
+    "stmt": "Classified or sensitive AI systems must still be subject to independent review under secure oversight procedures"
+  },
+  "TECH-AUTS-0001": {
+    "title": "Strict safeguards for high-risk systems",
+    "stmt": "High-risk autonomous systems must not be deployed where failure could cause loss of liberty bodily harm or deprivation of rights without strict safeguards"
+  },
+  "TECH-AUTS-0002": {
+    "title": "No replacement of accountable humans",
+    "stmt": "AI systems used in healthcare education benefits housing or employment decisions must not replace accountable human decision-makers"
+  },
+  "TECH-AUTS-0003": {
+    "title": "Prohibit automated denial systems",
+    "stmt": "Automated denial systems for benefits care housing or legal status must be prohibited unless human review and appeal rights are guaranteed before harm occurs"
+  },
+  "TECH-AUTS-0004": {
+    "title": "Human override authority",
+    "stmt": "Government agencies must maintain human override authority and documented escalation procedures for automated systems"
+  },
+  "TECH-BIOS-0001": {
+    "title": "Ban mass facial recognition",
+    "stmt": "Ban mass facial recognition in public spaces for general law-enforcement or administrative use"
+  },
+  "TECH-BIOS-0002": {
+    "title": "Ban real-time crowd tracking",
+    "stmt": "Ban real-time biometric tracking of crowds or demonstrations"
+  },
+  "TECH-BIOS-0003": {
+    "title": "No general identity infrastructure",
+    "stmt": "Biometric systems may not be used as general identity infrastructure for access to lawful content or public life"
+  },
+  "TECH-BIOS-0004": {
+    "title": "Strict safeguards where permitted",
+    "stmt": "Where biometrics are permitted they must require strict necessity proportionality auditability and deletion rules"
+  },
+  "TECH-BIOS-0005": {
+    "title": "Heightened data protection",
+    "stmt": "Biometric data must be treated as highly sensitive protected data with stronger consent and retention rules than ordinary personal data"
+  },
+  "TECH-DATA-0001": {
+    "title": "Prohibit unauthorized cross-agency surveillance fusion",
+    "stmt": "Prohibit cross-agency fusion of surveillance datasets except where specifically authorized by statute, subject to judicial oversight, publicly disclosed in general terms, and subject to periodic reauthorization"
+  },
+  "TECH-DATA-0002": {
+    "title": "Ban secret dossiers",
+    "stmt": "Ban creation of secret AI-generated behavioral dossiers on individuals absent individualized legal cause and judicial process"
+  },
+  "TECH-DATA-0003": {
+    "title": "Ban government use of commercial data",
+    "stmt": "Ban use of commercially acquired bulk location biometric or behavioral data in AI surveillance systems"
+  },
+  "TECH-EDUS-0001": {
+    "title": "AI must enhance not replace learning",
+    "stmt": "AI systems in education must enhance learning without replacing human instruction critical thinking or equitable access to education"
+  },
+  "TECH-EDUS-0002": {
+    "title": "No replacement of human educators",
+    "stmt": "AI systems may not replace human educators in primary secondary or higher education contexts where direct instruction is required"
+  },
+  "TECH-EDUS-0003": {
+    "title": "Support not substitute",
+    "stmt": "AI systems may be used to support educators and students but may not substitute for qualified teaching or mentorship"
+  },
+  "TECH-EDUS-0004": {
+    "title": "No sole-basis grading",
+    "stmt": "AI systems may not be the sole basis for grading or evaluation in high-stakes academic decisions including advancement certification or disciplinary action"
+  },
+  "TECH-EDUS-0005": {
+    "title": "Right to human review",
+    "stmt": "Students have the right to human review of AI-influenced grading or evaluation decisions"
+  },
+  "TECH-EDUS-0006": {
+    "title": "Clear policies on AI use",
+    "stmt": "Educational institutions must establish clear policies on AI use that promote learning and prevent misuse without relying on unreliable detection systems"
+  },
+  "TECH-EDUS-0007": {
+    "title": "Evaluate for bias",
+    "stmt": "AI systems used in education must be evaluated for bias and must not disadvantage students based on race gender disability socioeconomic status or language background"
+  },
+  "TECH-EDUS-0008": {
+    "title": "Accessibility and equity",
+    "stmt": "AI tools used in education must be accessible to all students and may not create or reinforce educational inequality"
+  },
+  "TECH-EDUS-0009": {
+    "title": "Data minimization",
+    "stmt": "Student data collected by AI systems must be limited to what is necessary for educational purposes"
+  },
+  "TECH-EDUS-0010": {
+    "title": "No commercial use of student data",
+    "stmt": "Student data may not be sold shared or used for advertising profiling or unrelated commercial purposes"
+  },
+  "TECH-EDUS-0011": {
+    "title": "Enhanced protections for minors",
+    "stmt": "Enhanced privacy protections are required for minors using AI systems in educational settings"
+  },
+  "TECH-EDUS-0012": {
+    "title": "Ban invasive surveillance",
+    "stmt": "Ban use of AI systems for invasive surveillance of students including continuous monitoring behavioral tracking or biometric analysis without strict justification and safeguards"
+  },
+  "TECH-EDUS-0013": {
+    "title": "No emotion inference",
+    "stmt": "AI systems may not be used to infer student emotions attention or psychological state for evaluation or discipline"
+  },
+  "TECH-EDUS-0014": {
+    "title": "No behavioral scoring",
+    "stmt": "Educational institutions may not use AI systems to assign behavioral or compliance scores to students"
+  },
+  "TECH-EDUS-0015": {
+    "title": "Disclose AI-generated content",
+    "stmt": "AI-generated educational content must be clearly identified and its limitations disclosed"
+  },
+  "TECH-EDUS-0016": {
+    "title": "No ideological manipulation",
+    "stmt": "AI systems may not be used to impose ideological viewpoints or manipulate educational content without transparency and oversight"
+  },
+  "TECH-EDUS-0017": {
+    "title": "Support critical thinking",
+    "stmt": "Educational use of AI must support development of critical thinking rather than passive consumption of generated answers"
+  },
+  "TECH-EDUS-0018": {
+    "title": "Accessibility for disabilities",
+    "stmt": "AI may be used to improve accessibility for students with disabilities including translation transcription and adaptive learning tools"
+  },
+  "TECH-EDUS-0019": {
+    "title": "Multilingual support",
+    "stmt": "AI systems should support multilingual education and reduce language barriers without compromising accuracy or fairness"
+  },
+  "TECH-EDUS-0020": {
+    "title": "Disclosure requirement",
+    "stmt": "Educational institutions must disclose use of AI systems in teaching evaluation and administration"
+  },
+  "TECH-EDUS-0021": {
+    "title": "Regular independent audits",
+    "stmt": "AI systems used in education must be subject to regular independent audits for bias accuracy and educational impact"
+  },
+  "TECH-EDUS-0022": {
+    "title": "No proprietary opacity",
+    "stmt": "Vendors providing AI systems to educational institutions may not use proprietary claims to avoid oversight or accountability"
+  },
+  "TECH-EDUS-0023": {
+    "title": "Demonstrate educational benefit",
+    "stmt": "AI systems must demonstrate educational benefit through evidence before widespread deployment in classrooms"
+  },
+  "TECH-EDUS-0024": {
+    "title": "Informed consent for testing",
+    "stmt": "Students may not be used as unwitting test subjects for AI systems without informed consent and appropriate safeguards"
+  },
+  "TECH-ENVS-0001": {
+    "title": "Sustainable operations required",
+    "stmt": "AI systems and infrastructure must not externalize environmental costs and must operate within sustainable limits for energy water materials and ecological impact"
+  },
+  "TECH-ENVS-0002": {
+    "title": "Carbon neutrality requirement",
+    "stmt": "Large-scale AI systems and data centers must meet strict carbon neutrality or carbon-negative requirements over their full lifecycle"
+  },
+  "TECH-ENVS-0003": {
+    "title": "Energy disclosure",
+    "stmt": "Operators of large AI systems must publicly disclose energy usage sources emissions and efficiency metrics"
+  },
+  "TECH-ENVS-0004": {
+    "title": "Renewable energy supply",
+    "stmt": "High-consumption AI infrastructure must supply or offset its energy usage through dedicated renewable or low-impact sources rather than relying on general grid extraction"
+  },
+  "TECH-ENVS-0005": {
+    "title": "Water usage disclosure",
+    "stmt": "AI infrastructure operators must disclose water usage including cooling consumption and local environmental impact"
+  },
+  "TECH-ENVS-0006": {
+    "title": "Water resource protection",
+    "stmt": "AI systems must not disproportionately strain local water resources particularly in drought-prone or vulnerable regions"
+  },
+  "TECH-ENVS-0007": {
+    "title": "Materials sourcing standards",
+    "stmt": "Materials used in AI hardware including rare earth elements must be sourced under strict environmental and labor standards"
+  },
+  "TECH-ENVS-0008": {
+    "title": "Lifecycle responsibility",
+    "stmt": "AI hardware producers must be responsible for full lifecycle impacts including manufacturing durability and end-of-life disposal"
+  },
+  "TECH-ENVS-0009": {
+    "title": "Durability and repairability",
+    "stmt": "AI-related hardware must meet durability repairability and reuse standards to reduce electronic waste"
+  },
+  "TECH-ENVS-0010": {
+    "title": "Recycling programs",
+    "stmt": "Operators must implement responsible recycling and disposal programs for AI hardware and infrastructure components"
+  },
+  "TECH-ENVS-0011": {
+    "title": "Internalize environmental costs",
+    "stmt": "Companies developing or deploying AI systems must internalize environmental costs rather than shifting them to the public or ecosystems"
+  },
+  "TECH-ENVS-0012": {
+    "title": "Environmental impact assessments",
+    "stmt": "Large-scale AI deployments must undergo environmental impact assessments prior to construction or expansion"
+  },
+  "TECH-ENVS-0013": {
+    "title": "Support climate efforts",
+    "stmt": "AI should be used to support climate modeling environmental monitoring and mitigation efforts under transparent and accountable frameworks"
+  },
+  "TECH-ENVS-0014": {
+    "title": "Resource optimization",
+    "stmt": "AI may be used to optimize energy water and resource usage provided it does not create hidden environmental tradeoffs or inequitable impacts"
+  },
+  "TECH-ENVS-0015": {
+    "title": "Grid modernization support",
+    "stmt": "AI systems may support modernization of electrical grids microgrids and renewable energy systems while maintaining transparency and public accountability"
+  },
+  "TECH-ENVS-0016": {
+    "title": "No misrepresentation",
+    "stmt": "AI companies may not misrepresent environmental impact through selective reporting offsets or unverifiable sustainability claims"
+  },
+  "TECH-ENVS-0017": {
+    "title": "Standardized reporting",
+    "stmt": "Environmental reporting for AI systems must follow standardized verifiable metrics to prevent manipulation or selective disclosure"
+  },
+  "TECH-ENVS-0018": {
+    "title": "Environmental justice protection",
+    "stmt": "AI infrastructure may not disproportionately locate environmental burdens in disadvantaged communities or regions"
+  },
+  "TECH-ENVS-0019": {
+    "title": "No global offloading",
+    "stmt": "Environmental costs of AI supply chains must not be offloaded to developing regions without equivalent protections and standards"
+  },
+  "TECH-ENVS-0020": {
+    "title": "Integration with national policy",
+    "stmt": "AI infrastructure policy must integrate with national energy grid modernization renewable investment and public infrastructure strategies"
+  },
+  "TECH-ENVS-0021": {
+    "title": "Noise pollution standards",
+    "stmt": "Establish standards for noise pollution from AI data centers and other large data centers including monitoring mitigation and local community protections"
+  },
+  "TECH-ENVS-0022": {
+    "title": "Water consumption caps",
+    "stmt": "Large-scale AI data centers must operate within binding water consumption limits based on regional availability and must report actual usage against permitted caps on a publicly accessible basis"
+  },
+  "TECH-ENVS-0023": {
+    "title": "Water-stressed region restrictions",
+    "stmt": "AI infrastructure requiring significant water cooling may not be sited in regions classified as water-stressed or drought-prone under federal or state water scarcity designations without demonstrated water-neutral mitigation plans and public review"
+  },
+  "TECH-ENVS-0024": {
+    "title": "Groundwater and aquifer protection",
+    "stmt": "AI data centers may not draw on groundwater or aquifer sources in ways that degrade water tables reduce flows to downstream users or damage ecosystems without full environmental review, public notice, and binding mitigation commitments"
+  },
+  "TECH-ENVS-0025": {
+    "title": "Water recycling and reclamation",
+    "stmt": "New large-scale AI data centers must implement water recycling, reclamation, or closed-loop cooling systems to the maximum extent technically feasible and must report recycling rates alongside gross consumption figures"
+  },
+  "TECH-ENVS-0026": {
+    "title": "Drought contingency requirements",
+    "stmt": "Operators of high-water-consumption AI infrastructure must maintain and publicly file drought contingency plans specifying operational curtailment thresholds during declared water emergencies, priority for municipal and agricultural water users, and timelines for transitioning to low-water or air-cooled alternatives"
+  },
+  "TECH-ENVS-0027": {
+    "title": "Community water impact review",
+    "stmt": "Before approving large data center water permits, regulators must conduct a community water impact review assessing effects on residential water access, municipal supply systems, agricultural users, and environmental flows, with mandatory public comment periods and binding mitigation requirements"
+  },
+  "TECH-FINC-0001": {
+    "title": "Fairness and transparency in finance",
+    "stmt": "AI systems in finance credit and insurance must not undermine fairness transparency equal access or protection from discrimination in essential economic systems"
+  },
+  "TECH-FINC-0002": {
+    "title": "No automated denial of credit",
+    "stmt": "AI systems may not independently deny credit loans mortgages refinancing or other essential financial services without direct human review and accountability"
+  },
+  "TECH-FINC-0003": {
+    "title": "Human review before denial",
+    "stmt": "Any decision that would deny restrict or materially worsen access to credit or lending must be made directly and independently by a qualified human reviewer before harm occurs"
+  },
+  "TECH-FINC-0004": {
+    "title": "No opaque criteria",
+    "stmt": "AI systems used in underwriting or creditworthiness assessments may not rely on opaque or unexplainable criteria that materially affect outcomes"
+  },
+  "TECH-FINC-0005": {
+    "title": "Anti-discrimination requirement",
+    "stmt": "AI systems in finance and insurance must not discriminate based on protected characteristics or proxies for those characteristics including zip code language behavior or network data"
+  },
+  "TECH-FINC-0006": {
+    "title": "Regular audits for bias",
+    "stmt": "AI systems used in lending underwriting pricing or claims decisions must be regularly audited for disparate impact and discriminatory outcomes"
+  },
+  "TECH-FINC-0007": {
+    "title": "No automated insurance denial",
+    "stmt": "AI systems may not independently deny restrict reduce or terminate insurance coverage or claims without direct and independent human review"
+  },
+  "TECH-FINC-0008": {
+    "title": "Independent human judgment required",
+    "stmt": "Human reviewers in insurance decisions may not rely solely on AI-generated recommendations and must exercise independent judgment"
+  },
+  "TECH-FINC-0009": {
+    "title": "AI for approval not denial",
+    "stmt": "AI systems may be used to assist or expedite approval of insurance claims or coverage but may not be used as the primary basis for denial restriction or reduction"
+  },
+  "TECH-FINC-0010": {
+    "title": "No negative inference from AI",
+    "stmt": "Absence of AI approval or recommendation may not be used as evidence or implicit justification for denial restriction or delay of insurance claims or coverage"
+  },
+  "TECH-FINC-0011": {
+    "title": "No behavioral surveillance scoring",
+    "stmt": "AI systems may not use generalized behavioral surveillance or social scoring to determine eligibility pricing or access in finance credit or insurance"
+  },
+  "TECH-FINC-0012": {
+    "title": "Transparent risk scoring",
+    "stmt": "Risk scoring in finance and insurance must be based on transparent lawful and relevant factors and may not rely on opaque behavioral inference"
+  },
+  "TECH-FINC-0013": {
+    "title": "No vulnerability profiling",
+    "stmt": "AI systems may not use individualized vulnerability profiling to impose exploitative pricing rates fees or terms"
+  },
+  "TECH-FINC-0014": {
+    "title": "Fair housing access",
+    "stmt": "AI systems used in mortgage housing finance or rental screening must not undermine fair access to housing or reproduce historical discrimination"
+  },
+  "TECH-FINC-0015": {
+    "title": "Tenant screening limits",
+    "stmt": "Tenant screening and housing-related AI systems may not rely on opaque scoring or unverifiable data that materially affect housing access"
+  },
+  "TECH-FINC-0016": {
+    "title": "Right to explanation",
+    "stmt": "People have the right to a meaningful explanation of AI-influenced financial credit or insurance decisions affecting them"
+  },
+  "TECH-FINC-0017": {
+    "title": "Right to appeal",
+    "stmt": "People must have access to a timely human appeal process for materially adverse AI-influenced financial credit or insurance decisions"
+  },
+  "TECH-FINC-0018": {
+    "title": "Disclosure requirement",
+    "stmt": "Entities using AI in consequential financial or insurance decisions must disclose when such systems materially influence outcomes"
+  },
+  "TECH-FINC-0019": {
+    "title": "Data minimization",
+    "stmt": "AI systems in finance and insurance may collect only data that is strictly necessary for lawful and relevant decision-making"
+  },
+  "TECH-FINC-0020": {
+    "title": "No data sales or repurposing",
+    "stmt": "Financial and insurance data used by AI systems may not be sold shared or repurposed for unrelated commercial targeting or behavioral profiling"
+  },
+  "TECH-FINC-0021": {
+    "title": "No secret profile enrichment",
+    "stmt": "Entities may not secretly enrich financial or insurance profiles with third-party consumer data social graph data or surveillance-derived data without explicit lawful authority and disclosure"
+  },
+  "TECH-FINC-0022": {
+    "title": "No cross-system denial loops",
+    "stmt": "AI systems may not be used to create cross-system denial loops where credit insurance housing or public-benefit decisions reinforce each other without independent review and due process"
+  },
+  "TECH-FINC-0023": {
+    "title": "Independent audits",
+    "stmt": "AI systems used in finance credit and insurance must be subject to regular independent audits for bias fairness legality and consumer harm"
+  },
+  "TECH-FINC-0024": {
+    "title": "No proprietary opacity",
+    "stmt": "Trade secrecy or proprietary claims may not be used to prevent meaningful oversight explanation or appeal in consequential financial or insurance AI systems"
+  },
+  "TECH-FINC-0025": {
+    "title": "Documentation requirement",
+    "stmt": "Entities deploying consequential AI systems in finance and insurance must maintain documentation sufficient for review audit and accountability"
+  },
+  "TECH-FINC-0026": {
+    "title": "No exploitation of vulnerability",
+    "stmt": "AI systems may not be used to identify and exploit financially vulnerable individuals through targeted loans fees insurance terms or sales practices"
+  },
+  "TECH-FINC-0027": {
+    "title": "No impersonation",
+    "stmt": "AI systems in finance and insurance may not impersonate human advisors or misrepresent their authority capabilities or obligations to consumers"
+  },
+  "TECH-FINC-0028": {
+    "title": "Public-interest standards for essential systems",
+    "stmt": "Where finance credit or insurance systems function as essential gateways to housing healthcare transportation or economic participation they must be governed by heightened public-interest standards"
+  },
+  "TECH-FINC-0029": {
+    "title": "No automatic exclusion from essential systems",
+    "stmt": "AI systems must not be allowed to automatically exclude people from essential economic systems needed for basic social participation"
+  },
+  "TECH-GOVN-0001": {
+    "title": "Preserve due process and rights",
+    "stmt": "AI systems used by government or public-service entities must not undermine due process equal protection transparency accountability or access to rights and services"
+  },
+  "TECH-GOVN-0002": {
+    "title": "No automated denial of benefits",
+    "stmt": "AI systems may not independently deny terminate reduce or suspend access to public benefits services or legal status determinations"
+  },
+  "TECH-GOVN-0003": {
+    "title": "Human decision-maker before harm",
+    "stmt": "Any decision that would deny reduce terminate or delay benefits services or rights must be made directly and independently by a qualified human decision-maker before harm occurs"
+  },
+  "TECH-GOVN-0004": {
+    "title": "Independent human judgment required",
+    "stmt": "Human reviewers may not rely solely on AI-generated recommendations when making public-service or benefits decisions and must exercise independent judgment"
+  },
+  "TECH-GOVN-0005": {
+    "title": "AI for approval not denial",
+    "stmt": "AI systems may be used to help identify likely eligibility or expedite approvals but may not be used as the primary basis for denial reduction or termination of benefits or services"
+  },
+  "TECH-GOVN-0006": {
+    "title": "Right to explanation",
+    "stmt": "Individuals have the right to a meaningful explanation of any AI-influenced government decision affecting benefits services legal status or access to rights"
+  },
+  "TECH-GOVN-0007": {
+    "title": "Right to appeal",
+    "stmt": "Individuals must have a timely accessible appeal process before a human decision-maker for any materially adverse AI-influenced government decision"
+  },
+  "TECH-GOVN-0008": {
+    "title": "Disclosure requirement",
+    "stmt": "Government agencies must clearly disclose when AI systems materially influence decisions affecting the public"
+  },
+  "TECH-GOVN-0009": {
+    "title": "No behavioral scoring",
+    "stmt": "Government may not use AI systems to assign generalized risk trustworthiness fraud or compliance scores to individuals for access to public services or rights"
+  },
+  "TECH-GOVN-0010": {
+    "title": "No discriminatory profiling",
+    "stmt": "Government AI systems may not use protected characteristics or their proxies to infer eligibility suspicion dangerousness or worthiness"
+  },
+  "TECH-GOVN-0011": {
+    "title": "No social conformity scoring",
+    "stmt": "Government may not use AI systems to monitor or score behavioral conformity ideological alignment or social desirability as a condition of access to services or benefits"
+  },
+  "TECH-GOVN-0012": {
+    "title": "Access to human representatives",
+    "stmt": "People must retain access to human government representatives for matters involving benefits legal status healthcare housing education or essential public services"
+  },
+  "TECH-GOVN-0013": {
+    "title": "No forced AI-only channels",
+    "stmt": "Government may not force individuals into AI-only service channels where lack of human access would impair fairness comprehension or ability to contest decisions"
+  },
+  "TECH-GOVN-0014": {
+    "title": "Accessibility for vulnerable populations",
+    "stmt": "AI-enabled public services must be accessible to disabled low-income elderly and limited-English-proficiency users and may not create new access barriers"
+  },
+  "TECH-GOVN-0015": {
+    "title": "No automated disability denials",
+    "stmt": "AI systems may not be used to deny disability benefits or override licensed medical evidence without transparent human review and due process"
+  },
+  "TECH-GOVN-0016": {
+    "title": "No mass fraud sweeps",
+    "stmt": "Government may not use AI systems to conduct mass fraud sweeps or suspicion-based benefits enforcement without individualized legal standards and human review"
+  },
+  "TECH-GOVN-0017": {
+    "title": "No automated termination of essential benefits",
+    "stmt": "AI systems may not automatically terminate housing food healthcare disability or income-support benefits based on scoring anomalies or probabilistic inference"
+  },
+  "TECH-GOVN-0018": {
+    "title": "No automated immigration decisions",
+    "stmt": "AI systems may not independently determine immigration status detention deportation asylum credibility or family reunification outcomes"
+  },
+  "TECH-GOVN-0019": {
+    "title": "No credibility inference in immigration",
+    "stmt": "Government may not use AI systems to infer truthfulness credibility intent or dangerousness in immigration or asylum contexts"
+  },
+  "TECH-GOVN-0020": {
+    "title": "Human review for immigration decisions",
+    "stmt": "Any AI-influenced immigration or detention decision must be reviewed and decided by a human official subject to due process and judicial oversight"
+  },
+  "TECH-GOVN-0021": {
+    "title": "Vendor accountability",
+    "stmt": "Private vendors and contractors supplying AI systems to government are subject to the same legal constitutional and ethical constraints as the government entities using them"
+  },
+  "TECH-GOVN-0022": {
+    "title": "No proprietary opacity",
+    "stmt": "Trade secrecy or proprietary claims may not be used to prevent meaningful oversight explanation or appeal for AI systems used in public decision-making"
+  },
+  "TECH-GOVN-0023": {
+    "title": "Procurement disclosure",
+    "stmt": "Government procurement of AI systems must include public disclosure of purpose capabilities limitations oversight structure and vendor conflicts of interest"
+  },
+  "TECH-GOVN-0024": {
+    "title": "Regular independent audits",
+    "stmt": "Government AI systems must undergo regular independent audits for legality accuracy bias rights impacts and administrative fairness"
+  },
+  "TECH-GOVN-0025": {
+    "title": "Public AI registry",
+    "stmt": "All materially consequential government AI systems must be listed in a public registry with clear descriptions of use authority and oversight"
+  },
+  "TECH-GOVN-0026": {
+    "title": "Sunset and reauthorization",
+    "stmt": "Government AI systems affecting rights benefits or legal status must include sunset dates and periodic reauthorization requirements"
+  },
+  "TECH-GOVN-0027": {
+    "title": "Explicit legal authority required",
+    "stmt": "Government agencies may not deploy consequential AI systems without explicit legal authority and defined limits on scope and use"
+  },
+  "TECH-GOVN-0028": {
+    "title": "No unwitting test subjects",
+    "stmt": "Government may not use the public as unwitting test subjects for consequential AI systems without lawful authority transparency and ethical safeguards"
+  },
+  "TECH-GOVN-0029": {
+    "title": "Right to challenge system legality",
+    "stmt": "Individuals must be able to challenge not only a government AI decision but also the legality and validity of the system used to make it"
+  },
+  "TECH-IMMS-0001": {
+    "title": "Ban opaque immigration AI",
+    "stmt": "Ban use of opaque or unreviewable AI systems in immigration enforcement detention or deportation decisions"
+  },
+  "TECH-IMMS-0002": {
+    "title": "Ban risk scoring for detention",
+    "stmt": "Ban AI risk scoring systems used to justify immigration detention denial of release or family separation"
+  },
+  "TECH-INTL-0004": {
+    "title": "Common carrier treatment",
+    "stmt": "Internet service providers and core digital network infrastructure must be treated as common carriers or equivalent neutral service providers"
+  },
+  "TECH-INTL-0005": {
+    "title": "Non-discrimination requirement",
+    "stmt": "Common carrier obligations must prohibit discrimination based on content source destination or political or competitive considerations"
+  },
+  "TECH-INTL-0006": {
+    "title": "No blocking or throttling",
+    "stmt": "Network operators may not prioritize degrade or block traffic for competitive advantage political influence or economic coercion"
+  },
+  "TECH-INTL-0007": {
+    "title": "Narrow technical exceptions",
+    "stmt": "Net neutrality frameworks must allow narrowly scoped exceptions for technical optimization security reliability and research and development"
+  },
+  "TECH-INTL-0008": {
+    "title": "Transparent exceptions",
+    "stmt": "All exceptions to neutrality must be transparent auditable and prohibited from conferring unfair market or political advantage"
+  },
+  "TECH-INTL-0009": {
+    "title": "Protection from rollback",
+    "stmt": "Core neutrality and access protections must be insulated from administrative rollback through regulatory or executive action alone"
+  },
+  "TECH-JUDS-0001": {
+    "title": "No AI sentencing",
+    "stmt": "AI systems may not be used to determine sentencing bail or punishment in criminal justice proceedings"
+  },
+  "TECH-JUDS-0002": {
+    "title": "No risk scoring",
+    "stmt": "AI systems may not assign risk scores for recidivism dangerousness or likelihood of compliance in judicial decision-making"
+  },
+  "TECH-JUDS-0003": {
+    "title": "No jury profiling",
+    "stmt": "AI systems may not be used to profile influence or select jurors based on behavioral psychological or demographic inference"
+  },
+  "TECH-JUDS-0004": {
+    "title": "Strict admissibility standards",
+    "stmt": "AI-generated or AI-analyzed evidence must meet strict standards for reliability transparency and cross-examination before being admissible in court"
+  },
+  "TECH-JUDS-0005": {
+    "title": "Right to examine AI evidence",
+    "stmt": "Defendants and parties must have the right to examine challenge and obtain disclosure of AI systems used in evidentiary processes"
+  },
+  "TECH-JUDS-0006": {
+    "title": "AI for wrongful conviction review",
+    "stmt": "AI may be used to assist in identifying wrongful convictions inconsistencies or procedural errors and to accelerate appeals and case reviews"
+  },
+  "TECH-JUDS-0007": {
+    "title": "Identify systemic bias",
+    "stmt": "AI should be used to identify systemic bias in sentencing policing and prosecution patterns to support corrective action"
+  },
+  "TECH-JUDS-0008": {
+    "title": "No AI final determinations",
+    "stmt": "Judges and court staff may not rely on AI systems to make final determinations of fact law credibility or case outcome"
+  },
+  "TECH-JUDS-0009": {
+    "title": "Clerical use only with disclosure",
+    "stmt": "AI may be used to assist with clerical summarization research and document organization only under clear disclosure and human verification requirements"
+  },
+  "TECH-JUDS-0010": {
+    "title": "Disclose material AI use",
+    "stmt": "Courts must disclose material use of AI in opinion drafting legal analysis record summarization or case management where it could affect litigants' rights or case outcomes"
+  },
+  "TECH-JUDS-0011": {
+    "title": "No unfair docket prioritization",
+    "stmt": "AI systems may not be used to prioritize dockets motions or hearings in ways that create unfairness bias or unequal access to timely justice"
+  },
+  "TECH-JUDS-0012": {
+    "title": "Preserve accountable reasoning",
+    "stmt": "Any AI-assisted judicial workflow must preserve a human-authored accountable and reviewable chain of reasoning for consequential rulings"
+  },
+  "TECH-JUDS-0013": {
+    "title": "Evidence authentication",
+    "stmt": "AI-generated or AI-enhanced evidence must be authenticated with documented provenance methodology and chain of custody before admissibility"
+  },
+  "TECH-JUDS-0014": {
+    "title": "Technical disclosure for challenge",
+    "stmt": "Parties must receive sufficient technical disclosure to challenge the reliability validity and limitations of AI-generated or AI-analyzed evidence"
+  },
+  "TECH-JUDS-0015": {
+    "title": "Scientific validation required",
+    "stmt": "Courts may not admit AI outputs as expert-like evidence unless their methods are scientifically valid independently testable and subject to adversarial challenge"
+  },
+  "TECH-JUDS-0016": {
+    "title": "Synthetic media high-risk",
+    "stmt": "Synthetic media evidence must be presumptively treated as high-risk and require enhanced authentication standards before admission"
+  },
+  "TECH-JUDS-0017": {
+    "title": "Preserve analysis logs",
+    "stmt": "If AI is used to analyze evidence all material logs model assumptions and transformation steps relevant to the output must be preservable and reviewable"
+  },
+  "TECH-JUDS-0018": {
+    "title": "Defense access to AI disclosures",
+    "stmt": "If prosecutors or the state use AI systems in investigation charging discovery or litigation support defendants must have equal access to the relevant outputs disclosures and technical challenge mechanisms"
+  },
+  "TECH-JUDS-0019": {
+    "title": "Defense funding for AI parity",
+    "stmt": "Public defenders and defense counsel must be provided funding and access sufficient to avoid AI-driven asymmetry between prosecution and defense"
+  },
+  "TECH-JUDS-0020": {
+    "title": "No AI-driven plea pressure",
+    "stmt": "AI systems may not be used to pressure plea deals through opaque case scoring predicted conviction metrics or punishment leverage models"
+  },
+  "TECH-JUDS-0021": {
+    "title": "Guard against prosecutorial AI advantage",
+    "stmt": "Courts must guard against prosecutorial advantage created by proprietary or undisclosed AI tools unavailable to defense"
+  },
+  "TECH-JUDS-0022": {
+    "title": "No juror profiling",
+    "stmt": "AI systems may not be used to profile rank influence or strategically shape juror selection based on behavioral psychological or demographic inference"
+  },
+  "TECH-JUDS-0023": {
+    "title": "AI reconstructions must be disclosed",
+    "stmt": "AI-generated reconstructions simulations or visualizations shown to juries must be clearly disclosed as generated demonstrative material and subject to strict admissibility standards"
+  },
+  "TECH-JUDS-0024": {
+    "title": "No AI summaries to juries",
+    "stmt": "Courts may not provide juries with AI-generated summaries interpretations or credibility assessments of testimony or evidence"
+  },
+  "TECH-JUDS-0025": {
+    "title": "No distortion of evidentiary record",
+    "stmt": "Jury-facing use of AI must not distort the evidentiary record or create false impressions of certainty precision or neutrality"
+  },
+  "TECH-JUDS-0026": {
+    "title": "Default to prohibition",
+    "stmt": "AI use in courts and legal proceedings must default to prohibition except where narrowly permitted for transparent auditable non-generative analytical purposes under strict human oversight"
+  },
+  "TECH-JUDS-0027": {
+    "title": "Ban AI-generated evidence",
+    "stmt": "AI-generated or AI-fabricated evidence including images video audio text or reconstructions is not admissible in legal proceedings"
+  },
+  "TECH-JUDS-0028": {
+    "title": "Ban AI-enhanced evidence",
+    "stmt": "AI-enhanced evidence that alters interpretation content or meaning of underlying evidence is not admissible"
+  },
+  "TECH-JUDS-0029": {
+    "title": "Analytical use only",
+    "stmt": "AI may be used only for analytical purposes on existing evidence where it does not generate new content and does not alter underlying data"
+  },
+  "TECH-JUDS-0030": {
+    "title": "No generative AI for evidence",
+    "stmt": "Generative AI systems including large language models may not be used for evidentiary analysis in legal proceedings"
+  },
+  "TECH-JUDS-0031": {
+    "title": "Verifiable methods only",
+    "stmt": "Permitted analytical systems must use verifiable reproducible methods such as statistical or traditional machine learning models rather than generative systems"
+  },
+  "TECH-JUDS-0032": {
+    "title": "Disclose analytical AI use",
+    "stmt": "Any use of AI in evidence analysis must be explicitly disclosed including methods data inputs limitations and error rates"
+  },
+  "TECH-JUDS-0033": {
+    "title": "No black-box systems",
+    "stmt": "Black-box AI systems that cannot be meaningfully explained tested or challenged are not admissible in evidentiary contexts"
+  },
+  "TECH-JUDS-0034": {
+    "title": "AI not expert witnesses",
+    "stmt": "AI systems may not be presented as expert witnesses or as authoritative sources in legal proceedings"
+  },
+  "TECH-JUDS-0035": {
+    "title": "Human experts accountable",
+    "stmt": "All expert testimony must be provided by qualified human experts who are accountable for their conclusions"
+  },
+  "TECH-JUDS-0036": {
+    "title": "Disclose AI-assisted expert analysis",
+    "stmt": "Human experts using AI-assisted analysis must disclose such use and remain fully responsible for all conclusions"
+  },
+  "TECH-JUDS-0037": {
+    "title": "No AI-drafted opinions",
+    "stmt": "Judges and justices may not use generative AI systems to draft write or materially shape judicial opinions or rulings"
+  },
+  "TECH-JUDS-0038": {
+    "title": "No AI legal reasoning",
+    "stmt": "AI systems may not substitute for judicial reasoning legal analysis or interpretation of law"
+  },
+  "TECH-JUDS-0039": {
+    "title": "Limited clerical use",
+    "stmt": "AI may be used for limited clerical tasks such as document organization or formatting only when it does not affect legal reasoning or outcomes"
+  },
+  "TECH-JUDS-0040": {
+    "title": "No AI reconstructions to juries",
+    "stmt": "AI-generated reconstructions simulations or demonstrative materials may not be shown to juries"
+  },
+  "TECH-JUDS-0041": {
+    "title": "No AI summaries of evidence to juries",
+    "stmt": "AI systems may not be used to summarize interpret or present evidence or testimony to juries"
+  },
+  "TECH-JUDS-0042": {
+    "title": "No AI influence on jurors",
+    "stmt": "AI systems may not be used to influence juror perception behavior or decision-making directly or indirectly"
+  },
+  "TECH-JUDS-0043": {
+    "title": "Recognize AI risks",
+    "stmt": "Courts must recognize that AI systems can amplify confirmation bias hallucination and false certainty and must treat AI outputs as inherently high-risk"
+  },
+  "TECH-JUDS-0044": {
+    "title": "Elevated scrutiny standards",
+    "stmt": "Any permitted AI-assisted analysis must meet elevated standards of reliability scrutiny and adversarial testing beyond traditional evidence"
+  },
+  "TECH-JUDS-0045": {
+    "title": "Right to challenge AI analysis",
+    "stmt": "All parties must have full rights to challenge any AI-assisted analysis including methodology assumptions and outputs"
+  },
+  "TECH-JUDS-0046": {
+    "title": "Reproducibility requirement",
+    "stmt": "AI-assisted analysis must be reproducible by opposing parties using the same inputs and methods"
+  },
+  "TECH-JUDS-0047": {
+    "title": "Preserve analysis logs",
+    "stmt": "All AI-assisted evidentiary analysis must include preserved logs of inputs outputs and transformation steps"
+  },
+  "TECH-JUDS-0048": {
+    "title": "Audit access requirement",
+    "stmt": "Courts and opposing parties must have access to all materials necessary to audit AI-assisted analysis"
+  },
+  "TECH-JUDS-0049": {
+    "title": "No AI family court determinations",
+    "stmt": "AI systems may not be used to determine custody visitation parental fitness or family placement outcomes without direct accountable human judicial decision-making"
+  },
+  "TECH-JUDS-0050": {
+    "title": "No parental fitness inference",
+    "stmt": "AI systems may not infer parental fitness abuse risk credibility or child welfare outcomes from behavioral proxies psychological profiling or opaque risk models"
+  },
+  "TECH-JUDS-0051": {
+    "title": "No AI in family court recommendations",
+    "stmt": "Family courts may not rely on AI-generated summaries recommendations or credibility assessments in matters involving custody abuse allegations or child welfare"
+  },
+  "TECH-JUDS-0052": {
+    "title": "Disclose family court AI use",
+    "stmt": "Any AI-assisted tool used in family court administration must be fully disclosed and may not materially affect outcomes without adversarial challenge rights"
+  },
+  "TECH-JUDS-0053": {
+    "title": "No automated evictions",
+    "stmt": "AI systems may not be used to automate or materially drive eviction outcomes without direct human judicial review and full due process protections"
+  },
+  "TECH-JUDS-0054": {
+    "title": "No tenant risk scoring",
+    "stmt": "Courts may not rely on AI-generated tenant risk scores rental-behavior predictions or opaque housing analytics in eviction or housing-access proceedings"
+  },
+  "TECH-JUDS-0055": {
+    "title": "Disclose housing AI use",
+    "stmt": "Landlords and housing litigants using AI-assisted evidence or analytics in court must disclose such use and provide sufficient information for challenge and review"
+  },
+  "TECH-JUDS-0056": {
+    "title": "No eviction acceleration through AI",
+    "stmt": "Housing courts must not use AI systems to accelerate case throughput in ways that reduce meaningful notice hearing access or tenant defense rights"
+  },
+  "TECH-JUDS-0057": {
+    "title": "No AI in administrative adjudication",
+    "stmt": "AI systems may not independently determine outcomes in administrative hearings involving benefits licensing immigration disability housing or employment rights"
+  },
+  "TECH-JUDS-0058": {
+    "title": "No opaque scoring in administrative hearings",
+    "stmt": "Administrative adjudication may not rely on opaque AI scoring or recommendation systems to determine credibility eligibility compliance or sanction outcomes"
+  },
+  "TECH-JUDS-0059": {
+    "title": "Disclose AI in administrative proceedings",
+    "stmt": "Parties in administrative proceedings have the right to know when AI materially influenced a recommendation record summary or proposed outcome"
+  },
+  "TECH-JUDS-0060": {
+    "title": "Administrative appeal rights",
+    "stmt": "Administrative agencies must provide meaningful human review and appeal for any AI-influenced adverse decision"
+  },
+  "TECH-JUDS-0061": {
+    "title": "No AI probation/parole decisions",
+    "stmt": "AI systems may not be used to determine probation parole revocation supervision intensity or conditions of release through opaque risk scoring"
+  },
+  "TECH-JUDS-0062": {
+    "title": "No proxy-based supervision scoring",
+    "stmt": "AI systems may not assign supervision risk scores based on proxies for race class disability geography or protected activity"
+  },
+  "TECH-JUDS-0063": {
+    "title": "Individualized human review required",
+    "stmt": "Probation and parole decisions must be based on individualized human review and may not be automated through behavioral prediction systems"
+  },
+  "TECH-JUDS-0064": {
+    "title": "AI to identify bias in probation",
+    "stmt": "AI may be used to identify patterns of bias inconsistency or unlawful disparity in probation and parole systems under transparent oversight"
+  },
+  "TECH-JUDS-0065": {
+    "title": "No AI fines and fees escalation",
+    "stmt": "AI systems may not be used to escalate fines fees collections or penalties based on predictive payment scoring or behavioral profiling"
+  },
+  "TECH-JUDS-0066": {
+    "title": "No payment coercion through AI",
+    "stmt": "Courts and governments may not use AI to pressure payment compliance through opaque threat scoring or automated penalty escalation"
+  },
+  "TECH-JUDS-0067": {
+    "title": "No AI debt-to-punishment escalation",
+    "stmt": "AI systems may not be used to convert administrative debt or missed payments into harsher legal consequences without direct human review and due process"
+  },
+  "TECH-JUDS-0068": {
+    "title": "AI to identify predatory fine patterns",
+    "stmt": "AI may be used to identify unlawful disparities or predatory fine-and-fee patterns for corrective review under public oversight"
+  },
+  "TECH-JUDS-0069": {
+    "title": "AI for legal aid access",
+    "stmt": "AI may be used to assist legal aid intake document navigation and access to information provided it does not replace licensed legal counsel where counsel is required or appropriate"
+  },
+  "TECH-JUDS-0070": {
+    "title": "Disclose legal-aid AI limits",
+    "stmt": "AI tools used in legal-aid contexts must clearly disclose their limits and may not present themselves as human attorneys or as a substitute for legal representation"
+  },
+  "TECH-JUDS-0071": {
+    "title": "Public legal-aid tools must be fair",
+    "stmt": "Public legal-aid AI tools must be designed for accessibility clarity and fairness and may not steer users away from asserting rights or seeking counsel"
+  },
+  "TECH-JUDS-0072": {
+    "title": "Fund public legal access tools",
+    "stmt": "Governments and courts should fund public-interest legal access tools that improve navigation and review without automating final legal judgments"
+  },
+  "TECH-JUDS-0073": {
+    "title": "AI records systems must be auditable",
+    "stmt": "AI systems used to classify search summarize or prioritize court records must be auditable and may not distort case visibility or public access"
+  },
+  "TECH-JUDS-0074": {
+    "title": "No unequal filing access",
+    "stmt": "Court administrative AI systems may not create unequal access to filing scheduling or record retrieval based on hidden prioritization logic"
+  },
+  "TECH-JUDS-0075": {
+    "title": "Preserve record accuracy",
+    "stmt": "Public court records systems using AI must preserve accuracy transparency and the ability to correct errors promptly"
+  },
+  "TECH-JUDS-0076": {
+    "title": "Human override for court admin AI",
+    "stmt": "Courts must maintain human override and review mechanisms for all AI-assisted administrative systems affecting litigants or public access"
+  },
+  "TECH-JUDS-0077": {
+    "title": "AI limited to assistive functions",
+    "stmt": "Where AI is permitted in judicial contexts it must be limited to transparent non-generative assistive functions and may not determine rights liabilities punishment credibility or case outcome"
+  },
+  "TECH-JUDS-0078": {
+    "title": "No credibility assessment",
+    "stmt": "AI systems may not be used to assess credibility truthfulness deception or intent of witnesses defendants or parties in legal proceedings"
+  },
+  "TECH-JUDS-0079": {
+    "title": "No behavioral inference in court",
+    "stmt": "Behavioral biometric or speech-analysis AI tools may not be used to infer emotional state truthfulness or reliability in courtroom contexts"
+  },
+  "TECH-JUDS-0080": {
+    "title": "No AI alteration of police footage",
+    "stmt": "AI systems may not be used to reinterpret enhance or selectively analyze police body-camera or surveillance footage in ways that alter evidentiary meaning"
+  },
+  "TECH-JUDS-0081": {
+    "title": "Preserve full context in evidence",
+    "stmt": "AI-assisted analysis of law-enforcement evidence must preserve full context and may not selectively highlight or suppress information to support a narrative"
+  },
+  "TECH-JUDS-0082": {
+    "title": "No sole-basis AI translation",
+    "stmt": "AI translation or interpretation systems may not be used as the sole basis for legal understanding in court proceedings where rights or outcomes are affected"
+  },
+  "TECH-JUDS-0083": {
+    "title": "Human interpreters required",
+    "stmt": "Human-certified interpreters are required for critical proceedings and AI translation may only be used as a supplementary tool with disclosure"
+  },
+  "TECH-JUDS-0084": {
+    "title": "Forensic AI validation required",
+    "stmt": "AI systems used in forensic laboratories must meet strict scientific validation standards and may not operate as opaque or unreviewable systems"
+  },
+  "TECH-JUDS-0085": {
+    "title": "Test forensic AI systems",
+    "stmt": "Forensic AI systems must be independently tested for accuracy bias and reproducibility before use in any evidentiary pipeline"
+  },
+  "TECH-JUDS-0086": {
+    "title": "No AI reconstruction of sealed records",
+    "stmt": "AI systems may not reconstruct infer or surface sealed expunged or legally protected records through data aggregation or inference"
+  },
+  "TECH-JUDS-0087": {
+    "title": "Enforce record protections",
+    "stmt": "Use of AI to bypass legal protections on records privacy or expungement is prohibited and subject to enforcement"
+  },
+  "TECH-JUDS-0088": {
+    "title": "No AI influence campaigns on juries",
+    "stmt": "AI-generated content may not be used to influence jurors witnesses or proceedings outside the courtroom through targeted media or messaging"
+  },
+  "TECH-JUDS-0089": {
+    "title": "Mitigate public AI influence on trials",
+    "stmt": "Courts must recognize and mitigate risks of AI-driven public influence campaigns that could affect jury impartiality or trial fairness"
+  },
+  "TECH-JUDS-0090": {
+    "title": "AI version control required",
+    "stmt": "AI systems used in any permitted judicial context must have version control and may not change behavior during active cases without disclosure and review"
+  },
+  "TECH-JUDS-0091": {
+    "title": "Revalidate AI changes",
+    "stmt": "Material changes to AI systems used in legal contexts must trigger revalidation and may not retroactively affect prior analyses without disclosure"
+  },
+  "TECH-JUDS-0092": {
+    "title": "No shift of burden or standards",
+    "stmt": "Use of AI systems may not shift burden of proof evidentiary standards or procedural rights of any party in legal proceedings"
+  },
+  "TECH-JUDS-0093": {
+    "title": "Transparent AI procurement",
+    "stmt": "Courts and judicial systems must use transparent procurement processes for any AI system including public disclosure and review before deployment"
+  },
+  "TECH-JUDS-0094": {
+    "title": "Independent validation before deployment",
+    "stmt": "AI systems may not be deployed in judicial contexts without independent validation for fairness reliability and legal compliance"
+  },
+  "TECH-JUDS-0095": {
+    "title": "Authority to suspend AI systems",
+    "stmt": "Courts must maintain the authority to suspend or prohibit use of any AI system that demonstrates bias unreliability or legal risk"
+  },
+  "TECH-JUDS-0096": {
+    "title": "Party right to request suspension",
+    "stmt": "Parties must have the right to request suspension of AI system use in a case where fairness or reliability is in question"
+  },
+  "TECH-LABS-0001": {
+    "title": "Protect worker rights and dignity",
+    "stmt": "AI systems in employment must not undermine worker rights dignity privacy or fair access to economic opportunity"
+  },
+  "TECH-LABS-0002": {
+    "title": "No automated employment decisions",
+    "stmt": "AI systems may not make fully automated hiring firing promotion or compensation decisions without meaningful human review and accountability"
+  },
+  "TECH-LABS-0003": {
+    "title": "No opaque candidate filtering",
+    "stmt": "AI systems may not be used to filter or rank job candidates using opaque or unexplainable criteria that materially affect employment opportunities"
+  },
+  "TECH-LABS-0004": {
+    "title": "Evaluate for bias",
+    "stmt": "AI systems used in employment must be evaluated and mitigated for bias and may not result in discrimination based on protected characteristics or their proxies"
+  },
+  "TECH-LABS-0005": {
+    "title": "Right to explanation",
+    "stmt": "Applicants and employees have the right to receive meaningful explanations of AI-influenced employment decisions"
+  },
+  "TECH-LABS-0006": {
+    "title": "Ban intrusive monitoring",
+    "stmt": "Ban use of AI systems for continuous intrusive monitoring of workers including biometric tracking keystroke logging and real-time behavioral surveillance except where strictly necessary and proportionate"
+  },
+  "TECH-LABS-0007": {
+    "title": "No emotion inference",
+    "stmt": "Ban use of AI systems to infer or monitor worker emotions mood engagement or psychological state for employment decisions"
+  },
+  "TECH-LABS-0008": {
+    "title": "No outside-hours monitoring",
+    "stmt": "Employers may not use AI systems to monitor or infer worker behavior outside of working hours"
+  },
+  "TECH-LABS-0009": {
+    "title": "No sole-basis discipline or termination",
+    "stmt": "AI systems may not be used as the sole basis for disciplinary actions termination or compensation changes"
+  },
+  "TECH-LABS-0010": {
+    "title": "Transparent productivity scoring",
+    "stmt": "AI-generated productivity or performance scores must be transparent auditable and may not be used without human review"
+  },
+  "TECH-LABS-0011": {
+    "title": "No coercive productivity targets",
+    "stmt": "AI systems may not be used to coerce workers into unsafe unreasonable or exploitative productivity targets"
+  },
+  "TECH-LABS-0012": {
+    "title": "Right to refuse harmful AI",
+    "stmt": "Workers must have the right to refuse use of AI systems that materially harm their dignity privacy or safety without retaliation"
+  },
+  "TECH-LABS-0013": {
+    "title": "Access to human managers",
+    "stmt": "Workers must have access to human managers or decision-makers for matters affecting employment status discipline or working conditions"
+  },
+  "TECH-LABS-0014": {
+    "title": "Data minimization",
+    "stmt": "AI systems may only collect worker data that is strictly necessary for legitimate business purposes"
+  },
+  "TECH-LABS-0015": {
+    "title": "No data sales or repurposing",
+    "stmt": "Worker data collected through AI systems may not be sold shared or used for unrelated purposes"
+  },
+  "TECH-LABS-0016": {
+    "title": "Right to access and correct data",
+    "stmt": "Workers have the right to access review and correct data collected about them by AI systems"
+  },
+  "TECH-LABS-0017": {
+    "title": "Disclosure requirement",
+    "stmt": "Employers must disclose use of AI systems in hiring monitoring evaluation and decision-making processes"
+  },
+  "TECH-LABS-0018": {
+    "title": "Regular independent audits",
+    "stmt": "AI systems used in employment must be subject to regular independent audits for bias fairness and compliance"
+  },
+  "TECH-LABS-0019": {
+    "title": "Documentation requirement",
+    "stmt": "Employers must maintain documentation of AI system design purpose data sources and decision logic sufficient for oversight and accountability"
+  },
+  "TECH-LABS-0020": {
+    "title": "Ban behavior prediction scoring",
+    "stmt": "Ban AI systems that assign risk scores predicting employee behavior such as likelihood of quitting unionizing or engaging in protected activity"
+  },
+  "TECH-LABS-0021": {
+    "title": "Ban anti-union AI",
+    "stmt": "Ban use of AI systems to identify monitor or suppress union activity collective bargaining or labor organizing"
+  },
+  "TECH-LABS-0022": {
+    "title": "Validate personality assessments",
+    "stmt": "Ban use of AI systems that infer personality traits or psychological characteristics for hiring decisions without strong scientific validation and safeguards"
+  },
+  "TECH-LABS-0023": {
+    "title": "Worker role in AI deployment",
+    "stmt": "Workers or their representatives must have a role in reviewing and approving deployment of high-impact AI systems in the workplace"
+  },
+  "TECH-LABS-0024": {
+    "title": "Collective bargaining over AI",
+    "stmt": "Use of AI systems affecting working conditions must be subject to collective bargaining where applicable"
+  },
+  "TECH-MHCS-0001": {
+    "title": "AI assists not replaces clinicians",
+    "stmt": "AI mental-health tools may assist but must not replace qualified clinicians in diagnosis crisis evaluation or high-risk treatment decisions"
+  },
+  "TECH-MHCS-0002": {
+    "title": "Prohibit manipulative AI systems",
+    "stmt": "AI systems designed to induce emotional dependency, simulate coercive parasocial attachment, or exploit psychological vulnerabilities for commercial or political ends are prohibited"
+  },
+  "TECH-MHCS-0003": {
+    "title": "Evaluate for mental health harms",
+    "stmt": "Platforms and AI systems must be evaluated for mental-health harms including addiction compulsive use isolation and self-harm amplification"
+  },
+  "TECH-MHCS-0004": {
+    "title": "Stronger protections for minors",
+    "stmt": "Children and adolescents require stronger protections against manipulative AI systems and engagement optimization"
+  },
+  "TECH-MHCS-0005": {
+    "title": "Disclosure in sensitive contexts",
+    "stmt": "Users must be clearly informed when they are interacting with an AI system in emotionally sensitive contexts"
+  },
+  "TECH-MILS-0001": {
+    "title": "Meaningful human control required",
+    "stmt": "Use of AI in military and intelligence contexts must preserve meaningful human control accountability and compliance with constitutional and international law"
+  },
+  "TECH-MILS-0002": {
+    "title": "Ban autonomous lethal targeting",
+    "stmt": "Ban AI systems that can independently select and engage targets with lethal force without meaningful human decision-making and accountability"
+  },
+  "TECH-MILS-0003": {
+    "title": "Ban AI force initiation",
+    "stmt": "Ban deployment of AI systems that can initiate or escalate use of force without real-time human authorization"
+  },
+  "TECH-MILS-0004": {
+    "title": "Ban nuclear AI",
+    "stmt": "Ban use of AI systems in nuclear command control targeting or launch decision processes"
+  },
+  "TECH-MILS-0006": {
+    "title": "No target filtering or ranking",
+    "stmt": "AI systems may not be used to narrow, filter, or rank potential human targets for lethal action in a manner that materially influences human decision-making"
+  },
+  "TECH-MILS-0007": {
+    "title": "Identified human decision-maker",
+    "stmt": "All use of lethal force involving AI systems must include a clearly identified human decision-maker responsible for final authorization"
+  },
+  "TECH-MILS-0008": {
+    "title": "Logging and auditability",
+    "stmt": "All AI-assisted military decisions must be logged and auditable including data inputs model outputs and human decision points"
+  },
+  "TECH-MILS-0009": {
+    "title": "Transparency for human oversight",
+    "stmt": "AI systems used in military decision-making must provide sufficient transparency to allow meaningful human understanding and oversight"
+  },
+  "TECH-MILS-0010": {
+    "title": "Testing and reliability",
+    "stmt": "AI systems used in military contexts must meet strict reliability and testing thresholds before deployment"
+  },
+  "TECH-MILS-0011": {
+    "title": "Ban mass intelligence fusion",
+    "stmt": "Ban large-scale AI-driven intelligence surveillance systems that indiscriminately collect or analyze civilian data without legal authorization and oversight"
+  },
+  "TECH-MILS-0012": {
+    "title": "No profiling for targeting",
+    "stmt": "Ban use of AI to profile individuals or populations for targeting based on probabilistic or behavioral inference alone"
+  },
+  "TECH-MILS-0013": {
+    "title": "Compliance with laws of armed conflict",
+    "stmt": "All AI military systems must comply with principles of distinction proportionality and necessity under the laws of armed conflict"
+  },
+  "TECH-MILS-0014": {
+    "title": "Clear attribution of responsibility",
+    "stmt": "Responsibility for actions taken using AI systems must be clearly attributable to human actors within a defined chain of command"
+  },
+  "TECH-MILS-0015": {
+    "title": "No evasion of accountability",
+    "stmt": "Use of AI systems must not be used to obscure responsibility or evade legal accountability for military actions"
+  },
+  "TECH-MILS-0016": {
+    "title": "Congressional authorization required",
+    "stmt": "Deployment of new classes of AI-enabled military capability must require explicit congressional authorization"
+  },
+  "TECH-MILS-0017": {
+    "title": "Limits on executive authority",
+    "stmt": "Executive authority may not unilaterally expand the use of AI in warfare beyond clearly defined and authorized limits"
+  },
+  "TECH-MILS-0018": {
+    "title": "Regular reporting to Congress",
+    "stmt": "Regular reporting to Congress and oversight bodies is required for all AI-enabled military programs"
+  },
+  "TECH-MILS-0019": {
+    "title": "Controlled testing required",
+    "stmt": "AI systems intended for military use must undergo controlled testing and evaluation prior to operational deployment"
+  },
+  "TECH-MILS-0020": {
+    "title": "No real-world testing",
+    "stmt": "Ban use of real-world military operations as primary testing environments for unproven AI systems"
+  },
+  "TECH-MILS-0021": {
+    "title": "Adversarial testing",
+    "stmt": "Require adversarial testing and red-teaming of AI systems to identify failure modes misuse risks and unintended escalation scenarios"
+  },
+  "TECH-MILS-0022": {
+    "title": "Contractor accountability",
+    "stmt": "Private contractors developing AI for military use are subject to the same legal and ethical constraints as government entities"
+  },
+  "TECH-MILS-0023": {
+    "title": "No outsourcing of authority",
+    "stmt": "Government may not outsource decision-making authority or accountability for use of force to private entities or AI systems"
+  },
+  "TECH-MILS-0024": {
+    "title": "Export controls",
+    "stmt": "Establish controls on export of high-risk military AI systems to prevent misuse by hostile actors or regimes with poor human-rights records"
+  },
+  "TECH-MILS-0025": {
+    "title": "Defensive AI permitted",
+    "stmt": "AI systems may be used in defensive or non-person-targeting contexts including missile defense threat detection and interception where the system operates against incoming projectiles vehicles or clearly defined non-human targets"
+  },
+  "TECH-MILS-0026": {
+    "title": "No repurposing defensive AI",
+    "stmt": "Defensive AI systems must not be repurposed or extended to identify select or target individual persons or groups"
+  },
+  "TECH-MILS-0027": {
+    "title": "AI for analysis not targeting",
+    "stmt": "AI may be used for analysis classification and situational awareness provided it does not generate or recommend specific human targets for lethal action"
+  },
+  "TECH-MILS-0028": {
+    "title": "Ban offensive lethal AI",
+    "stmt": "Ban use of AI systems in the execution of offensive lethal force including target selection engagement decisions and weapon deployment"
+  },
+  "TECH-MILS-0029": {
+    "title": "Limited guidance use",
+    "stmt": "AI systems may be used in limited weapon guidance roles solely to improve accuracy and reduce collateral damage after a human has independently selected and authorized a lawful target"
+  },
+  "TECH-MILS-0030": {
+    "title": "Guidance parameters strictly defined",
+    "stmt": "Guidance systems must not alter expand reinterpret or substitute the human-selected target and must operate within strictly defined engagement parameters"
+  },
+  "TECH-MILS-0031": {
+    "title": "No new target selection by guidance",
+    "stmt": "Guidance systems must be incapable of selecting new targets reprioritizing targets or initiating additional engagements"
+  },
+  "TECH-MILS-0032": {
+    "title": "Human responsibility for guidance outcomes",
+    "stmt": "Human operators remain fully responsible for all outcomes of AI-assisted weapon guidance including unintended harm or collateral damage"
+  },
+  "TECH-MILS-0033": {
+    "title": "Defensive systems against non-human threats",
+    "stmt": "AI may be used in defensive systems including missile interception threat detection and protection against incoming attacks where the system operates against non-human targets or active threats"
+  },
+  "TECH-MILS-0034": {
+    "title": "Support international treaties",
+    "stmt": "Promote and pursue international treaties to limit and regulate the use of AI in military and intelligence contexts"
+  },
+  "TECH-MILS-0035": {
+    "title": "Treaty goal: ban autonomous weapons",
+    "stmt": "International agreements should seek to prohibit fully autonomous lethal weapons and ensure meaningful human control over use of force"
+  },
+  "TECH-MILS-0036": {
+    "title": "Treaty goal: ban targeting AI",
+    "stmt": "International treaties should establish bans on AI systems that independently select and engage human targets"
+  },
+  "TECH-MILS-0037": {
+    "title": "Treaty goal: ban nuclear AI",
+    "stmt": "International treaties should restrict AI use in nuclear command control and strategic weapons systems"
+  },
+  "TECH-MILS-0038": {
+    "title": "Treaty mechanisms",
+    "stmt": "Treaties should include transparency reporting requirements and verification mechanisms for high-risk military AI systems"
+  },
+  "TECH-MILS-0039": {
+    "title": "Prevent AI arms races",
+    "stmt": "International efforts should aim to prevent destabilizing AI arms races that increase risk of rapid escalation or accidental conflict"
+  },
+  "TECH-MILS-0040": {
+    "title": "Export controls in treaties",
+    "stmt": "Support international controls on export and proliferation of high-risk military AI technologies to prevent misuse and human rights abuses"
+  },
+  "TECH-MILS-0041": {
+    "title": "Strong sanctions for violations",
+    "stmt": "Violations of international military-AI treaty obligations by adversaries should trigger strong sanctions and other enforcement measures"
+  },
+  "TECH-MILS-0042": {
+    "title": "Sanctions for prohibited systems",
+    "stmt": "Sanctions for deployment or export of prohibited military AI systems should be severe and coordinated internationally where possible"
+  },
+  "TECH-MILS-0043": {
+    "title": "Narrow reciprocal exceptions",
+    "stmt": "If an adversary deploys prohibited military AI systems, limited reciprocal emergency exceptions may be considered only under narrowly defined conditions and independent oversight"
+  },
+  "TECH-MILS-0044": {
+    "title": "Temporary reciprocal measures",
+    "stmt": "Any reciprocal exception to military AI prohibitions must be temporary, publicly reported to the fullest extent compatible with security, and subject to sunset and reauthorization"
+  },
+  "TECH-MILS-0045": {
+    "title": "Core prohibitions remain",
+    "stmt": "Core prohibitions on nuclear AI control, fully autonomous lethal targeting of persons, and unaccountable use of force remain in effect even during adversary noncompliance"
+  },
+  "TECH-MILS-0046": {
+    "title": "Autonomous targeting as war crime",
+    "stmt": "Use of AI systems to autonomously select or engage human targets or to materially remove human accountability in lethal force decisions constitutes a violation of the laws of armed conflict and should be treated as a war crime"
+  },
+  "TECH-MILS-0047": {
+    "title": "Target generation as unlawful",
+    "stmt": "Deployment of AI systems that generate or recommend human targets for lethal action or that substitute for human judgment in use-of-force decisions should be prohibited under international law and treated as unlawful conduct"
+  },
+  "TECH-MILS-0048": {
+    "title": "Violations of armed conflict principles",
+    "stmt": "Use of AI systems in ways that violate principles of distinction proportionality or necessity under the laws of armed conflict constitutes a war crime regardless of whether a human operator is nominally involved"
+  },
+  "TECH-MILS-0049": {
+    "title": "Precision guidance exception",
+    "stmt": "Use of AI solely for precision guidance to reduce collateral damage after lawful human target selection does not constitute prohibited offensive use provided it does not alter or expand the selected target"
+  },
+  "TECH-MILS-0050": {
+    "title": "Commanders remain liable",
+    "stmt": "Individuals and commanders remain legally responsible for unlawful outcomes resulting from use of AI systems and may not use AI as a defense against liability"
+  },
+  "TECH-MILS-0051": {
+    "title": "Dedicated cyber branch",
+    "stmt": "Establish a dedicated and fully developed cyber branch within the military focused on defensive and strategic cyber operations"
+  },
+  "TECH-MILS-0052": {
+    "title": "Cyber defense mission",
+    "stmt": "The cyber branch shall be responsible for defense of critical infrastructure military systems and national cyber assets against hostile cyber activity"
+  },
+  "TECH-MILS-0053": {
+    "title": "Offensive cyber limits",
+    "stmt": "Offensive cyber operations must be strictly limited authorized at the highest levels and subject to the same legal and oversight frameworks governing use of force"
+  },
+  "TECH-MILS-0054": {
+    "title": "Minimize civilian cyber impact",
+    "stmt": "Cyber operations must minimize impact on civilian infrastructure including healthcare utilities financial systems and communications networks"
+  },
+  "TECH-MILS-0055": {
+    "title": "Cyber branch oversight",
+    "stmt": "All cyber military operations are subject to oversight audit and accountability mechanisms equivalent to other military branches"
+  },
+  "TECH-MILS-0056": {
+    "title": "No domestic cyber surveillance",
+    "stmt": "The cyber military branch may not be used for domestic surveillance law enforcement or civilian monitoring except under narrowly defined and legally authorized emergency conditions"
+  },
+  "TECH-MILS-0057": {
+    "title": "Coordination with civilian agencies",
+    "stmt": "The cyber branch must coordinate with civilian agencies and private infrastructure operators while maintaining clear legal boundaries and accountability"
+  },
+  "TECH-MILS-0058": {
+    "title": "International cyber norms",
+    "stmt": "The cyber branch should operate in alignment with international efforts to establish norms and treaties governing cyber warfare and infrastructure protection"
+  },
+  "TECH-OVRG-0001": {
+    "title": "Public AI surveillance registry",
+    "stmt": "Require public registration and disclosure of all government AI surveillance systems including purpose authority data sources and oversight structure"
+  },
+  "TECH-OVRG-0002": {
+    "title": "Regular independent audits",
+    "stmt": "Require regular independent audits of all authorized government AI surveillance systems for legality bias accuracy and civil-liberties impacts"
+  },
+  "TECH-OVRG-0003": {
+    "title": "Sunset and reauthorization",
+    "stmt": "All government AI surveillance authorities and systems must have sunset dates and require periodic reauthorization"
+  },
+  "TECH-PRIV-0001": {
+    "title": "Right to access without identification",
+    "stmt": "Individuals have the right to access lawful online content and services without mandatory identity verification"
+  },
+  "TECH-PRIV-0002": {
+    "title": "Protect anonymous use",
+    "stmt": "Anonymous and pseudonymous use of the internet must be protected as a component of free expression and privacy"
+  },
+  "TECH-SURS-0001": {
+    "title": "Ban warrantless mass surveillance",
+    "stmt": ""
+  },
+  "TECH-SURS-0002": {
+    "title": "Ban AI mass public surveillance",
+    "stmt": "Ban AI-powered mass surveillance of public spaces except under narrowly defined high-threshold emergency conditions"
+  },
+  "TECH-SURS-0003": {
+    "title": "Ban persistent location tracking",
+    "stmt": "Ban persistent location tracking or cross-platform identity stitching by government without individualized judicial authorization"
+  },
+  "TECH-SURS-0004": {
+    "title": "Ban government data purchases",
+    "stmt": "Government may not purchase commercially collected surveillance data to evade constitutional limits"
+  },
+  "TECH-SURS-0005": {
+    "title": "Strict warrant requirements",
+    "stmt": "Require strict warrants minimization procedures and audit logs for surveillance access"
+  },
+  "TECH-SURS-0006": {
+    "title": "Ban predictive policing",
+    "stmt": "Ban predictive policing systems that rely on opaque risk scoring or historically biased enforcement data"
+  },
+  "TECH-SURS-0007": {
+    "title": "Ban suspicion scoring",
+    "stmt": "Ban suspicion scoring systems for public use by government agencies"
+  },
+  "TECH-SURS-0008": {
+    "title": "Automatic expiration",
+    "stmt": "Surveillance authorities must expire automatically unless affirmatively renewed under transparent review"
+  },
+  "TECH-SURS-0009": {
+    "title": "Ban network mapping",
+    "stmt": "Ban AI systems that map political social religious or associational networks of individuals absent individualized probable cause and judicial approval"
+  },
+  "TECH-SURS-0010": {
+    "title": "Protect journalists and attorneys",
+    "stmt": "Ban AI-enabled surveillance of journalists sources attorneys and protected communications absent the highest level of judicial review under narrowly defined circumstances"
+  },
+  "TECH-SYNS-0001": {
+    "title": "Ban deceptive synthetic media",
+    "stmt": "Synthetic media must not be used to deceive the public about real people or events in ways that cause harm, manipulate democratic processes, or undermine individual rights"
+  },
+  "TECH-SYNS-0002": {
+    "title": "Ban synthetic impersonation",
+    "stmt": "Ban the use of AI-generated media to impersonate a real person for fraud, financial gain, or unauthorized access"
+  },
+  "TECH-SYNS-0003": {
+    "title": "Ban identity verification bypass",
+    "stmt": "Ban use of synthetic media to bypass identity verification systems"
+  },
+  "TECH-SYNS-0004": {
+    "title": "Ban non-consensual sexual content",
+    "stmt": "Ban creation and distribution of non-consensual synthetic sexual content depicting real individuals"
+  },
+  "TECH-SYNS-0005": {
+    "title": "Ban false harmful depiction",
+    "stmt": "Ban synthetic media that falsely depicts a real person saying or doing something in a way that would reasonably be understood as fact and would harm their reputation or safety"
+  },
+  "TECH-SYNS-0006": {
+    "title": "Ban political manipulation",
+    "stmt": "Ban use of synthetic media in political advertising or messaging that depicts real individuals engaging in fabricated actions or speech"
+  },
+  "TECH-SYNS-0007": {
+    "title": "Ban misleading about officials",
+    "stmt": "Ban synthetic media used to materially mislead the public about the health, actions, or status of public officials"
+  },
+  "TECH-SYNS-0008": {
+    "title": "Ban coordinated deception",
+    "stmt": "Ban coordinated use of synthetic media to mislead the public about real-world events, elections, or public safety"
+  },
+  "TECH-SYNS-0009": {
+    "title": "Disclosure requirement",
+    "stmt": "Require clear disclosure when media is substantially AI-generated or altered to depict realistic human activity"
+  },
+  "TECH-SYNS-0010": {
+    "title": "Provenance markers required",
+    "stmt": "Require AI-generated video and audio to include persistent, tamper-resistant provenance markers"
+  },
+  "TECH-SYNS-0011": {
+    "title": "Open-source detection",
+    "stmt": "Provenance markers must be detectable using publicly available, open-source, and free tools"
+  },
+  "TECH-SYNS-0012": {
+    "title": "Safeguards against removal",
+    "stmt": "Developers of generative media systems must implement reasonable safeguards to prevent removal or circumvention of provenance markers"
+  },
+  "TECH-SYNS-0013": {
+    "title": "Allow parody and satire",
+    "stmt": "Allow synthetic media for parody, satire, or artistic expression where it is clearly labeled or would not reasonably be interpreted as factual"
+  },
+  "TECH-SYNS-0014": {
+    "title": "Allow disclosed journalism use",
+    "stmt": "Allow use of synthetic media in journalism or documentary contexts when clearly disclosed and not used to mislead about real events"
+  },
+  "TECH-SYNS-0015": {
+    "title": "Allow consensual use",
+    "stmt": "Allow use of synthetic media depicting real individuals with explicit informed consent"
+  },
+  "TECH-HARS-0001": {
+    "title": "Platforms must implement effective systems to prevent and respond to targeted harassment campaigns",
+    "stmt": "Digital platforms with significant user bases must implement effective, consistently enforced systems to detect, prevent, and remediate targeted harassment campaigns, coordinated abuse, non-consensual intimate image distribution, and sustained hate-based attacks against individuals, with particular attention to harms disproportionately experienced by women, people of color, LGBTQ+ individuals, and other marginalized communities."
+  },
+  "TECH-HARS-0002": {
+    "title": "Platform algorithmic systems may not amplify, recommend, or distribute harassing or hate-based content at scale",
+    "stmt": "Platform algorithmic recommendation, amplification, and distribution systems must not surface, promote, or spread harassing, threatening, or hate-based content, and must be subject to regular independent audits to detect and correct amplification of such content, with findings published in a format accessible to researchers and the public."
+  },
+  "TECH-HARS-0003": {
+    "title": "Victims of coordinated online harassment have enforceable rights to platform response and escalated review",
+    "stmt": "Individuals subject to coordinated harassment campaigns must have access to expedited platform review, meaningful escalation procedures, effective tools to limit contact from abusers, and documented enforcement of platform rules against abusers, with platforms bearing accountability for systematic non-enforcement against documented coordinated campaigns."
+  },
+  "TECH-PUBL-0002": {
+    "title": "AI systems used in core government services must use auditable, non-proprietary systems wherever feasible",
+    "stmt": "AI systems deployed by federal agencies in core government services \u2014 benefits administration, regulatory enforcement, public health, law enforcement, immigration \u2014 must use open-source or otherwise independently auditable systems wherever technically and operationally feasible, and must not create long-term proprietary vendor lock-in that prevents independent audit, replacement, or public oversight."
+  },
+  "TECH-PUBL-0003": {
+    "title": "Productivity gains from AI deployment in publicly funded services must be shared with workers and the public",
+    "stmt": "Where AI deployment in publicly funded services, public-private partnerships, or critical infrastructure creates significant productivity gains, those gains must be measured, reported, and distributed \u2014 through wage increases, expanded service capacity, reduced costs to users, or return to the public fisc \u2014 rather than captured exclusively as private corporate profit while public workers are displaced and service quality stagnates."
+  },
+  "TECH-MKTS-0001": {
+    "title": "Shared algorithmic systems used to coordinate prices across competing entities are prohibited as per se antitrust violations",
+    "stmt": "The use of shared algorithmic systems, common pricing software, or AI-driven pricing models that coordinate prices or suppress competition among nominally competing entities in housing, labor markets, consumer goods, or services is prohibited as a per se antitrust violation, regardless of whether explicit communication occurred between competitors, when the algorithm's design uses competitor data or recommendations as inputs to set prices."
+  },
+  "TECH-MKTS-0002": {
+    "title": "AI pricing and wage-setting systems in markets affecting housing, employment, or essential goods must be subject to antitrust review",
+    "stmt": "AI pricing, wage-setting, and terms-setting systems in markets affecting housing affordability, labor markets, or essential consumer goods must be subject to mandatory pre-deployment antitrust review, ongoing monitoring for anti-competitive effects, and public disclosure of pricing methodology sufficient for independent assessment of competitive impacts."
+  },
+  "TECH-FMDS-0001": {
+    "title": "Developers of foundation models above a defined capability threshold must register with a federal AI oversight body, disclose training data sources, and publish safety evaluation results before deployment",
+    "stmt": "Developers of foundation AI models \u2014 large-scale models trained on broad data that can be adapted to multiple downstream tasks \u2014 must, before public deployment, register with a designated federal AI oversight body; disclose the categories and sources of training data used, including whether copyrighted materials, personal data, or data subject to legal restrictions were used; publish the results of pre-deployment safety evaluations, red-team testing, and capability assessments; and report any post-deployment safety incidents, emergent capabilities, or misuse events to the oversight body within defined timeframes.[9]"
+  },
+  "TECH-FMDS-0002": {
+    "title": "Foundation model developers must disclose whether training data included copyrighted materials, personal data, or data obtained without consent, and must maintain mechanisms for data subjects to request removal",
+    "stmt": "Developers of foundation AI models must disclose, in publicly accessible documentation, whether training data included copyrighted works, personal data subject to privacy law, data scraped from platforms without authorization, or data obtained from individuals without informed consent; must maintain technically feasible mechanisms for copyright holders and data subjects to request removal of their data from training datasets or model outputs; and must demonstrate compliance with applicable copyright, privacy, and data protection law before receiving any federal AI research funding or government procurement contracts."
+  },
+  "TECH-FMDS-0003": {
+    "title": "High-capability foundation models must undergo mandatory red-team safety evaluation before deployment, with results disclosed to federal oversight bodies and independently reviewed",
+    "stmt": "Foundation AI models designated as high-capability \u2014 based on performance benchmarks, training compute, or demonstrated capabilities in domains affecting public safety, critical infrastructure, biological and chemical knowledge, or mass persuasion \u2014 must undergo mandatory red-team adversarial safety evaluation before deployment; must submit evaluation results, model documentation, and capability assessments to a designated federal AI safety oversight body; and must not be deployed until the federal body has confirmed receipt and published a summary of the disclosed safety evaluation."
+  },
+  "TECH-FMDS-0004": {
+    "title": "Operators deploying foundation models in high-risk applications must conduct application-level risk assessments and maintain incident reporting systems",
+    "stmt": "Entities deploying foundation AI models in high-risk applications \u2014 including healthcare decision support, legal advice, educational assessment, financial services, law enforcement, or government benefits administration \u2014 must conduct application-specific risk assessments identifying potential harms in the deployment context; implement monitoring and incident detection systems; report significant harms, failures, or misuse events to the federal AI oversight body and to affected persons; and maintain documentation sufficient for post-incident investigation and liability determination."
+  },
+  "TECH-NEUS-0001": {
+    "title": "Neural data \u2014 data directly or indirectly derived from brain activity \u2014 must be classified as the most sensitive category of personal data and may not be collected, processed, or shared without explicit, specific, and revocable informed consent",
+    "stmt": "Data directly or indirectly derived from neural, brain-computer, or neurotechnology interfaces \u2014 including electroencephalogram (EEG) data, functional MRI data, neural spike data from implanted devices, and any data from wearable or implanted neurotechnology capturing brain electrical activity or neural signals \u2014 must be classified as the most sensitive category of personal data under federal law; may not be collected, processed, retained, or shared without explicit, specific, and revocable informed consent for each defined use; and may not be sold, transferred, used for advertising, or used to infer emotional states, cognitive conditions, or behavioral profiles without separate, specific authorization for each such use."
+  },
+  "TECH-NEUS-0002": {
+    "title": "Prohibit the use of neural data for employment decisions, law enforcement purposes, insurance underwriting, or political profiling",
+    "stmt": "Neural data may not be used, directly or indirectly, as a factor in employment hiring, performance evaluation, or termination decisions; may not be collected, accessed, or used by law enforcement agencies without a warrant issued by a judge based on probable cause specific to the individual; may not be used by insurance companies for underwriting, pricing, or claims decisions; and may not be used to build political profiles, infer political preferences, or target political messaging without explicit, knowing consent."
+  },
+  "TECH-NEUS-0003": {
+    "title": "Brain-computer interface devices must meet pre-market safety and informed consent standards; operators may not modify device functionality or data collection scope without affirmative re-consent",
+    "stmt": "Brain-computer interface (BCI) devices \u2014 whether implanted, worn, or used in clinical or consumer contexts \u2014 must undergo pre-market safety and efficacy review before commercial deployment; must provide comprehensive, plain-language informed consent disclosure of all data collected, transmitted, stored, and shared; must obtain specific, affirmative re-consent before any material change in device functionality, data collection scope, data sharing practices, or terms of service; and may not be deactivated, rendered non-functional, or have core functions withheld as a means of commercial leverage over users who have had devices implanted or are medically dependent on them."
+  },
+  "TECH-PRTS-0001": {
+    "title": "Users have the right to download and transfer all their data from any digital platform in a machine-readable, portable format at any time",
+    "stmt": "Every user of a digital platform, social network, communications service, or connected device must have the right to download all data the platform holds about them \u2014 including posts, messages, connections, activity history, preferences, and any inferred profiles \u2014 in a machine-readable, standard format that can be used on other platforms or services; and platforms may not impose technical barriers, unreasonable delays, or fees on data export requests, and must honor requests within 30 days."
+  },
+  "TECH-PRTS-0002": {
+    "title": "Large platforms must support standardized interoperability protocols allowing users to communicate across platform boundaries and follow accounts from other services",
+    "stmt": "Digital platforms designated as systemically important \u2014 based on user count, market share, or critical communications function \u2014 must support standardized, open interoperability protocols that allow their users to communicate with users of other platforms and follow or subscribe to accounts on other services, without requiring users of smaller or competing platforms to have accounts on the dominant platform; and may not implement technical measures designed to degrade, slow, or frustrate interoperability with competing services."
+  },
+  "TECH-PRTS-0003": {
+    "title": "Platforms may not impose technical, contractual, or legal barriers that prevent users from migrating to competing services or that degrade the functionality of competing services accessing user-authorized data",
+    "stmt": "Digital platforms may not use technical measures, terms of service provisions, intellectual property claims, or contractual restrictions to prevent users from accessing their own data for the purpose of migrating to competing services; may not take technical actions that degrade the performance, speed, or reliability of third-party services accessing user data pursuant to user authorization or interoperability requirements; and may not use API access terms to prohibit competing services from offering data migration, archiving, or backup services."
+  },
+  "TECH-LIAS-0001": {
+    "title": "AI developers and deployers bear strict civil liability for physical, economic, and dignitary harms caused by AI systems in high-risk applications, without requiring proof of negligence",
+    "stmt": "Developers and deployers of AI systems in high-risk applications \u2014 including healthcare, criminal justice, employment, financial services, and government benefits \u2014 bear strict civil liability for physical injury, economic harm, or dignitary harm proximately caused by AI system failures, errors, or discriminatory outputs, without requiring the harmed party to prove negligence, fault, or breach of duty; and any contractual provision purporting to limit or waive liability for AI harms in high-risk applications is void as against public policy."
+  },
+  "TECH-LIAS-0002": {
+    "title": "When AI system opacity makes it difficult for a harmed person to prove causation, courts must apply a rebuttable presumption that the AI system caused the harm if the person demonstrates that AI was involved in the decision and the harm is consistent with documented failure modes",
+    "stmt": "In civil proceedings where a person alleges harm caused by an AI system and the AI system's opacity \u2014 including proprietary claims, lack of explainability, or destruction of decision logs \u2014 makes it impossible or unreasonably difficult for the person to prove causation through direct evidence, courts must apply a rebuttable presumption that the AI system caused the harm if the person demonstrates that: (1) the AI system was used in the decision or process that produced the harm; (2) the harm is consistent with documented or probable failure modes of such systems; and (3) the defendant has not disclosed sufficient information to allow independent causation analysis."
+  },
+  "TECH-LIAS-0003": {
+    "title": "AI developers and deployers must maintain incident logs, preserve decision records for a defined period, and disclose aggregate harm data to federal oversight bodies annually",
+    "stmt": "Developers and deployers of AI systems in high-risk applications must maintain incident logs documenting all known harms, failures, complaints, and significant errors attributable to or potentially attributable to their AI systems; must preserve decision records \u2014 including inputs, outputs, and confidence scores \u2014 for a minimum of three years or until any pending claims are resolved, whichever is longer; must disclose aggregate incident data, including categories of harm and affected populations, to federal AI oversight bodies annually; and may not destroy decision records after becoming aware of a potential legal claim arising from those decisions."
+  }
+}
