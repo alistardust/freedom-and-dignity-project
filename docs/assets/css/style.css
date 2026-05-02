@@ -3341,15 +3341,13 @@ body:has(.site-tree.st-open) .st-overlay { display: block; }
 /* Lead paragraph beneath section heading */
 .plan-section-lead {
   max-width: 640px;
-  margin-bottom: 2rem;
+  margin-bottom: 2.25rem;
   color: var(--mid);
 }
 
 /* Paragraph that wraps a CTA button */
 .plan-cta-p { margin-top: 2rem; }
 
-/* arch-intro grid with tighter gap */
-.plan-arch-grid { gap: 1.5rem; }
 
 /* Lead paragraph in the dark "Your Part" section */
 .plan-dark-lead {
@@ -3374,8 +3372,7 @@ body:has(.site-tree.st-open) .st-overlay { display: block; }
 /* Pull-quote in dark section */
 .plan-pullquote {
   color: #fff;
-  border-color: var(--gold);
-  margin-top: 2.5rem;
+  border-left-color: var(--gold);
 }
 
 /* CTA section wrap layout */
@@ -3389,7 +3386,4 @@ body:has(.site-tree.st-open) .st-overlay { display: block; }
 }
 
 /* Footer AI-disclosure link */
-.plan-footer-ai-link {
-  color: inherit;
-  opacity: .7;
-}
+.footer-note a.plan-footer-ai-link { opacity: .7; }
