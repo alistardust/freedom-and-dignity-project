@@ -791,3 +791,25 @@ test.describe('Letter from the Founder page', () => {
     await expect(page.locator('.footer-links a[href*="compare"]')).toBeAttached();
   });
 });
+
+// ── THE PLAN PAGE ──────────────────────────────────────────────────────────────
+
+test.describe('The Plan page', () => {
+  test.beforeEach(async ({ page }) => { await page.goto('/plan.html'); });
+
+  test('has correct page title', async ({ page }) => {
+    await expect(page).toHaveTitle(/The Plan/i);
+  });
+
+  test('has the strategy section', async ({ page }) => {
+    await expect(page.locator('#plan-strategy, [id*="strategy"]').first()).toBeAttached();
+  });
+
+  test('has the where-we-are section', async ({ page }) => {
+    await expect(page.locator('#plan-status, [id*="status"], [id*="where-we-are"]').first()).toBeAttached();
+  });
+
+  test('has a CTA to join.html', async ({ page }) => {
+    await expect(page.locator('a[href*="join.html"]').first()).toBeAttached();
+  });
+});
