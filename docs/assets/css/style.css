@@ -2938,20 +2938,24 @@ summary.pil-foundation-bar::-webkit-details-marker { display: none; }
 .btn-pin {
   position: relative;
   display: inline-block;
-  width: 148px;
-  height: 148px;
+  width: 136px;
+  height: 136px;
   border-radius: 50%;
   overflow: hidden;
   text-decoration: none;
   transform: rotate(-7deg);
   transition: transform .3s ease, box-shadow .3s ease;
+  /* GPU compositing — critical for smooth circle antialiasing */
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
   /* Metallic rim */
-  border: 8px solid #c6c6c6;
+  border: 7px solid #c6c6c6;
   box-shadow:
     0 0 0 1px #888,
-    0 0 0 2px #e2e2e2,
+    0 0 0 2px #e0e0e0,
     0 8px 24px rgba(0,0,0,.6),
-    inset 0 2px 0 rgba(255,255,255,.5),
+    inset 0 2px 0 rgba(255,255,255,.55),
     inset 0 -1px 0 rgba(0,0,0,.2);
 }
 /* Three-band pin face: red / parchment / navy */
@@ -2961,9 +2965,9 @@ summary.pil-foundation-bar::-webkit-details-marker { display: none; }
   inset: 0;
   background: linear-gradient(
     to bottom,
-    #bf0a30  0%,   #bf0a30  26%,
-    #faf6ef 26%,  #faf6ef  74%,
-    #1a2a4a 74%,  #1a2a4a 100%
+    #bf0a30  0%,    #bf0a30  26%,
+    #faf6ef  26%,   #faf6ef  73%,
+    #1a2a4a  73%,   #1a2a4a  100%
   );
 }
 /* Mylar gloss — upper-left oval sheen */
@@ -2973,11 +2977,10 @@ summary.pil-foundation-bar::-webkit-details-marker { display: none; }
   inset: 0;
   background: radial-gradient(
     ellipse at 36% 28%,
-    rgba(255,255,255,.4)  0%,
-    rgba(255,255,255,.08) 38%,
-    transparent 62%
+    rgba(255,255,255,.42) 0%,
+    rgba(255,255,255,.08) 40%,
+    transparent 65%
   );
-  border-radius: 50%;
   pointer-events: none;
   z-index: 3;
 }
@@ -2986,9 +2989,9 @@ summary.pil-foundation-bar::-webkit-details-marker { display: none; }
   transform: rotate(-2deg) scale(1.07);
   box-shadow:
     0 0 0 1px #888,
-    0 0 0 2px #e2e2e2,
+    0 0 0 2px #e0e0e0,
     0 12px 32px rgba(0,0,0,.7),
-    inset 0 2px 0 rgba(255,255,255,.5),
+    inset 0 2px 0 rgba(255,255,255,.55),
     inset 0 -1px 0 rgba(0,0,0,.2);
   color: inherit;
   text-decoration: none;
@@ -3004,31 +3007,28 @@ summary.pil-foundation-bar::-webkit-details-marker { display: none; }
   line-height: 1;
   z-index: 2;
 }
-/* Red band — "★ JOIN US ★" */
 .btn-pin-top {
-  top: 6%;
+  top: 7%;
   color: #fff;
   font-size: .48rem;
   font-weight: 500;
   letter-spacing: .2em;
 }
-/* Parchment band — main call to action */
 .btn-pin-main {
   top: 50%;
   transform: translateY(-50%);
   color: #1a2a4a;
-  font-size: 1.05rem;
+  font-size: 1rem;
   font-weight: 700;
-  letter-spacing: .08em;
+  letter-spacing: .07em;
   line-height: 1.2;
 }
-/* Navy band — "NEW NEW DEAL" */
 .btn-pin-btm {
-  bottom: 6%;
+  bottom: 14%;
   color: #faf6ef;
-  font-size: .44rem;
-  font-weight: 500;
-  letter-spacing: .2em;
+  font-size: .58rem;
+  font-weight: 600;
+  letter-spacing: .16em;
 }
 @media (prefers-reduced-motion: reduce) {
   .btn-pin,
