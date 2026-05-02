@@ -56,27 +56,9 @@
       navList.appendChild(li);
     }
 
-    if (navList && !navList.querySelector('a[href*="policy-library"]')) {
-      const li = document.createElement('li');
-      li.innerHTML = `<a href="${policyLibraryHref}"${isPolicyLibraryPage ? ' class="active"' : ''}>Policy Library</a>`;
-      navList.appendChild(li);
-    }
-
     if (navList && !navList.querySelector('a[href*="get-involved"]')) {
       const li = document.createElement('li');
       li.innerHTML = `<a href="${getInvolvedHref}"${isGetInvolvedPage ? ' class="active"' : ''}>Get Involved</a>`;
-      navList.appendChild(li);
-    }
-
-    if (navList && !navList.querySelector('a[href*="roadmap"]')) {
-      const li = document.createElement('li');
-      li.innerHTML = `<a href="${roadmapHref}"${isRoadmapPage ? ' class="active"' : ''}>Roadmap</a>`;
-      navList.appendChild(li);
-    }
-
-    if (navList && !navList.querySelector('a[href*="about-ai"]')) {
-      const li = document.createElement('li');
-      li.innerHTML = `<a href="${aiHref}"${isAiPage ? ' class="active"' : ''}>About AI</a>`;
       navList.appendChild(li);
     }
 
