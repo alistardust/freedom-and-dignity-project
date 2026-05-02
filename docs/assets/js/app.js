@@ -40,8 +40,8 @@
     const isGetInvolvedPage = pageName === 'get-involved';
     const approachHref = base + 'approach.html';
     const isApproachPage = pageName === 'approach';
-    const proposalsHref = base + 'proposals.html';
-    const isProposalsPage = pageName === 'proposals';
+    const policyLibraryHref = base + 'policy-library.html';
+    const isPolicyLibraryPage = pageName === 'policy-library';
     const platformHref = base + 'platform.html';
     const isPlatformPage = pageName === 'platform';
     if (navList && !navList.querySelector('a[href*="mission"]')) {
@@ -56,9 +56,9 @@
       navList.appendChild(li);
     }
 
-    if (navList && !navList.querySelector('a[href*="proposals"]')) {
+    if (navList && !navList.querySelector('a[href*="policy-library"]')) {
       const li = document.createElement('li');
-      li.innerHTML = `<a href="${proposalsHref}"${isProposalsPage ? ' class="active"' : ''}>Proposals</a>`;
+      li.innerHTML = `<a href="${policyLibraryHref}"${isPolicyLibraryPage ? ' class="active"' : ''}>Policy Library</a>`;
       navList.appendChild(li);
     }
 
@@ -92,9 +92,9 @@
       fli.innerHTML = `<a href="${rightsHref}">Rights</a>`;
       footerLinks.appendChild(fli);
     }
-    if (footerLinks && !footerLinks.querySelector('a[href*="proposals"]')) {
+    if (footerLinks && !footerLinks.querySelector('a[href*="policy-library"]')) {
       const fli = document.createElement('li');
-      fli.innerHTML = `<a href="${proposalsHref}">Proposals</a>`;
+      fli.innerHTML = `<a href="${policyLibraryHref}">Policy Library</a>`;
       footerLinks.appendChild(fli);
     }
     if (footerLinks && !footerLinks.querySelector('a[href*="mission"]')) {
@@ -151,15 +151,170 @@
     }
   })();
 
-  /* ── HAMBURGER ────────────────────────────────────── */
-  const burger = document.querySelector('.nav-hamburger');
-  const navList = document.querySelector('.nav-links');
-  if (burger && navList) {
-    burger.addEventListener('click', () => navList.classList.toggle('open'));
-    document.addEventListener('click', e => {
-      if (!burger.contains(e.target) && !navList.contains(e.target)) navList.classList.remove('open');
+  /* ── HAMBURGER SITE TREE ─────────────────────────── */
+  (function () {
+    const inSubdir = /\/(pillars|compare)\//.test(location.pathname);
+    const base = inSubdir ? '../' : '';
+
+    function buildTree() {
+      const foundations = (window.siteData && siteData.foundations) ? siteData.foundations : [];
+      const policyLibraryChildren = foundations.map(f => ({
+        label: f.title,
+        href: base + 'policy-library.html#' + f.id,
+      }));
+      const comparePages = [
+        { label: 'Republican Party',                 href: base + 'compare/republican-party.html' },
+        { label: 'Democratic Party',                 href: base + 'compare/democratic-party.html' },
+        { label: 'Green Party',                      href: base + 'compare/green-party.html' },
+        { label: 'Libertarian Party',                href: base + 'compare/libertarian-party.html' },
+        { label: 'Working Families Party',           href: base + 'compare/working-families-party.html' },
+        { label: 'Democratic Socialists of America', href: base + 'compare/dsa.html' },
+      ];
+      return [
+        { label: 'Home',         href: base + 'index.html' },
+        { label: 'The Problem',  href: base + 'problem.html' },
+        { label: 'Our Approach', href: base + 'approach.html' },
+        { label: 'The Platform', children: [
+          { label: 'Rights',          href: base + 'rights.html' },
+          { label: 'Policy Library',  href: base + 'policy-library.html', children: policyLibraryChildren },
+          { label: 'Platform Overview', href: base + 'platform.html' },
+        ]},
+        { label: 'Get Involved', href: base + 'get-involved.html' },
+        { label: 'Roadmap',      href: base + 'roadmap.html' },
+        { label: 'About', children: [
+          { label: 'About Us',                href: base + 'about-us.html' },
+          { label: 'Letter from the Founder', href: base + 'letter-from-the-founder.html' },
+          { label: 'On the Use of AI',        href: base + 'about-ai.html' },
+        ]},
+        { label: 'Compare Platforms', children: comparePages },
+      ];
+    }
+
+    function makeTreeNode(item, level) {
+      const li = document.createElement('li');
+      li.className = 'st-node' + (item.children && item.children.length ? ' st-parent' : '');
+      li.setAttribute('role', 'treeitem');
+      li.setAttribute('aria-level', level);
+      if (item.children && item.children.length) {
+        li.setAttribute('aria-expanded', 'false');
+        const btn = document.createElement('button');
+        btn.className = 'st-toggle';
+        btn.setAttribute('aria-label', 'Expand ' + item.label);
+        const labelSpan = document.createElement('span');
+        labelSpan.className = 'st-label';
+        if (item.href) {
+          const a = document.createElement('a');
+          a.href = item.href;
+          a.textContent = item.label;
+          a.className = 'st-item-link';
+          labelSpan.appendChild(a);
+        } else {
+          labelSpan.textContent = item.label;
+        }
+        const chevron = document.createElement('span');
+        chevron.className = 'st-chevron';
+        chevron.setAttribute('aria-hidden', 'true');
+        chevron.textContent = '›';
+        btn.appendChild(labelSpan);
+        btn.appendChild(chevron);
+        li.appendChild(btn);
+        const ul = document.createElement('ul');
+        ul.className = 'st-children';
+        ul.setAttribute('role', 'group');
+        item.children.forEach(child => ul.appendChild(makeTreeNode(child, level + 1)));
+        li.appendChild(ul);
+        btn.addEventListener('click', function (e) {
+          e.stopPropagation();
+          const expanded = li.getAttribute('aria-expanded') === 'true';
+          li.setAttribute('aria-expanded', String(!expanded));
+          btn.setAttribute('aria-label', (expanded ? 'Expand ' : 'Collapse ') + item.label);
+        });
+      } else {
+        const a = document.createElement('a');
+        a.href = item.href;
+        a.className = 'st-item-link st-leaf';
+        a.textContent = item.label;
+        a.setAttribute('role', 'treeitem');
+        a.setAttribute('aria-level', String(level));
+        a.addEventListener('click', closeTree);
+        li.setAttribute('role', 'none');
+        li.appendChild(a);
+      }
+      return li;
+    }
+
+    function closeTree() {
+      const panel = document.querySelector('.site-tree');
+      const burger = document.querySelector('.nav-hamburger');
+      if (panel) panel.classList.remove('st-open');
+      if (burger) {
+        burger.setAttribute('aria-expanded', 'false');
+        burger.setAttribute('aria-label', 'Open site menu');
+      }
+    }
+
+    function buildPanel() {
+      const nav = document.querySelector('.site-nav');
+      if (!nav) return;
+      const panel = document.createElement('nav');
+      panel.id = 'site-tree';
+      panel.className = 'site-tree';
+      panel.setAttribute('aria-label', 'Site navigation tree');
+      const header = document.createElement('div');
+      header.className = 'st-header';
+      const closeBtn = document.createElement('button');
+      closeBtn.className = 'st-close';
+      closeBtn.setAttribute('aria-label', 'Close site menu');
+      closeBtn.textContent = '✕';
+      closeBtn.addEventListener('click', closeTree);
+      header.appendChild(closeBtn);
+      panel.appendChild(header);
+      const ul = document.createElement('ul');
+      ul.className = 'st-root';
+      ul.setAttribute('role', 'tree');
+      buildTree().forEach(item => ul.appendChild(makeTreeNode(item, 1)));
+      panel.appendChild(ul);
+      const overlay = document.createElement('div');
+      overlay.className = 'st-overlay';
+      overlay.addEventListener('click', closeTree);
+      document.body.appendChild(overlay);
+      nav.insertAdjacentElement('afterend', panel);
+    }
+
+    buildPanel();
+
+    const burger = document.querySelector('.nav-hamburger');
+    if (burger) {
+      burger.setAttribute('aria-expanded', 'false');
+      burger.setAttribute('aria-controls', 'site-tree');
+      burger.addEventListener('click', function () {
+        const panel = document.querySelector('.site-tree');
+        const open = panel && panel.classList.toggle('st-open');
+        burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+        burger.setAttribute('aria-label', open ? 'Close site menu' : 'Open site menu');
+        if (open) {
+          const firstLink = panel.querySelector('.st-item-link, .st-toggle');
+          if (firstLink) firstLink.focus();
+        }
+      });
+    }
+
+    document.addEventListener('keydown', function (e) {
+      const panel = document.querySelector('.site-tree.st-open');
+      if (!panel) return;
+      if (e.key === 'Escape') { closeTree(); burger && burger.focus(); return; }
+      const focusable = Array.from(panel.querySelectorAll('.st-item-link, .st-toggle'));
+      const idx = focusable.indexOf(document.activeElement);
+      if (e.key === 'ArrowDown') { e.preventDefault(); focusable[(idx + 1) % focusable.length].focus(); }
+      if (e.key === 'ArrowUp')   { e.preventDefault(); focusable[(idx - 1 + focusable.length) % focusable.length].focus(); }
     });
-  }
+
+    document.addEventListener('click', function (e) {
+      const panel = document.querySelector('.site-tree.st-open');
+      if (!panel) return;
+      if (!panel.contains(e.target) && e.target !== burger) closeTree();
+    });
+  })();
 
   /* ── PILLAR FILTER + RENDER ───────────────────────── */
   const pillarGrid = document.getElementById('pillar-grid');

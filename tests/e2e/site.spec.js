@@ -234,7 +234,7 @@ for (const { file, name } of PARTY_PAGES) {
 test.describe('Navigation', () => {
   test('home → proposals', async ({ page }) => {
     await page.goto('/');
-    await page.click('a[href="proposals.html"]');
+    await page.click('a[href="policy-library.html"]');
     await expect(page).toHaveURL(/proposals/);
   });
 
@@ -337,7 +337,7 @@ test.describe('About AI page', () => {
 test.describe('About AI link reachable from all page types', () => {
   const pages = [
     { url: '/',                          label: 'Homepage' },
-    { url: '/proposals.html',          label: 'Proposals' },
+    { url: '/policy-library.html',          label: 'Proposals' },
     { url: '/pillars/index.html',        label: 'Pillars index' },
     { url: '/pillars/healthcare.html',   label: 'Pillar page' },
     { url: '/compare/index.html',        label: 'Compare index' },
@@ -474,7 +474,7 @@ test.describe('Mission page', () => {
 // ── PROPOSALS PAGE ───────────────────────────────────────────────────────────
 
 test.describe('Proposals page', () => {
-  test.beforeEach(async ({ page }) => { await page.goto('/proposals.html'); });
+  test.beforeEach(async ({ page }) => { await page.goto('/policy-library.html'); });
 
   test('has correct page title', async ({ page }) => {
     await expect(page).toHaveTitle(/Proposals.*Freedom and Dignity/i);
@@ -625,7 +625,7 @@ test.describe('Elections pillar — Referendum and Recall section', () => {
 test.describe('Mission nav link from all page types', () => {
   const pages = [
     { url: '/',                               label: 'Homepage' },
-    { url: '/proposals.html',              label: 'Proposals' },
+    { url: '/policy-library.html',              label: 'Proposals' },
     { url: '/pillars/index.html',            label: 'Pillars index' },
     { url: '/pillars/healthcare.html',       label: 'Pillar page' },
     { url: '/compare/index.html',            label: 'Compare index' },
