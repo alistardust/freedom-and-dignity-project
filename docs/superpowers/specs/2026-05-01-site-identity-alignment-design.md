@@ -1,6 +1,6 @@
 # Site Identity Alignment — Design Spec
 
-*Version 2 — 2026-05-01*
+*Version 3 — 2026-05-01*
 
 ---
 
@@ -47,22 +47,33 @@ Every page on the site, organized hierarchically. Primary nav items at the top l
 ├── The Problem
 ├── The Plan
 ├── The Platform
-│   ├── Bills of Rights
-│   ├── PolicyOS
-│   └── Policy Library
-│       ├── Accountable Power
-│       │   ├── [pillar pages]
-│       ├── Clean Democracy
-│       ├── Equal Justice
-│       ├── Real Freedom
-│       └── Freedom to Thrive
+│   ├── Bills of Rights          ← anchor link: platform.html#bills-of-rights
+│   ├── PolicyOS                 ← anchor link: platform.html#policyos
+│   ├── Policy Library           ← links to proposals.html
+│   │   ├── Accountable Power
+│   │   │   ├── [pillar pages]
+│   │   ├── Clean Democracy
+│   │   ├── Equal Justice
+│   │   ├── Real Freedom
+│   │   └── Freedom to Thrive
+│   └── How the Platform Works   ← links to classification.html
 ├── Join the Movement
 ├── Roadmap
 ├── About
+│   ├── Letter from the Founder  ← links to letter-from-the-founder.html
+│   └── On the Use of AI         ← links to about-ai.html
 └── Compare Platforms
     ├── Republican Party
     └── [other compare pages]
 ```
+
+**Hamburger UX behavior:**
+- All tree nodes collapsed by default on page load
+- Clicking a parent node expands/collapses its children; clicking again toggles
+- Clicking a leaf node navigates and closes the hamburger
+- On navigation, the hamburger closes automatically
+- Keyboard: arrow keys navigate, Enter activates, Escape closes
+- Mobile: full-height overlay, same tree structure
 
 ---
 
@@ -82,21 +93,24 @@ Every page on the site, organized hierarchically. Primary nav items at the top l
 
 | File | Notes |
 |---|---|
-| `proposals.html` | Becomes "Policy Library" in hamburger tree |
+| `proposals.html` | Becomes "Policy Library" in hamburger tree; title and intro updated to reflect new role |
 | `roadmap.html` | Secondary nav only |
+| `classification.html` | "How the Platform Works" — hamburger under The Platform |
 
 ### Pages folded in or removed
 
 | File | Disposition |
 |---|---|
 | `rights.html` | Content elevated into `platform.html`; file removed |
-| `approach.html` | Content audited; relevant material folded into `platform.html` or `about-us.html`; file removed |
+| `approach.html` | Content audited — keep movement methodology explanations, discard purely technical/internal framework descriptions; relevant content folded into `platform.html` or `about-us.html`; file removed |
 | `constitution.html` | Stale redirect — removed |
 | `foundations.html` | Stale redirect — removed |
 
+**On removed/renamed files:** GitHub Pages has no server-side redirects. Old URLs for removed and renamed files will return 404. This is acceptable at the current development stage — external link profiles are minimal and the site is under active development. No meta-refresh stubs will be created.
+
 ### Pages audited for voice consistency
 
-All remaining top-level pages — `about-us.html`, `letter-from-the-founder.html`, `roadmap.html`, `about-ai.html` — audited and rewritten as needed against the identity document.
+All remaining top-level pages — `about-us.html`, `letter-from-the-founder.html`, `roadmap.html`, `about-ai.html` — audited and rewritten as needed against the identity document. `letter-from-the-founder.html` and `about-ai.html` are accessible via the hamburger under "About."
 
 ---
 
@@ -106,7 +120,9 @@ The homepage restructures around three visitor questions.
 
 ### Section 1 — Movement identity and belonging
 
-Lead with hope and belonging. The visitor feels seen and welcomed before they understand what the project is. The emotional line comes first. Movement identity ("right vs. wrong, not left vs. right") is established immediately. Primary CTA leads toward "Join the Movement."
+Lead with hope and belonging. The visitor feels seen and welcomed before they understand what the project is. The emotional line comes first. Movement identity ("right vs. wrong, not left vs. right") is established immediately.
+
+Primary CTA links to `join.html` — takes the visitor to the dedicated Join the Movement page.
 
 *Section heading: emerges from content, not from this label.*
 
@@ -122,12 +138,22 @@ Brief, devastating, validating. Names the reality — things are messed up, the 
 
 ### Section 4 — Champion issues + The Plan tease
 
-3–5 champion issue cards drawn from the Bills of Rights. Each card:
-- Names a right every person deserves
-- Shows what's blocking it (brief, concrete)
-- Links to the relevant pillar page and to The Plan
+Five champion issues drawn from the Bills of Rights, selected for breadth, relatability, and cross-constituency reach:
 
-Followed by a brief tease of The Plan: "Here's how we actually make this happen." Links to `plan.html`.
+| Card | Right | Why this issue |
+|---|---|---|
+| 1 | Amendment X — Right to Basic Necessities | Healthcare, housing, food. Most universally relatable. The FDR amendment. |
+| 2 | Amendment I — Right to Vote | Directly under threat right now. Immediate, urgent, concrete. |
+| 3 | Amendment VIII — Right to Equal Justice | The law should work the same for everyone. Crosses many communities. |
+| 4 | Amendment IV — Right to Bodily Autonomy | Reproductive rights, medical decisions. Enormous constituency. |
+| 5 | Amendment VII — Right to a Healthy Environment | Clean air, clean water, climate. Broad appeal, concrete stakes. |
+
+Each card:
+- Names the right in plain language ("You have a right to [X]")
+- Shows what's blocking it (1–2 sentences, concrete)
+- Links to the relevant pillar page AND to The Plan
+
+Followed by a brief tease of The Plan with a link to `plan.html`.
 
 ### Section 5 — Join the Movement
 
@@ -139,7 +165,7 @@ Multiple pathways, multiple roles, no credentials required. Organizer, donor, wr
 
 The critical missing piece. The site currently shows the destination (what the country should look like) but has no answer to "how do you actually make this happen?" This page is primarily a call to action, not an explanation. It does not re-litigate the problem.
 
-*Voice note: short, forward-looking, action-oriented. Assumes the visitor is already convinced and ready to act.*
+*Voice note: opens with 1–2 sentences that acknowledge the stakes ("The problems are real. The window to fix them is now."), then immediately into the plan. Does not re-litigate the problem. Written for the convinced-and-ready visitor but legible to a first-time visitor who came here directly.*
 
 ### Sections
 
@@ -158,10 +184,10 @@ The Platform is a *vision and principles* page, not a policy library. Visitors w
 
 ### Sections
 
-1. **Statement of values** — the foundation everything flows from; what we believe at the core
-2. **Bills of Rights** — what flows from those values; what every person deserves; rights language stated directly (currently in `rights.html`, elevated here)
-3. **PolicyOS** — how we turn rights into policy that actually works; the core values built into the system; 2–3 example rules shown in action (demonstrates rigor and differentiation — this isn't a wish list)
-4. **Foundations overview** — the five structural areas we cover; each foundation with its "What It Demands / What It Rejects" framing; links to the full pillar pages for depth
+1. **Statement of values** — the foundation everything flows from; synthesized from `.github/project-identity.md` ("What We Believe" and "What We Won't Be" sections) and the existing `platform.html` foundation framing; stated directly, not as headers over policy content
+2. **Bills of Rights** — all ten amendments stated in plain language; content drawn from `rights.html` and elevated here; each amendment includes its one-liner and floor/duty summary; anchor ID: `#bills-of-rights`
+3. **PolicyOS** — anchor ID: `#policyos`; covers: the core values built into the system (every policy must have enforcement, must account for the least powerful, must be testable, must apply equitably regardless of geography); 2–3 example rules shown briefly in action; source: `policy/policyos/policyos_platform_values_v1.md` and `policy/policyos/policyos_1_0_rules_proposal.md`
+4. **Foundations overview** — the five structural areas; existing `platform.html` "What It Demands / What It Rejects" framing is already present and can be reused; links to the full pillar pages for depth
 5. **CTA** → "Explore the full policy library" — links to `proposals.html`
 
 ---
