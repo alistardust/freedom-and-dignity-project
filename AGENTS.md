@@ -152,20 +152,10 @@ Prefer sources in this order:
 
 ## Copyright and plagiarism safeguards
 
-This project is committed to originality, proper attribution, and copyright compliance.
-
-Core rules:
-- Do not reproduce substantial verbatim text from copyrighted sources.
-- Quote sparingly and only when exact wording materially matters.
-- Prefer paraphrase, synthesis, and citation.
+- Do not reproduce substantial verbatim text from copyrighted sources. Quote sparingly; prefer paraphrase, synthesis, and citation.
 - Treat AI-generated research text as draft material that must be verified against real sources.
-- Do not cite sources you have not verified.
-- Attribute external ideas, framing, and arguments when they are materially derived from outside sources.
-- When in doubt, use less quoted text, more original synthesis, and clearer citation.
-
-Federal government materials may be quoted more freely where legally appropriate, but they must still be cited.
-
-For evolving legal or formatting detail, follow relevant project documentation rather than expanding this instruction file with long copyright discussion.
+- Do not cite sources you have not verified. Attribute external ideas and framing when materially derived from outside sources.
+- Federal government materials may be quoted more freely where legally appropriate, but must still be cited.
 
 ---
 
@@ -173,22 +163,11 @@ For evolving legal or formatting detail, follow relevant project documentation r
 
 This project is a public policy document. Accuracy, verification, and intellectual honesty are mandatory.
 
-Before publishing any factual claim:
-1. verify the source exists
-2. verify the source actually supports the claim
-3. check whether the source is current enough for the use
-4. check whether the framing preserves the source's real context
+Before publishing any factual claim, verify: the source exists, it supports the claim, it is current, and the framing preserves the source's real context.
 
-Apply adversarial review to empirical claims. If meaningful counterevidence, uncertainty, or exceptions exist, acknowledge them honestly and revise the claim or framing as needed.
+Apply adversarial review to empirical claims. Acknowledge meaningful counterevidence and uncertainty honestly. Treat AI-generated factual material as unverified draft text until checked against real, accessible sources. If a source cannot be verified, remove the claim or reframe it as the project's own position.
 
-Treat AI-generated factual material as unverified draft text until it has been checked against real, accessible sources. If a source cannot be verified, remove the claim or clearly reframe it as the project's own position rather than a factual assertion.
-
-### Language integrity
-
-- Do not present the project's own policy positions as if they are established facts.
-- Do not use weasel words ("many experts agree," "studies show") without citing specific experts and specific studies.
-- Do not use emotional language in the research/sources sections; reserve advocacy framing for the mission and pillar narrative sections.
-- Always distinguish between "this is what the research shows" and "this is what we believe should be done."
+Do not present the project's own policy positions as facts. Do not use weasel words ("many experts agree") without citing specific sources. Distinguish "this is what the research shows" from "this is what we believe should be done."
 
 ---
 
@@ -332,16 +311,6 @@ These are never acceptable under any circumstances:
 - Import direction flows inward only: presentation → service → domain → infrastructure. Inner layers must not import outer layers.
 - Fail-secure defaults: new features/endpoints default to off/denied, not on/public.
 - YAGNI: don't build abstractions for requirements you don't have yet. Add generality when the second case arrives.
-
-### Python-specific
-
-- Formatter: **Black** (line-length=88). Non-negotiable. Run in pre-commit and CI.
-- Linter: **Ruff** with `E/W/F/I/N/B/C4/UP/S/ANN/D` rulesets. Run in pre-commit and CI.
-- Type checking: **mypy --strict**. All public functions/methods/class attributes must have type annotations.
-- Testing: **pytest**. Test names must be sentences: `test_create_user_with_duplicate_email_raises_conflict_error`.
-- Dependency management: **uv**. Pin versions in lockfiles. Run `pip-audit` in CI.
-- Use `secrets` module for any cryptographic randomness. Use `pathlib.Path`, not `os.path`. Use f-strings, not `%`-formatting or `.format()`.
-- See `CODING_STANDARDS.md` §2 for the full Python reference.
 
 ### Git
 
