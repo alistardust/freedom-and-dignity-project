@@ -212,7 +212,9 @@ late-fee model at scale, demonstrating commercial viability. The concern that la
 default is not supported by evidence -- behavioral research shows late fees extract from
 people already struggling rather than preventing default (MDPI 2026). Credit damage,
 account closure, and collection action provide real consequences without creating an extraction
-mechanism. Cross-reference: CNSR-FEES-0001 (junk fee prohibition baseline).
+mechanism. The $500 flat statutory penalty was set at the midpoint of the $100--$1,000 range
+used in TILA § 130, FCRA § 616, and EFTA § 915, trading judicial discretion for predictability
+and ease of consumer enforcement. Cross-reference: CNSR-FEES-0001 (junk fee prohibition baseline).
 
 ---
 
@@ -312,7 +314,11 @@ vulnerability: two lenders querying a registry before either reports leaves the 
 credit bureaus have. A one-hour window does not materially change lender operations (automated
 reporting is standard in payment infrastructure) but substantially closes the gap. The CFPB
 already operates consumer complaint and enforcement databases; real-time registry is incremental
-infrastructure, not a novel capability. Cross-reference: CNSR-CFPS-0001 (CFPB independence,
+infrastructure, not a novel capability. The 90-day baseline publication window is operationally
+feasible because the CFPB operates the registry directly and holds the data in real time with
+no third-party collection lag; the CFPB already publishes monthly credit card market reports
+within approximately 30 days of month-end, making 90 days a comfortable ceiling even for the
+first-quarter publication. Cross-reference: CNSR-CFPS-0001 (CFPB independence,
 required for registry to function without political interference), CNSR-BNPL-0002 (credit
 bureau reporting), CNSR-BNPL-0003 (registry query is required as part of Tier 2 affordability
 assessment).
