@@ -196,9 +196,11 @@ Tier 1 and Tier 2 products and may not be waived by contract or by borrower agre
 Default consequences are limited to: adverse credit bureau reporting under Section 0002,
 suspension or closure of the borrower's BNPL account, and civil collection action permitted
 under applicable state law. Charging a prohibited fee constitutes an unfair, deceptive, or
-abusive act or practice under 12 U.S.C. § 5531. Prohibited fees that constitute an
-impermissible finance charge under TILA also give rise to a private right of action under
-TILA § 130 (15 U.S.C. § 1640).
+abusive act or practice under 12 U.S.C. § 5531. Charging a prohibited fee also gives rise
+to a private right of action for actual damages, a statutory penalty of $500 per violation,
+and reasonable attorney fees and costs; this right of action arises independently of TILA's
+finance charge definition, which does not encompass late payment charges under Regulation Z
+12 C.F.R. § 1026.4(c)(2).
 
 **Rule-notes:**
 Late fees represented 13% of BNPL industry revenue in 2021 and grew 42% in a single year for
@@ -292,10 +294,10 @@ falls below the equivalent of a 620 FICO; originating a loan that would exceed t
 without affirmative documented underwriting justification constitutes an unfair, deceptive, or
 abusive act or practice.
 Lenders may impose lower or higher aggregate limits above the federal floor through their own
-underwriting policies, subject to CFPB guidelines. Within 90 days of the registry's effective
-date, the CFPB must publish a baseline report documenting the number of Tier 2 BNPL
-originations to borrowers with FICO scores below 620 or no FICO score on file in the first
-full calendar quarter of registry operation; this baseline is the reference point for all
+underwriting policies, subject to CFPB guidelines. Within 90 days of the end of the first full calendar quarter of
+registry operation, the CFPB must publish a baseline report documenting the number of Tier 2
+BNPL originations to borrowers with FICO scores below 620 or no FICO score on file in that
+quarter; this baseline is the reference point for all
 subsequent market monitoring. If the number of such originations drops more than 25% in any
 rolling 18-month period measured quarterly against that baseline, the CFPB must report to
 Congress within 60 days describing market conditions and recommending corrective action.
