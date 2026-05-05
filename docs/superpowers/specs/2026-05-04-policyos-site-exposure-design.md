@@ -56,6 +56,8 @@ The `.md` source files in `policy/policyos/` are retained as the migration sourc
 | `tests/unit/data.test.js` | Tests for new overlay data structure in `siteData` |
 | `tests/e2e/site.spec.js` | Tests for `policyos.html`, nav link, per-pillar injection, classification.html badges |
 | Various `docs/*.html` | Remove hard-coded aggregate policy position counts from prose |
+| `README.md` | Add `migrate-policyos-to-db.py` and `generate-policyos.py` to Scripts section; document execution order |
+| `scripts/requirements.txt` | Create file (if absent); add `markdown2` dependency |
 
 ### Data flow
 
@@ -302,8 +304,8 @@ Dynamic `[data-dynamic]` spans are unaffected.
 - `policyos.html` loads; has correct title; nav and footer visible
 - All 11 System Principles family anchors exist on `policyos.html`
 - All 6 Authoring OS family anchors exist on `policyos.html`
-- A sample pillar page (e.g., `healthcare.html`) has `#pil-policyos` section injected after load
-- The same sample pillar page has a "PolicyOS" item in `#pil-snav` after load
+- A sample pillar page (e.g., `healthcare.html`) has `#pil-policyos` section injected after load, and it appears after `#pil-related` in document order (assert `#pil-related` precedes `#pil-policyos` in the DOM)
+- The same sample pillar page has a "PolicyOS" item in `#pil-snav` after load, and it is the last list item
 - PolicyOS nav link appears in "The Platform" dropdown
 - `classification.html` status badges read "Locked", not "Under review"
 
