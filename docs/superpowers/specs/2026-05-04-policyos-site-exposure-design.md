@@ -125,13 +125,14 @@ Source: `policy/policyos/policyos_1_0_inheritance_matrix.csv` — all 25 pillars
 
 ### Nav injection
 
-Add "PolicyOS" to the "The Platform" dropdown alongside "Rights" and "Policy Library". Follows the same path-resolution pattern used for existing injected links.
+Add "PolicyOS" to the "The Platform" dropdown alongside "Rights", "Policy Library", and "Platform Overview". Follows the same path-resolution pattern used for existing injected links.
 
 ### Per-pillar section injection
 
-On pillar pages (detected by `#pil-snav` presence or pillar slug in URL):
+On pillar pages (detected by the presence of `#pil-snav` in the DOM — the established signal already used by `app.js` for scrollspy and other pillar-page logic):
 
-1. Find the current pillar in `ARP.pillars` by matching the page slug
+1. Derive the pillar slug from `location.pathname`: take the filename without extension (e.g., `executive-power` from `executive-power.html`), then replace all hyphens with underscores (`executive_power`). This normalizes to the format used in `ARP.pillars[].id`.
+2. Find the current pillar in `ARP.pillars` by matching the normalized slug against `pillar.id`
 2. Read `pillar.policyosOverlays`
 3. Inject `<section id="pil-policyos">` into the page
 
@@ -142,6 +143,8 @@ On pillar pages (detected by `#pil-snav` presence or pillar slug in URL):
 - List of conditional families: each rendered as a card/pill showing family code, label, summary, and a "View rules →" link to `policyos.html#anchor`
 
 KERN is shown as a universal baseline note rather than in the conditional list, keeping the displayed list focused on the domain-specific overlays.
+
+**Path resolution:** Pillar pages are served from `docs/pillars/`, so links to the PolicyOS page must use the `base` variable already established in `app.js` (e.g., `base + 'policyos.html#kern'`), which resolves correctly as `../policyos.html#kern` from a pillar page context.
 
 **Error handling:** If a pillar slug has no matching entry in `ARP.pillars` (e.g., a pillar added before `data.js` is updated), the injection is silently skipped — no broken page, no console error.
 
@@ -156,7 +159,7 @@ KERN is shown as a universal baseline note rather than in the conditional list, 
 
 ## Hard-Coded Count Removal
 
-Scan `docs/*.html` and `docs/pillars/*.html` for hard-coded policy position counts in prose (patterns like `\d[,\d]+ positions`, `\d+ subdomains`, `\d+ policy cards`). Remove or replace with neutral phrasing:
+Scan `docs/*.html` and `docs/pillars/*.html` for hard-coded policy position counts in prose (patterns like `\d[,\d]+ positions`, `\d+ subdomains`, `\d+ policy cards`). `docs/compare/*.html` is excluded — those pages describe party platforms, not this project's catalog. Remove or replace with neutral phrasing:
 
 - Where the count was the substance: remove the sentence or replace with "the full policy catalog"
 - Where the count was incidental color: drop the number
