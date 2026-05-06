@@ -93,3 +93,10 @@ siteData.getPillarsByFoundation = id => siteData.pillars.filter(p => p.foundatio
 
 /* Expose on window so app.js guard (window.siteData) works — const doesn't auto-attach */
 window.siteData = siteData;
+// %%POLICYOS-FAMILIES-BEGIN%%
+siteData.policyosFamilies = [];
+// %%POLICYOS-FAMILIES-END%%
+// %%POLICYOS-OVERLAYS-BEGIN%%
+siteData.policyosOverlays = {};
+// %%POLICYOS-OVERLAYS-END%%
+
