@@ -1246,6 +1246,12 @@ body:has(.site-tree.st-open) .st-overlay { display: block; }
   color: var(--navy); margin: 2rem 0 .6rem;
 }
 .on-sky .gi-body h3 { color: #fff; }
+/* Dark-context overrides: .gi-body h2/p/h3 rules (specificity 0,1,1) inadvertently
+   override .on-dark rules. Resolve with higher-specificity combined selectors. */
+.on-dark .gi-body h2     { color: #fff; }
+.on-dark .gi-body h3     { color: rgba(255,255,255,.6); }
+.on-dark .gi-body p      { color: rgba(255,255,255,.78); }
+.on-dark .gi-body p strong { color: #fff; }
 .gi-body a, .prereq-body a { color: var(--red); }
 .values-grid {
   display: grid;
