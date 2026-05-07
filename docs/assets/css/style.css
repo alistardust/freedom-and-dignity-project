@@ -33,6 +33,7 @@ body {
   color: var(--ink);
   line-height: 1.78;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 /* ── ACCESSIBILITY UTILITIES ─────────────────────────── */
