@@ -69,11 +69,6 @@
       fli.innerHTML = `<a href="${platformHref}">Platform</a>`;
       footerLinks.appendChild(fli);
     }
-    if (footerLinks && !footerLinks.querySelector('a[href*="rights"]')) {
-      const fli = document.createElement('li');
-      fli.innerHTML = `<a href="${rightsHref}">Rights</a>`;
-      footerLinks.appendChild(fli);
-    }
     if (footerLinks && !footerLinks.querySelector('a[href*="policy-library"]')) {
       const fli = document.createElement('li');
       fli.innerHTML = `<a href="${policyLibraryHref}">Policy Library</a>`;
