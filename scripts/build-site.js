@@ -51,8 +51,14 @@ function walkNjk(dir, results = []) {
 }
 
 async function main() {
-  const nav         = JSON.parse(fs.readFileSync('src/data/nav.json', 'utf8'));
-  const footerLinks = JSON.parse(fs.readFileSync('src/data/footer-links.json', 'utf8'));
+  let nav, footerLinks;
+  try {
+    nav         = JSON.parse(fs.readFileSync('src/data/nav.json', 'utf8'));
+    footerLinks = JSON.parse(fs.readFileSync('src/data/footer-links.json', 'utf8'));
+  } catch (err) {
+    console.error(`ERROR loading data files: ${err.message}`);
+    process.exit(1);
+  }
 
   if (!fs.existsSync('src/pages')) {
     console.log('Build complete: 0 pages (src/pages does not exist yet)');
