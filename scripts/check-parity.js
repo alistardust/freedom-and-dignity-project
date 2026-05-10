@@ -58,6 +58,10 @@ function walkHtml(dir, results = []) {
   return results;
 }
 
+function childSnap(mainNode) {
+  return (mainNode.childNodes || []).map(normalize).filter(Boolean).join('|');
+}
+
 function checkParity() {
   // Compare docs/ HTML (original, pre-migration snapshot) against
   // docs/ HTML re-generated from src/pages/ after running npm run build.
@@ -108,9 +112,6 @@ function checkParity() {
     // Compare only the *children* of the main element, not the element itself.
     // The outer element's attributes (e.g. class="roadmap-body") may legitimately differ
     // between the hand-authored original and the template-generated output.
-    function childSnap(mainNode) {
-      return (mainNode.childNodes || []).map(normalize).filter(Boolean).join('|');
-    }
     const origSnap    = childSnap(origMain);
     const rebuiltSnap = rebuiltMain ? childSnap(rebuiltMain) : '<missing>';
 

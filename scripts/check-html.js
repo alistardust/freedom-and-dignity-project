@@ -109,6 +109,20 @@ function checkFile(html, filePath) {
     errors.push(`${filePath}: <meta name="description"> has empty content attribute`);
   }
 
+  // Duplicate id check — catches the regression where inner templates carry
+  // id="main-content" while _base.njk already emits <main id="main-content">.
+  const allIdNodes = [];
+  (function collectIds(node) {
+    const idAttr = (node.attrs || []).find(a => a.name === 'id');
+    if (idAttr && idAttr.value) allIdNodes.push(idAttr.value);
+    for (const child of (node.childNodes || [])) collectIds(child);
+  }(doc));
+  const idCounts = {};
+  for (const id of allIdNodes) idCounts[id] = (idCounts[id] || 0) + 1;
+  for (const [id, count] of Object.entries(idCounts)) {
+    if (count > 1) errors.push(`${filePath}: id="${id}" appears ${count} times (must be unique)`);
+  }
+
   return errors;
 }
 
