@@ -155,7 +155,7 @@ tests/
 
 **`aria-current="page"` set at build time** by comparing `currentPage` to each nav item's `href`. For pages that are not themselves nav destinations (pillar pages, compare pages), no nav item is marked active at build time. `app.js` can still add `.active` class at runtime via URL comparison for these pages.
 
-**Active link class is `.active`** throughout — this matches the existing CSS selectors (`.nav-links a.active`) and e2e test assertions. Do not rename to `.is-active`.
+**Active link class is `.active`** throughout — this matches the existing CSS selectors (`.nav-links a.active`) and e2e test assertions. Do not rename to `.is-active`. `aria-current="page"` is the semantic accessibility attribute set at build time; `.active` is the visual CSS class always set by `app.js` at runtime. For nav-destination pages, both will be present, set independently from different mechanisms.
 
 **`#site-tree` is a static `<nav>` placeholder** in the shell. The element must be `<nav>` (not `<div>`) to be semantically correct for the role it plays. `app.js` `buildPanel()` is rewritten to:
 1. Find the existing element: `const panel = document.getElementById('site-tree')`
@@ -240,7 +240,13 @@ Root pages (`docs/*.html`) → `base = ""`. One-level subdir (`docs/pillars/*.ht
 ### Responsibilities
 
 1. Load `src/data/nav.json` and `src/data/footer-links.json`
-2. Configure Nunjucks with `src/templates/` as the template path
+2. Configure Nunjucks with a `FileSystemLoader` pointing at **both** `src/templates` and `src/pages` (in that order). This lets `env.render('pillars/healthcare.njk', context)` resolve page files via the second path while `{% extends "_base.njk" %}` resolves via the first. Configure with `autoescape: false` — content blocks contain raw HTML and must not be entity-escaped. Example:
+   ```js
+   const env = new nunjucks.Environment(
+     new nunjucks.FileSystemLoader(['src/templates', 'src/pages']),
+     { autoescape: false }
+   );
+   ```
 3. For each `src/pages/**/*.njk`:
    - Compute output path under `docs/` (mirror directory structure, `.njk` → `.html`)
    - Compute `base` from output path depth: `'../'.repeat(depth)`
@@ -264,7 +270,8 @@ Root pages (`docs/*.html`) → `base = ""`. One-level subdir (`docs/pillars/*.ht
 
 ```json
 "devDependencies": {
-  "nunjucks": "^3.2.4"
+  "nunjucks": "^3.2.4",
+  "parse5": "^7.0.0"
 }
 ```
 
@@ -315,9 +322,9 @@ build:
     - run: npx playwright install firefox --with-deps
     - run: npm run build
     - run: |
-        git diff --exit-code docs/
-        test -z "$(git ls-files --others --exclude-standard docs/)"
-      # fail if docs/ is stale or has untracked new files
+        git diff --exit-code -- docs/ ':!docs/superpowers/'
+        git ls-files --others --exclude-standard docs/ | grep -v '^docs/superpowers/' | grep . && exit 1 || true
+      # fail if docs/ (excluding docs/superpowers/) is stale or has untracked new files
     - run: npm run check:html
     - run: npm run test:visual          # visual regression (see Section 4)
     - uses: actions/upload-artifact@v4
@@ -350,11 +357,11 @@ deploy:
 
 ### `docs/` freshness strategy
 
-`docs/` remains committed to the repo as the verified, reviewable build output. Contributors must run `npm run build` locally before committing any changes to `src/`. CI enforces this with a two-step check: `git diff --exit-code docs/` (catches modified tracked files) and `git ls-files --others --exclude-standard docs/` (catches new untracked files). If either check fails, the build fails and no artifact is uploaded. This eliminates the "CI commits back to the repo" footgun entirely.
+`docs/` remains committed to the repo as the verified, reviewable build output. Contributors must run `npm run build` locally before committing any changes to `src/`. CI enforces this with a two-step check scoped to exclude `docs/superpowers/` (which contains hand-authored specs and plans, not build output): `git diff --exit-code -- docs/ ':!docs/superpowers/'` (catches modified tracked files) and a filtered `git ls-files --others` pipe (catches new untracked files outside `docs/superpowers/`). If either check fails, the build fails and no artifact is uploaded. This eliminates the "CI commits back to the repo" footgun entirely.
 
 ### Conformance check (`npm run check:html` → `scripts/check-html.js`)
 
-Scans every `.html` file in `docs/` and asserts the following. Any violation exits non-zero and prints the offending file and failed assertion.
+Scans every `.html` file in `docs/` (excluding `docs/superpowers/`) and asserts the following. Any violation exits non-zero and prints the offending file and failed assertion.
 
 | Assertion | Expected |
 |---|---|
@@ -412,10 +419,12 @@ Viewports: desktop (1280×800) and mobile (390×844).
 
 ### Baseline workflow
 
+Snapshots must be generated on Linux (ubuntu-latest) to match CI. Playwright appends the OS to snapshot filenames by default (`-linux.png`, `-darwin.png`); snapshots committed from macOS will never match CI and cause permanent "missing snapshot" failures.
+
 - Snapshots committed at `tests/visual/visual.spec.js-snapshots/`
+- **To establish or update baselines:** run `npm run test:visual:update` in a CI environment (ubuntu-latest), not locally on macOS. The simplest path: push a branch, trigger CI manually with `--update-snapshots`, download the artifact, commit the new snapshots.
 - On every PR, CI runs `npm run test:visual` and diffs against committed snapshots
 - Diff exceeding threshold → CI fails; diff images uploaded as CI artifact
-- To update baselines intentionally: run `npm run test:visual:update` locally, commit new snapshots in the same PR as the design change
 
 ### What it catches
 
@@ -429,10 +438,10 @@ Layout breakage, missing logo, footer structure changes, hero section collapse, 
 
 A one-time migration script (`scripts/migrate-to-njk.js`) does the mechanical conversion:
 
-1. For each `.html` file in `docs/`:
+1. For each `.html` file in `docs/` (skipping all files under `docs/superpowers/`):
    - Strip `<html>`, `<head>`, `<nav class="site-nav">`, `<footer class="site-footer">`, and `<script>` boilerplate
    - Extract `<title>` text into `{% block title %}`
-   - Extract description meta content into `{% set description %}`
+   - Extract description meta content into `{% set description = '...' %}`
    - Wrap remaining body content in `{% extends "_base.njk" %}` and `{% block content %}`
    - Write to the corresponding path under `src/pages/` with `.njk` extension
 2. **Edge case handling:** if the script cannot unambiguously identify the shell boundaries in a page (e.g. `policyos.html` with a non-standard nav, `policy-library.html` with duplicate navs), it skips that file, prints a warning, and continues. Skipped files are migrated manually.
@@ -441,7 +450,7 @@ A one-time migration script (`scripts/migrate-to-njk.js`) does the mechanical co
 
 ### Parity check (`scripts/check-parity.js`)
 
-- Parses both files with an HTML parser
+- Parses both files with `parse5` as DOM trees
 - Compares element structure (tag names, ids, classes, text content) — not whitespace or attribute ordering
 - Exits non-zero if structural differences are found
 - Prints: file path + a list of elements present in one file but not the other
@@ -511,9 +520,11 @@ The inline `style="color:inherit;opacity:.7"` on the AI disclosure link in the f
 }
 ```
 
----
+### Adding new pages after migration
 
-## Out of scope (Phase 1)
+Create `src/pages/newpage.njk` extending `_base.njk`. Run `npm run build`. Commit both the `.njk` source and the updated `docs/newpage.html` together. CI's freshness check will catch a missing build step if only one is committed.
+
+---
 
 - Intermediate templates (`_pillar.njk`, `_compare.njk`)
 - Generating policy card HTML from the database
@@ -528,7 +539,7 @@ All are verifiable by automated check or manual inspection:
 
 1. `npm run check:html` passes on every file in `docs/` (0 violations)
 2. `npm run check:html` source-level lint passes on every file in `src/pages/` (no hand-authored shell elements)
-3. `git diff --exit-code docs/` passes after `npm run build` (docs/ is never stale)
+3. `git diff --exit-code -- docs/ ':!docs/superpowers/'` passes after `npm run build` (docs/ build output is never stale)
 4. Visual regression baselines established for all 5 page types at 2 viewports; `npm run test:visual` passes
 5. `npm run test:unit` passes (all tests)
 6. `npm run test:e2e` passes (all existing assertions)

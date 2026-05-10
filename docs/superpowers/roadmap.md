@@ -1,6 +1,6 @@
 # Freedom and Dignity Project — Work Tracker
 
-_Last updated: 2026-05-10. Update this file when epics open, close, or shift priority._
+_Last updated: 2026-05-10 (HTML build system brainstorm complete; spec review in progress). Update this file when epics open, close, or shift priority._
 _GitHub Issues are the ticketing system. This doc is the human-readable summary layer._
 _Issue links: https://github.com/alistardust/freedom-and-dignity-project/issues_
 
@@ -20,7 +20,7 @@ GitHub Issues: https://github.com/alistardust/freedom-and-dignity-project/issues
 ## Epics
 
 ### 1. HTML Build System (Nunjucks)
-**Status:** active — brainstorm mid-flight
+**Status:** active — spec review in progress; implementation plan not yet written
 **GitHub issue:** [#1](https://github.com/alistardust/freedom-and-dignity-project/issues/1)
 **Spec:** `docs/superpowers/specs/2026-05-08-html-build-system-design.md`
 **Plan:** not yet written
@@ -29,9 +29,7 @@ Migrate ~45 hand-authored HTML pages to a Nunjucks base template with a canonica
 (nav, head, footer). Phase 1 only — pillar card content unchanged. Adds a build step to
 the GitHub Actions deploy workflow.
 
-**Next action:** Resume brainstorm — present and get approval for sections 2-5 (template
-structure, CI workflow, visual regression testing, migration strategy), then write the
-implementation plan.
+**Next action:** Spec review complete → write implementation plan (writing-plans skill).
 
 ---
 
