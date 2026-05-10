@@ -20,16 +20,16 @@ GitHub Issues: https://github.com/alistardust/freedom-and-dignity-project/issues
 ## Epics
 
 ### 1. HTML Build System (Nunjucks)
-**Status:** active — spec review in progress; implementation plan not yet written
+**Status:** implementation complete — pending GH Pages source switch and visual baseline CI run
 **GitHub issue:** [#1](https://github.com/alistardust/freedom-and-dignity-project/issues/1)
 **Spec:** `docs/superpowers/specs/2026-05-08-html-build-system-design.md`
-**Plan:** not yet written
+**Plan:** `docs/superpowers/plans/2026-05-10-html-build-system.md`
 
-Migrate ~45 hand-authored HTML pages to a Nunjucks base template with a canonical shell
-(nav, head, footer). Phase 1 only — pillar card content unchanged. Adds a build step to
-the GitHub Actions deploy workflow.
+Migrated 47 hand-authored HTML pages to a Nunjucks base template with a canonical shell
+(nav, head, footer). Phase 1 complete — pillar card content unchanged. CI workflow added.
 
-**Next action:** Spec review complete → write implementation plan (writing-plans skill).
+**Remaining:** (1) Switch GH Pages source to GitHub Actions in repo settings. (2) Trigger
+`workflow_dispatch` with `update_snapshots=true` to generate visual baselines; commit artifact.
 
 ---
 
