@@ -14,7 +14,7 @@ function serialize(node) {
   }
   const tag = node.tagName;
   const attrs = (node.attrs || [])
-    .map(a => a.value === '' ? a.name : `${a.name}="${a.value.replace(/"/g, '&quot;')}"`)
+    .map(a => a.value === '' ? a.name : `${a.name}="${a.value.replace(/&/g, '&amp;').replace(/"/g, '&quot;')}"`)
     .join(' ');
   const attrStr = attrs ? ` ${attrs}` : '';
   const voidTags = new Set([
@@ -57,7 +57,7 @@ function walkHtml(dir, results = []) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
     const full = path.join(dir, entry.name);
     if (entry.isDirectory()) {
-      if (full === path.join(dir, 'superpowers')) continue;
+      if (entry.name === 'superpowers') continue;
       walkHtml(full, results);
     } else if (entry.name.endsWith('.html')) {
       results.push(full);
@@ -96,7 +96,7 @@ function migrateFile(htmlPath) {
 
   // Extract og:url path (strip the site root prefix)
   const ogUrlPath = ogUrl.replace(
-    /^https:\/\/alistardust\.github\.io\/freedom-and-dignity-project\//,
+    /^https:\/\/alistardust\.github\.io\/freedom-and-dignity-project\/?/,
     ''
   );
 
@@ -159,7 +159,7 @@ function migrateFile(htmlPath) {
   }
 
   if (bodyClass) {
-    lines.push(`{% set body_class = "${bodyClass}" %}`);
+    lines.push(`{% set body_class = "${bodyClass.replace(/"/g, '\\"')}" %}`);
   }
 
   if (titleText) {
