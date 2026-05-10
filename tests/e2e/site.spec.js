@@ -278,7 +278,7 @@ test.describe('Navigation', () => {
 
   test('pillar page → back to platform', async ({ page }) => {
     await page.goto('/pillars/healthcare.html');
-    await page.locator('a[href*="platform.html"]').first().click();
+    await page.locator('.footer-links a[href*="platform.html"]').click();
     await expect(page).toHaveURL(/platform/);
   });
 

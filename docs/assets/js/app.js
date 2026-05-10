@@ -124,8 +124,6 @@
       const panel = document.getElementById('site-tree');
       if (!panel) return;
 
-      panel.removeAttribute('hidden');
-
       const header = document.createElement('div');
       header.className = 'st-header';
       const closeBtn = document.createElement('button');
@@ -142,6 +140,8 @@
       ul.setAttribute('role', 'tree');
       buildTree().forEach(item => ul.appendChild(makeTreeNode(item, 1)));
       panel.appendChild(ul);
+
+      panel.removeAttribute('hidden');
 
       const overlay = document.createElement('div');
       overlay.className = 'st-overlay';
