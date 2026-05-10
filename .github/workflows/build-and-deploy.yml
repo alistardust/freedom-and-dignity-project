@@ -1,0 +1,99 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      update_snapshots:
+        description: 'Update visual regression snapshots'
+        type: boolean
+        default: false
+
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - run: npx playwright install firefox --with-deps
+
+      - run: npm run build
+
+      - name: Check docs/ freshness (no stale or untracked build output)
+        run: |
+          git diff --exit-code -- docs/ ':!docs/superpowers/'
+          git ls-files --others --exclude-standard docs/ | grep -v '^docs/superpowers/' | grep . && exit 1 || true
+
+      - name: Orphan detection (HTML with no .njk source)
+        run: |
+          node -e "
+            const fs = require('fs'), path = require('path');
+            const walk = (d) => fs.readdirSync(d, {withFileTypes: true})
+              .flatMap(e => e.isDirectory() ? walk(path.join(d, e.name)) : [path.join(d, e.name)]);
+            const orphans = walk('docs')
+              .filter(f => f.endsWith('.html') && !f.startsWith('docs/superpowers'))
+              .filter(f => !fs.existsSync(f.replace('docs/', 'src/pages/').replace('.html', '.njk')));
+            if (orphans.length) { console.error('Orphaned docs files (no .njk source):', orphans); process.exit(1); }
+          "
+
+      - run: npm run check:html
+
+      - name: Run unit tests
+        run: npm run test:unit
+
+      - name: Run e2e tests
+        run: npm run test:e2e
+
+      - name: Run visual regression tests
+        run: |
+          if [ "${{ inputs.update_snapshots }}" = "true" ]; then
+            npm run test:visual:update
+          else
+            npm run test:visual
+          fi
+
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: visual-test-results
+          path: test-results/
+
+      - uses: actions/upload-artifact@v4
+        if: ${{ inputs.update_snapshots == 'true' }}
+        with:
+          name: visual-snapshots-updated
+          path: tests/visual/visual.spec.js-snapshots/
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs/
+
+  deploy:
+    needs: build
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    permissions:
+      pages: write
+      id-token: write
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
