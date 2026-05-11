@@ -958,13 +958,25 @@ test.describe('plan.html', () => {
   });
 
   test('hero statement contains expected copy', async ({ page }) => {
-    await expect(page.locator('.hero-statement')).toContainText('Voting matters');
+    await expect(page.locator('.hero-statement')).toContainText('The promise of America is not yet kept');
   });
 
-  test('all three phase names are present', async ({ page }) => {
-    await expect(page.locator('.policyos-layers')).toContainText('The Foundation');
-    await expect(page.locator('.policyos-layers')).toContainText('The Campaign');
-    await expect(page.locator('.policyos-layers')).toContainText('The Transformation');
+  test('three-phase card grid is removed', async ({ page }) => {
+    // .policyos-layers is fully deleted from this page
+    await expect(page.locator('.policyos-layers')).toHaveCount(0);
+  });
+
+  test('section headings match spec', async ({ page }) => {
+    const headings = page.locator('h2');
+    await expect(headings.filter({ hasText: 'The work of keeping a promise' })).toHaveCount(1);
+    await expect(headings.filter({ hasText: 'Built together' })).toHaveCount(1);
+    await expect(headings.filter({ hasText: 'The demands are the work' })).toHaveCount(1);
+    await expect(headings.filter({ hasText: 'A work in progress, by design' })).toHaveCount(1);
+    // Assert order matches spec
+    await expect(headings.nth(0)).toContainText('The work of keeping a promise');
+    await expect(headings.nth(1)).toContainText('Built together');
+    await expect(headings.nth(2)).toContainText('The demands are the work');
+    await expect(headings.nth(3)).toContainText('A work in progress, by design');
   });
 
   test('Get Involved CTA links correctly', async ({ page }) => {
@@ -973,6 +985,8 @@ test.describe('plan.html', () => {
     expect(href).toContain('get-involved');
     await page.goto(href);
     await expect(page).toHaveTitle(/Get Involved/i);
+    await page.goto('/plan.html');
+    await expect(page.locator('.page-nav-cta a[href*="github.com"]')).toBeAttached();
   });
 
   test('nav shows aria-current on plan.html', async ({ page }) => {
