@@ -109,7 +109,7 @@ Tests must pass after Phase 2. Commit: `refactor(cards): strip status classes an
 
 New script: `scripts/backfill-rule-notes.js` (Node.js, to be created in Phase 3).
 
-Reads every card from all 26 pillar HTML files, finds cards with a `rule-notes` paragraph, matches on the card ID (`data-id` attribute / card element `id`), and writes the `rule-notes` text content to the new `rule_notes` DB column.
+Reads every card from all 26 pillar HTML files, finds cards with a `rule-notes` paragraph, matches on the `id` attribute of the `<div class="policy-card">` element (e.g. `id="HLTH-ACCS-0001"`), and writes the `rule-notes` text content to the new `rule_notes` DB column.
 
 Miss-handling policy: if a card ID found in HTML has no matching row in the DB, log a warning to stdout and continue. After the run, print a summary of all unmatched IDs for review. Do not fail the script on a miss. Unmatched IDs should be investigated manually and backfilled into the DB separately.
 
