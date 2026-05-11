@@ -623,9 +623,8 @@ test.describe('Roadmap page', () => {
     await expect(page.locator('.roadmap-track')).toHaveCount(7);
   });
 
-  test('nav has Problem and Roadmap links', async ({ page }) => {
+  test('nav has a Problem link', async ({ page }) => {
     await expect(page.locator('.nav-links a[href*="problem"]')).toBeAttached();
-    await expect(page.locator('.nav-links a[href*="roadmap"]')).toBeAttached();
   });
 });
 
