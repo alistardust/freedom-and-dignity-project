@@ -84,32 +84,43 @@ Commit: `chore(db): add rule_notes column to positions table`
 
 New script: `scripts/strip-card-status.js` (Node.js, to be created in Phase 2).
 
-Processes every `docs/pillars/*.html` file and:
+**Important:** Card content lives in the Nunjucks source files, not in generated output. The script must process every `src/pages/pillars/*.njk` file, not `docs/pillars/*.html`. After the script runs, `npm run build` must be run to regenerate `docs/pillars/*.html` before tests are run.
+
+The script processes every `src/pages/pillars/*.njk` file and:
 
 - Removes the status class modifier from all cards: `class="policy-card status-included"` and `class="policy-card proposal"` and all other `status-*` variants become `class="policy-card"`
 - Removes all `<span class="rule-badge">...</span>` elements
 - Removes all `<div class="rule-status">...</div>` elements (present on proposal cards only)
 - Leaves `rule-body` and `rule-citations` on proposal cards intact (handled in Phase 4)
 
-CSS changes in `docs/assets/css/style.css`:
+CSS changes in `docs/assets/css/style.css` -- remove all of the following rules:
 
-- Remove `.policy-card.status-included` border rule
-- Remove `.policy-card.proposal` border rule
-- Remove `.status-included .rule-badge` rule
-- Remove `.proposal .rule-badge` rule
-- Remove all other `.rule-badge` rules
+- `.policy-card.status-included` border rule
+- `.policy-card.proposal` border rule
+- `.policy-card.status-updated` border rule
+- `.policy-card.status-partial` border rule
+- `.policy-card.status-missing` border + opacity rule
+- `.status-included .rule-badge` rule
+- `.status-updated .rule-badge` rule
+- `.status-partial .rule-badge` rule
+- `.status-missing .rule-badge` rule
+- `.proposal .rule-badge` rule
+- `.rule-badge` base rule and all remaining `.rule-badge` variants
+- `.rule-status` rule
 
 After Phase 2, proposal cards are in a valid intermediate state: `class="policy-card"` with `rule-body` and `rule-citations` instead of `rule-stmt` and `rule-notes`. This is expected and temporary.
 
 The script must be idempotent: running it twice on the same file must produce the same result. This ensures safe re-runs if interrupted mid-pillar.
 
-Tests must pass after Phase 2. Commit: `refactor(cards): strip status classes and badges from all policy cards`
+After the script runs: `npm run build && npm run test:unit && npm run test:e2e` must all pass (Phase 2 modifies all 26 pillar source files and CSS; e2e catches rendering regressions before Phase 4 begins).
+
+Commit: `refactor(cards): strip status classes and badges from all policy cards`
 
 ### Phase 3: Backfill existing rule_notes to DB
 
 New script: `scripts/backfill-rule-notes.js` (Node.js, to be created in Phase 3).
 
-Reads every card from all 26 pillar HTML files, finds cards with a `rule-notes` paragraph, matches on the `id` attribute of the `<div class="policy-card">` element (e.g. `id="HLTH-ACCS-0001"`), and writes the `rule-notes` text content to the new `rule_notes` DB column.
+Reads every card from all 26 pillar **source files** (`src/pages/pillars/*.njk`), finds cards with a `rule-notes` paragraph, matches on the `id` attribute of the `<div class="policy-card">` element (e.g. `id="HLTH-ACCS-0001"`), and writes the `rule-notes` text content to the new `rule_notes` DB column.
 
 Miss-handling policy: if a card ID found in HTML has no matching row in the DB, log a warning to stdout and continue. After the run, print a summary of all unmatched IDs for review. Do not fail the script on a miss. Unmatched IDs should be investigated manually and backfilled into the DB separately.
 
@@ -125,20 +136,40 @@ Phase 4 uses one subagent per pillar. **Subagents run serially, one at a time, i
 
 Each subagent works sequentially through all families in its assigned pillar. Within each family, the subagent:
 
-1. Reads all cards with `rule-body` (the unconverted proposal cards). Policy families are groupings of related cards within a pillar, each contained in a `<div class="policy-family">` element with a `family-header`. Work proceeds family by family within each pillar.
+1. Reads all cards with `rule-body` from the **source file** (`src/pages/pillars/<pillar>.njk`). Policy families are groupings of related cards within a pillar, each contained in a `<div class="policy-family">` element with a `family-header`. Work proceeds family by family within each pillar.
 2. For each card in the family:
    - Extracts a `rule-stmt` (formal, precise policy statement with thresholds and enforcement detail) from `rule-body`
    - Converts `rule-body` + `rule-citations` into `rule-notes` prose with inline citations and adversarial review
    - Removes `rule-body` and `rule-citations` from the HTML
-3. Updates the DB for all cards in the family in a single transaction using UPSERT semantics (`INSERT OR REPLACE` or equivalent). 113 proposal card IDs are known to be missing from the `positions` table -- a plain `UPDATE` would silently skip them. For each card:
+3. Updates the DB for all cards in the family in a single transaction using true UPSERT semantics:
+
+   ```sql
+   INSERT INTO positions (id, domain, subdomain, short_title, plain_language, full_statement, rule_notes)
+   VALUES (?, ?, ?, ?, ?, ?, ?)
+   ON CONFLICT(id) DO UPDATE SET
+     full_statement = excluded.full_statement,
+     rule_notes     = excluded.rule_notes,
+     short_title    = COALESCE(excluded.short_title, short_title),
+     plain_language = COALESCE(excluded.plain_language, plain_language);
+   ```
+
+   Do **not** use `INSERT OR REPLACE` -- it is DELETE + INSERT and will silently orphan any child rows that reference `positions` via foreign key. 113 proposal card IDs are known to be missing from the `positions` table -- a plain `UPDATE` would silently skip them. For each card:
    - `rule_notes` is set from the new `rule-notes` content
    - `full_statement` is set from the new `rule-stmt` content
    - `short_title` and `plain_language` are confirmed to be populated; if missing, backfill from the card's existing HTML `rule-title` and `rule-plain` fields respectively
    - If inserting a new row, `id`, `domain`, and `subdomain` must be populated from the card's ID (parseable as `DOMAIN-SUBDOMAIN-NNNN`)
 
    If the transaction fails, roll back the entire family and surface the error -- do not partially commit DB updates.
-4. Writes the converted HTML for all cards in the family. HTML is written **after** a successful DB commit. If HTML writing fails after DB commit, log the error and surface it for manual recovery (the DB is already correct; re-running Phase 4 on that family will re-derive the HTML and skip cards that already have `rule-stmt`).
-5. Runs `npm run test:unit`. If tests pass, commits that family: `policy(<pillar>): complete <FAMILY> cards`. If tests fail, stop immediately and surface the failure with the test output. Do not commit, do not proceed to the next family, and do not attempt to auto-fix. Leave the DB changes and HTML writes in place -- they are safe to leave uncommitted because Phase 4 is idempotent (cards with `rule-stmt` are skipped on re-run). Fix the test failure manually and re-run the family from step 5.
+4. Writes the converted HTML for all cards in the family back to `src/pages/pillars/<pillar>.njk`. HTML is written **after** a successful DB commit. If HTML writing fails after DB commit, log the error and surface it for manual recovery (the DB is already correct; re-running Phase 4 on that family will re-derive the HTML and skip cards that already have `rule-stmt`).
+5. Runs `npm run build && npm run test:unit`. If tests pass, commits that family:
+
+   ```
+   policy(<pillar-slug>): complete <family-header-slug> cards
+   ```
+
+   Where `<family-header-slug>` is a kebab-case slug of the family's `family-header` text (e.g. `access-to-care`, `drug-pricing`). This must be deterministic and derivable from the source without ambiguity.
+
+   If tests fail, stop immediately and surface the failure with the test output. Do not commit, do not proceed to the next family, and do not attempt to auto-fix. Leave the DB changes and HTML writes in place -- they are safe to leave uncommitted because Phase 4 is idempotent (cards with `rule-stmt` are skipped on re-run). Fix the test failure manually and re-run the family from step 5.
 6. Moves to the next family and repeats.
 
 Phase 4 is idempotent per family: remaining work is detected by the presence of `rule-body` on a card. Cards that already have `rule-stmt` are skipped.
@@ -184,8 +215,8 @@ Research must use primary sources (federal statutes, court opinions, government 
 
 ## Testing
 
-After Phase 2: `npm run test:unit` and `npm run test:e2e` must pass (Phase 2 modifies all 26 pillar files and CSS; e2e catches rendering regressions before Phase 4 begins).
-After each Phase 4 family commit: `npm run test:unit` must pass (per step 5 above).
+After Phase 2: `npm run build && npm run test:unit && npm run test:e2e` must pass (Phase 2 modifies all 26 pillar source files and CSS; a full build + e2e run catches rendering regressions before Phase 4 begins).
+After each Phase 4 family commit: `npm run build && npm run test:unit` must pass (per step 5 above).
 After all Phase 4 work: `npm run test:e2e` full site check.
 
 ---
@@ -196,3 +227,4 @@ After all Phase 4 work: `npm run test:e2e` full site check.
 - Adding new policy positions
 - Changing existing `rule-stmt` or `rule-plain` content on formerly `status-included` cards
 - Renaming DB columns to match HTML field names (deferred)
+- Removing `.policy-card.card-clamped-active .rule-body` and `.policy-card.expanded .rule-body` CSS rules -- these become dead code once all `rule-body` elements are removed in Phase 4, but CSS cleanup is deferred to a follow-up chore commit after Phase 4 completes
