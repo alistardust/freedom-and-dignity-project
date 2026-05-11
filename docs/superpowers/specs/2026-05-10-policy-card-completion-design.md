@@ -121,24 +121,26 @@ Commit: `chore(db): backfill rule_notes from existing status-included cards (sta
 
 ### Phase 4: Per-pillar proposal card content conversion
 
-Phase 4 uses one subagent per pillar. Each subagent works sequentially through all families in its assigned pillar. Within each family, the subagent:
+Phase 4 uses one subagent per pillar. **Subagents run serially, one at a time, in the priority order in the table below.** Parallel execution is not permitted: SQLite does not support concurrent writers, and parallel DB commits on the same branch produce unresolvable merge conflicts.
+
+Each subagent works sequentially through all families in its assigned pillar. Within each family, the subagent:
 
 1. Reads all cards with `rule-body` (the unconverted proposal cards). Policy families are groupings of related cards within a pillar, each contained in a `<div class="policy-family">` element with a `family-header`. Work proceeds family by family within each pillar.
 2. For each card in the family:
-   - Extracts a `rule-stmt` (short, formal, precise policy statement) from `rule-body`
+   - Extracts a `rule-stmt` (formal, precise policy statement with thresholds and enforcement detail) from `rule-body`
    - Converts `rule-body` + `rule-citations` into `rule-notes` prose with inline citations and adversarial review
    - Removes `rule-body` and `rule-citations` from the HTML
 3. Updates the DB for all cards in the family in a single transaction:
    - `rule_notes` is set from the new `rule-notes` content
    - `full_statement` is set from the new `rule-stmt` content
-   - `short_title` and `plain_language` are confirmed to be populated (backfilled if missing); proposal cards may have null values for these in the DB since they were not previously complete
-   
+   - `short_title` and `plain_language` are confirmed to be populated; if missing, backfill from the card's existing HTML `rule-title` and `rule-plain` fields respectively
+
    If the transaction fails, roll back the entire family and surface the error -- do not partially commit DB updates.
 4. Writes the converted HTML for all cards in the family. HTML is written **after** a successful DB commit. If HTML writing fails after DB commit, log the error and surface it for manual recovery (the DB is already correct; re-running Phase 4 on that family will re-derive the HTML and skip cards that already have `rule-stmt`).
-5. Runs `npm run test:unit`. If tests pass, commits that family: `policy(<pillar>): complete <FAMILY> cards`. If tests fail, stop immediately, surface the failure with the test output, and do not proceed to the next family or commit. Do not attempt to auto-fix test failures.
+5. Runs `npm run test:unit`. If tests pass, commits that family: `policy(<pillar>): complete <FAMILY> cards`. If tests fail, stop immediately and surface the failure with the test output. Do not commit, do not proceed to the next family, and do not attempt to auto-fix. Leave the DB changes and HTML writes in place -- they are safe to leave uncommitted because Phase 4 is idempotent (cards with `rule-stmt` are skipped on re-run). Fix the test failure manually and re-run the family from step 5.
 6. Moves to the next family and repeats.
 
-Phase 4 is idempotent per family: a subagent can detect remaining work by the presence of `rule-body` on a card. Cards that already have `rule-stmt` are skipped.
+Phase 4 is idempotent per family: remaining work is detected by the presence of `rule-body` on a card. Cards that already have `rule-stmt` are skipped.
 
 Research must use primary sources (federal statutes, court opinions, government data) and academic databases (Google Scholar, SSRN, NBER, PubMed where applicable). All citations go inline in `rule-notes` prose.
 
