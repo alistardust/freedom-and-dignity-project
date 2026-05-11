@@ -957,19 +957,22 @@ test.describe('plan.html', () => {
     await expect(page.locator('h1')).toContainText('The Plan');
   });
 
-  test('renders hero statement', async ({ page }) => {
-    await expect(page.locator('.hero-statement')).toBeAttached();
+  test('hero statement contains expected copy', async ({ page }) => {
+    await expect(page.locator('.hero-statement')).toContainText('Voting matters');
   });
 
-  test('renders all three phases', async ({ page }) => {
-    // 3 layer-cards: The Foundation, The Campaign, The Transformation
-    await expect(page.locator('.layer-card')).toHaveCount(3);
+  test('all three phase names are present', async ({ page }) => {
+    await expect(page.locator('.policyos-layers')).toContainText('The Foundation');
+    await expect(page.locator('.policyos-layers')).toContainText('The Campaign');
+    await expect(page.locator('.policyos-layers')).toContainText('The Transformation');
   });
 
   test('Get Involved CTA links correctly', async ({ page }) => {
-    const href = await page.locator('.page-nav-cta a').getAttribute('href');
-    expect(href).not.toBeNull();
+    const cta = page.locator('.page-nav-cta a.btn-primary');
+    const href = await cta.getAttribute('href');
     expect(href).toContain('get-involved');
+    await page.goto(href);
+    await expect(page).toHaveTitle(/Get Involved/i);
   });
 
   test('nav shows aria-current on plan.html', async ({ page }) => {
@@ -978,7 +981,6 @@ test.describe('plan.html', () => {
 
   test('approach.html still loads after de-navving', async ({ page }) => {
     await page.goto('/approach.html');
-    await expect(page).not.toHaveTitle(/404/);
-    await expect(page.locator('h1')).toBeAttached();
+    await expect(page).toHaveTitle(/Approach/i);
   });
 });
