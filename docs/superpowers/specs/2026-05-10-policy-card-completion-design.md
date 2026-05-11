@@ -6,7 +6,7 @@
 
 ## Problem
 
-1,201 policy cards across 26 pillars are at `class="policy-card proposal"` status. These cards have substantive content (`rule-title`, `rule-plain`, `rule-body` with citations) but are in a different structural format from the canonical card format, have not been through adversarial review, and are not represented completely in the policy catalog database.
+1,121 policy cards across 26 pillars are at `class="policy-card proposal"` status. These cards have substantive content (`rule-title`, `rule-plain`, `rule-body` with citations) but are in a different structural format from the canonical card format, have not been through adversarial review, and are not represented completely in the policy catalog database.
 
 Additionally, the site currently uses status classes (`status-included`, `proposal`) and badge labels (`Included`, `Proposal`) on all cards. The status system is being redesigned as part of the human review workflow effort. This work strips all status markers site-wide and standardizes card structure before the new system is designed.
 
@@ -15,7 +15,7 @@ Additionally, the site currently uses status classes (`status-included`, `propos
 ## Goals
 
 1. Standardize all policy cards to a single format with no status markers
-2. Convert all 1,201 proposal cards to the canonical card format with adversarial review
+2. Convert all 1,121 proposal cards to the canonical card format with adversarial review
 3. Add a `rule_notes` column to the database and keep it in sync with HTML
 
 ---
@@ -113,9 +113,11 @@ Reads every card from all 26 pillar HTML files, finds cards with a `rule-notes` 
 
 Miss-handling policy: if a card ID found in HTML has no matching row in the DB, log a warning to stdout and continue. After the run, print a summary of all unmatched IDs for review. Do not fail the script on a miss. Unmatched IDs should be investigated manually and backfilled into the DB separately.
 
-The script must be idempotent. Phase 3 modifies only the database, not HTML -- no test run is required after it.
+The script must be idempotent. Phase 3 modifies only the database, not HTML -- no test run is required after it. Backfills only `status-included` cards (those with `rule-notes` already present in HTML); proposal cards (`rule-body`/`rule-citations`) are out of scope here and handled in Phase 4.
 
-Commit: `chore(db): backfill rule_notes from existing status-included cards`
+Before Phase 4 begins, review the unmatched ID summary printed by this script. Any unmatched IDs should be investigated and backfilled into the DB manually before Phase 4 starts (or tracked as known gaps).
+
+Commit: `chore(db): backfill rule_notes from existing status-included cards (status-included only; proposal cards deferred to Phase 4)`
 
 ### Phase 4: Per-pillar proposal card content conversion
 
@@ -126,9 +128,17 @@ Phase 4 uses one subagent per pillar. Each subagent works sequentially through a
    - Extracts a `rule-stmt` (short, formal, precise policy statement) from `rule-body`
    - Converts `rule-body` + `rule-citations` into `rule-notes` prose with inline citations and adversarial review
    - Removes `rule-body` and `rule-citations` from the HTML
-3. Updates the DB for all cards in the family in a single transaction: each card's `rule_notes` column is set from the new `rule-notes` content. If the transaction fails, roll back the entire family and surface the error -- do not partially commit DB updates.
-4. Runs `npm run test:unit`. If tests pass, commits that family: `policy(<pillar>): complete <FAMILY> cards`. If tests fail, stop immediately, surface the failure with the test output, and do not proceed to the next family or commit. Do not attempt to auto-fix test failures.
-5. Moves to the next family and repeats.
+3. Updates the DB for all cards in the family in a single transaction:
+   - `rule_notes` is set from the new `rule-notes` content
+   - `full_statement` is set from the new `rule-stmt` content
+   - `short_title` and `plain_language` are confirmed to be populated (backfilled if missing); proposal cards may have null values for these in the DB since they were not previously complete
+   
+   If the transaction fails, roll back the entire family and surface the error -- do not partially commit DB updates.
+4. Writes the converted HTML for all cards in the family. HTML is written **after** a successful DB commit. If HTML writing fails after DB commit, log the error and surface it for manual recovery (the DB is already correct; re-running Phase 4 on that family will re-derive the HTML and skip cards that already have `rule-stmt`).
+5. Runs `npm run test:unit`. If tests pass, commits that family: `policy(<pillar>): complete <FAMILY> cards`. If tests fail, stop immediately, surface the failure with the test output, and do not proceed to the next family or commit. Do not attempt to auto-fix test failures.
+6. Moves to the next family and repeats.
+
+Phase 4 is idempotent per family: a subagent can detect remaining work by the presence of `rule-body` on a card. Cards that already have `rule-stmt` are skipped.
 
 Research must use primary sources (federal statutes, court opinions, government data) and academic databases (Google Scholar, SSRN, NBER, PubMed where applicable). All citations go inline in `rule-notes` prose.
 
@@ -136,7 +146,7 @@ Research must use primary sources (federal statutes, court opinions, government 
 
 ## Pillar Priority Order (Phase 4)
 
-26 pillars total; 25 require Phase 4 content work. `data-rights-and-privacy` requires Phase 2 mechanical cleanup only (its 34 cards already have `rule-stmt` and `rule-notes`).
+26 pillars total; 25 require Phase 4 content work. `data-rights-and-privacy` requires Phase 2 mechanical cleanup only (its 34 cards already have `rule-stmt` and `rule-notes`). Total proposal cards requiring Phase 4 conversion: 1,121.
 
 | Priority | Pillar | Proposal cards |
 |---|---|---|
