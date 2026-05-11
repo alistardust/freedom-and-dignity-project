@@ -34,7 +34,8 @@ for (const pg of PAGES) {
       await page.waitForLoadState('networkidle');
       await expect(page).toHaveScreenshot(`${pg.name}-${vp.name}.png`, {
         maxDiffPixelRatio: 0.001,  // 0.1% threshold
-        fullPage: true,
+        // fullPage omitted: pillar pages exceed the 32767px CDP screenshot limit.
+        // Viewport-only screenshots are sufficient to catch layout/nav regressions.
       });
     });
   }
