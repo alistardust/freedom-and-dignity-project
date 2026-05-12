@@ -23,7 +23,7 @@ Add full mobile browser test coverage across Android Chrome, iOS Safari, and Fir
 
 Shared constants module + separate mobile spec file.
 
-- Shared constants (`PILLAR_COUNT`, `SAMPLE_PILLARS`) extracted from `site.spec.js` into `tests/e2e/shared.js`
+- Shared module (`SAMPLE_PILLARS`) extracted from `site.spec.js` into `tests/e2e/shared.js`
 - `site.spec.js` imports from `shared.js` — no behaviour change
 - New `tests/e2e/mobile.spec.js` imports from `shared.js` and contains mobile-specific tests
 - Playwright `testMatch` per project controls which spec files each project runs
@@ -38,17 +38,12 @@ Shared constants module + separate mobile spec file.
 
 ### `tests/e2e/shared.js` (new)
 
-Exports two constants currently duplicated or at risk of diverging between spec files:
+Exports `SAMPLE_PILLARS`, the per-pillar slug/title list used by both spec files. `PILLAR_COUNT` is intentionally excluded — hardcoded pillar counts are being removed from the test suite.
 
 ```js
-const PILLAR_COUNT = 26; // must match the count in docs/assets/js/data.js
-
 // Each entry: { slug: string, title: string }
 // slug matches the filename at docs/pillars/<slug>.html
-// This list is used to generate one describe block per pillar page (per-page smoke tests).
-// It reflects all pillar pages that existed when the test was written (25 entries).
-// PILLAR_COUNT (26) includes one pillar that shares a page or has no standalone test —
-// the two values are maintained separately and need not match exactly.
+// Used to generate one describe block per pillar page in both site.spec.js and mobile.spec.js.
 const SAMPLE_PILLARS = [
   { slug: 'executive-power',               title: 'Executive Power' },
   { slug: 'elections-and-representation',  title: 'Elections' },
@@ -77,7 +72,7 @@ const SAMPLE_PILLARS = [
   { slug: 'science-technology-space',      title: 'Science Technology Space' },
 ];
 
-module.exports = { PILLAR_COUNT, SAMPLE_PILLARS };
+module.exports = { SAMPLE_PILLARS };
 ```
 
 ## `site.spec.js` on Mobile Profiles
@@ -167,7 +162,7 @@ Runs on homepage. Verifies:
 
 #### 2. No horizontal overflow
 
-Runs on homepage, pillars index, and `pillars/healthcare.html` as a representative pillar page. For each:
+Runs on homepage, pillars index, `pillars/healthcare.html`, and `compare/republican-party.html` (compare pages are identified as high-risk — complex grid, breakpoints down to 480px). For each:
 
 ```js
 const overflow = await page.evaluate(
@@ -184,7 +179,6 @@ Checks that key interactive controls meet the WCAG 2.5.5 minimum of 44 × 44 CSS
 
 - `.nav-hamburger` button
 - Primary CTA buttons on the homepage (`.entry-card a`, `.f-card a`)
-- Nav links (`.nav-links a`)
 
 Uses `locator.boundingBox()` and asserts `box.width >= 44 && box.height >= 44` (WCAG 2.5.5 requires both dimensions to meet the minimum).
 
