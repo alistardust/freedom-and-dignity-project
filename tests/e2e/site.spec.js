@@ -39,17 +39,18 @@ test.describe('Homepage', () => {
     await expect(page.locator('.entry-grid .entry-card')).toHaveCount(4);
   });
 
-  test('nav has 4 links (Home, Problem, The Plan, Get Involved)', async ({ page }) => {
-    // Baked-in nav: Home, Problem, The Plan, Get Involved = 4
+  test('nav has 4 links (Home, Rights, The Plan, Get Involved)', async ({ page }) => {
+    // Baked-in nav: Home, Rights, The Plan, Get Involved = 4
     await expect(page.locator('.nav-links a')).toHaveCount(4);
+    await expect(page.locator('.nav-links a').nth(1)).toHaveText('Rights');
     await expect(page.locator('.nav-links a').nth(2)).toHaveText('The Plan');
   });
 
   test('nav item has aria-current="page" on nav-destination page', async ({ page }) => {
-    await page.goto('/problem.html');
-    // Problem is a nav item — its link should have aria-current="page" set at build time
+    await page.goto('/rights.html');
+    // Rights is a nav item -- its link should have aria-current="page" set at build time
     await expect(
-      page.locator('.nav-links a[aria-current="page"][href*="problem"]')
+      page.locator('.nav-links a[aria-current="page"][href*="rights"]')
     ).toBeAttached();
   });
 
@@ -63,6 +64,42 @@ test.describe('Homepage', () => {
     // Dismiss button removes the banner
     await page.locator('.name-notice-dismiss').click();
     await expect(banner).not.toBeAttached();
+  });
+
+  test('rights section appears before foundations section', async ({ page }) => {
+    // Use DOM index rather than boundingBox -- boundingBox() returns null for off-screen elements
+    const order = await page.evaluate(() => {
+      const ids = Array.from(document.querySelectorAll('[id]')).map(el => el.id);
+      return { rights: ids.indexOf('rights-heading'), building: ids.indexOf('building-heading') };
+    });
+    expect(order.rights).toBeGreaterThanOrEqual(0);
+    expect(order.building).toBeGreaterThanOrEqual(0);
+    expect(order.rights).toBeLessThan(order.building);
+  });
+
+  test('"Pillars" does not appear in authored page content', async ({ page }) => {
+    // Scope to sections and page-hero only -- body includes injected nav/footer which
+    // may contain "pillars" links (e.g. Pillars index in footer)
+    const texts = await page.locator('section, .page-hero, .tour-section, .page-nav-cta').allTextContents();
+    expect(texts.join(' ')).not.toMatch(/\bpillars?\b/i);
+  });
+
+  test('hero h1 contains the new promise statement', async ({ page }) => {
+    const h1 = await page.locator('h1.hero-title').textContent();
+    expect(h1).toMatch(/promise.*never kept|never kept.*promise/i);
+  });
+
+  test('history section is present with correct heading', async ({ page }) => {
+    await expect(page.locator('#history-heading')).toBeAttached();
+    await expect(page.locator('section[aria-labelledby="history-heading"]')).toBeAttached();
+  });
+
+  test('rights nav link is present on home page', async ({ page }) => {
+    await expect(page.locator('.nav-links a[href*="rights"]')).toBeAttached();
+  });
+
+  test('problem section heading is absent from home page', async ({ page }) => {
+    await expect(page.locator('#problem-heading')).toHaveCount(0);
   });
 });
 
@@ -471,15 +508,12 @@ test.describe('Mission page', () => {
     expect(text).toMatch(/Problem/i);
   });
 
-  test('nav Problem link is present', async ({ page }) => {
-    // Problem link is baked into the HTML nav
-    const link = page.locator('.nav-links a[href*="problem"]');
-    await expect(link).toBeAttached();
+  test('nav does not have a Problem nav link (problem page is not in main nav)', async ({ page }) => {
+    await expect(page.locator('.nav-links a[href*="problem"]')).toHaveCount(0);
   });
 
-  test('nav Problem link is marked active on problem page', async ({ page }) => {
-    const link = page.locator('.nav-links a[href*="problem"].active');
-    await expect(link).toBeAttached();
+  test('nav has Rights link visible on problem page', async ({ page }) => {
+    await expect(page.locator('.nav-links a[href*="rights"]')).toBeAttached();
   });
 
   test('footer Problem link is present', async ({ page }) => {
@@ -624,8 +658,8 @@ test.describe('Roadmap page', () => {
     await expect(page.locator('.roadmap-track')).toHaveCount(7);
   });
 
-  test('nav has a Problem link', async ({ page }) => {
-    await expect(page.locator('.nav-links a[href*="problem"]')).toBeAttached();
+  test('nav has a Rights link', async ({ page }) => {
+    await expect(page.locator('.nav-links a[href*="rights"]')).toBeAttached();
   });
 });
 
@@ -653,25 +687,25 @@ test.describe('Elections pillar — Referendum and Recall section', () => {
   });
 });
 
-// ── MISSION NAV LINK REACHABLE FROM ALL PAGE TYPES ───────────────────────────
+// ── RIGHTS NAV LINK REACHABLE FROM ALL PAGE TYPES ────────────────────────────
 
-test.describe('Mission nav link from all page types', () => {
+test.describe('Rights nav link from all page types', () => {
   const pages = [
     { url: '/',                               label: 'Homepage' },
-    { url: '/policy-library.html',              label: 'Proposals' },
-    { url: '/pillars/index.html',            label: 'Pillars index' },
-    { url: '/pillars/healthcare.html',       label: 'Pillar page' },
-    { url: '/compare/index.html',            label: 'Compare index' },
+    { url: '/policy-library.html',            label: 'Proposals' },
+    { url: '/pillars/index.html',             label: 'Pillars index' },
+    { url: '/pillars/healthcare.html',        label: 'Pillar page' },
+    { url: '/compare/index.html',             label: 'Compare index' },
   ];
 
   for (const { url, label } of pages) {
-    test(`${label} has Mission/Problem in nav`, async ({ page }) => {
+    test(`${label} has Rights in nav`, async ({ page }) => {
       await page.goto(url);
-      const link = page.locator('.nav-links a[href*="problem"]');
+      const link = page.locator('.nav-links a[href*="rights"]');
       await expect(link).toBeAttached();
       const href = await link.getAttribute('href');
       await page.goto(href.startsWith('http') ? href : new URL(href, page.url()).toString());
-      await expect(page).toHaveTitle(/Problem|Mission.*Freedom and Dignity/i);
+      await expect(page).toHaveTitle(/Rights.*Freedom and Dignity/i);
     });
   }
 });
@@ -825,14 +859,14 @@ test.describe('Letter from the Founder page', () => {
     expect(count).toBeGreaterThanOrEqual(17);
   });
 
-  test('nav has problem link visible', async ({ page }) => {
+  test('nav has rights link visible', async ({ page }) => {
     // letter-from-the-founder is no longer a nav item; verify core nav links still present
-    await expect(page.locator('.nav-links a[href*="problem"]')).toBeAttached();
+    await expect(page.locator('.nav-links a[href*="rights"]')).toBeAttached();
   });
 
   test('nav and footer are injected', async ({ page }) => {
     // app.js injects nav links and footer — verify both are present
-    await expect(page.locator('.nav-links a[href*="problem"]')).toBeAttached();
+    await expect(page.locator('.nav-links a[href*="rights"]')).toBeAttached();
     await expect(page.locator('.site-footer')).toBeVisible();
   });
 

@@ -1,6 +1,6 @@
 [
   { "href": "index.html",        "label": "Home" },
-  { "href": "problem.html",      "label": "Problem" },
+  { "href": "rights.html",       "label": "Rights" },
   { "href": "plan.html",         "label": "The Plan" },
   { "href": "get-involved.html", "label": "Get Involved" }
 ]
