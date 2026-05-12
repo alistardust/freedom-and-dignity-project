@@ -109,7 +109,7 @@ test('nav has Rights link visible on problem page', async ({ page }) => {
 });
 ```
 
-- [ ] **Update 5 -- roadmap/plan page nav test.** Find the test `'nav has a Problem link'` (in the plan/roadmap describe block). Replace:
+- [ ] **Update 5 -- roadmap page nav test.** Find the test `'nav has a Problem link'` (in the plan/roadmap describe block). Replace:
 
 ```js
 test('nav has a Rights link', async ({ page }) => {
@@ -180,6 +180,20 @@ test('problem section heading is absent from home page', async ({ page }) => {
 
 **Files:**
 - Modify: `src/pages/index.njk`
+
+- [ ] **Update set description (line 2).** Replace:
+```
+{% set description = "Five structural foundations..." %}
+```
+with:
+```
+{% set description = "The promise America never kept, and the plan to keep it. An open-source policy platform built on rights, evidence, and public accountability." %}
+```
+
+- [ ] **Update twitter_description (line 5).** Replace the block content with:
+```
+{% block twitter_description %}The promise America never kept, and the plan to keep it. An open-source policy platform built on rights, evidence, and public accountability.{% endblock %}
+```
 
 - [ ] **Update page title (line 3).** Replace:
 ```
@@ -410,7 +424,7 @@ Replace with (no count span, no "pillars"):
   <div class="wrap">
     <p style="max-width:640px;margin-bottom:1rem">The promise of this country is not kept by any one person, or any one party, or any one platform. It is kept by a generation that decides to keep it.</p>
     <p style="max-width:640px;margin-bottom:1.5rem">Come be part of this work.</p>
-    <ul style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.5rem;list-style:none;padding:0">
+    <ul style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;margin-top:1.5rem;list-style:none;padding:0">
       <li><a href="get-involved.html" class="btn-primary">Get Involved</a></li>
       <li><a href="policy-library.html" class="btn-outline">See the Platform</a></li>
     </ul>
@@ -467,11 +481,12 @@ npm run test:unit
 ```
 Expected: all tests pass. The unit tests do not cover E2E behavior, but `content.test.js` will catch em-dashes.
 
-- [ ] **Run E2E tests:**
+- [ ] **Run E2E tests (desktop Firefox only — mobile suite is separate):**
 ```bash
 npm run test:e2e
 ```
 Expected: all tests pass, including the 6 new homepage tests and the 6 updated nav tests.
+Note: `test:e2e:firefox` is added by the mobile testing plan (a later task). Use `test:e2e` here.
 
 - [ ] **Verify no "Pillars" in authored homepage content:**
 ```bash
@@ -481,14 +496,14 @@ Expected: 0 results (or only results inside injected nav/footer, not authored se
 
 - [ ] **Verify no em-dashes in built output:**
 ```bash
-grep -n " -- \|—\|&#8212;" docs/index.html
+grep -n " -- \|—\|&#8212;" docs/index.html | grep -v '<title>'
 ```
-Expected: 0 results.
+Expected: 0 results (the `<title>` tag uses `—` as an approved exception; filtering it avoids a false positive).
 
 - [ ] **Commit:**
 ```bash
 git add src/pages/index.njk src/data/nav.json tests/e2e/site.spec.js docs/
-git commit -m "feat(homepage): rewrite per approved design -- rights first, history bridge, new hero
+git commit -m "feat(homepage): rewrite -- rights first, history bridge, new hero
 
 - Remove Problem and Approach sections; problem.html stays in build
 - New hero: 'The promise America never kept, and the plan to keep it.'
