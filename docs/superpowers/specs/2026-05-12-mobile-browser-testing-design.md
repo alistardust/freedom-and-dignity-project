@@ -100,14 +100,14 @@ All three mobile projects run `site.spec.js` in addition to `mobile.spec.js`. Mo
 **How to handle failures found during the mobile bug sweep:**
 
 1. If the failure is a genuine layout/visibility bug in the site, fix the site (`style.css` / `app.js`).
-2. If the failure is a desktop-only assertion that is correct for desktop but wrong on mobile (e.g. checking nav link visibility), add a project-name guard to skip it on mobile profiles. Do not use the `isMobile` Playwright fixture — it is not set for the `mobile-firefox` project (which uses a custom viewport, not a device preset). Use `testInfo.project.name` instead:
+2. If the failure is a desktop-only assertion that is correct for desktop but wrong on mobile (e.g. checking nav link visibility), add a project-name guard to skip it on mobile profiles. Do not use the `isMobile` Playwright fixture — it is not set for the `mobile-firefox` project (which uses a custom viewport, not a device preset). Use `testInfo.project.name` inside the test body instead:
    ```js
-   test.skip(
-     ({}, testInfo) => testInfo.project.name.startsWith('mobile'),
-     'desktop-only layout check'
-   );
+   test('nav links are visible', async ({ page }, testInfo) => {
+     test.skip(testInfo.project.name.startsWith('mobile'), 'desktop-only layout check');
+     // ... rest of test
+   });
    ```
-   Do not delete the test — keep it running on the `firefox` desktop project.
+   `testInfo` is the second parameter of the test callback — it is not available in the conditional annotation form `test.skip(fn)`. Call it inside the test body where `testInfo` is in scope. Do not delete the test — keep it running on the `firefox` desktop project.
 3. If a test is meaningful on both platforms but behaves differently, split it into a desktop and a mobile variant using the same guard.
 
 Both fixing the site and adding a skip guard are valid resolutions that satisfy success criterion #1 — the choice depends on whether the failure reflects a real bug.
@@ -176,7 +176,9 @@ Runs on homepage, pillars index, `pillars/healthcare.html`, and `compare/republi
 
 ```js
 const overflow = await page.evaluate(
-  () => document.body.scrollWidth > window.innerWidth
+  // Use documentElement (not body) — body overflow-x:hidden masks real overflow.
+  // Allow 1px tolerance for sub-pixel rounding.
+  () => document.documentElement.scrollWidth > window.innerWidth + 1
 );
 expect(overflow).toBe(false);
 ```
@@ -190,7 +192,7 @@ Checks that key interactive controls meet the WCAG 2.5.5 minimum of 44 × 44 CSS
 - `.nav-hamburger` button
 - Primary CTA buttons on the homepage (`.entry-card a`, `.f-card a`)
 
-Uses `locator.boundingBox()` and asserts `box.width >= 44 && box.height >= 44` (WCAG 2.5.5 requires both dimensions to meet the minimum).
+Uses `locator.boundingBox()` and asserts `box.width >= 44 && box.height >= 44` (WCAG 2.5.5 requires both dimensions to meet the minimum). Call `scrollIntoViewIfNeeded()` before `boundingBox()` — off-screen elements return `null`.
 
 #### 4. Mobile layout spot checks
 
@@ -233,7 +235,7 @@ Fixes go to `docs/assets/css/style.css` and/or `docs/assets/js/app.js`. Each dis
 "test:e2e:mobile-firefox": "playwright test --project=mobile-firefox"
 ```
 
-CI (`.github/workflows/tests.yml`) must be updated to run `npm run test:e2e:all` so iOS Safari and Firefox Mobile are included on every push and pull request. The existing `e2e` job installs only Firefox -- it will need Chromium added alongside Firefox in the `playwright install` step.
+CI (`.github/workflows/tests.yml`) must be updated to run `npm run test:e2e:all` so iOS Safari and Firefox Mobile are included on every push and pull request. The existing `e2e` job installs only Firefox — it will need Chromium and WebKit added: `npx playwright install firefox chromium webkit --with-deps`.
 
 Use `npm run test:e2e:firefox` when running the desktop suite in isolation (e.g., during homepage or nav work that predates mobile test setup).
 
