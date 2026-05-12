@@ -75,6 +75,16 @@ const SAMPLE_PILLARS = [
 module.exports = { SAMPLE_PILLARS };
 ```
 
+### `tests/e2e/site.spec.js` (updated)
+
+Remove the inline `SAMPLE_PILLARS` constant declaration and replace with:
+
+```js
+const { SAMPLE_PILLARS } = require('./shared');
+```
+
+No other changes. All existing tests remain exactly as-is.
+
 ## `site.spec.js` on Mobile Profiles
 
 All three mobile projects run `site.spec.js` in addition to `mobile.spec.js`. Most existing tests will pass unchanged on mobile profiles because they assert DOM presence, counts, text content, and attributes — not layout or visibility. Known safe categories:
@@ -175,7 +185,7 @@ This is the most common mobile layout regression and the most invisible to deskt
 
 #### 3. Tap target sizes
 
-Checks that key interactive controls meet the WCAG 2.5.5 minimum of 44 × 44 CSS pixels — both dimensions must meet the minimum. Scoped to:
+Checks that key interactive controls meet the WCAG 2.5.5 minimum of 44 × 44 CSS pixels — both dimensions must meet the minimum. All assertions run on the homepage. Scoped to:
 
 - `.nav-hamburger` button
 - Primary CTA buttons on the homepage (`.entry-card a`, `.f-card a`)
@@ -192,7 +202,7 @@ Uses `locator.boundingBox()` and asserts `box.width >= 44 && box.height >= 44` (
   // Single column resolves to one space-separated value (a pixel measurement)
   expect(cols.trim().split(/\s+/).length).toBe(1);
   ```
-- **Sample pillar page:** `.pil-snav` (sub-nav) does not overflow its container (`scrollWidth <= offsetWidth`); policy section (`#pil-policy`) is attached
+- **Sample pillar page (`pillars/healthcare.html`):** `.pil-snav` (sub-nav) does not overflow its container (`scrollWidth <= offsetWidth`); policy section (`#pil-policy`) is attached
 
 ---
 
