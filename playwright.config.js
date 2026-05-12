@@ -12,8 +12,37 @@ module.exports = defineConfig({
     trace: 'on-first-retry',
   },
   projects: [
-    { name: 'firefox', use: { ...devices['Desktop Firefox'] } },
-    { name: 'visual-firefox', testDir: './tests/visual', use: { ...devices['Desktop Firefox'] } },
+    {
+      name: 'firefox',
+      use: { ...devices['Desktop Firefox'] },
+      testMatch: ['**/site.spec.js'],
+    },
+    {
+      name: 'mobile-chrome',
+      use: { ...devices['Pixel 5'] },
+      testMatch: ['**/site.spec.js', '**/mobile.spec.js'],
+    },
+    {
+      name: 'mobile-safari',
+      use: { ...devices['iPhone 14'] },
+      testMatch: ['**/site.spec.js', '**/mobile.spec.js'],
+    },
+    {
+      name: 'mobile-firefox',
+      // Playwright has no Firefox mobile device preset — only Desktop Firefox and
+      // Desktop Firefox HiDPI exist in the registry. Use a custom narrow viewport.
+      // isMobile and hasTouch are not supported in Playwright's Firefox implementation.
+      use: {
+        browserName: 'firefox',
+        viewport: { width: 390, height: 844 },
+      },
+      testMatch: ['**/site.spec.js', '**/mobile.spec.js'],
+    },
+    {
+      name: 'visual-firefox',
+      testDir: './tests/visual',
+      use: { ...devices['Desktop Firefox'] },
+    },
   ],
   webServer: {
     command: 'npx serve docs -p 5500 -n',

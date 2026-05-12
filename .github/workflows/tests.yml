@@ -20,7 +20,7 @@ jobs:
       - run: npm run test:unit
 
   e2e:
-    name: E2E tests (Firefox)
+    name: E2E tests (all browsers)
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -29,8 +29,8 @@ jobs:
           node-version: 20
           cache: npm
       - run: npm ci
-      - run: npx playwright install firefox --with-deps
-      - run: npm run test:e2e
+      - run: npx playwright install firefox chromium webkit --with-deps
+      - run: npm run test:e2e:all
       - uses: actions/upload-artifact@v4
         if: failure()
         with:
