@@ -6,7 +6,7 @@
 > platform name is selected. It is **not a final name**. All references to it in this repository,
 > website, and documentation are temporary and will be updated once a name is confirmed.
 
-An active U.S. political platform in development, organized around five policy foundations. The live site is at **https://alistardust.github.io/freedom-and-dignity-project/**.
+An active U.S. political platform in development, organized around policy foundations. The live site is at **https://alistardust.github.io/freedom-and-dignity-project/**.
 
 ## What's in this repository
 
@@ -32,10 +32,10 @@ system_rules.md     Cross-domain system rule architecture
 
 ## Current state
 
-- **Pillars:** Active pillar pages across five foundations — see [`.github/current-state.md`](.github/current-state.md) for the current registry.
+- **Pillars:** Active pillar pages across the project foundations — see [`.github/current-state.md`](.github/current-state.md) for the current registry.
 - **Plain language:** All positions have plain-language summaries
 - **Citations:** Inline APA citations across all pillar pages
-- **Policy card audit:** Complete as of May 2026 — zero `status-missing` cards remain
+- **Policy card audit:** Complete — all cards are now in included status
 
 For detailed status, see [`.github/current-state.md`](.github/current-state.md).
 
@@ -54,7 +54,7 @@ The best place to start is the **[Get Involved](https://alistardust.github.io/fr
 
 For technical contributors:
 - Policy content lives in `docs/pillars/*.html` — each pillar page has a structured set of policy cards with `XXXX-XXXX-0000` IDs
-- All factual claims require APA 7th edition citations — see `CODING_STANDARDS.md`
+- All factual claims require citations that follow `CODING_STANDARDS.md`
 - All policy additions must follow the standards in `.github/copilot-instructions.md`
 - Run `npm run test:unit` before committing; run `npm run test:e2e` after any HTML/JS/CSS change
 
@@ -67,7 +67,7 @@ For technical contributors:
 | `npm run serve` | Serve `docs/` locally at port 5500 |
 | `npm run briefing-pack` | Regenerate `policy/briefing-pack.md` dynamic sections manually |
 | `python3 scripts/update-briefing-pack.py` | Same as above — also runs automatically via pre-commit hook |
-| `python3 scripts/migrate-policyos-to-db.py` | One-time: parse PolicyOS markdown + CSV into DB tables; init data.js sentinels |
+| `python3 scripts/migrate-policyos-to-db.py` | Initial setup: parse PolicyOS markdown + CSV into DB tables; init data.js sentinels |
 | `python3 scripts/generate-policyos.py` | Regenerate `docs/policyos.html` and fill `data.js` PolicyOS sentinels from DB |
 
 Git hooks are stored in `.githooks/` (tracked) and activated by the `prepare` npm script. Running `npm install` once after cloning is enough to set them up.

@@ -16,9 +16,9 @@ Economic Systems Research Project research outputs.
 ## Methodology
 
 All substantive outputs go through the adversarial review loop before being marked
-`reviewed` or `validated`. See the charter (Section 6) for the full review cycle and prompt.
+`reviewed` or `validated`. See the charter for the full review cycle and prompt.
 
 ## Citation standard
 
-APA 7th edition. All factual claims, statistics, and externally sourced assertions must
+APA citation style. All factual claims, statistics, and externally sourced assertions must
 be cited. See `AGENTS.md` in the repo root for citation guidance.
