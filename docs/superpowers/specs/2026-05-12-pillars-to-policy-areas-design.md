@@ -323,7 +323,7 @@ node scripts/migrate-pillars-to-policy.js --verify # scan for remaining "pillar"
 4. **JS identifier renames** — `siteData.pillars`, `pillarCount`, `renderPillars`, `getElementById('pil-snav')`, section-header comments, and all other explicit identifiers per Section 4 table. Applied in JS files only.
 5. **Content/prose replacements** — word-boundary aware (`\bpillar\b`, `\bpillars\b`), case variants per Section 5 table. Applied to **HTML, njk, and XML files only — never JS or test files**.
 6. **Element removals** — `completion-status` divs (via parse5 or sentinel), count spans, dead `case 'pillar-count':` branch, dead CSS rules (`.pillar-hero,\n` line, `.pillar-tags`, `.pillar-tag`, `.pil-pillar-count`).
-7. **Verify pass** — scan all in-scope files for remaining "pillar" occurrences. This is a **hard pass/fail gate**: zero occurrences required before the PR can merge.
+7. **Verify pass** — scan all in-scope files for: (a) remaining "pillar" occurrences, and (b) remaining `completion-status` class names (confirming Phase 6 removal was complete). This is a **hard pass/fail gate**: zero occurrences of either pattern required before the PR can merge.
 
 **Scope of files processed:** `docs/**/*.html`, `docs/**/*.xml`, `src/pages/**/*.njk`, `docs/assets/js/*.js`, `docs/assets/css/style.css`, `tests/**/*.js`, `scripts/*.js`
 
