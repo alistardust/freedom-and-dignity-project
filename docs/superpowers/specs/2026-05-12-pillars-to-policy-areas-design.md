@@ -41,8 +41,8 @@ The migration is implemented via a single Node.js script (`scripts/migrate-pilla
 ### Moves
 | From | To |
 |---|---|
-| `docs/pillars/*.html` (27 files) | `docs/policy/*.html` |
-| `src/pages/pillars/*.njk` (27 files) | `src/pages/policy/*.njk` |
+| `docs/pillars/*.html` (27 files: 26 policy area pages + `index.html`) | `docs/policy/*.html` |
+| `src/pages/pillars/*.njk` (27 files: 26 policy area pages + `index.njk`) | `src/pages/policy/*.njk` |
 
 The script uses `fs.renameSync` / `fs.mkdirSync` to move all files. The old directories are removed after all files are moved.
 
@@ -65,6 +65,7 @@ Applied across all HTML, njk, JS, and test files:
 | Old pattern | New pattern |
 |---|---|
 | `/pillars/` (in href, src, goto, page.goto) | `/policy/` |
+| `'pillars'` (bare string in `path.join` calls — `backfill-rule-notes.js`, `strip-card-status.js`) | `'policy'` |
 | `pillars/` (relative paths in build.test.js examples) | `policy/` |
 | `/(pillars\|compare)/` (app.js path detection regex) | `/(policy\|compare)/` |
 
@@ -185,6 +186,8 @@ These are deleted, not renamed:
 - `<span class="pil-pillar-count">N pillars</span>` — per-foundation count badges on the index page (5 instances in HTML + njk). Removed entirely.
 - `<span data-dynamic="pillar-count">25</span> pillars` — in `policy-library.html` and `policy-library.njk`. The surrounding sentence is reworded to remove the count.
 - `case 'pillar-count':` branch in app.js dynamic counts block — no remaining consumers.
+- `.pillar-hero` rule in `style.css` responsive override block — dead selector (no matching HTML), remove entirely.
+- `.pillar-intro p` and `.pillar-summary` string literals in the `SELECTORS` constant in `app.js` (lines 243-244) — dead selectors that match no HTML or CSS classes in the codebase. Remove from the array.
 - Prose sentences referencing "25 pillars" or "N pillars" in meta descriptions and body text — reworded to describe content without counting policy areas.
 
 ---
