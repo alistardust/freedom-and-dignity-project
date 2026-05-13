@@ -26,7 +26,11 @@
 
 /* ── RESET ────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { font-size: 17px; scroll-behavior: smooth; }
+/* overflow-x: clip prevents fixed+transformed off-screen elements (e.g. .site-tree)
+   from inflating documentElement.scrollWidth in Firefox and Safari, where Chrome
+   already excludes fixed-positioned elements from that calculation. 'clip' is used
+   rather than 'hidden' so the root element does not become a scroll container. */
+html { font-size: 17px; scroll-behavior: smooth; overflow-x: clip; }
 body {
   font-family: 'Libre Franklin', Georgia, serif;
   background: var(--cream);
@@ -294,6 +298,8 @@ section { padding: 4.5rem 0; }
   position: fixed; inset: 0;
   background: rgba(0,0,0,.45);
   z-index: 499;
+  /* cursor: pointer required for Safari to fire click events on non-interactive elements */
+  cursor: pointer;
 }
 .st-overlay.st-active { display: block; }
 /* When the site-tree panel is open, raise the nav above the overlay (z-index 499)
