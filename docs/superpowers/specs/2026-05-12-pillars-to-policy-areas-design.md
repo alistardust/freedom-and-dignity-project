@@ -168,7 +168,6 @@ Applied in `docs/assets/js/data.js` and `docs/assets/js/app.js`:
 | `/* ── PILLAR FILTER + RENDER ─── */` (comment) | `/* ── POLICY AREA FILTER + RENDER ─── */` | app.js |
 | `/(pillars\|compare)/` (regex) | `/(policy\|compare)/` | app.js |
 | `"summary": "Universal rules that apply to every pillar."` (in `policyosFamilies`) | `"...every policy area."` | data.js |
-| `pillarGrid` / `#pillar-grid` | `policyAreaGrid` / `#policy-area-grid` | app.js only (no current HTML has these IDs) |
 
 ---
 
@@ -263,7 +262,7 @@ node scripts/migrate-pillars-to-policy.js --verify # scan for remaining "pillar"
 
 **Phases (in order):**
 
-1. **Move files** — `docs/pillars/` → `docs/policy/`, `src/pages/pillars/` → `src/pages/policy/`
+1. **Move files** — `docs/pillars/` → `docs/policy/`, `src/pages/pillars/` → `src/pages/policy/`. Also renames `scripts/new-pillar.js` → `scripts/new-policy-area.js` (the script updates its own internal references via the subsequent phases).
 2. **URL/path replacements** — `/pillars/` → `/policy/` across all source files
 3. **CSS class renames** — longest-match-first to prevent partial collisions (e.g., `.pil-pillar-card` before `.pil-pillar`, `.pil-pillar-grid` before `.pil-pillar`)
 4. **JS identifier renames** — `siteData.pillars`, `pillarCount`, `pillarGrid`, etc.
@@ -307,4 +306,5 @@ Before merging:
 - [ ] PolicyOS overlay still appears on policy area pages
 - [ ] `completion-status` block is absent from all policy area pages
 - [ ] No "pillar" text visible anywhere on the live site
+- [ ] `scripts/new-policy-area.js` exists and `scripts/new-pillar.js` has been removed
 - [ ] Repo documentation updated in same commit: `README.md`, `.github/current-state.md`, `.github/copilot-instructions.md`, `CODING_STANDARDS.md` (any pillar references), `.github/ai-repo-context.md`
