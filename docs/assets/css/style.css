@@ -2569,6 +2569,7 @@ summary.area-foundation-bar::-webkit-details-marker { display: none; }
 .area-foundation-name { font-family: "Playfair Display", serif; font-size: 1.2rem; color: #fff; line-height: 1.2; }
 .area-foundation-teaser { font-family: "Libre Franklin", sans-serif; font-size: .82rem; color: rgba(255,255,255,.58); font-style: italic; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .area-foundation-bar-right { display: flex; align-items: center; gap: .75rem; flex-shrink: 0; }
+.area-count { font-family: "Oswald", sans-serif; font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: rgba(255,255,255,.45); white-space: nowrap; }
 .area-chevron { font-size: 1rem; color: rgba(255,255,255,.55); transition: transform .25s ease; display: inline-block; }
 .area-foundation-accordion[open] .area-chevron { transform: rotate(180deg); }
 .area-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; padding: 1.5rem 2rem; background: var(--cream); }
