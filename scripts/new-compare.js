@@ -90,7 +90,7 @@ const html = `<!DOCTYPE html>
     <ul class="nav-links">
       <li><a href="../index.html">Home</a></li>
       <li><a href="../foundations.html">Foundations</a></li>
-      <li><a href="../pillars/index.html">Pillars</a></li>
+      <li><a href="../policy/index.html">Policy Areas</a></li>
       <li><a href="index.html" class="active">Perspectives</a></li>
     </ul>
   </div>
@@ -107,7 +107,7 @@ const html = `<!DOCTYPE html>
 
 <div class="cmp-scorecard bg-dark on-dark">
   <div class="wrap">
-    <div class="cmp-score"><div class="cmp-score-n">—</div><div class="cmp-score-label">Pillars Aligned</div></div>
+    <div class="cmp-score"><div class="cmp-score-n">—</div><div class="cmp-score-label">Policy Areas Aligned</div></div>
     <div class="cmp-score"><div class="cmp-score-n">—</div><div class="cmp-score-label">Key Divergences</div></div>
     <div class="cmp-score"><div class="cmp-score-n">—</div><div class="cmp-score-label">Where They Exceed Us</div></div>
     <div class="cmp-score"><div class="cmp-score-n">—</div><div class="cmp-score-label">Coverage Gaps</div></div>
@@ -161,7 +161,7 @@ const html = `<!DOCTYPE html>
 <section class="bg-white" id="cmp-gaps">
   <div class="wrap">
     <p class="eyebrow" style="color:${color}">Coverage Analysis</p>
-    <h2>Pillar-by-Pillar</h2>
+    <h2>Policy Area by Policy Area</h2>
     <div class="cov-legend">
       <span class="cov-key cov-match">Full Match</span>
       <span class="cov-key cov-partial">Partial</span>
@@ -169,10 +169,10 @@ const html = `<!DOCTYPE html>
       <span class="cov-key cov-none">Not Covered</span>
     </div>
     <div class="cov-table">
-      <!-- TODO: Add one cov-row per pillar. Use cov-level classes: cov-match, cov-partial, cov-diff, cov-none -->
+      <!-- TODO: Add one cov-row per policy area. Use cov-level classes: cov-match, cov-partial, cov-diff, cov-none -->
       <!--
       <div class="cov-row">
-        <div class="cov-pillar">Pillar Name</div>
+        <div class="cov-policy-area">Policy Area Name</div>
         <div class="cov-level cov-partial">Partial Match</div>
         <div class="cov-gap">Explanation of gap or alignment.</div>
       </div>
@@ -219,7 +219,7 @@ const html = `<!DOCTYPE html>
     <ul class="footer-links">
       <li><a href="../index.html">Home</a></li>
       <li><a href="../foundations.html">Foundations</a></li>
-      <li><a href="../pillars/index.html">Pillars</a></li>
+      <li><a href="../policy/index.html">Policy Areas</a></li>
       <li><a href="index.html">Perspectives</a></li>
     </ul>
     <span class="footer-note">A Third Bill of Rights for the 21st Century. · <a href="../about-ai.html" style="color:inherit;opacity:.7">On the Use of AI</a></span>
@@ -238,8 +238,8 @@ console.log(`
 
 Next steps:
   1. Fill in the TODO sections in the generated file
-  2. Update the scorecard numbers (Pillars Aligned, Key Divergences, etc.)
-  3. Add pillar-by-pillar cov-row entries in the #cmp-gaps section
+  2. Update the scorecard numbers (Policy Areas Aligned, Key Divergences, etc.)
+  3. Add policy-area-by-policy-area cov-row entries in the #cmp-gaps section
   4. Add all APA 7th edition footnotes in #cmp-sources
   5. Add a link card to docs/compare/index.html:
 
@@ -248,6 +248,6 @@ Next steps:
        <span class="cmp-card-desc">${tagline}</span>
      </a>
 
-  6. Add the new page to SAMPLE_PILLARS (or a compare-page test) in tests/e2e/site.spec.js
+  6. Add the new page to SAMPLE_POLICY_AREAS (or a compare-page test) in tests/e2e/site.spec.js
   7. Run: npm run test:unit && npm run test:e2e
 `);

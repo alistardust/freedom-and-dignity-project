@@ -19,7 +19,7 @@
 
   /* ── HAMBURGER SITE TREE ─────────────────────────── */
   (function () {
-    const inSubdir = /\/(pillars|compare)\//.test(location.pathname);
+    const inSubdir = /\/(policy|compare)\//.test(location.pathname);
     const base = inSubdir ? '../' : '';
 
     function buildTree() {
@@ -189,48 +189,48 @@
     });
   })();
 
-  /* ── PILLAR FILTER + RENDER ───────────────────────── */
-  const pillarGrid = document.getElementById('pillar-grid');
-  if (pillarGrid && window.siteData) {
-    const filterBar = document.getElementById('pillar-filters');
+  /* ── POLICY AREA FILTER + RENDER ───────────────────────── */
+  const policyAreaGrid = document.getElementById('policy-area-grid');
+  if (policyAreaGrid && window.siteData) {
+    const filterBar = document.getElementById('policy-area-filters');
 
     /* Build filter buttons */
-    const allBtn = makeBtn('all', 'All Pillars', null);
+    const allBtn = makeBtn('all', 'All Policy Areas', null);
     allBtn.classList.add('active');
     filterBar.appendChild(allBtn);
     siteData.foundations.forEach(f => filterBar.appendChild(makeBtn(f.id, f.title, f.color)));
 
     /* Render all cards initially */
-    renderPillars('all');
+    renderPolicyAreas('all');
 
     function makeBtn(id, label, color) {
       const btn = document.createElement('button');
-      btn.className = 'pillar-filter-btn';
+      btn.className = 'policy-area-filter-btn';
       btn.dataset.filter = id;
       btn.textContent = label;
       if (color) btn.dataset.color = color;
       btn.addEventListener('click', () => {
-        document.querySelectorAll('.pillar-filter-btn').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.policy-area-filter-btn').forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
-        renderPillars(id);
+        renderPolicyAreas(id);
       });
       return btn;
     }
 
-    function renderPillars(filterId) {
-      const list = filterId === 'all' ? siteData.pillars : siteData.pillars.filter(p => p.foundation === filterId);
-      pillarGrid.innerHTML = '';
+    function renderPolicyAreas(filterId) {
+      const list = filterId === 'all' ? siteData.policyAreas : siteData.policyAreas.filter(p => p.foundation === filterId);
+      policyAreaGrid.innerHTML = '';
       list.forEach(p => {
         const f = siteData.getFoundation(p.foundation);
         const card = document.createElement('article');
-        card.className = 'pillar-card';
+        card.className = 'policy-area-card';
         card.style.borderTopColor = f ? f.color : 'var(--red)';
         card.innerHTML = `
           <div class="pc-foundation" style="color:${f ? f.color : 'var(--gold)'};">${f ? f.title : ''}</div>
           <div class="pc-title">${p.title.replace(/_/g,' ')}</div>
           <p class="pc-summary">${p.summary}</p>
           <ul class="pc-points">${p.points.map(pt => `<li>${pt}</li>`).join('')}</ul>`;
-        pillarGrid.appendChild(card);
+        policyAreaGrid.appendChild(card);
       });
     }
   }
@@ -242,8 +242,8 @@
     const SELECTORS = [
       '.rule-title', '.rule-stmt', '.rule-notes',
       '.ai-compare-table td', '.compare-table td',
-      '.pillar-intro p', '.pi-desc', '.pi-summary',
-      '.pillar-summary', '.section-intro p'
+      '.area-intro p', '.pi-desc', '.pi-summary',
+      '.area-summary', '.section-intro p'
     ].join(', ');
 
     function highlightNode(el) {
@@ -294,7 +294,7 @@
         if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
       });
     // threshold: 0 fires as soon as any pixel of the section enters the viewport.
-  // A higher threshold (e.g. 0.08) breaks for very tall sections (like #pil-policy)
+  // A higher threshold (e.g. 0.08) breaks for very tall sections (like #area-policy)
   // because 8% of a 5000px section never fits in the viewport, keeping it invisible.
   }, { threshold: 0 });
     document.querySelectorAll('section').forEach(s => {
@@ -306,11 +306,11 @@
     document.head.insertAdjacentHTML('beforeend', '<style>.visible{opacity:1!important;transform:none!important}</style>');
   }
 
-  /* ── PILLAR SECTION SCROLLSPY ───────────────────────── */
-  // Highlights the active section in the sticky pillar sub-nav.
-  // Replaces the inline <script> block that was repeated in every pillar HTML file.
+  /* ── POLICY AREA SECTION SCROLLSPY ───────────────────────── */
+  // Highlights the active section in the sticky policy area sub-nav.
+  // Replaces the inline <script> block that was repeated in every policy area HTML file.
   (function () {
-    const nav = document.getElementById('pil-snav');
+    const nav = document.getElementById('area-snav');
     if (!nav) return;
     const links    = nav.querySelectorAll('a[href^="#"]');
     const sections = Array.from(links).map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
@@ -330,7 +330,7 @@
     if (sessionStorage.getItem('wip-banner-dismissed')) return;
     const nav = document.querySelector('.site-nav');
     if (!nav) return;
-    const _base = /\/(pillars|compare)\//.test(location.pathname) ? '../' : '';
+    const _base = /\/(policy|compare)\//.test(location.pathname) ? '../' : '';
     const banner = document.createElement('div');
     banner.id = 'wip-banner';
     banner.className = 'wip-banner';
@@ -349,10 +349,9 @@
 
   /* ── DYNAMIC COUNTS ─────────────────────────────────── */
   // Fills [data-dynamic] elements from live siteData and DOM.
-  // Usage: <span data-dynamic="pillar-count">23</span>  ← fallback shown if JS disabled
-  (function () {
+    (function () {
     if (!window.siteData) return;
-    const pillarCount     = siteData.pillars.length;
+    const policyAreaCount     = siteData.policyAreas.length;
     const foundationCount = siteData.foundations.length;
     const ruleCount       = document.querySelectorAll('.policy-card').length;
     const families        = new Set();
@@ -363,8 +362,6 @@
     const familyCount = families.size;
     document.querySelectorAll('[data-dynamic]').forEach(el => {
       switch (el.dataset.dynamic) {
-        case 'pillar-count':     el.textContent = pillarCount;                   break;
-        case 'foundation-count': el.textContent = foundationCount;               break;
         case 'policy-count':       if (ruleCount)   el.textContent = ruleCount;    break;
         case 'family-count':     if (familyCount) el.textContent = familyCount;  break;
       }
@@ -478,19 +475,19 @@
     });
   }
 
-  /* ── PILLARS INDEX ACCORDION ANIMATION ─────────────── */
+  /* ── POLICY AREAS INDEX ACCORDION ANIMATION ─────────────── */
   (function () {
-    if (!document.querySelector('.pil-foundation-accordion')) return;
-    document.querySelectorAll('.pil-foundation-accordion').forEach(function (details) {
+    if (!document.querySelector('.area-foundation-accordion')) return;
+    document.querySelectorAll('.area-foundation-accordion').forEach(function (details) {
       details.addEventListener('click', function (e) {
         if (!e.target.closest('summary')) return;
         e.preventDefault();
         if (details.open) {
-          const grid = details.querySelector('.pil-pillar-grid');
+          const grid = details.querySelector('.area-grid');
           if (!grid) { details.removeAttribute('open'); return; }
-          grid.classList.add('pil-grid-closing');
+          grid.classList.add('area-grid-closing');
           grid.addEventListener('animationend', function () {
-            grid.classList.remove('pil-grid-closing');
+            grid.classList.remove('area-grid-closing');
             details.removeAttribute('open');
           }, { once: true });
         } else {
@@ -500,21 +497,21 @@
     });
   })();
 
-  /* ── POLICYOS PILLAR OVERLAY ─────────────────────── */
-  // Injects a PolicyOS design-rules section after #pil-related on pillar pages.
+  /* ── POLICYOS POLICY AREA OVERLAY ─────────────────── */
+  // Injects a PolicyOS design-rules section after #area-related on policy area pages.
   (function () {
-    var related = document.getElementById('pil-related');
+    var related = document.getElementById('area-related');
     if (!related) return;
     if (!window.siteData || !siteData.policyosOverlays || !siteData.policyosFamilies) return;
 
     var fileName = location.pathname.split('/').pop();
     var slug = (fileName || '').replace('.html', '').replace(/-/g, '_');
 
-    var pillarOverlays = siteData.policyosOverlays[slug];
-    if (!pillarOverlays || !pillarOverlays.length) return;
+    var policyAreaOverlays = siteData.policyosOverlays[slug];
+    if (!policyAreaOverlays || !policyAreaOverlays.length) return;
 
     var allFamilies = siteData.policyosFamilies;
-    var base = /\/(pillars|compare)\//.test(location.pathname) ? '../' : '';
+    var base = /\/(policy|compare)\//.test(location.pathname) ? '../' : '';
 
     function familyMeta(code) {
       return allFamilies.find(function (f) { return f.code === code; }) || {};
@@ -531,17 +528,17 @@
       return '<h3>' + heading + '</h3><ul class="plos-overlay-list">' + lis + '</ul>';
     }
 
-    var mandatory   = pillarOverlays.filter(function (f) { return f.type === 'mandatory'; });
-    var conditional = pillarOverlays.filter(function (f) { return f.type === 'conditional'; });
+    var mandatory   = policyAreaOverlays.filter(function (f) { return f.type === 'mandatory'; });
+    var conditional = policyAreaOverlays.filter(function (f) { return f.type === 'conditional'; });
 
     var section = document.createElement('section');
     section.className = 'bg-white ruled';
-    section.id = 'pil-policyos';
+    section.id = 'area-policyos';
     section.innerHTML =
       '<div class="wrap">'
       + '<h2>PolicyOS Design Rules</h2>'
       + '<p style="font-size:.92rem;color:#666;margin-bottom:.5rem">'
-      + 'System design rules that apply to this pillar under the PolicyOS framework.'
+      + 'System design rules that apply to this policy area under the PolicyOS framework.'
       + '</p>'
       + renderList(mandatory, 'Mandatory overlays')
       + renderList(conditional, 'Conditional overlays')
@@ -550,12 +547,12 @@
 
     related.insertAdjacentElement('afterend', section);
 
-    var snav = document.getElementById('pil-snav');
+    var snav = document.getElementById('area-snav');
     if (snav) {
       var ul = snav.querySelector('ul');
       if (ul) {
         var li = document.createElement('li');
-        li.innerHTML = '<a href="#pil-policyos">PolicyOS</a>';
+        li.innerHTML = '<a href="#area-policyos">PolicyOS</a>';
         ul.appendChild(li);
       }
     }

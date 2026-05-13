@@ -10,7 +10,7 @@ const siteData = {
       why: 'The promise of democracy has been hollowed out by money in politics, courts captured by ideology, and an executive branch that has learned to govern by fiat. Accountability is not a procedural nicety—it is the bedrock of consent.',
       demands: ['Term limits and fitness standards for every federal office', 'Campaign finance reform that ends the donor class\'s veto over legislation', 'Courts that apply the law, not an agenda', 'An executive constrained by law, not just norms'],
       rejects: ['The idea that money is speech', 'Lifetime tenure without accountability', 'Executive power that expands in darkness'],
-      pillars: ['executive_power', 'checks_and_balances', 'term_limits_and_fitness', 'courts_and_judicial_system', 'administrative_state', 'legislative_reform']
+      policyAreas: ['executive_power', 'checks_and_balances', 'term_limits_and_fitness', 'courts_and_judicial_system', 'administrative_state', 'legislative_reform']
     },
     {
       id: 'clean-democracy',
@@ -21,7 +21,7 @@ const siteData = {
       why: 'Gerrymandering, voter suppression, dark money, and media monopolies have turned democracy into a performance. Cleaning it up is not a partisan cause—it is the prerequisite for every other cause.',
       demands: ['Independent redistricting for every state', 'Automatic voter registration', 'Antitrust enforcement that breaks up media monopolies', 'Full disclosure of political spending'],
       rejects: ['Rigged maps drawn to protect incumbents', 'Corporate capture of media and information', 'Concentration of ownership in any industry vital to democracy'],
-      pillars: ['elections_and_representation', 'anti_corruption', 'antitrust_and_corporate_power', 'information_and_media']
+      policyAreas: ['elections_and_representation', 'anti_corruption', 'antitrust_and_corporate_power', 'information_and_media']
     },
     {
       id: 'equal-justice',
@@ -32,7 +32,7 @@ const siteData = {
       why: 'We have never fully delivered on the promise written in our founding documents. Equal justice is unfinished business—not a gift to be granted, but a debt long overdue.',
       demands: ['Police accountability with teeth, not just policies', 'An immigration system built on dignity and due process', 'Civil rights enforcement that matches the scale of the problem'],
       rejects: ['Two systems of justice—one for the powerful, one for everyone else', 'Dehumanization of immigrants', 'Civil rights as an aspiration rather than a guarantee'],
-      pillars: ['equal_justice_and_policing', 'immigration', 'rights_and_civil_liberties', 'foreign_policy']
+      policyAreas: ['equal_justice_and_policing', 'immigration', 'rights_and_civil_liberties', 'foreign_policy']
     },
     {
       id: 'real-freedom',
@@ -43,7 +43,7 @@ const siteData = {
       why: 'The old freedom debate is over. The threats to freedom today come not just from government but from corporations with unprecedented power to monitor, manipulate, and control. Real freedom requires confronting both.',
       demands: ['Constitutional protection against corporate surveillance', 'Algorithmic accountability for platforms that shape public life', 'Sensible gun policy grounded in public safety and the actual text of the Second Amendment'],
       rejects: ['The surveillance economy as the price of modernity', 'Platforms that amplify hate and call it free speech', 'Weapons of war in civilian hands'],
-      pillars: ['rights_and_civil_liberties', 'gun_policy', 'technology_and_ai', 'consumer_rights', 'data_rights_and_privacy']
+      policyAreas: ['rights_and_civil_liberties', 'gun_policy', 'technology_and_ai', 'consumer_rights', 'data_rights_and_privacy']
     },
     {
       id: 'freedom-to-thrive',
@@ -54,11 +54,11 @@ const siteData = {
       why: 'FDR called it the Second Bill of Rights. We are completing that work for the 21st century. Economic security is not charity. It is the foundation on which every other freedom rests.',
       demands: ['Universal healthcare as a right, not a commodity', 'Housing as a human necessity, not a speculative asset', 'Clean water and clean air as constitutional rights — not regulatory privileges subject to rollback', 'A tax system that rewards work over wealth', 'A livable planet for the next generation', 'Water conservation, infrastructure, and equitable access as national priorities'],
       rejects: ['Healthcare tied to employment', 'A housing market that treats homes as investment vehicles', 'An economy that socializes losses and privatizes gains', 'Privatization of water systems that communities depend on for survival'],
-      pillars: ['healthcare', 'taxation_and_wealth', 'environment_and_agriculture', 'infrastructure_and_public_goods', 'education', 'labor_and_workers_rights', 'housing', 'science_technology_space']
+      policyAreas: ['healthcare', 'taxation_and_wealth', 'environment_and_agriculture', 'infrastructure_and_public_goods', 'education', 'labor_and_workers_rights', 'housing', 'science_technology_space']
     }
   ],
 
-  pillars: [
+  policyAreas: [
     { id: 'executive_power',               title: 'Executive Power',               foundation: 'accountable-power',  summary: 'The presidency must be accountable to law and to Congress, not just to norms and custom.',                                      points: ['Restore congressional war powers', 'Enforce separation of powers through the courts', 'Require transparency in executive action'] },
     { id: 'checks_and_balances',           title: 'Checks & Balances',             foundation: 'accountable-power',  summary: 'The system of institutional limits on power must be rebuilt to withstand authoritarian pressure.',                          points: ['Legislative independence from executive coercion', 'Inspector general protections', 'Contempt of Congress with real consequences'] },
     { id: 'term_limits_and_fitness',       title: 'Term Limits & Fitness',         foundation: 'accountable-power',  summary: 'Elected and appointed officials must be term-limited and meet basic fitness requirements.',                                points: ['Congressional term limits', 'Cognitive and fitness assessments for federal office', 'Mandatory retirement for federal judges'] },
@@ -90,7 +90,7 @@ const siteData = {
 
 /* Lookup helpers */
 siteData.getFoundation = id => siteData.foundations.find(f => f.id === id);
-siteData.getPillarsByFoundation = id => siteData.pillars.filter(p => p.foundation === id);
+siteData.getPolicyAreasByFoundation = id => siteData.policyAreas.filter(p => p.foundation === id);
 
 /* Expose on window so app.js guard (window.siteData) works — const doesn't auto-attach */
 window.siteData = siteData;
@@ -100,7 +100,7 @@ siteData.policyosFamilies = [
     "code": "KERN",
     "label": "Core Kernel",
     "anchor": "plos-kern",
-    "summary": "Universal rules that apply to every pillar."
+    "summary": "Universal rules that apply to every policy area."
   },
   {
     "code": "GEOG",

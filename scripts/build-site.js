@@ -17,7 +17,7 @@ const env = new nunjucks.Environment(
 /**
  * Compute the base path prefix for asset hrefs from an output file path.
  * docs/index.html         → ''
- * docs/pillars/foo.html   → '../'
+ * docs/policy/foo.html   → '../'
  * docs/foo/bar/baz.html   → '../../'
  */
 function computeBase(outputPath) {
@@ -28,11 +28,11 @@ function computeBase(outputPath) {
 /**
  * Compute currentPage (used to set aria-current="page" on matching nav item).
  * docs/index.html                    → 'index.html'
- * docs/pillars/healthcare.html       → 'pillars/healthcare.html'
+ * docs/policy/healthcare.html       → 'policy/healthcare.html'
  * docs/compare/republican-party.html → 'compare/republican-party.html'
  *
  * Nav items have hrefs like 'index.html', 'problem.html' — only root pages match.
- * Pillar and compare pages correctly produce no aria-current match.
+ * Policy area and compare pages correctly produce no aria-current match.
  */
 function computeCurrentPage(outputPath) {
   return outputPath.replace(/^docs\//, '');

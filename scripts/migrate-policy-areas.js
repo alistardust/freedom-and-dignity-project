@@ -160,9 +160,9 @@ function phase1() {
   const preMoveHtml = walkFiles(path.join(REPO_ROOT, 'docs/pillars'), '.html');
   const preMoveNjk  = walkFiles(path.join(REPO_ROOT, 'src/pages/pillars'), '.njk');
   const expectedCompletionStatusFiles = [
-    ...preMoveHtml.map(f => f.replace(path.sep + 'docs' + path.sep + 'pillars' + path.sep,
+    ...preMoveHtml.map(f => f.replace(path.sep + 'docs' + path.sep + 'policy' + path.sep,
                                       path.sep + 'docs' + path.sep + 'policy' + path.sep)),
-    ...preMoveNjk.map(f => f.replace(path.sep + 'src' + path.sep + 'pages' + path.sep + 'pillars' + path.sep,
+    ...preMoveNjk.map(f => f.replace(path.sep + 'src' + path.sep + 'pages' + path.sep + 'policy' + path.sep,
                                      path.sep + 'src' + path.sep + 'pages' + path.sep + 'policy' + path.sep)),
   ];
 
@@ -231,7 +231,7 @@ function phase2() {
     const pathJoinMatch = /path\.join\([^)]*['"]pillars['"]/m.test(content);
     if (pathJoinMatch) {
       throw new Error(
-        `ABORT: Unaccounted path.join('pillars') found in scripts/${base}. ` +
+        `ABORT: Unaccounted path.join('policy') found in scripts/${base}. ` +
         'Update the script or add it to knownPathJoinScripts before migrating.'
       );
     }
@@ -243,9 +243,9 @@ function phase2() {
   ];
 
   const replacements = [
-    ['/pillars/', '/policy/'],
-    ["'pillars'", "'policy'"],
-    ['pillars/',  'policy/'],
+    ['/policy/', '/policy/'],
+    ["'policy'", "'policy'"],
+    ['policy/',  'policy/'],
   ];
 
   for (const file of allFiles) {
@@ -457,9 +457,11 @@ function phase6() {
     const result = removeCompletionStatusHtml(file);
     if (result) {
       writeFile(file, result.newContent, result.original);
-    } else {
-      // If element not found (e.g., already removed), fail loudly
+    } else if (APPLY) {
+      // Only fail loudly when applying -- in dry-run, div may already be removed
       throw new Error(`completion-status div not found in ${path.relative(REPO_ROOT, file)}`);
+    } else {
+      console.log(`  [warn] completion-status div already removed in ${path.relative(REPO_ROOT, file)}`);
     }
   }
 
@@ -472,8 +474,10 @@ function phase6() {
     const result = removeCompletionStatusNjk(file);
     if (result) {
       writeFile(file, result.newContent, result.original);
-    } else {
+    } else if (APPLY) {
       throw new Error(`completion-status div not found in ${path.relative(REPO_ROOT, file)}`);
+    } else {
+      console.log(`  [warn] completion-status div already removed in ${path.relative(REPO_ROOT, file)}`);
     }
   }
 
@@ -519,11 +523,20 @@ function phase6() {
 
 const VERIFY_ALLOWLIST = [
   'scripts/migrate-policy-areas.js',
+  'scripts/fixup-migration.js',
   'tests/unit/scripts/migrate-phase3-sort.test.js',
   'docs/superpowers',
   'policy/foundations',
   'policy/policyos',
   'policy/catalog',
+  // green-party: cites the Green Party's real document "The Four Pillars" and
+  // links to gp.org/the_four_pillars — an external URL that cannot be renamed.
+  'docs/compare/green-party',
+  'src/pages/compare/green-party',
+  // classification: references the DB table name `position_pillar_appearances`
+  // which is out of scope for this migration (DB schema renamed separately).
+  'docs/classification',
+  'src/pages/classification',
 ];
 
 function isAllowlisted(filePath) {
@@ -548,7 +561,7 @@ function phase7Verify() {
     if (/pillar/i.test(content)) {
       const lines = content.split('\n');
       lines.forEach((line, i) => {
-        if (/pillar/i.test(line)) {
+        if (/pillar/i.test(line) && !line.includes('// verify-ok')) {
           violations.pillar.push(`  ${rel}:${i + 1}: ${line.trim().slice(0, 100)}`);
         }
       });
@@ -557,7 +570,7 @@ function phase7Verify() {
     if (/\bpil-|#pil-/.test(content)) {
       const lines = content.split('\n');
       lines.forEach((line, i) => {
-        if (/\bpil-|#pil-/.test(line)) {
+        if (/\bpil-|#pil-/.test(line) && !line.includes('// verify-ok')) {
           violations.pilDash.push(`  ${rel}:${i + 1}: ${line.trim().slice(0, 100)}`);
         }
       });

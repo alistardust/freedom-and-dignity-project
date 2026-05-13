@@ -7,7 +7,7 @@
 {% block og_title %}PolicyOS, Freedom and Dignity Project{% endblock %}
 {% block og_url %}policyos.html{% endblock %}
 {% block content %}
-<section class="pil-hero" style="background:var(--navy)">
+<section class="area-hero" style="background:var(--navy)">
   <div class="wrap">
     <h1>PolicyOS</h1>
     <p class="hero-sub" style="color:rgba(255,255,255,.75)">The meta-layer governing how all policy is written, tested, enforced, and maintained across this platform.</p>
@@ -229,10 +229,10 @@ interpretive flexibility, and mechanisms for repair when systems fail.</p>
       <span class="plos-family-code">KERN</span>
       <span class="plos-family-label">Core Kernel</span>
     </summary>
-    <p class="plos-family-desc">Universal rules that apply to every pillar.</p>
+    <p class="plos-family-desc">Universal rules that apply to every policy area.</p>
     <ol class="plos-rule-list">
 <li id="plos-kern-0001"><code class="plos-rule-id">PLOS-KERN-0001</code> Platform design must remain complete, internally consistent, and auditable
-across pillars, implementation rules, and enforcement design.</li>
+across policy areas, implementation rules, and enforcement design.</li>
 <li id="plos-kern-0002"><code class="plos-rule-id">PLOS-KERN-0002</code> No person, office, agency, court, corporation, or contractor may be placed
 beyond the law or beyond accountability under the law. Delegation of a duty or
 authority does not release the delegating actor from accountability for that
@@ -527,8 +527,8 @@ off-balance-sheet cost.</li>
     </summary>
     <p class="plos-family-desc">Policy must actively secure the material preconditions for a dignified life.</p>
     <ol class="plos-rule-list">
-<li id="plos-thrv-0001"><code class="plos-rule-id">PLOS-THRV-0001</code> No pillar governing access to an essential system may treat the absence of
-provision as a neutral baseline. Every such pillar must specify what
+<li id="plos-thrv-0001"><code class="plos-rule-id">PLOS-THRV-0001</code> No policy area governing access to an essential system may treat the absence of
+provision as a neutral baseline. Every such policy area must specify what
 affirmative obligation exists, what population is owed it, and how it is met.</li>
 <li id="plos-thrv-0002"><code class="plos-rule-id">PLOS-THRV-0002</code> Rules fulfilling the positive duty of material security must specify the
 minimum standard of provision that constitutes compliance, expressed in terms
@@ -629,7 +629,7 @@ PolicyOS 1.0 proposes:
 - one universal kernel (KERN, 27 rules)
 - one mandatory-for-enforcement overlay (ENFA)
 - nine targeted overlays (GEOG, FEDR, REGD, AIGV, ECOL, THRV, DEMO, PRIV, ECON)
-- pillar-level implementation where domain specifics are required
+- policy area-level implementation where domain specifics are required
 - foundation and strategy prose where values, identity, or project history are the right layer
 
 This is the proposed 1.0 rule structure for further review and canonicalization.</li>
@@ -694,12 +694,12 @@ This is the proposed 1.0 rule structure for further review and canonicalization.
     <ol class="plos-rule-list">
 <li id="paos-test-0001"><code class="plos-rule-id">PAOS-TEST-0001</code> Every proposed rule must be tested for loopholes, exploit paths, burden-shifting, selective enforcement risk, and foreseeable abuse patterns before acceptance.</li>
 <li id="paos-test-0002"><code class="plos-rule-id">PAOS-TEST-0002</code> Every proposed rule affecting rights, access, or eligibility must be tested against practical barriers including cost, distance, disability, language, timing, digital access, and paperwork burden.</li>
-<li id="paos-test-0003"><code class="plos-rule-id">PAOS-TEST-0003</code> Every proposed rule must be checked for conflict with existing rules in the same pillar, overlapping pillars, and applicable system overlays. This check must include a documented inheritance declaration identifying which KERN rules and overlay families apply to the pillar and how they interact. Where a pillar invokes multiple overlays with potentially conflicting obligations, the cross-layer conflict-resolution hierarchy in Layer 2 governs, and the conflict must be documented explicitly rather than left to interpretive discretion.</li>
+<li id="paos-test-0003"><code class="plos-rule-id">PAOS-TEST-0003</code> Every proposed rule must be checked for conflict with existing rules in the same policy area, overlapping policy areas, and applicable system overlays. This check must include a documented inheritance declaration identifying which KERN rules and overlay families apply to the policy area and how they interact. Where a policy area invokes multiple overlays with potentially conflicting obligations, the cross-layer conflict-resolution hierarchy in Layer 2 governs, and the conflict must be documented explicitly rather than left to interpretive discretion.</li>
 <li id="paos-test-0004"><code class="plos-rule-id">PAOS-TEST-0004</code> Every proposed rule must be reviewed for whether it creates perverse incentives, hidden rationing, delay incentives, denial incentives, or extraction incentives.</li>
 <li id="paos-test-0005"><code class="plos-rule-id">PAOS-TEST-0005</code> Every high-risk rule must be evaluated against bad-actor behavior, edge cases, noncompliance patterns, and likely institutional workarounds.</li>
 <li id="paos-test-0006"><code class="plos-rule-id">PAOS-TEST-0006</code> Every rights-limiting or coercive rule must identify the least-abusive alternative considered and explain why the chosen design is justified.</li>
 <li id="paos-test-0007"><code class="plos-rule-id">PAOS-TEST-0007</code> Every proposed rule set must define what successful implementation, implementation failure, non-enforcement, and systemic breakdown would look like in practice.</li>
-<li id="paos-test-0008"><code class="plos-rule-id">PAOS-TEST-0008</code> Adversarial review: actively searching for gaps, edge cases, loopholes, unintended consequences, and foreseeable abuse paths, is mandatory for all policy writing, policy expansion, and policy rewriting, not only for new rule proposals. This requirement applies equally to: additions of new rules to an existing pillar or family; rewrites or revisions of existing rules; expansions of scope, coverage, or enforcement; and any change that substantively alters a right, duty, prohibition, or access condition. The adversarial review must be documented. Findings must be addressed with explicit rationale before the change is eligible for adoption. A change that produces no adversarial review findings must still document that the review was conducted and explain why no issues were identified. _Amendment rationale: PAOS-TEST-0001 through 0007 address new proposed rules; this rule closes the gap for policy expansion and rewriting, which carry equal risk of introducing gaps and loopholes. Adopted 2026-04-30 per platform maintainer direction._</li>
+<li id="paos-test-0008"><code class="plos-rule-id">PAOS-TEST-0008</code> Adversarial review: actively searching for gaps, edge cases, loopholes, unintended consequences, and foreseeable abuse paths, is mandatory for all policy writing, policy expansion, and policy rewriting, not only for new rule proposals. This requirement applies equally to: additions of new rules to an existing policy area or family; rewrites or revisions of existing rules; expansions of scope, coverage, or enforcement; and any change that substantively alters a right, duty, prohibition, or access condition. The adversarial review must be documented. Findings must be addressed with explicit rationale before the change is eligible for adoption. A change that produces no adversarial review findings must still document that the review was conducted and explain why no issues were identified. _Amendment rationale: PAOS-TEST-0001 through 0007 address new proposed rules; this rule closes the gap for policy expansion and rewriting, which carry equal risk of introducing gaps and loopholes. Adopted 2026-04-30 per platform maintainer direction._</li>
 </ol>
   </details>
 
@@ -725,10 +725,10 @@ This is the proposed 1.0 rule structure for further review and canonicalization.
     </summary>
     <p class="plos-family-desc">Rules must be placed at the correct scope level -- not too broad, not too narrow.</p>
     <ol class="plos-rule-list">
-<li id="paos-plac-0001"><code class="plos-rule-id">PAOS-PLAC-0001</code> Every proposed rule must be placed at the narrowest scope that still preserves consistency: kernel, overlay, pillar, cross-pillar coordination rule, foundation prose, or strategy prose.</li>
-<li id="paos-plac-0002"><code class="plos-rule-id">PAOS-PLAC-0002</code> A rule belongs in the universal system layer only if it applies across multiple pillars as a design invariant rather than as a domain-specific policy preference.</li>
-<li id="paos-plac-0003"><code class="plos-rule-id">PAOS-PLAC-0003</code> A rule belongs in an overlay when it is cross-domain but conditional, meaning it applies only to pillars with a recurring design problem such as geography, federalism, regulation, enforcement architecture, or AI.</li>
-<li id="paos-plac-0004"><code class="plos-rule-id">PAOS-PLAC-0004</code> A rule belongs in a pillar when its implementation details, metrics, institutions, or harms are domain-specific enough that universal treatment would reduce clarity or accuracy.</li>
+<li id="paos-plac-0001"><code class="plos-rule-id">PAOS-PLAC-0001</code> Every proposed rule must be placed at the narrowest scope that still preserves consistency: kernel, overlay, policy area, cross-policy area coordination rule, foundation prose, or strategy prose.</li>
+<li id="paos-plac-0002"><code class="plos-rule-id">PAOS-PLAC-0002</code> A rule belongs in the universal system layer only if it applies across multiple policy areas as a design invariant rather than as a domain-specific policy preference.</li>
+<li id="paos-plac-0003"><code class="plos-rule-id">PAOS-PLAC-0003</code> A rule belongs in an overlay when it is cross-domain but conditional, meaning it applies only to policy areas with a recurring design problem such as geography, federalism, regulation, enforcement architecture, or AI.</li>
+<li id="paos-plac-0004"><code class="plos-rule-id">PAOS-PLAC-0004</code> A rule belongs in a policy area when its implementation details, metrics, institutions, or harms are domain-specific enough that universal treatment would reduce clarity or accuracy.</li>
 <li id="paos-plac-0005"><code class="plos-rule-id">PAOS-PLAC-0005</code> A statement belongs in prose rather than canon when it expresses values, narrative framing, project identity, strategy, or history without creating a design invariant or enforceable policy requirement.</li>
 </ol>
   </details>
@@ -743,9 +743,9 @@ This is the proposed 1.0 rule structure for further review and canonicalization.
 <li id="paos-maint-0001"><code class="plos-rule-id">PAOS-MAINT-0001</code> Every major policy section must identify which rules are core, which are implementation-dependent, and which are expected to require future revision as conditions change.</li>
 <li id="paos-maint-0002"><code class="plos-rule-id">PAOS-MAINT-0002</code> When a rule is revised, the revision must state whether the change closes a loophole, updates a condition, resolves a conflict, improves enforceability, or narrows overbreadth.</li>
 <li id="paos-maint-0003"><code class="plos-rule-id">PAOS-MAINT-0003</code> Deprecated rules should be superseded with visible traceability rather than silently removed when provenance or interpretation history matters.</li>
-<li id="paos-maint-0004"><code class="plos-rule-id">PAOS-MAINT-0004</code> Every pillar must be reviewed for missing policy areas, stale assumptions, under-enforced rules, and newly visible system vulnerabilities at least every two years or upon major legislative, judicial, or technological change materially affecting the pillar&#x27;s domain, whichever comes first. The pillar&#x27;s designated maintainer is responsible for initiating review. A pillar overdue for review must be flagged as stale in the public-facing index until review is completed.</li>
-<li id="paos-maint-0005"><code class="plos-rule-id">PAOS-MAINT-0005</code> Where a system overlay applies to a pillar, the pillar should explicitly state how that overlay is implemented locally rather than assuming the inheritance is obvious.</li>
-<li id="paos-maint-0006"><code class="plos-rule-id">PAOS-MAINT-0006</code> PolicyOS itself must be reviewed under the same criteria as any pillar. Reviews must apply KERN compliance assessment, NORM-0002 value alignment, and TEST-0001 adversarial testing. Review results must be documented and publicly accessible. The process defined in `policyos_governance_v1.md` is the enforcement mechanism for this requirement.</li>
+<li id="paos-maint-0004"><code class="plos-rule-id">PAOS-MAINT-0004</code> Every policy area must be reviewed for missing policy areas, stale assumptions, under-enforced rules, and newly visible system vulnerabilities at least every two years or upon major legislative, judicial, or technological change materially affecting the policy area&#x27;s domain, whichever comes first. The policy area&#x27;s designated maintainer is responsible for initiating review. A policy area overdue for review must be flagged as stale in the public-facing index until review is completed.</li>
+<li id="paos-maint-0005"><code class="plos-rule-id">PAOS-MAINT-0005</code> Where a system overlay applies to a policy area, the policy area should explicitly state how that overlay is implemented locally rather than assuming the inheritance is obvious.</li>
+<li id="paos-maint-0006"><code class="plos-rule-id">PAOS-MAINT-0006</code> PolicyOS itself must be reviewed under the same criteria as any policy area. Reviews must apply KERN compliance assessment, NORM-0002 value alignment, and TEST-0001 adversarial testing. Review results must be documented and publicly accessible. The process defined in `policyos_governance_v1.md` is the enforcement mechanism for this requirement.</li>
 </ol>
   </details>
   </div>
@@ -759,7 +759,7 @@ This is the proposed 1.0 rule structure for further review and canonicalization.
 <h4>Purpose</h4>
 
 <p>This document defines the operating process for proposing, reviewing,
-adopting, and amending PolicyOS rules and the pillars that must comply with
+adopting, and amending PolicyOS rules and the policy areas that must comply with
 them.</p>
 
 <p>PolicyOS is a rule system. Rule systems need governance, someone has to be
@@ -831,27 +831,27 @@ superseded rule is marked deprecated with a reference to the new rule
 
 <hr />
 
-<h4>Pillar compliance review</h4>
+<h4>Policy Area compliance review</h4>
 
-<p>When a pillar is proposed or substantially revised:</p>
+<p>When a policy area is proposed or substantially revised:</p>
 
 <ol>
-<li><p><strong>KERN compliance</strong>: The pillar is reviewed against all mandatory KERN
-rules (PLOS-KERN-0001 through 0027). A pillar may not be published if it
+<li><p><strong>KERN compliance</strong>: The policy area is reviewed against all mandatory KERN
+rules (PLOS-KERN-0001 through 0027). A policy area may not be published if it
 fails a KERN rule without an explicit, documented, reviewable justification
 that passes PAOS-NORM-0002 scrutiny.</p></li>
-<li><p><strong>Overlay identification</strong>: The pillar identifies which overlays apply to
+<li><p><strong>Overlay identification</strong>: The policy area identifies which overlays apply to
 its design area and documents its inheritance.</p></li>
-<li><p><strong>NORM review</strong>: The pillar is reviewed against the full NORM family
+<li><p><strong>NORM review</strong>: The policy area is reviewed against the full NORM family
 checklist. Value tensions must be surfaced and resolved per PAOS-NORM-0008.</p></li>
-<li><p><strong>Adversarial review</strong>: High-stakes pillars (those governing healthcare,
+<li><p><strong>Adversarial review</strong>: High-stakes policy areas (those governing healthcare,
 criminal justice, immigration, voting, housing, or essential public goods)
 require adversarial review before publication.</p></li>
 <li><p><strong>Acceptance gate</strong>: The platform maintainer must sign off on KERN
-compliance and NORM review before a pillar is published to the site.</p></li>
+compliance and NORM review before a policy area is published to the site.</p></li>
 </ol>
 
-<p><strong>Consequence of non-compliance:</strong> A pillar that fails the acceptance gate is
+<p><strong>Consequence of non-compliance:</strong> A policy area that fails the acceptance gate is
 flagged in the public-facing index as under review and may not be cited as
 canonical policy until it passes. It is not deleted, the draft is visible
 with its review status clearly disclosed.</p>
