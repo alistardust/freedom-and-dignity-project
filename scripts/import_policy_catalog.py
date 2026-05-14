@@ -484,7 +484,7 @@ MANUAL_RULE_SEEDS = {
         "line_number": 18163,
     },
     # ── Education (EDU scope) ──────────────────────────────────────────────────
-    # Extracted from docs/pillars/education.html; canonical statements and line
+    # Extracted from docs/policy/education.html; canonical statements and line
     # numbers sourced from branch_political_project_brainstorm.txt.
     # EDU-SYS: System Foundations
     "EDU-SYS-001": {

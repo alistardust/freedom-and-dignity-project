@@ -20,7 +20,7 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).parent.parent
 DB_PATH = REPO_ROOT / "data" / "policy_catalog_v2.sqlite"
-HTML_PATH = REPO_ROOT / "docs" / "pillars" / "environment-and-agriculture.html"
+HTML_PATH = REPO_ROOT / "docs" / "policy" / "environment-and-agriculture.html"
 
 # fmt: off
 # All 196 (id, plain_language) pairs organized into 4 batches of ~49.

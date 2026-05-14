@@ -13,17 +13,17 @@ An active U.S. political platform in development, organized around policy founda
 ```text
 docs/               Website — served by GitHub Pages
   assets/           Shared CSS, JS, and images
-  pillars/          Pillar HTML pages
+  policy/           Policy area HTML pages
   compare/          Party comparison pages
 policy/             All policy content
   briefing-pack.md  Condensed project context for AI brainstorming sessions
   catalog/          Policy catalog (SQLite), schema, ID docs, citation audit
   foundations/      Foundation values, framing, and platform-statement
-    pillars/        Narrative markdown source (per-pillar prose, pre-generation)
+    pillars/        Narrative markdown source (per-policy-area prose, pre-generation)
   policyos/         PolicyOS system rules layer
   proposals/        Proposed foundational documents
     rights/         New Bill of Rights, Workers' Rights, Declaration of Indigenous Rights
-  research/         Background research documents (constitutional review, senate reform, per-pillar)
+  research/         Background research documents (constitutional review, senate reform, per-policy-area)
 scripts/            Import, generation, and maintenance scripts
 tests/              Unit tests (Vitest) and E2E tests (Playwright/Firefox)
 AGENTS.md           Codex CLI instruction file
@@ -32,9 +32,9 @@ system_rules.md     Cross-domain system rule architecture
 
 ## Current state
 
-- **Pillars:** Active pillar pages across the project foundations — see [`.github/current-state.md`](.github/current-state.md) for the current registry.
+- **Policy areas:** Active policy area pages across the project foundations — see [`.github/current-state.md`](.github/current-state.md) for the current registry.
 - **Plain language:** All positions have plain-language summaries
-- **Citations:** Inline APA citations across all pillar pages
+- **Citations:** Inline APA citations across all policy area pages
 - **Policy card audit:** Complete — all cards are now in included status
 
 For detailed status, see [`.github/current-state.md`](.github/current-state.md).
@@ -46,14 +46,14 @@ Foundational research documents live in `policy/research/`:
 - `us-constitution-adversarial-review.md` — structural failures, loopholes, and exploitation vectors in the U.S. Constitution (incl. *Trump v. United States*, 2024)
 - `new-bill-of-rights-adversarial-review.md` — per-amendment adversarial analysis of the project's proposed New Bill of Rights
 - `senate-reform-research.md` — malapportionment data, filibuster history, reform proposals, and comparative democracy analysis
-- `pillars/` — per-pillar background research used to draft policy cards
+- `research/` — per-policy-area background research used to draft policy cards
 
 ## Contributing
 
 The best place to start is the **[Get Involved](https://alistardust.github.io/freedom-and-dignity-project/get-involved.html)** page on the live site.
 
 For technical contributors:
-- Policy content lives in `docs/pillars/*.html` — each pillar page has a structured set of policy cards with `XXXX-XXXX-0000` IDs
+- Policy content lives in `docs/policy/*.html` — each policy area page has a structured set of policy cards with `XXXX-XXXX-0000` IDs
 - All factual claims require citations that follow `CODING_STANDARDS.md`
 - All policy additions must follow the standards in `.github/copilot-instructions.md`
 - Run `npm run test:unit` before committing; run `npm run test:e2e` after any HTML/JS/CSS change

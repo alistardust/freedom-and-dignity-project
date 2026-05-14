@@ -15,11 +15,11 @@ from bs4 import BeautifulSoup, Tag
 DB_PATH = 'data/policy_catalog.sqlite'
 
 SCOPE_FILES = {
-    'TAX': 'docs/pillars/taxation-and-wealth.html',
-    'CON': 'docs/pillars/consumer-rights.html',
-    'HOU': 'docs/pillars/housing.html',
-    'LAB': 'docs/pillars/labor-and-workers-rights.html',
-    'INF': 'docs/pillars/infrastructure-and-public-goods.html',
+    'TAX': 'docs/policy/taxation-and-wealth.html',
+    'CON': 'docs/policy/consumer-rights.html',
+    'HOU': 'docs/policy/housing.html',
+    'LAB': 'docs/policy/labor-and-workers-rights.html',
+    'INF': 'docs/policy/infrastructure-and-public-goods.html',
 }
 
 FAMILY_NAME_MAP = {

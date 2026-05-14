@@ -7,7 +7,7 @@ Run from repo root: python3 scripts/transform-healthcare-cards.py
 from pathlib import Path
 from bs4 import BeautifulSoup
 
-HTML_PATH = Path("docs/pillars/healthcare.html")
+HTML_PATH = Path("docs/policy/healthcare.html")
 
 # Keys: "FAMILY-NNNN" (strip "HLTH-" prefix from card IDs, e.g. "ACCS-0001")
 # stmt=None  → keep existing stmt text unchanged

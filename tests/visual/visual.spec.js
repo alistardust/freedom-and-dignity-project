@@ -15,7 +15,7 @@ const { test, expect } = require('@playwright/test');
 
 const PAGES = [
   { name: 'home',             path: '/' },
-  { name: 'pillar-healthcare', path: '/pillars/healthcare.html' },
+  { name: 'policy-area-healthcare', path: '/policy/healthcare.html' },
   { name: 'compare-republican', path: '/compare/republican-party.html' },
   { name: 'policyos',         path: '/policyos.html' },
   { name: 'policy-library',   path: '/policy-library.html' },
@@ -34,7 +34,7 @@ for (const pg of PAGES) {
       await page.waitForLoadState('networkidle');
       await expect(page).toHaveScreenshot(`${pg.name}-${vp.name}.png`, {
         maxDiffPixelRatio: 0.001,  // 0.1% threshold
-        // fullPage omitted: pillar pages exceed the 32767px CDP screenshot limit.
+        // fullPage omitted: policy area pages exceed the 32767px CDP screenshot limit.
         // Viewport-only screenshots are sufficient to catch layout/nav regressions.
       });
     });

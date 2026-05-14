@@ -3,7 +3,7 @@
 add-proposals-tec.py
 ====================
 Insert MISSING/PROPOSED TEC policy positions from the database into
-docs/pillars/technology-and-ai.html as proposal cards.
+docs/policy/technology-and-ai.html as proposal cards.
 
 Only adds cards whose rule_id is not already present as an id= attribute
 in the HTML. Preserves all existing content exactly.
@@ -17,7 +17,7 @@ import os
 sys.path.insert(0, os.path.expanduser('~/.local/lib/python3.14/site-packages'))
 from bs4 import BeautifulSoup, Tag
 
-HTML_PATH = 'docs/pillars/technology-and-ai.html'
+HTML_PATH = 'docs/policy/technology-and-ai.html'
 DB_PATH = 'data/policy_catalog.sqlite'
 
 # Map family_code → existing fam-* id in HTML (lower-case)

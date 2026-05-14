@@ -25,7 +25,7 @@ from bs4 import BeautifulSoup
 # ---------------------------------------------------------------------------
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-HTML_DIR = REPO_ROOT / "docs" / "pillars"
+HTML_DIR = REPO_ROOT / "docs" / "policy"
 SOURCE_DB = REPO_ROOT / "data" / "policy_catalog_v2.sqlite"
 
 # Old 3-char domain → new 4-char domain code

@@ -7,7 +7,7 @@ import subprocess
 from pathlib import Path
 
 REPO = Path(__file__).parent.parent
-HTML_FILE = REPO / "docs/pillars/healthcare.html"
+HTML_FILE = REPO / "docs/policy/healthcare.html"
 DB_FILE = REPO / "policy/catalog/policy_catalog_v2.sqlite"
 
 # fmt: off
@@ -514,7 +514,7 @@ def update_html(updates: dict[str, str]) -> None:
 
 def git_commit(message: str) -> None:
     subprocess.run(
-        ["git", "add", "docs/pillars/healthcare.html", "policy/catalog/policy_catalog_v2.sqlite"],
+        ["git", "add", "docs/policy/healthcare.html", "policy/catalog/policy_catalog_v2.sqlite"],
         cwd=REPO,
         check=True,
     )

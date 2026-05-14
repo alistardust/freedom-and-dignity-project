@@ -7,7 +7,7 @@ import subprocess
 from pathlib import Path
 
 ROOT = Path(__file__).parent.parent
-HTML_PATH = ROOT / "docs/pillars/technology-and-ai.html"
+HTML_PATH = ROOT / "docs/policy/technology-and-ai.html"
 DB_PATH = ROOT / "policy/catalog/policy_catalog_v2.sqlite"
 
 

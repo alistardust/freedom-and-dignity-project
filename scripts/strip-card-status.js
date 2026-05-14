@@ -3,7 +3,7 @@
 const fs   = require('fs');
 const path = require('path');
 
-const SRC_DIR = path.join(__dirname, '..', 'src', 'pages', 'pillars');
+const SRC_DIR = path.join(__dirname, '..', 'src', 'pages', 'policy');
 
 /**
  * Returns the file content with all card status markers removed:

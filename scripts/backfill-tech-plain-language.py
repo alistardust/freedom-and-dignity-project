@@ -8,7 +8,7 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).parent.parent
 DB_PATH = REPO_ROOT / "data" / "policy_catalog_v2.sqlite"
-HTML_PATH = REPO_ROOT / "docs" / "pillars" / "technology-and-ai.html"
+HTML_PATH = REPO_ROOT / "docs" / "policy" / "technology-and-ai.html"
 
 # fmt: off
 PLAIN_LANGUAGE: dict[str, str] = {

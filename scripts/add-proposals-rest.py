@@ -30,21 +30,21 @@ DB_PATH = 'data/policy_catalog.sqlite'
 
 # Scope code → HTML file (multiple scopes can target same file)
 SCOPE_TO_FILE = {
-    'COR': 'docs/pillars/anti-corruption.html',
-    'ENV': 'docs/pillars/environment-and-agriculture.html',
-    'AGR': 'docs/pillars/environment-and-agriculture.html',
-    'ADM': 'docs/pillars/administrative-state.html',
-    'GUN': 'docs/pillars/gun-policy.html',
-    'MED': 'docs/pillars/information-and-media.html',
-    'LEG': 'docs/pillars/legislative-reform.html',
-    'TRM': 'docs/pillars/term-limits-and-fitness.html',
-    'EDU': 'docs/pillars/education.html',
-    'FPL': 'docs/pillars/foreign-policy.html',
-    'OVR': 'docs/pillars/foreign-policy.html',
-    'CHK': 'docs/pillars/checks-and-balances.html',
-    'SYS': 'docs/pillars/checks-and-balances.html',
-    'GOV': 'docs/pillars/checks-and-balances.html',
-    'CIV': 'docs/pillars/rights-and-civil-liberties.html',
+    'COR': 'docs/policy/anti-corruption.html',
+    'ENV': 'docs/policy/environment-and-agriculture.html',
+    'AGR': 'docs/policy/environment-and-agriculture.html',
+    'ADM': 'docs/policy/administrative-state.html',
+    'GUN': 'docs/policy/gun-policy.html',
+    'MED': 'docs/policy/information-and-media.html',
+    'LEG': 'docs/policy/legislative-reform.html',
+    'TRM': 'docs/policy/term-limits-and-fitness.html',
+    'EDU': 'docs/policy/education.html',
+    'FPL': 'docs/policy/foreign-policy.html',
+    'OVR': 'docs/policy/foreign-policy.html',
+    'CHK': 'docs/policy/checks-and-balances.html',
+    'SYS': 'docs/policy/checks-and-balances.html',
+    'GOV': 'docs/policy/checks-and-balances.html',
+    'CIV': 'docs/policy/rights-and-civil-liberties.html',
 }
 
 # Per-scope family_code → fam-* id overrides for non-obvious cases.

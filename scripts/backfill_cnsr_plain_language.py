@@ -3,7 +3,7 @@
 
 Updates both:
   - policy/catalog/policy_catalog_v2.sqlite (plain_language column)
-  - docs/pillars/consumer-rights.html (rule-plain paragraph)
+  - docs/policy/consumer-rights.html (rule-plain paragraph)
 """
 
 import re
@@ -12,7 +12,7 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).parent.parent
 DB_PATH = REPO_ROOT / "data" / "policy_catalog_v2.sqlite"
-HTML_PATH = REPO_ROOT / "docs" / "pillars" / "consumer-rights.html"
+HTML_PATH = REPO_ROOT / "docs" / "policy" / "consumer-rights.html"
 
 # fmt: off
 PLAIN_LANGUAGE: dict[str, str] = {

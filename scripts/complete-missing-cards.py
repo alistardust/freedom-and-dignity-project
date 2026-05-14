@@ -12,7 +12,7 @@ PAOS-TEST-0008 adversarial review documented per card in the notes field.
 from bs4 import BeautifulSoup
 from pathlib import Path
 
-TARGET = Path("docs/pillars/technology-and-ai.html")
+TARGET = Path("docs/policy/technology-and-ai.html")
 
 CARD_CONTENT: dict[str, dict[str, str]] = {}
 

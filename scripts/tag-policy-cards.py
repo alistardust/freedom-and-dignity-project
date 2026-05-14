@@ -172,11 +172,11 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--dry-run", action="store_true",
                         help="Print changes without writing files")
-    parser.add_argument("pillars", nargs="*",
+    parser.add_argument("policy", nargs="*",
                         help="Pillar slugs to process (default: all)")
     args = parser.parse_args()
 
-    pillars_dir = Path(__file__).parent.parent / "docs" / "pillars"
+    pillars_dir = Path(__file__).parent.parent / "docs" / "policy"
     if args.pillars:
         files = [pillars_dir / f"{slug}.html" for slug in args.pillars]
     else:

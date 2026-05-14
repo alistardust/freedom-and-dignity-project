@@ -4,21 +4,21 @@
  * Runs on: mobile-chrome (Pixel 5), mobile-safari (iPhone 14),
  *          mobile-firefox (Firefox, 390x844 viewport).
  *
- * Covers: hamburger nav (homepage + pillar page), horizontal overflow,
+ * Covers: hamburger nav (homepage + policy area page), horizontal overflow,
  *         tap target sizes, and layout spot checks.
  */
 
 const { test, expect } = require('@playwright/test');
-const { SAMPLE_PILLARS } = require('./shared');
+const { SAMPLE_POLICY_AREAS } = require('./shared');
 
 // ── HAMBURGER NAV ──────────────────────────────────────────────────────────────
 // Tested on both a root page and a subdir page — app.js branches on
-// /(pillars|compare)/ for asset path resolution, so the injected nav and
+// /(policy|compare)/ for asset path resolution, so the injected nav and
 // overlay must work in both path contexts.
 
 const BURGER_PAGES = [
   { label: 'homepage',    url: '/' },
-  { label: 'pillar page', url: '/pillars/healthcare.html' },
+  { label: 'policy area page', url: '/policy/healthcare.html' },
 ];
 
 for (const { label, url } of BURGER_PAGES) {
@@ -76,8 +76,8 @@ for (const { label, url } of BURGER_PAGES) {
 
 const OVERFLOW_PAGES = [
   { label: 'homepage',      url: '/' },
-  { label: 'pillars index', url: '/pillars/index.html' },
-  { label: 'pillar page',   url: '/pillars/healthcare.html' },
+  { label: 'policy areas index', url: '/policy/index.html' },
+  { label: 'policy area page',   url: '/policy/healthcare.html' },
   { label: 'compare page',  url: '/compare/republican-party.html' },
 ];
 
@@ -131,33 +131,33 @@ test.describe('Mobile layout spot checks', () => {
     expect(cols.trim().split(/\s+/).length).toBe(1);
   });
 
-  test('pillar sub-nav does not overflow its container', async ({ page }) => {
-    await page.goto('/pillars/healthcare.html');
+  test('area sub-nav does not overflow its container', async ({ page }) => {
+    await page.goto('/policy/healthcare.html');
     const overflows = await page.evaluate(() => {
-      const el = document.querySelector('.pil-snav');
+      const el = document.querySelector('.area-snav');
       return el ? el.scrollWidth > el.offsetWidth : false;
     });
     expect(overflows).toBe(false);
   });
 
-  test('policy section is present on pillar page', async ({ page }) => {
-    await page.goto('/pillars/healthcare.html');
-    await expect(page.locator('#pil-policy')).toBeAttached();
+  test('policy section is present on policy area page', async ({ page }) => {
+    await page.goto('/policy/healthcare.html');
+    await expect(page.locator('#area-policy')).toBeAttached();
   });
 
-  // Spot-check that SAMPLE_PILLARS entries resolve to real pages on mobile.
-  // One pillar from each foundation.
-  const SPOT_PILLARS = [
-    SAMPLE_PILLARS.find(p => p.slug === 'executive-power'),
-    SAMPLE_PILLARS.find(p => p.slug === 'equal-justice-and-policing'),
-    SAMPLE_PILLARS.find(p => p.slug === 'rights-and-civil-liberties'),
-    SAMPLE_PILLARS.find(p => p.slug === 'healthcare'),
-    SAMPLE_PILLARS.find(p => p.slug === 'housing'),
+  // Spot-check that SAMPLE_POLICY_AREAS entries resolve to real pages on mobile.
+  // One policy area from each foundation.
+  const SPOT_POLICY_AREAS = [
+    SAMPLE_POLICY_AREAS.find(p => p.slug === 'executive-power'),
+    SAMPLE_POLICY_AREAS.find(p => p.slug === 'equal-justice-and-policing'),
+    SAMPLE_POLICY_AREAS.find(p => p.slug === 'rights-and-civil-liberties'),
+    SAMPLE_POLICY_AREAS.find(p => p.slug === 'healthcare'),
+    SAMPLE_POLICY_AREAS.find(p => p.slug === 'housing'),
   ];
 
-  for (const { slug, title } of SPOT_PILLARS) {
-    test(`${title} pillar loads without overflow on mobile`, async ({ page }) => {
-      await page.goto(`/pillars/${slug}.html`);
+  for (const { slug, title } of SPOT_POLICY_AREAS) {
+    test(`${title} policy area loads without overflow on mobile`, async ({ page }) => {
+      await page.goto(`/policy/${slug}.html`);
       await expect(page).toHaveTitle(new RegExp(title.split(' ')[0], 'i'));
       const overflows = await page.evaluate(
         () => document.documentElement.scrollWidth > window.innerWidth + 1

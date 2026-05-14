@@ -4,8 +4,8 @@
  */
 
 // Each entry: { slug: string, title: string }
-// slug matches the filename at docs/pillars/<slug>.html
-const SAMPLE_PILLARS = [
+// slug matches the filename at docs/policy/<slug>.html
+const SAMPLE_POLICY_AREAS = [
   { slug: 'executive-power',               title: 'Executive Power' },
   { slug: 'elections-and-representation',  title: 'Elections' },
   { slug: 'anti-corruption',               title: 'Anti-Corruption' },
@@ -33,4 +33,4 @@ const SAMPLE_PILLARS = [
   { slug: 'science-technology-space',      title: 'Science Technology Space' },
 ];
 
-module.exports = { SAMPLE_PILLARS };
+module.exports = { SAMPLE_POLICY_AREAS };

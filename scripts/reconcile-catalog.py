@@ -26,8 +26,8 @@ except ImportError:
 
 REPO_ROOT = Path(__file__).parent.parent
 DB_PATH = REPO_ROOT / "data" / "policy_catalog_v2.sqlite"
-PILLARS_HTML_DIR = REPO_ROOT / "docs" / "pillars"
-PILLARS_MD_DIR = REPO_ROOT / "pillars"
+PILLARS_HTML_DIR = REPO_ROOT / "docs" / "policy"
+PILLARS_MD_DIR = REPO_ROOT / "policy"
 REPORT_PATH = REPO_ROOT / "data" / "reconciliation-report.md"
 
 

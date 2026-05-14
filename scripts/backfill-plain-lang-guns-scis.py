@@ -6,8 +6,8 @@ from pathlib import Path
 
 REPO = Path(__file__).parent.parent
 DB = REPO / "data" / "policy_catalog_v2.sqlite"
-GUNS_HTML = REPO / "docs" / "pillars" / "gun-policy.html"
-SCIS_HTML = REPO / "docs" / "pillars" / "science-technology-space.html"
+GUNS_HTML = REPO / "docs" / "policy" / "gun-policy.html"
+SCIS_HTML = REPO / "docs" / "policy" / "science-technology-space.html"
 
 PLAIN: dict[str, str] = {
     # ── GUNS ─────────────────────────────────────────────────────────────────

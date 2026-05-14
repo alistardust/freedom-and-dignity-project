@@ -11,7 +11,7 @@ import re
 import sys
 from pathlib import Path
 
-TARGET = Path("docs/pillars/antitrust-and-corporate-power.html")
+TARGET = Path("docs/policy/antitrust-and-corporate-power.html")
 
 
 def replace_card(html: str, card_id: str, new_inner: str) -> str:

@@ -24,7 +24,7 @@ from collections import defaultdict
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).parent.parent
-PILLARS_DIR = REPO_ROOT / "docs" / "pillars"
+PILLARS_DIR = REPO_ROOT / "docs" / "policy"
 DB_PATH = REPO_ROOT / "data" / "policy_catalog_v2.sqlite"
 
 # Mapping: (old_domain, old_subdomain) → (new_domain, new_subdomain)

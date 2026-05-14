@@ -4,7 +4,7 @@ const fs   = require('fs');
 const path = require('path');
 const Database = require('better-sqlite3');
 
-const SRC_DIR = path.join(__dirname, '..', 'src', 'pages', 'pillars');
+const SRC_DIR = path.join(__dirname, '..', 'src', 'pages', 'policy');
 const DB_PATH = path.join(__dirname, '..', 'policy', 'catalog', 'policy_catalog_v2.sqlite');
 
 /**

@@ -10,8 +10,8 @@ from bs4 import BeautifulSoup, Tag
 
 DB_PATH = 'data/policy_catalog.sqlite'
 FILES = {
-    'IMM': 'docs/pillars/immigration.html',
-    'HLT': 'docs/pillars/healthcare.html',
+    'IMM': 'docs/policy/immigration.html',
+    'HLT': 'docs/policy/healthcare.html',
 }
 
 # Maps DB family_code → fam-* id, handling non-obvious cases per-scope

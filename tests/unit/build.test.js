@@ -14,7 +14,7 @@ describe('computeBase', () => {
   });
 
   it('returns ../ for one-level subdirectory pages', () => {
-    expect(computeBase('docs/pillars/healthcare.html')).toBe('../');
+    expect(computeBase('docs/policy/healthcare.html')).toBe('../');
     expect(computeBase('docs/compare/republican-party.html')).toBe('../');
   });
 
@@ -31,7 +31,7 @@ describe('computeCurrentPage', () => {
   });
 
   it('returns subdir/filename for subdirectory pages', () => {
-    expect(computeCurrentPage('docs/pillars/healthcare.html')).toBe('pillars/healthcare.html');
+    expect(computeCurrentPage('docs/policy/healthcare.html')).toBe('policy/healthcare.html');
     expect(computeCurrentPage('docs/compare/republican-party.html')).toBe('compare/republican-party.html');
   });
 });

@@ -16,7 +16,7 @@ Changes to Copilot-specific instruction files should be made directly in `.githu
 
 This repository is a U.S. policy platform organized around:
 - 5 foundations
-- policy pillars under `policy/foundations/<foundation>/<pillar>/`
+- policy content under `policy/foundations/<foundation>/<policy-area>/`
 - structured catalog data under `data/`
 - the current website under `docs/`
 
@@ -26,9 +26,9 @@ Do not hardcode counts from this file into instruction files. Verify current cou
 
 When auditing or editing policy content, use this general order:
 1. `.github/current-state.md`
-2. `docs/pillars/`
+2. `docs/policy/`
 3. `policy/catalog/policy_catalog_v2.sqlite`
-4. `policy/foundations/<foundation>/<pillar>/`
+4. `policy/foundations/<foundation>/<policy-area>/`
 
 ## Source-of-truth guidance
 

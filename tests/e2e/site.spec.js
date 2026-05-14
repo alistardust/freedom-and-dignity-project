@@ -4,12 +4,12 @@
  */
 
 const { test, expect } = require('@playwright/test');
-const { SAMPLE_PILLARS } = require('./shared');
+const { SAMPLE_POLICY_AREAS } = require('./shared');
 
 // ── SHARED CONSTANTS ──────────────────────────────────────────────────────────
-// Update PILLAR_COUNT when adding pillars to data.js.
+// Update POLICY_AREA_COUNT when adding policy areas to data.js.
 // All count assertions below derive from this constant.
-const PILLAR_COUNT = 26; // pillars in data.js
+const POLICY_AREA_COUNT = 26; // policy areas in data.js
 
 // ── HOMEPAGE ─────────────────────────────────────────────────────────────────
 
@@ -78,11 +78,11 @@ test.describe('Homepage', () => {
     expect(order.rights).toBeLessThan(order.building);
   });
 
-  test('"Pillars" does not appear in authored page content', async ({ page }) => {
+  test('"Policy area" terminology does not appear as "Pillars" in authored content', async ({ page }) => { // verify-ok: intentionally checks old term is absent
     // Scope to sections and page-hero only -- body includes injected nav/footer which
-    // may contain "pillars" links (e.g. Pillars index in footer)
+    // may contain "policy area" links (e.g. Policy areas index in footer)
     const texts = await page.locator('section, .page-hero, .tour-section, .page-nav-cta').allTextContents();
-    expect(texts.join(' ')).not.toMatch(/\bpillars?\b/i);
+    expect(texts.join(' ')).not.toMatch(/\bpillars?\b/i); // verify-ok: pattern under test
   });
 
   test('hero h1 contains the new promise statement', async ({ page }) => {
@@ -104,13 +104,13 @@ test.describe('Homepage', () => {
   });
 });
 
-// ── PILLARS INDEX ─────────────────────────────────────────────────────────────
+// ── POLICY AREAS INDEX ─────────────────────────────────────────────────────────────
 
-test.describe('Pillars index', () => {
-  test.beforeEach(async ({ page }) => { await page.goto('/pillars/index.html'); });
+test.describe('Policy areas index', () => {
+  test.beforeEach(async ({ page }) => { await page.goto('/policy/index.html'); });
 
   test('has correct page title', async ({ page }) => {
-    await expect(page).toHaveTitle(/Pillars/i);
+    await expect(page).toHaveTitle(/Policy Areas/i);
   });
 
   test('fullview header is visible immediately', async ({ page }) => {
@@ -118,52 +118,52 @@ test.describe('Pillars index', () => {
   });
 
   test('shows all 5 foundation accordions', async ({ page }) => {
-    await expect(page.locator('.pil-foundation-accordion')).toHaveCount(5);
+    await expect(page.locator('.area-foundation-accordion')).toHaveCount(5);
   });
 
   test('all 5 foundation accordions start collapsed by default', async ({ page }) => {
-    const accordions = await page.locator('.pil-foundation-accordion').all();
+    const accordions = await page.locator('.area-foundation-accordion').all();
     for (const accordion of accordions) {
       expect(await accordion.getAttribute('open')).toBeNull();
     }
   });
 
-  test(`accordion grid contains all ${PILLAR_COUNT} pillar links`, async ({ page }) => {
-    await expect(page.locator('a.pil-pillar-link')).toHaveCount(PILLAR_COUNT);
+  test(`accordion grid contains all ${POLICY_AREA_COUNT} policy area links`, async ({ page }) => {
+    await expect(page.locator('a.area-link')).toHaveCount(POLICY_AREA_COUNT);
   });
 
-  test('each pillar link points to a .html page', async ({ page }) => {
-    const links = await page.locator('a.pil-pillar-link').all();
+  test('each policy area link points to a .html page', async ({ page }) => {
+    const links = await page.locator('a.area-link').all();
     for (const link of links) {
       const href = await link.getAttribute('href');
       expect(href).toMatch(/\.html$/);
     }
   });
 
-  test('clicking a foundation bar opens it and reveals pillar cards', async ({ page }) => {
-    const first = page.locator('.pil-foundation-accordion').first();
+  test('clicking a foundation bar opens it and reveals policy area cards', async ({ page }) => {
+    const first = page.locator('.area-foundation-accordion').first();
     await first.locator('summary').click();
     await expect(first).toHaveAttribute('open', '');
-    await expect(first.locator('.pil-pillar-card').first()).toBeVisible();
+    await expect(first.locator('.area-card').first()).toBeVisible();
   });
 });
 
-// ── INDIVIDUAL PILLAR PAGES ───────────────────────────────────────────────────
+// ── INDIVIDUAL POLICY AREA PAGES ───────────────────────────────────────────────────
 
-for (const { slug, title } of SAMPLE_PILLARS) {
-  test.describe(`Pillar page: ${title}`, () => {
-    test.beforeEach(async ({ page }) => { await page.goto(`/pillars/${slug}.html`); });
+for (const { slug, title } of SAMPLE_POLICY_AREAS) {
+  test.describe(`Policy area page: ${title}`, () => {
+    test.beforeEach(async ({ page }) => { await page.goto(`/policy/${slug}.html`); });
 
     test('has correct title', async ({ page }) => {
       await expect(page).toHaveTitle(new RegExp(title.split(' ')[0], 'i'));
     });
 
     test('has Purpose section', async ({ page }) => {
-      await expect(page.locator('#pil-intro')).toBeVisible();
+      await expect(page.locator('#area-intro')).toBeVisible();
     });
 
     test('has Full Policy Platform section', async ({ page }) => {
-      await expect(page.locator('#pil-policy')).toBeVisible();
+      await expect(page.locator('#area-policy')).toBeVisible();
     });
 
     test('has back link to platform', async ({ page }) => {
@@ -176,7 +176,7 @@ for (const { slug, title } of SAMPLE_PILLARS) {
 
 test.describe('Consumer Rights — BNPL family', () => {
   test.beforeEach(async ({ page }) => {
-    await page.goto('/pillars/consumer-rights.html');
+    await page.goto('/policy/consumer-rights.html');
   });
 
   test('BNPL family section is present', async ({ page }) => {
@@ -285,26 +285,26 @@ test.describe('Navigation', () => {
     await expect(page.locator('h1').first()).toBeVisible();
   });
 
-  test('pillars index → pillar page', async ({ page }) => {
-    await page.goto('/pillars/index.html');
+  test('policy areas index → policy area page', async ({ page }) => {
+    await page.goto('/policy/index.html');
     // Verify the first link points to a .html file (href integrity)
-    const href = await page.locator('a.pil-pillar-link').first().getAttribute('href');
+    const href = await page.locator('a.area-link').first().getAttribute('href');
     expect(href).toMatch(/\.html$/);
     // Navigate directly to confirm that target page is valid
-    await page.goto(`/pillars/${href}`);
+    await page.goto(`/policy/${href}`);
     await expect(page.locator('.site-nav')).toBeVisible();
   });
 
-  test('pillar page → back to platform', async ({ page }, testInfo) => {
+  test('policy area page → back to platform', async ({ page }, testInfo) => {
     test.skip(testInfo.project.name.startsWith('mobile'), 'desktop navigation flow — footer link blocked by mobile viewport rendering');
-    await page.goto('/pillars/healthcare.html');
+    await page.goto('/policy/healthcare.html');
     await page.locator('.footer-links a[href*="platform.html"]').click();
     await expect(page).toHaveURL(/platform/);
   });
 
-  test('pillars index → compare', async ({ page }, testInfo) => {
+  test('policy areas index → compare', async ({ page }, testInfo) => {
     test.skip(testInfo.project.name.startsWith('mobile'), 'desktop navigation flow — footer link blocked by mobile viewport rendering');
-    await page.goto('/pillars/index.html');
+    await page.goto('/policy/index.html');
     await page.click('a[href="../compare/index.html"]');
     await expect(page).toHaveURL(/compare/);
   });
@@ -351,7 +351,7 @@ test.describe('About AI page', () => {
     expect(texts.some(t => /un-inventing|no longer whether/i.test(t))).toBe(true);
   });
 
-  test('Technology & AI pillar link is present in harms section', async ({ page }) => {
+  test('Technology & AI policy area link is present in harms section', async ({ page }) => {
     const link = page.locator('.ai-body a[href*="technology-and-ai"]').first();
     await expect(link).toBeAttached();
   });
@@ -382,8 +382,8 @@ test.describe('About AI link reachable from all page types', () => {
   const pages = [
     { url: '/',                          label: 'Homepage' },
     { url: '/policy-library.html',          label: 'Proposals' },
-    { url: '/pillars/index.html',        label: 'Pillars index' },
-    { url: '/pillars/healthcare.html',   label: 'Pillar page' },
+    { url: '/policy/index.html',        label: 'Policy areas index' },
+    { url: '/policy/healthcare.html',   label: 'Policy area page' },
     { url: '/compare/index.html',        label: 'Compare index' },
     { url: '/compare/republican-party.html', label: 'Compare page' },
   ];
@@ -415,14 +415,14 @@ test.describe('Back-to-top button', () => {
   });
 
   test('appears after scrolling down on a tall page', async ({ page }) => {
-    await page.goto('/pillars/healthcare.html');
+    await page.goto('/policy/healthcare.html');
     await page.evaluate(() => window.scrollTo(0, 1000));
     await expect(page.locator('#back-to-top')).toHaveClass(/btt-visible/);
   });
 
   test('scrolls back to top when clicked', async ({ page }, testInfo) => {
     test.skip(testInfo.project.name.startsWith('mobile'), 'back-to-top button transition causes instability on mobile Playwright');
-    await page.goto('/pillars/healthcare.html');
+    await page.goto('/policy/healthcare.html');
     await page.evaluate(() => window.scrollTo(0, 1000));
     await page.locator('#back-to-top').click();
     await page.waitForFunction(() => window.scrollY < 50);
@@ -441,27 +441,27 @@ test.describe('Homepage AI transparency section', () => {
 // ── POLICY RULES SECTION VISIBILITY ──────────────────────────────────────────
 
 test.describe('Policy rules section renders content', () => {
-  // Tests the IntersectionObserver threshold:0 fix — #pil-policy must become
+  // Tests the IntersectionObserver threshold:0 fix — #area-policy must become
   // visible when scrolled into view (not stay at opacity:0 forever)
-  const pillarWithRules = 'healthcare'; // 184 rules — guaranteed to have content
+  const policyAreaWithRules = 'healthcare'; // 184 rules — guaranteed to have content
 
   test('policy section is attached to DOM', async ({ page }) => {
-    await page.goto(`/pillars/${pillarWithRules}.html`);
-    await expect(page.locator('#pil-policy')).toBeAttached();
+    await page.goto(`/policy/${policyAreaWithRules}.html`);
+    await expect(page.locator('#area-policy')).toBeAttached();
   });
 
   test('policy section contains at least one rule card after scroll', async ({ page }) => {
-    await page.goto(`/pillars/${pillarWithRules}.html`);
-    await page.locator('#pil-policy').scrollIntoViewIfNeeded();
+    await page.goto(`/policy/${policyAreaWithRules}.html`);
+    await page.locator('#area-policy').scrollIntoViewIfNeeded();
     // Wait for IntersectionObserver to fire and .visible class to be applied
-    await expect(page.locator('#pil-policy')).toHaveClass(/visible/, { timeout: 3000 });
-    await expect(page.locator('#pil-policy .policy-card').first()).toBeAttached();
+    await expect(page.locator('#area-policy')).toHaveClass(/visible/, { timeout: 3000 });
+    await expect(page.locator('#area-policy .policy-card').first()).toBeAttached();
   });
 
   test('policy section has more than one rule card', async ({ page }) => {
-    await page.goto(`/pillars/${pillarWithRules}.html`);
-    await page.locator('#pil-policy').scrollIntoViewIfNeeded();
-    const count = await page.locator('#pil-policy .policy-card').count();
+    await page.goto(`/policy/${policyAreaWithRules}.html`);
+    await page.locator('#area-policy').scrollIntoViewIfNeeded();
+    const count = await page.locator('#area-policy .policy-card').count();
     expect(count).toBeGreaterThan(1);
   });
 });
@@ -587,15 +587,15 @@ test.describe('Platform page', () => {
     }
   });
 
-  test('pillar cards are links to pillar pages', async ({ page }) => {
-    const firstCard = page.locator('a.f-pillar-card').first();
+  test('policy area cards are links to policy area pages', async ({ page }) => {
+    const firstCard = page.locator('a.f-area-card').first();
     await expect(firstCard).toBeVisible();
-    await expect(firstCard).toHaveAttribute('href', /pillars\//);
+    await expect(firstCard).toHaveAttribute('href', /policy\//);
   });
 
-  test(`has ${PILLAR_COUNT} total pillar cards across all foundations`, async ({ page }) => {
-    // PILLAR_COUNT + 1 because rights_and_civil_liberties is a cross-pillar card appearing in both Foundation III and IV
-    await expect(page.locator('a.f-pillar-card')).toHaveCount(PILLAR_COUNT + 1);
+  test(`has ${POLICY_AREA_COUNT} total policy area cards across all foundations`, async ({ page }) => {
+    // POLICY_AREA_COUNT + 1 because rights_and_civil_liberties is a cross-policy-area card appearing in both Foundation III and IV
+    await expect(page.locator('a.f-area-card')).toHaveCount(POLICY_AREA_COUNT + 1);
   });
 
   test('footer Platform link is present', async ({ page }) => {
@@ -639,27 +639,27 @@ test.describe('Roadmap page', () => {
   });
 });
 
-// ── ELECTIONS PILLAR — REFERENDUM AND RECALL ─────────────────────────────────
+// ── ELECTIONS POLICY AREA — REFERENDUM AND RECALL ─────────────────────────────────
 
-test.describe('Elections pillar — Referendum and Recall section', () => {
-  test.beforeEach(async ({ page }) => { await page.goto('/pillars/elections-and-representation.html'); });
+test.describe('Elections policy area — Referendum and Recall section', () => {
+  test.beforeEach(async ({ page }) => { await page.goto('/policy/elections-and-representation.html'); });
 
   test('Referendum & Recall section exists', async ({ page }) => {
-    await expect(page.locator('#pil-direct-democracy')).toBeAttached();
+    await expect(page.locator('#area-direct-democracy')).toBeAttached();
   });
 
   test('Referendum & Recall section contains ELE-DIR-001', async ({ page }) => {
-    const text = await page.locator('#pil-direct-democracy').textContent();
+    const text = await page.locator('#area-direct-democracy').textContent();
     expect(text).toMatch(/ELE-DIR-001/);
   });
 
   test('Referendum & Recall section contains ELE-DIR-002', async ({ page }) => {
-    const text = await page.locator('#pil-direct-democracy').textContent();
+    const text = await page.locator('#area-direct-democracy').textContent();
     expect(text).toMatch(/ELE-DIR-002/);
   });
 
   test('snav contains Referendum & Recall link', async ({ page }) => {
-    await expect(page.locator('.pil-snav a[href="#pil-direct-democracy"]')).toBeAttached();
+    await expect(page.locator('.area-snav a[href="#area-direct-democracy"]')).toBeAttached();
   });
 });
 
@@ -669,8 +669,8 @@ test.describe('Rights nav link from all page types', () => {
   const pages = [
     { url: '/',                               label: 'Homepage' },
     { url: '/policy-library.html',            label: 'Proposals' },
-    { url: '/pillars/index.html',             label: 'Pillars index' },
-    { url: '/pillars/healthcare.html',        label: 'Pillar page' },
+    { url: '/policy/index.html',        label: 'Policy areas index' },
+    { url: '/policy/healthcare.html',        label: 'Policy area page' },
     { url: '/compare/index.html',             label: 'Compare index' },
   ];
 
@@ -902,16 +902,16 @@ test.describe('policyos.html', () => {
   });
 });
 
-// ── PILLAR POLICYOS OVERLAY ───────────────────────────────────────────────────
+// ── POLICY AREA POLICYOS OVERLAY ───────────────────────────────────────────────────
 
-test.describe('pillar PolicyOS overlay', () => {
-  test('#pil-policyos section is injected after #pil-related', async ({ page }) => {
-    await page.goto('/pillars/healthcare.html');
-    await expect(page.locator('#pil-policyos')).toBeAttached();
+test.describe('policy area PolicyOS overlay', () => {
+  test('#area-policyos section is injected after #area-related', async ({ page }) => {
+    await page.goto('/policy/healthcare.html');
+    await expect(page.locator('#area-policyos')).toBeAttached();
 
     const isAfterRelated = await page.evaluate(function () {
-      const related = document.getElementById('pil-related');
-      const overlay  = document.getElementById('pil-policyos');
+      const related = document.getElementById('area-related');
+      const overlay  = document.getElementById('area-policyos');
       if (!related || !overlay) return false;
       return !!(related.compareDocumentPosition(overlay) & Node.DOCUMENT_POSITION_FOLLOWING);
     });
@@ -919,13 +919,13 @@ test.describe('pillar PolicyOS overlay', () => {
   });
 
   test('snav gains a PolicyOS link', async ({ page }) => {
-    await page.goto('/pillars/healthcare.html');
-    await expect(page.locator('#pil-snav a[href="#pil-policyos"]')).toBeAttached();
+    await page.goto('/policy/healthcare.html');
+    await expect(page.locator('#area-snav a[href="#area-policyos"]')).toBeAttached();
   });
 
-  test('#pil-policyos has at least one overlay family listed', async ({ page }) => {
-    await page.goto('/pillars/healthcare.html');
-    await expect(page.locator('#pil-policyos .plos-overlay-list li').first()).toBeAttached();
+  test('#area-policyos has at least one overlay family listed', async ({ page }) => {
+    await page.goto('/policy/healthcare.html');
+    await expect(page.locator('#area-policyos .plos-overlay-list li').first()).toBeAttached();
   });
 });
 

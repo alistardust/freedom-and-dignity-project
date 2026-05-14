@@ -82,16 +82,16 @@
 <header class="page-hero-standard">
   <span class="hero-eyebrow">How the Platform is Structured</span>
   <h1>Policy <span>Classification</span></h1>
-  <p class="hero-statement">Every position in this catalog has an ID, a type, a pillar, and a legal grounding. None of that is accidental.</p>
+  <p class="hero-statement">Every position in this catalog has an ID, a type, a policy area, and a legal grounding. None of that is accidental.</p>
 </header>
 
 <div class="page-body">
 
   <h2>The Policy Catalog</h2>
 
-  <p>This platform maintains a structured policy catalog, a database of every policy position, with its ID, pillar, foundation, classification type, plain-language summary, formal policy statement, and citation record. The catalog is version-controlled, publicly available, and the authoritative source for every position on this platform.</p>
+  <p>This platform maintains a structured policy catalog, a database of every policy position, with its ID, policy area, foundation, classification type, plain-language summary, formal policy statement, and citation record. The catalog is version-controlled, publicly available, and the authoritative source for every position on this platform.</p>
 
-  <p>The catalog is organized as a SQLite database with a public schema. Every policy position has a canonical ID in the format <code>DOMAIN-SUBDOMAIN-NNNN</code> (e.g., <code>HLTH-COVR-0001</code> for a healthcare coverage position). Positions are grouped by domain, subdomain, foundation, and pillar.</p>
+  <p>The catalog is organized as a SQLite database with a public schema. Every policy position has a canonical ID in the format <code>DOMAIN-SUBDOMAIN-NNNN</code> (e.g., <code>HLTH-COVR-0001</code> for a healthcare coverage position). Positions are grouped by domain, subdomain, foundation, and policy area.</p>
 
   <p>The source files, schema documentation, and build scripts are all available in the project repository:</p>
 
@@ -201,7 +201,7 @@ Examples:
   ADMN-CHVS-0001   Administration / Checks and Balances
   TAXN-TAXS-0001   Taxation / Tax Structure</pre>
 
-  <p>Domain and subdomain codes are defined in the <code>domains</code> and <code>subdomains</code> tables of the policy catalog database. Cross-pillar appearances (where a position is relevant to more than one pillar) are tracked in the <code>position_pillar_appearances</code> table rather than as separate position records.</p>
+  <p>Domain and subdomain codes are defined in the <code>domains</code> and <code>subdomains</code> tables of the policy catalog database. Cross-policy area appearances (where a position is relevant to more than one policy area) are tracked in the <code>position_pillar_appearances</code> table rather than as separate position records.</p>
 
 </div>
 

@@ -2,10 +2,10 @@
 """Add MISSING/PROPOSED policy positions from the DB to justice-related pillar HTML files.
 
 Scopes handled:
-    JUS → docs/pillars/equal-justice-and-policing.html
-    JUD → docs/pillars/courts-and-judicial-system.html
-    RGT → docs/pillars/rights-and-civil-liberties.html
-    ELE → docs/pillars/elections-and-representation.html
+    JUS → docs/policy/equal-justice-and-policing.html
+    JUD → docs/policy/courts-and-judicial-system.html
+    RGT → docs/policy/rights-and-civil-liberties.html
+    ELE → docs/policy/elections-and-representation.html
 """
 
 import sqlite3
@@ -18,10 +18,10 @@ from bs4 import BeautifulSoup, Tag
 DB_PATH = 'data/policy_catalog.sqlite'
 
 FILES = {
-    'JUS': 'docs/pillars/equal-justice-and-policing.html',
-    'JUD': 'docs/pillars/courts-and-judicial-system.html',
-    'RGT': 'docs/pillars/rights-and-civil-liberties.html',
-    'ELE': 'docs/pillars/elections-and-representation.html',
+    'JUS': 'docs/policy/equal-justice-and-policing.html',
+    'JUD': 'docs/policy/courts-and-judicial-system.html',
+    'RGT': 'docs/policy/rights-and-civil-liberties.html',
+    'ELE': 'docs/policy/elections-and-representation.html',
 }
 
 # Human-readable titles for new families that need to be created.

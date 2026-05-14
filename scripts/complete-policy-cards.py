@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
 Complete all status-missing policy cards in:
-  - docs/pillars/science-technology-space.html  (38 cards: add rule-plain + rule-notes)
-  - docs/pillars/foreign-policy.html            (50 cards: add rule-notes only)
+  - docs/policy/science-technology-space.html  (38 cards: add rule-plain + rule-notes)
+  - docs/policy/foreign-policy.html            (50 cards: add rule-notes only)
 
 Also updates status class and badge text for all 88 cards.
 
@@ -14,8 +14,8 @@ import sys
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).parent.parent
-SCI_TECH_FILE = REPO_ROOT / "docs/pillars/science-technology-space.html"
-FPOL_FILE = REPO_ROOT / "docs/pillars/foreign-policy.html"
+SCI_TECH_FILE = REPO_ROOT / "docs/policy/science-technology-space.html"
+FPOL_FILE = REPO_ROOT / "docs/policy/foreign-policy.html"
 
 
 # ---------------------------------------------------------------------------

@@ -12,8 +12,8 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).parent.parent
 DB_PATH = REPO_ROOT / "data" / "policy_catalog_v2.sqlite"
-IMMG_HTML = REPO_ROOT / "docs" / "pillars" / "immigration.html"
-TAXN_HTML = REPO_ROOT / "docs" / "pillars" / "taxation-and-wealth.html"
+IMMG_HTML = REPO_ROOT / "docs" / "policy" / "immigration.html"
+TAXN_HTML = REPO_ROOT / "docs" / "policy" / "taxation-and-wealth.html"
 
 # fmt: off
 PLAIN_LANGUAGE: dict[str, str] = {

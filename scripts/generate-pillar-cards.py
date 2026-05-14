@@ -40,7 +40,7 @@ from bs4 import BeautifulSoup, Tag
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 DB_PATH = REPO_ROOT / "data" / "policy_catalog_v2.sqlite"
-HTML_DIR = REPO_ROOT / "docs" / "pillars"
+HTML_DIR = REPO_ROOT / "docs" / "policy"
 POLICY_SECTION_ID = "pil-policy"
 V2_ID_RE = re.compile(r"^[A-Z]{4}-[A-Z]{4}-[0-9]{4}$")
 
